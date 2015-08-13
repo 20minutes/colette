@@ -1,0 +1,42 @@
+/*
+ * A 'box' is a content container displayed on homepage
+ * (= white bg, grey border, 1px-padding
+ */
+
+.box
+    position relative
+    padding 1px
+    border #c7c7c7
+    background-color #ffffff
+
+/* Box footer */
+.box-footer
+    @extends .font-secondary
+    @extends .clearfix
+    padding-top .6rem
+    padding-bottom .3rem
+    background-color $color-bg-base
+
+    time
+        color $color-tertiary
+        text-transform none
+
+        &[data-icon]:before
+            margin-bottom .3rem
+            color $color-secondary
+
+    li
+        display inline
+
+        &:not(:first-child)
+            margin-left 1.8rem
+
+    a
+        @extends .color-base
+
+    [data-icon]
+        text-align center
+
+        &:before
+            display block
+            font-size 2.7rem

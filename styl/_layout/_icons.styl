@@ -1,0 +1,96 @@
+/* Icons */
+/* We use data attributes to insert icons :
+ * <p data-icon="icon_alias">
+ */
+$icons = {
+    /* social */
+    'facebook': 'F',
+    'google': 'g',
+    'googleplus': 'G',
+    'linkedin': 'n',
+    'pinterest': 'P',
+    'twitter': 'T',
+
+    /* zodiac */
+    'aries': 'Ï',
+    'taurus': 'Ö',
+    'gemini': 'Ü',
+    'cancer': 'Ÿ',
+    'leo': 'Ê',
+    'virgo': 'Î',
+    'libra': 'Â',
+    'scorpio': 'Ô',
+    'sagittarius': 'Û',
+    'capricorn': 'Y',
+    'aquarius': 'Ä',
+    'pisces': 'Ë',
+
+    /* ui */
+    'arrow-down': 'V',
+    'arrow-left': '<',
+    'arrow-right': '>',
+    'arrow-up': '^',
+    'calendar': ':',
+    'cinema': 'u',
+    'clock': 'd',
+    'clock2': 'D',
+    'comments': 'b',
+    'cooking': 'k',
+    'crosswords': '#',
+    'download': 'C',
+    'folder': 'f',
+    'games': 'e',
+    'grid': '=',
+    'home': 'h',
+    'image': 'i',
+    'images': 'I',
+    'link': '&',
+    'logo-21e': "'",
+    'logo-s': 'l',
+    'logo': 'L',
+    'logout': 'A',
+    'mail': 'm',
+    'menu': '\2630',
+    'mobile': '!',
+    'more': '+',
+    'photo': 'c',
+    'pin': 'M',
+    'play': 'p',
+    'print': 'r',
+    'refresh': 'R',
+    'search': 'z',
+    'settings': 'w',
+    'share': 's',
+    'social': '%',
+    'survey': 'B',
+    'tv': 'S',
+    'user': 'u',
+    'video': 'v',
+    'view': 'o',
+}
+
+[data-icon]
+[data-icon-after]
+    &:before
+    &:after
+        font-family "20mn"
+        speak none
+        font-weight normal
+        font-variant normal
+        text-transform none
+        line-height 1
+
+    a&
+        display block
+
+    em
+        display none
+
+    p
+    ul
+        overflow hidden
+
+for key, value in $icons
+    [data-icon={key}]:before
+    [data-icon-after={key}]:after
+         content value
