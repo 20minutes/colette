@@ -1,33 +1,85 @@
+/* Icons */
 /* We use data attributes to insert icons :
- * See 20mn.jpg for icon/letter correspondance
+ * <p data-icon="icon_alias">
  */
-.icon
-    &:after
-    &:before
-        font-family "20mn"
-        speak none
-        font-weight normal
-        font-variant normal
-        text-transform none
-        line-height 1
+$icons = {
+    /* social */
+    'facebook': 'F',
+    'google': 'g',
+    'googleplus': 'G',
+    'linkedin': 'n',
+    'pinterest': 'P',
+    'twitter': 'T',
 
-[data-icon]
-    @extends .icon
+    /* zodiac */
+    'aries': 'Ï',
+    'taurus': 'Ö',
+    'gemini': 'Ü',
+    'cancer': 'Ÿ',
+    'leo': 'Ê',
+    'virgo': 'Î',
+    'libra': 'Â',
+    'scorpio': 'Ô',
+    'sagittarius': 'Û',
+    'capricorn': 'Y',
+    'aquarius': 'Ä',
+    'pisces': 'Ë',
 
-    &:before
-        content attr(data-icon)
+    /* ui */
+    'arrow-down': 'V',
+    'arrow-left': '<',
+    'arrow-right': '>',
+    'arrow-up': '^',
+    'calendar': ':',
+    'cinema': 'u',
+    'clock': 'd',
+    'clock2': 'D',
+    'comments': 'e',
+    'cooking': 'k',
+    'crosswords': '#',
+    'download': 'C',
+    'folder': 'f',
+    'games': 'e',
+    'grid': '=',
+    'home': 'h',
+    'image': 'i',
+    'images': 'I',
+    'link': '&',
+    'logo-21e': "'",
+    'logo-s': 'l',
+    'logo': 'L',
+    'logout': 'A',
+    'mail': 'm',
+    'mobile': '!',
+    'more': '+',
+    'photo': 'c',
+    'pin': 'M',
+    'play': 'p',
+    'print': 'r',
+    'refresh': 'R',
+    'search': 'z',
+    'settings': 'w',
+    'share': 's',
+    'social': '%',
+    'survey': 'B',
+    'tv': 'S',
+    'user': 'u',
+    'video': 'v',
+    'view': 'o',
+}
 
-    @extends .icon
+[data-icon]:before
+[data-icon-after]:after
+    font-family "20mn"
+    speak none
+    font-weight normal
+    font-variant normal
+    text-transform none
+    line-height 1
 
-[data-icon-after]
-    @extends .icon
+    a&
+        display block
 
-    &:after
-        content attr(data-icon-after)
-
-.icon
-[data-icon]
-[data-icon-after]
     p
     ul
         overflow hidden
@@ -35,11 +87,7 @@
     em
         display none
 
-a[data-icon]
-    display block
-
-/* mixins */
-_mxIconStyle(prop, value)
-    &[data-icon]:before
-        {prop} value
-
+for key, value in $icons
+    [data-icon={key}]:before
+    [data-icon-after={key}]:after
+         content value
