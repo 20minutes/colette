@@ -1,0 +1,90 @@
+html
+    font-family sans-serif // 2
+    font-size 62.5% // 1
+    text-size-adjust 100% // 3
+
+body
+    color $color-base
+    font-family $font-base
+    font-size 1.6em
+    line-height 1.5
+    -webkit-font-smoothing antialiased
+    -moz-osx-font-smoothing grayscale /* FF */
+
+a
+    color $color-base
+
+h1
+    font-size 2.1rem
+
+h2
+    font-size 1.6rem
+
+h3
+    font-size 1.4rem
+
+for $i in 1..6
+    h{$i}
+        font-family $font-headings
+        font-weight bold
+        line-height 1.2
+
+
+hr
+    clear both
+    background-color $color-base
+    border 0
+    height 1px
+    margin 2.4rem 0 4.8rem
+
+tt
+code
+kbd
+samp
+pre
+    border-radius 0.2rem
+    background-color $color-bg-base
+    font-size 1.2em /* em value to make it relative to the body text size */
+
+small
+    font-size .75em
+
+blockquote
+    font-family $font-secondary
+    font-size 4.2rem
+    font-style italic
+    line-height 1
+
+    &:before
+    &:after
+        @extends sub
+        font-family $font-base
+        font-size 6rem
+        line-height 0
+
+
+    &:before
+        content "\201C"
+
+    &:after
+        content "\201D"
+
+/* Tables */
+table
+    border-collapse collapse
+    border-spacing 0
+    border-width 0
+    empty-cells show
+    background-color $color-bg-base
+
+thead
+    tr
+        background-color $color-base
+        color white
+
+td
+th
+
+    border-width 0
+    padding 0.6rem 1.2rem
+

@@ -1,0 +1,45 @@
+/* We use data attributes to insert icons :
+ * See 20mn.jpg for icon/letter correspondance
+ */
+.icon
+    &:after
+    &:before
+        font-family "20mn"
+        speak none
+        font-weight normal
+        font-variant normal
+        text-transform none
+        line-height 1
+
+[data-icon]
+    @extends .icon
+
+    &:before
+        content attr(data-icon)
+
+    @extends .icon
+
+[data-icon-after]
+    @extends .icon
+
+    &:after
+        content attr(data-icon-after)
+
+.icon
+[data-icon]
+[data-icon-after]
+    p
+    ul
+        overflow hidden
+
+    em
+        display none
+
+a[data-icon]
+    display block
+
+/* mixins */
+_mxIconStyle(prop, value)
+    &[data-icon]:before
+        {prop} value
+

@@ -1,0 +1,25 @@
+{
+  "name": "beerenberg",
+  "version": "0.0.0",
+  "homepage": "https://github.com/20minutes/beerenberg",
+  "authors": [
+    "Olivia Ly <oly@20minutes.fr>"
+  ],
+  "description": "A css and js starter kit for 20 Minutes web projects",
+  "main": [
+      "css/beerenberg.styl",
+      "js/beerenberg.js"
+  ],
+  "keywords": [
+    "css",
+    "js"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,37 @@
+/*
+ *
+ * Teaser
+ *
+ * A teaser is a piece of content that shortly presents a media (eg article|video|diapo... etc.)
+ * > teaser-media        : image or video preview
+ * > teaser-desc
+ *    > teaser-headline  : [ date ] label
+ *    > teaser-title     : title
+ */
+.teaser
+    @extend .pa2
+
+.teaser-headline
+    font-family $font-secondary
+    font-weight bold
+    font-size 1.1rem
+    text-transform uppercase
+
+.teaser-title
+    font-family $font-headings
+    font-weight bold
+    line-height 1.2
+
+.teaser-summary
+    padding-top .3rem
+
+.native
+    background-color $color-native
+
+    .teaser-title
+    .teaser-subtitle
+        font-family $font-native
+
+    .teaser-headline
+        color #ef962a
+
