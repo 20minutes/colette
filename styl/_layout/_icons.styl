@@ -68,24 +68,26 @@ $icons = {
     'view': 'o',
 }
 
-[data-icon]:before
-[data-icon-after]:after
-    font-family "20mn"
-    speak none
-    font-weight normal
-    font-variant normal
-    text-transform none
-    line-height 1
+[data-icon]
+[data-icon-after]
+    &:before
+    &:after
+        font-family "20mn"
+        speak none
+        font-weight normal
+        font-variant normal
+        text-transform none
+        line-height 1
 
     a&
         display block
 
+    em
+        display none
+
     p
     ul
         overflow hidden
-
-    em
-        display none
 
 for key, value in $icons
     [data-icon={key}]:before
