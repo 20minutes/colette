@@ -1,0 +1,190 @@
+/*
+ * Skins
+ * Add a skin to article.box on listing pages
+ * Note that skins require a figure.media to be visible
+ */
+[class*="skin-"]
+    .box-footer
+        a
+            color $color-base
+
+/* Text skins */
+.skin-blog
+.skin-chat
+.skin-exclusive
+.skin-diaporama
+.skin-lastminute
+.skin-live
+.skin-partner
+.skin-people
+.skin-quiz
+.skin-weird
+    .media
+        &:before
+        &:after
+            absolute top 0 left 0
+
+        &:before
+            @extends .font-secondary
+            z-index 2
+            width 60px
+            height 30px
+            color #ffffff
+            text-align center
+            line-height 30px
+
+        &:after
+            z-index 1
+            width 66px
+            height 36px
+            content ''
+            background-color #000000
+            opacity 0.3
+
+.skin-blog
+    p
+        color $color-community
+
+    .media
+        &:before
+            background-color $color-community
+            content 'blog'
+
+.skin-chat
+    .media
+        &:before
+            background-color $color-community
+            content 'chat'
+
+.skin-diaporama
+    .media
+        &:before
+            width 130px
+            background-color $color-media
+            content 'diaporama'
+
+        &:after
+            width 136px
+
+.skin-exclusive
+    p
+        color $color-highlight
+
+    .media
+        &:before
+            width 90px
+            background-color $color-highlight
+            content 'exclusif'
+
+        &:after
+            width 96px
+
+.skin-lastminute
+    padding 0
+    background-color $color-highlight
+
+    p
+        color #ffffff
+
+    a:first-child
+        display block
+        border 1px solid #ffffff
+
+    .media
+        &:before
+            width 130px
+            background-color $color-highlight
+            content 'dernière minute'
+
+        &:after
+            width 136px
+
+.skin-live
+    .media
+        &:before
+            background-color $color-highlight
+            content 'live'
+
+    .teaser-headline
+        color $color-highlight
+
+.skin-partner
+    .media
+        &:before
+            width 90px
+            background-color $color-native
+            content 'Partenaire'
+            color $color-base
+
+        &:after
+            width 96px
+
+.skin-people
+    .media
+        &:before
+            background-color $color-entertainment
+            content 'People'
+
+.skin-quiz
+    color $color-community
+    .media
+        &:before
+            background-color $color-community
+            content 'quiz'
+
+.skin-weird
+    .media
+        &:before
+            background-color $color-weird
+            content "T'as vu"
+
+/* Icon skins */
+.skin-gallery
+.skin-video
+    .media
+        @extends [data-icon]
+
+        &:before
+        &:after
+        display block
+        padding 6px
+        width 60px
+        height 42px
+
+        &:before
+            z-index 2
+            absolute bottom 6px left 6px
+            font-size 3.6rem
+            text-align center
+            line-height 42px
+            color #ffffff
+
+        &:after
+            z-index 1
+            absolute bottom 6px left 6px
+            content ''
+            border-radius 3px
+            background-color $color-media
+            opacity 0.5
+
+        &.small
+            .media
+                &:before
+                &:after
+                    width 42px
+                    height 30px
+                    padding 3px
+
+                &:before
+                    line-height 30px
+                    font-size 24px
+
+.skin-video
+    .media
+        &:before
+            content 'p'
+
+.skin-gallery
+    .media
+        &:before
+            content 'I'
