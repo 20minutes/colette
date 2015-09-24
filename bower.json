@@ -7,8 +7,8 @@
   ],
   "description": "A css and js starter kit for 20 Minutes web projects",
   "main": [
-      "css/colette.styl",
-      "js/colette.js"
+    "css/colette.styl",
+    "js/colette.js"
   ],
   "keywords": [
     "css",
@@ -21,5 +21,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "headroom.js": "~0.7.0"
+  }
 }
