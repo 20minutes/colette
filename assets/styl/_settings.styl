@@ -2,7 +2,7 @@
  * - Set variables
  * - Define generic|extendable styles
  */
-/* -- Grid -- */
+/* Grid */
 $columns = 12 // number of columns
 $gutter = 12 // guuter width
 
@@ -54,7 +54,7 @@ $colors = $base $default $sport $entertainment $economy $community $weird $partn
 /* Generic styles for backgrounds and texts colors */
 for $item in $colors
     $.border-color-{$item}
-        border 1px solid $item[1]!important
+        border 1px solid $item[1]
 
     $.bg-{$item}
          background-color $item[1]
@@ -98,6 +98,7 @@ for $item in $colors
     text-transform uppercase
 
 .list-pos-outside
+.list-pos-outside li
     list-style-position inside
     padding-left 1em
     text-indent -1em
@@ -114,6 +115,9 @@ for $item in $colors
 
 .inline-block
     display inline-block
+
+.hidden
+    display none
 
 .vsb-hidden
     visibility hidden
