@@ -7,8 +7,8 @@
   ],
   "description": "A css and js starter kit for 20 Minutes web projects",
   "main": [
-    "css/colette.styl",
-    "js/colette.js"
+    "dist/colette.min.css",
+    "dist/colette.min.js"
   ],
   "keywords": [
     "css",

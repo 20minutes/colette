@@ -10,13 +10,16 @@ var gulp      = require('gulp'),
 
 var cfg = {
     bowerDir: 'bower_components/',
-    cssDir: 'styl/',
-    jsDir: 'js/'
+    fontsDir: 'assets/fonts/',
+    cssDir: 'assets/styl/',
+    jsDir: 'assets/js/',
+    distDir: 'dist/'
+
 };
 
 // base64 encode fonts
 gulp.task('fonts', function() {
-    return gulp.src(['fonts/*.woff'])
+    return gulp.src([cfg.fontsDir + '*.woff'])
         .pipe(fonts64())
         .pipe(concat('_fonts64.styl'))
         .pipe(gulp.dest(cfg.cssDir + '_base/'));
@@ -33,7 +36,8 @@ gulp.task('styles', function()
             import: ['nib']
         }))
         .pipe(minify())
-        .pipe(gulp.dest(cfg.cssDir));
+        .pipe(rename('colette.min.css'))
+        .pipe(gulp.dest(cfg.distDir));
 });
 
 // js
@@ -41,11 +45,10 @@ gulp.task('scripts', function()
 {
     return gulp.src([
             cfg.bowerDir + 'headroom.js/dist/headroom.min.js',
-            cfg.bowerDir + 'headroom.js/dist/jQuery.headroom.min.js',
             cfg.jsDir + 'colette/js/colette.js'
         ])
         .pipe(plumber())
         .pipe(concat('colette.min.js'))
-        .pipe(gulp.dest(cfg.jsDir))
+        .pipe(gulp.dest(cfg.distDir))
         .pipe(uglify());
 });
