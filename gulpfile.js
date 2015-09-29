@@ -10,9 +10,8 @@ var gulp      = require('gulp'),
 
 var cfg = {
     bowerDir: 'bower_components/',
-    cssDir: './styl/',
-    stylusPattern: 'styl/**/*.styl',
-    jsPattern: 'js/**/*.js'
+    cssDir: 'styl/',
+    jsDir: 'js/'
 };
 
 // base64 encode fonts
@@ -37,5 +36,16 @@ gulp.task('styles', function()
         .pipe(gulp.dest(cfg.cssDir));
 });
 
-// build
-gulp.task('build', ['fonts', 'styles']);
+// js
+gulp.task('scripts', function()
+{
+    return gulp.src([
+            cfg.bowerDir + 'headroom.js/dist/headroom.min.js',
+            cfg.bowerDir + 'headroom.js/dist/jQuery.headroom.min.js',
+            cfg.jsDir + 'colette/js/colette.js'
+        ])
+        .pipe(plumber())
+        .pipe(concat('colette.min.js'))
+        .pipe(gulp.dest(cfg.jsDir))
+        .pipe(uglify());
+});
