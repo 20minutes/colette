@@ -1,6 +1,5 @@
 var gulp      = require('gulp'),
     concat    = require('gulp-concat'),
-    minify    = require('gulp-minify'),
     plumber   = require('gulp-plumber'),
     rename    = require('gulp-rename'),
     fonts64   = require('gulp-simplefont64'),
@@ -35,7 +34,6 @@ gulp.task('styles', function()
             use: [require('nib')()],
             import: ['nib']
         }))
-        .pipe(minify())
         .pipe(rename('colette.min.css'))
         .pipe(gulp.dest(cfg.distDir));
 });
