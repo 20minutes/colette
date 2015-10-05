@@ -12,7 +12,9 @@ var cfg = {
     fontsDir: 'assets/fonts/',
     cssDir: 'assets/styl/',
     jsDir: 'assets/js/',
-    distDir: 'dist/'
+    distDir: 'dist/',
+    stylusPattern: '**/*.styl',
+    jsPattern: '**/*.js'
 
 };
 
@@ -49,4 +51,9 @@ gulp.task('scripts', function()
         .pipe(concat('colette.min.js'))
         .pipe(gulp.dest(cfg.distDir))
         .pipe(uglify());
+});
+
+gulp.task('watch', function() {
+    gulp.watch(cfg.cssDir + cfg.stylusPattern, ['styles']);
+    gulp.watch(cfg.jsDir + cfg.jsPattern, ['scripts']);
 });
