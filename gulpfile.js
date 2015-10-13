@@ -2,7 +2,6 @@ var gulp      = require('gulp'),
     concat    = require('gulp-concat'),
     plumber   = require('gulp-plumber'),
     rename    = require('gulp-rename'),
-    fonts64   = require('gulp-simplefont64'),
     stylus    = require('gulp-stylus'),
     uglify    = require('gulp-uglify'),
     path      = require('path');
@@ -17,14 +16,6 @@ var cfg = {
     jsPattern: '**/*.js'
 
 };
-
-// base64 encode fonts
-gulp.task('fonts', function() {
-    return gulp.src([cfg.fontsDir + '*.woff'])
-        .pipe(fonts64())
-        .pipe(concat('_fonts64.styl'))
-        .pipe(gulp.dest(cfg.cssDir + '_base/'));
-});
 
 // css
 gulp.task('styles', function()
@@ -53,7 +44,11 @@ gulp.task('scripts', function()
         .pipe(uglify());
 });
 
+// watch
 gulp.task('watch', function() {
     gulp.watch(cfg.cssDir + cfg.stylusPattern, ['styles']);
     gulp.watch(cfg.jsDir + cfg.jsPattern, ['scripts']);
 });
+
+// build
+gulp.task('build', ['styles', 'scripts']);
