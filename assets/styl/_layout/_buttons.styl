@@ -1,64 +1,35 @@
-/* Defines styles for buttons => may be declined for each section color */
-.btn
-    @extends .font-secondary
-    display inline-block
-    padding 0 12px
-    height 30px
-    box-shadow inset 0 0 1px #f1f1f1
-    border-radius 3px
-    border-top 1px solid #c7c7c7
-    border-right 1px solid #878787
-    border-bottom 1px solid #878787
-    border-left 1px solid #c7c7c7
-    background #eeeeee /* lte ie8 */
-    background linear-gradient(bottom, #c7c7c7, #eeeeee) /* default */
-    rem 1.1
-    line-height 30px
-    text-transform uppercase
-    text-shadow 1px 1px #f1f1f1
-    color $color-base /* default */
+/*
+ * Defines styles for icon-in-a-circle buttons
+ *
+ * Generic styles are set within .btn-icon declaration
+ * => we use $buttons array to set specific styles (e.g. background-color|color|font-size etc)
+ */
 
-    &:hover
-        text-decoration none!important
-        background #c7c7c7 /* lte i8 */
-        background linear-gradient(bottom, #eeeeee, #c7c7c7) /* default */
+$buttons = {
+    'facebook': { 'background-color': #4c64a0 },
+    'googleplus': { 'background-color': #d14836, 'font-size': 2.1rem },
+    'hootsuite': { 'background-color': #000000, 'font-size': 2.1rem },
+    'linkedin': { 'background-color': #0177b5 },
+    'pinterest': { 'background-color': #bd081c },
+    'pocket': { 'background-color': #ffffff, 'color': #ed4054, 'border': .2rem solid #b7b7b7 },
+    'sms': { 'background-color': #48930b },
+    'twitter': { 'background-color': #00a7e7 },
+    'whatsapp': { 'background-color': #01a85a, 'font-size': 2.1rem },
+}
 
-    a
-        color $color-base /* default */
+.btn-icon
+    /* generic styles */
+    width 3rem
+    height 3rem
+    border-radius 50%
+    background-color $color-secondary
+    font-size 1.6rem
+    line-height 3rem
+    text-align center
+    color white
 
-.btn-default
-    box-shadow inset 0 0 1px $color-default
-    border-color $color-default #063062 #063062 $color-default
-    background $color-default /* lte ie8 */
-    background linear-gradient(bottom, #063062, $color-default)
-    color #ffffff!important
-    text-shadow 1px 1px #063062
-
-    &:hover
-        background #063062 /* lte ie8 */
-        background linear-gradient(bottom, $color-default, #063062)
-
-.btn-community
-    box-shadow inset 0 0 1px $color-community
-    border-color $color-community #62062f #62062f $color-community
-    background $color-community /* lte ie8 */
-    background linear-gradient(bottom, #62062f, $color-community)
-    color #ffffff
-    text-shadow 1px 1px #62062f
-
-    &:hover
-        background #62062f /* lte ie8 */
-        background linear-gradient(bottom, $color-community, #62062f)
-        color #ffffff
-
-.btn-highlight
-    box-shadow inset 0 0 1px $color-highlight
-    border-color $color-highlight #95130c #95130c $color-highlight
-    background $color-highlight /* lte ie8 */
-    background linear-gradient(bottom, #95130c, $color-highlight)
-    color #ffffff
-    text-shadow 1px 1px #95130c
-
-    &:hover
-        background #95130c /* lte ie8 */
-        background linear-gradient(bottom, $color-community, #95130c)
+    /* button per button styles */
+    for btn in $buttons
+        &[data-icon={btn}]
+            for prop, value in $buttons[btn]
+                {prop} value

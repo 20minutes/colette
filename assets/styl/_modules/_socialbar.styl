@@ -10,54 +10,16 @@
         &:not(:first-child)
             margin-left 1.8rem
 
-    a
-        @extends .color-base
+    /*a*/
+        /*@extends .color-base*/
 
     /* counters */
     span
         @extends .font-secondary
-        display inline-block
+        /*display inline-block*/
+        display none
         min-width 100%
         margin-top 3px
         border-radius 2px
         background-color alpha(black, 10%)
         line-height 1.3
-
-    /* icons */
-    [data-icon]
-        text-align center
-
-        &:before
-            display block
-            font-size 2.7rem
-
-    /* icons: social buttons */
-    [data-icon='facebook']
-    [data-icon='twitter']
-    [data-icon='googleplus']
-    [data-icon='linkedin']
-        &:before
-            width 27px
-            height @width
-            border-radius 50%
-            font-size 1.5rem
-            color white
-            line-height @width
-
-    [data-icon='facebook']
-        &:before
-            background-color #4c64a0
-
-    [data-icon='twitter']
-        &:before
-            background-color #00a7e7
-
-    [data-icon='googleplus']
-        &:before
-            background-color #d14836
-            font-size 2.1rem
-            line-height 26px
-
-    [data-icon='linkedin']
-        &:before
-            background-color #0177b5
