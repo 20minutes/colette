@@ -28,7 +28,7 @@ gulp.task('styles', function()
             import: ['nib']
         }))
         .pipe(rename('colette.min.css'))
-        .pipe(gulp.dest(cfg.distDir));
+        .pipe(gulp.dest(cfg.distDir + 'css'));
 });
 
 // js
@@ -40,7 +40,7 @@ gulp.task('scripts', function()
         ])
         .pipe(plumber())
         .pipe(concat('colette.min.js'))
-        .pipe(gulp.dest(cfg.distDir))
+        .pipe(gulp.dest(cfg.distDir + 'js'))
         .pipe(uglify());
 });
 
@@ -50,5 +50,12 @@ gulp.task('watch', function() {
     gulp.watch(cfg.jsDir + cfg.jsPattern, ['scripts']);
 });
 
+// assets
+gulp.task('assets', function() {
+    // Retrieve fonts into dist/ directory
+    gulp.src(cfg.fontsDir + '*')
+        .pipe(gulp.dest(cfg.distDir + 'fonts'));
+});
+
 // build
-gulp.task('build', ['styles', 'scripts']);
+gulp.task('build', ['styles', 'scripts', 'assets']);
