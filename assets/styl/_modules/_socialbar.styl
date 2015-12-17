@@ -5,21 +5,26 @@
     li
         float left
         width 27px
+        padding-bottom 18px /* allows <span> positionning at bottom -18px */
         text-align center
 
         &:not(:first-child)
             margin-left 1.8rem
 
-    /*a*/
-        /*@extends .color-base*/
+    a
+        position relative
+
+        &:not([data-icon='comments'])
+            @extends .btn-icon
 
     /* counters */
     span
         @extends .font-secondary
-        /*display inline-block*/
-        display none
-        min-width 100%
+        absolute bottom -18px left 0
+        display inline-block
+        width 100%
         margin-top 3px
         border-radius 2px
         background-color alpha(black, 10%)
+        color $color-base
         line-height 1.3
