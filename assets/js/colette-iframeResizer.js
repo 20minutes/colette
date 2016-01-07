@@ -12,8 +12,7 @@ colette.iframeResizer = (function() {
     pub.init = function(args)
     {
         cfg.delay = args.delay || cfg.delay;
-        cfg.selector = args.selector || cfg.selector;
-        cfg.el = document.querySelector(cfg.selector);
+        cfg.el = document.querySelector(args.selector || cfg.selector);
 
         window.addEventListener('message', function(e) {
             // resizeComplete
