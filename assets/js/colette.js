@@ -1,4 +1,1 @@
-$(function() {
-
-});
-
+var colette = colette || {};
