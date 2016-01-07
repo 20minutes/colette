@@ -11,19 +11,13 @@ colette.iframeResizer = (function() {
 
     pub.init = function(args)
     {
-        if (undefined !== args.selector) {
-            cfg.selector = args.selector;
-        }
-
-        if (undefined !== args.delay) {
-            cfg.delay = args.delay;
-        }
-
+        cfg.delay = args.delay || cfg.delay;
+        cfg.selector = args.selector || cfg.selector;
         cfg.el = document.querySelector(cfg.selector);
 
-        window.addEventListener('message', function(event) {
+        window.addEventListener('message', function(e) {
             // resizeComplete
-            if ('resizeComplete' === event.data) {
+            if ('resizeComplete' === e.data) {
                 iframeResizeComplete();
             }
         });
@@ -56,7 +50,7 @@ colette.iframeResizer = (function() {
 
     var sendHeight = function()
     {
-        window.top.postMessage({type: 'doResize', height: cfg.selector.offsetHeight}, '*');
+        window.top.postMessage({type: 'doResize', height: cfg.el.offsetHeight}, '*');
         cfg.resizeInternal = true;
     };
 
