@@ -25,13 +25,14 @@ colette.iframeResizer = (function() {
             }
         });
 
-        window.addEventListener('resize', function(e) {
-            if (!cfg.resizeInternal) {
-                setTimeout(function() {
-                    height();
-                }, cfg.delay);
-            }
+        window.addEventListener('load', function(e) {
+            height();
         });
+
+        window.addEventListener('resize', function(e) {
+            height();
+        });
+
     };
 
     var iframeResizeComplete = function() {
@@ -40,7 +41,14 @@ colette.iframeResizer = (function() {
         }, 500);
     };
 
-    var height = function()
+    var height = function() {
+        if (!cfg.resizeInternal) {
+            setTimeout(function() {
+                sendHeight();
+            }, cfg.delay);
+        }
+    }
+    var sendHeight = function()
     {
         window.top.postMessage({type: 'doResize', height: cfg.selector.offsetHeight}, '*');
         cfg.resizeInternal = true;
