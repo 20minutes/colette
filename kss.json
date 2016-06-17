@@ -1,0 +1,11 @@
+{
+    "source": "assets/styl/",
+    "//": "The css and js paths are URLs relative to the style guide destination.",
+    "css": [
+        "../dist/css/colette.min.css"
+    ],
+    "js": [],
+    "title": "Colette Style Guide",
+    "homepage": "readme.md",
+    "verbose": true
+}
