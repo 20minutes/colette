@@ -15,11 +15,22 @@ $mainpoints ?= {
 $tweakpoints ?= {}
 $breakpoints ?= merge($mainpoints, $tweakpoints)
 
+// Variables
+//
+// _settings.styl <br />
+// ```
+// $font-base = 'Helvetica Neue', Helvetica, Arial, sans-serif  /* default font / body text */
+// $font-headings = 'Open Sans', 'Arial', 'Helvetica Neue', Helvetica, sans-serif  /* headings */
+// $font-secondary = 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif /* call to action, pagers... etc.*/
+// $font-icon = '20mn' /* icon font */
+// ```
+//
+// Styleguide: Basics.Fonts.Variables
 /* Typography */
-$font-base ?= 'Helvetica Neue', Helvetica, Arial, sans-serif  // texte courant, corps de texte
-$font-headings ?= 'Open Sans', 'Arial', 'Helvetica Neue', Helvetica, sans-serif  // titres
-$font-secondary ?= 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif // call to action... etc.
-$font-icon ?= '20mn' // call to action... etc.
+$font-base = 'Helvetica Neue', Helvetica, Arial, sans-serif    /* default font / body text */
+$font-headings = 'Open Sans', 'Arial', 'Helvetica Neue', Helvetica, sans-serif  /* headings */
+$font-secondary = 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif /* article label, call to action, pagers... etc. */
+$font-icon = '20mn' /* icon font */
 
 /* Colors */
 $color-base ?= #4c4d4e  // default text color
@@ -71,19 +82,30 @@ for $item in $colors
         color $item[1]
 
 /* Extendable styles */
-.font-secondary
-    font-family $font-secondary
-    font-weight bold
-    font-size 1.1rem
-    text-transform uppercase
-
 .responsive
     display block
     width 100%
     max-width 100%
     height auto
 
-/* Typography styles */
+// Helpers
+//
+// _settings.styl <br />
+// Some default classes are available for text elements:
+//
+// .bold              - bold text
+// .italic            - italic text
+// .uppercase         - uppercase text
+// .align-right       - right-aligned block
+// .align-left        - left-aligned block
+// .align-centered    - centered block
+// .align-justify     - justified block
+// .font-secondary    - small uppercase text (used on labels and pagers for example)
+//
+// Markup: typography-helpers.hbs
+//
+// Styleguide Basics.Typography.Helpers
+//
 .bold
     font-weight bold
 
@@ -103,6 +125,12 @@ for $item in $colors
     text-align justify
 
 .uppercase
+    text-transform uppercase
+
+.font-secondary
+    font-family $font-secondary
+    font-weight bold
+    font-size 1.1rem
     text-transform uppercase
 
 .list-pos-outside
