@@ -2,6 +2,64 @@
  * Handles grid system
  * This takes a lot of inspiration from Bootstrap grid system
  */
+// Grid
+//
+// _layout/_grid.styl
+//
+// Colette comes with a responsive, 12-columns based, Bootstrap-inspired grid system.
+//
+// We define 3 breakpoints:
+// - small: 420px
+// - medium: 768px
+// - and large: 960px
+//
+// and 3 related media queries:
+// - [sm] 420px <= screen-width
+// - [md] 768px <= screen-width
+// - [lg] 960px <= screen-width
+//
+// Grid classes allow us to set column width according to the targeted media query:
+//
+// <table>
+//  <thead>
+//      <tr>
+//          <th>Breakpoint</th>
+//          <th>sm</th>
+//          <th>md</th>
+//          <th>lg</th>
+//      </tr>
+//  </thead>
+//  <tbody>
+//      <tr>
+//          <td>Media query</td>
+//          <td align="center">min-width: 420px</td>
+//          <td align="center">min-width: 768px</td>
+//          <td align="center">min-width: 960px</td>
+//      </tr>
+//      <tr>
+//          <td>Class name</td>
+//          <td align="center">.col-sm-[n]</td>
+//          <td align="center">.col-md-[n]</td>
+//          <td align="center">.col-lg-[n]</td>
+//      </tr>
+//      <tr>
+//          <td>Css declaration</td>
+//          <td colspan="3" align="center">{ width: ([n] / 12) * 100 }</td>
+//      </tr>
+//  </tbody>
+// </table>
+//
+// **Usage**
+// Columns should come within a .clearfix container:
+// ```
+// <div class=”row”>
+//     /* columns here */
+// </div>
+// ```
+//
+// Markup: grid.hbs
+//
+// Styleguide Layout.Grid
 /* Generate default grid columns and offsets, according to breakpoints and media queries defined in settings */
 _column(size)
     float left
