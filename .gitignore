@@ -4,6 +4,7 @@
 /bin/
 /composer.phar
 /vendor/
+/styleguide/
 /web/bundles/
 /node_modules/
 /bower_components/
