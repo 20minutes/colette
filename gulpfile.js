@@ -4,13 +4,17 @@ var gulp      = require('gulp'),
     rename    = require('gulp-rename'),
     stylus    = require('gulp-stylus'),
     uglify    = require('gulp-uglify'),
-    path      = require('path');
+    path      = require('path'),
+    run       = require('gulp-run'),
+    sequence  = require('run-sequence'),
+    kssnode   = __dirname + '/node_modules/.bin/kss-node';
 
 var cfg = {
     bowerDir: 'bower_components/',
     fontsDir: 'assets/fonts/',
     cssDir: 'assets/styl/',
     jsDir: 'assets/js/',
+    docDir: 'styleguide/',
     distDir: 'dist/',
     stylusPattern: '**/*.styl',
     jsPattern: '**/*.js'
@@ -44,17 +48,28 @@ gulp.task('scripts', function()
         .pipe(uglify());
 });
 
-// watch
-gulp.task('watch', function() {
-    gulp.watch(cfg.cssDir + cfg.stylusPattern, ['styles']);
-    gulp.watch(cfg.jsDir + cfg.jsPattern, ['scripts']);
-});
-
 // assets
 gulp.task('assets', function() {
     // Retrieve fonts into dist/ directory
     gulp.src(cfg.fontsDir + '*')
         .pipe(gulp.dest(cfg.distDir + 'fonts'));
+});
+
+// kss
+gulp.task('kss', function (callback) {
+    // generate doc
+    run(kssnode + ' --config kss.json').exec();
+
+    // retrieve dist directory
+    gulp.src(cfg.distDir + '*/**')
+        .pipe(gulp.dest(cfg.docDir + 'dist/'));
+
+});
+
+// watch
+gulp.task('watch', function() {
+    gulp.watch(cfg.cssDir + cfg.stylusPattern, ['styles', 'kss']);
+    gulp.watch(cfg.jsDir + cfg.jsPattern, ['scripts']);
 });
 
 // build
