@@ -43,8 +43,38 @@
         </a>
         <ul class="kss-nav__menu-child">
             <li class="kss-nav__menu-item">
-              <a href="section-components.html#kssref-components-teaser">
+              <a href="section-components.html#kssref-components-form">
                 <span class="kss-nav__ref ">2.1</span
+                ><span class="kss-nav__name">Single row form</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-components.html#kssref-components-media">
+                <span class="kss-nav__ref ">2.2</span
+                ><span class="kss-nav__name">Media</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-components.html#kssref-components-navbar">
+                <span class="kss-nav__ref ">2.3</span
+                ><span class="kss-nav__name">Navbar</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-components.html#kssref-components-skins">
+                <span class="kss-nav__ref ">2.4</span
+                ><span class="kss-nav__name">Skins</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-components.html#kssref-components-socialbar">
+                <span class="kss-nav__ref ">2.5</span
+                ><span class="kss-nav__name">Socialbar</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-components.html#kssref-components-teaser">
+                <span class="kss-nav__ref ">2.6</span
                 ><span class="kss-nav__name">Teaser</span>
               </a>
             </li>
@@ -81,13 +111,575 @@
 
 
       </div>
+      <section id="kssref-components-form" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-components-form">
+          <span class="kss-title__ref">
+              2.1
+            <span class="kss-title__permalink-hash">
+                #Components.form
+            </span>
+          </span>
+          Single row form
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>_modules/_form.styl</p>
+<p>Display, on a single row, an input field + fixed-width icon submit button</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <form class="form-single-row pa1" action="/">
+    <input type="text" class="pl1 pr1" placeholder="Input field" />
+    <button type="submit" data-icon="search"><em>ok</em></button>
+</form>
+
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;form class=&quot;form-single-row pa1&quot; action=&quot;/&quot;&gt;
+    &lt;input type=&quot;text&quot; class=&quot;pl1 pr1&quot; placeholder=&quot;Input field&quot; /&gt;
+    &lt;button type=&quot;submit&quot; data-icon=&quot;search&quot;&gt;&lt;em&gt;ok&lt;/em&gt;&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-components-media" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-components-media">
+          <span class="kss-title__ref">
+              2.2
+            <span class="kss-title__permalink-hash">
+                #Components.Media
+            </span>
+          </span>
+          Media
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>_modules/_media.styl</p>
+<p>A media is either an image or a video, displayed with caption and/or credit mention.
+<strong>Video</strong>: videos are made responsive, on the basis of a 16/9 ratio
+<strong>Empty media</strong>: if the media (image or video) is not available for any reason, the block display a default N/A image instead</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <p>Image</p>
+<figure class="media">
+    <img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image">
+    <figcation>This is the image caption</figcation>
+    <p class="media-credit">This is the credit info</p>
+</figure>
+<p>Video</p>
+<figure class="media media-video-container">
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/HwCnti9SW7o" frameborder="0" allowfullscreen></iframe>
+    <figcation>This is the image caption</figcation>
+    <p class="media-credit">This is the credit info</p>
+</figure>
+<p>Empty media</p>
+<figure class="media">
+    <span class="media-blank"></span>
+    <figcation>This is the image caption</figcation>
+    <p class="media-credit">This is the credit info</p>
+</figure>
+
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;p&gt;Image&lt;/p&gt;
+&lt;figure class=&quot;media&quot;&gt;
+    &lt;img src=&quot;http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg&quot; alt=&quot;This is an image&quot;&gt;
+    &lt;figcation&gt;This is the image caption&lt;/figcation&gt;
+    &lt;p class=&quot;media-credit&quot;&gt;This is the credit info&lt;/p&gt;
+&lt;/figure&gt;
+&lt;p&gt;Video&lt;/p&gt;
+&lt;figure class=&quot;media media-video-container&quot;&gt;
+    &lt;iframe width=&quot;640&quot; height=&quot;360&quot; src=&quot;https://www.youtube.com/embed/HwCnti9SW7o&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+    &lt;figcation&gt;This is the image caption&lt;/figcation&gt;
+    &lt;p class=&quot;media-credit&quot;&gt;This is the credit info&lt;/p&gt;
+&lt;/figure&gt;
+&lt;p&gt;Empty media&lt;/p&gt;
+&lt;figure class=&quot;media&quot;&gt;
+    &lt;span class=&quot;media-blank&quot;&gt;&lt;/span&gt;
+    &lt;figcation&gt;This is the image caption&lt;/figcation&gt;
+    &lt;p class=&quot;media-credit&quot;&gt;This is the credit info&lt;/p&gt;
+&lt;/figure&gt;
+</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-components-navbar" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-components-navbar">
+          <span class="kss-title__ref">
+              2.3
+            <span class="kss-title__permalink-hash">
+                #Components.navbar
+            </span>
+          </span>
+          Navbar
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>_modules/_navbar.styl</p>
+<p>Display a navigation bar at the top of the page.
+Note that we use headroom.js to handle navbar show/hide behavior on scroll.</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <nav class="navbar" style="position:static">
+    <a href="#" class="navbar-brand" data-icon="logo"><em>Retour à l'accueil</em></a>
+    <ul class="float-right">
+        <li><a href="#" data-icon="user"><em>Icononly</em></a></li>
+        <li><a href="#" data-icon="user"> Icon + text</a></li>
+    </ul>
+</nav>
+
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;nav class=&quot;navbar&quot; style=&quot;position:static&quot;&gt;
+    &lt;a href=&quot;#&quot; class=&quot;navbar-brand&quot; data-icon=&quot;logo&quot;&gt;&lt;em&gt;Retour à l&#x27;accueil&lt;/em&gt;&lt;/a&gt;
+    &lt;ul class=&quot;float-right&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot; data-icon=&quot;user&quot;&gt;&lt;em&gt;Icononly&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot; data-icon=&quot;user&quot;&gt; Icon + text&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-components-skins" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-components-skins">
+          <span class="kss-title__ref">
+              2.4
+            <span class="kss-title__permalink-hash">
+                #Components.skins
+            </span>
+          </span>
+          Skins
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>_modules/_skin.styl</p>
+<p>Add a skin over the image of a content block on listing pages, and depending on the skin, modify the teaser text and/or background colors.
+Note that:</p>
+<ul>
+<li>the skin is applied on a <code>&lt;figure clas=&quot;media&quot;&gt;</code> tag,</li>
+<li>the image must be placed within a <code>&lt;p&gt;</code> or a <code>&lt;div&gt;</code> tag for icon skins</li>
+</ul>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Examples
+        </div>
+        <div class="kss-modifier__default-name kss-style">
+          Default styling
+        </div>
+        <div class="kss-modifier__example">
+          <article class="[modifier class]">
+    <figure class="media">
+        <p><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image"></p>
+    </figure>
+    <div class="teaser">
+        <p class="teaser-headline color-default">Label</p>
+        <p class="teaser-title">This is the content title</p>
+        <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
+    </div>
+</article>
+
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .skin-blog
+        </div>
+        <div class="kss-modifier__description kss-style">
+          text skin: &quot;blog&quot;, text color: community
+        </div>
+        <div class="kss-modifier__example">
+          <article class="skin-blog">
+    <figure class="media">
+        <p><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image"></p>
+    </figure>
+    <div class="teaser">
+        <p class="teaser-headline color-default">Label</p>
+        <p class="teaser-title">This is the content title</p>
+        <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
+    </div>
+</article>
+
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .skin-chat
+        </div>
+        <div class="kss-modifier__description kss-style">
+          text skin: &quot;chat&quot;
+        </div>
+        <div class="kss-modifier__example">
+          <article class="skin-chat">
+    <figure class="media">
+        <p><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image"></p>
+    </figure>
+    <div class="teaser">
+        <p class="teaser-headline color-default">Label</p>
+        <p class="teaser-title">This is the content title</p>
+        <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
+    </div>
+</article>
+
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .skin-diaporama
+        </div>
+        <div class="kss-modifier__description kss-style">
+          text skin: &quot;diaporama&quot;
+        </div>
+        <div class="kss-modifier__example">
+          <article class="skin-diaporama">
+    <figure class="media">
+        <p><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image"></p>
+    </figure>
+    <div class="teaser">
+        <p class="teaser-headline color-default">Label</p>
+        <p class="teaser-title">This is the content title</p>
+        <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
+    </div>
+</article>
+
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .skin-exclusive
+        </div>
+        <div class="kss-modifier__description kss-style">
+          text skin: &quot;exclusif&quot;, text color: highlight
+        </div>
+        <div class="kss-modifier__example">
+          <article class="skin-exclusive">
+    <figure class="media">
+        <p><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image"></p>
+    </figure>
+    <div class="teaser">
+        <p class="teaser-headline color-default">Label</p>
+        <p class="teaser-title">This is the content title</p>
+        <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
+    </div>
+</article>
+
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .skin-lastminute
+        </div>
+        <div class="kss-modifier__description kss-style">
+          text skin: &quot;dernière minute&quot;, text color: white, background-color: highlight
+        </div>
+        <div class="kss-modifier__example">
+          <article class="skin-lastminute">
+    <figure class="media">
+        <p><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image"></p>
+    </figure>
+    <div class="teaser">
+        <p class="teaser-headline color-default">Label</p>
+        <p class="teaser-title">This is the content title</p>
+        <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
+    </div>
+</article>
+
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .skin-live
+        </div>
+        <div class="kss-modifier__description kss-style">
+          text skin: &quot;live&quot;, headline color: highlight
+        </div>
+        <div class="kss-modifier__example">
+          <article class="skin-live">
+    <figure class="media">
+        <p><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image"></p>
+    </figure>
+    <div class="teaser">
+        <p class="teaser-headline color-default">Label</p>
+        <p class="teaser-title">This is the content title</p>
+        <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
+    </div>
+</article>
+
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .skin-partner
+        </div>
+        <div class="kss-modifier__description kss-style">
+          text skin: &quot;partenaire&quot;
+        </div>
+        <div class="kss-modifier__example">
+          <article class="skin-partner">
+    <figure class="media">
+        <p><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image"></p>
+    </figure>
+    <div class="teaser">
+        <p class="teaser-headline color-default">Label</p>
+        <p class="teaser-title">This is the content title</p>
+        <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
+    </div>
+</article>
+
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .skin-people
+        </div>
+        <div class="kss-modifier__description kss-style">
+          text skin: &quot;people&quot;
+        </div>
+        <div class="kss-modifier__example">
+          <article class="skin-people">
+    <figure class="media">
+        <p><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image"></p>
+    </figure>
+    <div class="teaser">
+        <p class="teaser-headline color-default">Label</p>
+        <p class="teaser-title">This is the content title</p>
+        <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
+    </div>
+</article>
+
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .skin-quiz
+        </div>
+        <div class="kss-modifier__description kss-style">
+          text skin: &quot;quiz&quot;, title/description color: community
+        </div>
+        <div class="kss-modifier__example">
+          <article class="skin-quiz">
+    <figure class="media">
+        <p><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image"></p>
+    </figure>
+    <div class="teaser">
+        <p class="teaser-headline color-default">Label</p>
+        <p class="teaser-title">This is the content title</p>
+        <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
+    </div>
+</article>
+
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .skin-weird
+        </div>
+        <div class="kss-modifier__description kss-style">
+          text skin: &quot;t&#39;as vu&quot;
+        </div>
+        <div class="kss-modifier__example">
+          <article class="skin-weird">
+    <figure class="media">
+        <p><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image"></p>
+    </figure>
+    <div class="teaser">
+        <p class="teaser-headline color-default">Label</p>
+        <p class="teaser-title">This is the content title</p>
+        <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
+    </div>
+</article>
+
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .skin-gallery
+        </div>
+        <div class="kss-modifier__description kss-style">
+          icon skin: &#39;images&#39;
+        </div>
+        <div class="kss-modifier__example">
+          <article class="skin-gallery">
+    <figure class="media">
+        <p><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image"></p>
+    </figure>
+    <div class="teaser">
+        <p class="teaser-headline color-default">Label</p>
+        <p class="teaser-title">This is the content title</p>
+        <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
+    </div>
+</article>
+
+
+        </div>
+        <div class="kss-modifier__name kss-style">
+          .skin-video
+        </div>
+        <div class="kss-modifier__description kss-style">
+          icon skin: &#39;play&#39;
+        </div>
+        <div class="kss-modifier__example">
+          <article class="skin-video">
+    <figure class="media">
+        <p><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image"></p>
+    </figure>
+    <div class="teaser">
+        <p class="teaser-headline color-default">Label</p>
+        <p class="teaser-title">This is the content title</p>
+        <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
+    </div>
+</article>
+
+
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;article class=&quot;[modifier class]&quot;&gt;
+    &lt;figure class=&quot;media&quot;&gt;
+        &lt;p&gt;&lt;img src=&quot;http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg&quot; alt=&quot;This is an image&quot;&gt;&lt;/p&gt;
+    &lt;/figure&gt;
+    &lt;div class=&quot;teaser&quot;&gt;
+        &lt;p class=&quot;teaser-headline color-default&quot;&gt;Label&lt;/p&gt;
+        &lt;p class=&quot;teaser-title&quot;&gt;This is the content title&lt;/p&gt;
+        &lt;p class=&quot;teaser-summary&quot;&gt;This is the summary lorm ipsum sic amet color baba orum.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/article&gt;
+
+</code></pre>
+      </div>
+
+      </section>
+      <section id="kssref-components-socialbar" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-components-socialbar">
+          <span class="kss-title__ref">
+              2.5
+            <span class="kss-title__permalink-hash">
+                #Components.socialbar
+            </span>
+          </span>
+          Socialbar
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>_modules/_socialbar.styl</p>
+<p>Display a set of social buttons.</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <ul class="socialbar">
+    <li>
+        <a href="#" data-icon="facebook" target="_blank"><em>Facebook</em></a>
+    </li>
+    <li>
+        <a href="#" data-icon="twitter" target="_blank"><em>Twitter</em></a>
+    </li>
+    <li>
+        <a href="#" data-icon="linkedin" target="_blank"><em>LinkedIn</em></a>
+    </li>
+    <li>
+        <a href="#" data-icon="googleplus" target="_blank"><em>Google Plus</em></a>
+    </li>
+    <li>
+        <a href="#" data-icon="pinterest" target="_blank"><em>Pinterest</em></a>
+    </li>
+    <li>
+        <a href="#" data-icon="whatsapp" target="_blank"><em>What's App</em></a>
+    </li>
+    <li>
+        <a href="#" data-icon="sms" target="_blank"><em>SMS</em></a>
+    </li>
+</ul>
+
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;socialbar&quot;&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot; data-icon=&quot;facebook&quot; target=&quot;_blank&quot;&gt;&lt;em&gt;Facebook&lt;/em&gt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot; data-icon=&quot;twitter&quot; target=&quot;_blank&quot;&gt;&lt;em&gt;Twitter&lt;/em&gt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot; data-icon=&quot;linkedin&quot; target=&quot;_blank&quot;&gt;&lt;em&gt;LinkedIn&lt;/em&gt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot; data-icon=&quot;googleplus&quot; target=&quot;_blank&quot;&gt;&lt;em&gt;Google Plus&lt;/em&gt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot; data-icon=&quot;pinterest&quot; target=&quot;_blank&quot;&gt;&lt;em&gt;Pinterest&lt;/em&gt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot; data-icon=&quot;whatsapp&quot; target=&quot;_blank&quot;&gt;&lt;em&gt;What&#x27;s App&lt;/em&gt;&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot; data-icon=&quot;sms&quot; target=&quot;_blank&quot;&gt;&lt;em&gt;SMS&lt;/em&gt;&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+      </div>
+
+      </section>
       <section id="kssref-components-teaser" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-components-teaser">
           <span class="kss-title__ref">
-              2.1
+              2.6
             <span class="kss-title__permalink-hash">
                 #Components.Teaser
             </span>
@@ -99,17 +691,38 @@
 
       <div class="kss-description">
         <p>_modules/_borders.styl</p>
-<p>A teaser is a block of content displaying:</p>
+<p>Displayed in listings, a teaser is a content summary. It contains:</p>
 <ul>
-<li>main illustration</li>
 <li>a label</li>
 <li>a title</li>
-<li>a description</li>
+<li>a summary text</li>
 </ul>
 
       </div>
     </div>
 
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <div class="teaser">
+    <p class="teaser-headline color-default">Label</p>
+    <p class="teaser-title">This is the content title</p>
+    <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
+</div>
+
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;teaser&quot;&gt;
+    &lt;p class=&quot;teaser-headline color-default&quot;&gt;Label&lt;/p&gt;
+    &lt;p class=&quot;teaser-title&quot;&gt;This is the content title&lt;/p&gt;
+    &lt;p class=&quot;teaser-summary&quot;&gt;This is the summary lorm ipsum sic amet color baba orum.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+      </div>
 
       </section>
 </article>
