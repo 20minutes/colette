@@ -3,6 +3,7 @@
 .idea/*
 /bin/
 /composer.phar
+/_docs/
 /vendor/
 /styleguide/
 /web/bundles/
