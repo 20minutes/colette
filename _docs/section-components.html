@@ -45,7 +45,7 @@
             <li class="kss-nav__menu-item">
               <a href="section-components.html#kssref-components-form">
                 <span class="kss-nav__ref ">2.1</span
-                ><span class="kss-nav__name">Single row form</span>
+                ><span class="kss-nav__name">Forms</span>
               </a>
             </li>
             <li class="kss-nav__menu-item">
@@ -73,8 +73,14 @@
               </a>
             </li>
             <li class="kss-nav__menu-item">
-              <a href="section-components.html#kssref-components-teaser">
+              <a href="section-components.html#kssref-components-tabs">
                 <span class="kss-nav__ref ">2.6</span
+                ><span class="kss-nav__name">Tabs</span>
+              </a>
+            </li>
+            <li class="kss-nav__menu-item">
+              <a href="section-components.html#kssref-components-teaser">
+                <span class="kss-nav__ref ">2.7</span
                 ><span class="kss-nav__name">Teaser</span>
               </a>
             </li>
@@ -122,7 +128,7 @@
                 #Components.form
             </span>
           </span>
-          Single row form
+          Forms
         </a>
       </h2>
 
@@ -673,13 +679,83 @@ Note that:</p>
       </div>
 
       </section>
+      <section id="kssref-components-tabs" class="kss-section kss-section--depth-2">
+
+    <div class="kss-style">
+      <h2 class="kss-title kss-title--level-2">
+        <a class="kss-title__permalink" href="#kssref-components-tabs">
+          <span class="kss-title__ref">
+              2.6
+            <span class="kss-title__permalink-hash">
+                #Components.tabs
+            </span>
+          </span>
+          Tabs
+        </a>
+      </h2>
+
+
+      <div class="kss-description">
+        <p>_modules/_tabs.styl</p>
+<p>Default: adds a navigation within a section
+Breaking news: is used to disaply hot news on a page</p>
+
+      </div>
+    </div>
+
+      <div class="kss-modifier__wrapper">
+        <div class="kss-modifier__heading kss-style">
+          Example
+        </div>
+        <div class="kss-modifier__example">
+          <!-- default -->
+<div class="tabs-wrapper box mb2">
+    <ul class="tabs default mb2">
+        <li class="tabs-name"><span>En ce moment</span></li>
+        <li class="tabs-item"><a href="#">Tab 1</a></li>
+        <li class="tabs-item"><a href="#">Tab 2</a></li>
+        <li class="tabs-item"><a href="#">Tab 3</a></li>
+    </ul>
+</div>
+
+<!-- breaking news -->
+<div class="box tabs breakingnews mb2">
+    <a href="#">
+        <p class="tabs-name"><span>Alerte<br>info</span></p><p class="tabs-alert">Lorem ipsum sic amet color baba orum</p>
+    </a>
+</div>
+
+        </div>
+      </div>
+
+      <div class="kss-markup kss-style">
+        <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;!-- default --&gt;
+&lt;div class=&quot;tabs-wrapper box mb2&quot;&gt;
+    &lt;ul class=&quot;tabs default mb2&quot;&gt;
+        &lt;li class=&quot;tabs-name&quot;&gt;&lt;span&gt;En ce moment&lt;/span&gt;&lt;/li&gt;
+        &lt;li class=&quot;tabs-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Tab 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;tabs-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Tab 2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;tabs-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Tab 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;!-- breaking news --&gt;
+&lt;div class=&quot;box tabs breakingnews mb2&quot;&gt;
+    &lt;a href=&quot;#&quot;&gt;
+        &lt;p class=&quot;tabs-name&quot;&gt;&lt;span&gt;Alerte&lt;br&gt;info&lt;/span&gt;&lt;/p&gt;&lt;p class=&quot;tabs-alert&quot;&gt;Lorem ipsum sic amet color baba orum&lt;/p&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+      </div>
+
+      </section>
       <section id="kssref-components-teaser" class="kss-section kss-section--depth-2">
 
     <div class="kss-style">
       <h2 class="kss-title kss-title--level-2">
         <a class="kss-title__permalink" href="#kssref-components-teaser">
           <span class="kss-title__ref">
-              2.6
+              2.7
             <span class="kss-title__permalink-hash">
                 #Components.Teaser
             </span>
