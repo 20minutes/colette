@@ -7,7 +7,8 @@ var gulp      = require('gulp'),
     path      = require('path'),
     run       = require('gulp-run'),
     sequence  = require('run-sequence'),
-    kssnode   = __dirname + '/node_modules/.bin/kss-node';
+    kssnode   = __dirname + '/node_modules/.bin/kss',
+    kss       = require('kss');
 
 var cfg = {
     bowerDir: 'bower_components/',
@@ -18,7 +19,6 @@ var cfg = {
     distDir: 'dist/',
     stylusPattern: '**/*.styl',
     jsPattern: '**/*.js'
-
 };
 
 // css
@@ -56,9 +56,9 @@ gulp.task('assets', function() {
 });
 
 // kss
-gulp.task('kss', function (callback) {
+gulp.task('kss', function () {
     // generate doc
-    run(kssnode + ' --config kss.json').exec();
+    kss(require('./kss.json'));
 
     // retrieve dist directory
     gulp.src(cfg.distDir + '*/**')
