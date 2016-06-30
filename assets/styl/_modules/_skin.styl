@@ -1,8 +1,28 @@
-/*
- * Skins
- * Add a skin to article.box on listing pages
- * Note that skins require a figure.media to be visible
- */
+// Skins
+//
+// _modules/_skin.styl
+//
+// Add a skin over the image of a content block on listing pages, and depending on the skin, modify the teaser text and/or background colors.
+// Note that:
+// - the skin is applied on a `<figure clas="media">` tag,
+// - the image must be placed within a `<p>` or a `<div>` tag for icon skins
+//
+// .skin-blog        - text skin: "blog", text color: community
+// .skin-chat        - text skin: "chat"
+// .skin-diaporama   - text skin: "diaporama"
+// .skin-exclusive   - text skin: "exclusif", text color: highlight
+// .skin-lastminute  - text skin: "dernière minute", text color: white, background-color: highlight
+// .skin-live        - text skin: "live", headline color: highlight
+// .skin-partner     - text skin: "partenaire"
+// .skin-people      - text skin: "people"
+// .skin-quiz        - text skin: "quiz", title/description color: community
+// .skin-weird       - text skin: "t'as vu"
+// .skin-gallery     - icon skin: 'images'
+// .skin-video       - icon skin: 'play'
+//
+// Markup: skin.hbs
+//
+// Styleguide Components.skins
 
 /* Text skins */
 .skin-blog

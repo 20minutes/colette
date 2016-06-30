@@ -1,3 +1,13 @@
+// Tabs
+//
+// _modules/_tabs.styl
+//
+// Default: adds a navigation within a section
+// Breaking news: is used to disaply hot news on a page
+//
+// Markup: tabs.hbs
+//
+// Styleguide Components.tabs
 .tabs-wrapper
     overflow hidden
     position relative
@@ -14,7 +24,6 @@
     @extends .clearfix
     display inline-block
     height 35px
-    /*border-bottom 1px solid #ffffff*/
     overflow hidden
     line-height @height
 
@@ -122,8 +131,8 @@ for $item in $colors
         @extends $.bg-{$item}
         @extends $.border-color-{$item}
 
-.tabs.{$item[0]} .tabs-name:after
-    @extends $.bg-{$item}
+    .tabs.{$item[0]} .tabs-name:after
+        @extends $.bg-{$item}
 
 /* ----------------------------------------------------------------------------------------
  * ] Theme */
