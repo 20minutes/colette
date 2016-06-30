@@ -3,6 +3,7 @@ var gulp      = require('gulp'),
     plumber   = require('gulp-plumber'),
     rename    = require('gulp-rename'),
     stylus    = require('gulp-stylus'),
+    stylint   = require('gulp-stylint'),
     uglify    = require('gulp-uglify'),
     path      = require('path'),
     run       = require('gulp-run'),
@@ -32,6 +33,13 @@ gulp.task('styles', function()
         }))
         .pipe(rename('colette.min.css'))
         .pipe(gulp.dest(cfg.distDir + 'css'));
+});
+
+// lint css
+gulp.task('stylint', function() {
+    return gulp.src(cfg.cssDir + cfg.stylusPattern)
+        .pipe(stylint({ config: '.stylintrc' }))
+        .pipe(stylint.reporter());
 });
 
 // js
