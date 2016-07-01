@@ -3,14 +3,25 @@
  * - Define generic|extendable styles
  */
 /* Grid */
-$columns = 12 // number of columns
-$gutter = 12 // guuter width
+$columns = 12   // number of columns
+$gutter = 12    // gutter width
 
-/* Typography */
-$font-base = 'Helvetica Neue', Helvetica, Arial, sans-serif  // texte courant, corps de texte
-$font-headings = 'Open Sans', 'Arial', 'Helvetica Neue', Helvetica, sans-serif  // titres
-$font-secondary = 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif // call to action... etc.
-$font-icon = '20mn' // call to action... etc.
+// Fonts
+//
+// ```
+// $font-base = 'Helvetica Neue', Helvetica, Arial, sans-serif  /* default font / body text */
+// $font-headings = 'Open Sans', 'Arial', 'Helvetica Neue', Helvetica, sans-serif  /* headings */
+// $font-secondary = 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif /* call to action, pagers... etc.*/
+// $font-icon = '20mn' /* icon font */
+// ```
+//
+// Weight: 0
+//
+// Styleguide: Settings.Variables.Fonts
+$font-base = 'Helvetica Neue', Helvetica, Arial, sans-serif    /* default font / body text */
+$font-headings = 'Open Sans', 'Arial', 'Helvetica Neue', Helvetica, sans-serif  /* headings */
+$font-secondary = 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif /* article label, call to action, pagers... etc. */
+$font-icon = '20mn' /* icon font */
 
 /* Colors */
 $color-base = #4c4d4e  // default text color
@@ -62,19 +73,33 @@ for $item in $colors
         color $item[1]
 
 /* Extendable styles */
-.font-secondary
-    font-family $font-secondary
-    font-weight bold
-    font-size 1.1rem
-    text-transform uppercase
-
 .responsive
     display block
     width 100%
     max-width 100%
     height auto
 
-/* Typography styles */
+// Helpers: Text elements
+//
+// Some default classes are available for text elements:
+//
+// - **.bold**:             bold text
+// - **.italic**:           italic text
+// - **.uppercase**:        uppercase text
+// - **.font-secondary**:   small uppercase text (used on labels and pagers for example)
+// - **.align-right**:      right-aligned block
+// - **.align-left**:       left-aligned block
+// - **.align-centered**:   centered block
+// - **.align-justify**:    justified block
+// - **.list-pos-outside**: list-item with outside positionned marks
+// - **.list-type-none**:   list-item with no marks
+//
+// Weight: 11
+//
+// Markup: helpers-text.twig
+//
+// Styleguide Settings.TextElements
+//
 .bold
     font-weight bold
 
@@ -96,6 +121,12 @@ for $item in $colors
 .uppercase
     text-transform uppercase
 
+.font-secondary
+    font-family $font-secondary
+    font-weight bold
+    font-size 1.1rem
+    text-transform uppercase
+
 .list-pos-outside
 .list-pos-outside li
     list-style-position inside
@@ -105,7 +136,23 @@ for $item in $colors
 .list-type-none
     list-style-type none
 
-/* Boxes display & positionning styles */
+// Helpers: Block elements
+//
+// Some default classes are available for block elements:
+//
+// - **.float-left**:   float left
+// - **.float-right**:  float right
+// - **.clearfix**:     clear floats (must be applied on the parent container)
+// - **.inline**:       display inline of a block or a list
+// - **.inline-block**: display inline-block
+// - **.hidden**:       display none
+// - **.vsb-hidden**:   visibility hidden
+//
+// Weight: 12
+//
+// Markup: helpers-block.twig
+//
+// Styleguide Settings.BlockElements
 .inline
     display inline
 
@@ -135,7 +182,41 @@ for $item in $colors
         clear both
         visibility hidden
 
-/* Media Queries */
+// Media queries
+//
+// We handle breakpoints and related media queries with variables:
+//
+// **Breakpoints**
+// ```
+// $lg-min-width = 960px
+// $md-min-width = 768px
+// $sm-min-width = 420px
+// ```
+//
+// **Media queries**
+// ```
+// $media-lg = "screen and (min-width: " + $lg-min-width + ")"
+// $media-md = "screen and (min-width: " + $md-min-width + ")"
+// $media-sm = "screen and (min-width: " + $sm-min-width + ")"
+// ```
+//
+// **Usage example**
+// ```
+// /* stylus file */
+// @media $media-lg
+//     /* styles */
+// ```
+//
+// will compile to
+// ```
+// /* css file */
+// @media screen and (min-width: 960px)
+//     /* styles */
+// ```
+//
+// Weight: 1
+//
+// Styleguide: Settings.Variables.MediaQueries
 $lg-min-width = 960px
 $md-min-width = 768px
 $sm-min-width = 420px
