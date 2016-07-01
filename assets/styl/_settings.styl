@@ -121,7 +121,7 @@ for $item in $colors
         border 1px solid $item[1]
 
     $.bg-{$item}
-         background-color $item[1]
+        background-color $item[1]
 
     .color-{$item}
         color $item[1]
@@ -150,10 +150,16 @@ for $item in $colors
 //
 // Weight: 11
 //
+<<<<<<< 354247a0982ed8a5c5ca3b32e959cc47d0fe6d06
 // Markup: helpers-text.twig
 //
 // Styleguide Settings.TextElements
 //
+=======
+// Markup: typography-helpers.hbs
+//
+// Styleguide Basics.Typography.Helpers
+>>>>>>> fix lint error
 .bold
     font-weight bold
 
@@ -182,10 +188,11 @@ for $item in $colors
     text-transform uppercase
 
 .list-pos-outside
-.list-pos-outside li
-    list-style-position inside
-    padding-left 1em
-    text-indent -1em
+    &
+    li
+        list-style-position inside
+        padding-left 1em
+        text-indent -1em
 
 .list-type-none
     list-style-type none
@@ -223,14 +230,14 @@ for $item in $colors
     visibility hidden
 
 .float-left
-    float left!important
+    float left!important // @stylint ignore
 
 .float-right
-    float right!important
+    float right!important // @stylint ignore
 
 .clearfix
     &:after
-        content ""
+        content ''
         display block
         height 0
         clear both
@@ -277,6 +284,6 @@ $sm-min-width = 420px
 /* @TODO: create a mixin to generate media queries according to breakpoints
  * e.g. : mq(xs,sm) would create a media query for [xs] and [sm] sizes
  */
-$media-lg = "screen and (min-width: " + $lg-min-width + ")"
-$media-md = "screen and (min-width: " + $md-min-width + ")"
-$media-sm = "screen and (min-width: " + $sm-min-width + ")"
+$media-lg = 'screen and (min-width: ' + $lg-min-width + ')'
+$media-md = 'screen and (min-width: ' + $md-min-width + ')'
+$media-sm = 'screen and (min-width: ' + $sm-min-width + ')'
