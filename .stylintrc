@@ -1,7 +1,7 @@
 {
-    "blocks": false,
+    "blocks": true,
     "brackets": "never",
-    "colons": "always",
+    "colons": "never",
     "colors": "always",
     "commaSpace": "always",
     "commentSpace": "always",
@@ -26,7 +26,7 @@
     "noImportant": true,
     "parenSpace": "never",
     "placeholders": "false",
-    "prefixVarsWithDollar": "always",
+    "prefixVarsWithDollar": false,
     "quotePref": "single",
     "reporterOptions": {
         "columns": ["lineData", "severity", "description", "rule"],
