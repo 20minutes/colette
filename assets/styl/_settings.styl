@@ -2,6 +2,41 @@
  * - Set variables
  * - Define generic|extendable styles
  */
+// Media queries
+//
+// We handle breakpoints and related media queries with variables:
+//
+// **Breakpoints**
+// ```
+// $lg-min-width = 960px
+// $md-min-width = 768px
+// $sm-min-width = 420px
+// ```
+//
+// **Media queries**
+// ```
+// $media-lg = "screen and (min-width: " + $lg-min-width + ")"
+// $media-md = "screen and (min-width: " + $md-min-width + ")"
+// $media-sm = "screen and (min-width: " + $sm-min-width + ")"
+// ```
+//
+// **Usage example**
+// ```
+// /* stylus file */
+// @media $media-lg
+//     /* styles */
+// ```
+//
+// will compile to
+// ```
+// /* css file */
+// @media screen and (min-width: 960px)
+//     /* styles */
+// ```
+//
+// Weight: 1
+//
+// Styleguide: Settings.Variables.MediaQueries
 /* Grid */
 $columns ?= 12 // number of columns
 $gutter ?= 12 // gutter width
@@ -15,9 +50,8 @@ $mainpoints ?= {
 $tweakpoints ?= {}
 $breakpoints ?= merge($mainpoints, $tweakpoints)
 
-// Variables
+// Fonts
 //
-// _settings.styl <br />
 // ```
 // $font-base = 'Helvetica Neue', Helvetica, Arial, sans-serif  /* default font / body text */
 // $font-headings = 'Open Sans', 'Arial', 'Helvetica Neue', Helvetica, sans-serif  /* headings */
@@ -25,8 +59,9 @@ $breakpoints ?= merge($mainpoints, $tweakpoints)
 // $font-icon = '20mn' /* icon font */
 // ```
 //
-// Styleguide: Basics.Fonts.Variables
-/* Typography */
+// Weight: 0
+//
+// Styleguide: Settings.Variables.Fonts
 $font-base = 'Helvetica Neue', Helvetica, Arial, sans-serif    /* default font / body text */
 $font-headings = 'Open Sans', 'Arial', 'Helvetica Neue', Helvetica, sans-serif  /* headings */
 $font-secondary = 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif /* article label, call to action, pagers... etc. */
@@ -88,23 +123,26 @@ for $item in $colors
     max-width 100%
     height auto
 
-// Helpers
+// Helpers: Text elements
 //
-// _settings.styl <br />
 // Some default classes are available for text elements:
 //
-// .bold              - bold text
-// .italic            - italic text
-// .uppercase         - uppercase text
-// .align-right       - right-aligned block
-// .align-left        - left-aligned block
-// .align-centered    - centered block
-// .align-justify     - justified block
-// .font-secondary    - small uppercase text (used on labels and pagers for example)
+// - **.bold**:             bold text
+// - **.italic**:           italic text
+// - **.uppercase**:        uppercase text
+// - **.font-secondary**:   small uppercase text (used on labels and pagers for example)
+// - **.align-right**:      right-aligned block
+// - **.align-left**:       left-aligned block
+// - **.align-centered**:   centered block
+// - **.align-justify**:    justified block
+// - **.list-pos-outside**: list-item with outside positionned marks
+// - **.list-type-none**:   list-item with no marks
 //
-// Markup: typography-helpers.twig
+// Weight: 11
 //
-// Styleguide Basics.Typography.Helpers
+// Markup: helpers-text.twig
+//
+// Styleguide Settings.TextElements
 //
 .bold
     font-weight bold
@@ -142,7 +180,23 @@ for $item in $colors
 .list-type-none
     list-style-type none
 
-/* Boxes display & positionning styles */
+// Helpers: Block elements
+//
+// Some default classes are available for block elements:
+//
+// - **.float-left**:   float left
+// - **.float-right**:  float right
+// - **.clearfix**:     clear floats (must be applied on the parent container)
+// - **.inline**:       display inline of a block or a list
+// - **.inline-block**: display inline-block
+// - **.hidden**:       display none
+// - **.vsb-hidden**:   visibility hidden
+//
+// Weight: 12
+//
+// Markup: helpers-block.twig
+//
+// Styleguide Settings.BlockElements
 .inline
     display inline
 
