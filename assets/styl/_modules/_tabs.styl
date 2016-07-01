@@ -1,3 +1,11 @@
+// Tabs
+//
+// - **Default:** adds a navigation within a section
+// - **Breaking news:** is used to disaply hot news on a page
+//
+// Markup: tabs.twig
+//
+// Styleguide Components.tabs
 .tabs-wrapper
     overflow hidden
     position relative
@@ -13,19 +21,20 @@
     @extends .list-type-none
     @extends .clearfix
     display inline-block
-    height 35px
-    /*border-bottom 1px solid #ffffff*/
+    height 32px
     overflow hidden
     line-height @height
 
     a
+        position relative
+        z-index 2
         color $color-tertiary
 
 .tabs-item
 .tabs-name
     @extends .font-secondary
     position relative
-    height 35px
+    height 32px
     margin 0 0 0 36px
     float left
 
@@ -34,8 +43,8 @@
         content ""
         absolute top 0 right -12px
         display block
-        width 36px
-        height 36px
+        width 32px
+        height 32px
         box-shadow 2px -2px 2px rgba(0, 0, 0, 0.25)
         transform rotate(45deg)
 
@@ -122,8 +131,8 @@ for $item in $colors
         @extends $.bg-{$item}
         @extends $.border-color-{$item}
 
-.tabs.{$item[0]} .tabs-name:after
-    @extends $.bg-{$item}
+    .tabs.{$item[0]} .tabs-name:after
+        @extends $.bg-{$item}
 
 /* ----------------------------------------------------------------------------------------
  * ] Theme */
