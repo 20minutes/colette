@@ -43,17 +43,17 @@
             z-index 2
             width 60px
             height 30px
-            color #ffffff
+            color $color-white
             text-align center
             line-height 30px
 
         &:after
+            content ''
             z-index 1
             width 66px
             height 36px
-            content ''
-            background-color #000000
-            opacity 0.3
+            background-color $color-black
+            opacity .3
 
 .skin-blog
     p
@@ -61,14 +61,14 @@
 
     .media
         &:before
-            background-color $color-community
             content 'blog'
+            background-color $color-community
 
 .skin-chat
     .media
         &:before
-            background-color $color-community
             content 'chat'
+            background-color $color-community
 
 .skin-diaporama
     .media
@@ -86,9 +86,9 @@
 
     .media
         &:before
+            content 'exclusif'
             width 90px
             background-color $color-highlight
-            content 'exclusif'
 
         &:after
             width 96px
@@ -98,17 +98,17 @@
     background-color $color-highlight
 
     p
-        color #ffffff
+        color $color-white
 
     a:first-child
         display block
-        border 1px solid #ffffff
+        border 1px solid $color-white
 
     .media
         &:before
+            content 'dernière minute'
             width 130px
             background-color $color-highlight
-            content 'dernière minute'
 
         &:after
             width 136px
@@ -116,8 +116,8 @@
 .skin-live
     .media
         &:before
-            background-color $color-highlight
             content 'live'
+            background-color $color-highlight
 
     .teaser-headline
         color $color-highlight
@@ -125,9 +125,9 @@
 .skin-partner
     .media
         &:before
+            content 'Partenaire'
             width 90px
             background-color $color-native
-            content 'Partenaire'
             color $color-base
 
         &:after
@@ -136,21 +136,21 @@
 .skin-people
     .media
         &:before
-            background-color $color-entertainment
             content 'People'
+            background-color $color-entertainment
 
 .skin-quiz
     color $color-community
     .media
         &:before
-            background-color $color-community
             content 'quiz'
+            background-color $color-community
 
 .skin-weird
     .media
         &:before
+            content 'T’as vu'
             background-color $color-weird
-            content "T'as vu"
 
 /* Icon skins */
 .skin-gallery
@@ -173,24 +173,26 @@
             font-size 3.6rem
             text-align center
             line-height 42px
-            color #ffffff
+            color $color-white
 
         &:after
+            content ''
             z-index 1
             absolute bottom 6px left 6px
-            content ''
             border-radius 3px
             background-color $color-media
-            opacity 0.5
+            opacity .5
 
 .skin-video
-    .media > p:first-child
-    .media > div:first-child
-        &:before
-            content 'p'
+    .media
+        > p:first-child
+        > div:first-child
+            &:before
+                content 'p'
 
 .skin-gallery
-    .media > p:first-child
-    .media > div:first-child
-        &:before
-            content 'I'
+    .media
+        > p:first-child
+        > div:first-child
+            &:before
+                content 'I'
