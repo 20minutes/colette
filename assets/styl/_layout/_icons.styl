@@ -76,12 +76,12 @@
 //
 // Styleguide Layout.Icons
 $icons = {
-    /* brand */
+    // brand
     'logo-21e': "'",
     'logo-s': 'l',
     'logo': 'L',
 
-    /* social */
+    // social
     'facebook': 'F',
     'github': 'H',
     'google': 'g',
@@ -95,7 +95,7 @@ $icons = {
     'twitter': 'T',
     'whatsapp': 'W',
 
-    /* ui */
+    // ui
     'arrow-down': '~',
     'arrow-left': '<',
     'arrow-right': '>',
@@ -136,7 +136,7 @@ $icons = {
     'video': 'v',
     'view': 'o',
 
-    /* zodiac */
+    // zodiac
     'aries': 'Ï',
     'taurus': 'Ö',
     'gemini': 'Ü',
@@ -155,7 +155,7 @@ $icons = {
 [data-icon-after]
     &:before
     &:after
-        font-family "20mn"
+        font-family $font-icon
         speak none
         font-weight normal
         font-variant normal
@@ -175,4 +175,4 @@ $icons = {
 for key, value in $icons
     [data-icon={key}]:before
     [data-icon-after={key}]:after
-         content value
+        content value
