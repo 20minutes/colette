@@ -8,7 +8,7 @@
     "cssLiteral": "never",
     "customProperties": [],
     "depthLimit": 4,
-    "duplicates": true,
+    "duplicates": false,
     "efficient": "always",
     "exclude": [],
     "extendPref": false,
