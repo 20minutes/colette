@@ -7,7 +7,6 @@ var gulp      = require('gulp'),
     path      = require('path'),
     run       = require('gulp-run'),
     sequence  = require('run-sequence'),
-    kssnode   = __dirname + '/node_modules/.bin/kss',
     kss       = require('kss');
 
 var cfg = {
