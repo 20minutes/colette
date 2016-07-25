@@ -1,18 +1,39 @@
-/* borders */
-.bbd
-    border-bottom 1px dashed #c7c7c7
-
+// Borders
+//
+// A set of light grey solid and dotted borders.
+//
+// - **.btd**: border top dotted
+// - **.brd**: border right dotted
+// - **.bbd**: border bottom dotted
+// - **.bld**: border left dotted
+// - **.bts**: border top solid
+// - **.brs**: border right solid
+// - **.bbs**: border bottom solid
+// - **.bls**: border left solid
+//
+// Markup: border.twig
+//
+// Styleguide Layout.Borders
 .btd
-    border-top 1px dashed #c7c7c7
+    border-top 1px dashed $color-borders
+
+.brd
+    border-right 1px dashed $color-borders
+
+.bbd
+    border-bottom 1px dashed $color-borders
+
+.bld
+    border-left 1px dashed $color-borders
 
 .bts
-    border-top 1px solid #c7c7c7
+    border-top 1px solid $color-borders
 
 .brs
-    border-right 1px solid #c7c7c7
+    border-right 1px solid $color-borders
 
 .bbs
-    border-bottom 1px solid #c7c7c7
+    border-bottom 1px solid $color-borders
 
 .bls
-    border-left 1px solid #c7c7c7
+    border-left 1px solid $color-borders

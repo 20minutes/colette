@@ -3,18 +3,22 @@ var gulp      = require('gulp'),
     plumber   = require('gulp-plumber'),
     rename    = require('gulp-rename'),
     stylus    = require('gulp-stylus'),
+    stylint   = require('gulp-stylint'),
     uglify    = require('gulp-uglify'),
-    path      = require('path');
+    path      = require('path'),
+    run       = require('gulp-run'),
+    sequence  = require('run-sequence'),
+    kss       = require('kss');
 
 var cfg = {
     bowerDir: 'bower_components/',
     fontsDir: 'assets/fonts/',
     cssDir: 'assets/styl/',
     jsDir: 'assets/js/',
+    docDir: '_docs/',
     distDir: 'dist/',
     stylusPattern: '**/*.styl',
     jsPattern: '**/*.js'
-
 };
 
 // css
@@ -31,6 +35,13 @@ gulp.task('styles', function()
         .pipe(gulp.dest(cfg.distDir + 'css'));
 });
 
+// lint css
+gulp.task('stylint', function() {
+    return gulp.src(cfg.cssDir + cfg.stylusPattern)
+        .pipe(stylint({ config: '.stylintrc' }))
+        .pipe(stylint.reporter());
+});
+
 // js
 gulp.task('scripts', function()
 {
@@ -44,17 +55,28 @@ gulp.task('scripts', function()
         .pipe(uglify());
 });
 
-// watch
-gulp.task('watch', function() {
-    gulp.watch(cfg.cssDir + cfg.stylusPattern, ['styles']);
-    gulp.watch(cfg.jsDir + cfg.jsPattern, ['scripts']);
-});
-
 // assets
 gulp.task('assets', function() {
     // Retrieve fonts into dist/ directory
     gulp.src(cfg.fontsDir + '*')
         .pipe(gulp.dest(cfg.distDir + 'fonts'));
+});
+
+// kss
+gulp.task('kss', function () {
+    // generate doc
+    kss(require('./kss.json'));
+
+    // retrieve dist directory
+    gulp.src(cfg.distDir + '*/**')
+        .pipe(gulp.dest(cfg.docDir + 'dist/'));
+
+});
+
+// watch
+gulp.task('watch', function() {
+    gulp.watch(cfg.cssDir + cfg.stylusPattern, ['styles', 'kss']);
+    gulp.watch(cfg.jsDir + cfg.jsPattern, ['scripts']);
 });
 
 // build

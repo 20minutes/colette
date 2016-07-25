@@ -1,9 +1,8 @@
-*.css
-*.html
 .idea/*
 /bin/
 /composer.phar
+/_docs/
 /vendor/
 /web/bundles/
-/node_modules/
-/bower_components/
+node_modules
+bower_components

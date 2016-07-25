@@ -1,15 +1,17 @@
-/*
- * A 'box' is a content container displayed on homepage
- * (= white bg, grey border, 1px-padding
- */
-
+// Box
+//
+// A 'box' is a content container.
+// It can be displayed as a block (on homepage or listing pages) or as a page (content view). It can also come with a footer.
+//
+// Markup: box.twig
+//
+// Styleguide Layout.Box
 .box
     position relative
     padding 1px
-    border #c7c7c7
-    background-color #ffffff
+    border $color-borders
+    background-color $color-white
 
-/* Box footer */
 .box-footer
     @extends .font-secondary
     @extends .clearfix

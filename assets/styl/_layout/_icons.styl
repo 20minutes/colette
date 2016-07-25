@@ -1,86 +1,179 @@
-/* Icons */
-/* We use data attributes to insert icons :
- * <p data-icon="icon_alias">
- */
+// Icons
+//
+// Use data attributes to insert icons: `<p data-icon="[icon_alias]">`
+//
+// Styleguide Layout.Icons
+
+// Brand icons
+//
+// Icons:
+// logo-21e : '
+// logo-s : l
+// logo : L
+//
+// Styleguide Layout.Icons.Brand
+
+// Social icons
+//
+// Icons:
+// facebook : F
+// github : H
+// google : g
+// googleplus : G
+// hootsuite : O
+// linkedin : n
+// pinterest : P
+// pocket : K
+// sms : x
+// snapchat : N
+// twitter : T
+// whatsapp : W
+//
+// Styleguide Layout.Icons.Social
+
+// UI icons
+//
+// Icons:
+// arrow-down : ~
+// arrow-left : <
+// arrow-right : >
+// arrow-up : ^
+// calendar : :
+// cinema: u
+// clock: d
+// clock2: D
+// comments: b
+// cooking: k
+// crosswords: #
+// download: C
+// folder: f
+// games: e
+// grid: =
+// home: h
+// image: i
+// images: I
+// link: &
+// logout: A
+// mail: m
+// menu: a
+// mobile: !
+// more: +
+// photo: c
+// pin: M
+// play: p
+// print: r
+// refresh: R
+// search: z
+// settings: w
+// share: s
+// social: %
+// survey: B
+// tag: t
+// tv: S
+// user: u
+// video: v
+// view: o
+//
+// Styleguide Layout.Icons.UI
+
+// Zodiac icons
+//
+// Icons:
+// aries : Ï
+// taurus : Ö
+// gemini : Ü
+// cancer : Ÿ
+// leo : Ê
+// virgo : Î
+// libra : Â
+// scorpio : Ô
+// sagittarius : Û
+// capricorn : Y
+// aquarius : Ä
+// pisces : Ë
+//
+// Styleguide Layout.Icons.Zodiac
 $icons = {
-    /* social */
-    'facebook': 'F',
-    'github': 'H',
-    'google': 'g',
-    'googleplus': 'G',
-    'hootsuite': 'O',
-    'linkedin': 'n',
-    'pinterest': 'P',
-    'pocket': 'K',
-    'snapchat': 'N',
-    'twitter': 'T',
-    'whatsapp': 'W',
+    // brand
+    'logo-21e': "'"
+    'logo-s': 'l'
+    'logo': 'L'
 
-    /* zodiac */
-    'aries': 'Ï',
-    'taurus': 'Ö',
-    'gemini': 'Ü',
-    'cancer': 'Ÿ',
-    'leo': 'Ê',
-    'virgo': 'Î',
-    'libra': 'Â',
-    'scorpio': 'Ô',
-    'sagittarius': 'Û',
-    'capricorn': 'Y',
-    'aquarius': 'Ä',
-    'pisces': 'Ë',
+    // social
+    'facebook': 'F'
+    'github': 'H'
+    'google': 'g'
+    'googleplus': 'G'
+    'hootsuite': 'O'
+    'linkedin': 'n'
+    'pinterest': 'P'
+    'pocket': 'K'
+    'sms': 'x'
+    'snapchat': 'N'
+    'twitter': 'T'
+    'whatsapp': 'W'
 
-    /* ui */
-    'arrow-down': '~',
-    'arrow-left': '<',
-    'arrow-right': '>',
-    'arrow-up': '^',
-    'calendar': ':',
-    'cinema': 'u',
-    'clock': 'd',
-    'clock2': 'D',
-    'comments': 'b',
-    'cooking': 'k',
-    'crosswords': '#',
-    'download': 'C',
-    'folder': 'f',
-    'games': 'e',
-    'grid': '=',
-    'home': 'h',
-    'image': 'i',
-    'images': 'I',
-    'link': '&',
-    'logo-21e': "'",
-    'logo-s': 'l',
-    'logo': 'L',
-    'logout': 'A',
-    'mail': 'm',
-    'menu': 'a',
-    'mobile': '!',
-    'more': '+',
-    'photo': 'c',
-    'pin': 'M',
-    'play': 'p',
-    'print': 'r',
-    'refresh': 'R',
-    'search': 'z',
-    'settings': 'w',
-    'share': 's',
-    'sms': 'x',
-    'social': '%',
-    'survey': 'B',
-    'tag': 't',
-    'tv': 'S',
-    'user': 'u',
-    'video': 'v',
-    'view': 'o',
+    // ui
+    'arrow-down': '~'
+    'arrow-left': '<'
+    'arrow-right': '>'
+    'arrow-up': '^'
+    'calendar': ':'
+    'cinema': 'u'
+    'clock': 'd'
+    'clock2': 'D'
+    'comments': 'b'
+    'cooking': 'k'
+    'crosswords': '#'
+    'download': 'C'
+    'folder': 'f'
+    'games': 'e'
+    'grid': '='
+    'home': 'h'
+    'image': 'i'
+    'images': 'I'
+    'link': '&'
+    'logout': 'A'
+    'mail': 'm'
+    'menu': 'a'
+    'mobile': '!'
+    'more': '+'
+    'photo': 'c'
+    'pin': 'M'
+    'play': 'p'
+    'print': 'r'
+    'refresh': 'R'
+    'search': 'z'
+    'settings': 'w'
+    'share': 's'
+    'social': '%'
+    'survey': 'B'
+    'tag': 't'
+    'tv': 'S'
+    'user': 'u'
+    'video': 'v'
+    'view': 'o'
+
+    // zodiac
+    'aries': 'Ï'
+    'taurus': 'Ö'
+    'gemini': 'Ü'
+    'cancer': 'Ÿ'
+    'leo': 'Ê'
+    'virgo': 'Î'
+    'libra': 'Â'
+    'scorpio': 'Ô'
+    'sagittarius': 'Û'
+    'capricorn': 'Y'
+    'aquarius': 'Ä'
+    'pisces': 'Ë'
 }
 
 [data-icon]
 [data-icon-after]
     &:before
     &:after
-        font-family "20mn"
+        font-family $font-icon
         speak none
         font-weight normal
         font-variant normal
@@ -100,4 +193,4 @@ $icons = {
 for key, value in $icons
     [data-icon={key}]:before
     [data-icon-after={key}]:after
-         content value
+        content value

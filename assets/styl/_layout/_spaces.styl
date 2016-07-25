@@ -1,32 +1,55 @@
-/* margins and paddings */
+// Spaces
+//
+// A set of margins and paddings, based on a 1.2rem gutter width.
+//
+// A margin or padding is a multiple (from 1 to 6) of the gutter width,
+// and can be applied either on top | right | bottom | left | all side(s) of an element.
+//
+// @TODO <br />
+// [Issue #22](https://github.com/20minutes/colette/issues/22): Create mixins for spaces classes
+//
+// -**pt[n]**: padding-top: [n] x 1.2rem
+// -**pr[n]**: padding-right: [n] x 1.2rem
+// -**pb[n]**: padding-bottom: [n] x 1.2rem
+// -**pl[n]**: padding-left: [n] x 1.2rem
+// -**pa[n]**: padding: [n] x 1.2rem
+// -**mt[n]**: margin-top: [n] x 1.2rem
+// -**mr[n]**: margin-right: [n] x 1.2rem
+// -**mb[n]**: margin-bottom: [n] x 1.2rem
+// -**ml[n]**: margin-left: [n] x 1.2rem
+// -**ma[n]**: margin: [n] x 1.2rem
+//
+// Markup: spaces.twig
+//
+// Styleguide Layout.Spaces
 $gutter = 12 // gutter width
 for $i in (0..6)
     .pa{$i}
-        padding $gutter * $i * 0.1rem
+        padding $gutter * $i * .1rem
 
     .pt{$i}
-        padding-top $gutter * $i * 0.1rem
+        padding-top $gutter * $i * .1rem
 
     .pr{$i}
-        padding-right $gutter * $i * 0.1rem
+        padding-right $gutter * $i * .1rem
 
     .pb{$i}
-        padding-bottom $gutter * $i * 0.1rem
+        padding-bottom $gutter * $i * .1rem
 
     .pl{$i}
-        padding-left $gutter * $i * 0.1rem
+        padding-left $gutter * $i * .1rem
 
     .ma{$i}
-        margin $gutter * $i * 0.1rem
+        margin $gutter * $i * .1rem
 
     .mt{$i}
-        margin-top $gutter * $i * 0.1rem
+        margin-top $gutter * $i * .1rem
 
     .mr{$i}
-        margin-right $gutter * $i * 0.1rem
+        margin-right $gutter * $i * .1rem
 
     .mb{$i}
-        margin-bottom $gutter * $i * 0.1rem
+        margin-bottom $gutter * $i * .1rem
 
     .ml{$i}
-        margin-left $gutter * $i * 0.1rem
+        margin-left $gutter * $i * .1rem
