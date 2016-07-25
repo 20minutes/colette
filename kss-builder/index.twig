@@ -83,6 +83,37 @@
           </div>
         {% endif %}
 
+        {% if section.colors %}
+          <ul class="kss-colors">
+            {% kssColors section.colors %}
+              <li>
+                <div class="kss-colors__demo" style="background-color:{{color.hex}}"></div>
+                <div class="kss-colors__info">
+                  <p class="kss-colors__name">{{ color.name }}</p>
+                  <p class="kss-colors__hex">{{ color.hex }}</p>
+                  <p class="kss-colors__rgb">rgb({{ color.rgb.r }}, {{ color.rgb.g }}, {{ color.rgb.b }})</p>
+                  <p class="kss-colors__hsl">hsl({{ color.hsl.h }}, {{ color.hsl.s }}, {{ color.hsl.l }})</p>
+                  <p class="kss-colors__description">{{ color.desc|raw }}</p>
+                </div>
+              </li>
+            {% endkssColors %}
+          </ul>
+        {% endif %}
+
+        {% if section.icons %}
+          <ul class="kss-icons">
+            {% kssIcons section.icons %}
+              <li>
+                <div class="kss-icons__demo">{{ icon.character }}</div>
+                <div class="kss-icons__info">
+                  <p><strong class="kss-icons__name">{{ icon.name }}</strong>: <code class="kss-icons__char">{{ icon.character }}</code></p>
+                  <p class="kss-icons__description">{{ icon.desc|raw }}</p>
+                </div>
+              </li>
+            {% endkssIcons %}
+          </ul>
+        {% endif %}
+
         {% for parameter in section.parameters %}
           {% if loop.first %}
             <div class="kss-parameters__title">Parameters:</div>
