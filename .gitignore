@@ -7,6 +7,6 @@
 /vendor/
 /styleguide/
 /web/bundles/
-/node_modules/
-/bower_components/
+node_modules
+bower_components
 _docs
