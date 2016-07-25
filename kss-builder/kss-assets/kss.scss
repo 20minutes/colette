@@ -401,6 +401,7 @@ $font-icon: '20mn';
   }
   .kss-icons__demo {
     float: left;
+    box-sizing: content-box;
     height: 40px;
     padding: 30px 0;
     width: 100px;
