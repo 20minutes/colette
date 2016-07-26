@@ -3,52 +3,61 @@
  * - Define generic|extendable styles
  */
 /* Grid */
-$columns = 12 // number of columns
-$gutter = 12 // guuter width
+$columns ?= 12 // number of columns
+$gutter ?= 12 // gutter width
+/* Default primary grid breakpoints */
+$breakpoint ?= {
+    'sm': "screen and (min-width: 420px)"
+    'md': "screen and (min-width: 768px)"
+    'lg': "screen and (min-width: 960px)"
+}
+/* Secondary breakpoints */
+$tweakpoint ?= {}
+$grid ?= merge($breakpoint, $tweakpoint)
 
 /* Typography */
-$font-base = 'Helvetica Neue', Helvetica, Arial, sans-serif  // texte courant, corps de texte
-$font-headings = 'Open Sans', 'Arial', 'Helvetica Neue', Helvetica, sans-serif  // titres
-$font-secondary = 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif // call to action... etc.
-$font-icon = '20mn' // call to action... etc.
+$font-base ?= 'Helvetica Neue', Helvetica, Arial, sans-serif  // texte courant, corps de texte
+$font-headings ?= 'Open Sans', 'Arial', 'Helvetica Neue', Helvetica, sans-serif  // titres
+$font-secondary ?= 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif // call to action... etc.
+$font-icon ?= '20mn' // call to action... etc.
 
 /* Colors */
-$color-base = #4c4d4e  // default text color
-$color-base-lighten = #e7e7e7
-$color-secondary = #b7b7b7  // couleur de texte secondaire
-$color-tertiary = #878787   // couleur de texte secondaire 2
-$color-links = #0091aa  // default links color
-$color-highlight = #cc190f  // highlighted text color
+$color-base ?= #4c4d4e  // default text color
+$color-base-lighten ?= #e7e7e7
+$color-secondary ?= #b7b7b7  // couleur de texte secondaire
+$color-tertiary ?= #878787   // couleur de texte secondaire 2
+$color-links ?= #0091aa  // default links color
+$color-highlight ?= #cc190f  // highlighted text color
 
-$color-bg-base = #f8f8f8 // background color
+$color-bg-base ?= #f8f8f8 // background color
 
-$color-default = #0b4892
-$color-sport  = #00b9f3
-$color-entertainment = #cc190f
-$color-economy = #053042
-$color-community = #930b48
-$color-weird = #ef2a82
-$color-partner = #ff5400
-$color-planet = #48930b
-$color-media = #000000
-$color-hightech = #686868
-$color-native = #fff7e2
+$color-default ?= #0b4892
+$color-sport ?= #00b9f3
+$color-entertainment ?= #cc190f
+$color-economy ?= #053042
+$color-community ?= #930b48
+$color-weird ?= #ef2a82
+$color-partner ?= #ff5400
+$color-planet ?= #48930b
+$color-media ?= #000000
+$color-hightech ?= #686868
+$color-native ?= #fff7e2
 
 /* Sections */
-$base               = (base          $color-base)
-$default            = (default       $color-default)
-$sport              = (sport         $color-sport)
-$entertainment      = (entertainment $color-entertainment)
-$economy            = (economy       $color-economy)
-$community          = (community     $color-community)
-$weird              = (weird         $color-weird)
-$partner            = (partner       $color-partner)
-$planet             = (planet        $color-planet)
-$media              = (media         $color-media)
-$hightech           = (hightech      $color-hightech)
-$native             = (native        $color-native)
+$base               ?= (base          $color-base)
+$default            ?= (default       $color-default)
+$sport              ?= (sport         $color-sport)
+$entertainment      ?= (entertainment $color-entertainment)
+$economy            ?= (economy       $color-economy)
+$community          ?= (community     $color-community)
+$weird              ?= (weird         $color-weird)
+$partner            ?= (partner       $color-partner)
+$planet             ?= (planet        $color-planet)
+$media              ?= (media         $color-media)
+$hightech           ?= (hightech      $color-hightech)
+$native             ?= (native        $color-native)
 
-$colors = $base $default $sport $entertainment $economy $community $weird $partner $planet $media $hightech $native
+$colors ?= $base $default $sport $entertainment $economy $community $weird $partner $planet $media $hightech $native
 
 /* Generic styles for backgrounds and texts colors */
 for $item in $colors
@@ -134,14 +143,3 @@ for $item in $colors
         height 0
         clear both
         visibility hidden
-
-/* Media Queries */
-$lg-min-width = 960px
-$md-min-width = 768px
-$sm-min-width = 420px
-/* @TODO: create a mixin to generate media queries according to breakpoints
- * e.g. : mq(xs,sm) would create a media query for [xs] and [sm] sizes
- */
-$media-lg = "screen and (min-width: " + $lg-min-width + ")"
-$media-md = "screen and (min-width: " + $md-min-width + ")"
-$media-sm = "screen and (min-width: " + $sm-min-width + ")"
