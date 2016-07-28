@@ -6,14 +6,14 @@
 $columns ?= 12 // number of columns
 $gutter ?= 12 // gutter width
 /* Default primary grid breakpoints */
-$breakpoint ?= {
+$mainpoints ?= {
     'sm': "screen and (min-width: 420px)"
     'md': "screen and (min-width: 768px)"
     'lg': "screen and (min-width: 960px)"
 }
 /* Secondary breakpoints */
-$tweakpoint ?= {}
-$grid ?= merge($breakpoint, $tweakpoint)
+$tweakpoints ?= {}
+$breakpoints ?= merge($mainpoints, $tweakpoints)
 
 /* Typography */
 $font-base ?= 'Helvetica Neue', Helvetica, Arial, sans-serif  // texte courant, corps de texte

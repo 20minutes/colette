@@ -10,7 +10,7 @@ _column(size)
 _offset(size)
     margin-left round(size * 100 / $columns, 3) * 1%
 
-for breakpoint,query in $grid
+for breakpoint,query in $breakpoints
     @media query
         for i in (1..$columns)
             .col-{breakpoint}-{i}
