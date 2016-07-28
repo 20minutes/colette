@@ -21,5 +21,5 @@ for breakpoint,query in $breakpoints
 
 /* Mixin to add grid-based width to custom selectors */
 _gridColumn(breakpoint, size)
-    @media $grid[breakpoint]
+    @media $breakpoints[breakpoint]
         _column(size)
