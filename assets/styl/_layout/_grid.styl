@@ -1,32 +1,25 @@
 /*
  * Handles grid system
- * This takes a lot of insipiration from Bootstrap grid systme
+ * This takes a lot of inspiration from Bootstrap grid system
  */
-$spanWidth = 100 / $columns
+/* Generate default grid columns and offsets, according to breakpoints and media queries defined in settings */
+_column(size)
+    float left
+    width round(size * 100 / $columns, 3) * 1%
 
-@media $media-sm
-    for $i in (1..$columns)
-        .col-sm-{$i}
-            float left
-            width round($spanWidth * $i, 3) * 1%
+_offset(size)
+    margin-left round(size * 100 / $columns, 3) * 1%
 
-        .offset-sm-{$i}
-            margin-left round($spanWidth * $i, 3) * 1%
+for breakpoint,query in $breakpoints
+    @media query
+        for i in (1..$columns)
+            .col-{breakpoint}-{i}
+                _column(i)
 
-@media $media-md
-    for $i in (1..$columns)
-        .col-md-{$i}
-            float left
-            width round($spanWidth * $i, 3) * 1%
+            .offset-{breakpoint}-{i}
+                _offset(i)
 
-        .offset-md-{$i}
-            margin-left round($spanWidth * $i, 3) * 1%
-
-@media $media-lg
-    for $i in (1..$columns)
-        .col-lg-{$i}
-            float left
-            width round($spanWidth * $i, 3) * 1%
-
-        .offset-lg-{$i}
-            margin-left round($spanWidth * $i, 3) * 1%
+/* Mixin to add grid-based width to custom selectors */
+_gridColumn(breakpoint, size)
+    @media $grid[breakpoint]
+        _column(size)
