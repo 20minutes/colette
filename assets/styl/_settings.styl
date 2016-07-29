@@ -4,26 +4,30 @@
  */
 // Media queries
 //
-// We handle breakpoints and related media queries with variables:
+// Colette provide a collection of breakpoints and media queries, available in a `$breakpoints` hash.
 //
-// **Breakpoints**
+// We handle 3 default primary breakpoints and related media queries :
 // ```
-// $lg-min-width = 960px
-// $md-min-width = 768px
-// $sm-min-width = 420px
+// $mainpoints ?= {
+//     'sm': "screen and (min-width: 420px)"
+//     'md': "screen and (min-width: 768px)"
+//     'lg': "screen and (min-width: 960px)"
+// }
 // ```
+// You can also define secondary breakpoints within the `$tweakpoints` collection (empty by default).
 //
-// **Media queries**
-// ```
-// $media-lg = "screen and (min-width: " + $lg-min-width + ")"
-// $media-md = "screen and (min-width: " + $md-min-width + ")"
-// $media-sm = "screen and (min-width: " + $sm-min-width + ")"
-// ```
+// Colette allows you to:
+// <ul>
+// <li>change primary breakpoints by updating the `$mainpoints` within your stylesheet</li>
+// <li>define additional breakpoints by filling the `$tweakpoints`</li>
+// </ul>
+//
+// Both collections are merged within `$breakpoints`.
 //
 // **Usage example**
 // ```
 // /* stylus file */
-// @media $media-lg
+// @media $breakpoints.lg
 //     /* styles */
 // ```
 //
