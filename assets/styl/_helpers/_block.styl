@@ -1,0 +1,54 @@
+// Helpers: Block elements
+//
+// Some default classes are available for block elements:
+//
+// - **.float-left**:   float left
+// - **.float-right**:  float right
+// - **.clearfix**:     clear floats (must be applied on the parent container)
+// - **.inline**:       display inline of a block or a list
+// - **.inline-block**: display inline-block
+// - **.hidden**:       display none
+// - **.vsb-hidden**:   visibility hidden
+//
+// Weight: 12
+//
+// Markup: helpers-block.twig
+//
+// Styleguide Helpers.BlockElements
+.inline
+    display inline
+
+    > li
+        display inline
+
+.inline-block
+    display inline-block
+
+.hidden
+    display none
+
+.vsb-hidden
+    visibility hidden
+
+.float-left
+    float left!important // @stylint ignore
+
+.float-right
+    float right!important // @stylint ignore
+
+.clear
+    clear both
+
+.clearfix
+    &:after
+        content ''
+        display block
+        height 0
+        clear both
+        visibility hidden
+
+.responsive
+    display block
+    width 100%
+    max-width 100%
+    height auto
