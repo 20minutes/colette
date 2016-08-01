@@ -14,13 +14,11 @@
 //     'lg': "screen and (min-width: 960px)"
 // }
 // ```
-// You can also define secondary breakpoints within the `$tweakpoints` collection (empty by default).
+// We can also define secondary breakpoints within the `$tweakpoints` collection (which is empty by default).
 //
 // Colette allows you to:
-// <ul>
-// <li>change primary breakpoints by updating the `$mainpoints` within your stylesheet</li>
-// <li>define additional breakpoints by filling the `$tweakpoints`</li>
-// </ul>
+// - change primary breakpoints by updating the `$mainpoints` within your stylesheet,
+// - and/or define additional breakpoints by filling the `$tweakpoints`.
 //
 // Both collections are merged within `$breakpoints`.
 //
@@ -38,9 +36,9 @@
 //     /* styles */
 // ```
 //
-// Weight: 1
+// Weight: -1
 //
-// Styleguide: Settings.Variables.MediaQueries
+// Styleguide: Layout.Grid.MediaQueries
 /* Grid */
 $columns ?= 12 // number of columns
 $gutter ?= 12 // gutter width
@@ -54,7 +52,9 @@ $mainpoints ?= {
 $tweakpoints ?= {}
 $breakpoints ?= merge($mainpoints, $tweakpoints)
 
-// Fonts
+// Fonts variables
+//
+// All fonts in the project are set within variables.
 //
 // ```
 // $font-base = 'Helvetica Neue', Helvetica, Arial, sans-serif  // default font / body text
@@ -63,9 +63,7 @@ $breakpoints ?= merge($mainpoints, $tweakpoints)
 // $font-icon = '20mn' // icon font
 // ```
 //
-// Weight: 0
-//
-// Styleguide: Basics.Variables.Fonts
+// Styleguide: Theme.Fonts.Variables
 $font-base = 'Helvetica Neue', Helvetica, Arial, sans-serif // default font / body text
 $font-headings = 'Open Sans', 'Arial', 'Helvetica Neue', Helvetica, sans-serif // headings
 $font-secondary = 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif // article label, call to action, pagers... etc.
@@ -75,7 +73,7 @@ $font-icon = '20mn' // icon font
 //
 // Every colors in this project are variables
 //
-// Styleguide: Basics.Colors
+// Styleguide: Theme.Colors
 
 // Project colors
 //
@@ -92,7 +90,7 @@ $font-icon = '20mn' // icon font
 // color-footer:        #73a0d6 - footer color
 // $color-bg-base:      #f8f8f8 - background color
 //
-// Styleguide: Basics.Colors.Project
+// Styleguide: Theme.Colors.Project
 $color-base ?= #4c4d4e
 $color-base-lighten ?= #e7e7e7
 $color-secondary ?= #b7b7b7
@@ -111,7 +109,7 @@ $color-bg-base ?= #f8f8f8
 // $color-black: #000 - default text color
 // $color-white: #fff - background color
 //
-// Styleguide: Basics.Colors.BnW
+// Styleguide: Theme.Colors.BnW
 $color-black ?= #000
 $color-white ?= #fff
 
@@ -134,7 +132,7 @@ $color-white ?= #fff
 // $color-hightech:      #686868
 // $color-native:        #fff7e2
 //
-// Styleguide: Basics.Colors.Theme
+// Styleguide: Theme.Colors.Theme
 $color-default ?= #0b4892
 $color-sport  ?= #00b9f3
 $color-entertainment ?= #cc190f
@@ -200,7 +198,7 @@ for $item in $colors
 //
 // Markup: helpers-text.twig
 //
-// Styleguide Settings.TextElements
+// Styleguide Helpers.TextElements
 .bold
     font-weight bold
 
@@ -254,7 +252,7 @@ for $item in $colors
 //
 // Markup: helpers-block.twig
 //
-// Styleguide Settings.BlockElements
+// Styleguide Helpers.BlockElements
 .inline
     display inline
 
