@@ -1,0 +1,67 @@
+// Helpers: Text elements
+//
+// Some default classes are available for text elements:
+//
+// - **.bold**:             bold text
+// - **.italic**:           italic text
+// - **.uppercase**:        uppercase text
+// - **.font-secondary**:   small uppercase text (used on labels and pagers for example)
+// - **.align-right**:      right-aligned block
+// - **.align-left**:       left-aligned block
+// - **.align-centered**:   centered block
+// - **.align-justify**:    justified block
+// - **.list-pos-outside**: list-item with outside positionned marks
+// - **.list-type-none**:   list-item with no marks
+//
+// Weight: 11
+//
+// Markup: helpers-text.twig
+//
+// Styleguide Helpers.TextElements
+.bold
+    font-weight bold
+
+.italic
+    font-style italic
+
+.align-center
+    text-align center
+
+.align-left
+    text-align left
+
+.align-right
+    text-align right
+
+.align-justify
+    text-align justify
+
+.uppercase
+    text-transform uppercase
+
+.font-secondary
+    font-family $font-secondary
+    font-weight bold
+    font-size 1.1rem
+    text-transform uppercase
+
+.list-pos-outside
+    &
+    li
+        list-style-position inside
+        padding-left 1em
+        text-indent -1em
+
+.list-type-none
+    list-style-type none
+
+/* @block */
+icon = @block
+    &:before
+    &:after
+        font-family $font-icon
+        speak none
+        font-weight normal
+        font-variant normal
+        text-transform none
+        line-height 1
