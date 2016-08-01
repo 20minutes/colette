@@ -1,0 +1,11 @@
+{
+    "socials" : {
+        "facebook" : "Facebook",
+        "twitter" : "Twitter",
+        "linkedin" : "LinkedIn",
+        "googleplus" : "Google Plus",
+        "pinterest" : "Pinterest",
+        "whatsapp" : "What's App",
+        "sms" : "SMS"
+    }
+}

@@ -19,55 +19,60 @@
  *   Generic styles are set within .btn-icon declaration
  *   => we use $buttons array to set specific styles (e.g. background-color|color|font-size etc)
  */
-$buttons = {
-    'facebook': {
-        'background-color': #4c64a0
-    }
-    'googleplus': {
-        'background-color': #d14836
-    }
-    'hootsuite': {
-        'background-color': #000000
-    }
-    'linkedin': {
-        'background-color': #0177b5
-    }
-    'pinterest': {
-        'background-color': #bd081c
-    }
-    'pocket': {
-        'background-color': #ffffff
-        'color': #ed4054
-        'border': .2rem solid #b7b7b7
-        'line-height': 3.2srem
-    }
-    'sms': {
-        'background-color': #48930b
-        'font-size': 2.2rem
-        'line-height': 3.5srem
-    }
-    'twitter': {
-        'background-color': #00a7e7
-    }
-    'whatsapp': {
-        'background-color': #01a85a
-    }
-}
+$btn-facebook-color ?= #4c64a0
+$btn-googleplus-color ?= #d14836
+$btn-hootsuite-color ?= #000000
+$btn-linkedin-color ?= #0177b5
+$btn-pinterest-color ?= #bd081c
+$btn-pocket-color ?= #ffffff
+$btn-pocket-color1 ?= #ed4054
+$btn-pocket-color2 ?= #b7b7b7
+$btn-sms-color ?= #48930b
+$btn-twitter-color ?= #00a7e7
+$btn-whatsapp-color ?= #01a85a
 
 .btn-icon
     /* generic styles */
     display inline-block
-    width 3rem
-    height 3rem
-    border-radius 50%
+    width 1.6667em
+    height 1.6667em
+    border-radius 60em // oversize radius to keep it round
     background-color $color-secondary
-    font-size 1.8rem
-    line-height 3.3rem
+    font-size 1em
+    line-height 1.833333em
     text-align center
     color white
 
     /* button per button styles */
-    for btn in $buttons
-        &[data-icon={btn}]
-            for prop, value in $buttons[btn]
-                {prop} value
+    &[data-icon=facebook]
+        background-color $btn-facebook-color
+
+    &[data-icon=googleplus]
+        background-color $btn-googleplus-color
+
+    &[data-icon=hootsuite]
+        background-color $btn-hootsuite-color
+
+    &[data-icon=linkedin]
+        background-color $btn-linkedin-color
+
+    &[data-icon=pinterest]
+        background-color $btn-pinterest-color
+
+    &[data-icon=pocket]
+        background-color $btn-pocket-color
+        color $btn-pocket-color1
+        border .2rem solid $btn-pocket-color2
+
+    &[data-icon=sms]
+        background-color $btn-sms-color
+
+        &:before
+            line-height 1.8em
+
+    &[data-icon=twitter]
+        background-color $btn-twitter-color
+
+    &[data-icon=whatsapp]
+        background-color $btn-whatsapp-color
+
