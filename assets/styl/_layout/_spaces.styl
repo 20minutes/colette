@@ -5,7 +5,7 @@
 // A margin or padding is a multiple (from 1 to 6) of the gutter width,
 // and can be applied either on top | right | bottom | left | all side(s) of an element.
 //
-//<ul>
+// <ul>
 // <li>**pt[n]**: padding-top: [n] x 1.2rem</li>
 // <li>**pr[n]**: padding-right: [n] x 1.2rem</li>
 // <li>**pb[n]**: padding-bottom: [n] x 1.2rem</li>
@@ -16,42 +16,43 @@
 // <li>**mb[n]**: margin-bottom: [n] x 1.2rem</li>
 // <li>**ml[n]**: margin-left: [n] x 1.2rem</li>
 // <li>**ma[n]**: margin: [n] x 1.2rem</li>
-//</ul>
+// </ul>
 //
 // Markup: spaces.twig
 //
 // Styleguide Layout.Spaces
+
 /* Create mixins to add gutter-based paddings and margins */
 /* @TODO: allow breakpoint option */
 _pa(i)
-    padding: i * $gutter * .1rem
+    padding i * $gutter * .1rem
 
 _pt(i)
-    padding-top: i * $gutter * .1rem
+    padding-top i * $gutter * .1rem
 
 _pr(i)
-    padding-right: i * $gutter * .1rem
+    padding-right i * $gutter * .1rem
 
 _pb(i)
-    padding-bottom: i * $gutter * .1rem
+    padding-bottom i * $gutter * .1rem
 
 _pl(i)
-    padding-left: i * $gutter * .1rem
+    padding-left i * $gutter * .1rem
 
 _ma(i)
-    margin: i * $gutter * .1rem
+    margin i * $gutter * .1rem
 
 _mt(i)
-    margin-top: i * $gutter * .1rem
+    margin-top i * $gutter * .1rem
 
 _mr(i)
-    margin-right: i * $gutter * .1rem
+    margin-right i * $gutter * .1rem
 
 _mb(i)
-    margin-bottom: i * $gutter * .1rem
+    margin-bottom i * $gutter * .1rem
 
 _ml(i)
-    margin-left: i * $gutter * .1rem
+    margin-left i * $gutter * .1rem
 
 /* Set a few default helpers */
 for i in (0..6)

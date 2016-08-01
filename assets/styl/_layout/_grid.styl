@@ -81,7 +81,7 @@ _gridColumn(breakpoint, size)
 // Markup: grid.twig
 //
 // Styleguide Layout.Grid.Classes
-for breakpoint,query in $breakpoints
+for breakpoint, query in $breakpoints
     @media query
         for i in (1..$columns)
             .col-{breakpoint}-{i}
