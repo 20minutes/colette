@@ -1,0 +1,9 @@
+{
+    "colors" : {
+        "default" : "Actualité générales",
+        "sport" : "Sport",
+        "hightech" : "High-tech",
+        "planet" : "Planète",
+        "economy" : "Economie"
+    }
+}
