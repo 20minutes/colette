@@ -38,7 +38,7 @@
 //
 // Weight: -1
 //
-// Styleguide: Layout.Grid.MediaQueries
+// Styleguide: Settings.Grid
 /* Grid */
 $columns ?= 12 // number of columns
 $gutter ?= 12 // gutter width
@@ -52,7 +52,7 @@ $mainpoints ?= {
 $tweakpoints ?= {}
 $breakpoints ?= merge($mainpoints, $tweakpoints)
 
-// Fonts variables
+// Fonts
 //
 // All fonts in the project are set within variables.
 //
@@ -63,7 +63,7 @@ $breakpoints ?= merge($mainpoints, $tweakpoints)
 // $font-icon = '20mn' // icon font
 // ```
 //
-// Styleguide: Theme.Fonts.Variables
+// Styleguide: Settings.Fonts
 $font-base = 'Helvetica Neue', Helvetica, Arial, sans-serif // default font / body text
 $font-headings = 'Open Sans', 'Arial', 'Helvetica Neue', Helvetica, sans-serif // headings
 $font-secondary = 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif // article label, call to action, pagers... etc.
@@ -73,7 +73,7 @@ $font-icon = '20mn' // icon font
 //
 // Every colors in this project are variables
 //
-// Styleguide: Theme.Colors
+// Styleguide: Settings.Colors
 
 // Project colors
 //
@@ -90,7 +90,7 @@ $font-icon = '20mn' // icon font
 // color-footer:        #73a0d6 - footer color
 // $color-bg-base:      #f8f8f8 - background color
 //
-// Styleguide: Theme.Colors.Project
+// Styleguide: Settings.Colors.Project
 $color-base ?= #4c4d4e
 $color-base-lighten ?= #e7e7e7
 $color-secondary ?= #b7b7b7
@@ -109,7 +109,7 @@ $color-bg-base ?= #f8f8f8
 // $color-black: #000 - default text color
 // $color-white: #fff - background color
 //
-// Styleguide: Theme.Colors.BnW
+// Styleguide: Settings.Colors.BnW
 $color-black ?= #000
 $color-white ?= #fff
 
@@ -132,7 +132,7 @@ $color-white ?= #fff
 // $color-hightech:      #686868
 // $color-native:        #fff7e2
 //
-// Styleguide: Theme.Colors.Theme
+// Styleguide: Settings.Colors.Theme
 $color-default ?= #0b4892
 $color-sport  ?= #00b9f3
 $color-entertainment ?= #cc190f
@@ -161,7 +161,16 @@ $native             ?= (native        $color-native)
 
 $colors ?= $base $default $sport $entertainment $economy $community $weird $partner $planet $media $hightech $native
 
-/* Generic styles for backgrounds and texts colors */
+// Colors
+//
+// Generic styles for text, borders and backgrounds colors.
+//
+// @TODO<br/>
+// Add examples for all colors : text | borders | backgrounds
+//
+// Markup: colors.twig
+//
+// Styleguide Helpers.Colors
 for $item in $colors
     $.border-color-{$item}
         border 1px solid $item[1]
@@ -179,7 +188,7 @@ for $item in $colors
     max-width 100%
     height auto
 
-// Helpers: Text elements
+// Text elements
 //
 // Some default classes are available for text elements:
 //
@@ -236,7 +245,7 @@ for $item in $colors
 .list-type-none
     list-style-type none
 
-// Helpers: Block elements
+// Block elements
 //
 // Some default classes are available for block elements:
 //
