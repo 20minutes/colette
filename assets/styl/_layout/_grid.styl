@@ -4,19 +4,46 @@
  */
 // Grid
 //
-// Colette comes with a responsive, 12-columns based, Bootstrap-inspired grid system.
+// Styleguide Layout.Grid
+
+// Mixins
 //
-// We define 3 breakpoints:
-// - small: 420px
-// - medium: 768px
-// - and large: 960px
+// Colette also provides mixins to create custom responsive layout.
 //
-// and 3 related media queries:
-// - [sm] 420px <= screen-width
-// - [md] 768px <= screen-width
-// - [lg] 960px <= screen-width
+// Styleguide Layout.Grid.Mixins
+
+// _column(size)
 //
-// Grid classes allow us to set column width according to the targeted media query:
+// Generate grid columns.
+//
+// size     : the number of columns (out of 12) it must span
+//
+// Styleguide Layout.Grid.Mixins.Columns
+_column(size)
+    float left
+    width round(size * 100 / $columns, 3) * 1%
+
+_offset(size)
+    margin-left round(size * 100 / $columns, 3) * 1%
+
+// _gridColumn(breakpoint, size)
+//
+// Generate grid columns to breakpoints and media queries defined in settings.
+//
+// breakpoint   : the targeted breakpoint
+// size         : the number of columns (out of 12) it must span
+//
+// Styleguide Layout.Grid.Mixins.Columns
+_gridColumn(breakpoint, size)
+    @media $breakpoints[breakpoint]
+        _column(size)
+
+// Predefined classes
+//
+// Colette provides predefined classes to built responsive / 12-columns-based layout.
+// Grid classes are set according to:
+// - a targeted breakpoint (among those defined in the `$breakpoints` collection),
+// - a width, which must correspond to a number of columns (out of 12 from the grid).
 //
 // <table>
 //  <thead>
@@ -48,20 +75,13 @@
 // </table>
 //
 // **Usage**
+//
 // Columns should come within a `<div class="clearfix>` container.
 //
 // Markup: grid.twig
 //
-// Styleguide Layout.Grid
-/* Generate default grid columns and offsets, according to breakpoints and media queries defined in settings */
-_column(size)
-    float left
-    width round(size * 100 / $columns, 3) * 1%
-
-_offset(size)
-    margin-left round(size * 100 / $columns, 3) * 1%
-
-for breakpoint,query in $breakpoints
+// Styleguide Layout.Grid.Classes
+for breakpoint, query in $breakpoints
     @media query
         for i in (1..$columns)
             .col-{breakpoint}-{i}
@@ -69,8 +89,3 @@ for breakpoint,query in $breakpoints
 
             .offset-{breakpoint}-{i}
                 _offset(i)
-
-/* Mixin to add grid-based width to custom selectors */
-_gridColumn(breakpoint, size)
-    @media $breakpoints[breakpoint]
-        _column(size)
