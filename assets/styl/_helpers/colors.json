@@ -1,0 +1,16 @@
+{
+    "colors" : {
+        "base"      : "couleur par défaut",
+        "default"   : "Actualité générales",
+        "sport"     : "Sport",
+        "entertainment"     : "Entertainment",
+        "economy"   : "Economie",
+        "community"   : "Communauté",
+        "weird"  : "T'as vu",
+        "partner"  : "Partenaire",
+        "planet"    : "Planète",
+        "media"    : "Video et images",
+        "hightech"  : "High-tech",
+        "native"    : "Native"
+    }
+}
