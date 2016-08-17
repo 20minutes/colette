@@ -1,6 +1,6 @@
 {
   "name": "colette",
-  "version": "0.3.8",
+  "version": "0.3.8.3",
   "description": "colette dependencies (for dev concerns)",
   "private": true,
   "main": "index.html",
