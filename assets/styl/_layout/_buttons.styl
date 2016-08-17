@@ -1,11 +1,25 @@
 /*
  * Defines styles for buttons
- *
- * 1. Icon buttons
+ * /
+/ * 1. Default button (text only) */
+.btn
+    padding .5em 1.5em
+    border-radius 20em
+    font-family $font-secondary
+    font-size .875em
+    font-weight bold
+    text-transform uppercase
+    line-height 1
+
+for color in $colors
+    .btn-{color}
+        background-color color[1]
+        color white
+
+/* 2. Icon buttons (icon only)
  *   Generic styles are set within .btn-icon declaration
  *   => we use $buttons array to set specific styles (e.g. background-color|color|font-size etc)
  */
-
 $buttons = {
     'facebook': { 'background-color': #4c64a0 },
     'googleplus': { 'background-color': #d14836 },
