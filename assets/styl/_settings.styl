@@ -146,17 +146,17 @@ $color-hightech ?= #686868
 $color-native ?= #fff7e2
 
 /* Sections */
-$base               ?= (base          $color-base)
-$default            ?= (default       $color-default)
-$sport              ?= (sport         $color-sport)
-$entertainment      ?= (entertainment $color-entertainment)
-$economy            ?= (economy       $color-economy)
-$community          ?= (community     $color-community)
-$weird              ?= (weird         $color-weird)
-$partner            ?= (partner       $color-partner)
-$planet             ?= (planet        $color-planet)
-$media              ?= (media         $color-media)
-$hightech           ?= (hightech      $color-hightech)
-$native             ?= (native        $color-native)
-
-$colors ?= $base $default $sport $entertainment $economy $community $weird $partner $planet $media $hightech $native
+$colors ?= {
+    base: $color-base
+    default: $color-default
+    sport: $color-sport
+    entertainment: $color-entertainment
+    economy: $color-economy
+    community: $color-community
+    weird: $color-weird
+    partner: $color-partner
+    planet: $color-planet
+    media: $color-media
+    hightech: $color-hightech
+    native: $color-native
+}
