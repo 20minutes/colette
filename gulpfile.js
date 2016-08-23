@@ -24,7 +24,17 @@ var cfg = {
 // css
 gulp.task('styles', function()
 {
-    return gulp.src(cfg.cssDir + 'colette.styl')
+    return [
+        gulp.src(cfg.cssDir + 'colette.styl')
+        .pipe(stylus({
+            compress: false,
+            linenos: false,
+            use: [require('nib')()],
+            import: ['nib']
+        }))
+        .pipe(gulp.dest(cfg.distDir + 'css')),
+
+        gulp.src(cfg.cssDir + 'colette.styl')
         .pipe(stylus({
             compress: true,
             linenos: false,
@@ -32,7 +42,8 @@ gulp.task('styles', function()
             import: ['nib']
         }))
         .pipe(rename('colette.min.css'))
-        .pipe(gulp.dest(cfg.distDir + 'css'));
+        .pipe(gulp.dest(cfg.distDir + 'css'))
+    ];
 });
 
 // lint css
@@ -50,6 +61,7 @@ gulp.task('scripts', function()
             cfg.jsDir + 'colette/js/colette.js'
         ])
         .pipe(plumber())
+        .pipe(gulp.dest(cfg.distDir + 'js'))
         .pipe(concat('colette.min.js'))
         .pipe(gulp.dest(cfg.distDir + 'js'))
         .pipe(uglify());
