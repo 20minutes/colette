@@ -20,7 +20,7 @@
     "stylint": "^1.5.6"
   },
   "author": "Olivia Ly <oly@20minutes.fr>",
-  "description": "A css starter kit for 20 Minutes web projects",
+  "description": "A css and js starter kit for 20 Minutes web projects",
   "keywords": [
     "20minutes",
     "boilerplate",
