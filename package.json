@@ -39,7 +39,8 @@
   "main": "dist/css/colette.css",
   "files": [
     "dist",
-    "assets"
+    "assets",
+    "favicon.ico"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
