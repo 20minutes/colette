@@ -10,6 +10,8 @@
     "node_modules",
     "test",
     "tests",
+    "favicon-preview.ico",
+    "gulpfile.js",
     "gulpfile.js",
     "kss.json",
     "package.json"
@@ -43,5 +45,5 @@
     "type": "git",
     "url": "https://github.com/20minutes/colette/"
   },
-  "homepage": "https://github.com/20minutes/colette"
+  "homepage": "https://20minutes.github.io/colette/"
 }

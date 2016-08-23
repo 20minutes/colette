@@ -1,5 +1,6 @@
 var gulp      = require('gulp'),
     concat    = require('gulp-concat'),
+    cssnano   = require('gulp-cssnano'),
     plumber   = require('gulp-plumber'),
     rename    = require('gulp-rename'),
     stylus    = require('gulp-stylus'),
@@ -24,26 +25,16 @@ var cfg = {
 // css
 gulp.task('styles', function()
 {
-    return [
-        gulp.src(cfg.cssDir + 'colette.styl')
+    return gulp.src(cfg.cssDir + 'colette.styl')
         .pipe(stylus({
-            compress: false,
             linenos: false,
             use: [require('nib')()],
             import: ['nib']
         }))
-        .pipe(gulp.dest(cfg.distDir + 'css')),
-
-        gulp.src(cfg.cssDir + 'colette.styl')
-        .pipe(stylus({
-            compress: true,
-            linenos: false,
-            use: [require('nib')()],
-            import: ['nib']
-        }))
-        .pipe(rename('colette.min.css'))
         .pipe(gulp.dest(cfg.distDir + 'css'))
-    ];
+        .pipe(rename('colette.min.css'))
+        .pipe(cssnano())
+        .pipe(gulp.dest(cfg.distDir + 'css'));
 });
 
 // lint css
@@ -57,14 +48,15 @@ gulp.task('stylint', function() {
 gulp.task('scripts', function()
 {
     return gulp.src([
-            cfg.bowerDir + 'headroom.js/dist/headroom.min.js',
+            cfg.bowerDir + 'headroom.js/dist/headroom.js',
             cfg.jsDir + 'colette/js/colette.js'
         ])
         .pipe(plumber())
+        .pipe(concat('colette.js'))
         .pipe(gulp.dest(cfg.distDir + 'js'))
-        .pipe(concat('colette.min.js'))
-        .pipe(gulp.dest(cfg.distDir + 'js'))
-        .pipe(uglify());
+        .pipe(rename('colette.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest(cfg.distDir + 'js'));
 });
 
 // assets
