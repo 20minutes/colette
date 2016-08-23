@@ -1,14 +1,13 @@
 {
   "name": "colette",
   "version": "0.4.0",
-  "description": "colette dependencies (for dev concerns)",
+  "license": "MIT",
   "private": true,
-  "main": "index.html",
-  "author": "",
-  "license": "proprietary",
+  "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.2",
     "gulp-plumber": "^1.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-run": "^1.7.1",
@@ -20,5 +19,37 @@
     "run-sequence": "^1.2.1",
     "stylint": "^1.5.6"
   },
-  "dependencies": {}
+  "author": "Olivia Ly <oly@20minutes.fr>",
+  "description": "A css starter kit for 20 Minutes web projects",
+  "keywords": [
+    "20minutes",
+    "boilerplate",
+    "css",
+    "css3",
+    "framework",
+    "grid",
+    "helpers",
+    "html",
+    "html5",
+    "responsive design",
+    "rwd",
+    "stylus",
+    "typography"
+  ],
+  "main": "dist/css/colette.css",
+  "files": [
+    "dist",
+    "assets"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/20minutes/colette/"
+  },
+  "bugs": {
+    "url": "https://github.com/20minutes/colette/issues"
+  },
+  "homepage": "https://20minutes.github.io/colette/"
 }
