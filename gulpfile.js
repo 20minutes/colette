@@ -16,7 +16,7 @@ var cfg = {
     fontsDir: 'assets/fonts/',
     cssDir: 'assets/styl/',
     jsDir: 'assets/js/',
-    docDir: 'styleguide/',
+    docDir: '_docs/',
     distDir: 'dist/',
     stylusPattern: '**/*.styl',
     jsPattern: '**/*.js'
