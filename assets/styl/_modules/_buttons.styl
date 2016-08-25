@@ -30,9 +30,9 @@
     text-transform uppercase
     line-height 1
 
-for color in $colors
-    .btn-{color}
-        background-color color[1]
+for key, value in $colors
+    .btn-{key}
+        background-color value
         color white
 
 /* 2. Icon buttons (icon only)
