@@ -123,16 +123,16 @@
 /*
  * Theme [
  * ---------------------------------------------------------------------------------------- */
-for $item in $colors
-    .tabs.{$item[0]} .is-active a, .tabs.{$item[0]} a:hover
-        @extends .color-{$item}
+for key, value in $colors
+    .tabs.{key} .is-active a, .tabs.{key} a:hover
+        @extends .color-{key}
 
-    .tabs.{$item[0]} .tabs-name
-        @extends $.bg-{$item}
-        @extends $.border-color-{$item}
+    .tabs.{key} .tabs-name
+        @extends $.bg-{key}
+        @extends $.border-color-{key}
 
-    .tabs.{$item[0]} .tabs-name:after
-        @extends $.bg-{$item}
+    .tabs.{key} .tabs-name:after
+        @extends $.bg-{key}
 
 /* ----------------------------------------------------------------------------------------
  * ] Theme */

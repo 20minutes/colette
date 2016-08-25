@@ -8,12 +8,12 @@
 // Markup: colors.twig
 //
 // Styleguide Helpers.Colors
-for $item in $colors
-    $.border-color-{$item}
-        border 1px solid $item[1]
+for key, value in $colors
+    $.border-color-{key}
+        border 1px solid value
 
-    $.bg-{$item}
-        background-color $item[1]
+    $.bg-{key}
+        background-color value
 
-    .color-{$item}
-        color $item[1]
+    .color-{key}
+        color value
