@@ -1,5 +1,3 @@
-*.css
-*.html
 .idea/*
 /bin/
 /composer.phar
