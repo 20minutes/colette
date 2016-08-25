@@ -4,14 +4,13 @@
   "license": "MIT",
   "ignore": [
     "**/.*",
-    "_docs",
     "bower_components",
+    "docs",
     "kss-builder",
     "node_modules",
     "test",
     "tests",
     "favicon-preview.ico",
-    "gulpfile.js",
     "gulpfile.js",
     "kss.json",
     "package.json"
