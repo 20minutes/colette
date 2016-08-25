@@ -1,3 +1,11 @@
+// Tabs
+//
+// - **Default:** adds a navigation within a section
+// - **Breaking news:** is used to disaply hot news on a page
+//
+// Markup: tabs.twig
+//
+// Styleguide Components.tabs
 .tabs-wrapper
     overflow hidden
     position relative
@@ -13,34 +21,35 @@
     @extends .list-type-none
     @extends .clearfix
     display inline-block
-    height 35px
-    /*border-bottom 1px solid #ffffff*/
+    height 32px
     overflow hidden
     line-height @height
 
     a
+        position relative
+        z-index 2
         color $color-tertiary
 
 .tabs-item
-.tabs-name
     @extends .font-secondary
     position relative
-    height 35px
+    height 32px
     margin 0 0 0 36px
     float left
 
     &:after
         z-index 1
-        content ""
+        content ''
         absolute top 0 right -12px
         display block
-        width 36px
-        height 36px
-        box-shadow 2px -2px 2px rgba(0, 0, 0, 0.25)
+        width 32px
+        height 32px
+        box-shadow 2px -2px 2px rgba(0, 0, 0, .25)
         transform rotate(45deg)
 
 .tabs-name
-    color #ffffff
+    @extends .tabs-item
+    color $color-white
     margin-left 0
     padding-left 12px
 
@@ -69,7 +78,7 @@
         /*width 100px*/
         background-color $color-highlight
         font-size 1.4rem
-        color #ffffff
+        color $color-white
 
         &:after
             width 50px
@@ -102,9 +111,9 @@
             display block
             width $w=18px
             height $w
-            border-radius 0.5 * $w
+            border-radius .5 * $w
             background $color-highlight
-            color #ffffff
+            color $color-white
             line-height 1
             text-align center
 
@@ -114,16 +123,16 @@
 /*
  * Theme [
  * ---------------------------------------------------------------------------------------- */
-for $item in $colors
-    .tabs.{$item[0]} .is-active a, .tabs.{$item[0]} a:hover
-        @extends .color-{$item}
+for key, value in $colors
+    .tabs.{key} .is-active a, .tabs.{key} a:hover
+        @extends .color-{key}
 
-    .tabs.{$item[0]} .tabs-name
-        @extends $.bg-{$item}
-        @extends $.border-color-{$item}
+    .tabs.{key} .tabs-name
+        @extends $.bg-{key}
+        @extends $.border-color-{key}
 
-.tabs.{$item[0]} .tabs-name:after
-    @extends $.bg-{$item}
+    .tabs.{key} .tabs-name:after
+        @extends $.bg-{key}
 
 /* ----------------------------------------------------------------------------------------
  * ] Theme */

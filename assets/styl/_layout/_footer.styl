@@ -1,3 +1,10 @@
+// Footer
+//
+// Styles for basic footer.
+//
+// Markup: footer.twig
+//
+// Styleguide Layout.Footer
 footer
     @extends $.bg-default
     @extends .font-secondary
@@ -5,8 +12,8 @@ footer
     width 100%
     min-height 30px
     padding 6px 24px
-    border-top 3px solid #73a0d6
-    color #73a0d6
+    border-top 3px solid $color-footer
+    color $color-footer
 
     ul
         float right
@@ -14,14 +21,14 @@ footer
     li
         display inline
         padding 0 24px
-        border-left 1px solid #73a0d6
+        border-left 1px solid $color-footer
 
         &:first-child
             padding-left 0
             border-left none
 
     a
-        color #e7e7e7
+        color $color-base-lighten
 
         &:hover
             text-decoration underline

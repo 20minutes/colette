@@ -1,0 +1,19 @@
+// Colors
+//
+// Generic styles for text, borders and backgrounds colors.
+//
+// @TODO<br/>
+// Add examples for all colors : text | borders | backgrounds
+//
+// Markup: colors.twig
+//
+// Styleguide Helpers.Colors
+for key, value in $colors
+    $.border-color-{key}
+        border 1px solid value
+
+    $.bg-{key}
+        background-color value
+
+    .color-{key}
+        color value

@@ -1,0 +1,188 @@
+// Icons
+//
+// Use data attributes to insert icons: `<p data-icon="[icon_alias]">`
+//
+// Styleguide Helpers.Icons
+
+// Brand icons
+//
+// Icons:
+// logo-21e : '
+// logo-s : l
+// logo : L
+//
+// Styleguide Helpers.Icons.Brand
+
+// Social icons
+//
+// Icons:
+// facebook : F
+// github : H
+// google : g
+// googleplus : G
+// hootsuite : O
+// linkedin : n
+// pinterest : P
+// pocket : K
+// sms : x
+// snapchat : N
+// twitter : T
+// whatsapp : W
+//
+// Styleguide Helpers.Icons.Social
+
+// UI icons
+//
+// Icons:
+// arrow-down : ~
+// arrow-left : <
+// arrow-right : >
+// arrow-up : ^
+// calendar : :
+// cinema: u
+// clock: d
+// clock2: D
+// comments: b
+// cooking: k
+// crosswords: #
+// download: C
+// folder: f
+// games: e
+// grid: =
+// home: h
+// image: i
+// images: I
+// link: &
+// logout: A
+// mail: m
+// menu: a
+// mobile: !
+// more: +
+// photo: c
+// pin: M
+// play: p
+// print: r
+// refresh: R
+// search: z
+// settings: w
+// share: s
+// social: %
+// survey: B
+// tag: t
+// tv: S
+// user: u
+// video: v
+// view: o
+//
+// Styleguide Helpers.Icons.UI
+
+// Zodiac icons
+//
+// Icons:
+// aries : Ï
+// taurus : Ö
+// gemini : Ü
+// cancer : Ÿ
+// leo : Ê
+// virgo : Î
+// libra : Â
+// scorpio : Ô
+// sagittarius : Û
+// capricorn : Y
+// aquarius : Ä
+// pisces : Ë
+//
+// Styleguide Helpers.Icons.Zodiac
+$icons = {
+    // brand
+    'logo-21e': "'"
+    'logo-s': 'l'
+    'logo': 'L'
+
+    // social
+    'facebook': 'F'
+    'github': 'H'
+    'google': 'g'
+    'googleplus': 'G'
+    'hootsuite': 'O'
+    'linkedin': 'n'
+    'pinterest': 'P'
+    'pocket': 'K'
+    'sms': 'x'
+    'snapchat': 'N'
+    'twitter': 'T'
+    'whatsapp': 'W'
+
+    // ui
+    'arrow-down': '~'
+    'arrow-left': '<'
+    'arrow-right': '>'
+    'arrow-up': '^'
+    'calendar': ':'
+    'cinema': 'u'
+    'clock': 'd'
+    'clock2': 'D'
+    'comments': 'b'
+    'cooking': 'k'
+    'crosswords': '#'
+    'download': 'C'
+    'folder': 'f'
+    'games': 'e'
+    'grid': '='
+    'home': 'h'
+    'image': 'i'
+    'images': 'I'
+    'link': '&'
+    'logout': 'A'
+    'mail': 'm'
+    'menu': 'a'
+    'mobile': '!'
+    'more': '+'
+    'photo': 'c'
+    'pin': 'M'
+    'play': 'p'
+    'print': 'r'
+    'refresh': 'R'
+    'search': 'z'
+    'settings': 'w'
+    'share': 's'
+    'social': '%'
+    'survey': 'B'
+    'tag': 't'
+    'tv': 'S'
+    'user': 'u'
+    'video': 'v'
+    'view': 'o'
+
+    // zodiac
+    'aries': 'Ï'
+    'taurus': 'Ö'
+    'gemini': 'Ü'
+    'cancer': 'Ÿ'
+    'leo': 'Ê'
+    'virgo': 'Î'
+    'libra': 'Â'
+    'scorpio': 'Ô'
+    'sagittarius': 'Û'
+    'capricorn': 'Y'
+    'aquarius': 'Ä'
+    'pisces': 'Ë'
+}
+[data-icon]
+[data-icon-after]
+    {icon}
+
+    a&
+        display block
+
+    em
+        display none
+
+    p
+    ul
+        overflow hidden
+
+for key, value in $icons
+    [data-icon={key}]:before
+    [data-icon-after={key}]:after
+        content value

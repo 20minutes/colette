@@ -1,28 +1,48 @@
 {
   "name": "colette",
-  "version": "0.3.8.3",
-  "homepage": "https://github.com/20minutes/colette",
-  "authors": [
-    "Olivia Ly <oly@20minutes.fr>"
-  ],
-  "description": "A css and js starter kit for 20 Minutes web projects",
-  "main": [
-    "dist/colette.min.css",
-    "dist/colette.min.js"
-  ],
-  "keywords": [
-    "css",
-    "js"
-  ],
+  "version": "0.4.0",
   "license": "MIT",
   "ignore": [
     "**/.*",
-    "node_modules",
     "bower_components",
+    "docs",
+    "kss-builder",
+    "node_modules",
     "test",
-    "tests"
+    "tests",
+    "favicon-preview.ico",
+    "gulpfile.js",
+    "kss.json",
+    "package.json"
   ],
   "dependencies": {
     "headroom.js": "~0.7.0"
-  }
+  },
+  "devDependencies": {},
+  "author": "Olivia Ly <oly@20minutes.fr>",
+  "description": "A css and js starter kit for 20 Minutes web projects",
+  "main": [
+    "dist/css/colette.css",
+    "dist/js/colette.js"
+  ],
+  "keywords": [
+    "20minutes",
+    "boilerplate",
+    "css",
+    "css3",
+    "framework",
+    "grid",
+    "helpers",
+    "html",
+    "html5",
+    "responsive design",
+    "rwd",
+    "stylus",
+    "typography"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/20minutes/colette/"
+  },
+  "homepage": "https://20minutes.github.io/colette/"
 }

@@ -1,8 +1,26 @@
-/*
- * Skins
- * Add a skin to article.box on listing pages
- * Note that skins require a figure.media to be visible
- */
+// Skins
+//
+// Add a skin over the image of a content block on listing pages, and depending on the skin, modify the teaser text and/or background colors.
+// Note that:
+// - the skin is applied on a `<figure clas="media">` tag,
+// - the image must be placed within a `<p>` or a `<div>` tag for icon skins
+//
+// .skin-blog        - text skin: "blog", text color: community
+// .skin-chat        - text skin: "chat"
+// .skin-diaporama   - text skin: "diaporama"
+// .skin-exclusive   - text skin: "exclusif", text color: highlight
+// .skin-lastminute  - text skin: "dernière minute", text color: white, background-color: highlight
+// .skin-live        - text skin: "live", headline color: highlight
+// .skin-partner     - text skin: "partenaire"
+// .skin-people      - text skin: "people"
+// .skin-quiz        - text skin: "quiz", title/description color: community
+// .skin-weird       - text skin: "t'as vu"
+// .skin-gallery     - icon skin: 'images'
+// .skin-video       - icon skin: 'play'
+//
+// Markup: skin.twig
+//
+// Styleguide Theme.skins
 
 /* Text skins */
 .skin-blog
@@ -25,17 +43,17 @@
             z-index 2
             width 60px
             height 30px
-            color #ffffff
+            color $color-white
             text-align center
             line-height 30px
 
         &:after
+            content ''
             z-index 1
             width 66px
             height 36px
-            content ''
-            background-color #000000
-            opacity 0.3
+            background-color $color-black
+            opacity .3
 
 .skin-blog
     p
@@ -43,14 +61,14 @@
 
     .media
         &:before
-            background-color $color-community
             content 'blog'
+            background-color $color-community
 
 .skin-chat
     .media
         &:before
-            background-color $color-community
             content 'chat'
+            background-color $color-community
 
 .skin-diaporama
     .media
@@ -68,9 +86,9 @@
 
     .media
         &:before
+            content 'exclusif'
             width 90px
             background-color $color-highlight
-            content 'exclusif'
 
         &:after
             width 96px
@@ -80,17 +98,17 @@
     background-color $color-highlight
 
     p
-        color #ffffff
+        color $color-white
 
     a:first-child
         display block
-        border 1px solid #ffffff
+        border 1px solid $color-white
 
     .media
         &:before
+            content 'dernière minute'
             width 130px
             background-color $color-highlight
-            content 'dernière minute'
 
         &:after
             width 136px
@@ -98,8 +116,8 @@
 .skin-live
     .media
         &:before
-            background-color $color-highlight
             content 'live'
+            background-color $color-highlight
 
     .teaser-headline
         color $color-highlight
@@ -107,9 +125,9 @@
 .skin-partner
     .media
         &:before
+            content 'Partenaire'
             width 90px
             background-color $color-native
-            content 'Partenaire'
             color $color-base
 
         &:after
@@ -118,28 +136,28 @@
 .skin-people
     .media
         &:before
-            background-color $color-entertainment
             content 'People'
+            background-color $color-entertainment
 
 .skin-quiz
     color $color-community
     .media
         &:before
-            background-color $color-community
             content 'quiz'
+            background-color $color-community
 
 .skin-weird
     .media
         &:before
+            content 'T’as vu'
             background-color $color-weird
-            content "T'as vu"
 
 /* Icon skins */
 .skin-gallery
 .skin-video
     .media > p:first-child
     .media > div:first-child
-        @extends [data-icon]
+        {icon}
         position relative
 
         &:before
@@ -155,24 +173,26 @@
             font-size 3.6rem
             text-align center
             line-height 42px
-            color #ffffff
+            color $color-white
 
         &:after
+            content ''
             z-index 1
             absolute bottom 6px left 6px
-            content ''
             border-radius 3px
             background-color $color-media
-            opacity 0.5
+            opacity .5
 
 .skin-video
-    .media > p:first-child
-    .media > div:first-child
-        &:before
-            content 'p'
+    .media
+        > p:first-child
+        > div:first-child
+            &:before
+                content 'p'
 
 .skin-gallery
-    .media > p:first-child
-    .media > div:first-child
-        &:before
-            content 'I'
+    .media
+        > p:first-child
+        > div:first-child
+            &:before
+                content 'I'
