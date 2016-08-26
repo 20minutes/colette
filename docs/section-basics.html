@@ -38,14 +38,20 @@
               </a>
             </li>
                       <li class="kss-nav__menu-item">
-              <a class="kss-nav__menu-link" href="section-basics.html#kssref-basics-normalize">
+              <a class="kss-nav__menu-link" href="section-basics.html#kssref-basics-formelements">
                 <span class="kss-nav__ref ">1.2</span
+                ><span class="kss-nav__name">Form elements</span>
+              </a>
+            </li>
+                      <li class="kss-nav__menu-item">
+              <a class="kss-nav__menu-link" href="section-basics.html#kssref-basics-normalize">
+                <span class="kss-nav__ref ">1.3</span
                 ><span class="kss-nav__name">Normalize</span>
               </a>
             </li>
                       <li class="kss-nav__menu-item">
               <a class="kss-nav__menu-link" href="section-basics.html#kssref-basics-typography">
-                <span class="kss-nav__ref ">1.3</span
+                <span class="kss-nav__ref ">1.4</span
                 ><span class="kss-nav__name">Typography</span>
               </a>
             </li>
@@ -143,12 +149,117 @@
           Source: <code>_base/_fonts.styl</code>, line 1
         </div>
           </section>
+          <section id="kssref-basics-formelements" class="kss-section kss-section--depth-2">
+      <div class="kss-style">
+                <h2 class="kss-title kss-title--level-2">
+          <a class="kss-title__permalink" href="#kssref-basics-formelements">
+            <span class="kss-title__ref">
+              1.2
+              <span class="kss-title__permalink-hash">
+                Basics.FormElements
+              </span>
+            </span>
+            Form elements
+          </a>
+        </h2>
+
+                  <div class="kss-description">
+            <p>Default styles for form elements</p>
+
+          </div>
+        
+        
+        
+              </div>
+
+              <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example          </div>
+
+          
+          <div class="kss-modifier__example">
+            <form>
+    <div>
+        <label for="text_1">Label:</label><br/>
+        <input type="text" id="text_1" value="ipsum sic amet" />
+    </div>
+    <div>
+        <label for="text_2">Label:</label><br/>
+        <input type="text" id="text_2" placeholder="placeholder" />
+        <p class="field-description">Lorem ipsum sic amet color</p>
+    </div>
+    <div>
+        <label for="text_3">Label*:</label><br/>
+        <input type="text" id="text_3" required />
+    </div>
+    <div>
+        <label for="text_4">Label:</label><br/>
+        <input type="text" id="text_4" readonly value="readonly" />
+    </div>
+    <div>
+        <label for="text_5">Label:</label><br/>
+        <input type="text" id="text_5" disabled value="disabled" />
+    </div>
+    <div>
+        <label for="text_6">Label:</label><br/>
+        <input class="input-valid" type="text" id="text_6" disabled value="ipsum sic amet" />
+    </div>
+    <div>
+        <label for="text_7">Label:</label><br/>
+        <input class="input-invalid" type="text" id="text_7" disabled value="ipsum sic amet" />
+    </div>
+</form>
+
+
+          </div>
+
+                  </div>
+                  <div class="kss-markup kss-style">
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;form&gt;
+    &lt;div&gt;
+        &lt;label for=&quot;text_1&quot;&gt;Label:&lt;/label&gt;&lt;br/&gt;
+        &lt;input type=&quot;text&quot; id=&quot;text_1&quot; value=&quot;ipsum sic amet&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;label for=&quot;text_2&quot;&gt;Label:&lt;/label&gt;&lt;br/&gt;
+        &lt;input type=&quot;text&quot; id=&quot;text_2&quot; placeholder=&quot;placeholder&quot; /&gt;
+        &lt;p class=&quot;field-description&quot;&gt;Lorem ipsum sic amet color&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;label for=&quot;text_3&quot;&gt;Label*:&lt;/label&gt;&lt;br/&gt;
+        &lt;input type=&quot;text&quot; id=&quot;text_3&quot; required /&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;label for=&quot;text_4&quot;&gt;Label:&lt;/label&gt;&lt;br/&gt;
+        &lt;input type=&quot;text&quot; id=&quot;text_4&quot; readonly value=&quot;readonly&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;label for=&quot;text_5&quot;&gt;Label:&lt;/label&gt;&lt;br/&gt;
+        &lt;input type=&quot;text&quot; id=&quot;text_5&quot; disabled value=&quot;disabled&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;label for=&quot;text_6&quot;&gt;Label:&lt;/label&gt;&lt;br/&gt;
+        &lt;input class=&quot;input-valid&quot; type=&quot;text&quot; id=&quot;text_6&quot; disabled value=&quot;ipsum sic amet&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;label for=&quot;text_7&quot;&gt;Label:&lt;/label&gt;&lt;br/&gt;
+        &lt;input class=&quot;input-invalid&quot; type=&quot;text&quot; id=&quot;text_7&quot; disabled value=&quot;ipsum sic amet&quot; /&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+
+</code></pre>
+          </div>
+              
+              <div class="kss-source kss-style">
+          Source: <code>_base/_form.styl</code>, line 1
+        </div>
+          </section>
           <section id="kssref-basics-normalize" class="kss-section kss-section--depth-2">
       <div class="kss-style">
                 <h2 class="kss-title kss-title--level-2">
           <a class="kss-title__permalink" href="#kssref-basics-normalize">
             <span class="kss-title__ref">
-              1.2
+              1.3
               <span class="kss-title__permalink-hash">
                 Basics.Normalize
               </span>
@@ -179,7 +290,7 @@ It takes a lot of inspiration and default styles from <a href="https://github.co
                 <h2 class="kss-title kss-title--level-2">
           <a class="kss-title__permalink" href="#kssref-basics-typography">
             <span class="kss-title__ref">
-              1.3
+              1.4
               <span class="kss-title__permalink-hash">
                 Basics.Typography
               </span>
