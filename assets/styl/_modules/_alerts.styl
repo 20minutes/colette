@@ -1,0 +1,29 @@
+// Alerts
+//
+// Default styles for alerts.
+//
+// Markup: alerts.twig
+//
+// .alert-info      - info alert
+// .alert-success   - success alert
+// .alert-error     - error alert
+//
+// Styleguide: Components.Alerts
+_alert(color)
+    background-color lighten(alpha(color, .2), 10)
+    color color
+
+.alert
+    padding 1em
+    border-radius .3em
+    background-color $color-base-lighten
+    color $color-base
+
+    &-info
+        _alert($color-default)
+
+    &-success
+        _alert($color-success)
+
+    &-error
+        _alert($color-error)

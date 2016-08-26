@@ -1442,6 +1442,25 @@ footer a:hover {
     margin-left: 100%;
   }
 }
+.alert {
+  padding: 1em;
+  -webkit-border-radius: 0.3em;
+  border-radius: 0.3em;
+  background-color: #e7e7e7;
+  color: #4c4d4e;
+}
+.alert-info {
+  background-color: rgba(15,95,193,0.2);
+  color: #0b4892;
+}
+.alert-success {
+  background-color: rgba(95,194,15,0.2);
+  color: #48930b;
+}
+.alert-error {
+  background-color: rgba(239,42,31,0.2);
+  color: #cc190f;
+}
 .btn {
   padding: 0.5em 1.5em;
   -webkit-border-radius: 20em;
@@ -1571,15 +1590,6 @@ footer a:hover {
 .form-single-row [data-icon=search] {
   padding-right: 6px;
   font-size: 2.1rem;
-}
-.field {
-  padding-bottom: 1.2rem;
-}
-.field-description {
-  padding: 0 0.5em;
-  color: #878787;
-  font-size: 0.88em;
-  font-style: italic;
 }
 .headerbar .sticky {
   position: fixed;
