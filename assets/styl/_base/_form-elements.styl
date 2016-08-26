@@ -1,0 +1,41 @@
+// Form elements
+//
+// Default styles for form elements.
+//
+// Markup: form-elements.twig
+//
+// Styleguide: Basics.FormElements
+label
+    font-weight bold
+
+input[type='text']
+input[type='password']
+input[type='email']
+input[type='url']
+input[type='time']
+input[type='date']
+input[type='datetime']
+input[type='datetime-local']
+input[type='tel']
+input[type='number']
+input[type='search']
+textarea
+    padding .5em
+    border-radius .3em
+    border 1px solid $color-base-lighten
+    line-height 1.3
+    transition border-color .2s
+
+    &:focus
+        border-color $color-tertiary
+        outline 0
+
+        &:valid
+            border-color $color-form-valid
+
+        &:invalid
+            border-color $color-form-invalid
+
+    &[disabled]
+        background-color $color-bg-base
+        color $color-tertiary

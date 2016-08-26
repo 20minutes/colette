@@ -164,7 +164,7 @@
         </h2>
 
                   <div class="kss-description">
-            <p>Default styles for form elements</p>
+            <p>Default styles for form elements.</p>
 
           </div>
         
@@ -178,35 +178,54 @@
 
           
           <div class="kss-modifier__example">
-            <form>
-    <div>
-        <label for="text_1">Label:</label><br/>
-        <input type="text" id="text_1" value="ipsum sic amet" />
+            <form xmlns="http://www.w3.org/1999/html">
+    <div class="pb1">
+        <p><label for="text_1">Text :</label></p>
+        <p><input type="text" id="text_1" placeholder="placeholder" /></p>
     </div>
-    <div>
-        <label for="text_2">Label:</label><br/>
-        <input type="text" id="text_2" placeholder="placeholder" />
-        <p class="field-description">Lorem ipsum sic amet color</p>
+    <div class="pb1">
+        <p><label for="text_2">Text readonly :</label></p>
+        <p><input type="text" id="text_2" readonly value="readonly" /></p>
     </div>
-    <div>
-        <label for="text_3">Label*:</label><br/>
-        <input type="text" id="text_3" required />
+    <div class="pb1">
+        <p><label for="text_3">Text disabled :</label></p>
+        <p><input type="text" id="text_3" disabled value="disabled" /></p>
     </div>
-    <div>
-        <label for="text_4">Label:</label><br/>
-        <input type="text" id="text_4" readonly value="readonly" />
+    <div class="pb1">
+        <p><label for="email">Email :</label></p>
+        <p><input type="email" id="email" value="me@me.com" /></p>
     </div>
-    <div>
-        <label for="text_5">Label:</label><br/>
-        <input type="text" id="text_5" disabled value="disabled" />
+    <div class="pb1">
+        <p><label for="password">Password :</label></p>
+        <p><input type="password" id="password" value="password" /></p>
     </div>
-    <div>
-        <label for="text_6">Label:</label><br/>
-        <input class="input-valid" type="text" id="text_6" disabled value="ipsum sic amet" />
+    <div class="pb1">
+        <p><label for="url">URL :</label></p>
+        <p><input type="url" id="url" value="url.com" /></p>
     </div>
-    <div>
-        <label for="text_7">Label:</label><br/>
-        <input class="input-invalid" type="text" id="text_7" disabled value="ipsum sic amet" />
+    <div class="pb1">
+        <p><label for="time">Time :</label></p>
+        <p><input type="time" id="time" /></p>
+    </div>
+    <div class="pb1">
+        <p><label for="date">Date :</label></p>
+        <p><input type="date" id="date" /></p>
+    </div>
+    <div class="pb1">
+        <p><label for="tel">Tel :</label></p>
+        <p><input type="tel" id="tel" /></p>
+    </div>
+    <div class="pb1">
+        <p><label for="number">Number :</label></p>
+        <p><input type="number" id="number" /></p>
+    </div>
+    <div class="pb1">
+        <p><label for="search">Search :</label></p>
+        <p><input type="search" id="search" /></p>
+    </div>
+    <div class="pb1">
+        <p><label for="textarea">Textarea :</label></p>
+        <p><textarea id="textarea" row="4" cols="50" />default value</textarea></p>
     </div>
 </form>
 
@@ -215,35 +234,54 @@
 
                   </div>
                   <div class="kss-markup kss-style">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;form&gt;
-    &lt;div&gt;
-        &lt;label for=&quot;text_1&quot;&gt;Label:&lt;/label&gt;&lt;br/&gt;
-        &lt;input type=&quot;text&quot; id=&quot;text_1&quot; value=&quot;ipsum sic amet&quot; /&gt;
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;form xmlns=&quot;http://www.w3.org/1999/html&quot;&gt;
+    &lt;div class=&quot;pb1&quot;&gt;
+        &lt;p&gt;&lt;label for=&quot;text_1&quot;&gt;Text :&lt;/label&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;input type=&quot;text&quot; id=&quot;text_1&quot; placeholder=&quot;placeholder&quot; /&gt;&lt;/p&gt;
     &lt;/div&gt;
-    &lt;div&gt;
-        &lt;label for=&quot;text_2&quot;&gt;Label:&lt;/label&gt;&lt;br/&gt;
-        &lt;input type=&quot;text&quot; id=&quot;text_2&quot; placeholder=&quot;placeholder&quot; /&gt;
-        &lt;p class=&quot;field-description&quot;&gt;Lorem ipsum sic amet color&lt;/p&gt;
+    &lt;div class=&quot;pb1&quot;&gt;
+        &lt;p&gt;&lt;label for=&quot;text_2&quot;&gt;Text readonly :&lt;/label&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;input type=&quot;text&quot; id=&quot;text_2&quot; readonly value=&quot;readonly&quot; /&gt;&lt;/p&gt;
     &lt;/div&gt;
-    &lt;div&gt;
-        &lt;label for=&quot;text_3&quot;&gt;Label*:&lt;/label&gt;&lt;br/&gt;
-        &lt;input type=&quot;text&quot; id=&quot;text_3&quot; required /&gt;
+    &lt;div class=&quot;pb1&quot;&gt;
+        &lt;p&gt;&lt;label for=&quot;text_3&quot;&gt;Text disabled :&lt;/label&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;input type=&quot;text&quot; id=&quot;text_3&quot; disabled value=&quot;disabled&quot; /&gt;&lt;/p&gt;
     &lt;/div&gt;
-    &lt;div&gt;
-        &lt;label for=&quot;text_4&quot;&gt;Label:&lt;/label&gt;&lt;br/&gt;
-        &lt;input type=&quot;text&quot; id=&quot;text_4&quot; readonly value=&quot;readonly&quot; /&gt;
+    &lt;div class=&quot;pb1&quot;&gt;
+        &lt;p&gt;&lt;label for=&quot;email&quot;&gt;Email :&lt;/label&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;input type=&quot;email&quot; id=&quot;email&quot; value=&quot;me@me.com&quot; /&gt;&lt;/p&gt;
     &lt;/div&gt;
-    &lt;div&gt;
-        &lt;label for=&quot;text_5&quot;&gt;Label:&lt;/label&gt;&lt;br/&gt;
-        &lt;input type=&quot;text&quot; id=&quot;text_5&quot; disabled value=&quot;disabled&quot; /&gt;
+    &lt;div class=&quot;pb1&quot;&gt;
+        &lt;p&gt;&lt;label for=&quot;password&quot;&gt;Password :&lt;/label&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;input type=&quot;password&quot; id=&quot;password&quot; value=&quot;password&quot; /&gt;&lt;/p&gt;
     &lt;/div&gt;
-    &lt;div&gt;
-        &lt;label for=&quot;text_6&quot;&gt;Label:&lt;/label&gt;&lt;br/&gt;
-        &lt;input class=&quot;input-valid&quot; type=&quot;text&quot; id=&quot;text_6&quot; disabled value=&quot;ipsum sic amet&quot; /&gt;
+    &lt;div class=&quot;pb1&quot;&gt;
+        &lt;p&gt;&lt;label for=&quot;url&quot;&gt;URL :&lt;/label&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;input type=&quot;url&quot; id=&quot;url&quot; value=&quot;url.com&quot; /&gt;&lt;/p&gt;
     &lt;/div&gt;
-    &lt;div&gt;
-        &lt;label for=&quot;text_7&quot;&gt;Label:&lt;/label&gt;&lt;br/&gt;
-        &lt;input class=&quot;input-invalid&quot; type=&quot;text&quot; id=&quot;text_7&quot; disabled value=&quot;ipsum sic amet&quot; /&gt;
+    &lt;div class=&quot;pb1&quot;&gt;
+        &lt;p&gt;&lt;label for=&quot;time&quot;&gt;Time :&lt;/label&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;input type=&quot;time&quot; id=&quot;time&quot; /&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;pb1&quot;&gt;
+        &lt;p&gt;&lt;label for=&quot;date&quot;&gt;Date :&lt;/label&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;input type=&quot;date&quot; id=&quot;date&quot; /&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;pb1&quot;&gt;
+        &lt;p&gt;&lt;label for=&quot;tel&quot;&gt;Tel :&lt;/label&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;input type=&quot;tel&quot; id=&quot;tel&quot; /&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;pb1&quot;&gt;
+        &lt;p&gt;&lt;label for=&quot;number&quot;&gt;Number :&lt;/label&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;input type=&quot;number&quot; id=&quot;number&quot; /&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;pb1&quot;&gt;
+        &lt;p&gt;&lt;label for=&quot;search&quot;&gt;Search :&lt;/label&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;input type=&quot;search&quot; id=&quot;search&quot; /&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;pb1&quot;&gt;
+        &lt;p&gt;&lt;label for=&quot;textarea&quot;&gt;Textarea :&lt;/label&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;textarea id=&quot;textarea&quot; row=&quot;4&quot; cols=&quot;50&quot; /&gt;default value&lt;/textarea&gt;&lt;/p&gt;
     &lt;/div&gt;
 &lt;/form&gt;
 
@@ -251,7 +289,7 @@
           </div>
               
               <div class="kss-source kss-style">
-          Source: <code>_base/_form.styl</code>, line 1
+          Source: <code>_base/_form-elements.styl</code>, line 1
         </div>
           </section>
           <section id="kssref-basics-normalize" class="kss-section kss-section--depth-2">

@@ -50,7 +50,7 @@
                       <li class="kss-nav__menu-item">
               <a class="kss-nav__menu-link" href="section-components.html#kssref-components-form">
                 <span class="kss-nav__ref ">3.2</span
-                ><span class="kss-nav__name">Forms</span>
+                ><span class="kss-nav__name">Form single row</span>
               </a>
             </li>
                       <li class="kss-nav__menu-item">
@@ -216,7 +216,7 @@
                 Components.form
               </span>
             </span>
-            Forms
+            Form single row
           </a>
         </h2>
 
@@ -235,80 +235,24 @@
 
           
           <div class="kss-modifier__example">
-            <form>
-    <div>
-        <label for="text_1">Label:</label><br/>
-        <input type="text" id="text_1" value="ipsum sic amet" />
-    </div>
-    <div>
-        <label for="text_2">Label:</label><br/>
-        <input type="text" id="text_2" placeholder="placeholder" />
-        <p class="field-description">Lorem ipsum sic amet color</p>
-    </div>
-    <div>
-        <label for="text_3">Label*:</label><br/>
-        <input type="text" id="text_3" required />
-    </div>
-    <div>
-        <label for="text_4">Label:</label><br/>
-        <input type="text" id="text_4" readonly value="readonly" />
-    </div>
-    <div>
-        <label for="text_5">Label:</label><br/>
-        <input type="text" id="text_5" disabled value="disabled" />
-    </div>
-    <div>
-        <label for="text_6">Label:</label><br/>
-        <input class="input-valid" type="text" id="text_6" disabled value="ipsum sic amet" />
-    </div>
-    <div>
-        <label for="text_7">Label:</label><br/>
-        <input class="input-invalid" type="text" id="text_7" disabled value="ipsum sic amet" />
-    </div>
+            <form class="form-single-row pa1" action="/">
+    <input type="text" class="pl1 pr1" placeholder="Input field" />
+    <button type="submit" data-icon="search"><em>ok</em></button>
 </form>
-
 
           </div>
 
                   </div>
                   <div class="kss-markup kss-style">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;form&gt;
-    &lt;div&gt;
-        &lt;label for=&quot;text_1&quot;&gt;Label:&lt;/label&gt;&lt;br/&gt;
-        &lt;input type=&quot;text&quot; id=&quot;text_1&quot; value=&quot;ipsum sic amet&quot; /&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-        &lt;label for=&quot;text_2&quot;&gt;Label:&lt;/label&gt;&lt;br/&gt;
-        &lt;input type=&quot;text&quot; id=&quot;text_2&quot; placeholder=&quot;placeholder&quot; /&gt;
-        &lt;p class=&quot;field-description&quot;&gt;Lorem ipsum sic amet color&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-        &lt;label for=&quot;text_3&quot;&gt;Label*:&lt;/label&gt;&lt;br/&gt;
-        &lt;input type=&quot;text&quot; id=&quot;text_3&quot; required /&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-        &lt;label for=&quot;text_4&quot;&gt;Label:&lt;/label&gt;&lt;br/&gt;
-        &lt;input type=&quot;text&quot; id=&quot;text_4&quot; readonly value=&quot;readonly&quot; /&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-        &lt;label for=&quot;text_5&quot;&gt;Label:&lt;/label&gt;&lt;br/&gt;
-        &lt;input type=&quot;text&quot; id=&quot;text_5&quot; disabled value=&quot;disabled&quot; /&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-        &lt;label for=&quot;text_6&quot;&gt;Label:&lt;/label&gt;&lt;br/&gt;
-        &lt;input class=&quot;input-valid&quot; type=&quot;text&quot; id=&quot;text_6&quot; disabled value=&quot;ipsum sic amet&quot; /&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-        &lt;label for=&quot;text_7&quot;&gt;Label:&lt;/label&gt;&lt;br/&gt;
-        &lt;input class=&quot;input-invalid&quot; type=&quot;text&quot; id=&quot;text_7&quot; disabled value=&quot;ipsum sic amet&quot; /&gt;
-    &lt;/div&gt;
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;form class=&quot;form-single-row pa1&quot; action=&quot;/&quot;&gt;
+    &lt;input type=&quot;text&quot; class=&quot;pl1 pr1&quot; placeholder=&quot;Input field&quot; /&gt;
+    &lt;button type=&quot;submit&quot; data-icon=&quot;search&quot;&gt;&lt;em&gt;ok&lt;/em&gt;&lt;/button&gt;
 &lt;/form&gt;
-
 </code></pre>
           </div>
               
               <div class="kss-source kss-style">
-          Source: <code>_modules/_form.styl</code>, line 1
+          Source: <code>_modules/_form-single-row.styl</code>, line 1
         </div>
           </section>
           <section id="kssref-components-loading" class="kss-section kss-section--depth-2">
