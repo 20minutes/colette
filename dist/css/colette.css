@@ -1591,6 +1591,26 @@ footer a:hover {
   padding-right: 6px;
   font-size: 2.1rem;
 }
+.form-field-error {
+  border-color: #cc190f !important;
+}
+.form-field-success {
+  border-color: #48930b !important;
+}
+.form-help {
+  color: #878787;
+  font-size: 0.88em;
+  font-style: italic;
+}
+.form-help-error {
+  color: #cc190f;
+}
+.form-help-success {
+  color: #48930b;
+}
+.form-required {
+  color: #cc190f;
+}
 .headerbar .sticky {
   position: fixed;
   top: 0;
