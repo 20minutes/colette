@@ -844,20 +844,6 @@ textarea:focus {
   border-color: #878787;
   outline: 0;
 }
-input[type='text']:focus:valid,
-input[type='password']:focus:valid,
-input[type='email']:focus:valid,
-input[type='url']:focus:valid,
-input[type='time']:focus:valid,
-input[type='date']:focus:valid,
-input[type='datetime']:focus:valid,
-input[type='datetime-local']:focus:valid,
-input[type='tel']:focus:valid,
-input[type='number']:focus:valid,
-input[type='search']:focus:valid,
-textarea:focus:valid {
-  border-color: #48930b;
-}
 input[type='text']:focus:invalid,
 input[type='password']:focus:invalid,
 input[type='email']:focus:invalid,
@@ -886,6 +872,12 @@ input[type='search'][disabled],
 textarea[disabled] {
   background-color: #f8f8f8;
   color: #878787;
+}
+button[type='button'],
+button[type='submit'],
+input[type='button'],
+input[type='submit'] {
+  border-style: none;
 }
 article,
 aside,
@@ -1469,84 +1461,157 @@ footer a:hover {
   font-size: 0.875em;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 1;
 }
 .btn-base {
   background-color: #4c4d4e;
   color: #fff;
 }
+.btn-base:disabled {
+  background-color: rgba(76,77,78,0.5);
+}
+.btn-native {
+  color: #4c4d4e;
+}
 .btn-default {
   background-color: #0b4892;
   color: #fff;
+}
+.btn-default:disabled {
+  background-color: rgba(11,72,146,0.5);
+}
+.btn-native {
+  color: #4c4d4e;
 }
 .btn-sport {
   background-color: #00b9f3;
   color: #fff;
 }
+.btn-sport:disabled {
+  background-color: rgba(0,185,243,0.5);
+}
+.btn-native {
+  color: #4c4d4e;
+}
 .btn-entertainment {
   background-color: #cc190f;
   color: #fff;
+}
+.btn-entertainment:disabled {
+  background-color: rgba(204,25,15,0.5);
+}
+.btn-native {
+  color: #4c4d4e;
 }
 .btn-economy {
   background-color: #053042;
   color: #fff;
 }
+.btn-economy:disabled {
+  background-color: rgba(5,48,66,0.5);
+}
+.btn-native {
+  color: #4c4d4e;
+}
 .btn-community {
   background-color: #930b48;
   color: #fff;
+}
+.btn-community:disabled {
+  background-color: rgba(147,11,72,0.5);
+}
+.btn-native {
+  color: #4c4d4e;
 }
 .btn-weird {
   background-color: #ef2a82;
   color: #fff;
 }
+.btn-weird:disabled {
+  background-color: rgba(239,42,130,0.5);
+}
+.btn-native {
+  color: #4c4d4e;
+}
 .btn-partner {
   background-color: #ff5400;
   color: #fff;
+}
+.btn-partner:disabled {
+  background-color: rgba(255,84,0,0.5);
+}
+.btn-native {
+  color: #4c4d4e;
 }
 .btn-planet {
   background-color: #48930b;
   color: #fff;
 }
+.btn-planet:disabled {
+  background-color: rgba(72,147,11,0.5);
+}
+.btn-native {
+  color: #4c4d4e;
+}
 .btn-media {
   background-color: #000;
   color: #fff;
+}
+.btn-media:disabled {
+  background-color: rgba(0,0,0,0.5);
+}
+.btn-native {
+  color: #4c4d4e;
 }
 .btn-hightech {
   background-color: #686868;
   color: #fff;
 }
+.btn-hightech:disabled {
+  background-color: rgba(104,104,104,0.5);
+}
+.btn-native {
+  color: #4c4d4e;
+}
 .btn-native {
   background-color: #fff7e2;
   color: #fff;
 }
+.btn-native:disabled {
+  background-color: rgba(255,247,226,0.5);
+}
+.btn-native {
+  color: #4c4d4e;
+}
 .btn-icon {
-/* generic styles */
   display: inline-block;
   width: 1.6667em;
   height: 1.6667em;
   -webkit-border-radius: 60em;
   border-radius: 60em;
-  background-color: #b7b7b7;
   font-size: 1em;
   line-height: 1.833333em;
   text-align: center;
-  color: #fff;
-/* button per button styles */
+/* social: button per button styles */
 }
 .btn-icon[data-icon=facebook] {
   background-color: #4c64a0;
+  color: #fff;
 }
 .btn-icon[data-icon=googleplus] {
   background-color: #d14836;
+  color: #fff;
 }
 .btn-icon[data-icon=hootsuite] {
   background-color: #000;
+  color: #fff;
 }
 .btn-icon[data-icon=linkedin] {
   background-color: #0177b5;
+  color: #fff;
 }
 .btn-icon[data-icon=pinterest] {
   background-color: #bd081c;
+  color: #fff;
 }
 .btn-icon[data-icon=pocket] {
   background-color: #fff;
@@ -1555,15 +1620,18 @@ footer a:hover {
 }
 .btn-icon[data-icon=sms] {
   background-color: #48930b;
+  color: #fff;
 }
 .btn-icon[data-icon=sms]:before {
   line-height: 1.8em;
 }
 .btn-icon[data-icon=twitter] {
   background-color: #00a7e7;
+  color: #fff;
 }
 .btn-icon[data-icon=whatsapp] {
   background-color: #01a85a;
+  color: #fff;
 }
 .form-single-row input[type='text'],
 .form-single-row input[type='submit'],
@@ -1590,6 +1658,9 @@ footer a:hover {
 .form-single-row [data-icon=search] {
   padding-right: 6px;
   font-size: 2.1rem;
+}
+.form-field-widget label {
+  display: block;
 }
 .form-field-error {
   border-color: #cc190f !important;
