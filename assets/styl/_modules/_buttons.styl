@@ -33,14 +33,18 @@
 
 for key, value in $colors
     .btn-{key}
-        background-color value
-        color white
+        .btn&
+        .btn-icon&
+            background-color value
+            color white
 
-        &:disabled
-            background-color alpha(value, .5)
+            &:disabled
+                background-color alpha(value, .5)
 
     .btn-native
-        color $color-base
+        .btn&
+        .btn-icon&
+            color $color-base
 
 // Icon Buttons: default styles
 //
@@ -105,23 +109,23 @@ $btn-whatsapp-color ?= #01a85a
     /* social: button per button styles */
     &[data-icon=facebook]
         background-color $btn-facebook-color
-        color white
+        color $color-white
 
     &[data-icon=googleplus]
         background-color $btn-googleplus-color
-        color white
+        color $color-white
 
     &[data-icon=hootsuite]
         background-color $btn-hootsuite-color
-        color white
+        color $color-white
 
     &[data-icon=linkedin]
         background-color $btn-linkedin-color
-        color white
+        color $color-white
 
     &[data-icon=pinterest]
         background-color $btn-pinterest-color
-        color white
+        color $color-white
 
     &[data-icon=pocket]
         background-color $btn-pocket-color
@@ -130,15 +134,15 @@ $btn-whatsapp-color ?= #01a85a
 
     &[data-icon=sms]
         background-color $btn-sms-color
-        color white
+        color $color-white
 
         &:before
             line-height 1.8em
 
     &[data-icon=twitter]
         background-color $btn-twitter-color
-        color white
+        color $color-white
 
     &[data-icon=whatsapp]
         background-color $btn-whatsapp-color
-        color white
+        color $color-white
