@@ -58,24 +58,20 @@ small
     font-size .75em
 
 blockquote
+    position relative
+    padding .75em 1.5em 0
     font-family $font-secondary
-    font-size 4.2rem
     font-style italic
-    line-height 1
+    line-height 1.3
 
     &:before
-    &:after
-        @extends sub
-        font-family $font-base
-        font-size 6rem
-        line-height 0
-
-
-    &:before
+        position absolute
+        top 0
+        left 0
         content '\201C'
-
-    &:after
-        content '\201D'
+        font-family 'Georgia', Times New Roman, Times, serif
+        font-size 3em
+        color $color-secondary
 
 /* Tables */
 table
