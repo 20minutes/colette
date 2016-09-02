@@ -1,6 +1,75 @@
 // Buttons
 //
-// Styles for round icon buttons.
+// Colette comes with basic styles for call to action / buttons.
+//
+// Styleguide Components.Buttons
+
+// Default Buttons
+//
+// All editorial colors are available to style the button according to its context.
+//
+// .btn-default          - default color button
+// .btn-sport            - sport color button
+// .btn-entertainment    - entertainment color button
+// .btn-economy          - economy color button
+// .btn-community        - community color button
+// .btn-weird            - weird color button
+// .btn-partner          - partner color button
+// .btn-planet           - planet color button
+// .btn-media            - media color button
+// .btn-hightech         - hightech color button
+// .btn-native           - native color button
+//
+// Markup: buttons-default.twig
+//
+// Styleguide Components.Buttons.ButtonsDefault
+.btn
+    padding .5em 1.5em
+    border-radius 20em
+    font-family $font-secondary
+    font-size .875em
+    font-weight bold
+    text-transform uppercase
+
+for key, value in $colors
+    .btn-{key}
+        .btn&
+        .btn-icon&
+            background-color value
+            color white
+
+            &:disabled
+                background-color alpha(value, .5)
+
+    .btn-native
+        .btn&
+        .btn-icon&
+            color $color-base
+
+// Icon Buttons: default styles
+//
+// Icon buttons are icons in a colored circle.
+// All editorial colors are available to style the button according to its context.
+//
+// .btn-default          - default color button
+// .btn-sport            - sport color button
+// .btn-entertainment    - entertainment color button
+// .btn-economy          - economy color button
+// .btn-community        - community color button
+// .btn-weird            - weird color button
+// .btn-partner          - partner color button
+// .btn-planet           - planet color button
+// .btn-media            - media color button
+// .btn-hightech         - hightech color button
+// .btn-native           - native color button
+//
+// Markup: buttons-icon-default.twig
+//
+// Styleguide Components.Buttons.IconButtonsDefault
+
+// Icon Buttons: social styles
+//
+// We also have a few styles available for social buttons:
 //
 // - **[data-icon="facebook"]**: facebook button
 // - **[data-icon="googleplus"]**: googleplus button
@@ -12,33 +81,10 @@
 // - **[data-icon="twitter"]**: twitter button
 // - **[data-icon="whatsapp"]**: whatsapp button
 //
-// Markup: buttons.twig
+// Markup: buttons-icon-social.twig
 //
-// Styleguide Components.Buttons
+// Styleguide Components.Buttons.IconButtonsSocial
 //
-
-/*
- * Defines styles for buttons
- * /
-/ * 1. Default button (text only) */
-.btn
-    padding .5em 1.5em
-    border-radius 20em
-    font-family $font-secondary
-    font-size .875em
-    font-weight bold
-    text-transform uppercase
-    line-height 1
-
-for key, value in $colors
-    .btn-{key}
-        background-color value
-        color white
-
-/* 2. Icon buttons (icon only)
- *   Generic styles are set within .btn-icon declaration
- *   => we use $buttons array to set specific styles (e.g. background-color|color|font-size etc)
- */
 $btn-facebook-color ?= #4c64a0
 $btn-googleplus-color ?= #d14836
 $btn-hootsuite-color ?= #000000
@@ -52,32 +98,34 @@ $btn-twitter-color ?= #00a7e7
 $btn-whatsapp-color ?= #01a85a
 
 .btn-icon
-    /* generic styles */
     display inline-block
     width 1.6667em
     height 1.6667em
     border-radius 60em // oversize radius to keep it round
-    background-color $color-secondary
     font-size 1em
     line-height 1.833333em
     text-align center
-    color white
 
-    /* button per button styles */
+    /* social: button per button styles */
     &[data-icon=facebook]
         background-color $btn-facebook-color
+        color $color-white
 
     &[data-icon=googleplus]
         background-color $btn-googleplus-color
+        color $color-white
 
     &[data-icon=hootsuite]
         background-color $btn-hootsuite-color
+        color $color-white
 
     &[data-icon=linkedin]
         background-color $btn-linkedin-color
+        color $color-white
 
     &[data-icon=pinterest]
         background-color $btn-pinterest-color
+        color $color-white
 
     &[data-icon=pocket]
         background-color $btn-pocket-color
@@ -86,13 +134,15 @@ $btn-whatsapp-color ?= #01a85a
 
     &[data-icon=sms]
         background-color $btn-sms-color
+        color $color-white
 
         &:before
             line-height 1.8em
 
     &[data-icon=twitter]
         background-color $btn-twitter-color
+        color $color-white
 
     &[data-icon=whatsapp]
         background-color $btn-whatsapp-color
-
+        color $color-white

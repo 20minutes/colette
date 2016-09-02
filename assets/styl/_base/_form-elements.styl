@@ -1,0 +1,52 @@
+// Forms
+//
+// Colette comes with basic css to style forms.
+//
+// Styleguide: Components.Forms
+
+// Forms elements
+//
+// Default styles for forms elements.
+//
+// Weight: 1
+//
+// Markup: form-elements.twig
+//
+// Styleguide: Components.Forms.FormElements
+label
+    font-weight bold
+
+input[type='text']
+input[type='password']
+input[type='email']
+input[type='url']
+input[type='time']
+input[type='date']
+input[type='datetime']
+input[type='datetime-local']
+input[type='tel']
+input[type='number']
+input[type='search']
+textarea
+    padding .5em
+    border-radius .3em
+    border 1px solid $color-base-lighten
+    line-height 1.3
+    transition border-color .2s
+
+    &:focus
+        border-color $color-tertiary
+        outline 0
+
+        &:invalid
+            border-color $color-error
+
+    &[disabled]
+        background-color $color-bg-base
+        color $color-tertiary
+
+
+button
+input[type='button']
+input[type='submit']
+    border-style none
