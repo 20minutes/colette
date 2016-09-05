@@ -1,0 +1,13 @@
+<nav class="breadcrumb" role="navigation" aria-label="Vous êtes ici :">
+    <ol class="breadcrumb-list" itemscope itemtype="http://schema.org/BreadcrumbList">
+        {% for item in breadcrumb -%}
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a itemscope itemtype="http://schema.org/Thing"
+            itemprop="item" href="{{ item.uri }}">
+                <span itemprop="name">{{ item.title }}</span>
+            </a>
+            <meta itemprop="position" content="{{ loop.index0 }}" />
+        </li>
+        {% endfor -%}
+    </ol>
+</nav>

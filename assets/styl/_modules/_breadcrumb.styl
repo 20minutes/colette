@@ -1,0 +1,22 @@
+// Breadcrumb
+//
+// Markup: breadcrumb.twig
+//
+// Styleguide Components.Breadcrumb
+
+.breadcrumb // nav element use default normalize style
+
+    &-list
+        @extend .font-secondary
+
+        > li
+            display inline-block
+            vertical-align top
+
+            &:after
+                content '›'
+                font-size 1.4em
+                line-height .5
+
+            &:last-child:after
+                content none

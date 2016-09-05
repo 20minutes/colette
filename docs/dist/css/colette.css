@@ -22,6 +22,7 @@
 .font-secondary,
 .box-footer,
 footer,
+.breadcrumb-list,
 .tabs-item,
 .tabs-name,
 .skin-blog .media:before,
@@ -1448,6 +1449,18 @@ footer a:hover {
 .alert-error {
   background-color: rgba(239,42,31,0.2);
   color: #cc190f;
+}
+.breadcrumb-list > li {
+  display: inline-block;
+  vertical-align: top;
+}
+.breadcrumb-list > li:after {
+  content: '›';
+  font-size: 1.4em;
+  line-height: 0.5;
+}
+.breadcrumb-list > li:last-child:after {
+  content: none;
 }
 .btn {
   padding: 0.5em 1.5em;
