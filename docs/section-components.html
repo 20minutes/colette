@@ -84,20 +84,26 @@
               </a>
             </li>
                       <li class="kss-nav__menu-item">
-              <a class="kss-nav__menu-link" href="section-components.html#kssref-components-forms-formelements">
+              <a class="kss-nav__menu-link" href="section-components.html#kssref-components-forms-required">
                 <span class="kss-nav__ref kss-nav__ref-child">3.4.1</span
+                ><span class="kss-nav__name">Requided Marker</span>
+              </a>
+            </li>
+                      <li class="kss-nav__menu-item">
+              <a class="kss-nav__menu-link" href="section-components.html#kssref-components-forms-formelements">
+                <span class="kss-nav__ref kss-nav__ref-child">3.4.2</span
                 ><span class="kss-nav__name">Forms elements</span>
               </a>
             </li>
                       <li class="kss-nav__menu-item">
               <a class="kss-nav__menu-link" href="section-components.html#kssref-components-forms-formwidgets">
-                <span class="kss-nav__ref kss-nav__ref-child">3.4.2</span
+                <span class="kss-nav__ref kss-nav__ref-child">3.4.3</span
                 ><span class="kss-nav__name">Forms widgets</span>
               </a>
             </li>
                       <li class="kss-nav__menu-item">
               <a class="kss-nav__menu-link" href="section-components.html#kssref-components-forms-formsinglerow">
-                <span class="kss-nav__ref kss-nav__ref-child">3.4.3</span
+                <span class="kss-nav__ref kss-nav__ref-child">3.4.4</span
                 ><span class="kss-nav__name">Form single row</span>
               </a>
             </li>
@@ -898,12 +904,51 @@ All editorial colors are available to style the button according to its context.
           Source: <code>_base/_form-elements.styl</code>, line 1
         </div>
           </section>
+          <section id="kssref-components-forms-required" class="kss-section kss-section--depth-3">
+      <div class="kss-style">
+                <h3 class="kss-title kss-title--level-3">
+          <a class="kss-title__permalink" href="#kssref-components-forms-required">
+            <span class="kss-title__ref">
+              3.4.1
+              <span class="kss-title__permalink-hash">
+                Components.Forms.required
+              </span>
+            </span>
+            Requided Marker
+          </a>
+        </h3>
+
+        
+        
+        
+              </div>
+
+              <div class="kss-modifier__wrapper">
+          <div class="kss-modifier__heading kss-style">
+            Example          </div>
+
+          
+          <div class="kss-modifier__example">
+            <abbr class="required" title="(ce champ est obligatoire)">*</abbr>
+
+          </div>
+
+                  </div>
+                  <div class="kss-markup kss-style">
+            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;abbr class=&quot;required&quot; title=&quot;(ce champ est obligatoire)&quot;&gt;*&lt;/abbr&gt;
+</code></pre>
+          </div>
+              
+              <div class="kss-source kss-style">
+          Source: <code>_modules/_required.styl</code>, line 1
+        </div>
+          </section>
           <section id="kssref-components-forms-formelements" class="kss-section kss-section--depth-3">
       <div class="kss-style">
                 <h3 class="kss-title kss-title--level-3">
           <a class="kss-title__permalink" href="#kssref-components-forms-formelements">
             <span class="kss-title__ref">
-              3.4.1
+              3.4.2
               <span class="kss-title__permalink-hash">
                 Components.Forms.FormElements
               </span>
@@ -1094,7 +1139,7 @@ All editorial colors are available to style the button according to its context.
                 <h3 class="kss-title kss-title--level-3">
           <a class="kss-title__permalink" href="#kssref-components-forms-formwidgets">
             <span class="kss-title__ref">
-              3.4.2
+              3.4.3
               <span class="kss-title__permalink-hash">
                 Components.Forms.FormWidgets
               </span>
@@ -1134,7 +1179,8 @@ All editorial colors are available to style the button according to its context.
         </div>
         <div class="form-field-widget col-md-4 pb2">
             <p>
-                <label for="text_12">Required text <span class="form-required">*</span></label>
+                <label for="text_12">Required text <abbr class="required" title="(ce champ est obligatoire)">*</abbr>
+</label>
                 <input class="form-field-error" type="text" id="text_12" required aria-describedby="text_12_desc" />
             </p>
             <p id="text_12_desc" class="form-help form-help-error" role="alert">This field is required</p>
@@ -1165,7 +1211,8 @@ All editorial colors are available to style the button according to its context.
         &lt;/div&gt;
         &lt;div class=&quot;form-field-widget col-md-4 pb2&quot;&gt;
             &lt;p&gt;
-                &lt;label for=&quot;text_12&quot;&gt;Required text &lt;span class=&quot;form-required&quot;&gt;*&lt;/span&gt;&lt;/label&gt;
+                &lt;label for=&quot;text_12&quot;&gt;Required text &lt;abbr class=&quot;required&quot; title=&quot;(ce champ est obligatoire)&quot;&gt;*&lt;/abbr&gt;
+&lt;/label&gt;
                 &lt;input class=&quot;form-field-error&quot; type=&quot;text&quot; id=&quot;text_12&quot; required aria-describedby=&quot;text_12_desc&quot; /&gt;
             &lt;/p&gt;
             &lt;p id=&quot;text_12_desc&quot; class=&quot;form-help form-help-error&quot; role=&quot;alert&quot;&gt;This field is required&lt;/p&gt;
@@ -1192,7 +1239,7 @@ All editorial colors are available to style the button according to its context.
                 <h3 class="kss-title kss-title--level-3">
           <a class="kss-title__permalink" href="#kssref-components-forms-formsinglerow">
             <span class="kss-title__ref">
-              3.4.3
+              3.4.4
               <span class="kss-title__permalink-hash">
                 Components.Forms.FormSingleRow
               </span>
