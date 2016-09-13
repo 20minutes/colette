@@ -1439,15 +1439,19 @@ footer a:hover {
   color: #4c4d4e;
 }
 .alert-info {
-  background-color: rgba(15,95,193,0.2);
+  background-color: #e0ecfb;
   color: #0b4892;
 }
 .alert-success {
-  background-color: rgba(95,194,15,0.2);
-  color: #48930b;
+  background-color: #ebfbdd;
+  color: #3c7a09;
+}
+.alert-warning {
+  background-color: #fcede1;
+  color: #b05105;
 }
 .alert-error {
-  background-color: rgba(239,42,31,0.2);
+  background-color: #fce6e5;
   color: #cc190f;
 }
 .breadcrumb-list > li {
@@ -1463,6 +1467,7 @@ footer a:hover {
   content: none;
 }
 .btn {
+  display: inline-block;
   padding: 0.5em 1.5em;
   border-radius: 20em;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
@@ -1707,7 +1712,7 @@ footer a:hover {
   border-color: #cc190f !important;
 }
 .form-field-success {
-  border-color: #48930b !important;
+  border-color: #3c7a09 !important;
 }
 .form-help {
   color: #878787;
@@ -1718,7 +1723,7 @@ footer a:hover {
   color: #cc190f;
 }
 .form-help-success {
-  color: #48930b;
+  color: #3c7a09;
 }
 .form-required {
   color: #cc190f;

@@ -6,11 +6,12 @@
 //
 // .alert-info      - info alert
 // .alert-success   - success alert
+// .alert-warning   - warning alert
 // .alert-error     - error alert
 //
 // Styleguide: Components.Alerts
 _alert(color)
-    background-color lighten(alpha(color, .2), 10)
+    background-color lighten(desaturate(color, 10%), 90%)
     color color
 
 .alert
@@ -24,6 +25,9 @@ _alert(color)
 
     &-success
         _alert($color-success)
+
+    &-warning
+        _alert($color-warning)
 
     &-error
         _alert($color-error)
