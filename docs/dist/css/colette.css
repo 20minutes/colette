@@ -879,6 +879,9 @@ textarea[disabled] {
   background-color: #f8f8f8;
   color: #878787;
 }
+textarea {
+  vertical-align: top;
+}
 button,
 input[type='button'],
 input[type='submit'] {
@@ -1474,6 +1477,63 @@ footer a:hover {
   font-size: 0.875em;
   font-weight: bold;
   text-transform: uppercase;
+  background-color: #b7b7b7;
+  color: #fff;
+}
+.btn:disabled {
+  background-color: rgba(183,183,183,0.5);
+}
+.btn-icon {
+  display: inline-block;
+  width: 1.6667em;
+  height: 1.6667em;
+  border-radius: 60em;
+  font-size: 1em;
+  line-height: 1.833333em;
+  text-align: center;
+  background-color: #b7b7b7;
+  color: #fff;
+/* social: button per button styles */
+}
+.btn-icon[data-icon=facebook] {
+  background-color: #4c64a0;
+  color: #fff;
+}
+.btn-icon[data-icon=googleplus] {
+  background-color: #d14836;
+  color: #fff;
+}
+.btn-icon[data-icon=hootsuite] {
+  background-color: #000;
+  color: #fff;
+}
+.btn-icon[data-icon=linkedin] {
+  background-color: #0177b5;
+  color: #fff;
+}
+.btn-icon[data-icon=pinterest] {
+  background-color: #bd081c;
+  color: #fff;
+}
+.btn-icon[data-icon=pocket] {
+  background-color: #fff;
+  color: #ed4054;
+  border: 0.2rem solid #b7b7b7;
+}
+.btn-icon[data-icon=sms] {
+  background-color: #48930b;
+  color: #fff;
+}
+.btn-icon[data-icon=sms]:before {
+  line-height: 1.8em;
+}
+.btn-icon[data-icon=twitter] {
+  background-color: #00a7e7;
+  color: #fff;
+}
+.btn-icon[data-icon=whatsapp] {
+  background-color: #01a85a;
+  color: #fff;
 }
 .btn.btn-base,
 .btn-icon.btn-base {
@@ -1630,56 +1690,6 @@ footer a:hover {
 .btn.btn-native,
 .btn-icon.btn-native {
   color: #4c4d4e;
-}
-.btn-icon {
-  display: inline-block;
-  width: 1.6667em;
-  height: 1.6667em;
-  border-radius: 60em;
-  font-size: 1em;
-  line-height: 1.833333em;
-  text-align: center;
-/* social: button per button styles */
-}
-.btn-icon[data-icon=facebook] {
-  background-color: #4c64a0;
-  color: #fff;
-}
-.btn-icon[data-icon=googleplus] {
-  background-color: #d14836;
-  color: #fff;
-}
-.btn-icon[data-icon=hootsuite] {
-  background-color: #000;
-  color: #fff;
-}
-.btn-icon[data-icon=linkedin] {
-  background-color: #0177b5;
-  color: #fff;
-}
-.btn-icon[data-icon=pinterest] {
-  background-color: #bd081c;
-  color: #fff;
-}
-.btn-icon[data-icon=pocket] {
-  background-color: #fff;
-  color: #ed4054;
-  border: 0.2rem solid #b7b7b7;
-}
-.btn-icon[data-icon=sms] {
-  background-color: #48930b;
-  color: #fff;
-}
-.btn-icon[data-icon=sms]:before {
-  line-height: 1.8em;
-}
-.btn-icon[data-icon=twitter] {
-  background-color: #00a7e7;
-  color: #fff;
-}
-.btn-icon[data-icon=whatsapp] {
-  background-color: #01a85a;
-  color: #fff;
 }
 .form-single-row input[type='text'],
 .form-single-row input[type='submit'],
