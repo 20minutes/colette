@@ -31,21 +31,11 @@
     font-size .875em
     font-weight bold
     text-transform uppercase
+    background-color $color-secondary
+    color $color-base
 
-for key, value in $colors
-    .btn-{key}
-        .btn&
-        .btn-icon&
-            background-color value
-            color white
-
-            &:disabled
-                background-color alpha(value, .5)
-
-    .btn-native
-        .btn&
-        .btn-icon&
-            color $color-base
+    &:disabled
+        background-color alpha($color-secondary, .5)
 
 // Icon Buttons: default styles
 //
@@ -106,6 +96,8 @@ $btn-whatsapp-color ?= #01a85a
     font-size 1em
     line-height 1.833333em
     text-align center
+    background-color $color-secondary
+    color $color-base
 
     /* social: button per button styles */
     &[data-icon=facebook]
@@ -147,3 +139,18 @@ $btn-whatsapp-color ?= #01a85a
     &[data-icon=whatsapp]
         background-color $btn-whatsapp-color
         color $color-white
+
+
+//btn theme color
+.btn
+.btn-icon
+    for key, value in $colors
+        &.btn-{key}
+            background-color value
+            color $color-white
+
+            &:disabled
+                background-color alpha(value, .5)
+
+    &.btn-native
+        color $color-base
