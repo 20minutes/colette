@@ -9,6 +9,7 @@ var gulp      = require('gulp'),
     path      = require('path'),
     run       = require('gulp-run'),
     sequence  = require('run-sequence'),
+    svgstore  = require('gulp-svgstore'),
     kss       = require('kss');
 
 var cfg = {
@@ -16,15 +17,16 @@ var cfg = {
     fontsDir: 'assets/fonts/',
     cssDir: 'assets/styl/',
     jsDir: 'assets/js/',
+    svgDir: 'assets/svg/',
     docDir: 'docs/',
     distDir: 'dist/',
     stylusPattern: '**/*.styl',
-    jsPattern: '**/*.js'
+    jsPattern: '**/*.js',
+    svgPattern: '**/*.svg'
 };
 
 // css
-gulp.task('styles', function()
-{
+gulp.task('styles', function () {
     return gulp.src(cfg.cssDir + 'colette.styl')
         .pipe(stylus({
             linenos: false,
@@ -38,15 +40,14 @@ gulp.task('styles', function()
 });
 
 // lint css
-gulp.task('stylint', function() {
+gulp.task('stylint', function () {
     return gulp.src(cfg.cssDir + cfg.stylusPattern)
         .pipe(stylint({ config: '.stylintrc' }))
         .pipe(stylint.reporter());
 });
 
 // js
-gulp.task('scripts', function()
-{
+gulp.task('scripts', function () {
     return gulp.src([
             cfg.bowerDir + 'headroom.js/dist/headroom.js',
             cfg.jsDir + 'colette/js/colette.js'
@@ -60,7 +61,7 @@ gulp.task('scripts', function()
 });
 
 // assets
-gulp.task('assets', function() {
+gulp.task('assets', function () {
     // Retrieve fonts into dist/ directory
     gulp.src(cfg.fontsDir + '*')
         .pipe(gulp.dest(cfg.distDir + 'fonts'));
@@ -77,11 +78,25 @@ gulp.task('kss', function () {
 
 });
 
+// svg
+gulp.task('svg', function () {
+    return gulp
+        .src(cfg.svgDir + cfg.svgPattern, {base: cfg.svgDir})
+        .pipe(rename(function (filePath) {
+            var name = filePath.dirname !== '.' ? filePath.dirname.split(filePath.sep) : [];
+            name.push(filePath.basename);
+            filePath.basename = 'symbol-' + name.join('-');
+        }))
+        .pipe(svgstore({inlineSvg: true}))
+        .pipe(gulp.dest(cfg.distDir + 'svg/'));
+});
+
 // watch
-gulp.task('watch', function() {
+gulp.task('watch', function () {
     gulp.watch(cfg.cssDir + cfg.stylusPattern, ['styles', 'kss']);
     gulp.watch(cfg.jsDir + cfg.jsPattern, ['scripts']);
 });
 
 // build
-gulp.task('build', ['styles', 'scripts', 'assets']);
+gulp.task('build', ['stylint', 'svg', 'styles', 'scripts', 'assets', 'kss']);
+gulp.task('default', ['build', 'watch']);
