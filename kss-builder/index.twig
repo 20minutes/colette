@@ -12,6 +12,11 @@
   {{ styles|raw }}
 </head>
 <body id="kss-node">
+{#
+  Inject svg symboles
+  use this inline style to prevent bug from display:none with svg mask and gradients
+#}
+<div style="height:0;width:0;position:absolute;visibility:hidden;overflow:hidden">{% include '../dist/svg/svg.svg' %}</div>
 
 <div class="kss-sidebar kss-style">
   <header class="kss-header">
