@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Colette Style Guide</title>
+    <meta charset="utf-8">
+    <title>Colette Style Guide</title>
 
-  <meta name="description" content="">
-  <meta name="generator" content="kss-node">
-  <meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+    <meta name="generator" content="kss-node">
+    <meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" href="kss-assets/kss.css">
-  <link rel="stylesheet" href="dist/css/colette.min.css">
+    <link rel="stylesheet" href="dist/css/colette.min.css">
+<link rel="stylesheet" href="kss-assets/cl-styles.css">
+
 
 </head>
-<body id="kss-node">
+<body>
 
 <div style="height:0;width:0;position:absolute;visibility:hidden;overflow:hidden"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="symbol-clock" viewBox="0 0 32 32">
     <path d="M20.586 23.414l-6.586-6.586v-8.828h4v7.172l5.414 5.414zM16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 28c-6.627 0-12-5.373-12-12s5.373-12 12-12c6.627 0 12 5.373 12 12s-5.373 12-12 12z"/>
@@ -70,174 +71,86 @@
 </symbol><symbol id="symbol-social-whatsapp" viewBox="0 0 32 32">
     <path d="M20.42 17.512q0.252 0 1.89 0.853t1.735 1.027q0.039 0.097 0.039 0.291 0 0.64-0.329 1.473-0.31 0.756-1.376 1.269t-1.977 0.514q-1.105 0-3.682-1.202-1.899-0.872-3.295-2.287t-2.868-3.585q-1.395-2.074-1.376-3.76v-0.155q0.058-1.764 1.434-3.062 0.465-0.426 1.008-0.426 0.116 0 0.349 0.029t0.368 0.029q0.368 0 0.514 0.126t0.3 0.533q0.155 0.388 0.64 1.705t0.485 1.453q0 0.407-0.669 1.114t-0.669 0.901q0 0.136 0.097 0.291 0.659 1.415 1.977 2.655 1.085 1.027 2.926 1.957 0.233 0.136 0.426 0.136 0.291 0 1.046-0.94t1.008-0.94zM16.486 27.783q2.461 0 4.719-0.969t3.886-2.597 2.597-3.886 0.969-4.719-0.969-4.719-2.597-3.886-3.886-2.597-4.719-0.969-4.719 0.969-3.886 2.597-2.597 3.886-0.969 4.719q0 3.934 2.326 7.132l-1.531 4.515 4.69-1.492q3.062 2.015 6.686 2.015zM16.486 1q2.965 0 5.669 1.163t4.661 3.12 3.12 4.661 1.163 5.669-1.163 5.669-3.12 4.661-4.661 3.12-5.669 1.163q-3.779 0-7.074-1.822l-8.081 2.597 2.636-7.849q-2.093-3.45-2.093-7.539 0-2.965 1.163-5.669t3.12-4.661 4.661-3.12 5.669-1.163z"/>
 </symbol></svg></div>
-
-<div class="kss-sidebar kss-style">
-  <header class="kss-header">
-    <h1 class="kss-doc-title">Colette Style Guide</h1>
-  </header>
-  <nav class="kss-nav">
-    <ul class="kss-nav__menu">
-      <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="./">
-          <span class="kss-nav__ref">0</span
-          ><span class="kss-nav__name">Overview</span>
-        </a>
-      </li>
-          <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-basics.html">
-          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Basics</span>
-        </a>
-              </li>
-          <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-layout.html">
-          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Layout</span>
-        </a>
-              </li>
-          <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-components.html">
-          <span class="kss-nav__ref">3</span><span class="kss-nav__name">Components</span>
-        </a>
-              </li>
-          <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-theme.html">
-          <span class="kss-nav__ref">4</span><span class="kss-nav__name">Theme</span>
-        </a>
-              </li>
-          <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-helpers.html">
-          <span class="kss-nav__ref">5</span><span class="kss-nav__name">Helpers</span>
-        </a>
-                  <ul class="kss-nav__menu-child">
-                      <li class="kss-nav__menu-item">
-              <a class="kss-nav__menu-link" href="section-helpers.html#kssref-helpers-borders">
-                <span class="kss-nav__ref ">5.1</span
-                ><span class="kss-nav__name">Borders</span>
-              </a>
-            </li>
-                      <li class="kss-nav__menu-item">
-              <a class="kss-nav__menu-link" href="section-helpers.html#kssref-helpers-box">
-                <span class="kss-nav__ref ">5.2</span
-                ><span class="kss-nav__name">Box</span>
-              </a>
-            </li>
-                      <li class="kss-nav__menu-item">
-              <a class="kss-nav__menu-link" href="section-helpers.html#kssref-helpers-colors">
-                <span class="kss-nav__ref ">5.3</span
-                ><span class="kss-nav__name">Colors</span>
-              </a>
-            </li>
-                      <li class="kss-nav__menu-item">
-              <a class="kss-nav__menu-link" href="section-helpers.html#kssref-helpers-icons">
-                <span class="kss-nav__ref ">5.4</span
-                ><span class="kss-nav__name">Icons</span>
-              </a>
-            </li>
-                      <li class="kss-nav__menu-item">
-              <a class="kss-nav__menu-link" href="section-helpers.html#kssref-helpers-icons-brand">
-                <span class="kss-nav__ref kss-nav__ref-child">5.4.1</span
-                ><span class="kss-nav__name">Brand icons</span>
-              </a>
-            </li>
-                      <li class="kss-nav__menu-item">
-              <a class="kss-nav__menu-link" href="section-helpers.html#kssref-helpers-icons-social">
-                <span class="kss-nav__ref kss-nav__ref-child">5.4.2</span
-                ><span class="kss-nav__name">Social icons</span>
-              </a>
-            </li>
-                      <li class="kss-nav__menu-item">
-              <a class="kss-nav__menu-link" href="section-helpers.html#kssref-helpers-icons-ui">
-                <span class="kss-nav__ref kss-nav__ref-child">5.4.3</span
-                ><span class="kss-nav__name">UI icons</span>
-              </a>
-            </li>
-                      <li class="kss-nav__menu-item">
-              <a class="kss-nav__menu-link" href="section-helpers.html#kssref-helpers-icons-zodiac">
-                <span class="kss-nav__ref kss-nav__ref-child">5.4.4</span
-                ><span class="kss-nav__name">Zodiac icons</span>
-              </a>
-            </li>
-                      <li class="kss-nav__menu-item">
-              <a class="kss-nav__menu-link" href="section-helpers.html#kssref-helpers-mask">
-                <span class="kss-nav__ref ">5.5</span
-                ><span class="kss-nav__name">Mask</span>
-              </a>
-            </li>
-                      <li class="kss-nav__menu-item">
-              <a class="kss-nav__menu-link" href="section-helpers.html#kssref-helpers-spaces">
-                <span class="kss-nav__ref ">5.6</span
-                ><span class="kss-nav__name">Spaces</span>
-              </a>
-            </li>
-                      <li class="kss-nav__menu-item">
-              <a class="kss-nav__menu-link" href="section-helpers.html#kssref-helpers-textelements">
-                <span class="kss-nav__ref ">5.7</span
-                ><span class="kss-nav__name">Helpers: Text elements</span>
-              </a>
-            </li>
-                      <li class="kss-nav__menu-item">
-              <a class="kss-nav__menu-link" href="section-helpers.html#kssref-helpers-blockelements">
-                <span class="kss-nav__ref ">5.8</span
-                ><span class="kss-nav__name">Helpers: Block elements</span>
-              </a>
-            </li>
-                    </ul>
-              </li>
-          <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-settings.html">
-          <span class="kss-nav__ref">6</span><span class="kss-nav__name">Settings</span>
-        </a>
-              </li>
-          <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-mixins.html">
-          <span class="kss-nav__ref">7</span><span class="kss-nav__name">Mixins</span>
-        </a>
-              </li>
-        </ul>
-  </nav>
-</div>
-<article role="main" class="kss-main">
-
-  
-          <div id="kssref-helpers" class="kss-section kss-section--depth-1">
-      <div class="kss-style">
-                <h1 class="kss-title kss-title--level-1">
-          <a class="kss-title__permalink" href="#kssref-helpers">
-            <span class="kss-title__ref">
-              5
-              <span class="kss-title__permalink-hash">
-                Helpers
-              </span>
-            </span>
-            Helpers
-          </a>
-        </h1>
-
-        
-        
-        
-              </div>
-
-      
-              <div class="kss-source kss-style">
-          Source: <code>colette.styl</code>, line 15
+<div id="co_wrapper">
+    
+    <nav class="navbar">
+        <div class="co_content clearfix">
+            <a href="./" class="navbar-brand" data-icon="logo"><em>Retour à l'accueil</em></a>
+            <ul>
+                <li><a href="./">About</a></li>
+                                    <li>
+                        <a href="section-basics.html">Basics</a>
+                    </li>
+                                    <li>
+                        <a href="section-layout.html">Layout</a>
+                    </li>
+                                    <li>
+                        <a href="section-components.html">Components</a>
+                    </li>
+                                    <li>
+                        <a href="section-theme.html">Theme</a>
+                    </li>
+                                    <li>
+                        <a href="section-helpers.html">Helpers</a>
+                    </li>
+                                    <li>
+                        <a href="section-settings.html">Settings</a>
+                    </li>
+                                    <li>
+                        <a href="section-mixins.html">Mixins</a>
+                    </li>
+                            </ul>
         </div>
-          </div>
-          <section id="kssref-helpers-borders" class="kss-section kss-section--depth-2">
-      <div class="kss-style">
-                <h2 class="kss-title kss-title--level-2">
-          <a class="kss-title__permalink" href="#kssref-helpers-borders">
-            <span class="kss-title__ref">
-              5.1
-              <span class="kss-title__permalink-hash">
-                Helpers.Borders
-              </span>
-            </span>
-            Borders
-          </a>
-        </h2>
+    </nav>
 
-                  <div class="kss-description">
-            <p>A set of light grey solid and dotted borders.</p>
+    
+    <article role="main" id="co_article">
+        
+                                <div id="kssref-helpers" class="co_section co_section-depth-1  pl2 pr2">
+
+
+            
+                        <h1 class="co_section-h1 co_content pl2 pr2">
+                <a href="#kssref-helpers">
+                    <strong class="co_section-ref">5</strong>
+                    Helpers
+                </a>
+            </h1>
+
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+            </div>
+                                <section id="kssref-helpers-borders" class="co_section co_section-depth-2  co_content pl2 pr2">
+
+
+            
+                        <h2 class="co_section-h2">
+                <a href="#kssref-helpers-borders">
+                    <strong class="co_section-ref">5.1</strong>
+                    Borders
+                </a>
+            </h2>
+
+
+            
+                            <div class="co_section-description">
+                    <p>A set of light grey solid and dotted borders.</p>
 <ul>
 <li><strong>.btd</strong>: border top dotted</li>
 <li><strong>.brd</strong>: border right dotted</li>
@@ -249,116 +162,131 @@
 <li><strong>.bls</strong>: border left solid</li>
 </ul>
 
-          </div>
-        
-        
-        
-              </div>
+                </div>
+            
 
-              <div class="kss-modifier__wrapper">
-          <div class="kss-modifier__heading kss-style">
-            Example          </div>
+            
+            
 
-          
-          <div class="kss-modifier__example">
-            <p class="bts bbs pa1" style="background:#f1f1f1">Example of top and bottom solid border class.</p>
+            
+            
+
+            
+                            
+                
+                <div class="co_modifier-example clearfix mb1">
+                    <p class="bts bbs pa1" style="background:#f1f1f1">Example of top and bottom solid border class.</p>
 <p class="btd bbd pa1" style="background:#f1f1f1">Example of top and bottom dotted border class.</p>
 
-          </div>
+                </div>
 
-                  </div>
-                  <div class="kss-markup kss-style">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;p class=&quot;bts bbs pa1&quot; style=&quot;background:#f1f1f1&quot;&gt;Example of top and bottom solid border class.&lt;/p&gt;
+                                
+                
+                                    <div class="co_markup">
+                        <p class="co_markup-view"><button>View Code</button></p>
+                        <pre class="co_markup-content pa1 prettyprint linenums lang-html"><code data-language="html">&lt;p class=&quot;bts bbs pa1&quot; style=&quot;background:#f1f1f1&quot;&gt;Example of top and bottom solid border class.&lt;/p&gt;
 &lt;p class=&quot;btd bbd pa1&quot; style=&quot;background:#f1f1f1&quot;&gt;Example of top and bottom dotted border class.&lt;/p&gt;
 </code></pre>
-          </div>
-              
-              <div class="kss-source kss-style">
-          Source: <code>_helpers/_borders.styl</code>, line 1
-        </div>
-          </section>
-          <section id="kssref-helpers-box" class="kss-section kss-section--depth-2">
-      <div class="kss-style">
-                <h2 class="kss-title kss-title--level-2">
-          <a class="kss-title__permalink" href="#kssref-helpers-box">
-            <span class="kss-title__ref">
-              5.2
-              <span class="kss-title__permalink-hash">
-                Helpers.Box
-              </span>
-            </span>
-            Box
-          </a>
-        </h2>
+                    </div>
+                            
 
-                  <div class="kss-description">
-            <p>A &#39;box&#39; is a content container.
+            
+            
+
+            
+                            <div class="co_source">
+                    File: <span class="co_source-file">_helpers/_borders.styl</span>                </div>
+            
+            </section>
+                                <section id="kssref-helpers-box" class="co_section co_section-depth-2  co_content pl2 pr2">
+
+
+            
+                        <h2 class="co_section-h2">
+                <a href="#kssref-helpers-box">
+                    <strong class="co_section-ref">5.2</strong>
+                    Box
+                </a>
+            </h2>
+
+
+            
+                            <div class="co_section-description">
+                    <p>A &#39;box&#39; is a content container.
 It can be displayed as a block (on homepage or listing pages) or as a page (content view). It can also come with a footer.</p>
 
-          </div>
-        
-        
-        
-              </div>
+                </div>
+            
 
-              <div class="kss-modifier__wrapper">
-          <div class="kss-modifier__heading kss-style">
-            Example          </div>
+            
+            
 
-          
-          <div class="kss-modifier__example">
-            <div class="box">
+            
+            
+
+            
+                            
+                
+                <div class="co_modifier-example clearfix mb1">
+                    <div class="box">
     <p class="pa1">Example of a content box</p>
     <p class="box-footer pa1">With an example of box footer</p>
 </div>
 
-          </div>
+                </div>
 
-                  </div>
-                  <div class="kss-markup kss-style">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;box&quot;&gt;
+                                
+                
+                                    <div class="co_markup">
+                        <p class="co_markup-view"><button>View Code</button></p>
+                        <pre class="co_markup-content pa1 prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;box&quot;&gt;
     &lt;p class=&quot;pa1&quot;&gt;Example of a content box&lt;/p&gt;
     &lt;p class=&quot;box-footer pa1&quot;&gt;With an example of box footer&lt;/p&gt;
 &lt;/div&gt;
 </code></pre>
-          </div>
-              
-              <div class="kss-source kss-style">
-          Source: <code>_helpers/_box.styl</code>, line 1
-        </div>
-          </section>
-          <section id="kssref-helpers-colors" class="kss-section kss-section--depth-2">
-      <div class="kss-style">
-                <h2 class="kss-title kss-title--level-2">
-          <a class="kss-title__permalink" href="#kssref-helpers-colors">
-            <span class="kss-title__ref">
-              5.3
-              <span class="kss-title__permalink-hash">
-                Helpers.Colors
-              </span>
-            </span>
-            Colors
-          </a>
-        </h2>
+                    </div>
+                            
 
-                  <div class="kss-description">
-            <p>Generic styles for text, borders and backgrounds colors.</p>
+            
+            
+
+            
+                            <div class="co_source">
+                    File: <span class="co_source-file">_helpers/_box.styl</span>                </div>
+            
+            </section>
+                                <section id="kssref-helpers-colors" class="co_section co_section-depth-2  co_content pl2 pr2">
+
+
+            
+                        <h2 class="co_section-h2">
+                <a href="#kssref-helpers-colors">
+                    <strong class="co_section-ref">5.3</strong>
+                    Colors
+                </a>
+            </h2>
+
+
+            
+                            <div class="co_section-description">
+                    <p>Generic styles for text, borders and backgrounds colors.</p>
 <p>@TODO<br/>
 Add examples for all colors : text | borders | backgrounds</p>
 
-          </div>
-        
-        
-        
-              </div>
+                </div>
+            
 
-              <div class="kss-modifier__wrapper">
-          <div class="kss-modifier__heading kss-style">
-            Example          </div>
+            
+            
 
-          
-          <div class="kss-modifier__example">
-                <p class="color-base">Exemple de texte couleur couleur par défaut</p>
+            
+            
+
+            
+                            
+                
+                <div class="co_modifier-example clearfix mb1">
+                        <p class="color-base">Exemple de texte couleur couleur par défaut</p>
     <p class="color-default">Exemple de texte couleur Actualité générales</p>
     <p class="color-sport">Exemple de texte couleur Sport</p>
     <p class="color-entertainment">Exemple de texte couleur Entertainment</p>
@@ -371,11 +299,13 @@ Add examples for all colors : text | borders | backgrounds</p>
     <p class="color-hightech">Exemple de texte couleur High-tech</p>
     <p class="color-native">Exemple de texte couleur Native</p>
 
-          </div>
+                </div>
 
-                  </div>
-                  <div class="kss-markup kss-style">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">    &lt;p class=&quot;color-base&quot;&gt;Exemple de texte couleur couleur par défaut&lt;/p&gt;
+                                
+                
+                                    <div class="co_markup">
+                        <p class="co_markup-view"><button>View Code</button></p>
+                        <pre class="co_markup-content pa1 prettyprint linenums lang-html"><code data-language="html">    &lt;p class=&quot;color-base&quot;&gt;Exemple de texte couleur couleur par défaut&lt;/p&gt;
     &lt;p class=&quot;color-default&quot;&gt;Exemple de texte couleur Actualité générales&lt;/p&gt;
     &lt;p class=&quot;color-sport&quot;&gt;Exemple de texte couleur Sport&lt;/p&gt;
     &lt;p class=&quot;color-entertainment&quot;&gt;Exemple de texte couleur Entertainment&lt;/p&gt;
@@ -388,663 +318,582 @@ Add examples for all colors : text | borders | backgrounds</p>
     &lt;p class=&quot;color-hightech&quot;&gt;Exemple de texte couleur High-tech&lt;/p&gt;
     &lt;p class=&quot;color-native&quot;&gt;Exemple de texte couleur Native&lt;/p&gt;
 </code></pre>
-          </div>
-              
-              <div class="kss-source kss-style">
-          Source: <code>_helpers/_colors.styl</code>, line 1
-        </div>
-          </section>
-          <section id="kssref-helpers-icons" class="kss-section kss-section--depth-2">
-      <div class="kss-style">
-                <h2 class="kss-title kss-title--level-2">
-          <a class="kss-title__permalink" href="#kssref-helpers-icons">
-            <span class="kss-title__ref">
-              5.4
-              <span class="kss-title__permalink-hash">
-                Helpers.Icons
-              </span>
-            </span>
-            Icons
-          </a>
-        </h2>
+                    </div>
+                            
 
-                  <div class="kss-description">
-            <p>Use data attributes to insert icons: <code>&lt;p data-icon=&quot;[icon_alias]&quot;&gt;</code></p>
+            
+            
 
-          </div>
-        
-        
-        
-              </div>
+            
+                            <div class="co_source">
+                    File: <span class="co_source-file">_helpers/_colors.styl</span>                </div>
+            
+            </section>
+                                <section id="kssref-helpers-icons" class="co_section co_section-depth-2  co_content pl2 pr2">
 
-      
-              <div class="kss-source kss-style">
-          Source: <code>_helpers/_icons.styl</code>, line 1
-        </div>
-          </section>
-          <section id="kssref-helpers-icons-brand" class="kss-section kss-section--depth-3">
-      <div class="kss-style">
-                <h3 class="kss-title kss-title--level-3">
-          <a class="kss-title__permalink" href="#kssref-helpers-icons-brand">
-            <span class="kss-title__ref">
-              5.4.1
-              <span class="kss-title__permalink-hash">
-                Helpers.Icons.Brand
-              </span>
-            </span>
-            Brand icons
-          </a>
-        </h3>
 
-        
-        
-                  <ul class="kss-icons">
-                          <li>
-                <div class="kss-icons__demo">&#039;</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">logo-21e</strong>: <code class="kss-icons__char">&#039;</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">l</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">logo-s</strong>: <code class="kss-icons__char">l</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">L</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">logo</strong>: <code class="kss-icons__char">L</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                      </ul>
-        
-              </div>
+            
+                        <h2 class="co_section-h2">
+                <a href="#kssref-helpers-icons">
+                    <strong class="co_section-ref">5.4</strong>
+                    Icons
+                </a>
+            </h2>
 
-      
-              <div class="kss-source kss-style">
-          Source: <code>_helpers/_icons.styl</code>, line 7
-        </div>
-          </section>
-          <section id="kssref-helpers-icons-social" class="kss-section kss-section--depth-3">
-      <div class="kss-style">
-                <h3 class="kss-title kss-title--level-3">
-          <a class="kss-title__permalink" href="#kssref-helpers-icons-social">
-            <span class="kss-title__ref">
-              5.4.2
-              <span class="kss-title__permalink-hash">
-                Helpers.Icons.Social
-              </span>
-            </span>
-            Social icons
-          </a>
-        </h3>
 
-        
-        
-                  <ul class="kss-icons">
-                          <li>
-                <div class="kss-icons__demo">F</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">facebook</strong>: <code class="kss-icons__char">F</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">H</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">github</strong>: <code class="kss-icons__char">H</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">g</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">google</strong>: <code class="kss-icons__char">g</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">G</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">googleplus</strong>: <code class="kss-icons__char">G</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">O</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">hootsuite</strong>: <code class="kss-icons__char">O</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">n</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">linkedin</strong>: <code class="kss-icons__char">n</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">P</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">pinterest</strong>: <code class="kss-icons__char">P</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">K</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">pocket</strong>: <code class="kss-icons__char">K</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">x</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">sms</strong>: <code class="kss-icons__char">x</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">N</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">snapchat</strong>: <code class="kss-icons__char">N</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">T</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">twitter</strong>: <code class="kss-icons__char">T</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">W</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">whatsapp</strong>: <code class="kss-icons__char">W</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                      </ul>
-        
-              </div>
+            
+                            <div class="co_section-description">
+                    <p>Use data attributes to insert icons: <code>&lt;p data-icon=&quot;[icon_alias]&quot;&gt;</code></p>
 
-      
-              <div class="kss-source kss-style">
-          Source: <code>_helpers/_icons.styl</code>, line 16
-        </div>
-          </section>
-          <section id="kssref-helpers-icons-ui" class="kss-section kss-section--depth-3">
-      <div class="kss-style">
-                <h3 class="kss-title kss-title--level-3">
-          <a class="kss-title__permalink" href="#kssref-helpers-icons-ui">
-            <span class="kss-title__ref">
-              5.4.3
-              <span class="kss-title__permalink-hash">
-                Helpers.Icons.UI
-              </span>
-            </span>
-            UI icons
-          </a>
-        </h3>
+                </div>
+            
 
-        
-        
-                  <ul class="kss-icons">
-                          <li>
-                <div class="kss-icons__demo">~</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">arrow-down</strong>: <code class="kss-icons__char">~</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">&lt;</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">arrow-left</strong>: <code class="kss-icons__char">&lt;</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">&gt;</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">arrow-right</strong>: <code class="kss-icons__char">&gt;</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">^</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">arrow-up</strong>: <code class="kss-icons__char">^</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">:</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">calendar</strong>: <code class="kss-icons__char">:</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">u</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">cinema</strong>: <code class="kss-icons__char">u</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">d</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">clock</strong>: <code class="kss-icons__char">d</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">D</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">clock2</strong>: <code class="kss-icons__char">D</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">b</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">comments</strong>: <code class="kss-icons__char">b</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">k</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">cooking</strong>: <code class="kss-icons__char">k</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">#</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">crosswords</strong>: <code class="kss-icons__char">#</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">C</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">download</strong>: <code class="kss-icons__char">C</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">f</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">folder</strong>: <code class="kss-icons__char">f</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">e</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">games</strong>: <code class="kss-icons__char">e</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">=</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">grid</strong>: <code class="kss-icons__char">=</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">h</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">home</strong>: <code class="kss-icons__char">h</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">i</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">image</strong>: <code class="kss-icons__char">i</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">I</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">images</strong>: <code class="kss-icons__char">I</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">&amp;</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">link</strong>: <code class="kss-icons__char">&amp;</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">A</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">logout</strong>: <code class="kss-icons__char">A</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">m</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">mail</strong>: <code class="kss-icons__char">m</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">a</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">menu</strong>: <code class="kss-icons__char">a</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">!</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">mobile</strong>: <code class="kss-icons__char">!</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">+</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">more</strong>: <code class="kss-icons__char">+</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">c</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">photo</strong>: <code class="kss-icons__char">c</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">M</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">pin</strong>: <code class="kss-icons__char">M</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">p</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">play</strong>: <code class="kss-icons__char">p</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">r</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">print</strong>: <code class="kss-icons__char">r</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">R</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">refresh</strong>: <code class="kss-icons__char">R</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">z</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">search</strong>: <code class="kss-icons__char">z</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">w</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">settings</strong>: <code class="kss-icons__char">w</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">s</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">share</strong>: <code class="kss-icons__char">s</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">%</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">social</strong>: <code class="kss-icons__char">%</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">B</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">survey</strong>: <code class="kss-icons__char">B</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">t</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">tag</strong>: <code class="kss-icons__char">t</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">S</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">tv</strong>: <code class="kss-icons__char">S</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">u</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">user</strong>: <code class="kss-icons__char">u</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">v</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">video</strong>: <code class="kss-icons__char">v</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">o</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">view</strong>: <code class="kss-icons__char">o</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                      </ul>
-        
-              </div>
+            
+            
 
-      
-              <div class="kss-source kss-style">
-          Source: <code>_helpers/_icons.styl</code>, line 34
-        </div>
-          </section>
-          <section id="kssref-helpers-icons-zodiac" class="kss-section kss-section--depth-3">
-      <div class="kss-style">
-                <h3 class="kss-title kss-title--level-3">
-          <a class="kss-title__permalink" href="#kssref-helpers-icons-zodiac">
-            <span class="kss-title__ref">
-              5.4.4
-              <span class="kss-title__permalink-hash">
-                Helpers.Icons.Zodiac
-              </span>
-            </span>
-            Zodiac icons
-          </a>
-        </h3>
+            
+            
 
-        
-        
-                  <ul class="kss-icons">
-                          <li>
-                <div class="kss-icons__demo">Ï</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">aries</strong>: <code class="kss-icons__char">Ï</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">Ö</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">taurus</strong>: <code class="kss-icons__char">Ö</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">Ü</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">gemini</strong>: <code class="kss-icons__char">Ü</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">Ÿ</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">cancer</strong>: <code class="kss-icons__char">Ÿ</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">Ê</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">leo</strong>: <code class="kss-icons__char">Ê</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">Î</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">virgo</strong>: <code class="kss-icons__char">Î</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">Â</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">libra</strong>: <code class="kss-icons__char">Â</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">Ô</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">scorpio</strong>: <code class="kss-icons__char">Ô</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">Û</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">sagittarius</strong>: <code class="kss-icons__char">Û</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">Y</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">capricorn</strong>: <code class="kss-icons__char">Y</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">Ä</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">aquarius</strong>: <code class="kss-icons__char">Ä</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-icons__demo">Ë</div>
-                <div class="kss-icons__info">
-                  <p><strong class="kss-icons__name">pisces</strong>: <code class="kss-icons__char">Ë</code></p>
-                  <p class="kss-icons__description"></p>
-                </div>
-              </li>
-                      </ul>
-        
-              </div>
+            
+            
 
-      
-              <div class="kss-source kss-style">
-          Source: <code>_helpers/_icons.styl</code>, line 79
-        </div>
-          </section>
-          <section id="kssref-helpers-mask" class="kss-section kss-section--depth-2">
-      <div class="kss-style">
-                <h2 class="kss-title kss-title--level-2">
-          <a class="kss-title__permalink" href="#kssref-helpers-mask">
-            <span class="kss-title__ref">
-              5.5
-              <span class="kss-title__permalink-hash">
-                Helpers.Mask
-              </span>
-            </span>
-            Mask
-          </a>
-        </h2>
+            
+            
 
-                  <div class="kss-description">
-            <p>Hide text but keep it readable to screen-readers</p>
+            
+                            <div class="co_source">
+                    File: <span class="co_source-file">_helpers/_icons.styl</span>                </div>
+            
+            </section>
+                                <section id="kssref-helpers-icons-brand" class="co_section co_section-depth-3  co_content pl2 pr2">
 
-          </div>
-        
-        
-        
-              </div>
 
-              <div class="kss-modifier__wrapper">
-          <div class="kss-modifier__heading kss-style">
-            Example          </div>
+            
+                        <h3 class="co_section-h3">
+                <a href="#kssref-helpers-icons-brand">
+                    <strong class="co_section-ref">5.4.1</strong>
+                    Brand icons
+                </a>
+            </h3>
 
-          
-          <div class="kss-modifier__example">
-            <span class="mask">Hidden text but readable to screen-readers</span>
-          </div>
 
-                  </div>
-                  <div class="kss-markup kss-style">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;span class=&quot;mask&quot;&gt;Hidden text but readable to screen-readers&lt;/span&gt;</code></pre>
-          </div>
-              
-              <div class="kss-source kss-style">
-          Source: <code>_helpers/_mask.styl</code>, line 1
-        </div>
-          </section>
-          <section id="kssref-helpers-spaces" class="kss-section kss-section--depth-2">
-      <div class="kss-style">
-                <h2 class="kss-title kss-title--level-2">
-          <a class="kss-title__permalink" href="#kssref-helpers-spaces">
-            <span class="kss-title__ref">
-              5.6
-              <span class="kss-title__permalink-hash">
-                Helpers.Spaces
-              </span>
-            </span>
-            Spaces
-          </a>
-        </h2>
+            
+            
 
-                  <div class="kss-description">
-            <p>A set of margins and paddings, based on a 1.2rem gutter width.</p>
+            
+            
+
+            
+                            <ul class="co_icons clearfix">
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">&#039;</div>
+                        <div><span class="co_icons-name">logo-21e</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">l</div>
+                        <div><span class="co_icons-name">logo-s</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">L</div>
+                        <div><span class="co_icons-name">logo</span></div>
+                    </li>
+                                    </ul>
+            
+
+            
+            
+
+            
+            
+
+            
+                            <div class="co_source">
+                    File: <span class="co_source-file">_helpers/_icons.styl</span>, Line: <span class="co_source-file">line 7</span>                </div>
+            
+            </section>
+                                <section id="kssref-helpers-icons-social" class="co_section co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3">
+                <a href="#kssref-helpers-icons-social">
+                    <strong class="co_section-ref">5.4.2</strong>
+                    Social icons
+                </a>
+            </h3>
+
+
+            
+            
+
+            
+            
+
+            
+                            <ul class="co_icons clearfix">
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">F</div>
+                        <div><span class="co_icons-name">facebook</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">H</div>
+                        <div><span class="co_icons-name">github</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">g</div>
+                        <div><span class="co_icons-name">google</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">G</div>
+                        <div><span class="co_icons-name">googleplus</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">O</div>
+                        <div><span class="co_icons-name">hootsuite</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">n</div>
+                        <div><span class="co_icons-name">linkedin</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">P</div>
+                        <div><span class="co_icons-name">pinterest</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">K</div>
+                        <div><span class="co_icons-name">pocket</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">x</div>
+                        <div><span class="co_icons-name">sms</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">N</div>
+                        <div><span class="co_icons-name">snapchat</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">T</div>
+                        <div><span class="co_icons-name">twitter</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">W</div>
+                        <div><span class="co_icons-name">whatsapp</span></div>
+                    </li>
+                                    </ul>
+            
+
+            
+            
+
+            
+            
+
+            
+                            <div class="co_source">
+                    File: <span class="co_source-file">_helpers/_icons.styl</span>, Line: <span class="co_source-file">line 16</span>                </div>
+            
+            </section>
+                                <section id="kssref-helpers-icons-ui" class="co_section co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3">
+                <a href="#kssref-helpers-icons-ui">
+                    <strong class="co_section-ref">5.4.3</strong>
+                    UI icons
+                </a>
+            </h3>
+
+
+            
+            
+
+            
+            
+
+            
+                            <ul class="co_icons clearfix">
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">~</div>
+                        <div><span class="co_icons-name">arrow-down</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">&lt;</div>
+                        <div><span class="co_icons-name">arrow-left</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">&gt;</div>
+                        <div><span class="co_icons-name">arrow-right</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">^</div>
+                        <div><span class="co_icons-name">arrow-up</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">:</div>
+                        <div><span class="co_icons-name">calendar</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">u</div>
+                        <div><span class="co_icons-name">cinema</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">d</div>
+                        <div><span class="co_icons-name">clock</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">D</div>
+                        <div><span class="co_icons-name">clock2</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">b</div>
+                        <div><span class="co_icons-name">comments</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">k</div>
+                        <div><span class="co_icons-name">cooking</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">#</div>
+                        <div><span class="co_icons-name">crosswords</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">C</div>
+                        <div><span class="co_icons-name">download</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">f</div>
+                        <div><span class="co_icons-name">folder</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">e</div>
+                        <div><span class="co_icons-name">games</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">=</div>
+                        <div><span class="co_icons-name">grid</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">h</div>
+                        <div><span class="co_icons-name">home</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">i</div>
+                        <div><span class="co_icons-name">image</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">I</div>
+                        <div><span class="co_icons-name">images</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">&amp;</div>
+                        <div><span class="co_icons-name">link</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">A</div>
+                        <div><span class="co_icons-name">logout</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">m</div>
+                        <div><span class="co_icons-name">mail</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">a</div>
+                        <div><span class="co_icons-name">menu</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">!</div>
+                        <div><span class="co_icons-name">mobile</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">+</div>
+                        <div><span class="co_icons-name">more</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">c</div>
+                        <div><span class="co_icons-name">photo</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">M</div>
+                        <div><span class="co_icons-name">pin</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">p</div>
+                        <div><span class="co_icons-name">play</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">r</div>
+                        <div><span class="co_icons-name">print</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">R</div>
+                        <div><span class="co_icons-name">refresh</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">z</div>
+                        <div><span class="co_icons-name">search</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">w</div>
+                        <div><span class="co_icons-name">settings</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">s</div>
+                        <div><span class="co_icons-name">share</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">%</div>
+                        <div><span class="co_icons-name">social</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">B</div>
+                        <div><span class="co_icons-name">survey</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">t</div>
+                        <div><span class="co_icons-name">tag</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">S</div>
+                        <div><span class="co_icons-name">tv</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">u</div>
+                        <div><span class="co_icons-name">user</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">v</div>
+                        <div><span class="co_icons-name">video</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">o</div>
+                        <div><span class="co_icons-name">view</span></div>
+                    </li>
+                                    </ul>
+            
+
+            
+            
+
+            
+            
+
+            
+                            <div class="co_source">
+                    File: <span class="co_source-file">_helpers/_icons.styl</span>, Line: <span class="co_source-file">line 34</span>                </div>
+            
+            </section>
+                                <section id="kssref-helpers-icons-zodiac" class="co_section co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3">
+                <a href="#kssref-helpers-icons-zodiac">
+                    <strong class="co_section-ref">5.4.4</strong>
+                    Zodiac icons
+                </a>
+            </h3>
+
+
+            
+            
+
+            
+            
+
+            
+                            <ul class="co_icons clearfix">
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">Ï</div>
+                        <div><span class="co_icons-name">aries</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">Ö</div>
+                        <div><span class="co_icons-name">taurus</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">Ü</div>
+                        <div><span class="co_icons-name">gemini</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">Ÿ</div>
+                        <div><span class="co_icons-name">cancer</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">Ê</div>
+                        <div><span class="co_icons-name">leo</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">Î</div>
+                        <div><span class="co_icons-name">virgo</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">Â</div>
+                        <div><span class="co_icons-name">libra</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">Ô</div>
+                        <div><span class="co_icons-name">scorpio</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">Û</div>
+                        <div><span class="co_icons-name">sagittarius</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">Y</div>
+                        <div><span class="co_icons-name">capricorn</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">Ä</div>
+                        <div><span class="co_icons-name">aquarius</span></div>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_icons-demo">Ë</div>
+                        <div><span class="co_icons-name">pisces</span></div>
+                    </li>
+                                    </ul>
+            
+
+            
+            
+
+            
+            
+
+            
+                            <div class="co_source">
+                    File: <span class="co_source-file">_helpers/_icons.styl</span>, Line: <span class="co_source-file">line 79</span>                </div>
+            
+            </section>
+                                <section id="kssref-helpers-mask" class="co_section co_section-depth-2  co_content pl2 pr2">
+
+
+            
+                        <h2 class="co_section-h2">
+                <a href="#kssref-helpers-mask">
+                    <strong class="co_section-ref">5.5</strong>
+                    Mask
+                </a>
+            </h2>
+
+
+            
+                            <div class="co_section-description">
+                    <p>Hide text but keep it readable to screen-readers</p>
+
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+                            
+                
+                <div class="co_modifier-example clearfix mb1">
+                    <span class="mask">Hidden text but readable to screen-readers</span>
+                </div>
+
+                                
+                
+                                    <div class="co_markup">
+                        <p class="co_markup-view"><button>View Code</button></p>
+                        <pre class="co_markup-content pa1 prettyprint linenums lang-html"><code data-language="html">&lt;span class=&quot;mask&quot;&gt;Hidden text but readable to screen-readers&lt;/span&gt;</code></pre>
+                    </div>
+                            
+
+            
+            
+
+            
+                            <div class="co_source">
+                    File: <span class="co_source-file">_helpers/_mask.styl</span>                </div>
+            
+            </section>
+                                <section id="kssref-helpers-spaces" class="co_section co_section-depth-2  co_content pl2 pr2">
+
+
+            
+                        <h2 class="co_section-h2">
+                <a href="#kssref-helpers-spaces">
+                    <strong class="co_section-ref">5.6</strong>
+                    Spaces
+                </a>
+            </h2>
+
+
+            
+                            <div class="co_section-description">
+                    <p>A set of margins and paddings, based on a 1.2rem gutter width.</p>
 <p>A margin or padding is a multiple (from 1 to 6) of the gutter width,
 and can be applied either on top | right | bottom | left | all side(s) of an element.</p>
 <ul>
@@ -1059,56 +908,63 @@ and can be applied either on top | right | bottom | left | all side(s) of an ele
 <li><strong>ml[n]</strong>: margin-left: [n] x 1.2rem</li>
 <li><strong>ma[n]</strong>: margin: [n] x 1.2rem</li>
 </ul>
-          </div>
-        
-        
-        
-              </div>
+                </div>
+            
 
-              <div class="kss-modifier__wrapper">
-          <div class="kss-modifier__heading kss-style">
-            Example          </div>
+            
+            
 
-          
-          <div class="kss-modifier__example">
-            <p class="pa1" style="background:#e7e7e7">Example of `.pa1` class (1 x gutter-width padding on all side).</p>
+            
+            
+
+            
+                            
+                
+                <div class="co_modifier-example clearfix mb1">
+                    <p class="pa1" style="background:#e7e7e7">Example of `.pa1` class (1 x gutter-width padding on all side).</p>
 <hr />
 <p class="pt3" style="background:#e7e7e7">Example of `.pt3` class (1 x gutter-width padding-top).</p>
 <hr />
 <p class="pl6" style="background:#e7e7e7">Example of `.pl6` class (1 x gutter-width padding-left).</p>
 
-          </div>
+                </div>
 
-                  </div>
-                  <div class="kss-markup kss-style">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;p class=&quot;pa1&quot; style=&quot;background:#e7e7e7&quot;&gt;Example of `.pa1` class (1 x gutter-width padding on all side).&lt;/p&gt;
+                                
+                
+                                    <div class="co_markup">
+                        <p class="co_markup-view"><button>View Code</button></p>
+                        <pre class="co_markup-content pa1 prettyprint linenums lang-html"><code data-language="html">&lt;p class=&quot;pa1&quot; style=&quot;background:#e7e7e7&quot;&gt;Example of `.pa1` class (1 x gutter-width padding on all side).&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p class=&quot;pt3&quot; style=&quot;background:#e7e7e7&quot;&gt;Example of `.pt3` class (1 x gutter-width padding-top).&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p class=&quot;pl6&quot; style=&quot;background:#e7e7e7&quot;&gt;Example of `.pl6` class (1 x gutter-width padding-left).&lt;/p&gt;
 </code></pre>
-          </div>
-              
-              <div class="kss-source kss-style">
-          Source: <code>_helpers/_spaces.styl</code>, line 1
-        </div>
-          </section>
-          <section id="kssref-helpers-textelements" class="kss-section kss-section--depth-2">
-      <div class="kss-style">
-                <h2 class="kss-title kss-title--level-2">
-          <a class="kss-title__permalink" href="#kssref-helpers-textelements">
-            <span class="kss-title__ref">
-              5.7
-              <span class="kss-title__permalink-hash">
-                Helpers.TextElements
-              </span>
-            </span>
-            Helpers: Text elements
-          </a>
-        </h2>
+                    </div>
+                            
 
-                  <div class="kss-description">
-            <p>Some default classes are available for text elements:</p>
+            
+            
+
+            
+                            <div class="co_source">
+                    File: <span class="co_source-file">_helpers/_spaces.styl</span>                </div>
+            
+            </section>
+                                <section id="kssref-helpers-textelements" class="co_section co_section-depth-2  co_content pl2 pr2">
+
+
+            
+                        <h2 class="co_section-h2">
+                <a href="#kssref-helpers-textelements">
+                    <strong class="co_section-ref">5.7</strong>
+                    Helpers: Text elements
+                </a>
+            </h2>
+
+
+            
+                            <div class="co_section-description">
+                    <p>Some default classes are available for text elements:</p>
 <ul>
 <li><strong>.bold</strong>:             bold text</li>
 <li><strong>.italic</strong>:           italic text</li>
@@ -1122,19 +978,20 @@ and can be applied either on top | right | bottom | left | all side(s) of an ele
 <li><strong>.list-type-none</strong>:   list-item with no marks</li>
 </ul>
 
-          </div>
-        
-        
-        
-              </div>
+                </div>
+            
 
-              <div class="kss-modifier__wrapper">
-          <div class="kss-modifier__heading kss-style">
-            Example          </div>
+            
+            
 
-          
-          <div class="kss-modifier__example">
-            <p>Example of <span class="bold">bold text</span></p>
+            
+            
+
+            
+                            
+                
+                <div class="co_modifier-example clearfix mb1">
+                    <p>Example of <span class="bold">bold text</span></p>
 <p>Example of <span class="italic">italic text</span></p>
 <p>Example of <span class="uppercase">uppercase text</span></p>
 <p>Example of <span class="font-secondary">small uppercase text text</span></p>
@@ -1150,11 +1007,13 @@ and can be applied either on top | right | bottom | left | all side(s) of an ele
     <li class="list-type-none">List-item with no mark</li>
 </ul>
 
-          </div>
+                </div>
 
-                  </div>
-                  <div class="kss-markup kss-style">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;p&gt;Example of &lt;span class=&quot;bold&quot;&gt;bold text&lt;/span&gt;&lt;/p&gt;
+                                
+                
+                                    <div class="co_markup">
+                        <p class="co_markup-view"><button>View Code</button></p>
+                        <pre class="co_markup-content pa1 prettyprint linenums lang-html"><code data-language="html">&lt;p&gt;Example of &lt;span class=&quot;bold&quot;&gt;bold text&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Example of &lt;span class=&quot;italic&quot;&gt;italic text&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Example of &lt;span class=&quot;uppercase&quot;&gt;uppercase text&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Example of &lt;span class=&quot;font-secondary&quot;&gt;small uppercase text text&lt;/span&gt;&lt;/p&gt;
@@ -1170,28 +1029,32 @@ and can be applied either on top | right | bottom | left | all side(s) of an ele
     &lt;li class=&quot;list-type-none&quot;&gt;List-item with no mark&lt;/li&gt;
 &lt;/ul&gt;
 </code></pre>
-          </div>
-              
-              <div class="kss-source kss-style">
-          Source: <code>_helpers/_text.styl</code>, line 1
-        </div>
-          </section>
-          <section id="kssref-helpers-blockelements" class="kss-section kss-section--depth-2">
-      <div class="kss-style">
-                <h2 class="kss-title kss-title--level-2">
-          <a class="kss-title__permalink" href="#kssref-helpers-blockelements">
-            <span class="kss-title__ref">
-              5.8
-              <span class="kss-title__permalink-hash">
-                Helpers.BlockElements
-              </span>
-            </span>
-            Helpers: Block elements
-          </a>
-        </h2>
+                    </div>
+                            
 
-                  <div class="kss-description">
-            <p>Some default classes are available for block elements:</p>
+            
+            
+
+            
+                            <div class="co_source">
+                    File: <span class="co_source-file">_helpers/_text.styl</span>                </div>
+            
+            </section>
+                                <section id="kssref-helpers-blockelements" class="co_section co_section-depth-2  co_content pl2 pr2">
+
+
+            
+                        <h2 class="co_section-h2">
+                <a href="#kssref-helpers-blockelements">
+                    <strong class="co_section-ref">5.8</strong>
+                    Helpers: Block elements
+                </a>
+            </h2>
+
+
+            
+                            <div class="co_section-description">
+                    <p>Some default classes are available for block elements:</p>
 <ul>
 <li><strong>.float-left</strong>:   float left</li>
 <li><strong>.float-right</strong>:  float right</li>
@@ -1202,19 +1065,20 @@ and can be applied either on top | right | bottom | left | all side(s) of an ele
 <li><strong>.vsb-hidden</strong>:   visibility hidden</li>
 </ul>
 
-          </div>
-        
-        
-        
-              </div>
+                </div>
+            
 
-              <div class="kss-modifier__wrapper">
-          <div class="kss-modifier__heading kss-style">
-            Example          </div>
+            
+            
 
-          
-          <div class="kss-modifier__example">
-            <ul class="inline">
+            
+            
+
+            
+                            
+                
+                <div class="co_modifier-example clearfix mb1">
+                    <ul class="inline">
     <li>First inline list item</li>
     <li>Second item</li>
 </ul>
@@ -1224,11 +1088,13 @@ and can be applied either on top | right | bottom | left | all side(s) of an ele
     <p class="float-left" style="background-color:#f1f1f1">Paragraph.float-left</p>
 </div>
 
-          </div>
+                </div>
 
-                  </div>
-                  <div class="kss-markup kss-style">
-            <pre class="prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;inline&quot;&gt;
+                                
+                
+                                    <div class="co_markup">
+                        <p class="co_markup-view"><button>View Code</button></p>
+                        <pre class="co_markup-content pa1 prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;inline&quot;&gt;
     &lt;li&gt;First inline list item&lt;/li&gt;
     &lt;li&gt;Second item&lt;/li&gt;
 &lt;/ul&gt;
@@ -1238,30 +1104,34 @@ and can be applied either on top | right | bottom | left | all side(s) of an ele
     &lt;p class=&quot;float-left&quot; style=&quot;background-color:#f1f1f1&quot;&gt;Paragraph.float-left&lt;/p&gt;
 &lt;/div&gt;
 </code></pre>
-          </div>
-              
-              <div class="kss-source kss-style">
-          Source: <code>_helpers/_block.styl</code>, line 1
-        </div>
-          </section>
-  </article>
+                    </div>
+                            
 
-<!-- SCRIPTS -->
-<script src="kss-assets/kss.js"></script>
-<script src="kss-assets/scrollspy.js"></script>
+            
+            
+
+            
+                            <div class="co_source">
+                    File: <span class="co_source-file">_helpers/_block.styl</span>                </div>
+            
+            </section>
+            </article>
+
+    
+    <footer class="co_footer">
+        <div class="co_content clearfix">
+            <p class="float-left">© Copyright <a href="http://www.20minutes.fr">20 Minutes</a></p>
+            <p class="float-right"><a href="https://twitter.com/Tech20Minutes" class="ml2" data-icon="twitter"> Follow us </a></p>
+            <p class="float-right"><a href="https://github.com/20minutes/colette" class="ml2" data-icon="github"> View it on Github</a></p>
+        </div>
+    </footer>
+</div>
+<!-- scripts -->
 <script src="kss-assets/prettify.js"></script>
 <script>
-  prettyPrint();
-  var spy = new ScrollSpy('#kss-node', {
-    nav: '.kss-nav__menu-child > li > a',
-    className: 'is-in-viewport'
-  });
+    prettyPrint();
 </script>
 <script src="dist/js/colette.min.js"></script>
 
-
-
-
-<!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
 </body>
 </html>

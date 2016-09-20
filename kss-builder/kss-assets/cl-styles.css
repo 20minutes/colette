@@ -1,0 +1,247 @@
+body {
+  background-color: #f8f8f8;
+}
+h1 {
+  font-weight: normal;
+  color: #000;
+}
+h1 a {
+  color: #000;
+}
+h2 {
+  font-weight: normal;
+  color: #000;
+}
+h2 a {
+  color: #000;
+}
+h3 {
+  font-weight: normal;
+  color: #000;
+}
+h3 a {
+  color: #000;
+}
+h4 {
+  font-weight: normal;
+  color: #000;
+}
+h4 a {
+  color: #000;
+}
+h5 {
+  font-weight: normal;
+  color: #000;
+}
+h5 a {
+  color: #000;
+}
+h6 {
+  font-weight: normal;
+  color: #000;
+}
+h6 a {
+  color: #000;
+}
+.cl_content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.cl_submenu {
+  margin-top: 4.8rem;
+}
+.cl_submenu li {
+  display: inline;
+}
+/* section */
+.cl_section-h1 {
+  font-size: 3em;
+}
+.cl_section-h2 {
+  font-size: 2.4em;
+}
+.cl_section-h3 {
+  font-size: 2.1em;
+}
+.cl_section-h4 {
+  font-size: 1.8em;
+}
+.cl_section-description {
+  max-width: 40em;
+}
+.cl_section-description > p,
+.cl_section-description > ul {
+  padding-bottom: 16px;
+}
+.cl_section-description > ul > li {
+  list-style-position: inside;
+}
+.cl_section-ref {
+  display: block;
+  color: #666;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.cl_section-ref:before {
+  content: 'section ';
+}
+/* colors */
+.cl_colors {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.cl_colors > li {
+  overflow: hidden;
+}
+.cl_colors-demo {
+  float: left;
+  height: 100px;
+  width: 100px;
+  border: 2px solid $kss-colors-quotes;
+  margin-bottom: 0.75em;
+}
+.cl_colors-info {
+  margin-left: 120px;
+}
+.cl_colors-name {
+  margin-top: 0;
+  margin-bottom: 0.75em;
+  font-weight: bold;
+}
+.cl_colors-hex,
+.cl_colors-rgb,
+.cl_colors-hsl {
+  font-size: 0.8em;
+  margin: 0;
+}
+.cl_colors-description {
+  color: $kss-colors-quotes;
+}
+/* icons */
+.cl_icons {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.cl_icons > li {
+  overflow: hidden;
+}
+.cl_icons-demo {
+  float: left;
+  box-sizing: content-box;
+  width: 100px;
+  height: 40px;
+  padding: 30px 0;
+  margin-bottom: 0.25em;
+  border: 2px solid $kss-colors-quotes;
+  text-align: center;
+  font-size: 40px;
+  font-family: '20mn';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.cl_icons-info {
+  margin-left: 120px;
+}
+.cl_icons-info p {
+  margin-top: 0;
+}
+.cl_icons-name {
+  font-weight: bold;
+}
+.cl_icons-char {
+  margin: 0;
+}
+.cl_icons-description {
+  color: $kss-colors-quotes;
+}
+/* Pretty printing styles. Used with prettify.js. */
+/* SPAN elements with the classes below are added by prettyprint. */
+.pln {
+  color: #000;
+}
+.str {
+  color: #080;
+}
+.kwd {
+  color: #008;
+}
+.com {
+  color: #800;
+}
+.typ {
+  color: #606;
+}
+.lit {
+  color: #066;
+}
+/* punctuation, lisp open bracket, lisp close bracket */
+.pun,
+.opn,
+.clo {
+  color: #660;
+}
+.tag {
+  color: #008;
+}
+.atn {
+  color: #606;
+}
+.atv {
+  color: #080;
+}
+.dec,
+.var {
+  color: #606;
+}
+.fun {
+  color: #f00;
+}
+/* Use higher contrast and text-weight for printable form. */
+@media print, projection {
+  .str {
+    color: #060;
+  }
+  .kwd {
+    color: #006;
+    font-weight: bold;
+  }
+  .com {
+    color: #600;
+    font-style: italic;
+  }
+  .typ {
+    color: #404;
+    font-weight: bold;
+  }
+  .lit {
+    color: #044;
+  }
+  .pun,
+  .opn,
+  .clo {
+    color: #440;
+  }
+  .tag {
+    color: #006;
+    font-weight: bold;
+  }
+  .atn {
+    color: #404;
+  }
+  .atv {
+    color: #060;
+  }
+}
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums {
+  list-style-type: none;
+}

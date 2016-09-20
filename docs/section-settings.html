@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Colette Style Guide</title>
+    <meta charset="utf-8">
+    <title>Colette Style Guide</title>
 
-  <meta name="description" content="">
-  <meta name="generator" content="kss-node">
-  <meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+    <meta name="generator" content="kss-node">
+    <meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" href="kss-assets/kss.css">
-  <link rel="stylesheet" href="dist/css/colette.min.css">
+    <link rel="stylesheet" href="dist/css/colette.min.css">
+<link rel="stylesheet" href="kss-assets/cl-styles.css">
+
 
 </head>
-<body id="kss-node">
+<body>
 
 <div style="height:0;width:0;position:absolute;visibility:hidden;overflow:hidden"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="symbol-clock" viewBox="0 0 32 32">
     <path d="M20.586 23.414l-6.586-6.586v-8.828h4v7.172l5.414 5.414zM16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 28c-6.627 0-12-5.373-12-12s5.373-12 12-12c6.627 0 12 5.373 12 12s-5.373 12-12 12z"/>
@@ -70,144 +71,86 @@
 </symbol><symbol id="symbol-social-whatsapp" viewBox="0 0 32 32">
     <path d="M20.42 17.512q0.252 0 1.89 0.853t1.735 1.027q0.039 0.097 0.039 0.291 0 0.64-0.329 1.473-0.31 0.756-1.376 1.269t-1.977 0.514q-1.105 0-3.682-1.202-1.899-0.872-3.295-2.287t-2.868-3.585q-1.395-2.074-1.376-3.76v-0.155q0.058-1.764 1.434-3.062 0.465-0.426 1.008-0.426 0.116 0 0.349 0.029t0.368 0.029q0.368 0 0.514 0.126t0.3 0.533q0.155 0.388 0.64 1.705t0.485 1.453q0 0.407-0.669 1.114t-0.669 0.901q0 0.136 0.097 0.291 0.659 1.415 1.977 2.655 1.085 1.027 2.926 1.957 0.233 0.136 0.426 0.136 0.291 0 1.046-0.94t1.008-0.94zM16.486 27.783q2.461 0 4.719-0.969t3.886-2.597 2.597-3.886 0.969-4.719-0.969-4.719-2.597-3.886-3.886-2.597-4.719-0.969-4.719 0.969-3.886 2.597-2.597 3.886-0.969 4.719q0 3.934 2.326 7.132l-1.531 4.515 4.69-1.492q3.062 2.015 6.686 2.015zM16.486 1q2.965 0 5.669 1.163t4.661 3.12 3.12 4.661 1.163 5.669-1.163 5.669-3.12 4.661-4.661 3.12-5.669 1.163q-3.779 0-7.074-1.822l-8.081 2.597 2.636-7.849q-2.093-3.45-2.093-7.539 0-2.965 1.163-5.669t3.12-4.661 4.661-3.12 5.669-1.163z"/>
 </symbol></svg></div>
-
-<div class="kss-sidebar kss-style">
-  <header class="kss-header">
-    <h1 class="kss-doc-title">Colette Style Guide</h1>
-  </header>
-  <nav class="kss-nav">
-    <ul class="kss-nav__menu">
-      <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="./">
-          <span class="kss-nav__ref">0</span
-          ><span class="kss-nav__name">Overview</span>
-        </a>
-      </li>
-          <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-basics.html">
-          <span class="kss-nav__ref">1</span><span class="kss-nav__name">Basics</span>
-        </a>
-              </li>
-          <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-layout.html">
-          <span class="kss-nav__ref">2</span><span class="kss-nav__name">Layout</span>
-        </a>
-              </li>
-          <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-components.html">
-          <span class="kss-nav__ref">3</span><span class="kss-nav__name">Components</span>
-        </a>
-              </li>
-          <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-theme.html">
-          <span class="kss-nav__ref">4</span><span class="kss-nav__name">Theme</span>
-        </a>
-              </li>
-          <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-helpers.html">
-          <span class="kss-nav__ref">5</span><span class="kss-nav__name">Helpers</span>
-        </a>
-              </li>
-          <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-settings.html">
-          <span class="kss-nav__ref">6</span><span class="kss-nav__name">Settings</span>
-        </a>
-                  <ul class="kss-nav__menu-child">
-                      <li class="kss-nav__menu-item">
-              <a class="kss-nav__menu-link" href="section-settings.html#kssref-settings-grid">
-                <span class="kss-nav__ref ">6.1</span
-                ><span class="kss-nav__name">Media queries</span>
-              </a>
-            </li>
-                      <li class="kss-nav__menu-item">
-              <a class="kss-nav__menu-link" href="section-settings.html#kssref-settings-colors">
-                <span class="kss-nav__ref ">6.2</span
-                ><span class="kss-nav__name">Colors</span>
-              </a>
-            </li>
-                      <li class="kss-nav__menu-item">
-              <a class="kss-nav__menu-link" href="section-settings.html#kssref-settings-colors-alerts">
-                <span class="kss-nav__ref kss-nav__ref-child">6.2.1</span
-                ><span class="kss-nav__name">Alerts colors</span>
-              </a>
-            </li>
-                      <li class="kss-nav__menu-item">
-              <a class="kss-nav__menu-link" href="section-settings.html#kssref-settings-colors-bnw">
-                <span class="kss-nav__ref kss-nav__ref-child">6.2.2</span
-                ><span class="kss-nav__name">Black &amp; White</span>
-              </a>
-            </li>
-                      <li class="kss-nav__menu-item">
-              <a class="kss-nav__menu-link" href="section-settings.html#kssref-settings-colors-project">
-                <span class="kss-nav__ref kss-nav__ref-child">6.2.3</span
-                ><span class="kss-nav__name">Project colors</span>
-              </a>
-            </li>
-                      <li class="kss-nav__menu-item">
-              <a class="kss-nav__menu-link" href="section-settings.html#kssref-settings-colors-theme">
-                <span class="kss-nav__ref kss-nav__ref-child">6.2.4</span
-                ><span class="kss-nav__name">Theme colors</span>
-              </a>
-            </li>
-                      <li class="kss-nav__menu-item">
-              <a class="kss-nav__menu-link" href="section-settings.html#kssref-settings-fonts">
-                <span class="kss-nav__ref ">6.3</span
-                ><span class="kss-nav__name">Fonts</span>
-              </a>
-            </li>
-                    </ul>
-              </li>
-          <li class="kss-nav__menu-item">
-        <a class="kss-nav__menu-link" href="section-mixins.html">
-          <span class="kss-nav__ref">7</span><span class="kss-nav__name">Mixins</span>
-        </a>
-              </li>
-        </ul>
-  </nav>
-</div>
-<article role="main" class="kss-main">
-
-  
-          <div id="kssref-settings" class="kss-section kss-section--depth-1">
-      <div class="kss-style">
-                <h1 class="kss-title kss-title--level-1">
-          <a class="kss-title__permalink" href="#kssref-settings">
-            <span class="kss-title__ref">
-              6
-              <span class="kss-title__permalink-hash">
-                Settings
-              </span>
-            </span>
-            Settings
-          </a>
-        </h1>
-
-        
-        
-        
-              </div>
-
-      
-              <div class="kss-source kss-style">
-          Source: <code>colette.styl</code>, line 1
+<div id="co_wrapper">
+    
+    <nav class="navbar">
+        <div class="co_content clearfix">
+            <a href="./" class="navbar-brand" data-icon="logo"><em>Retour à l'accueil</em></a>
+            <ul>
+                <li><a href="./">About</a></li>
+                                    <li>
+                        <a href="section-basics.html">Basics</a>
+                    </li>
+                                    <li>
+                        <a href="section-layout.html">Layout</a>
+                    </li>
+                                    <li>
+                        <a href="section-components.html">Components</a>
+                    </li>
+                                    <li>
+                        <a href="section-theme.html">Theme</a>
+                    </li>
+                                    <li>
+                        <a href="section-helpers.html">Helpers</a>
+                    </li>
+                                    <li>
+                        <a href="section-settings.html">Settings</a>
+                    </li>
+                                    <li>
+                        <a href="section-mixins.html">Mixins</a>
+                    </li>
+                            </ul>
         </div>
-          </div>
-          <section id="kssref-settings-grid" class="kss-section kss-section--depth-2">
-      <div class="kss-style">
-                <h2 class="kss-title kss-title--level-2">
-          <a class="kss-title__permalink" href="#kssref-settings-grid">
-            <span class="kss-title__ref">
-              6.1
-              <span class="kss-title__permalink-hash">
-                Settings.Grid
-              </span>
-            </span>
-            Media queries
-          </a>
-        </h2>
+    </nav>
 
-                  <div class="kss-description">
-            <p>Colette provide a collection of breakpoints and media queries, available in a <code>$breakpoints</code> hash.</p>
+    
+    <article role="main" id="co_article">
+        
+                                <div id="kssref-settings" class="co_section co_section-depth-1  pl2 pr2">
+
+
+            
+                        <h1 class="co_section-h1 co_content pl2 pr2">
+                <a href="#kssref-settings">
+                    <strong class="co_section-ref">6</strong>
+                    Settings
+                </a>
+            </h1>
+
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+            </div>
+                                <section id="kssref-settings-grid" class="co_section co_section-depth-2  co_content pl2 pr2">
+
+
+            
+                        <h2 class="co_section-h2">
+                <a href="#kssref-settings-grid">
+                    <strong class="co_section-ref">6.1</strong>
+                    Media queries
+                </a>
+            </h2>
+
+
+            
+                            <div class="co_section-description">
+                    <p>Colette provide a collection of breakpoints and media queries, available in a <code>$breakpoints</code> hash.</p>
 <p>We handle 3 default primary breakpoints and related media queries :</p>
 <pre><code>$mainpoints ?= {
     &#39;sm&#39;: &quot;screen and (min-width: 420px)&quot;
@@ -230,479 +173,431 @@
 @media screen and (min-width: 960px)
     /* styles */
 </code></pre>
-          </div>
-        
-        
-        
-              </div>
+                </div>
+            
 
-      
-              <div class="kss-source kss-style">
-          Source: <code>_settings.styl</code>, line 5
-        </div>
-          </section>
-          <section id="kssref-settings-colors" class="kss-section kss-section--depth-2">
-      <div class="kss-style">
-                <h2 class="kss-title kss-title--level-2">
-          <a class="kss-title__permalink" href="#kssref-settings-colors">
-            <span class="kss-title__ref">
-              6.2
-              <span class="kss-title__permalink-hash">
-                Settings.Colors
-              </span>
-            </span>
-            Colors
-          </a>
-        </h2>
+            
+            
 
-                  <div class="kss-description">
-            <p>Every colors in this project are variables</p>
+            
+            
 
-          </div>
-        
-        
-        
-              </div>
+            
+            
 
-      
-              <div class="kss-source kss-style">
-          Source: <code>_settings.styl</code>, line 72
-        </div>
-          </section>
-          <section id="kssref-settings-colors-alerts" class="kss-section kss-section--depth-3">
-      <div class="kss-style">
-                <h3 class="kss-title kss-title--level-3">
-          <a class="kss-title__permalink" href="#kssref-settings-colors-alerts">
-            <span class="kss-title__ref">
-              6.2.1
-              <span class="kss-title__permalink-hash">
-                Settings.Colors.Alerts
-              </span>
-            </span>
-            Alerts colors
-          </a>
-        </h3>
+            
+            
 
-                  <div class="kss-description">
-            <p>Colors for alerts messages.</p>
+            
+                            <div class="co_source">
+                    File: <span class="co_source-file">_settings.styl</span>, Line: <span class="co_source-file">line 5</span>                </div>
+            
+            </section>
+                                <section id="kssref-settings-colors" class="co_section co_section-depth-2  co_content pl2 pr2">
 
-          </div>
-        
-                  <ul class="kss-colors">
-                          <li>
-                <div class="kss-colors__demo" style="background-color:#0b4892"></div>
-                <div class="kss-colors__info">
-                  <p class="kss-colors__name">$color-info</p>
-                  <p class="kss-colors__hex">#0b4892</p>
-                  <p class="kss-colors__rgb">rgb(11, 72, 146)</p>
-                  <p class="kss-colors__hsl">hsl(213°, 86.0%, 30.8%)</p>
-                  <p class="kss-colors__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-colors__demo" style="background-color:#48930b"></div>
-                <div class="kss-colors__info">
-                  <p class="kss-colors__name">$color-success</p>
-                  <p class="kss-colors__hex">#48930b</p>
-                  <p class="kss-colors__rgb">rgb(72, 147, 11)</p>
-                  <p class="kss-colors__hsl">hsl(93°, 86.1%, 31.0%)</p>
-                  <p class="kss-colors__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-colors__demo" style="background-color:#D49711"></div>
-                <div class="kss-colors__info">
-                  <p class="kss-colors__name">$color-warning</p>
-                  <p class="kss-colors__hex">#D49711</p>
-                  <p class="kss-colors__rgb">rgb(212, 151, 17)</p>
-                  <p class="kss-colors__hsl">hsl(41°, 85.2%, 44.9%)</p>
-                  <p class="kss-colors__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-colors__demo" style="background-color:#cc190f"></div>
-                <div class="kss-colors__info">
-                  <p class="kss-colors__name">$color-error</p>
-                  <p class="kss-colors__hex">#cc190f</p>
-                  <p class="kss-colors__rgb">rgb(204, 25, 15)</p>
-                  <p class="kss-colors__hsl">hsl(3°, 86.3%, 42.9%)</p>
-                  <p class="kss-colors__description"></p>
-                </div>
-              </li>
-                      </ul>
-        
-        
-              </div>
 
-      
-              <div class="kss-source kss-style">
-          Source: <code>_settings.styl</code>, line 105
-        </div>
-          </section>
-          <section id="kssref-settings-colors-bnw" class="kss-section kss-section--depth-3">
-      <div class="kss-style">
-                <h3 class="kss-title kss-title--level-3">
-          <a class="kss-title__permalink" href="#kssref-settings-colors-bnw">
-            <span class="kss-title__ref">
-              6.2.2
-              <span class="kss-title__permalink-hash">
-                Settings.Colors.BnW
-              </span>
-            </span>
-            Black &amp; White
-          </a>
-        </h3>
+            
+                        <h2 class="co_section-h2">
+                <a href="#kssref-settings-colors">
+                    <strong class="co_section-ref">6.2</strong>
+                    Colors
+                </a>
+            </h2>
 
-                  <div class="kss-description">
-            <p>Universal real black and white</p>
 
-          </div>
-        
-                  <ul class="kss-colors">
-                          <li>
-                <div class="kss-colors__demo" style="background-color:#000"></div>
-                <div class="kss-colors__info">
-                  <p class="kss-colors__name">$color-black</p>
-                  <p class="kss-colors__hex">#000</p>
-                  <p class="kss-colors__rgb">rgb(0, 0, 0)</p>
-                  <p class="kss-colors__hsl">hsl(0°, 0.0%, 0.0%)</p>
-                  <p class="kss-colors__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-colors__demo" style="background-color:#fff"></div>
-                <div class="kss-colors__info">
-                  <p class="kss-colors__name">$color-white</p>
-                  <p class="kss-colors__hex">#fff</p>
-                  <p class="kss-colors__rgb">rgb(255, 255, 255)</p>
-                  <p class="kss-colors__hsl">hsl(0°, 0.0%, 100.0%)</p>
-                  <p class="kss-colors__description"></p>
-                </div>
-              </li>
-                      </ul>
-        
-        
-              </div>
+            
+                            <div class="co_section-description">
+                    <p>Every colors in this project are variables</p>
 
-      
-              <div class="kss-source kss-style">
-          Source: <code>_settings.styl</code>, line 122
-        </div>
-          </section>
-          <section id="kssref-settings-colors-project" class="kss-section kss-section--depth-3">
-      <div class="kss-style">
-                <h3 class="kss-title kss-title--level-3">
-          <a class="kss-title__permalink" href="#kssref-settings-colors-project">
-            <span class="kss-title__ref">
-              6.2.3
-              <span class="kss-title__permalink-hash">
-                Settings.Colors.Project
-              </span>
-            </span>
-            Project colors
-          </a>
-        </h3>
+                </div>
+            
 
-                  <div class="kss-description">
-            <p>Layout and UI generic colors</p>
+            
+            
 
-          </div>
-        
-                  <ul class="kss-colors">
-                          <li>
-                <div class="kss-colors__demo" style="background-color:#4c4d4e"></div>
-                <div class="kss-colors__info">
-                  <p class="kss-colors__name">$color-base</p>
-                  <p class="kss-colors__hex">#4c4d4e</p>
-                  <p class="kss-colors__rgb">rgb(76, 77, 78)</p>
-                  <p class="kss-colors__hsl">hsl(210°, 1.3%, 30.2%)</p>
-                  <p class="kss-colors__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-colors__demo" style="background-color:#e7e7e7"></div>
-                <div class="kss-colors__info">
-                  <p class="kss-colors__name">$color-base-lighten</p>
-                  <p class="kss-colors__hex">#e7e7e7</p>
-                  <p class="kss-colors__rgb">rgb(231, 231, 231)</p>
-                  <p class="kss-colors__hsl">hsl(0°, 0.0%, 90.6%)</p>
-                  <p class="kss-colors__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-colors__demo" style="background-color:#b7b7b7"></div>
-                <div class="kss-colors__info">
-                  <p class="kss-colors__name">$color-secondary</p>
-                  <p class="kss-colors__hex">#b7b7b7</p>
-                  <p class="kss-colors__rgb">rgb(183, 183, 183)</p>
-                  <p class="kss-colors__hsl">hsl(0°, 0.0%, 71.8%)</p>
-                  <p class="kss-colors__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-colors__demo" style="background-color:#878787"></div>
-                <div class="kss-colors__info">
-                  <p class="kss-colors__name">$color-tertiary</p>
-                  <p class="kss-colors__hex">#878787</p>
-                  <p class="kss-colors__rgb">rgb(135, 135, 135)</p>
-                  <p class="kss-colors__hsl">hsl(0°, 0.0%, 52.9%)</p>
-                  <p class="kss-colors__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-colors__demo" style="background-color:#0091aa"></div>
-                <div class="kss-colors__info">
-                  <p class="kss-colors__name">$color-links</p>
-                  <p class="kss-colors__hex">#0091aa</p>
-                  <p class="kss-colors__rgb">rgb(0, 145, 170)</p>
-                  <p class="kss-colors__hsl">hsl(189°, 100.0%, 33.3%)</p>
-                  <p class="kss-colors__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-colors__demo" style="background-color:#cc190f"></div>
-                <div class="kss-colors__info">
-                  <p class="kss-colors__name">$color-highlight</p>
-                  <p class="kss-colors__hex">#cc190f</p>
-                  <p class="kss-colors__rgb">rgb(204, 25, 15)</p>
-                  <p class="kss-colors__hsl">hsl(3°, 86.3%, 42.9%)</p>
-                  <p class="kss-colors__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-colors__demo" style="background-color:#c7c7c7"></div>
-                <div class="kss-colors__info">
-                  <p class="kss-colors__name">$color-borders</p>
-                  <p class="kss-colors__hex">#c7c7c7</p>
-                  <p class="kss-colors__rgb">rgb(199, 199, 199)</p>
-                  <p class="kss-colors__hsl">hsl(0°, 0.0%, 78.0%)</p>
-                  <p class="kss-colors__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-colors__demo" style="background-color:#73a0d6"></div>
-                <div class="kss-colors__info">
-                  <p class="kss-colors__name">$color-footer</p>
-                  <p class="kss-colors__hex">#73a0d6</p>
-                  <p class="kss-colors__rgb">rgb(115, 160, 214)</p>
-                  <p class="kss-colors__hsl">hsl(213°, 24.1%, 64.5%)</p>
-                  <p class="kss-colors__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-colors__demo" style="background-color:#f8f8f8"></div>
-                <div class="kss-colors__info">
-                  <p class="kss-colors__name">$color-bg-base</p>
-                  <p class="kss-colors__hex">#f8f8f8</p>
-                  <p class="kss-colors__rgb">rgb(248, 248, 248)</p>
-                  <p class="kss-colors__hsl">hsl(0°, 0.0%, 97.3%)</p>
-                  <p class="kss-colors__description"></p>
-                </div>
-              </li>
-                      </ul>
-        
-        
-              </div>
+            
+            
 
-      
-              <div class="kss-source kss-style">
-          Source: <code>_settings.styl</code>, line 78
-        </div>
-          </section>
-          <section id="kssref-settings-colors-theme" class="kss-section kss-section--depth-3">
-      <div class="kss-style">
-                <h3 class="kss-title kss-title--level-3">
-          <a class="kss-title__permalink" href="#kssref-settings-colors-theme">
-            <span class="kss-title__ref">
-              6.2.4
-              <span class="kss-title__permalink-hash">
-                Settings.Colors.Theme
-              </span>
-            </span>
-            Theme colors
-          </a>
-        </h3>
+            
+            
 
-                  <div class="kss-description">
-            <p>The color palette is based upon 20mn editorial color chart:</p>
+            
+            
+
+            
+                            <div class="co_source">
+                    File: <span class="co_source-file">_settings.styl</span>, Line: <span class="co_source-file">line 72</span>                </div>
+            
+            </section>
+                                <section id="kssref-settings-colors-alerts" class="co_section co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3">
+                <a href="#kssref-settings-colors-alerts">
+                    <strong class="co_section-ref">6.2.1</strong>
+                    Alerts colors
+                </a>
+            </h3>
+
+
+            
+                            <div class="co_section-description">
+                    <p>Colors for alerts messages.</p>
+
+                </div>
+            
+
+            
+                            <ul class="co_colors clearfix">
+                                        
+                    <li class="box">
+                        <div class="co_colors-demo" style="background-color:#0b4892"></div>
+                        <p class="co_colors-name">$color-info</p>
+                        <p class="co_colors-hex">#0b4892</p>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_colors-demo" style="background-color:#48930b"></div>
+                        <p class="co_colors-name">$color-success</p>
+                        <p class="co_colors-hex">#48930b</p>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_colors-demo" style="background-color:#D49711"></div>
+                        <p class="co_colors-name">$color-warning</p>
+                        <p class="co_colors-hex">#D49711</p>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_colors-demo" style="background-color:#cc190f"></div>
+                        <p class="co_colors-name">$color-error</p>
+                        <p class="co_colors-hex">#cc190f</p>
+                    </li>
+                                    </ul>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+                            <div class="co_source">
+                    File: <span class="co_source-file">_settings.styl</span>, Line: <span class="co_source-file">line 105</span>                </div>
+            
+            </section>
+                                <section id="kssref-settings-colors-bnw" class="co_section co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3">
+                <a href="#kssref-settings-colors-bnw">
+                    <strong class="co_section-ref">6.2.2</strong>
+                    Black &amp; White
+                </a>
+            </h3>
+
+
+            
+                            <div class="co_section-description">
+                    <p>Universal real black and white</p>
+
+                </div>
+            
+
+            
+                            <ul class="co_colors clearfix">
+                                        
+                    <li class="box">
+                        <div class="co_colors-demo" style="background-color:#000"></div>
+                        <p class="co_colors-name">$color-black</p>
+                        <p class="co_colors-hex">#000</p>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_colors-demo" style="background-color:#fff"></div>
+                        <p class="co_colors-name">$color-white</p>
+                        <p class="co_colors-hex">#fff</p>
+                    </li>
+                                    </ul>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+                            <div class="co_source">
+                    File: <span class="co_source-file">_settings.styl</span>, Line: <span class="co_source-file">line 122</span>                </div>
+            
+            </section>
+                                <section id="kssref-settings-colors-project" class="co_section co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3">
+                <a href="#kssref-settings-colors-project">
+                    <strong class="co_section-ref">6.2.3</strong>
+                    Project colors
+                </a>
+            </h3>
+
+
+            
+                            <div class="co_section-description">
+                    <p>Layout and UI generic colors</p>
+
+                </div>
+            
+
+            
+                            <ul class="co_colors clearfix">
+                                        
+                    <li class="box">
+                        <div class="co_colors-demo" style="background-color:#4c4d4e"></div>
+                        <p class="co_colors-name">$color-base</p>
+                        <p class="co_colors-hex">#4c4d4e</p>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_colors-demo" style="background-color:#e7e7e7"></div>
+                        <p class="co_colors-name">$color-base-lighten</p>
+                        <p class="co_colors-hex">#e7e7e7</p>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_colors-demo" style="background-color:#b7b7b7"></div>
+                        <p class="co_colors-name">$color-secondary</p>
+                        <p class="co_colors-hex">#b7b7b7</p>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_colors-demo" style="background-color:#878787"></div>
+                        <p class="co_colors-name">$color-tertiary</p>
+                        <p class="co_colors-hex">#878787</p>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_colors-demo" style="background-color:#0091aa"></div>
+                        <p class="co_colors-name">$color-links</p>
+                        <p class="co_colors-hex">#0091aa</p>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_colors-demo" style="background-color:#cc190f"></div>
+                        <p class="co_colors-name">$color-highlight</p>
+                        <p class="co_colors-hex">#cc190f</p>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_colors-demo" style="background-color:#c7c7c7"></div>
+                        <p class="co_colors-name">$color-borders</p>
+                        <p class="co_colors-hex">#c7c7c7</p>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_colors-demo" style="background-color:#73a0d6"></div>
+                        <p class="co_colors-name">$color-footer</p>
+                        <p class="co_colors-hex">#73a0d6</p>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_colors-demo" style="background-color:#f8f8f8"></div>
+                        <p class="co_colors-name">$color-bg-base</p>
+                        <p class="co_colors-hex">#f8f8f8</p>
+                    </li>
+                                    </ul>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+                            <div class="co_source">
+                    File: <span class="co_source-file">_settings.styl</span>, Line: <span class="co_source-file">line 78</span>                </div>
+            
+            </section>
+                                <section id="kssref-settings-colors-theme" class="co_section co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3">
+                <a href="#kssref-settings-colors-theme">
+                    <strong class="co_section-ref">6.2.4</strong>
+                    Theme colors
+                </a>
+            </h3>
+
+
+            
+                            <div class="co_section-description">
+                    <p>The color palette is based upon 20mn editorial color chart:</p>
 <ul>
 <li>each editorial section has a related color</li>
 <li>we use section names as aliases to define color variables and classes names</li>
 </ul>
 
-          </div>
-        
-                  <ul class="kss-colors">
-                          <li>
-                <div class="kss-colors__demo" style="background-color:#0b4892"></div>
-                <div class="kss-colors__info">
-                  <p class="kss-colors__name">$color-default</p>
-                  <p class="kss-colors__hex">#0b4892</p>
-                  <p class="kss-colors__rgb">rgb(11, 72, 146)</p>
-                  <p class="kss-colors__hsl">hsl(213°, 86.0%, 30.8%)</p>
-                  <p class="kss-colors__description"></p>
                 </div>
-              </li>
-                          <li>
-                <div class="kss-colors__demo" style="background-color:#00b9f3"></div>
-                <div class="kss-colors__info">
-                  <p class="kss-colors__name">$color-sport</p>
-                  <p class="kss-colors__hex">#00b9f3</p>
-                  <p class="kss-colors__rgb">rgb(0, 185, 243)</p>
-                  <p class="kss-colors__hsl">hsl(194°, 100.0%, 47.6%)</p>
-                  <p class="kss-colors__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-colors__demo" style="background-color:#cc190f"></div>
-                <div class="kss-colors__info">
-                  <p class="kss-colors__name">$color-entertainment</p>
-                  <p class="kss-colors__hex">#cc190f</p>
-                  <p class="kss-colors__rgb">rgb(204, 25, 15)</p>
-                  <p class="kss-colors__hsl">hsl(3°, 86.3%, 42.9%)</p>
-                  <p class="kss-colors__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-colors__demo" style="background-color:#053042"></div>
-                <div class="kss-colors__info">
-                  <p class="kss-colors__name">$color-economy</p>
-                  <p class="kss-colors__hex">#053042</p>
-                  <p class="kss-colors__rgb">rgb(5, 48, 66)</p>
-                  <p class="kss-colors__hsl">hsl(198°, 85.9%, 13.9%)</p>
-                  <p class="kss-colors__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-colors__demo" style="background-color:#930b48"></div>
-                <div class="kss-colors__info">
-                  <p class="kss-colors__name">$color-community</p>
-                  <p class="kss-colors__hex">#930b48</p>
-                  <p class="kss-colors__rgb">rgb(147, 11, 72)</p>
-                  <p class="kss-colors__hsl">hsl(-27°, 86.1%, 31.0%)</p>
-                  <p class="kss-colors__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-colors__demo" style="background-color:#ef2a82"></div>
-                <div class="kss-colors__info">
-                  <p class="kss-colors__name">$color-weird</p>
-                  <p class="kss-colors__hex">#ef2a82</p>
-                  <p class="kss-colors__rgb">rgb(239, 42, 130)</p>
-                  <p class="kss-colors__hsl">hsl(-27°, 62.9%, 55.1%)</p>
-                  <p class="kss-colors__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-colors__demo" style="background-color:#ff5400"></div>
-                <div class="kss-colors__info">
-                  <p class="kss-colors__name">$color-partner</p>
-                  <p class="kss-colors__hex">#ff5400</p>
-                  <p class="kss-colors__rgb">rgb(255, 84, 0)</p>
-                  <p class="kss-colors__hsl">hsl(20°, 100.0%, 50.0%)</p>
-                  <p class="kss-colors__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-colors__demo" style="background-color:#48930b"></div>
-                <div class="kss-colors__info">
-                  <p class="kss-colors__name">$color-planet</p>
-                  <p class="kss-colors__hex">#48930b</p>
-                  <p class="kss-colors__rgb">rgb(72, 147, 11)</p>
-                  <p class="kss-colors__hsl">hsl(93°, 86.1%, 31.0%)</p>
-                  <p class="kss-colors__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-colors__demo" style="background-color:#000000"></div>
-                <div class="kss-colors__info">
-                  <p class="kss-colors__name">$color-media</p>
-                  <p class="kss-colors__hex">#000000</p>
-                  <p class="kss-colors__rgb">rgb(0, 0, 0)</p>
-                  <p class="kss-colors__hsl">hsl(0°, 0.0%, 0.0%)</p>
-                  <p class="kss-colors__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-colors__demo" style="background-color:#686868"></div>
-                <div class="kss-colors__info">
-                  <p class="kss-colors__name">$color-hightech</p>
-                  <p class="kss-colors__hex">#686868</p>
-                  <p class="kss-colors__rgb">rgb(104, 104, 104)</p>
-                  <p class="kss-colors__hsl">hsl(0°, 0.0%, 40.8%)</p>
-                  <p class="kss-colors__description"></p>
-                </div>
-              </li>
-                          <li>
-                <div class="kss-colors__demo" style="background-color:#fff7e2"></div>
-                <div class="kss-colors__info">
-                  <p class="kss-colors__name">$color-native</p>
-                  <p class="kss-colors__hex">#fff7e2</p>
-                  <p class="kss-colors__rgb">rgb(255, 247, 226)</p>
-                  <p class="kss-colors__hsl">hsl(43°, 6.0%, 94.3%)</p>
-                  <p class="kss-colors__description"></p>
-                </div>
-              </li>
-                      </ul>
-        
-        
-              </div>
+            
 
-      
-              <div class="kss-source kss-style">
-          Source: <code>_settings.styl</code>, line 134
-        </div>
-          </section>
-          <section id="kssref-settings-fonts" class="kss-section kss-section--depth-2">
-      <div class="kss-style">
-                <h2 class="kss-title kss-title--level-2">
-          <a class="kss-title__permalink" href="#kssref-settings-fonts">
-            <span class="kss-title__ref">
-              6.3
-              <span class="kss-title__permalink-hash">
-                Settings.Fonts
-              </span>
-            </span>
-            Fonts
-          </a>
-        </h2>
+            
+                            <ul class="co_colors clearfix">
+                                        
+                    <li class="box">
+                        <div class="co_colors-demo" style="background-color:#0b4892"></div>
+                        <p class="co_colors-name">$color-default</p>
+                        <p class="co_colors-hex">#0b4892</p>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_colors-demo" style="background-color:#00b9f3"></div>
+                        <p class="co_colors-name">$color-sport</p>
+                        <p class="co_colors-hex">#00b9f3</p>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_colors-demo" style="background-color:#cc190f"></div>
+                        <p class="co_colors-name">$color-entertainment</p>
+                        <p class="co_colors-hex">#cc190f</p>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_colors-demo" style="background-color:#053042"></div>
+                        <p class="co_colors-name">$color-economy</p>
+                        <p class="co_colors-hex">#053042</p>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_colors-demo" style="background-color:#930b48"></div>
+                        <p class="co_colors-name">$color-community</p>
+                        <p class="co_colors-hex">#930b48</p>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_colors-demo" style="background-color:#ef2a82"></div>
+                        <p class="co_colors-name">$color-weird</p>
+                        <p class="co_colors-hex">#ef2a82</p>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_colors-demo" style="background-color:#ff5400"></div>
+                        <p class="co_colors-name">$color-partner</p>
+                        <p class="co_colors-hex">#ff5400</p>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_colors-demo" style="background-color:#48930b"></div>
+                        <p class="co_colors-name">$color-planet</p>
+                        <p class="co_colors-hex">#48930b</p>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_colors-demo" style="background-color:#000000"></div>
+                        <p class="co_colors-name">$color-media</p>
+                        <p class="co_colors-hex">#000000</p>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_colors-demo" style="background-color:#686868"></div>
+                        <p class="co_colors-name">$color-hightech</p>
+                        <p class="co_colors-hex">#686868</p>
+                    </li>
+                                        
+                    <li class="box">
+                        <div class="co_colors-demo" style="background-color:#fff7e2"></div>
+                        <p class="co_colors-name">$color-native</p>
+                        <p class="co_colors-hex">#fff7e2</p>
+                    </li>
+                                    </ul>
+            
 
-                  <div class="kss-description">
-            <p>All fonts in the project are set within variables.</p>
+            
+            
+
+            
+            
+
+            
+            
+
+            
+                            <div class="co_source">
+                    File: <span class="co_source-file">_settings.styl</span>, Line: <span class="co_source-file">line 134</span>                </div>
+            
+            </section>
+                                <section id="kssref-settings-fonts" class="co_section co_section-depth-2  co_content pl2 pr2">
+
+
+            
+                        <h2 class="co_section-h2">
+                <a href="#kssref-settings-fonts">
+                    <strong class="co_section-ref">6.3</strong>
+                    Fonts
+                </a>
+            </h2>
+
+
+            
+                            <div class="co_section-description">
+                    <p>All fonts in the project are set within variables.</p>
 <pre><code>$font-base = &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif  // default font / body text
 $font-headings = &#39;Open Sans&#39;, &#39;Arial&#39;, &#39;Helvetica Neue&#39;, Helvetica, sans-serif  // headings
 $font-secondary = &#39;Open Sans&#39;, &#39;Helvetica Neue&#39;, Helvetica, sans-serif // call to action, pagers... etc
 $font-icon = &#39;20mn&#39; // icon font
 </code></pre>
-          </div>
-        
-        
-        
-              </div>
+                </div>
+            
 
-      
-              <div class="kss-source kss-style">
-          Source: <code>_settings.styl</code>, line 55
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+                            <div class="co_source">
+                    File: <span class="co_source-file">_settings.styl</span>, Line: <span class="co_source-file">line 55</span>                </div>
+            
+            </section>
+            </article>
+
+    
+    <footer class="co_footer">
+        <div class="co_content clearfix">
+            <p class="float-left">© Copyright <a href="http://www.20minutes.fr">20 Minutes</a></p>
+            <p class="float-right"><a href="https://twitter.com/Tech20Minutes" class="ml2" data-icon="twitter"> Follow us </a></p>
+            <p class="float-right"><a href="https://github.com/20minutes/colette" class="ml2" data-icon="github"> View it on Github</a></p>
         </div>
-          </section>
-  </article>
-
-<!-- SCRIPTS -->
-<script src="kss-assets/kss.js"></script>
-<script src="kss-assets/scrollspy.js"></script>
+    </footer>
+</div>
+<!-- scripts -->
 <script src="kss-assets/prettify.js"></script>
 <script>
-  prettyPrint();
-  var spy = new ScrollSpy('#kss-node', {
-    nav: '.kss-nav__menu-child > li > a',
-    className: 'is-in-viewport'
-  });
+    prettyPrint();
 </script>
 <script src="dist/js/colette.min.js"></script>
 
-
-
-
-<!-- Automatically built using <a href="https://github.com/kss-node/kss-node">kss-node</a>. -->
 </body>
 </html>

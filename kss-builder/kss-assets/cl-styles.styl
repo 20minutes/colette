@@ -1,0 +1,229 @@
+body
+    background-color #f8f8f8
+
+for i in 1..6
+    h{i}
+        font-weight normal
+        color #000000
+
+        a
+            color #000000
+
+#cl_wrapper
+    //
+
+.cl_content
+    width 100%
+    max-width 1200px
+    margin 0 auto
+
+.cl_submenu
+    margin-top 4.8rem
+
+    li
+        display inline
+
+/* section */
+.cl_section
+
+    &-h1
+        font-size 3em
+
+    &-h2
+        font-size 2.4em
+
+    &-h3
+        font-size 2.1em
+
+    &-h4
+        font-size 1.8em
+
+    &-description
+        max-width 40em
+
+        > p
+        > ul
+            padding-bottom 16px
+
+        > ul > li
+            list-style-position inside
+
+    &-ref
+        display block
+        color #666666
+        font-size 1.2rem
+        text-transform uppercase
+
+        &:before
+            content 'section '
+
+/* colors */
+.cl_colors
+    padding 0
+    margin 0
+    list-style none
+
+    > li
+        overflow hidden
+        
+    &-demo
+        float left
+        height 100px
+        width 100px
+        border 2px solid $kss-colors-quotes
+        margin-bottom .75em
+
+    &-info
+        margin-left 120px
+
+    &-name
+        margin-top 0
+        margin-bottom .75em
+        font-weight bold
+
+    &-hex,
+    &-rgb,
+    &-hsl
+        font-size .8em
+        margin 0
+
+    &-description
+        color $kss-colors-quotes
+
+/* icons */
+.cl_icons
+    padding 0
+    margin 0
+    list-style none
+
+    > li 
+        overflow hidden
+    
+
+    &-demo
+        float left
+        box-sizing content-box
+        width 100px
+        height 40px
+        padding 30px 0
+        margin-bottom .25em
+        border 2px solid $kss-colors-quotes
+        text-align center
+        font-size 40px
+
+        // lib/icon
+        font-family '20mn'
+        speak none
+        font-style normal
+        font-weight normal
+        font-variant normal
+        text-transform none
+        line-height 1
+
+        // Better Font Rendering
+        -webkit-font-smoothing antialiased
+        -moz-osx-font-smoothing grayscale
+
+    &-info
+        margin-left 120px
+
+        p
+            margin-top 0
+
+
+    &-name
+        font-weight bold
+
+    &-char
+        margin 0
+
+    &-description
+        color $kss-colors-quotes
+
+
+// ------------------------------------------------------------------------------
+//   group prettyprint.js styling
+// ------------------------------------------------------------------------------
+/* Pretty printing styles. Used with prettify.js. */
+
+/* SPAN elements with the classes below are added by prettyprint. */
+.pln  
+    color #000   /* plain text */
+
+.str  
+    color #080   /* string content */
+
+.kwd  
+    color #008   /* a keyword */
+
+.com  
+    color #800   /* a comment */
+
+.typ  
+    color #606   /* a type name */
+
+.lit  
+    color #066   /* a literal value */
+
+/* punctuation, lisp open bracket, lisp close bracket */
+.pun, 
+.opn, 
+.clo  
+    color #660 
+
+.tag  
+    color #008   /* a markup tag name */
+
+.atn  
+    color #606   /* a markup attribute name */
+
+.atv  
+    color #080   /* a markup attribute value */
+
+.dec, 
+.var  
+    color #606   /* a declaration a variable name */
+
+.fun  
+    color red   /* a function name */
+
+/* Use higher contrast and text-weight for printable form. */
+@media print, projection 
+    .str  
+        color #060 
+
+
+    .kwd  
+        color #006 
+        font-weight bold 
+
+    .com  
+        color #600 
+        font-style italic 
+
+    .typ  
+        color #404 
+        font-weight bold 
+
+    .lit  
+        color #044 
+
+    .pun, 
+    .opn, 
+    .clo  
+        color #440 
+
+    .tag  
+        color #006 
+        font-weight bold 
+
+    .atn  
+        color #404 
+
+    .atv  
+        color #060 
+
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums
+    list-style-type none
