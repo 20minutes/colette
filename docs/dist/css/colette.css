@@ -1478,7 +1478,7 @@ footer a:hover {
   font-weight: bold;
   text-transform: uppercase;
   background-color: #b7b7b7;
-  color: #fff;
+  color: #4c4d4e;
 }
 .btn:disabled {
   background-color: rgba(183,183,183,0.5);
@@ -1492,7 +1492,7 @@ footer a:hover {
   line-height: 1.833333em;
   text-align: center;
   background-color: #b7b7b7;
-  color: #fff;
+  color: #4c4d4e;
 /* social: button per button styles */
 }
 .btn-icon[data-icon=facebook] {
@@ -1544,10 +1544,6 @@ footer a:hover {
 .btn-icon.btn-base:disabled {
   background-color: rgba(76,77,78,0.5);
 }
-.btn.btn-native,
-.btn-icon.btn-native {
-  color: #4c4d4e;
-}
 .btn.btn-default,
 .btn-icon.btn-default {
   background-color: #0b4892;
@@ -1556,10 +1552,6 @@ footer a:hover {
 .btn.btn-default:disabled,
 .btn-icon.btn-default:disabled {
   background-color: rgba(11,72,146,0.5);
-}
-.btn.btn-native,
-.btn-icon.btn-native {
-  color: #4c4d4e;
 }
 .btn.btn-sport,
 .btn-icon.btn-sport {
@@ -1570,10 +1562,6 @@ footer a:hover {
 .btn-icon.btn-sport:disabled {
   background-color: rgba(0,185,243,0.5);
 }
-.btn.btn-native,
-.btn-icon.btn-native {
-  color: #4c4d4e;
-}
 .btn.btn-entertainment,
 .btn-icon.btn-entertainment {
   background-color: #cc190f;
@@ -1582,10 +1570,6 @@ footer a:hover {
 .btn.btn-entertainment:disabled,
 .btn-icon.btn-entertainment:disabled {
   background-color: rgba(204,25,15,0.5);
-}
-.btn.btn-native,
-.btn-icon.btn-native {
-  color: #4c4d4e;
 }
 .btn.btn-economy,
 .btn-icon.btn-economy {
@@ -1596,10 +1580,6 @@ footer a:hover {
 .btn-icon.btn-economy:disabled {
   background-color: rgba(5,48,66,0.5);
 }
-.btn.btn-native,
-.btn-icon.btn-native {
-  color: #4c4d4e;
-}
 .btn.btn-community,
 .btn-icon.btn-community {
   background-color: #930b48;
@@ -1608,10 +1588,6 @@ footer a:hover {
 .btn.btn-community:disabled,
 .btn-icon.btn-community:disabled {
   background-color: rgba(147,11,72,0.5);
-}
-.btn.btn-native,
-.btn-icon.btn-native {
-  color: #4c4d4e;
 }
 .btn.btn-weird,
 .btn-icon.btn-weird {
@@ -1622,10 +1598,6 @@ footer a:hover {
 .btn-icon.btn-weird:disabled {
   background-color: rgba(239,42,130,0.5);
 }
-.btn.btn-native,
-.btn-icon.btn-native {
-  color: #4c4d4e;
-}
 .btn.btn-partner,
 .btn-icon.btn-partner {
   background-color: #ff5400;
@@ -1634,10 +1606,6 @@ footer a:hover {
 .btn.btn-partner:disabled,
 .btn-icon.btn-partner:disabled {
   background-color: rgba(255,84,0,0.5);
-}
-.btn.btn-native,
-.btn-icon.btn-native {
-  color: #4c4d4e;
 }
 .btn.btn-planet,
 .btn-icon.btn-planet {
@@ -1648,10 +1616,6 @@ footer a:hover {
 .btn-icon.btn-planet:disabled {
   background-color: rgba(72,147,11,0.5);
 }
-.btn.btn-native,
-.btn-icon.btn-native {
-  color: #4c4d4e;
-}
 .btn.btn-media,
 .btn-icon.btn-media {
   background-color: #000;
@@ -1661,10 +1625,6 @@ footer a:hover {
 .btn-icon.btn-media:disabled {
   background-color: rgba(0,0,0,0.5);
 }
-.btn.btn-native,
-.btn-icon.btn-native {
-  color: #4c4d4e;
-}
 .btn.btn-hightech,
 .btn-icon.btn-hightech {
   background-color: #686868;
@@ -1673,10 +1633,6 @@ footer a:hover {
 .btn.btn-hightech:disabled,
 .btn-icon.btn-hightech:disabled {
   background-color: rgba(104,104,104,0.5);
-}
-.btn.btn-native,
-.btn-icon.btn-native {
-  color: #4c4d4e;
 }
 .btn.btn-native,
 .btn-icon.btn-native {
