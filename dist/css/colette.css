@@ -1964,6 +1964,7 @@ footer a:hover {
 }
 .required {
   color: #cc190f;
+  text-decoration: none;
 }
 .required[title] {
   border-bottom: 0;
