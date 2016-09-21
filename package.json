@@ -1,10 +1,10 @@
 {
   "name": "colette",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "headroom.js": ">= 0.7.0"
+    "headroom.js": ">= 0.8.0"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
