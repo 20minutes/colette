@@ -1457,6 +1457,20 @@ footer a:hover {
   background-color: #fce6e5;
   color: #cc190f;
 }
+.avatar {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  width: 2.625em;
+  height: 2.625em;
+  border-radius: 80em;
+  border: 0.2em solid #c7c7c7;
+}
+.avatar > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 .breadcrumb-list > li {
   display: inline-block;
   vertical-align: top;
