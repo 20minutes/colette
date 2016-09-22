@@ -75,7 +75,7 @@
     
     <nav class="navbar">
         <div class="co_content clearfix">
-            <a href="./" class="navbar-brand" data-icon="logo"><em>Retour à l'accueil</em></a>
+            <a href="./" class="navbar-brand co_brand" data-icon="logo"><em>Retour à l'accueil</em></a>
             <ul>
                 <li><a href="./">About</a></li>
                                     <li>
@@ -104,18 +104,16 @@
     </nav>
 
     
-    <article role="main" id="co_article">
+    <article role="main" id="co_page" class="pt4 pb6">
         
                                 <div id="kssref-components" class="co_section co_section-depth-1  pl2 pr2">
 
 
             
                         <h1 class="co_section-h1 co_content pl2 pr2">
-                <a href="#kssref-components">
-                    <strong class="co_section-ref">3</strong>
+                                    <strong class="co_section-ref">3</strong>
                     Components
-                </a>
-            </h1>
+                            </h1>
 
 
             
@@ -135,23 +133,35 @@
 
             
             
-            </div>
+        </div>
                                 <section id="kssref-components-alerts" class="co_section co_section-depth-2  co_content pl2 pr2">
 
 
             
                         <h2 class="co_section-h2">
-                <a href="#kssref-components-alerts">
-                    <strong class="co_section-ref">3.1</strong>
+                                    <a href="#kssref-components-alerts">
+                                    <strong class="co_section-ref">3.1</strong>
                     Alerts
-                </a>
-            </h2>
+                                    </a>
+                            </h2>
 
 
             
-                            <div class="co_section-description">
-                    <p>Default styles for alerts.</p>
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_modules/_alerts.styl</code>
+                    </p>
+                </div>
+            
 
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Default styles for alerts.</p>
+
+                    </div>
                 </div>
             
 
@@ -163,91 +173,91 @@
 
             
                             
-                                    <p class="co_example-header">Default styling</p>
-                
-                <div class="co_modifier-example clearfix mb1">
-                    <p class="alert [modifier class] pa1">Example of [modifier class] alert</p>
+                <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">
+                                                    Default styling
+                        
+                    </p>
+                    <div class="co_subsection-content col-md-9 clearfix mb1">
+                        <p class="alert [modifier class] pa1">Example of [modifier class] alert</p>
 
+                    </div>
                 </div>
 
-                                    <p class="co_example-header">Modifiers</p>
-                                                    <div class="kss-modifier__name kss-style">
-                        .alert-info
-                    </div>
-                    <div class="kss-modifier__name kss-style">
-                        info alert
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Modifiers</p>
+                        <div class="co_subsection-content co_modifier col-md-9 clearfix mb2">
+                                                            <p><code>.alert-info</code></p>
+                                <p>info alert</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p class="alert alert-info pa1">Example of alert-info alert</p>
+
+                                </div>
+                                                            <p><code>.alert-success</code></p>
+                                <p>success alert</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p class="alert alert-success pa1">Example of alert-success alert</p>
+
+                                </div>
+                                                            <p><code>.alert-warning</code></p>
+                                <p>warning alert</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p class="alert alert-warning pa1">Example of alert-warning alert</p>
+
+                                </div>
+                                                            <p><code>.alert-error</code></p>
+                                <p>error alert</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p class="alert alert-error pa1">Example of alert-error alert</p>
+
+                                </div>
+                                                    </div>
                     </div>
 
-                    <div class="co_modifier-example clearfix mb1">
-                        <p class="alert alert-info pa1">Example of alert-info alert</p>
-
-                    </div>
-                                    <div class="kss-modifier__name kss-style">
-                        .alert-success
-                    </div>
-                    <div class="kss-modifier__name kss-style">
-                        success alert
-                    </div>
-
-                    <div class="co_modifier-example clearfix mb1">
-                        <p class="alert alert-success pa1">Example of alert-success alert</p>
-
-                    </div>
-                                    <div class="kss-modifier__name kss-style">
-                        .alert-warning
-                    </div>
-                    <div class="kss-modifier__name kss-style">
-                        warning alert
-                    </div>
-
-                    <div class="co_modifier-example clearfix mb1">
-                        <p class="alert alert-warning pa1">Example of alert-warning alert</p>
-
-                    </div>
-                                    <div class="kss-modifier__name kss-style">
-                        .alert-error
-                    </div>
-                    <div class="kss-modifier__name kss-style">
-                        error alert
-                    </div>
-
-                    <div class="co_modifier-example clearfix mb1">
-                        <p class="alert alert-error pa1">Example of alert-error alert</p>
-
-                    </div>
                 
                 
-                                    <div class="co_markup">
-                        <p class="co_markup-view"><button>View Code</button></p>
-                        <pre class="co_markup-content pa1 prettyprint linenums lang-html"><code data-language="html">&lt;p class=&quot;alert [modifier class] pa1&quot;&gt;Example of [modifier class] alert&lt;/p&gt;
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Code</p>
+                        <div class="co_subsection-content co_markup col-md-9">
+                            <button class="btn">click to expand</button>
+                            <pre class="co_markup pa1 prettyprint linenums lang-html"><code data-language="html">&lt;p class=&quot;alert [modifier class] pa1&quot;&gt;Example of [modifier class] alert&lt;/p&gt;
 </code></pre>
+                        </div>
                     </div>
                             
 
             
             
-
-            
-                            <div class="co_source">
-                    File: <span class="co_source-file">_modules/_alerts.styl</span>                </div>
-            
-            </section>
+        </section>
                                 <section id="kssref-components-avatar" class="co_section co_section-depth-2  co_content pl2 pr2">
 
 
             
                         <h2 class="co_section-h2">
-                <a href="#kssref-components-avatar">
-                    <strong class="co_section-ref">3.2</strong>
+                                    <a href="#kssref-components-avatar">
+                                    <strong class="co_section-ref">3.2</strong>
                     Avatar
-                </a>
-            </h2>
+                                    </a>
+                            </h2>
 
 
             
-                            <div class="co_section-description">
-                    <p>Use a square image.</p>
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_modules/_avatar.styl</code>
+                    </p>
+                </div>
+            
 
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Use a square image.</p>
+
+                    </div>
                 </div>
             
 
@@ -259,44 +269,57 @@
 
             
                             
-                
-                <div class="co_modifier-example clearfix mb1">
-                    <div class="avatar">
+                <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">
+                                                    Example
+                        
+                    </p>
+                    <div class="co_subsection-content col-md-9 clearfix mb1">
+                        <div class="avatar">
     <img src="http://lorempixel.com/72/72/people" alt="" />
 </div>
 
+                    </div>
                 </div>
 
-                                
                 
-                                    <div class="co_markup">
-                        <p class="co_markup-view"><button>View Code</button></p>
-                        <pre class="co_markup-content pa1 prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;avatar&quot;&gt;
+                
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Code</p>
+                        <div class="co_subsection-content co_markup col-md-9">
+                            <button class="btn">click to expand</button>
+                            <pre class="co_markup pa1 prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;avatar&quot;&gt;
     &lt;img src=&quot;http://lorempixel.com/72/72/people&quot; alt=&quot;&quot; /&gt;
 &lt;/div&gt;
 </code></pre>
+                        </div>
                     </div>
                             
 
             
             
-
-            
-                            <div class="co_source">
-                    File: <span class="co_source-file">_modules/_avatar.styl</span>                </div>
-            
-            </section>
+        </section>
                                 <section id="kssref-components-breadcrumb" class="co_section co_section-depth-2  co_content pl2 pr2">
 
 
             
                         <h2 class="co_section-h2">
-                <a href="#kssref-components-breadcrumb">
-                    <strong class="co_section-ref">3.3</strong>
+                                    <a href="#kssref-components-breadcrumb">
+                                    <strong class="co_section-ref">3.3</strong>
                     Breadcrumb
-                </a>
-            </h2>
+                                    </a>
+                            </h2>
 
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_modules/_breadcrumb.styl</code>
+                    </p>
+                </div>
+            
 
             
             
@@ -309,9 +332,13 @@
 
             
                             
-                
-                <div class="co_modifier-example clearfix mb1">
-                    <nav class="breadcrumb" role="navigation" aria-label="Vous êtes ici :">
+                <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">
+                                                    Example
+                        
+                    </p>
+                    <div class="co_subsection-content col-md-9 clearfix mb1">
+                        <nav class="breadcrumb" role="navigation" aria-label="Vous êtes ici :">
     <ol class="breadcrumb-list" itemscope itemtype="http://schema.org/BreadcrumbList">
         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
             <a itemscope itemtype="http://schema.org/Thing"
@@ -336,13 +363,17 @@
         </li>
         </ol>
 </nav>
+                    </div>
                 </div>
 
-                                
                 
-                                    <div class="co_markup">
-                        <p class="co_markup-view"><button>View Code</button></p>
-                        <pre class="co_markup-content pa1 prettyprint linenums lang-html"><code data-language="html">&lt;nav class=&quot;breadcrumb&quot; role=&quot;navigation&quot; aria-label=&quot;Vous êtes ici :&quot;&gt;
+                
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Code</p>
+                        <div class="co_subsection-content co_markup col-md-9">
+                            <button class="btn">click to expand</button>
+                            <pre class="co_markup pa1 prettyprint linenums lang-html"><code data-language="html">&lt;nav class=&quot;breadcrumb&quot; role=&quot;navigation&quot; aria-label=&quot;Vous êtes ici :&quot;&gt;
     &lt;ol class=&quot;breadcrumb-list&quot; itemscope itemtype=&quot;http://schema.org/BreadcrumbList&quot;&gt;
         &lt;li itemprop=&quot;itemListElement&quot; itemscope itemtype=&quot;http://schema.org/ListItem&quot;&gt;
             &lt;a itemscope itemtype=&quot;http://schema.org/Thing&quot;
@@ -367,33 +398,41 @@
         &lt;/li&gt;
         &lt;/ol&gt;
 &lt;/nav&gt;</code></pre>
+                        </div>
                     </div>
                             
 
             
             
-
-            
-                            <div class="co_source">
-                    File: <span class="co_source-file">_modules/_breadcrumb.styl</span>                </div>
-            
-            </section>
+        </section>
                                 <section id="kssref-components-buttons" class="co_section co_section-depth-2  co_content pl2 pr2">
 
 
             
                         <h2 class="co_section-h2">
-                <a href="#kssref-components-buttons">
-                    <strong class="co_section-ref">3.4</strong>
+                                    <a href="#kssref-components-buttons">
+                                    <strong class="co_section-ref">3.4</strong>
                     Buttons
-                </a>
-            </h2>
+                                    </a>
+                            </h2>
 
 
             
-                            <div class="co_section-description">
-                    <p>Colette comes with basic styles for call to action / buttons.</p>
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_modules/_buttons.styl</code>
+                    </p>
+                </div>
+            
 
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Colette comes with basic styles for call to action / buttons.</p>
+
+                    </div>
                 </div>
             
 
@@ -408,28 +447,35 @@
 
             
             
-
-            
-                            <div class="co_source">
-                    File: <span class="co_source-file">_modules/_buttons.styl</span>                </div>
-            
-            </section>
+        </section>
                                 <section id="kssref-components-buttons-buttonsdefault" class="co_section co_section-depth-3  co_content pl2 pr2">
 
 
             
                         <h3 class="co_section-h3">
-                <a href="#kssref-components-buttons-buttonsdefault">
-                    <strong class="co_section-ref">3.4.1</strong>
+                                    <a href="#kssref-components-buttons-buttonsdefault">
+                                    <strong class="co_section-ref">3.4.1</strong>
                     Default Buttons
-                </a>
-            </h3>
+                                    </a>
+                            </h3>
 
 
             
-                            <div class="co_section-description">
-                    <p>All editorial colors are available to style the button according to its context.</p>
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_modules/_buttons.styl, Line: line 7</code>
+                    </p>
+                </div>
+            
 
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>All editorial colors are available to style the button according to its context.</p>
+
+                    </div>
                 </div>
             
 
@@ -441,221 +487,186 @@
 
             
                             
-                                    <p class="co_example-header">Default styling</p>
-                
-                <div class="co_modifier-example clearfix mb1">
-                    <p>
+                <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">
+                                                    Default styling
+                        
+                    </p>
+                    <div class="co_subsection-content col-md-9 clearfix mb1">
+                        <p>
     <a href="#" class="btn [modifier class] mr1">Call to action</a>
     <button class="btn [modifier class] mr1" type="submit">Submit</button>
     <button class="btn [modifier class] mr1" disabled type="submit">Submit (disabled)</button>
 </p>
 
+                    </div>
                 </div>
 
-                                    <p class="co_example-header">Modifiers</p>
-                                                    <div class="kss-modifier__name kss-style">
-                        .btn-default
-                    </div>
-                    <div class="kss-modifier__name kss-style">
-                        default color button
-                    </div>
-
-                    <div class="co_modifier-example clearfix mb1">
-                        <p>
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Modifiers</p>
+                        <div class="co_subsection-content co_modifier col-md-9 clearfix mb2">
+                                                            <p><code>.btn-default</code></p>
+                                <p>default color button</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p>
     <a href="#" class="btn btn-default mr1">Call to action</a>
     <button class="btn btn-default mr1" type="submit">Submit</button>
     <button class="btn btn-default mr1" disabled type="submit">Submit (disabled)</button>
 </p>
 
-                    </div>
-                                    <div class="kss-modifier__name kss-style">
-                        .btn-sport
-                    </div>
-                    <div class="kss-modifier__name kss-style">
-                        sport color button
-                    </div>
-
-                    <div class="co_modifier-example clearfix mb1">
-                        <p>
+                                </div>
+                                                            <p><code>.btn-sport</code></p>
+                                <p>sport color button</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p>
     <a href="#" class="btn btn-sport mr1">Call to action</a>
     <button class="btn btn-sport mr1" type="submit">Submit</button>
     <button class="btn btn-sport mr1" disabled type="submit">Submit (disabled)</button>
 </p>
 
-                    </div>
-                                    <div class="kss-modifier__name kss-style">
-                        .btn-entertainment
-                    </div>
-                    <div class="kss-modifier__name kss-style">
-                        entertainment color button
-                    </div>
-
-                    <div class="co_modifier-example clearfix mb1">
-                        <p>
+                                </div>
+                                                            <p><code>.btn-entertainment</code></p>
+                                <p>entertainment color button</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p>
     <a href="#" class="btn btn-entertainment mr1">Call to action</a>
     <button class="btn btn-entertainment mr1" type="submit">Submit</button>
     <button class="btn btn-entertainment mr1" disabled type="submit">Submit (disabled)</button>
 </p>
 
-                    </div>
-                                    <div class="kss-modifier__name kss-style">
-                        .btn-economy
-                    </div>
-                    <div class="kss-modifier__name kss-style">
-                        economy color button
-                    </div>
-
-                    <div class="co_modifier-example clearfix mb1">
-                        <p>
+                                </div>
+                                                            <p><code>.btn-economy</code></p>
+                                <p>economy color button</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p>
     <a href="#" class="btn btn-economy mr1">Call to action</a>
     <button class="btn btn-economy mr1" type="submit">Submit</button>
     <button class="btn btn-economy mr1" disabled type="submit">Submit (disabled)</button>
 </p>
 
-                    </div>
-                                    <div class="kss-modifier__name kss-style">
-                        .btn-community
-                    </div>
-                    <div class="kss-modifier__name kss-style">
-                        community color button
-                    </div>
-
-                    <div class="co_modifier-example clearfix mb1">
-                        <p>
+                                </div>
+                                                            <p><code>.btn-community</code></p>
+                                <p>community color button</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p>
     <a href="#" class="btn btn-community mr1">Call to action</a>
     <button class="btn btn-community mr1" type="submit">Submit</button>
     <button class="btn btn-community mr1" disabled type="submit">Submit (disabled)</button>
 </p>
 
-                    </div>
-                                    <div class="kss-modifier__name kss-style">
-                        .btn-weird
-                    </div>
-                    <div class="kss-modifier__name kss-style">
-                        weird color button
-                    </div>
-
-                    <div class="co_modifier-example clearfix mb1">
-                        <p>
+                                </div>
+                                                            <p><code>.btn-weird</code></p>
+                                <p>weird color button</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p>
     <a href="#" class="btn btn-weird mr1">Call to action</a>
     <button class="btn btn-weird mr1" type="submit">Submit</button>
     <button class="btn btn-weird mr1" disabled type="submit">Submit (disabled)</button>
 </p>
 
-                    </div>
-                                    <div class="kss-modifier__name kss-style">
-                        .btn-partner
-                    </div>
-                    <div class="kss-modifier__name kss-style">
-                        partner color button
-                    </div>
-
-                    <div class="co_modifier-example clearfix mb1">
-                        <p>
+                                </div>
+                                                            <p><code>.btn-partner</code></p>
+                                <p>partner color button</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p>
     <a href="#" class="btn btn-partner mr1">Call to action</a>
     <button class="btn btn-partner mr1" type="submit">Submit</button>
     <button class="btn btn-partner mr1" disabled type="submit">Submit (disabled)</button>
 </p>
 
-                    </div>
-                                    <div class="kss-modifier__name kss-style">
-                        .btn-planet
-                    </div>
-                    <div class="kss-modifier__name kss-style">
-                        planet color button
-                    </div>
-
-                    <div class="co_modifier-example clearfix mb1">
-                        <p>
+                                </div>
+                                                            <p><code>.btn-planet</code></p>
+                                <p>planet color button</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p>
     <a href="#" class="btn btn-planet mr1">Call to action</a>
     <button class="btn btn-planet mr1" type="submit">Submit</button>
     <button class="btn btn-planet mr1" disabled type="submit">Submit (disabled)</button>
 </p>
 
-                    </div>
-                                    <div class="kss-modifier__name kss-style">
-                        .btn-media
-                    </div>
-                    <div class="kss-modifier__name kss-style">
-                        media color button
-                    </div>
-
-                    <div class="co_modifier-example clearfix mb1">
-                        <p>
+                                </div>
+                                                            <p><code>.btn-media</code></p>
+                                <p>media color button</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p>
     <a href="#" class="btn btn-media mr1">Call to action</a>
     <button class="btn btn-media mr1" type="submit">Submit</button>
     <button class="btn btn-media mr1" disabled type="submit">Submit (disabled)</button>
 </p>
 
-                    </div>
-                                    <div class="kss-modifier__name kss-style">
-                        .btn-hightech
-                    </div>
-                    <div class="kss-modifier__name kss-style">
-                        hightech color button
-                    </div>
-
-                    <div class="co_modifier-example clearfix mb1">
-                        <p>
+                                </div>
+                                                            <p><code>.btn-hightech</code></p>
+                                <p>hightech color button</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p>
     <a href="#" class="btn btn-hightech mr1">Call to action</a>
     <button class="btn btn-hightech mr1" type="submit">Submit</button>
     <button class="btn btn-hightech mr1" disabled type="submit">Submit (disabled)</button>
 </p>
 
-                    </div>
-                                    <div class="kss-modifier__name kss-style">
-                        .btn-native
-                    </div>
-                    <div class="kss-modifier__name kss-style">
-                        native color button
-                    </div>
-
-                    <div class="co_modifier-example clearfix mb1">
-                        <p>
+                                </div>
+                                                            <p><code>.btn-native</code></p>
+                                <p>native color button</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p>
     <a href="#" class="btn btn-native mr1">Call to action</a>
     <button class="btn btn-native mr1" type="submit">Submit</button>
     <button class="btn btn-native mr1" disabled type="submit">Submit (disabled)</button>
 </p>
 
+                                </div>
+                                                    </div>
                     </div>
+
                 
                 
-                                    <div class="co_markup">
-                        <p class="co_markup-view"><button>View Code</button></p>
-                        <pre class="co_markup-content pa1 prettyprint linenums lang-html"><code data-language="html">&lt;p&gt;
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Code</p>
+                        <div class="co_subsection-content co_markup col-md-9">
+                            <button class="btn">click to expand</button>
+                            <pre class="co_markup pa1 prettyprint linenums lang-html"><code data-language="html">&lt;p&gt;
     &lt;a href=&quot;#&quot; class=&quot;btn [modifier class] mr1&quot;&gt;Call to action&lt;/a&gt;
     &lt;button class=&quot;btn [modifier class] mr1&quot; type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
     &lt;button class=&quot;btn [modifier class] mr1&quot; disabled type=&quot;submit&quot;&gt;Submit (disabled)&lt;/button&gt;
 &lt;/p&gt;
 </code></pre>
+                        </div>
                     </div>
                             
 
             
             
-
-            
-                            <div class="co_source">
-                    File: <span class="co_source-file">_modules/_buttons.styl</span>, Line: <span class="co_source-file">line 7</span>                </div>
-            
-            </section>
+        </section>
                                 <section id="kssref-components-buttons-iconbuttonsdefault" class="co_section co_section-depth-3  co_content pl2 pr2">
 
 
             
                         <h3 class="co_section-h3">
-                <a href="#kssref-components-buttons-iconbuttonsdefault">
-                    <strong class="co_section-ref">3.4.2</strong>
+                                    <a href="#kssref-components-buttons-iconbuttonsdefault">
+                                    <strong class="co_section-ref">3.4.2</strong>
                     Icon Buttons: default styles
-                </a>
-            </h3>
+                                    </a>
+                            </h3>
 
 
             
-                            <div class="co_section-description">
-                    <p>Icon buttons are icons in a colored circle.
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_modules/_buttons.styl, Line: line 40</code>
+                    </p>
+                </div>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Icon buttons are icons in a colored circle.
 All editorial colors are available to style the button according to its context.</p>
 
+                    </div>
                 </div>
             
 
@@ -667,219 +678,183 @@ All editorial colors are available to style the button according to its context.
 
             
                             
-                                    <p class="co_example-header">Default styling</p>
-                
-                <div class="co_modifier-example clearfix mb1">
-                    <p>
+                <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">
+                                                    Default styling
+                        
+                    </p>
+                    <div class="co_subsection-content col-md-9 clearfix mb1">
+                        <p>
     <a href="#" class="btn-icon float-left [modifier class] mr1" data-icon="mail"><em>Call to action</em></a>
     <button class="btn-icon [modifier class] mr1" type="submit" data-icon="mail"><em>Submit</em></button>
     <button class="btn-icon [modifier class]" disabled type="submit" data-icon="mail"><em>Submit (disabled)</em></button>
 </p>
 
+                    </div>
                 </div>
 
-                                    <p class="co_example-header">Modifiers</p>
-                                                    <div class="kss-modifier__name kss-style">
-                        .btn-default
-                    </div>
-                    <div class="kss-modifier__name kss-style">
-                        default color button
-                    </div>
-
-                    <div class="co_modifier-example clearfix mb1">
-                        <p>
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Modifiers</p>
+                        <div class="co_subsection-content co_modifier col-md-9 clearfix mb2">
+                                                            <p><code>.btn-default</code></p>
+                                <p>default color button</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p>
     <a href="#" class="btn-icon float-left btn-default mr1" data-icon="mail"><em>Call to action</em></a>
     <button class="btn-icon btn-default mr1" type="submit" data-icon="mail"><em>Submit</em></button>
     <button class="btn-icon btn-default" disabled type="submit" data-icon="mail"><em>Submit (disabled)</em></button>
 </p>
 
-                    </div>
-                                    <div class="kss-modifier__name kss-style">
-                        .btn-sport
-                    </div>
-                    <div class="kss-modifier__name kss-style">
-                        sport color button
-                    </div>
-
-                    <div class="co_modifier-example clearfix mb1">
-                        <p>
+                                </div>
+                                                            <p><code>.btn-sport</code></p>
+                                <p>sport color button</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p>
     <a href="#" class="btn-icon float-left btn-sport mr1" data-icon="mail"><em>Call to action</em></a>
     <button class="btn-icon btn-sport mr1" type="submit" data-icon="mail"><em>Submit</em></button>
     <button class="btn-icon btn-sport" disabled type="submit" data-icon="mail"><em>Submit (disabled)</em></button>
 </p>
 
-                    </div>
-                                    <div class="kss-modifier__name kss-style">
-                        .btn-entertainment
-                    </div>
-                    <div class="kss-modifier__name kss-style">
-                        entertainment color button
-                    </div>
-
-                    <div class="co_modifier-example clearfix mb1">
-                        <p>
+                                </div>
+                                                            <p><code>.btn-entertainment</code></p>
+                                <p>entertainment color button</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p>
     <a href="#" class="btn-icon float-left btn-entertainment mr1" data-icon="mail"><em>Call to action</em></a>
     <button class="btn-icon btn-entertainment mr1" type="submit" data-icon="mail"><em>Submit</em></button>
     <button class="btn-icon btn-entertainment" disabled type="submit" data-icon="mail"><em>Submit (disabled)</em></button>
 </p>
 
-                    </div>
-                                    <div class="kss-modifier__name kss-style">
-                        .btn-economy
-                    </div>
-                    <div class="kss-modifier__name kss-style">
-                        economy color button
-                    </div>
-
-                    <div class="co_modifier-example clearfix mb1">
-                        <p>
+                                </div>
+                                                            <p><code>.btn-economy</code></p>
+                                <p>economy color button</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p>
     <a href="#" class="btn-icon float-left btn-economy mr1" data-icon="mail"><em>Call to action</em></a>
     <button class="btn-icon btn-economy mr1" type="submit" data-icon="mail"><em>Submit</em></button>
     <button class="btn-icon btn-economy" disabled type="submit" data-icon="mail"><em>Submit (disabled)</em></button>
 </p>
 
-                    </div>
-                                    <div class="kss-modifier__name kss-style">
-                        .btn-community
-                    </div>
-                    <div class="kss-modifier__name kss-style">
-                        community color button
-                    </div>
-
-                    <div class="co_modifier-example clearfix mb1">
-                        <p>
+                                </div>
+                                                            <p><code>.btn-community</code></p>
+                                <p>community color button</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p>
     <a href="#" class="btn-icon float-left btn-community mr1" data-icon="mail"><em>Call to action</em></a>
     <button class="btn-icon btn-community mr1" type="submit" data-icon="mail"><em>Submit</em></button>
     <button class="btn-icon btn-community" disabled type="submit" data-icon="mail"><em>Submit (disabled)</em></button>
 </p>
 
-                    </div>
-                                    <div class="kss-modifier__name kss-style">
-                        .btn-weird
-                    </div>
-                    <div class="kss-modifier__name kss-style">
-                        weird color button
-                    </div>
-
-                    <div class="co_modifier-example clearfix mb1">
-                        <p>
+                                </div>
+                                                            <p><code>.btn-weird</code></p>
+                                <p>weird color button</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p>
     <a href="#" class="btn-icon float-left btn-weird mr1" data-icon="mail"><em>Call to action</em></a>
     <button class="btn-icon btn-weird mr1" type="submit" data-icon="mail"><em>Submit</em></button>
     <button class="btn-icon btn-weird" disabled type="submit" data-icon="mail"><em>Submit (disabled)</em></button>
 </p>
 
-                    </div>
-                                    <div class="kss-modifier__name kss-style">
-                        .btn-partner
-                    </div>
-                    <div class="kss-modifier__name kss-style">
-                        partner color button
-                    </div>
-
-                    <div class="co_modifier-example clearfix mb1">
-                        <p>
+                                </div>
+                                                            <p><code>.btn-partner</code></p>
+                                <p>partner color button</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p>
     <a href="#" class="btn-icon float-left btn-partner mr1" data-icon="mail"><em>Call to action</em></a>
     <button class="btn-icon btn-partner mr1" type="submit" data-icon="mail"><em>Submit</em></button>
     <button class="btn-icon btn-partner" disabled type="submit" data-icon="mail"><em>Submit (disabled)</em></button>
 </p>
 
-                    </div>
-                                    <div class="kss-modifier__name kss-style">
-                        .btn-planet
-                    </div>
-                    <div class="kss-modifier__name kss-style">
-                        planet color button
-                    </div>
-
-                    <div class="co_modifier-example clearfix mb1">
-                        <p>
+                                </div>
+                                                            <p><code>.btn-planet</code></p>
+                                <p>planet color button</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p>
     <a href="#" class="btn-icon float-left btn-planet mr1" data-icon="mail"><em>Call to action</em></a>
     <button class="btn-icon btn-planet mr1" type="submit" data-icon="mail"><em>Submit</em></button>
     <button class="btn-icon btn-planet" disabled type="submit" data-icon="mail"><em>Submit (disabled)</em></button>
 </p>
 
-                    </div>
-                                    <div class="kss-modifier__name kss-style">
-                        .btn-media
-                    </div>
-                    <div class="kss-modifier__name kss-style">
-                        media color button
-                    </div>
-
-                    <div class="co_modifier-example clearfix mb1">
-                        <p>
+                                </div>
+                                                            <p><code>.btn-media</code></p>
+                                <p>media color button</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p>
     <a href="#" class="btn-icon float-left btn-media mr1" data-icon="mail"><em>Call to action</em></a>
     <button class="btn-icon btn-media mr1" type="submit" data-icon="mail"><em>Submit</em></button>
     <button class="btn-icon btn-media" disabled type="submit" data-icon="mail"><em>Submit (disabled)</em></button>
 </p>
 
-                    </div>
-                                    <div class="kss-modifier__name kss-style">
-                        .btn-hightech
-                    </div>
-                    <div class="kss-modifier__name kss-style">
-                        hightech color button
-                    </div>
-
-                    <div class="co_modifier-example clearfix mb1">
-                        <p>
+                                </div>
+                                                            <p><code>.btn-hightech</code></p>
+                                <p>hightech color button</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p>
     <a href="#" class="btn-icon float-left btn-hightech mr1" data-icon="mail"><em>Call to action</em></a>
     <button class="btn-icon btn-hightech mr1" type="submit" data-icon="mail"><em>Submit</em></button>
     <button class="btn-icon btn-hightech" disabled type="submit" data-icon="mail"><em>Submit (disabled)</em></button>
 </p>
 
-                    </div>
-                                    <div class="kss-modifier__name kss-style">
-                        .btn-native
-                    </div>
-                    <div class="kss-modifier__name kss-style">
-                        native color button
-                    </div>
-
-                    <div class="co_modifier-example clearfix mb1">
-                        <p>
+                                </div>
+                                                            <p><code>.btn-native</code></p>
+                                <p>native color button</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p>
     <a href="#" class="btn-icon float-left btn-native mr1" data-icon="mail"><em>Call to action</em></a>
     <button class="btn-icon btn-native mr1" type="submit" data-icon="mail"><em>Submit</em></button>
     <button class="btn-icon btn-native" disabled type="submit" data-icon="mail"><em>Submit (disabled)</em></button>
 </p>
 
+                                </div>
+                                                    </div>
                     </div>
+
                 
                 
-                                    <div class="co_markup">
-                        <p class="co_markup-view"><button>View Code</button></p>
-                        <pre class="co_markup-content pa1 prettyprint linenums lang-html"><code data-language="html">&lt;p&gt;
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Code</p>
+                        <div class="co_subsection-content co_markup col-md-9">
+                            <button class="btn">click to expand</button>
+                            <pre class="co_markup pa1 prettyprint linenums lang-html"><code data-language="html">&lt;p&gt;
     &lt;a href=&quot;#&quot; class=&quot;btn-icon float-left [modifier class] mr1&quot; data-icon=&quot;mail&quot;&gt;&lt;em&gt;Call to action&lt;/em&gt;&lt;/a&gt;
     &lt;button class=&quot;btn-icon [modifier class] mr1&quot; type=&quot;submit&quot; data-icon=&quot;mail&quot;&gt;&lt;em&gt;Submit&lt;/em&gt;&lt;/button&gt;
     &lt;button class=&quot;btn-icon [modifier class]&quot; disabled type=&quot;submit&quot; data-icon=&quot;mail&quot;&gt;&lt;em&gt;Submit (disabled)&lt;/em&gt;&lt;/button&gt;
 &lt;/p&gt;
 </code></pre>
+                        </div>
                     </div>
                             
 
             
             
-
-            
-                            <div class="co_source">
-                    File: <span class="co_source-file">_modules/_buttons.styl</span>, Line: <span class="co_source-file">line 40</span>                </div>
-            
-            </section>
+        </section>
                                 <section id="kssref-components-buttons-iconbuttonssocial" class="co_section co_section-depth-3  co_content pl2 pr2">
 
 
             
                         <h3 class="co_section-h3">
-                <a href="#kssref-components-buttons-iconbuttonssocial">
-                    <strong class="co_section-ref">3.4.3</strong>
+                                    <a href="#kssref-components-buttons-iconbuttonssocial">
+                                    <strong class="co_section-ref">3.4.3</strong>
                     Icon Buttons: social styles
-                </a>
-            </h3>
+                                    </a>
+                            </h3>
 
 
             
-                            <div class="co_section-description">
-                    <p>We also have a few styles available for social buttons:</p>
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_modules/_buttons.styl, Line: line 61</code>
+                    </p>
+                </div>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>We also have a few styles available for social buttons:</p>
 <ul>
 <li><strong>[data-icon=&quot;facebook&quot;]</strong>: facebook button</li>
 <li><strong>[data-icon=&quot;googleplus&quot;]</strong>: googleplus button</li>
@@ -892,6 +867,7 @@ All editorial colors are available to style the button according to its context.
 <li><strong>[data-icon=&quot;whatsapp&quot;]</strong>: whatsapp button</li>
 </ul>
 
+                    </div>
                 </div>
             
 
@@ -903,9 +879,13 @@ All editorial colors are available to style the button according to its context.
 
             
                             
-                
-                <div class="co_modifier-example clearfix mb1">
-                    <button class="btn-icon" data-icon="facebook"><em>facebook</em></button>
+                <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">
+                                                    Example
+                        
+                    </p>
+                    <div class="co_subsection-content col-md-9 clearfix mb1">
+                        <button class="btn-icon" data-icon="facebook"><em>facebook</em></button>
 <button class="btn-icon" data-icon="googleplus"><em>googleplus</em></button>
 <button class="btn-icon" data-icon="hootsuite"><em>hootsuite</em></button>
 <button class="btn-icon" data-icon="linkedin"><em>linkedin</em></button>
@@ -915,13 +895,17 @@ All editorial colors are available to style the button according to its context.
 <button class="btn-icon" data-icon="twitter"><em>twitter</em></button>
 <button class="btn-icon" data-icon="whatsapp"><em>whatsapp</em></button>
 
+                    </div>
                 </div>
 
-                                
                 
-                                    <div class="co_markup">
-                        <p class="co_markup-view"><button>View Code</button></p>
-                        <pre class="co_markup-content pa1 prettyprint linenums lang-html"><code data-language="html">&lt;button class=&quot;btn-icon&quot; data-icon=&quot;facebook&quot;&gt;&lt;em&gt;facebook&lt;/em&gt;&lt;/button&gt;
+                
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Code</p>
+                        <div class="co_subsection-content co_markup col-md-9">
+                            <button class="btn">click to expand</button>
+                            <pre class="co_markup pa1 prettyprint linenums lang-html"><code data-language="html">&lt;button class=&quot;btn-icon&quot; data-icon=&quot;facebook&quot;&gt;&lt;em&gt;facebook&lt;/em&gt;&lt;/button&gt;
 &lt;button class=&quot;btn-icon&quot; data-icon=&quot;googleplus&quot;&gt;&lt;em&gt;googleplus&lt;/em&gt;&lt;/button&gt;
 &lt;button class=&quot;btn-icon&quot; data-icon=&quot;hootsuite&quot;&gt;&lt;em&gt;hootsuite&lt;/em&gt;&lt;/button&gt;
 &lt;button class=&quot;btn-icon&quot; data-icon=&quot;linkedin&quot;&gt;&lt;em&gt;linkedin&lt;/em&gt;&lt;/button&gt;
@@ -931,33 +915,41 @@ All editorial colors are available to style the button according to its context.
 &lt;button class=&quot;btn-icon&quot; data-icon=&quot;twitter&quot;&gt;&lt;em&gt;twitter&lt;/em&gt;&lt;/button&gt;
 &lt;button class=&quot;btn-icon&quot; data-icon=&quot;whatsapp&quot;&gt;&lt;em&gt;whatsapp&lt;/em&gt;&lt;/button&gt;
 </code></pre>
+                        </div>
                     </div>
                             
 
             
             
-
-            
-                            <div class="co_source">
-                    File: <span class="co_source-file">_modules/_buttons.styl</span>, Line: <span class="co_source-file">line 61</span>                </div>
-            
-            </section>
+        </section>
                                 <section id="kssref-components-forms" class="co_section co_section-depth-2  co_content pl2 pr2">
 
 
             
                         <h2 class="co_section-h2">
-                <a href="#kssref-components-forms">
-                    <strong class="co_section-ref">3.5</strong>
+                                    <a href="#kssref-components-forms">
+                                    <strong class="co_section-ref">3.5</strong>
                     Forms
-                </a>
-            </h2>
+                                    </a>
+                            </h2>
 
 
             
-                            <div class="co_section-description">
-                    <p>Colette comes with basic css to style forms.</p>
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_base/_form-elements.styl</code>
+                    </p>
+                </div>
+            
 
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Colette comes with basic css to style forms.</p>
+
+                    </div>
                 </div>
             
 
@@ -972,23 +964,27 @@ All editorial colors are available to style the button according to its context.
 
             
             
-
-            
-                            <div class="co_source">
-                    File: <span class="co_source-file">_base/_form-elements.styl</span>                </div>
-            
-            </section>
+        </section>
                                 <section id="kssref-components-forms-required" class="co_section co_section-depth-3  co_content pl2 pr2">
 
 
             
                         <h3 class="co_section-h3">
-                <a href="#kssref-components-forms-required">
-                    <strong class="co_section-ref">3.5.1</strong>
+                                    <a href="#kssref-components-forms-required">
+                                    <strong class="co_section-ref">3.5.1</strong>
                     Requided Marker
-                </a>
-            </h3>
+                                    </a>
+                            </h3>
 
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_modules/_required.styl</code>
+                    </p>
+                </div>
+            
 
             
             
@@ -1001,45 +997,61 @@ All editorial colors are available to style the button according to its context.
 
             
                             
-                
-                <div class="co_modifier-example clearfix mb1">
-                    <abbr class="required" title="(ce champ est obligatoire)">*</abbr>
+                <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">
+                                                    Example
+                        
+                    </p>
+                    <div class="co_subsection-content col-md-9 clearfix mb1">
+                        <abbr class="required" title="(ce champ est obligatoire)">*</abbr>
 
+                    </div>
                 </div>
 
-                                
                 
-                                    <div class="co_markup">
-                        <p class="co_markup-view"><button>View Code</button></p>
-                        <pre class="co_markup-content pa1 prettyprint linenums lang-html"><code data-language="html">&lt;abbr class=&quot;required&quot; title=&quot;(ce champ est obligatoire)&quot;&gt;*&lt;/abbr&gt;
+                
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Code</p>
+                        <div class="co_subsection-content co_markup col-md-9">
+                            <button class="btn">click to expand</button>
+                            <pre class="co_markup pa1 prettyprint linenums lang-html"><code data-language="html">&lt;abbr class=&quot;required&quot; title=&quot;(ce champ est obligatoire)&quot;&gt;*&lt;/abbr&gt;
 </code></pre>
+                        </div>
                     </div>
                             
 
             
             
-
-            
-                            <div class="co_source">
-                    File: <span class="co_source-file">_modules/_required.styl</span>                </div>
-            
-            </section>
+        </section>
                                 <section id="kssref-components-forms-formelements" class="co_section co_section-depth-3  co_content pl2 pr2">
 
 
             
                         <h3 class="co_section-h3">
-                <a href="#kssref-components-forms-formelements">
-                    <strong class="co_section-ref">3.5.2</strong>
+                                    <a href="#kssref-components-forms-formelements">
+                                    <strong class="co_section-ref">3.5.2</strong>
                     Forms elements
-                </a>
-            </h3>
+                                    </a>
+                            </h3>
 
 
             
-                            <div class="co_section-description">
-                    <p>Default styles for forms elements.</p>
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_base/_form-elements.styl, Line: line 7</code>
+                    </p>
+                </div>
+            
 
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Default styles for forms elements.</p>
+
+                    </div>
                 </div>
             
 
@@ -1051,9 +1063,13 @@ All editorial colors are available to style the button according to its context.
 
             
                             
-                
-                <div class="co_modifier-example clearfix mb1">
-                    <form xmlns="http://www.w3.org/1999/html">
+                <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">
+                                                    Example
+                        
+                    </p>
+                    <div class="co_subsection-content col-md-9 clearfix mb1">
+                        <form xmlns="http://www.w3.org/1999/html">
     <div class="form-field-widget pb2">
         <p>
             <label for="text_1">Text</label>
@@ -1129,13 +1145,17 @@ All editorial colors are available to style the button according to its context.
 </form>
 
 
+                    </div>
                 </div>
 
-                                
                 
-                                    <div class="co_markup">
-                        <p class="co_markup-view"><button>View Code</button></p>
-                        <pre class="co_markup-content pa1 prettyprint linenums lang-html"><code data-language="html">&lt;form xmlns=&quot;http://www.w3.org/1999/html&quot;&gt;
+                
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Code</p>
+                        <div class="co_subsection-content co_markup col-md-9">
+                            <button class="btn">click to expand</button>
+                            <pre class="co_markup pa1 prettyprint linenums lang-html"><code data-language="html">&lt;form xmlns=&quot;http://www.w3.org/1999/html&quot;&gt;
     &lt;div class=&quot;form-field-widget pb2&quot;&gt;
         &lt;p&gt;
             &lt;label for=&quot;text_1&quot;&gt;Text&lt;/label&gt;
@@ -1211,38 +1231,46 @@ All editorial colors are available to style the button according to its context.
 &lt;/form&gt;
 
 </code></pre>
+                        </div>
                     </div>
                             
 
             
             
-
-            
-                            <div class="co_source">
-                    File: <span class="co_source-file">_base/_form-elements.styl</span>, Line: <span class="co_source-file">line 7</span>                </div>
-            
-            </section>
+        </section>
                                 <section id="kssref-components-forms-formwidgets" class="co_section co_section-depth-3  co_content pl2 pr2">
 
 
             
                         <h3 class="co_section-h3">
-                <a href="#kssref-components-forms-formwidgets">
-                    <strong class="co_section-ref">3.5.3</strong>
+                                    <a href="#kssref-components-forms-formwidgets">
+                                    <strong class="co_section-ref">3.5.3</strong>
                     Forms widgets
-                </a>
-            </h3>
+                                    </a>
+                            </h3>
 
 
             
-                            <div class="co_section-description">
-                    <p>Colette provides styles for:</p>
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_modules/_form-widget.styl</code>
+                    </p>
+                </div>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Colette provides styles for:</p>
 <ul>
 <li>Fields descriptions (with valid / invalid color indication)</li>
 <li>Valid / Invalid fields</li>
 </ul>
 <p>Note: you can also use Alerts components to handle success or errors messages.</p>
 
+                    </div>
                 </div>
             
 
@@ -1254,9 +1282,13 @@ All editorial colors are available to style the button according to its context.
 
             
                             
-                
-                <div class="co_modifier-example clearfix mb1">
-                    <form xmlns="http://www.w3.org/1999/html">
+                <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">
+                                                    Example
+                        
+                    </p>
+                    <div class="co_subsection-content col-md-9 clearfix mb1">
+                        <form xmlns="http://www.w3.org/1999/html">
     <div class="clearfix">
         <div class="form-field-widget col-md-4 pb2">
             <p>
@@ -1284,13 +1316,17 @@ All editorial colors are available to style the button according to its context.
 </form>
 
 
+                    </div>
                 </div>
 
-                                
                 
-                                    <div class="co_markup">
-                        <p class="co_markup-view"><button>View Code</button></p>
-                        <pre class="co_markup-content pa1 prettyprint linenums lang-html"><code data-language="html">&lt;form xmlns=&quot;http://www.w3.org/1999/html&quot;&gt;
+                
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Code</p>
+                        <div class="co_subsection-content co_markup col-md-9">
+                            <button class="btn">click to expand</button>
+                            <pre class="co_markup pa1 prettyprint linenums lang-html"><code data-language="html">&lt;form xmlns=&quot;http://www.w3.org/1999/html&quot;&gt;
     &lt;div class=&quot;clearfix&quot;&gt;
         &lt;div class=&quot;form-field-widget col-md-4 pb2&quot;&gt;
             &lt;p&gt;
@@ -1318,33 +1354,41 @@ All editorial colors are available to style the button according to its context.
 &lt;/form&gt;
 
 </code></pre>
+                        </div>
                     </div>
                             
 
             
             
-
-            
-                            <div class="co_source">
-                    File: <span class="co_source-file">_modules/_form-widget.styl</span>                </div>
-            
-            </section>
+        </section>
                                 <section id="kssref-components-forms-formsinglerow" class="co_section co_section-depth-3  co_content pl2 pr2">
 
 
             
                         <h3 class="co_section-h3">
-                <a href="#kssref-components-forms-formsinglerow">
-                    <strong class="co_section-ref">3.5.4</strong>
+                                    <a href="#kssref-components-forms-formsinglerow">
+                                    <strong class="co_section-ref">3.5.4</strong>
                     Form single row
-                </a>
-            </h3>
+                                    </a>
+                            </h3>
 
 
             
-                            <div class="co_section-description">
-                    <p>Display, on a single row, an input field + fixed-width icon submit button.</p>
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_modules/_form-single-row.styl</code>
+                    </p>
+                </div>
+            
 
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Display, on a single row, an input field + fixed-width icon submit button.</p>
+
+                    </div>
                 </div>
             
 
@@ -1356,51 +1400,67 @@ All editorial colors are available to style the button according to its context.
 
             
                             
-                
-                <div class="co_modifier-example clearfix mb1">
-                    <form class="form-single-row pa1" action="/">
+                <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">
+                                                    Example
+                        
+                    </p>
+                    <div class="co_subsection-content col-md-9 clearfix mb1">
+                        <form class="form-single-row pa1" action="/">
     <input type="text" class="pl1 pr1" placeholder="Input field" />
     <button type="submit" data-icon="search"><em>ok</em></button>
 </form>
 
+                    </div>
                 </div>
 
-                                
                 
-                                    <div class="co_markup">
-                        <p class="co_markup-view"><button>View Code</button></p>
-                        <pre class="co_markup-content pa1 prettyprint linenums lang-html"><code data-language="html">&lt;form class=&quot;form-single-row pa1&quot; action=&quot;/&quot;&gt;
+                
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Code</p>
+                        <div class="co_subsection-content co_markup col-md-9">
+                            <button class="btn">click to expand</button>
+                            <pre class="co_markup pa1 prettyprint linenums lang-html"><code data-language="html">&lt;form class=&quot;form-single-row pa1&quot; action=&quot;/&quot;&gt;
     &lt;input type=&quot;text&quot; class=&quot;pl1 pr1&quot; placeholder=&quot;Input field&quot; /&gt;
     &lt;button type=&quot;submit&quot; data-icon=&quot;search&quot;&gt;&lt;em&gt;ok&lt;/em&gt;&lt;/button&gt;
 &lt;/form&gt;
 </code></pre>
+                        </div>
                     </div>
                             
 
             
             
-
-            
-                            <div class="co_source">
-                    File: <span class="co_source-file">_modules/_form-single-row.styl</span>                </div>
-            
-            </section>
+        </section>
                                 <section id="kssref-components-loading" class="co_section co_section-depth-2  co_content pl2 pr2">
 
 
             
                         <h2 class="co_section-h2">
-                <a href="#kssref-components-loading">
-                    <strong class="co_section-ref">3.6</strong>
+                                    <a href="#kssref-components-loading">
+                                    <strong class="co_section-ref">3.6</strong>
                     Loading
-                </a>
-            </h2>
+                                    </a>
+                            </h2>
 
 
             
-                            <div class="co_section-description">
-                    <p>Loading animation is inspired from Tobias Ahlin&#39;s <a href="http://tobiasahlin.com/spinkit">Spinkit</a> animations.</p>
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_modules/_loading.styl</code>
+                    </p>
+                </div>
+            
 
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Loading animation is inspired from Tobias Ahlin&#39;s <a href="http://tobiasahlin.com/spinkit">Spinkit</a> animations.</p>
+
+                    </div>
                 </div>
             
 
@@ -1412,9 +1472,13 @@ All editorial colors are available to style the button according to its context.
 
             
                             
-                
-                <div class="co_modifier-example clearfix mb1">
-                    <div class="spinner">
+                <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">
+                                                    Example
+                        
+                    </p>
+                    <div class="co_subsection-content col-md-9 clearfix mb1">
+                        <div class="spinner">
     <span class="bounce1"></span>
     <span class="bounce2"></span>
     <span class="bounce3"></span>
@@ -1425,13 +1489,17 @@ All editorial colors are available to style the button according to its context.
     <span class="bounce3"></span>
 </div>
 
+                    </div>
                 </div>
 
-                                
                 
-                                    <div class="co_markup">
-                        <p class="co_markup-view"><button>View Code</button></p>
-                        <pre class="co_markup-content pa1 prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;spinner&quot;&gt;
+                
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Code</p>
+                        <div class="co_subsection-content co_markup col-md-9">
+                            <button class="btn">click to expand</button>
+                            <pre class="co_markup pa1 prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;spinner&quot;&gt;
     &lt;span class=&quot;bounce1&quot;&gt;&lt;/span&gt;
     &lt;span class=&quot;bounce2&quot;&gt;&lt;/span&gt;
     &lt;span class=&quot;bounce3&quot;&gt;&lt;/span&gt;
@@ -1442,37 +1510,45 @@ All editorial colors are available to style the button according to its context.
     &lt;span class=&quot;bounce3&quot;&gt;&lt;/span&gt;
 &lt;/div&gt;
 </code></pre>
+                        </div>
                     </div>
                             
 
             
             
-
-            
-                            <div class="co_source">
-                    File: <span class="co_source-file">_modules/_loading.styl</span>                </div>
-            
-            </section>
+        </section>
                                 <section id="kssref-components-media" class="co_section co_section-depth-2  co_content pl2 pr2">
 
 
             
                         <h2 class="co_section-h2">
-                <a href="#kssref-components-media">
-                    <strong class="co_section-ref">3.7</strong>
+                                    <a href="#kssref-components-media">
+                                    <strong class="co_section-ref">3.7</strong>
                     Media
-                </a>
-            </h2>
+                                    </a>
+                            </h2>
 
 
             
-                            <div class="co_section-description">
-                    <p>A media is either an image or a video, displayed with caption and/or credit mention.</p>
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_modules/_media.styl</code>
+                    </p>
+                </div>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>A media is either an image or a video, displayed with caption and/or credit mention.</p>
 <ul>
 <li><strong>Video</strong>: videos are made responsive, on the basis of a 16/9 ratio</li>
 <li><strong>Empty media</strong>: if the media (image or video) is not available for any reason, the block display a default N/A image instead</li>
 </ul>
 
+                    </div>
                 </div>
             
 
@@ -1484,9 +1560,13 @@ All editorial colors are available to style the button according to its context.
 
             
                             
-                
-                <div class="co_modifier-example clearfix mb1">
-                    <p>Image</p>
+                <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">
+                                                    Example
+                        
+                    </p>
+                    <div class="co_subsection-content col-md-9 clearfix mb1">
+                        <p>Image</p>
 <figure class="media">
     <img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image">
     <figcation>This is the image caption</figcation>
@@ -1505,13 +1585,17 @@ All editorial colors are available to style the button according to its context.
     <p class="media-credit">This is the credit info</p>
 </figure>
 
+                    </div>
                 </div>
 
-                                
                 
-                                    <div class="co_markup">
-                        <p class="co_markup-view"><button>View Code</button></p>
-                        <pre class="co_markup-content pa1 prettyprint linenums lang-html"><code data-language="html">&lt;p&gt;Image&lt;/p&gt;
+                
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Code</p>
+                        <div class="co_subsection-content co_markup col-md-9">
+                            <button class="btn">click to expand</button>
+                            <pre class="co_markup pa1 prettyprint linenums lang-html"><code data-language="html">&lt;p&gt;Image&lt;/p&gt;
 &lt;figure class=&quot;media&quot;&gt;
     &lt;img src=&quot;http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg&quot; alt=&quot;This is an image&quot;&gt;
     &lt;figcation&gt;This is the image caption&lt;/figcation&gt;
@@ -1530,34 +1614,42 @@ All editorial colors are available to style the button according to its context.
     &lt;p class=&quot;media-credit&quot;&gt;This is the credit info&lt;/p&gt;
 &lt;/figure&gt;
 </code></pre>
+                        </div>
                     </div>
                             
 
             
             
-
-            
-                            <div class="co_source">
-                    File: <span class="co_source-file">_modules/_media.styl</span>                </div>
-            
-            </section>
+        </section>
                                 <section id="kssref-components-navbar" class="co_section co_section-depth-2  co_content pl2 pr2">
 
 
             
                         <h2 class="co_section-h2">
-                <a href="#kssref-components-navbar">
-                    <strong class="co_section-ref">3.8</strong>
+                                    <a href="#kssref-components-navbar">
+                                    <strong class="co_section-ref">3.8</strong>
                     Navbar
-                </a>
-            </h2>
+                                    </a>
+                            </h2>
 
 
             
-                            <div class="co_section-description">
-                    <p>Display a navigation bar at the top of the page.
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_modules/_navbar.styl</code>
+                    </p>
+                </div>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Display a navigation bar at the top of the page.
 Colette comes with a <a href="http://wicky.nillia.ms/headroom.js/">headroom.js</a> dependency to handle navbar show/hide behavior on scroll.</p>
 
+                    </div>
                 </div>
             
 
@@ -1569,9 +1661,13 @@ Colette comes with a <a href="http://wicky.nillia.ms/headroom.js/">headroom.js</
 
             
                             
-                
-                <div class="co_modifier-example clearfix mb1">
-                    <nav class="navbar" style="position:static">
+                <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">
+                                                    Example
+                        
+                    </p>
+                    <div class="co_subsection-content col-md-9 clearfix mb1">
+                        <nav class="navbar" style="position:static">
     <a href="#" class="navbar-brand" data-icon="logo"><em>Retour à l'accueil</em></a>
     <ul class="float-right">
         <li><a href="#" data-icon="user"><em>Icononly</em></a></li>
@@ -1579,13 +1675,17 @@ Colette comes with a <a href="http://wicky.nillia.ms/headroom.js/">headroom.js</
     </ul>
 </nav>
 
+                    </div>
                 </div>
 
-                                
                 
-                                    <div class="co_markup">
-                        <p class="co_markup-view"><button>View Code</button></p>
-                        <pre class="co_markup-content pa1 prettyprint linenums lang-html"><code data-language="html">&lt;nav class=&quot;navbar&quot; style=&quot;position:static&quot;&gt;
+                
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Code</p>
+                        <div class="co_subsection-content co_markup col-md-9">
+                            <button class="btn">click to expand</button>
+                            <pre class="co_markup pa1 prettyprint linenums lang-html"><code data-language="html">&lt;nav class=&quot;navbar&quot; style=&quot;position:static&quot;&gt;
     &lt;a href=&quot;#&quot; class=&quot;navbar-brand&quot; data-icon=&quot;logo&quot;&gt;&lt;em&gt;Retour à l&#039;accueil&lt;/em&gt;&lt;/a&gt;
     &lt;ul class=&quot;float-right&quot;&gt;
         &lt;li&gt;&lt;a href=&quot;#&quot; data-icon=&quot;user&quot;&gt;&lt;em&gt;Icononly&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
@@ -1593,33 +1693,41 @@ Colette comes with a <a href="http://wicky.nillia.ms/headroom.js/">headroom.js</
     &lt;/ul&gt;
 &lt;/nav&gt;
 </code></pre>
+                        </div>
                     </div>
                             
 
             
             
-
-            
-                            <div class="co_source">
-                    File: <span class="co_source-file">_modules/_navbar.styl</span>                </div>
-            
-            </section>
+        </section>
                                 <section id="kssref-components-socialbar" class="co_section co_section-depth-2  co_content pl2 pr2">
 
 
             
                         <h2 class="co_section-h2">
-                <a href="#kssref-components-socialbar">
-                    <strong class="co_section-ref">3.9</strong>
+                                    <a href="#kssref-components-socialbar">
+                                    <strong class="co_section-ref">3.9</strong>
                     Socialbar
-                </a>
-            </h2>
+                                    </a>
+                            </h2>
 
 
             
-                            <div class="co_section-description">
-                    <p>Display a set of social buttons.</p>
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_modules/_socialbar.styl</code>
+                    </p>
+                </div>
+            
 
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Display a set of social buttons.</p>
+
+                    </div>
                 </div>
             
 
@@ -1631,9 +1739,13 @@ Colette comes with a <a href="http://wicky.nillia.ms/headroom.js/">headroom.js</
 
             
                             
-                
-                <div class="co_modifier-example clearfix mb1">
-                    <ul class="socialbar">
+                <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">
+                                                    Example
+                        
+                    </p>
+                    <div class="co_subsection-content col-md-9 clearfix mb1">
+                        <ul class="socialbar">
         <li>
         <a class="btn-icon" href="#" data-icon="facebook" target="_blank"><em>Facebook</em></a>
     </li>
@@ -1657,13 +1769,17 @@ Colette comes with a <a href="http://wicky.nillia.ms/headroom.js/">headroom.js</
     </li>
     </ul>
 
+                    </div>
                 </div>
 
-                                
                 
-                                    <div class="co_markup">
-                        <p class="co_markup-view"><button>View Code</button></p>
-                        <pre class="co_markup-content pa1 prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;socialbar&quot;&gt;
+                
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Code</p>
+                        <div class="co_subsection-content co_markup col-md-9">
+                            <button class="btn">click to expand</button>
+                            <pre class="co_markup pa1 prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;socialbar&quot;&gt;
         &lt;li&gt;
         &lt;a class=&quot;btn-icon&quot; href=&quot;#&quot; data-icon=&quot;facebook&quot; target=&quot;_blank&quot;&gt;&lt;em&gt;Facebook&lt;/em&gt;&lt;/a&gt;
     &lt;/li&gt;
@@ -1687,36 +1803,44 @@ Colette comes with a <a href="http://wicky.nillia.ms/headroom.js/">headroom.js</
     &lt;/li&gt;
     &lt;/ul&gt;
 </code></pre>
+                        </div>
                     </div>
                             
 
             
             
-
-            
-                            <div class="co_source">
-                    File: <span class="co_source-file">_modules/_socialbar.styl</span>                </div>
-            
-            </section>
+        </section>
                                 <section id="kssref-components-tabs" class="co_section co_section-depth-2  co_content pl2 pr2">
 
 
             
                         <h2 class="co_section-h2">
-                <a href="#kssref-components-tabs">
-                    <strong class="co_section-ref">3.10</strong>
+                                    <a href="#kssref-components-tabs">
+                                    <strong class="co_section-ref">3.10</strong>
                     Tabs
-                </a>
-            </h2>
+                                    </a>
+                            </h2>
 
 
             
-                            <div class="co_section-description">
-                    <ul>
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_modules/_tabs.styl</code>
+                    </p>
+                </div>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <ul>
 <li><strong>Default:</strong> adds a navigation within a section</li>
 <li><strong>Breaking news:</strong> is used to disaply hot news on a page</li>
 </ul>
 
+                    </div>
                 </div>
             
 
@@ -1728,9 +1852,13 @@ Colette comes with a <a href="http://wicky.nillia.ms/headroom.js/">headroom.js</
 
             
                             
-                
-                <div class="co_modifier-example clearfix mb1">
-                    <!-- default -->
+                <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">
+                                                    Example
+                        
+                    </p>
+                    <div class="co_subsection-content col-md-9 clearfix mb1">
+                        <!-- default -->
 <div class="tabs-wrapper box mb2">
     <ul class="tabs default mb2">
         <li class="tabs-name"><span>Default display</span></li>
@@ -1747,13 +1875,17 @@ Colette comes with a <a href="http://wicky.nillia.ms/headroom.js/">headroom.js</
     </a>
 </div>
 
+                    </div>
                 </div>
 
-                                
                 
-                                    <div class="co_markup">
-                        <p class="co_markup-view"><button>View Code</button></p>
-                        <pre class="co_markup-content pa1 prettyprint linenums lang-html"><code data-language="html">&lt;!-- default --&gt;
+                
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Code</p>
+                        <div class="co_subsection-content co_markup col-md-9">
+                            <button class="btn">click to expand</button>
+                            <pre class="co_markup pa1 prettyprint linenums lang-html"><code data-language="html">&lt;!-- default --&gt;
 &lt;div class=&quot;tabs-wrapper box mb2&quot;&gt;
     &lt;ul class=&quot;tabs default mb2&quot;&gt;
         &lt;li class=&quot;tabs-name&quot;&gt;&lt;span&gt;Default display&lt;/span&gt;&lt;/li&gt;
@@ -1770,38 +1902,46 @@ Colette comes with a <a href="http://wicky.nillia.ms/headroom.js/">headroom.js</
     &lt;/a&gt;
 &lt;/div&gt;
 </code></pre>
+                        </div>
                     </div>
                             
 
             
             
-
-            
-                            <div class="co_source">
-                    File: <span class="co_source-file">_modules/_tabs.styl</span>                </div>
-            
-            </section>
+        </section>
                                 <section id="kssref-components-teaser" class="co_section co_section-depth-2  co_content pl2 pr2">
 
 
             
                         <h2 class="co_section-h2">
-                <a href="#kssref-components-teaser">
-                    <strong class="co_section-ref">3.11</strong>
+                                    <a href="#kssref-components-teaser">
+                                    <strong class="co_section-ref">3.11</strong>
                     Teaser
-                </a>
-            </h2>
+                                    </a>
+                            </h2>
 
 
             
-                            <div class="co_section-description">
-                    <p>Displayed in listings, a teaser is a content summary that contains:</p>
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_modules/_teasers.styl</code>
+                    </p>
+                </div>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Displayed in listings, a teaser is a content summary that contains:</p>
 <ul>
 <li>a label</li>
 <li>a title</li>
 <li>a summary text</li>
 </ul>
 
+                    </div>
                 </div>
             
 
@@ -1813,37 +1953,41 @@ Colette comes with a <a href="http://wicky.nillia.ms/headroom.js/">headroom.js</
 
             
                             
-                
-                <div class="co_modifier-example clearfix mb1">
-                    <div class="teaser">
+                <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">
+                                                    Example
+                        
+                    </p>
+                    <div class="co_subsection-content col-md-9 clearfix mb1">
+                        <div class="teaser">
     <p class="teaser-headline color-default">Label</p>
     <p class="teaser-title">This is the content title</p>
     <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
 </div>
 
+                    </div>
                 </div>
 
-                                
                 
-                                    <div class="co_markup">
-                        <p class="co_markup-view"><button>View Code</button></p>
-                        <pre class="co_markup-content pa1 prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;teaser&quot;&gt;
+                
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Code</p>
+                        <div class="co_subsection-content co_markup col-md-9">
+                            <button class="btn">click to expand</button>
+                            <pre class="co_markup pa1 prettyprint linenums lang-html"><code data-language="html">&lt;div class=&quot;teaser&quot;&gt;
     &lt;p class=&quot;teaser-headline color-default&quot;&gt;Label&lt;/p&gt;
     &lt;p class=&quot;teaser-title&quot;&gt;This is the content title&lt;/p&gt;
     &lt;p class=&quot;teaser-summary&quot;&gt;This is the summary lorm ipsum sic amet color baba orum.&lt;/p&gt;
 &lt;/div&gt;
 </code></pre>
+                        </div>
                     </div>
                             
 
             
             
-
-            
-                            <div class="co_source">
-                    File: <span class="co_source-file">_modules/_teasers.styl</span>                </div>
-            
-            </section>
+        </section>
             </article>
 
     

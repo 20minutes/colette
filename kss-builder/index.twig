@@ -21,7 +21,7 @@
     {# top navigation #}
     <nav class="navbar">
         <div class="co_content clearfix">
-            <a href="./" class="navbar-brand" data-icon="logo"><em>Retour à l'accueil</em></a>
+            <a href="./" class="navbar-brand co_brand" data-icon="logo"><em>Retour à l'accueil</em></a>
             <ul>
                 <li><a href="./">About</a></li>
                 {% for menu_item in menu %}
@@ -34,7 +34,7 @@
     </nav>
 
     {# page content #}
-    <article role="main" id="co_article">
+    <article role="main" id="co_page" class="pt4 pb6">
         {# Display each section, in order. #}
         {% for section in sections %}
             {% set sectionElement = loop.first ? 'div' : 'section' %}
@@ -44,17 +44,35 @@
             {# section header #}
             {% set headerElement = (section.depth > 6) ? 'h6' : 'h' ~ section.depth %}
             <{{ headerElement }} class="co_section-h{{ section.depth }}{% if 1 == section.depth %} co_content pl2 pr2{% endif %}">
-                <a href="#kssref-{{ section.referenceURI }}">
+                {% if section.depth > 1 %}
+                    <a href="#kssref-{{ section.referenceURI }}">
+                {% endif %}
                     <strong class="co_section-ref">{{ section.referenceNumber }}</strong>
                     {{ section.header }}
-                </a>
+                {% if section.depth > 1 %}
+                    </a>
+                {% endif %}
             </{{ headerElement }}>
+
+
+            {# source #}
+            {% if section.sourceFile.name and section.depth > 1 %}
+                <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>{{ section.sourceFile.name }}{% if section.sourceFile.line > 1 %}, Line: line {{ section.sourceFile.line }}{% endif %}</code>
+                    </p>
+                </div>
+            {% endif %}
 
 
             {# section description #}
             {% if section.description %}
-                <div class="co_section-description">
-                    {{ section.description|raw }}
+                <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        {{ section.description|raw }}
+                    </div>
                 </div>
             {% endif %}
 
@@ -63,8 +81,7 @@
             {% if section.colors %}
                 <ul class="co_colors clearfix">
                     {% kssColors section.colors %}
-                    {#
-                    Available data, but not used in the template:
+                    {# Available data, but not used in the template:
                         -> color.rgb [r|g|b]
                         -> color.hsl [h|s|l]
                         -> color.desc
@@ -83,8 +100,7 @@
             {% if section.icons %}
                 <ul class="co_icons clearfix">
                     {% kssIcons section.icons %}
-                    {#
-                    Available data, but not used in the template:
+                    {# Available data, but not used in the template:
                         -> icon.character
                         -> icon.desc
                     #}
@@ -99,36 +115,46 @@
 
             {# section example #}
             {% if section.example %}
-                {# modifiers #}
-                {% if section.modifiers is not empty %}
-                    <p class="co_example-header">Default styling</p>
-                {% endif %}
+                {# example / default styling #}
+                <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">
+                        {% if section.modifiers is not empty %}
+                            Default styling
+                        {% else %}
+                            Example
+                        {% endif %}
 
-                <div class="co_modifier-example clearfix mb1">
-                    {{ section.example|raw }}
+                    </p>
+                    <div class="co_subsection-content col-md-9 clearfix mb1">
+                        {{ section.example|raw }}
+                    </div>
                 </div>
 
+                {# modifiers #}
                 {% if section.modifiers is not empty %}
-                    <p class="co_example-header">Modifiers</p>
-                {% endif %}
-                {% for modifier in section.modifiers %}
-                    <div class="kss-modifier__name kss-style">
-                        {{ modifier.name }}
-                    </div>
-                    <div class="kss-modifier__name kss-style">
-                        {{ modifier.description|raw }}
+                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Modifiers</p>
+                        <div class="co_subsection-content co_modifier col-md-9 clearfix mb2">
+                            {% for modifier in section.modifiers %}
+                                <p><code>{{ modifier.name }}</code></p>
+                                <p>{{ modifier.description|raw }}</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    {{ modifier.markup|raw }}
+                                </div>
+                            {% endfor %}
+                        </div>
                     </div>
 
-                    <div class="co_modifier-example clearfix mb1">
-                        {{ modifier.markup|raw }}
-                    </div>
-                {% endfor %}
+                {% endif %}
 
                 {# markup #}
                 {% if section.markup %}
-                    <div class="co_markup">
-                        <p class="co_markup-view"><button>View Code</button></p>
-                        <pre class="co_markup-content pa1 prettyprint linenums lang-html"><code data-language="html">{{ section.markup|escape('html') }}</code></pre>
+                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Code</p>
+                        <div class="co_subsection-content co_markup col-md-9">
+                            <button class="btn">click to expand</button>
+                            <pre class="co_markup pa1 prettyprint linenums lang-html"><code data-language="html">{{ section.markup|escape('html') }}</code></pre>
+                        </div>
                     </div>
                 {% endif %}
             {% endif %}
@@ -156,15 +182,7 @@
                 {% endif %}
             {% endfor %}
 
-
-            {# source #}
-            {% if section.sourceFile.name and section.depth > 1 %}
-                <div class="co_source">
-                    File: <span class="co_source-file">{{ section.sourceFile.name }}</span>{% if section.sourceFile.line > 1 %}, Line: <span class="co_source-file">line {{ section.sourceFile.line }}</span>{% endif %}
-                </div>
-            {% endif %}
-
-            </{{ sectionElement }}>
+        </{{ sectionElement }}>
         {% endfor %}
     </article>
 
