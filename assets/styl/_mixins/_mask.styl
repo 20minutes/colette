@@ -1,0 +1,22 @@
+// Mask
+//
+// hide text but keep it readable for screen-readers
+//
+// @TODO: remove vendorprefix to use autoprefixer
+//
+// $important - `true` to set all rules `!important` (default: `false`)
+//
+// Styleguide Mixins.mask
+mask($important = false)
+    $important = $important ? !important : null // @stylint ignore
+    position absolute $important
+    clip rect(1px, 1px, 1px, 1px) $important // hide first pixel
+    -webkit-clip-path inset(50%) $important // clip-path need prefix not supported by nib
+    clip-path inset(50%) $important // clip is deprecated, clip-path is future
+    padding 0 $important
+    border 0 $important
+    width 1px $important
+    height 1px $important
+    overflow hidden $important
+    right auto $important
+    bottom auto $important
