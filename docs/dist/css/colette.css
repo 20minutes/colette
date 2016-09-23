@@ -294,7 +294,17 @@ a[data-icon-after] {
 }
 [data-icon] em,
 [data-icon-after] em {
-  display: none;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  padding: 0;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  right: auto;
+  bottom: auto;
 }
 [data-icon] p,
 [data-icon-after] p,
@@ -565,6 +575,19 @@ a[data-icon-after] {
 [data-icon=pisces]:before,
 [data-icon-after=pisces]:after {
   content: 'Ë';
+}
+.mask {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  padding: 0;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  right: auto;
+  bottom: auto;
 }
 .pa0 {
   padding: 0rem;
@@ -1735,7 +1758,17 @@ footer a:hover {
   text-align: center;
 }
 .headerbar a em {
-  display: none;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  padding: 0;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  right: auto;
+  bottom: auto;
 }
 .brand {
   width: 4.8rem;
