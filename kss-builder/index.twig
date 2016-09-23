@@ -35,10 +35,20 @@
 
     {# page content #}
     <article role="main" id="co_page" class="pt4 pb6">
-        {# Display each section, in order. #}
+        {# homepage #}
+        {% if homepage %}
+            <div id="kssref-homepage" class="co_section-depth-1  pl2 pr2">
+                <h1 class="co_section-h1 co_content pl2 pr2">About</h1>
+            </div>
+            <section id="kssref-homepage" class="co_section-home co_section-depth-2  co_content pl2 pr2">
+                {{ homepage|raw }}
+            </section>
+        {% endif %}
+
+        {# display each section, in order. #}
         {% for section in sections %}
             {% set sectionElement = loop.first ? 'div' : 'section' %}
-            <{{ sectionElement }} id="kssref-{{ section.referenceURI }}" class="co_section co_section-depth-{{ section.depth }} {% if section.depth > 1 %} co_content{% endif %} pl2 pr2">
+            <{{ sectionElement }} id="kssref-{{ section.referenceURI }}" class="co_section-depth-{{ section.depth }} {% if section.depth > 1 %} co_content{% endif %} pl2 pr2">
 
 
             {# section header #}
@@ -150,7 +160,7 @@
                 {# markup #}
                 {% if section.markup %}
                     <div class="co_subsection clearfix">
-                        <p class="co_subsection-title col-md-3">Code</p>
+                        <p class="co_subsection-title col-md-3">Markup</p>
                         <div class="co_subsection-content co_markup col-md-9">
                             <button class="btn">click to expand</button>
                             <pre class="co_markup pa1 prettyprint linenums lang-html"><code data-language="html">{{ section.markup|escape('html') }}</code></pre>

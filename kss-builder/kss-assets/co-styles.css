@@ -1,0 +1,395 @@
+body {
+  background-color: #f8f8f8;
+  color: #333;
+}
+h1 {
+  padding-bottom: 0.25em;
+  font-weight: normal;
+  color: #000;
+}
+h1 a {
+  color: inherit;
+}
+h1 a:hover {
+  color: #44638a;
+}
+h1 a:hover strong {
+  color: inherit;
+}
+h2 {
+  padding-bottom: 0.25em;
+  font-weight: normal;
+  color: #000;
+}
+h2 a {
+  color: inherit;
+}
+h2 a:hover {
+  color: #44638a;
+}
+h2 a:hover strong {
+  color: inherit;
+}
+h3 {
+  padding-bottom: 0.25em;
+  font-weight: normal;
+  color: #000;
+}
+h3 a {
+  color: inherit;
+}
+h3 a:hover {
+  color: #44638a;
+}
+h3 a:hover strong {
+  color: inherit;
+}
+h4 {
+  padding-bottom: 0.25em;
+  font-weight: normal;
+  color: #000;
+}
+h4 a {
+  color: inherit;
+}
+h4 a:hover {
+  color: #44638a;
+}
+h4 a:hover strong {
+  color: inherit;
+}
+h5 {
+  padding-bottom: 0.25em;
+  font-weight: normal;
+  color: #000;
+}
+h5 a {
+  color: inherit;
+}
+h5 a:hover {
+  color: #44638a;
+}
+h5 a:hover strong {
+  color: inherit;
+}
+h6 {
+  padding-bottom: 0.25em;
+  font-weight: normal;
+  color: #000;
+}
+h6 a {
+  color: inherit;
+}
+h6 a:hover {
+  color: #44638a;
+}
+h6 a:hover strong {
+  color: inherit;
+}
+pre {
+  padding: 1em;
+  margin-bottom: 1.6rem;
+  border: 1px solid #c7d0dc;
+  background-color: #fff;
+  font-size: 1em;
+  line-height: 1.2;
+}
+#co_page {
+  position: relative;
+  z-index: 1;
+}
+.co_content {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.co_brand {
+  background-color: transparent;
+  color: #44638a;
+  font-size: 2.7em;
+}
+/* section */
+.co_section-depth-1 {
+  padding: 3em 0;
+  background-color: #3b4b5e;
+}
+.co_section-depth-2 {
+  padding-top: 9em;
+}
+.co_section-depth-3 {
+  padding-top: 6em;
+}
+.co_section-depth-4 {
+  padding-top: 4em;
+}
+.co_section-h1 {
+  font-size: 4.8em;
+  color: #fff;
+  line-height: 1;
+}
+.co_section-h1 strong {
+  font-size: 0.25em;
+  color: inherit;
+}
+.co_section-h2,
+.co_section-home h1 {
+  margin-bottom: 1em;
+  border-bottom: 1px solid #c7d0dc;
+  font-size: 3.6em;
+  color: #44638a;
+}
+.co_section-h3,
+.co_section-home h2 {
+  font-size: 2.1em;
+}
+.co_section-h4 {
+  font-size: 1.8em;
+}
+.co_section-ref {
+  display: block;
+  color: #666;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.co_section-ref:before {
+  content: 'section ';
+}
+/* subsection */
+.co_subsection {
+  padding: 0.5em 0;
+}
+.co_subsection-title {
+  font-weight: bold;
+}
+@media screen and (min-width: 48em) {
+  .co_subsection-title {
+    padding-right: 1.5em;
+    text-align: right;
+  }
+}
+.co_subsection-content > p,
+.co_subsection-content > ul {
+  padding-bottom: 1.6rem;
+}
+.co_subsection-content > ul > li {
+  margin-left: 1em;
+}
+.co_subsection-content p > code {
+  padding: 0.05em 0.25em;
+  background-color: #e0e5eb;
+  color: #c36;
+}
+/* modifier */
+.co_modifier > p {
+  padding-bottom: 0;
+}
+.co_modifier-example {
+  margin-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid #c7d0dc;
+}
+/* colors */
+.co_colors {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.co_colors > li {
+  float: left;
+  width: 16em;
+  padding: 0.25em;
+  margin: 0 1em 1em 0;
+  border-radius: 0.25em;
+}
+.co_colors-demo {
+  width: 100%;
+  height: 6em;
+  margin-bottom: 0.25em;
+  border-radius: 0.25em;
+}
+.co_colors-name,
+.co_colors-hex {
+  margin-top: 0;
+  background-color: #f1f1f1;
+  color: #000;
+  text-align: center;
+}
+.co_colors-name {
+  margin-bottom: 0.25em;
+}
+.co_colors-hex {
+  font-size: 0.9em;
+  text-transform: uppercase;
+  color: #44638a;
+}
+/* icons */
+.co_icons {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.co_icons > li {
+  float: left;
+  width: 8em;
+  padding: 1em 0.25em 0.25em;
+  margin: 0 1em 1em 0;
+  border-radius: 0.25em;
+  text-align: center;
+}
+.co_icons-demo {
+  display: block;
+  height: 1.5em;
+  padding: 0.25em;
+  margin-bottom: 0.25em;
+  font-size: 3em;
+  line-height: 1.5em;
+  font-family: '20mn';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.co_icons-name {
+  display: block;
+  border-radius: 0.25em;
+  background-color: #f1f1f1;
+  color: #000;
+}
+/* example */
+.co_example-header {
+  color: #000;
+  font-family: 'Open Sans';
+  font-size: 1.5em;
+  font-style: italic;
+}
+/* markup */
+.co_markup {
+  position: relative;
+}
+.co_markup button {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  margin: 0 auto;
+  background-color: rgba(0,0,0,0.75);
+  color: #fff;
+  font-size: 0.7em;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.2s;
+}
+.co_markup button:hover {
+  background-color: #000;
+}
+.co_markup pre {
+  position: relative;
+  z-index: 1;
+  max-height: 4em;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+.co_markup pre:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(to top, #fff, rgba(255,255,255,0.25));
+}
+/* source */
+.co_source {
+  color: #c36;
+  font-size: 0.9em;
+}
+/* footer */
+.co_footer {
+  border-color: #c7d0dc;
+  background-color: #44638a;
+}
+/* prettyprint.js */
+/* SPAN elements with the classes below are added by prettyprint. */
+.pln {
+  color: #000;
+}
+.str {
+  color: #080;
+}
+.kwd {
+  color: #008;
+}
+.com {
+  color: #800;
+}
+.typ {
+  color: #606;
+}
+.lit {
+  color: #066;
+}
+/* punctuation, lisp open bracket, lisp close bracket */
+.pun,
+.opn,
+.clo {
+  color: #660;
+}
+.tag {
+  color: #008;
+}
+.atn {
+  color: #606;
+}
+.atv {
+  color: #080;
+}
+.dec,
+.var {
+  color: #606;
+}
+.fun {
+  color: #f00;
+}
+/* Use higher contrast and text-weight for printable form. */
+@media print, projection {
+  .str {
+    color: #060;
+  }
+  .kwd {
+    color: #006;
+    font-weight: bold;
+  }
+  .com {
+    color: #600;
+    font-style: italic;
+  }
+  .typ {
+    color: #404;
+    font-weight: bold;
+  }
+  .lit {
+    color: #044;
+  }
+  .pun,
+  .opn,
+  .clo {
+    color: #440;
+  }
+  .tag {
+    color: #006;
+    font-weight: bold;
+  }
+  .atn {
+    color: #404;
+  }
+  .atv {
+    color: #060;
+  }
+}
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums {
+  list-style-type: none;
+}

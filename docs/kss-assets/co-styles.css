@@ -131,13 +131,15 @@ pre {
   font-size: 0.25em;
   color: inherit;
 }
-.co_section-h2 {
+.co_section-h2,
+.co_section-home h1 {
   margin-bottom: 1em;
   border-bottom: 1px solid #c7d0dc;
   font-size: 3.6em;
   color: #44638a;
 }
-.co_section-h3 {
+.co_section-h3,
+.co_section-home h2 {
   font-size: 2.1em;
 }
 .co_section-h4 {

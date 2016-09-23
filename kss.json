@@ -4,14 +4,14 @@
     "//": "The css and js paths are URLs relative to the style guide destination.",
     "css": [
         "dist/css/colette.min.css",
-        "kss-assets/cl-styles.css"
+        "kss-assets/co-styles.css"
     ],
     "js": [
         "dist/js/colette.min.js"
     ],
     "title": "Colette Style Guide",
     "verbose": true,
-    "homepage": "styleguide.md",
+    "homepage": "../../readme.md",
     "builder": "kss-builder",
     "extend": "kss-builder/extend",
     "custom": [
