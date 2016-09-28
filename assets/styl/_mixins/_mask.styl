@@ -7,7 +7,7 @@
 // $important = false - If set to `true`, makes all rules `!important`
 //
 // Styleguide Mixins.mask
-mask($important = false)
+_mask($important = false)
     $important = $important ? !important : null // @stylint ignore
     position absolute $important
     clip rect(1px, 1px, 1px, 1px) $important // hide first pixel

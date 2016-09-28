@@ -1,0 +1,55 @@
+// Icon
+//
+// .icon-default          - default color button
+// .icon-sport            - sport color button
+// .icon-entertainment    - entertainment color button
+// .icon-economy          - economy color button
+// .icon-community        - community color button
+// .icon-weird            - weird color button
+// .icon-partner          - partner color button
+// .icon-planet           - planet color button
+// .icon-media            - media color button
+// .icon-hightech         - hightech color button
+// .icon-native           - native color button
+//
+// Markup: icon.twig
+//
+// Styleguide Components.Icons
+.icon
+    display inline-block
+    vertical-align top
+    border-radius .5em
+    padding .2em .3em
+    text-align center
+    font-family $font-secondary
+    font-size 1em
+    color inherit
+    text-decoration none
+
+    &-picto
+        height 3.25em
+        width 3.25em
+        display block
+        margin 0 auto
+        fill currentcolor
+        padding 0 .2em
+
+    &-label
+        display block
+        line-height 1.3em
+        padding 0 .2em
+        text-transform uppercase
+
+    for key, value in $colors
+        &-{key}
+            icon-text-color = _contrast-check($color-white, value) ? $color-white : $color-black
+            background-color value
+            color icon-text-color
+
+    &-inline
+        text-align left
+
+        .icon-picto
+        .icon-label
+            display inline-block
+            vertical-align middle
