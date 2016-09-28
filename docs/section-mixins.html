@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width">
 
     <link rel="stylesheet" href="dist/css/colette.min.css">
-<link rel="stylesheet" href="kss-assets/cl-styles.css">
+<link rel="stylesheet" href="kss-assets/co-styles.css">
 
 
 </head>
@@ -73,7 +73,7 @@
 </symbol></svg></div>
 <div id="co_wrapper">
     
-    <nav class="navbar">
+    <nav class="navbar co_navbar">
         <div class="co_content clearfix">
             <a href="./" class="navbar-brand co_brand" data-icon="logo"><em>Retour à l'accueil</em></a>
             <ul>
@@ -106,15 +106,18 @@
     
     <article role="main" id="co_page" class="pt4 pb6">
         
-                                <div id="kssref-mixins" class="co_section co_section-depth-1  pl2 pr2">
+        
+        
+                                            <div id="kssref-mixins" class="co_section-depth-1  pl2 pr2">
 
 
             
                         <h1 class="co_section-h1 co_content pl2 pr2">
+                
                                     <strong class="co_section-ref">7</strong>
                     Mixins
                             </h1>
-
+            
 
             
             
@@ -134,17 +137,18 @@
             
             
         </div>
-                                <section id="kssref-mixins-mask" class="co_section co_section-depth-2  co_content pl2 pr2">
+                                            <section id="kssref-mixins-mask" class="co_section-depth-2  co_content pl2 pr2">
 
 
             
                         <h2 class="co_section-h2">
+                
                                     <a href="#kssref-mixins-mask">
                                     <strong class="co_section-ref">7.1</strong>
                     Mask
                                     </a>
                             </h2>
-
+            
 
             
                             <div class="co_subsection clearfix">
@@ -200,10 +204,33 @@
 </div>
 <!-- scripts -->
 <script src="kss-assets/prettify.js"></script>
-<script>
-    prettyPrint();
-</script>
 <script src="dist/js/colette.min.js"></script>
 
+<script>
+    
+    var headroom  = new Headroom(document.querySelector('.co_navbar'), {
+        offset: 205,
+        tolerance: 5,
+        classes: {
+            initial: 'co_navbar-animated',
+            pinned: 'co_navbar-pinned',
+            unpinned: 'co_navbar-unpinned'
+        }
+    });
+    headroom.init();
+
+    
+    prettyPrint();
+
+    
+    var markups = document.getElementsByClassName('co_markup');
+
+    for (var i = 0; i < markups.length; i++) {
+        markups[i].addEventListener('click', function(e) {
+            this.classList.toggle('co_markup-expanded');
+        }, false);
+    }
+
+</script>
 </body>
 </html>

@@ -27,6 +27,7 @@ for i in 1..6
 pre
     padding 1em
     margin-bottom 1.6rem
+    border-radius .25em
     border 1px solid $co-color-borders
     background-color $co-color-tertiary
     font-size 1em
@@ -44,6 +45,18 @@ pre
     max-width 1024px
     margin 0 auto
 
+/* navbar */
+.co_navbar
+    &-animated
+        transition all .15s ease-in-out
+
+    &-pinned
+        transform translateY(0%)
+
+    &-unpinned
+        transform translateY(-100%)
+
+/* brand */
 .co_brand
     background-color transparent
     color $co-color-primary
@@ -216,24 +229,31 @@ pre
     font-size 1.5em
     font-style italic
 
+/* expand markup */
+.co_expand
+    position absolute
+    z-index 2
+    top 1px
+    right 1px
+    bottom 1px
+    left 1px
+    border-radius .25em
+    background linear-gradient(to top, $co-color-tertiary, rgba($co-color-tertiary, 0.25))
+
+    .btn
+        position absolute
+        z-index 2
+        bottom 1em
+        left 50%
+        background-color rgba($co-color-primary, .25)
+        color $co-color-tertiary
+        font-size .7em
+        transform translateX(-50%)
+        transition background-color .2s
+
 /* markup */
 .co_markup
     position relative
-
-    button
-        position absolute
-        z-index 2
-        top 50%
-        left 50%
-        margin 0 auto
-        background-color rgba($co-color-secondary, .75)
-        color $co-color-tertiary
-        font-size .7em
-        transform translate(-50%, -50%)
-        transition background-color .2s
-
-        &:hover
-            background-color $co-color-secondary
 
     pre
         position relative
@@ -241,15 +261,34 @@ pre
         max-height 4em
         margin-bottom 0
         overflow hidden
+        transition max-height .3s
 
-        &:after
-            content ''
-            position absolute
-            bottom 0
-            left 0
-            right 0
-            height 100%
-            background linear-gradient(to top, $co-color-tertiary, rgba($co-color-tertiary, 0.25))
+    &:hover
+        cursor pointer
+
+        .btn
+            display block
+            background-color $co-color-primary
+
+    &-action
+        display none
+
+    &-expanded
+        &:hover
+            .btn
+                dsiplay block
+
+        pre
+            max-height 100em
+
+            &:after
+                display none
+
+        .btn
+            display none
+
+        .co_expand
+            background none
 
 /* source */
 .co_source

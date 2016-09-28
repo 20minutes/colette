@@ -73,7 +73,7 @@
 </symbol></svg></div>
 <div id="co_wrapper">
     
-    <nav class="navbar">
+    <nav class="navbar co_navbar">
         <div class="co_content clearfix">
             <a href="./" class="navbar-brand co_brand" data-icon="logo"><em>Retour à l'accueil</em></a>
             <ul>
@@ -108,15 +108,16 @@
         
         
         
-                                <div id="kssref-theme" class="co_section-depth-1  pl2 pr2">
+                                            <div id="kssref-theme" class="co_section-depth-1  pl2 pr2">
 
 
             
                         <h1 class="co_section-h1 co_content pl2 pr2">
+                
                                     <strong class="co_section-ref">4</strong>
                     Theme
                             </h1>
-
+            
 
             
             
@@ -136,17 +137,18 @@
             
             
         </div>
-                                <section id="kssref-theme-skins" class="co_section-depth-2  co_content pl2 pr2">
+                                            <section id="kssref-theme-skins" class="co_section-depth-2  co_content pl2 pr2">
 
 
             
                         <h2 class="co_section-h2">
+                
                                     <a href="#kssref-theme-skins">
                                     <strong class="co_section-ref">4.1</strong>
                     Skins
                                     </a>
                             </h2>
-
+            
 
             
                             <div class="co_subsection clearfix">
@@ -405,8 +407,8 @@ Note that:</p>
                                     <div class="co_subsection clearfix">
                         <p class="co_subsection-title col-md-3">Markup</p>
                         <div class="co_subsection-content co_markup col-md-9">
-                            <button class="btn">click to expand</button>
-                            <pre class="co_markup pa1 prettyprint linenums lang-html"><code data-language="html">&lt;article class=&quot;[modifier class]&quot;&gt;
+                            <p class="co_expand"><span class="btn">click to expand</span></p>
+                            <pre class="pa1 prettyprint linenums lang-html"><code data-language="html">&lt;article class=&quot;[modifier class]&quot;&gt;
     &lt;figure class=&quot;media&quot;&gt;
         &lt;p&gt;&lt;img src=&quot;http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg&quot; alt=&quot;This is an image&quot;&gt;&lt;/p&gt;
     &lt;/figure&gt;
@@ -418,6 +420,7 @@ Note that:</p>
 &lt;/article&gt;
 
 </code></pre>
+                            <p class="co_markup-action font-secondary align-right"><span class="collapse pr1">Collaspe</span><span>Open code in new tab</span></p>
                         </div>
                     </div>
                             
@@ -438,10 +441,33 @@ Note that:</p>
 </div>
 <!-- scripts -->
 <script src="kss-assets/prettify.js"></script>
-<script>
-    prettyPrint();
-</script>
 <script src="dist/js/colette.min.js"></script>
 
+<script>
+    
+    var headroom  = new Headroom(document.querySelector('.co_navbar'), {
+        offset: 205,
+        tolerance: 5,
+        classes: {
+            initial: 'co_navbar-animated',
+            pinned: 'co_navbar-pinned',
+            unpinned: 'co_navbar-unpinned'
+        }
+    });
+    headroom.init();
+
+    
+    prettyPrint();
+
+    
+    var markups = document.getElementsByClassName('co_markup');
+
+    for (var i = 0; i < markups.length; i++) {
+        markups[i].addEventListener('click', function(e) {
+            this.classList.toggle('co_markup-expanded');
+        }, false);
+    }
+
+</script>
 </body>
 </html>

@@ -19,7 +19,7 @@
 <div style="height:0;width:0;position:absolute;visibility:hidden;overflow:hidden">{% include '../dist/svg/svg.svg' %}</div>
 <div id="co_wrapper">
     {# top navigation #}
-    <nav class="navbar">
+    <nav class="navbar co_navbar">
         <div class="co_content clearfix">
             <a href="./" class="navbar-brand co_brand" data-icon="logo"><em>Retour à l'accueil</em></a>
             <ul>
@@ -47,26 +47,28 @@
 
         {# display each section, in order. #}
         {% for section in sections %}
+            {% set depth = section.depth %}
             {% set sectionElement = loop.first ? 'div' : 'section' %}
-            <{{ sectionElement }} id="kssref-{{ section.referenceURI }}" class="co_section-depth-{{ section.depth }} {% if section.depth > 1 %} co_content{% endif %} pl2 pr2">
+            <{{ sectionElement }} id="kssref-{{ section.referenceURI }}" class="co_section-depth-{{ depth }} {% if depth > 1 %} co_content{% endif %} pl2 pr2">
 
 
             {# section header #}
-            {% set headerElement = (section.depth > 6) ? 'h6' : 'h' ~ section.depth %}
-            <{{ headerElement }} class="co_section-h{{ section.depth }}{% if 1 == section.depth %} co_content pl2 pr2{% endif %}">
-                {% if section.depth > 1 %}
+            {% set headerElement = (depth > 6) ? 'h6' : 'h' ~ depth %}
+            <{{ headerElement }} class="co_section-h{{ depth }}{% if 1 == depth %} co_content pl2 pr2{% endif %}">
+                {# section title #}
+                {% if depth > 1 %}
                     <a href="#kssref-{{ section.referenceURI }}">
                 {% endif %}
                     <strong class="co_section-ref">{{ section.referenceNumber }}</strong>
                     {{ section.header }}
-                {% if section.depth > 1 %}
+                {% if depth > 1 %}
                     </a>
                 {% endif %}
             </{{ headerElement }}>
-
+            {# @TODO: add children's navigation #}
 
             {# source #}
-            {% if section.sourceFile.name and section.depth > 1 %}
+            {% if section.sourceFile.name and depth > 1 %}
                 <div class="co_subsection clearfix">
                     <p class="co_subsection-title col-md-3">Source</p>
                     <p class="co_subsection-content co_source col-md-9">
@@ -162,8 +164,9 @@
                     <div class="co_subsection clearfix">
                         <p class="co_subsection-title col-md-3">Markup</p>
                         <div class="co_subsection-content co_markup col-md-9">
-                            <button class="btn">click to expand</button>
-                            <pre class="co_markup pa1 prettyprint linenums lang-html"><code data-language="html">{{ section.markup|escape('html') }}</code></pre>
+                            <p class="co_expand"><span class="btn">click to expand</span></p>
+                            <pre class="pa1 prettyprint linenums lang-html"><code data-language="html">{{ section.markup|escape('html') }}</code></pre>
+                            <p class="co_markup-action font-secondary align-right"><span class="collapse pr1">Collaspe</span><span>Open code in new tab</span></p>
                         </div>
                     </div>
                 {% endif %}
@@ -207,9 +210,32 @@
 </div>
 <!-- scripts -->
 <script src="kss-assets/prettify.js"></script>
-<script>
-    prettyPrint();
-</script>
 {{ scripts|raw }}
+<script>
+    {# headroom #}
+    var headroom  = new Headroom(document.querySelector('.co_navbar'), {
+        offset: 205,
+        tolerance: 5,
+        classes: {
+            initial: 'co_navbar-animated',
+            pinned: 'co_navbar-pinned',
+            unpinned: 'co_navbar-unpinned'
+        }
+    });
+    headroom.init();
+
+    {# prettyPrint #}
+    prettyPrint();
+
+    {# expand code blocks #}
+    var markups = document.getElementsByClassName('co_markup');
+
+    for (var i = 0; i < markups.length; i++) {
+        markups[i].addEventListener('click', function(e) {
+            this.classList.toggle('co_markup-expanded');
+        }, false);
+    }
+
+</script>
 </body>
 </html>

@@ -89,6 +89,7 @@ h6 a:hover strong {
 pre {
   padding: 1em;
   margin-bottom: 1.6rem;
+  border-radius: 0.25em;
   border: 1px solid #c7d0dc;
   background-color: #fff;
   font-size: 1em;
@@ -103,6 +104,17 @@ pre {
   max-width: 1024px;
   margin: 0 auto;
 }
+/* navbar */
+.co_navbar-animated {
+  transition: all 0.15s ease-in-out;
+}
+.co_navbar-pinned {
+  transform: translateY(0%);
+}
+.co_navbar-unpinned {
+  transform: translateY(-100%);
+}
+/* brand */
 .co_brand {
   background-color: transparent;
   color: #44638a;
@@ -266,24 +278,31 @@ pre {
   font-size: 1.5em;
   font-style: italic;
 }
+/* expand markup */
+.co_expand {
+  position: absolute;
+  z-index: 2;
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+  left: 1px;
+  border-radius: 0.25em;
+  background: linear-gradient(to top, #fff, rgba(255,255,255,0.25));
+}
+.co_expand .btn {
+  position: absolute;
+  z-index: 2;
+  bottom: 1em;
+  left: 50%;
+  background-color: rgba(68,99,138,0.25);
+  color: #fff;
+  font-size: 0.7em;
+  transform: translateX(-50%);
+  transition: background-color 0.2s;
+}
 /* markup */
 .co_markup {
   position: relative;
-}
-.co_markup button {
-  position: absolute;
-  z-index: 2;
-  top: 50%;
-  left: 50%;
-  margin: 0 auto;
-  background-color: rgba(0,0,0,0.75);
-  color: #fff;
-  font-size: 0.7em;
-  transform: translate(-50%, -50%);
-  transition: background-color 0.2s;
-}
-.co_markup button:hover {
-  background-color: #000;
 }
 .co_markup pre {
   position: relative;
@@ -291,15 +310,32 @@ pre {
   max-height: 4em;
   margin-bottom: 0;
   overflow: hidden;
+  transition: max-height 0.3s;
 }
-.co_markup pre:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  background: linear-gradient(to top, #fff, rgba(255,255,255,0.25));
+.co_markup:hover {
+  cursor: pointer;
+}
+.co_markup:hover .btn {
+  display: block;
+  background-color: #44638a;
+}
+.co_markup-action {
+  display: none;
+}
+.co_markup-expanded:hover .btn {
+  dsiplay: block;
+}
+.co_markup-expanded pre {
+  max-height: 100em;
+}
+.co_markup-expanded pre:after {
+  display: none;
+}
+.co_markup-expanded .btn {
+  display: none;
+}
+.co_markup-expanded .co_expand {
+  background: none;
 }
 /* source */
 .co_source {
