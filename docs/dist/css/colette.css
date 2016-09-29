@@ -1711,6 +1711,9 @@ footer a:hover {
 .form-field-widget label {
   display: block;
 }
+.form-field-widget li {
+  margin-left: 1em;
+}
 .form-field-error {
   border-color: #cc190f !important;
 }
@@ -1721,6 +1724,7 @@ footer a:hover {
   color: #878787;
   font-size: 0.88em;
   font-style: italic;
+  line-height: 1.2;
 }
 .form-help-error {
   color: #cc190f;
