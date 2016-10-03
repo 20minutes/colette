@@ -847,10 +847,12 @@ input[type='datetime-local'],
 input[type='tel'],
 input[type='number'],
 input[type='search'],
+select,
 textarea {
   padding: 0.5em;
   border-radius: 0.3em;
   border: 1px solid #e7e7e7;
+  background-color: #fff;
   line-height: 1.3;
   -webkit-transition: border-color 0.2s;
   -moz-transition: border-color 0.2s;
@@ -869,6 +871,7 @@ input[type='datetime-local']:focus,
 input[type='tel']:focus,
 input[type='number']:focus,
 input[type='search']:focus,
+select:focus,
 textarea:focus {
   border-color: #878787;
   outline: 0;
@@ -884,6 +887,7 @@ input[type='datetime-local']:focus:invalid,
 input[type='tel']:focus:invalid,
 input[type='number']:focus:invalid,
 input[type='search']:focus:invalid,
+select:focus:invalid,
 textarea:focus:invalid {
   border-color: #cc190f;
 }
@@ -898,9 +902,25 @@ input[type='datetime-local'][disabled],
 input[type='tel'][disabled],
 input[type='number'][disabled],
 input[type='search'][disabled],
+select[disabled],
 textarea[disabled] {
   background-color: #f8f8f8;
   color: #878787;
+}
+input[type='search'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+select {
+  padding-right: 2em;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"100\" fill=\"#000\"><polygon points=\"0, 0 100, 0 50, 50\" /></svg>");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 0.75em) 1em;
+  -webkit-background-size: 0.5em 0.5em;
+  -moz-background-size: 0.5em 0.5em;
+  background-size: 0.5em 0.5em;
+  -webkit-appearance: none;
 }
 textarea {
   vertical-align: top;
