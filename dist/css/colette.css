@@ -1800,6 +1800,87 @@ footer a:hover {
   font-size: 3.6rem !important;
   color: #fff !important;
 }
+.icon {
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 0.5em;
+  padding: 0.2em 0.3em;
+  text-align: center;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 1em;
+  color: inherit;
+  text-decoration: none;
+}
+.icon-picto {
+  height: 3.25em;
+  width: 3.25em;
+  display: block;
+  margin: 0 auto;
+  fill: currentcolor;
+  padding: 0 0.2em;
+}
+.icon-label {
+  display: block;
+  line-height: 1.3em;
+  padding: 0 0.2em;
+  text-transform: uppercase;
+}
+.icon-base {
+  background-color: #4c4d4e;
+  color: #fff;
+}
+.icon-default {
+  background-color: #0b4892;
+  color: #fff;
+}
+.icon-sport {
+  background-color: #00b9f3;
+  color: #fff;
+}
+.icon-entertainment {
+  background-color: #cc190f;
+  color: #fff;
+}
+.icon-economy {
+  background-color: #053042;
+  color: #fff;
+}
+.icon-community {
+  background-color: #930b48;
+  color: #fff;
+}
+.icon-weird {
+  background-color: #ef2a82;
+  color: #fff;
+}
+.icon-partner {
+  background-color: #ff5400;
+  color: #fff;
+}
+.icon-planet {
+  background-color: #48930b;
+  color: #fff;
+}
+.icon-media {
+  background-color: #000;
+  color: #fff;
+}
+.icon-hightech {
+  background-color: #686868;
+  color: #fff;
+}
+.icon-native {
+  background-color: #fff7e2;
+  color: #fff;
+}
+.icon-inline {
+  text-align: left;
+}
+.icon-inline .icon-picto,
+.icon-inline .icon-label {
+  display: inline-block;
+  vertical-align: middle;
+}
 .spinner {
   margin: 0 auto;
   width: 9.6rem;

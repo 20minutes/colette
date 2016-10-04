@@ -1,0 +1,19 @@
+// Contrast-check
+//
+// return true if constast is OK
+//
+// return false and throw a warning message if it’s not
+//
+// $foreground-color - text color to check
+// $background-color - background color to compare. default $color-white
+// $min              - minimum contrast ratio. default $contrast
+//
+// Styleguide Mixins.Contrast-check
+_contrastCheck($foreground-color, $background-color = $color-white, $min = $contrast)
+    $current-contrast = contrast($foreground-color, $background-color).ratio
+
+    if $current-contrast < $min
+        warn('contrast ratio ' + $current-contrast +' < ' + $min + ' 😥')
+        return false
+    else
+        return true

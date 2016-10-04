@@ -178,3 +178,22 @@ $colors ?= {
     hightech: $color-hightech
     native: $color-native
 }
+
+// Contrast
+//
+// Contrast ratio for accessibility
+// https://www.w3.org/TR/WCAG20-TECHS/G18
+//
+// How to check:
+// ```
+// contrast-check($forground-color, $background-color, $contrast)
+// ```
+//
+// $contrast:      4.5
+// $contrast-low:  3
+// $contrast-high: 7
+//
+// Settings.Contrast
+$contrast ?= 4.5
+$contrast-low ?= 3
+$contrast-high ?= 7
