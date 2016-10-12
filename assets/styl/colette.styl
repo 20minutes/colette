@@ -10,40 +10,37 @@
 // Weight: 12
 //
 // Styleguide: Mixins
-@require '_mixins/*'
 
 // Helpers
 //
 // Weight: 5
 //
 // Styleguide: Helpers
-@require '_helpers/_text.styl'
-@require '_helpers/*'
 
 // Basics
 //
 // Weight: 1
 //
 // Styleguide: Basics
-@require '_base/*'
 
 // Layout
 //
 // Weight: 2
 //
 // Styleguide: Layout
-@require '_layout/*'
 
 // Components
 //
 // Weight: 3
 //
 // Styleguide: Components
-@require '_modules/*'
 
 // Theme
 //
 // Weight: 4
 //
 // Styleguide: Theme
-@require '_theme/*'
+
+// @require files
+for name, file in $css-require
+    @require file

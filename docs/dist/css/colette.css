@@ -47,12 +47,12 @@ footer,
   text-indent: -1em;
 }
 .list-type-none,
-.headerbar ul,
 .navbar ul,
 .socialbar,
 .tabs {
   list-style-type: none;
 }
+/* @block */
 .inline {
   display: inline;
 }
@@ -589,6 +589,9 @@ a[data-icon-after] {
   right: auto;
   bottom: auto;
 }
+/* Create mixins to add gutter-based paddings and margins */
+/* @TODO: allow breakpoint option */
+/* Set a few default helpers */
 .pa0 {
   padding: 0rem;
 }
@@ -800,6 +803,7 @@ a[data-icon-after] {
 .ml6 {
   margin-left: 7.2rem;
 }
+/* Open Sans */
 @font-face {
   font-family: 'Open Sans';
   font-weight: normal;
@@ -828,6 +832,7 @@ a[data-icon-after] {
   font-weight: 900;
   src: url("../fonts/OpenSans-ExtraBold.eot?#iefix") format('embedded-opentype'), url("../fonts/OpenSans-ExtraBold.woff") format('woff');
 }
+/* icons */
 @font-face {
   font-family: '20mn';
   font-style: normal;
@@ -930,6 +935,10 @@ input[type='button'],
 input[type='submit'] {
   border-style: none;
 }
+/*
+ * Spécial HTML 5 [
+ * ---------------------------------------------------------------------------------------- */
+/* Pour IE8/9 */
 article,
 aside,
 audio,
@@ -958,13 +967,22 @@ output,
 bb {
   display: inline;
 }
+/* (1) Empêche certains navigateurs d'afficher un <audio> sans [controls]
+ * (2) Corrige un pb de hauteur sous iOS 5
+ */
 audio:not([controls]) {
   display: none;
   height: 0;
 }
+/* Pour IE 8/9 */
 [hidden] {
   display: none;
 }
+/* ----------------------------------------------------------------------------------------
+ * ] Spécial HTML 5 */
+/*
+ * Base [
+ * ---------------------------------------------------------------------------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -980,23 +998,41 @@ body {
 body {
   background-color: #e7e7e7;
 }
+/* ----------------------------------------------------------------------------------------
+ * Base */
+/*
+ * Links [
+ * ---------------------------------------------------------------------------------------- */
 a {
   text-decoration: none;
 }
 a:focus {
   outline: thin dotted;
 }
+/* ----------------------------------------------------------------------------------------
+ * ] Links */
+/*
+ * Media [
+ * ---------------------------------------------------------------------------------------- */
 img {
   border: 0;
   display: block;
   vertical-align: text-bottom;
 }
+/* Corrige l'overflow pour IE9 */
 svg:not(:root) {
   overflow: hidden;
 }
+/* ----------------------------------------------------------------------------------------
+ * ] Media */
+/*
+ * Typographie [
+ * ---------------------------------------------------------------------------------------- */
+/* Alignement des li et position de la puce */
 li li {
   margin-left: 0;
 }
+/* Suppression des margin/padding supplémentaires sur éléments imbriqués */
 li p,
 li ul {
   margin-bottom: 0;
@@ -1004,9 +1040,13 @@ li ul {
   padding-bottom: 0;
   padding-top: 0;
 }
+/* (1) Important : l'attribut [title] doit être présent
+ * (2) Pour IE 8/9, Safari 5, and Chrome : qui n'ont pas de style par défaut pou cette balise
+ */
 abbr[title] {
   border-bottom: 1px dotted;
 }
+/* Corrige les problèmes d'interlignage de <sup> et <sub> */
 sup,
 sub {
   vertical-align: 0;
@@ -1018,6 +1058,7 @@ sup {
 sub {
   top: 0.5ex;
 }
+/* Evite les débordement de texte en forçant le retour à la ligne */
 textarea,
 table,
 td,
@@ -1033,11 +1074,13 @@ p {
   -ms-hyphens: none;
   hyphens: none;
 }
+/* (1) On conserve les espaces / retours à la ligne autant que possible */
 code,
 pre,
 samp {
   white-space: pre-wrap;
 }
+/* Un "début" de responsive : largeur maxi (donc hauteur auto) de certains élements */
 img,
 table,
 td,
@@ -1049,6 +1092,11 @@ input {
   height: auto;
   max-width: 100%;
 }
+/* ----------------------------------------------------------------------------------------
+ * ] Typographie */
+/* Formulaires [
+ * ---------------------------------------------------------------------------------------- */
+/* Cursor:pointer sur tout ce qui peut/doit être cliqué... */
 label,
 button,
 input[type="submit"],
@@ -1056,6 +1104,7 @@ input[type="button"],
 input[type="reset"] {
   cursor: pointer;
 }
+/* ... sauf sur les élements désactivés */
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -1065,6 +1114,7 @@ button,
 input {
   vertical-align: middle;
 }
+/* Force la police et la taille du texte par défaut à l'intérieur d'un champ */
 button,
 input,
 select,
@@ -1076,6 +1126,9 @@ button {
   border: none;
   background: none;
 }
+/* Evite le dimensionnement des radios, checkboxes et images et un affichage différent sous IE
+ * NB : pas de différence notable sur FF/Chrome/Safari Mac => à tester sous Windows & Linux ?
+ */
 input[type="radio"],
 input[type="checkbox"],
 input[type="image"] {
@@ -1083,10 +1136,14 @@ input[type="image"] {
   border: 0;
   width: auto;
 }
+/* Force le redimensionnement vertical sur les textarea */
 textarea {
   border: 1px solid #e7e7e7;
   resize: vertical;
 }
+/***** status { *****/
+/* ----------------------------------------------------------------------------------------
+ * ] Formulaires */
 html {
   font-family: sans-serif;
   font-size: 62.5%;
@@ -1178,6 +1235,7 @@ blockquote:before {
   font-size: 3em;
   color: #b7b7b7;
 }
+/* Tables */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -1220,6 +1278,10 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+/*
+ * Handles grid system
+ * This takes a lot of inspiration from Bootstrap grid system
+ */
 @media screen and (min-width: 420px) {
   .col-sm-1 {
     float: left;
@@ -1755,51 +1817,6 @@ footer a:hover {
 .form-required {
   color: #cc190f;
 }
-.headerbar .sticky {
-  position: fixed;
-  top: 0;
-  z-index: 20;
-  width: 100%;
-  -webkit-box-shadow: 0 2px 4px -2px #4c4d4e;
-  box-shadow: 0 2px 4px -2px #4c4d4e;
-}
-.headerbar ul {
-  background-color: #fff;
-  height: 4.8rem;
-  line-height: 4.8rem;
-}
-.headerbar li {
-  width: 6rem;
-  float: right;
-}
-.headerbar li:first-child {
-  float: left;
-}
-.headerbar a {
-  display: block;
-  color: #4c4d4e;
-  font-size: 1.8rem;
-  text-align: center;
-}
-.headerbar a em {
-  position: absolute;
-  clip: rect(1px, 1px, 1px, 1px);
-  -webkit-clip-path: inset(50%);
-  clip-path: inset(50%);
-  padding: 0;
-  border: 0;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  right: auto;
-  bottom: auto;
-}
-.brand {
-  width: 4.8rem;
-  background-color: #0b4892;
-  font-size: 3.6rem !important;
-  color: #fff !important;
-}
 .icon {
   display: inline-block;
   vertical-align: top;
@@ -2176,6 +2193,9 @@ footer a:hover {
   position: relative;
   z-index: 2;
 }
+/*
+ * Specials [
+ * ---------------------------------------------------------------------------------------- */
 .breakingnews {
   display: table;
   width: 100%;
@@ -2235,6 +2255,13 @@ footer a:hover {
   line-height: 1;
   text-align: center;
 }
+/* ----------------------------------------------------------------------------------------
+ * ] Specials */
+/*
+ * Theme [
+ * ---------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------
+ * ] Theme */
 .teaser-headline {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: bold;
@@ -2252,6 +2279,7 @@ footer a:hover {
 .native {
   background-color: #fff7e2;
 }
+/* Text skins */
 .skin-blog .media:before,
 .skin-chat .media:before,
 .skin-exclusive .media:before,
@@ -2392,6 +2420,7 @@ footer a:hover {
   content: 'T’as vu';
   background-color: #ef2a82;
 }
+/* Icon skins */
 .skin-gallery .media > p:first-child,
 .skin-video .media > p:first-child,
 .skin-gallery .media > div:first-child,

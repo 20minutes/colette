@@ -6,7 +6,7 @@
 //
 // Colette provide a collection of breakpoints and media queries, available in a `$breakpoints` hash.
 //
-// We handle 3 default primary breakpoints and related media queries :
+// We handle 3 default primary breakpoints and related media queries:
 // ```
 // $mainpoints ?= {
 //     'sm': "screen and (min-width: 420px)"
@@ -193,7 +193,119 @@ $colors ?= {
 // $contrast-low:  3
 // $contrast-high: 7
 //
-// Settings.Contrast
+// Styleguide: Settings.Contrast
 $contrast ?= 4.5
 $contrast-low ?= 3
 $contrast-high ?= 7
+
+// CSS Settings
+//
+// Colette provides a `$css-main` collection to let you define which styles you want to include into your final css file.
+//
+// By default, `$css-main` includes all Colette's files, but you can override it in your project stylus file.
+//
+// **Example 1: use of `$css-main` **
+//
+// ```
+// /* my_stylus_file.styl */
+//
+// $css-main = {
+//    'base-fonts': '_base/_fonts',
+//    'base-form-elements': '_base/_form-elements',
+//    'base-normalize': '_base/_normalize',
+//    'base-typography': '_base/_typography',
+//    'layout-grid': '_layout/_grid',
+//    'modules-alerts': '_modules/_alerts',
+//    'modules-teasers': '_modules/_teasers',
+//    'theme-skin': '_theme/_skin'
+// }
+//
+// @require `colette.styl` /* will only '@require' files listed in '$css-main */
+//
+// /* my custom styles */
+// ```
+//
+//
+// **Example 2: handle critical css`**
+//
+// You need to create a specific stylus file to handle your critical css.
+// ```
+// /* my_criticalcss_file.styl */
+//
+// $css-critical = {
+//    /* colette needed styles */
+//    'modules-avatar': '_modules/_avatar',
+//    'modules-breadcrumb': '_modules/_breadcrumb',
+//    'modules-buttons': '_modules/_buttons',
+//    'modules-socialbar': '_modules/_socialbar',
+//    'modules-tabs': '_modules/_tabs',
+//    /* custom project stylus files */
+//    ...
+// }
+//
+// /* @require files */
+// for name, file in $css-critical
+//     @require file
+//
+// /* => will compile to my_criticalcss_file.css */
+// ```
+//
+// Then you'll need to compile the css and inline it into your html markup.
+// Suppose you have a gulpfile in your project, and work with Twig templates,
+// you can create a `gulp` task to compile the css:
+//
+// ```
+// /* gulpfile.js */
+// gulp.task('criticalcss', function () {
+//    return gulp.src(cfg.cssDir + 'loop.styl')
+//    .pipe(stylus())
+//    .pipe(gulp.dest('css/'))
+// })
+// ```
+//
+// and then simply include the compiled css file into your template
+// (dont't forget the `<style>` tag aroud your `include`!):
+// ```
+// <style>
+//    {%  include 'css/my_criticalcss_file.css' %}
+// </style>
+// ```
+//
+// Styleguide: Settings.CssCollections
+$css-commons ?= {
+    'mixins-contrast-check': '_mixins/_contrastCheck'
+    'mixins-mask': '_mixins/_mask'
+}
+$css-main ?= {
+    'helpers-text': '_helpers/_text'
+    'helpers-block': '_helpers/_block'
+    'helpers-borders': '_helpers/_borders'
+    'helpers-box': '_helpers/_box'
+    'helpers-colors': '_helpers/_colors'
+    'helpers-icons': '_helpers/_icons'
+    'helpers-mask': '_helpers/_mask'
+    'helpers-spaces': '_helpers/_spaces'
+    'base-fonts': '_base/_fonts'
+    'base-form-elements': '_base/_form-elements'
+    'base-normalize': '_base/_normalize'
+    'base-symbols': '_base/_symbols'
+    'base-typography': '_base/_typography'
+    'layout-footer': '_layout/_footer'
+    'layout-grid': '_layout/_grid'
+    'modules-alerts': '_modules/_alerts'
+    'modules-avatar': '_modules/_avatar'
+    'modules-breadcrumb': '_modules/_breadcrumb'
+    'modules-buttons': '_modules/_buttons'
+    'modules-form-single-row': '_modules/_form-single-row'
+    'modules-form-widget': '_modules/_form-widget'
+    'modules-icon': '_modules/_icon'
+    'modules-loading': '_modules/_loading'
+    'modules-media': '_modules/_media'
+    'modules-navbar': '_modules/_navbar'
+    'modules-required': '_modules/_required'
+    'modules-socialbar': '_modules/_socialbar'
+    'modules-tabs': '_modules/_tabs'
+    'modules-teasers': '_modules/_teasers'
+    'theme-skin': '_theme/_skin'
+}
+$css-require ?= merge($css-commons, $css-main)
