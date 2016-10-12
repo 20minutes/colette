@@ -6,7 +6,7 @@
 //
 // Colette provide a collection of breakpoints and media queries, available in a `$breakpoints` hash.
 //
-// We handle 3 default primary breakpoints and related media queries :
+// We handle 3 default primary breakpoints and related media queries:
 // ```
 // $mainpoints ?= {
 //     'sm': "screen and (min-width: 420px)"
@@ -198,29 +198,26 @@ $contrast ?= 4.5
 $contrast-low ?= 3
 $contrast-high ?= 7
 
-// CSS Collections
+// CSS Settings
 //
-// Colette provides `$css-main` and `$css-critical` collections to let you define:
-// - **into `$css-main`**: which styles you want to include into your final css file
-// - **into `$css-critical`**: which styles must be inlined into your html file
+// Colette provides a `$css-main` collection to let you define which styles you want to include into your final css file.
 //
-// By default, `$css-main` includes all Colette's files, whereas `$css-critical` is empty.
-// You can override both of them in your project stylus file.
+// By default, `$css-main` includes all Colette's files, but you can override it in your project stylus file.
 //
-// **Usage example of `$css-main` **
+// **Example 1: use of `$css-main` **
 //
 // ```
 // /* my_stylus_file.styl */
 //
 // $css-main = {
-//    'base-fonts' : '_base/_fonts',
-//    'base-form-elements' : '_base/_form-elements',
-//    'base-normalize' : '_base/_normalize',
-//    'base-typography' : '_base/_typography',
-//    'layout-grid' : '_layout/_grid',
-//    'modules-alerts' : '_modules/_alerts',
-//    'modules-teasers' : '_modules/_teasers',
-//    'theme-skin' : '_theme/_skin'
+//    'base-fonts': '_base/_fonts',
+//    'base-form-elements': '_base/_form-elements',
+//    'base-normalize': '_base/_normalize',
+//    'base-typography': '_base/_typography',
+//    'layout-grid': '_layout/_grid',
+//    'modules-alerts': '_modules/_alerts',
+//    'modules-teasers': '_modules/_teasers',
+//    'theme-skin': '_theme/_skin'
 // }
 //
 // @require `colette.styl` /* will only '@require' files listed in '$css-main */
@@ -229,18 +226,21 @@ $contrast-high ?= 7
 // ```
 //
 //
-// **Usage example of `$css-critical`**
+// **Example 2: handle critical css`**
 //
 // You need to create a specific stylus file to handle your critical css.
 // ```
 // /* my_criticalcss_file.styl */
 //
 // $css-critical = {
-//    'modules-avatar' : '_modules/_avatar',
-//    'modules-breadcrumb' : '_modules/_breadcrumb',
-//    'modules-buttons' : '_modules/_buttons',
-//    'modules-socialbar' : '_modules/_socialbar',
-//    'modules-tabs' : '_modules/_tabs',
+//    /* colette needed styles */
+//    'modules-avatar': '_modules/_avatar',
+//    'modules-breadcrumb': '_modules/_breadcrumb',
+//    'modules-buttons': '_modules/_buttons',
+//    'modules-socialbar': '_modules/_socialbar',
+//    'modules-tabs': '_modules/_tabs',
+//    /* custom project stylus files */
+//    ...
 // }
 //
 // /* @require files */
@@ -272,38 +272,40 @@ $contrast-high ?= 7
 // ```
 //
 // Styleguide: Settings.CssCollections
-$css-main ?= {
-    'mixins-contrast-check' : '_mixins/_contrastCheck'
-    'mixins-mask' : '_mixins/_mask'
-    'helpers-text' : '_helpers/_text'
-    'helpers-block' : '_helpers/_block'
-    'helpers-borders' : '_helpers/_borders'
-    'helpers-box' : '_helpers/_box'
-    'helpers-colors' : '_helpers/_colors'
-    'helpers-icons' : '_helpers/_icons'
-    'helpers-mask' : '_helpers/_mask'
-    'helpers-spaces' : '_helpers/_spaces'
-    'base-fonts' : '_base/_fonts'
-    'base-form-elements' : '_base/_form-elements'
-    'base-normalize' : '_base/_normalize'
-    'base-symbols' : '_base/_symbols'
-    'base-typography' : '_base/_typography'
-    'layout-footer' : '_layout/_footer'
-    'layout-grid' : '_layout/_grid'
-    'modules-alerts' : '_modules/_alerts'
-    'modules-avatar' : '_modules/_avatar'
-    'modules-breadcrumb' : '_modules/_breadcrumb'
-    'modules-buttons' : '_modules/_buttons'
-    'modules-form-single-row' : '_modules/_form-single-row'
-    'modules-form-widget' : '_modules/_form-widget'
-    'modules-icon' : '_modules/_icon'
-    'modules-loading' : '_modules/_loading'
-    'modules-media' : '_modules/_media'
-    'modules-navbar' : '_modules/_navbar'
-    'modules-required' : '_modules/_required'
-    'modules-socialbar' : '_modules/_socialbar'
-    'modules-tabs' : '_modules/_tabs'
-    'modules-teasers' : '_modules/_teasers'
-    'theme-skin' : '_theme/_skin'
+$css-commons ?= {
+    'mixins-contrast-check': '_mixins/_contrastCheck'
+    'mixins-mask': '_mixins/_mask'
 }
-$css-critical ?= {}
+$css-main ?= {
+    'helpers-text': '_helpers/_text'
+    'helpers-block': '_helpers/_block'
+    'helpers-borders': '_helpers/_borders'
+    'helpers-box': '_helpers/_box'
+    'helpers-colors': '_helpers/_colors'
+    'helpers-icons': '_helpers/_icons'
+    'helpers-mask': '_helpers/_mask'
+    'helpers-spaces': '_helpers/_spaces'
+    'base-fonts': '_base/_fonts'
+    'base-form-elements': '_base/_form-elements'
+    'base-normalize': '_base/_normalize'
+    'base-symbols': '_base/_symbols'
+    'base-typography': '_base/_typography'
+    'layout-footer': '_layout/_footer'
+    'layout-grid': '_layout/_grid'
+    'modules-alerts': '_modules/_alerts'
+    'modules-avatar': '_modules/_avatar'
+    'modules-breadcrumb': '_modules/_breadcrumb'
+    'modules-buttons': '_modules/_buttons'
+    'modules-form-single-row': '_modules/_form-single-row'
+    'modules-form-widget': '_modules/_form-widget'
+    'modules-icon': '_modules/_icon'
+    'modules-loading': '_modules/_loading'
+    'modules-media': '_modules/_media'
+    'modules-navbar': '_modules/_navbar'
+    'modules-required': '_modules/_required'
+    'modules-socialbar': '_modules/_socialbar'
+    'modules-tabs': '_modules/_tabs'
+    'modules-teasers': '_modules/_teasers'
+    'theme-skin': '_theme/_skin'
+}
+$css-require ?= merge($css-commons, $css-main)

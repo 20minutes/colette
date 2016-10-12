@@ -164,7 +164,7 @@
                     <p class="co_subsection-title col-md-3">Description</p>
                     <div class="co_subsection-content col-md-9">
                         <p>Colette provide a collection of breakpoints and media queries, available in a <code>$breakpoints</code> hash.</p>
-<p>We handle 3 default primary breakpoints and related media queries :</p>
+<p>We handle 3 default primary breakpoints and related media queries:</p>
 <pre><code>$mainpoints ?= {
     &#39;sm&#39;: &quot;screen and (min-width: 420px)&quot;
     &#39;md&#39;: &quot;screen and (min-width: 768px)&quot;
@@ -648,7 +648,7 @@ $contrast-high: 7</p>
                 
                                     <a href="#kssref-settings-csscollections">
                                     <strong class="co_section-ref">6.4</strong>
-                    CSS Collections
+                    CSS Settings
                                     </a>
                             </h2>
             
@@ -666,40 +666,35 @@ $contrast-high: 7</p>
                             <div class="co_subsection clearfix">
                     <p class="co_subsection-title col-md-3">Description</p>
                     <div class="co_subsection-content col-md-9">
-                        <p>Colette provides <code>$css-main</code> and <code>$css-critical</code> collections to let you define:</p>
-<ul>
-<li><strong>into <code>$css-main</code></strong>: which styles you want to include into your final css file</li>
-<li><strong>into <code>$css-critical</code></strong>: which styles must be inlined into your html file</li>
-</ul>
-<p>By default, <code>$css-main</code> includes all Colette&#39;s files, whereas <code>$css-critical</code> is empty.
-You can override both of them in your project stylus file.</p>
-<p><strong>Usage example of <code>$css-main</code> </strong></p>
+                        <p>Colette provides a <code>$css-main</code> collection to let you define which styles you want to include into your final css file.</p>
+<p>By default, <code>$css-main</code> includes all Colette&#39;s files, but you can override it in your project stylus file.</p>
+<p><strong>Example 1: use of <code>$css-main</code> </strong></p>
 <pre><code>/* my_stylus_file.styl */
 
 $css-main = {
-   &#39;base-fonts&#39; : &#39;_base/_fonts&#39;,
-   &#39;base-form-elements&#39; : &#39;_base/_form-elements&#39;,
-   &#39;base-normalize&#39; : &#39;_base/_normalize&#39;,
-   &#39;base-typography&#39; : &#39;_base/_typography&#39;,
-   &#39;layout-grid&#39; : &#39;_layout/_grid&#39;,
-   &#39;modules-alerts&#39; : &#39;_modules/_alerts&#39;,
-   &#39;modules-teasers&#39; : &#39;_modules/_teasers&#39;,
-   &#39;theme-skin&#39; : &#39;_theme/_skin&#39;
+   &#39;base-fonts&#39;: &#39;_base/_fonts&#39;,
+   &#39;base-form-elements&#39;: &#39;_base/_form-elements&#39;,
+   &#39;base-normalize&#39;: &#39;_base/_normalize&#39;,
+   &#39;base-typography&#39;: &#39;_base/_typography&#39;,
+   &#39;layout-grid&#39;: &#39;_layout/_grid&#39;,
+   &#39;modules-alerts&#39;: &#39;_modules/_alerts&#39;,
+   &#39;modules-teasers&#39;: &#39;_modules/_teasers&#39;,
+   &#39;theme-skin&#39;: &#39;_theme/_skin&#39;
 }
 
 @require `colette.styl` /* will only &#39;@require&#39; files listed in &#39;$css-main */
 
 /* my custom styles */
-</code></pre><p><strong>Usage example of <code>$css-critical</code></strong></p>
+</code></pre><p><strong>Example 2: handle critical css`</strong></p>
 <p>You need to create a specific stylus file to handle your critical css.</p>
 <pre><code>/* my_criticalcss_file.styl */
 
 $css-critical = {
-   &#39;modules-avatar&#39; : &#39;_modules/_avatar&#39;,
-   &#39;modules-breadcrumb&#39; : &#39;_modules/_breadcrumb&#39;,
-   &#39;modules-buttons&#39; : &#39;_modules/_buttons&#39;,
-   &#39;modules-socialbar&#39; : &#39;_modules/_socialbar&#39;,
-   &#39;modules-tabs&#39; : &#39;_modules/_tabs&#39;,
+   &#39;modules-avatar&#39;: &#39;_modules/_avatar&#39;,
+   &#39;modules-breadcrumb&#39;: &#39;_modules/_breadcrumb&#39;,
+   &#39;modules-buttons&#39;: &#39;_modules/_buttons&#39;,
+   &#39;modules-socialbar&#39;: &#39;_modules/_socialbar&#39;,
+   &#39;modules-tabs&#39;: &#39;_modules/_tabs&#39;,
 }
 
 /* @require files */
