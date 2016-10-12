@@ -1284,84 +1284,72 @@ footer a:hover {
  */
 @media screen and (min-width: 420px) {
   .col-sm-1 {
-    float: left;
     width: 8.333%;
   }
   .offset-sm-1 {
     margin-left: 8.333%;
   }
   .col-sm-2 {
-    float: left;
     width: 16.667%;
   }
   .offset-sm-2 {
     margin-left: 16.667%;
   }
   .col-sm-3 {
-    float: left;
     width: 25%;
   }
   .offset-sm-3 {
     margin-left: 25%;
   }
   .col-sm-4 {
-    float: left;
     width: 33.333%;
   }
   .offset-sm-4 {
     margin-left: 33.333%;
   }
   .col-sm-5 {
-    float: left;
     width: 41.667%;
   }
   .offset-sm-5 {
     margin-left: 41.667%;
   }
   .col-sm-6 {
-    float: left;
     width: 50%;
   }
   .offset-sm-6 {
     margin-left: 50%;
   }
   .col-sm-7 {
-    float: left;
     width: 58.333%;
   }
   .offset-sm-7 {
     margin-left: 58.333%;
   }
   .col-sm-8 {
-    float: left;
     width: 66.667%;
   }
   .offset-sm-8 {
     margin-left: 66.667%;
   }
   .col-sm-9 {
-    float: left;
     width: 75%;
   }
   .offset-sm-9 {
     margin-left: 75%;
   }
   .col-sm-10 {
-    float: left;
     width: 83.333%;
   }
   .offset-sm-10 {
     margin-left: 83.333%;
   }
   .col-sm-11 {
-    float: left;
     width: 91.667%;
   }
   .offset-sm-11 {
     margin-left: 91.667%;
   }
   .col-sm-12 {
-    float: left;
     width: 100%;
   }
   .offset-sm-12 {
@@ -1370,84 +1358,72 @@ footer a:hover {
 }
 @media screen and (min-width: 768px) {
   .col-md-1 {
-    float: left;
     width: 8.333%;
   }
   .offset-md-1 {
     margin-left: 8.333%;
   }
   .col-md-2 {
-    float: left;
     width: 16.667%;
   }
   .offset-md-2 {
     margin-left: 16.667%;
   }
   .col-md-3 {
-    float: left;
     width: 25%;
   }
   .offset-md-3 {
     margin-left: 25%;
   }
   .col-md-4 {
-    float: left;
     width: 33.333%;
   }
   .offset-md-4 {
     margin-left: 33.333%;
   }
   .col-md-5 {
-    float: left;
     width: 41.667%;
   }
   .offset-md-5 {
     margin-left: 41.667%;
   }
   .col-md-6 {
-    float: left;
     width: 50%;
   }
   .offset-md-6 {
     margin-left: 50%;
   }
   .col-md-7 {
-    float: left;
     width: 58.333%;
   }
   .offset-md-7 {
     margin-left: 58.333%;
   }
   .col-md-8 {
-    float: left;
     width: 66.667%;
   }
   .offset-md-8 {
     margin-left: 66.667%;
   }
   .col-md-9 {
-    float: left;
     width: 75%;
   }
   .offset-md-9 {
     margin-left: 75%;
   }
   .col-md-10 {
-    float: left;
     width: 83.333%;
   }
   .offset-md-10 {
     margin-left: 83.333%;
   }
   .col-md-11 {
-    float: left;
     width: 91.667%;
   }
   .offset-md-11 {
     margin-left: 91.667%;
   }
   .col-md-12 {
-    float: left;
     width: 100%;
   }
   .offset-md-12 {
@@ -1456,84 +1432,72 @@ footer a:hover {
 }
 @media screen and (min-width: 960px) {
   .col-lg-1 {
-    float: left;
     width: 8.333%;
   }
   .offset-lg-1 {
     margin-left: 8.333%;
   }
   .col-lg-2 {
-    float: left;
     width: 16.667%;
   }
   .offset-lg-2 {
     margin-left: 16.667%;
   }
   .col-lg-3 {
-    float: left;
     width: 25%;
   }
   .offset-lg-3 {
     margin-left: 25%;
   }
   .col-lg-4 {
-    float: left;
     width: 33.333%;
   }
   .offset-lg-4 {
     margin-left: 33.333%;
   }
   .col-lg-5 {
-    float: left;
     width: 41.667%;
   }
   .offset-lg-5 {
     margin-left: 41.667%;
   }
   .col-lg-6 {
-    float: left;
     width: 50%;
   }
   .offset-lg-6 {
     margin-left: 50%;
   }
   .col-lg-7 {
-    float: left;
     width: 58.333%;
   }
   .offset-lg-7 {
     margin-left: 58.333%;
   }
   .col-lg-8 {
-    float: left;
     width: 66.667%;
   }
   .offset-lg-8 {
     margin-left: 66.667%;
   }
   .col-lg-9 {
-    float: left;
     width: 75%;
   }
   .offset-lg-9 {
     margin-left: 75%;
   }
   .col-lg-10 {
-    float: left;
     width: 83.333%;
   }
   .offset-lg-10 {
     margin-left: 83.333%;
   }
   .col-lg-11 {
-    float: left;
     width: 91.667%;
   }
   .offset-lg-11 {
     margin-left: 91.667%;
   }
   .col-lg-12 {
-    float: left;
     width: 100%;
   }
   .offset-lg-12 {
@@ -1803,10 +1767,11 @@ footer a:hover {
   border-color: #3c7a09 !important;
 }
 .form-help {
+  padding-top: 0.3em;
   color: #878787;
   font-size: 0.88em;
   font-style: italic;
-  line-height: 1.2;
+  line-height: 1.1;
 }
 .form-help-error {
   color: #cc190f;
