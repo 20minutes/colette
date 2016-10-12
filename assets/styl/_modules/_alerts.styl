@@ -14,11 +14,20 @@ _alert(color)
     background-color lighten(desaturate(color, 10%), 90%)
     color color
 
+    a
+        color color
+
 .alert
     padding 1em
     border-radius .3em
     background-color $color-base-lighten
     color $color-base
+
+    a
+        text-decoration underline
+
+        &:hover
+            text-decoration none
 
     &-info
         _alert($color-default)
@@ -31,3 +40,4 @@ _alert(color)
 
     &-error
         _alert($color-error)
+

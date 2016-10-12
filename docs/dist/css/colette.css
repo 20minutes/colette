@@ -1546,20 +1546,38 @@ footer a:hover {
   background-color: #e7e7e7;
   color: #4c4d4e;
 }
+.alert a {
+  text-decoration: underline;
+}
+.alert a:hover {
+  text-decoration: none;
+}
 .alert-info {
   background-color: #e0ecfb;
+  color: #0b4892;
+}
+.alert-info a {
   color: #0b4892;
 }
 .alert-success {
   background-color: #ebfbdd;
   color: #3c7a09;
 }
+.alert-success a {
+  color: #3c7a09;
+}
 .alert-warning {
   background-color: #fcede1;
   color: #b05105;
 }
+.alert-warning a {
+  color: #b05105;
+}
 .alert-error {
   background-color: #fce6e5;
+  color: #cc190f;
+}
+.alert-error a {
   color: #cc190f;
 }
 .avatar {
@@ -1803,10 +1821,11 @@ footer a:hover {
   border-color: #3c7a09 !important;
 }
 .form-help {
+  padding-top: 0.3em;
   color: #878787;
   font-size: 0.88em;
   font-style: italic;
-  line-height: 1.2;
+  line-height: 1.1;
 }
 .form-help-error {
   color: #cc190f;
