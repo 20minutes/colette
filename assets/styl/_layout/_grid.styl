@@ -17,9 +17,11 @@
 // Generate grid columns.
 //
 // size     : the number of columns (out of 12) it must span
+// flt      : the float direction (default: left, if set to none, the property won't be output)
 //
 // Styleguide Layout.Grid.Mixins.Columns
-_column(size)
+_column(size, flt=left)
+    float unquote(flt) if none != unquote(flt)
     width round(size * 100 / $columns, 3) * 1%
 
 _offset(size)
