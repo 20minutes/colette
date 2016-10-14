@@ -303,8 +303,7 @@ a[data-icon-after] {
   width: 1px;
   height: 1px;
   overflow: hidden;
-  right: auto;
-  bottom: auto;
+  white-space: nowrap;
 }
 [data-icon] p,
 [data-icon-after] p,
@@ -586,8 +585,7 @@ a[data-icon-after] {
   width: 1px;
   height: 1px;
   overflow: hidden;
-  right: auto;
-  bottom: auto;
+  white-space: nowrap;
 }
 /* Create mixins to add gutter-based paddings and margins */
 /* @TODO: allow breakpoint option */
