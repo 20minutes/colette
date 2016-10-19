@@ -1,0 +1,215 @@
+// Spaces
+//
+// Spaces mixins return `margin` and `padding` properties based on a multiple of the `$gutter` size.
+// <br /> Note that `$gutter` value is defined in Colette's settings, but it can be overridden in your project stylus file.
+//
+// Styleguide Mixins.Spaces
+
+// _pa()
+//
+// Returns a `padding` based on `$gutter` value.
+// ```
+// /* my_file.styl */
+// $gutter = 20px // overrides colette's default value
+// _pa(1)
+// ```
+// will compile to
+// ```
+// /* my_file.css */
+// padding: 20px;
+// ```
+//
+// $i   - multiplier of `$gutter`
+//
+// Styleguide Mixins.Spaces.pa
+_pa(i)
+    padding i * $gutter * .1rem
+
+
+// _pt()
+//
+// Returns a `padding-top` based on `$gutter` value.
+// ```
+// /* my_file.styl */
+// $gutter = 20px // overrides colette's default value
+// _pt(1)
+// ```
+// will compile to
+// ```
+// /* my_file.css */
+// padding-top: 20px;
+// ```
+//
+// $i   - multiplier of `$gutter`
+//
+// Styleguide Mixins.Spaces.pt
+_pt(i)
+    padding-top i * $gutter * .1rem
+
+
+// _pr()
+//
+// Returns a `padding-right` based on `$gutter` value.
+// ```
+// /* my_file.styl */
+// $gutter = 20px // overrides colette's default value
+// _pr(1)
+// ```
+// will compile to
+// ```
+// /* my_file.css */
+// padding-right: 20px;
+// ```
+//
+// $i   - multiplier of `$gutter`
+//
+// Styleguide Mixins.Spaces.pr
+_pr(i)
+    padding-right i * $gutter * .1rem
+
+
+// _pb()
+//
+// Returns a `padding-bottom` based on `$gutter` value.
+// ```
+// /* my_file.styl */
+// $gutter = 20px // overrides colette's default value
+// _pb(1)
+// ```
+// will compile to
+// ```
+// /* my_file.css */
+// padding-bottom: 20px;
+// ```
+//
+// $i   - multiplier of `$gutter`
+//
+// Styleguide Mixins.Spaces.pb
+_pb(i)
+    padding-bottom i * $gutter * .1rem
+
+
+// _pl()
+//
+// Returns a `padding-left` based on `$gutter` value.
+// ```
+// /* my_file.styl */
+// $gutter = 20px // overrides colette's default value
+// _pl(1)
+// ```
+// will compile to
+// ```
+// /* my_file.css */
+// padding-left: 20px;
+// ```
+//
+// $i   - multiplier of `$gutter`
+//
+// Styleguide Mixins.Spaces.pl
+_pl(i)
+    padding-left i * $gutter * .1rem
+
+
+// _ma()
+//
+// Returns a `margin` based on `$gutter` value.
+// ```
+// /* my_file.styl */
+// $gutter = 20px // overrides colette's default value
+// _ma(1)
+// ```
+// will compile to
+// ```
+// /* my_file.css */
+// margin: 20px;
+// ```
+//
+// $i   - multiplier of `$gutter`
+//
+// Styleguide Mixins.Spaces.ma
+_ma(i)
+    margin i * $gutter * .1rem
+
+
+// _mt()
+//
+// Returns a `margin-top` based on `$gutter` value.
+// ```
+// /* my_file.styl */
+// $gutter = 20px // overrides colette's default value
+// _mt(1)
+// ```
+// will compile to
+// ```
+// /* my_file.css */
+// margin-top: 20px;
+// ```
+//
+// $i   - multiplier of `$gutter`
+//
+// Styleguide Mixins.Spaces.mt
+_mt(i)
+    margin-top i * $gutter * .1rem
+
+
+// _mr()
+//
+// Returns a `margin-right` based on `$gutter` value.
+// ```
+// /* my_file.styl */
+// $gutter = 20px // overrides colette's default value
+// _mr(1)
+// ```
+// will compile to
+// ```
+// /* my_file.css */
+// margin-right: 20px;
+// ```
+//
+// $i   - multiplier of `$gutter`
+//
+// Styleguide Mixins.Spaces.mr
+_mr(i)
+    margin-right i * $gutter * .1rem
+
+
+// _mb()
+//
+// Returns a `margin-bottom` based on `$gutter` value.
+// ```
+// /* my_file.styl */
+// $gutter = 20px // overrides colette's default value
+// _mb(1)
+// ```
+// will compile to
+// ```
+// /* my_file.css */
+// margin-bottom: 20px;
+// ```
+//
+// $i   - multiplier of `$gutter`
+//
+// Styleguide Mixins.Spaces.mb
+_mb(i)
+    margin-bottom i * $gutter * .1rem
+
+
+// _ml()
+//
+// Returns a `margin-left` based on `$gutter` value.
+// ```
+// /* my_file.styl */
+// $gutter = 20px // overrides colette's default value
+// _ml(1)
+// ```
+// will compile to
+// ```
+// /* my_file.css */
+// margin-left: 20px;
+// ```
+//
+// $i   - multiplier of `$gutter`
+//
+// Styleguide Mixins.Spaces.ml
+_ml(i)
+    margin-left i * $gutter * .1rem
