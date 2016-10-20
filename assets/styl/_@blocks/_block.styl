@@ -1,6 +1,6 @@
 // @blocks: Block elements
 //
-// Styleguide @blocks.Block@Blocks
+// Styleguide @blocks.Block
 
 // {clearfix}
 //
@@ -24,7 +24,7 @@
 //         visibility hidden
 // ```
 //
-// Styleguide @blocks.Block@Blocks.clearfix
+// Styleguide @blocks.Block.clearfix
 clearfix = @block
     &:after
         content ''
@@ -53,17 +53,16 @@ clearfix = @block
 //    height auto
 // ```
 //
-// Styleguide @blocks.Block@Blocks.fullWidth
+// Styleguide @blocks.Block.fullWidth
 fullWidth = @block
     display block
     width 100%
-    max-width 100%
-    height auto
+    height auto // overrides images `height` attribute|property
 
 // {inlined}
 //
 // Makes an element display inline.
-// If applied to a `<ul>` tag, all its `<li>` children will be displayed inline as well.
+// If applied to a `<ul>` or `<ol>` tag, all its `<li>` children will be displayed inline as well.
 //
 // **Usage**
 // ```
@@ -81,7 +80,7 @@ fullWidth = @block
 //            display inline
 // ```
 //
-// Styleguide @blocks.Block@Blocks.inlined
+// Styleguide @blocks.Block.inlined
 inlined = @block
     display inline
 
