@@ -1,0 +1,88 @@
+// @blocks: Block elements
+//
+// Styleguide @blocks.Block
+
+// {clearfix}
+//
+// Adds a clearfix bahavior on containers that have floating children.
+//
+// **Usage**
+// ```
+// /* my_file.styl */
+// .foo
+//     {clearfix}
+// ```
+// will compile to
+// ```
+// /* my_file.css */
+// .foo
+//     &:after
+//         content ''
+//         display block
+//         height 0
+//         clear both
+//         visibility hidden
+// ```
+//
+// Styleguide @blocks.Block.clearfix
+clearfix = @block
+    &:after
+        content ''
+        display block
+        height 0
+        clear both
+        visibility hidden
+
+// {fullWidth}
+//
+// Streches an element to match the width of its parent.
+//
+// **Usage**
+// ```
+// /* my_file.styl */
+// .foo
+//     {fullWidth}
+// ```
+// will compile to
+// ```
+// /* my_file.css */
+// .foo
+//    display block
+//    width 100%
+//    max-width 100%
+//    height auto
+// ```
+//
+// Styleguide @blocks.Block.fullWidth
+fullWidth = @block
+    display block
+    width 100%
+    height auto // overrides images `height` attribute|property
+
+// {inlined}
+//
+// Makes an element display inline.
+// If applied to a `<ul>` or `<ol>` tag, all its `<li>` children will be displayed inline as well.
+//
+// **Usage**
+// ```
+// /* my_file.styl */
+// .foo
+//     {inlined}
+// ```
+// will compile to
+// ```
+// /* my_file.css */
+// .foo
+//    display inline
+//
+//        > li
+//            display inline
+// ```
+//
+// Styleguide @blocks.Block.inlined
+inlined = @block
+    display inline
+
+        > li
+            display inline

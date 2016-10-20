@@ -1,58 +1,27 @@
 // Spaces
 //
-// A set of margins and paddings, based on a 1.2rem gutter width.
+// Colette provides a set of margin and padding classes based on the `$gutter` size.
+// <br /> Note that `$gutter` value is defined in Colette's settings, but it can be overridden in your project stylus file.
 //
-// A margin or padding is a multiple (from 1 to 6) of the gutter width,
+// Margins or paddings are multipliers (from 1 to 6) of the gutter width,
 // and can be applied either on top | right | bottom | left | all side(s) of an element.
 //
-// <ul>
-// <li>**pt[n]**: padding-top: [n] x 1.2rem</li>
-// <li>**pr[n]**: padding-right: [n] x 1.2rem</li>
-// <li>**pb[n]**: padding-bottom: [n] x 1.2rem</li>
-// <li>**pl[n]**: padding-left: [n] x 1.2rem</li>
-// <li>**pa[n]**: padding: [n] x 1.2rem</li>
-// <li>**mt[n]**: margin-top: [n] x 1.2rem</li>
-// <li>**mr[n]**: margin-right: [n] x 1.2rem</li>
-// <li>**mb[n]**: margin-bottom: [n] x 1.2rem</li>
-// <li>**ml[n]**: margin-left: [n] x 1.2rem</li>
-// <li>**ma[n]**: margin: [n] x 1.2rem</li>
-// </ul>
+// The suffix of the class names indicates the multiplier of the gutter.
 //
 // Markup: spaces.twig
 //
+// .ma1    - Sets `margin` to **1 x gutter size** (also available: `.ma2`, `.ma3`, `.ma4`, `.ma5`, `.ma6`)
+// .mt1    - Sets `margin-to` to **1 x gutter size** (also available: `.mr2`, `.mr3`, `.mr4`, `.mr5`, `.mr6`)
+// .mr1    - Sets `margin-right` to **1 x gutter size** (also available: `.mr2`, `.mr3`, `.mr4`, `.mr5`, `.mr6`)
+// .mb1    - Sets `margin-bottom` to **1 x gutter size** (also available: `.mb2`, `.mb3`, `.mb4`, `.mb5`, `.mb6`)
+// .ml1    - Sets `margin-left` to **1 x gutter size** (also available: `.ml2`, `.ml3`, `.ml4`, `.ml5`, `.ml6`)
+// .pa1    - Sets `padding` to **1 x gutter size** (also available: `.pa2`, `.pa3`, `.pa4`, `.pa5`, `.pa6`)
+// .pt1    - Sets `padding-top` to **1 x gutter size** (also available: `.pa2`, `.pa3`, `.pa4`, `.pa5`, `.pa6`)
+// .pr1    - Sets `padding-right` to **1 x gutter size** (also available: `.pr2`, `.pr3`, `.pr4`, `.pr5`, `.pr6`)
+// .pb1    - Sets `padding-bottom` to **1 x gutter size** (also available: `.pb2`, `.pb3`, `.pb4`, `.pb5`, `.pb6`)
+// .pl1    - Sets `padding-left` to **1 x gutter size** (also available: `.pl2`, `.pl3`, `.pl4`, `.pl5`, `.pl6`)
+//
 // Styleguide Helpers.Spaces
-
-/* Create mixins to add gutter-based paddings and margins */
-/* @TODO: allow breakpoint option */
-_pa(i)
-    padding i * $gutter * .1rem
-
-_pt(i)
-    padding-top i * $gutter * .1rem
-
-_pr(i)
-    padding-right i * $gutter * .1rem
-
-_pb(i)
-    padding-bottom i * $gutter * .1rem
-
-_pl(i)
-    padding-left i * $gutter * .1rem
-
-_ma(i)
-    margin i * $gutter * .1rem
-
-_mt(i)
-    margin-top i * $gutter * .1rem
-
-_mr(i)
-    margin-right i * $gutter * .1rem
-
-_mb(i)
-    margin-bottom i * $gutter * .1rem
-
-_ml(i)
-    margin-left i * $gutter * .1rem
 
 /* Set a few default helpers */
 for i in (0..6)

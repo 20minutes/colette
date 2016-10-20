@@ -99,6 +99,9 @@
                                     <li>
                         <a href="section-mixins.html">Mixins</a>
                     </li>
+                                    <li>
+                        <a href="section--blocks.html">@blocks</a>
+                    </li>
                             </ul>
         </div>
     </nav>
@@ -163,8 +166,8 @@
                             <div class="co_subsection clearfix">
                     <p class="co_subsection-title col-md-3">Description</p>
                     <div class="co_subsection-content col-md-9">
-                        <p>return true if constast is OK</p>
-<p>return false and throw a warning message if it’s not</p>
+                        <p>Returns true if constast is OK.</p>
+<p>Returns false and throws a warning message if it’s not.</p>
 
                     </div>
                 </div>
@@ -186,11 +189,11 @@
                                                     <p><code>$foreground-color</code> </p>
                             <p>text color to check</p>
 
-                                                    <p><code>$background-color</code> </p>
-                            <p>background color to compare. default $color-white</p>
+                                                    <p><code>$background-color</code> (<code>$color-white</code>)</p>
+                            <p>background color to compare</p>
 
-                                                    <p><code>$min</code> </p>
-                            <p>minimum contrast ratio. default $contrast</p>
+                                                    <p><code>$min</code> (<code>$contrast</code>)</p>
+                            <p>minimum contrast ratio</p>
 
                                             </div>
                 </div>
@@ -222,7 +225,7 @@
                             <div class="co_subsection clearfix">
                     <p class="co_subsection-title col-md-3">Description</p>
                     <div class="co_subsection-content col-md-9">
-                        <p>hide text but keep it readable for screen-readers</p>
+                        <p>Hides text but keeps it readable for screen-readers.</p>
 <p>@TODO: remove vendorprefix to use autoprefixer</p>
 
                     </div>
@@ -244,6 +247,631 @@
                     <div class="co_subsection-content co_parameters col-md-9">
                                                     <p><code>$important</code> (<code>false</code>)</p>
                             <p>If set to <code>true</code>, makes all rules <code>!important</code></p>
+
+                                            </div>
+                </div>
+            
+        </section>
+                                            <section id="kssref-mixins-spaces" class="co_section-depth-2  co_content pl2 pr2">
+
+
+            
+                        <h2 class="co_section-h2">
+                
+                                    <a href="#kssref-mixins-spaces">
+                                    <strong class="co_section-ref">7.3</strong>
+                    Spaces
+                                    </a>
+                            </h2>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_mixins/_spaces.styl</code>
+                    </p>
+                </div>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Spaces mixins return <code>margin</code> and <code>padding</code> properties based on a multiple of the <code>$gutter</code> size.
+<br /> Note that <code>$gutter</code> value is defined in Colette&#39;s settings, but it can be overridden in your project stylus file.</p>
+
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+        </section>
+                                            <section id="kssref-mixins-spaces-ma" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3">
+                
+                                    <a href="#kssref-mixins-spaces-ma">
+                                    <strong class="co_section-ref">7.3.1</strong>
+                    _ma()
+                                    </a>
+                            </h3>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_mixins/_spaces.styl, Line: line 113</code>
+                    </p>
+                </div>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Returns a <code>margin</code> based on <code>$gutter</code> value.</p>
+<pre><code>/* my_file.styl */
+$gutter = 20px // overrides colette&#39;s default value
+_ma(1)
+</code></pre><p>will compile to</p>
+<pre><code>/* my_file.css */
+margin: 20px;
+</code></pre>
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Parameters</p>
+                    <div class="co_subsection-content co_parameters col-md-9">
+                                                    <p><code>$i</code> </p>
+                            <p>multiplier of <code>$gutter</code></p>
+
+                                            </div>
+                </div>
+            
+        </section>
+                                            <section id="kssref-mixins-spaces-mb" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3">
+                
+                                    <a href="#kssref-mixins-spaces-mb">
+                                    <strong class="co_section-ref">7.3.2</strong>
+                    _mb()
+                                    </a>
+                            </h3>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_mixins/_spaces.styl, Line: line 176</code>
+                    </p>
+                </div>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Returns a <code>margin-bottom</code> based on <code>$gutter</code> value.</p>
+<pre><code>/* my_file.styl */
+$gutter = 20px // overrides colette&#39;s default value
+_mb(1)
+</code></pre><p>will compile to</p>
+<pre><code>/* my_file.css */
+margin-bottom: 20px;
+</code></pre>
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Parameters</p>
+                    <div class="co_subsection-content co_parameters col-md-9">
+                                                    <p><code>$i</code> </p>
+                            <p>multiplier of <code>$gutter</code></p>
+
+                                            </div>
+                </div>
+            
+        </section>
+                                            <section id="kssref-mixins-spaces-ml" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3">
+                
+                                    <a href="#kssref-mixins-spaces-ml">
+                                    <strong class="co_section-ref">7.3.3</strong>
+                    _ml()
+                                    </a>
+                            </h3>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_mixins/_spaces.styl, Line: line 197</code>
+                    </p>
+                </div>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Returns a <code>margin-left</code> based on <code>$gutter</code> value.</p>
+<pre><code>/* my_file.styl */
+$gutter = 20px // overrides colette&#39;s default value
+_ml(1)
+</code></pre><p>will compile to</p>
+<pre><code>/* my_file.css */
+margin-left: 20px;
+</code></pre>
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Parameters</p>
+                    <div class="co_subsection-content co_parameters col-md-9">
+                                                    <p><code>$i</code> </p>
+                            <p>multiplier of <code>$gutter</code></p>
+
+                                            </div>
+                </div>
+            
+        </section>
+                                            <section id="kssref-mixins-spaces-mr" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3">
+                
+                                    <a href="#kssref-mixins-spaces-mr">
+                                    <strong class="co_section-ref">7.3.4</strong>
+                    _mr()
+                                    </a>
+                            </h3>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_mixins/_spaces.styl, Line: line 155</code>
+                    </p>
+                </div>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Returns a <code>margin-right</code> based on <code>$gutter</code> value.</p>
+<pre><code>/* my_file.styl */
+$gutter = 20px // overrides colette&#39;s default value
+_mr(1)
+</code></pre><p>will compile to</p>
+<pre><code>/* my_file.css */
+margin-right: 20px;
+</code></pre>
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Parameters</p>
+                    <div class="co_subsection-content co_parameters col-md-9">
+                                                    <p><code>$i</code> </p>
+                            <p>multiplier of <code>$gutter</code></p>
+
+                                            </div>
+                </div>
+            
+        </section>
+                                            <section id="kssref-mixins-spaces-mt" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3">
+                
+                                    <a href="#kssref-mixins-spaces-mt">
+                                    <strong class="co_section-ref">7.3.5</strong>
+                    _mt()
+                                    </a>
+                            </h3>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_mixins/_spaces.styl, Line: line 134</code>
+                    </p>
+                </div>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Returns a <code>margin-top</code> based on <code>$gutter</code> value.</p>
+<pre><code>/* my_file.styl */
+$gutter = 20px // overrides colette&#39;s default value
+_mt(1)
+</code></pre><p>will compile to</p>
+<pre><code>/* my_file.css */
+margin-top: 20px;
+</code></pre>
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Parameters</p>
+                    <div class="co_subsection-content co_parameters col-md-9">
+                                                    <p><code>$i</code> </p>
+                            <p>multiplier of <code>$gutter</code></p>
+
+                                            </div>
+                </div>
+            
+        </section>
+                                            <section id="kssref-mixins-spaces-pa" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3">
+                
+                                    <a href="#kssref-mixins-spaces-pa">
+                                    <strong class="co_section-ref">7.3.6</strong>
+                    _pa()
+                                    </a>
+                            </h3>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_mixins/_spaces.styl, Line: line 8</code>
+                    </p>
+                </div>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Returns a <code>padding</code> based on <code>$gutter</code> value.</p>
+<pre><code>/* my_file.styl */
+$gutter = 20px // overrides colette&#39;s default value
+_pa(1)
+</code></pre><p>will compile to</p>
+<pre><code>/* my_file.css */
+padding: 20px;
+</code></pre>
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Parameters</p>
+                    <div class="co_subsection-content co_parameters col-md-9">
+                                                    <p><code>$i</code> </p>
+                            <p>multiplier of <code>$gutter</code></p>
+
+                                            </div>
+                </div>
+            
+        </section>
+                                            <section id="kssref-mixins-spaces-pb" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3">
+                
+                                    <a href="#kssref-mixins-spaces-pb">
+                                    <strong class="co_section-ref">7.3.7</strong>
+                    _pb()
+                                    </a>
+                            </h3>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_mixins/_spaces.styl, Line: line 71</code>
+                    </p>
+                </div>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Returns a <code>padding-bottom</code> based on <code>$gutter</code> value.</p>
+<pre><code>/* my_file.styl */
+$gutter = 20px // overrides colette&#39;s default value
+_pb(1)
+</code></pre><p>will compile to</p>
+<pre><code>/* my_file.css */
+padding-bottom: 20px;
+</code></pre>
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Parameters</p>
+                    <div class="co_subsection-content co_parameters col-md-9">
+                                                    <p><code>$i</code> </p>
+                            <p>multiplier of <code>$gutter</code></p>
+
+                                            </div>
+                </div>
+            
+        </section>
+                                            <section id="kssref-mixins-spaces-pl" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3">
+                
+                                    <a href="#kssref-mixins-spaces-pl">
+                                    <strong class="co_section-ref">7.3.8</strong>
+                    _pl()
+                                    </a>
+                            </h3>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_mixins/_spaces.styl, Line: line 92</code>
+                    </p>
+                </div>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Returns a <code>padding-left</code> based on <code>$gutter</code> value.</p>
+<pre><code>/* my_file.styl */
+$gutter = 20px // overrides colette&#39;s default value
+_pl(1)
+</code></pre><p>will compile to</p>
+<pre><code>/* my_file.css */
+padding-left: 20px;
+</code></pre>
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Parameters</p>
+                    <div class="co_subsection-content co_parameters col-md-9">
+                                                    <p><code>$i</code> </p>
+                            <p>multiplier of <code>$gutter</code></p>
+
+                                            </div>
+                </div>
+            
+        </section>
+                                            <section id="kssref-mixins-spaces-pr" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3">
+                
+                                    <a href="#kssref-mixins-spaces-pr">
+                                    <strong class="co_section-ref">7.3.9</strong>
+                    _pr()
+                                    </a>
+                            </h3>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_mixins/_spaces.styl, Line: line 50</code>
+                    </p>
+                </div>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Returns a <code>padding-right</code> based on <code>$gutter</code> value.</p>
+<pre><code>/* my_file.styl */
+$gutter = 20px // overrides colette&#39;s default value
+_pr(1)
+</code></pre><p>will compile to</p>
+<pre><code>/* my_file.css */
+padding-right: 20px;
+</code></pre>
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Parameters</p>
+                    <div class="co_subsection-content co_parameters col-md-9">
+                                                    <p><code>$i</code> </p>
+                            <p>multiplier of <code>$gutter</code></p>
+
+                                            </div>
+                </div>
+            
+        </section>
+                                            <section id="kssref-mixins-spaces-pt" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3">
+                
+                                    <a href="#kssref-mixins-spaces-pt">
+                                    <strong class="co_section-ref">7.3.10</strong>
+                    _pt()
+                                    </a>
+                            </h3>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_mixins/_spaces.styl, Line: line 29</code>
+                    </p>
+                </div>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Returns a <code>padding-top</code> based on <code>$gutter</code> value.</p>
+<pre><code>/* my_file.styl */
+$gutter = 20px // overrides colette&#39;s default value
+_pt(1)
+</code></pre><p>will compile to</p>
+<pre><code>/* my_file.css */
+padding-top: 20px;
+</code></pre>
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Parameters</p>
+                    <div class="co_subsection-content co_parameters col-md-9">
+                                                    <p><code>$i</code> </p>
+                            <p>multiplier of <code>$gutter</code></p>
 
                                             </div>
                 </div>

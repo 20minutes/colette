@@ -13,7 +13,7 @@
 
 .spinner
     > span
-        @extends .inline-block
+        display inline-block
         width 1.8rem
         height @width
         margin 0 .3rem
@@ -25,9 +25,9 @@
 
 .spinner-small
     > span
-        @extends $.bg-base
         width .9rem
         height @width
+        background-color $color-base
 
 .spinner .bounce1
 .spinner .bounce2

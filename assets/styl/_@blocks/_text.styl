@@ -1,0 +1,96 @@
+// @blocks: Text elements
+//
+// Styleguide @blocks.Text
+
+// {icon}
+//
+// Affects the `:before` and `:after` pseudo-elements, by assigning the properties of the icon fonts to them.
+//
+// **Usage**
+// ```
+// /* my_file.styl */
+// .foo
+//     {icon}
+// ```
+// will compile to
+// ```
+// /* my_file.css */
+// .foo
+//    &:before
+//    &:after
+//        font-family $font-icon
+//        speak none
+//        font-weight normal
+//        font-variant normal
+//        text-transform none
+//        line-height 1
+// ```
+//
+// Styleguide @blocks.Text.icon
+icon = @block
+    &:before
+    &:after
+        font-family $font-icon
+        speak none
+        font-weight normal
+        font-variant normal
+        text-transform none
+        line-height 1
+
+// {fontSecondary}
+//
+// Assigns the properties of the `.font-secondary` class to an element.
+//
+// **Usage**
+// ```
+// /* my_file.styl */
+// .foo
+//     {fontSecondary}
+// ```
+// will compile to
+// ```
+// /* my_file.css */
+// .foo
+//    font-family $font-secondary
+//    font-weight bold
+//    font-size 1.1rem
+//    text-transform uppercase
+// ```
+//
+// Styleguide @blocks.Text.fontSecondary
+fontSecondary = @block
+    font-family $font-secondary
+    font-weight bold
+    font-size 1.1rem
+    text-transform uppercase
+
+// {listPosOutside}
+//
+// Override the default positionning of the `list-style-position: outside`.
+//
+// **Usage**
+// ```
+// /* my_file.styl */
+// .foo
+//     {listPosOutside}
+// ```
+// will compile to
+// ```
+// /* my_file.css */
+// .foo
+//    &
+//    li
+//        list-style-position inside
+//        padding-left 1em
+//        text-indent -1em
+// ```
+//
+// Styleguide @blocks.Text.listPosOutside
+listPosOutside = @block
+    &
+    li
+        list-style-position inside
+        padding-left 1em
+        text-indent -1em
+
+

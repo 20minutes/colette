@@ -109,49 +109,457 @@
     
     <article role="main" id="co_page" class="pt4 pb6">
         
-                    <div id="kssref-homepage" class="co_section-depth-1  pl2 pr2">
-                <h1 class="co_section-h1 co_content pl2 pr2">About</h1>
-            </div>
-            <section id="kssref-homepage" class="co_section-home co_section-depth-2  co_content pl2 pr2">
-                <h1 id="introducing-colette">Introducing Colette</h1>
-<p>Colette is a css and js starter kit for 20 Minutes web projects.
-It provides basic styles and mixins to build responsive layouts, 
-based on the 20 Minutes digital identity guidelines.</p>
-<hr>
-<h2 id="features">Features</h2>
-<ul>
-<li>basic typography: headings, body text, lists, etc.</li>
-<li>helpers: colors, borders, icons, etc.</li>
-<li>grid system: 12-columns based, with customizable breakpoints</li>
-<li>ready-to-use html/css components: buttons, navbar, socialbar, 
-content teasers, media, and loading animation</li>
-</ul>
-<hr>
-<h2 id="dependencies">Dependencies</h2>
-<ul>
-<li><a href="https://github.com/WickyNilliams/headroom.js">Headroom.js</a> 
-by <a href="https://github.com/WickyNilliams">Nick Williams</a>: 
-a lightweight, high-performance JS widget (with no dependencies!)
-that allows you to react to the user&#39;s scroll.</li>
-</ul>
-<hr>
-<h2 id="installation">Installation</h2>
-<p><strong>Install with Bower</strong></p>
-<pre><code>bower install colette --save
-</code></pre><p><strong>Install with npm</strong></p>
-<pre><code>npm install colette --save
-</code></pre><hr>
-<h2 id="download">Download</h2>
-<ul>
-<li>See the <a href="https://github.com/20minutes/colette/dist/"><code>dist/</code></a> 
-directory for ready-to-use css files.</li>
-<li>If you want to use Colette as a kickstarter for custom stylus/css 
-projects, check <a href="https://github.com/20minutes/colette/assets/"><code>src/</code></a>.</li>
-</ul>
+        
+        
+                                            <div id="kssref--blocks" class="co_section-depth-1  pl2 pr2">
 
-            </section>
-        
-        
+
+            
+                        <h1 class="co_section-h1 co_content pl2 pr2">
+                
+                                    <strong class="co_section-ref">8</strong>
+                    @blocks
+                            </h1>
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix co_content">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p><a href="http://stylus-lang.com/docs/block.html">Stylus @block</a> let you assign any block of code to a variable and then call it, pass as an argument or reuse in any other way.
+Colette takes avantage of this feature to define common and reusable pieces of css code.</p>
+
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+        </div>
+                                            <section id="kssref--blocks-block" class="co_section-depth-2  co_content pl2 pr2">
+
+
+            
+                        <h2 class="co_section-h2">
+                
+                                    <a href="#kssref--blocks-block">
+                                    <strong class="co_section-ref">8.1</strong>
+                    @blocks: Block elements
+                                    </a>
+                            </h2>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_@blocks/_block.styl</code>
+                    </p>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+        </section>
+                                            <section id="kssref--blocks-block-clearfix" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3">
+                
+                                    <a href="#kssref--blocks-block-clearfix">
+                                    <strong class="co_section-ref">8.1.1</strong>
+                    {clearfix}
+                                    </a>
+                            </h3>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_@blocks/_block.styl, Line: line 5</code>
+                    </p>
+                </div>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Adds a clearfix bahavior on containers that have floating children.</p>
+<p><strong>Usage</strong></p>
+<pre><code>/* my_file.styl */
+.foo
+    {clearfix}
+</code></pre><p>will compile to</p>
+<pre><code>/* my_file.css */
+.foo
+    &amp;:after
+        content &#39;&#39;
+        display block
+        height 0
+        clear both
+        visibility hidden
+</code></pre>
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+        </section>
+                                            <section id="kssref--blocks-block-fullwidth" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3">
+                
+                                    <a href="#kssref--blocks-block-fullwidth">
+                                    <strong class="co_section-ref">8.1.2</strong>
+                    {fullWidth}
+                                    </a>
+                            </h3>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_@blocks/_block.styl, Line: line 36</code>
+                    </p>
+                </div>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Streches an element to match the width of its parent.</p>
+<p><strong>Usage</strong></p>
+<pre><code>/* my_file.styl */
+.foo
+    {fullWidth}
+</code></pre><p>will compile to</p>
+<pre><code>/* my_file.css */
+.foo
+   display block
+   width 100%
+   max-width 100%
+   height auto
+</code></pre>
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+        </section>
+                                            <section id="kssref--blocks-block-inlined" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3">
+                
+                                    <a href="#kssref--blocks-block-inlined">
+                                    <strong class="co_section-ref">8.1.3</strong>
+                    {inlined}
+                                    </a>
+                            </h3>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_@blocks/_block.styl, Line: line 62</code>
+                    </p>
+                </div>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Makes an element display inline.
+If applied to a <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code> tag, all its <code>&lt;li&gt;</code> children will be displayed inline as well.</p>
+<p><strong>Usage</strong></p>
+<pre><code>/* my_file.styl */
+.foo
+    {inlined}
+</code></pre><p>will compile to</p>
+<pre><code>/* my_file.css */
+.foo
+   display inline
+
+       &gt; li
+           display inline
+</code></pre>
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+        </section>
+                                            <section id="kssref--blocks-text" class="co_section-depth-2  co_content pl2 pr2">
+
+
+            
+                        <h2 class="co_section-h2">
+                
+                                    <a href="#kssref--blocks-text">
+                                    <strong class="co_section-ref">8.2</strong>
+                    @blocks: Text elements
+                                    </a>
+                            </h2>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_@blocks/_text.styl</code>
+                    </p>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+        </section>
+                                            <section id="kssref--blocks-text-fontsecondary" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3">
+                
+                                    <a href="#kssref--blocks-text-fontsecondary">
+                                    <strong class="co_section-ref">8.2.1</strong>
+                    {fontSecondary}
+                                    </a>
+                            </h3>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_@blocks/_text.styl, Line: line 40</code>
+                    </p>
+                </div>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Assigns the properties of the <code>.font-secondary</code> class to an element.</p>
+<p><strong>Usage</strong></p>
+<pre><code>/* my_file.styl */
+.foo
+    {fontSecondary}
+</code></pre><p>will compile to</p>
+<pre><code>/* my_file.css */
+.foo
+   font-family $font-secondary
+   font-weight bold
+   font-size 1.1rem
+   text-transform uppercase
+</code></pre>
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+        </section>
+                                            <section id="kssref--blocks-text-icon" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3">
+                
+                                    <a href="#kssref--blocks-text-icon">
+                                    <strong class="co_section-ref">8.2.2</strong>
+                    {icon}
+                                    </a>
+                            </h3>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_@blocks/_text.styl, Line: line 5</code>
+                    </p>
+                </div>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Affects the <code>:before</code> and <code>:after</code> pseudo-elements, by assigning the properties of the icon fonts to them.</p>
+<p><strong>Usage</strong></p>
+<pre><code>/* my_file.styl */
+.foo
+    {icon}
+</code></pre><p>will compile to</p>
+<pre><code>/* my_file.css */
+.foo
+   &amp;:before
+   &amp;:after
+       font-family $font-icon
+       speak none
+       font-weight normal
+       font-variant normal
+       text-transform none
+       line-height 1
+</code></pre>
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+        </section>
+                                            <section id="kssref--blocks-text-listposoutside" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3">
+                
+                                    <a href="#kssref--blocks-text-listposoutside">
+                                    <strong class="co_section-ref">8.2.3</strong>
+                    {listPosOutside}
+                                    </a>
+                            </h3>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_@blocks/_text.styl, Line: line 67</code>
+                    </p>
+                </div>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Override the default positionning of the <code>list-style-position: outside</code>.</p>
+<p><strong>Usage</strong></p>
+<pre><code>/* my_file.styl */
+.foo
+    {listPosOutside}
+</code></pre><p>will compile to</p>
+<pre><code>/* my_file.css */
+.foo
+   &amp;
+   li
+       list-style-position inside
+       padding-left 1em
+       text-indent -1em
+</code></pre>
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+        </section>
             </article>
 
     

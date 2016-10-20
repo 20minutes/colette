@@ -40,28 +40,10 @@
     text-transform uppercase
 
 .font-secondary
-    font-family $font-secondary
-    font-weight bold
-    font-size 1.1rem
-    text-transform uppercase
+    {fontSecondary}
 
 .list-pos-outside
-    &
-    li
-        list-style-position inside
-        padding-left 1em
-        text-indent -1em
+    {listPosOutside}
 
 .list-type-none
-    list-style-type none
-
-/* @block */
-icon = @block
-    &:before
-    &:after
-        font-family $font-icon
-        speak none
-        font-weight normal
-        font-variant normal
-        text-transform none
-        line-height 1
+    list-style none

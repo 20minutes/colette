@@ -99,6 +99,9 @@
                                     <li>
                         <a href="section-mixins.html">Mixins</a>
                     </li>
+                                    <li>
+                        <a href="section--blocks.html">@blocks</a>
+                    </li>
                             </ul>
         </div>
     </nav>
@@ -1006,21 +1009,12 @@ Add examples for all colors : text | borders | backgrounds</p>
                             <div class="co_subsection clearfix">
                     <p class="co_subsection-title col-md-3">Description</p>
                     <div class="co_subsection-content col-md-9">
-                        <p>A set of margins and paddings, based on a 1.2rem gutter width.</p>
-<p>A margin or padding is a multiple (from 1 to 6) of the gutter width,
+                        <p>Colette provides a set of margin and padding classes based on the <code>$gutter</code> size.
+<br /> Note that <code>$gutter</code> value is defined in Colette&#39;s settings, but it can be overridden in your project stylus file.</p>
+<p>Margins or paddings are multipliers (from 1 to 6) of the gutter width,
 and can be applied either on top | right | bottom | left | all side(s) of an element.</p>
-<ul>
-<li><strong>pt[n]</strong>: padding-top: [n] x 1.2rem</li>
-<li><strong>pr[n]</strong>: padding-right: [n] x 1.2rem</li>
-<li><strong>pb[n]</strong>: padding-bottom: [n] x 1.2rem</li>
-<li><strong>pl[n]</strong>: padding-left: [n] x 1.2rem</li>
-<li><strong>pa[n]</strong>: padding: [n] x 1.2rem</li>
-<li><strong>mt[n]</strong>: margin-top: [n] x 1.2rem</li>
-<li><strong>mr[n]</strong>: margin-right: [n] x 1.2rem</li>
-<li><strong>mb[n]</strong>: margin-bottom: [n] x 1.2rem</li>
-<li><strong>ml[n]</strong>: margin-left: [n] x 1.2rem</li>
-<li><strong>ma[n]</strong>: margin: [n] x 1.2rem</li>
-</ul>
+<p>The suffix of the class names indicates the multiplier of the gutter.</p>
+
                     </div>
                 </div>
             
@@ -1035,31 +1029,89 @@ and can be applied either on top | right | bottom | left | all side(s) of an ele
                             
                 <div class="co_subsection clearfix">
                     <p class="co_subsection-title col-md-3">
-                                                    Example
+                                                    Default styling
                         
                     </p>
                     <div class="co_subsection-content col-md-9 clearfix mb1">
-                        <p class="pa1" style="background:#e7e7e7">Example of `.pa1` class (1 x gutter-width padding on all side).</p>
-<hr />
-<p class="pt3" style="background:#e7e7e7">Example of `.pt3` class (1 x gutter-width padding-top).</p>
-<hr />
-<p class="pl6" style="background:#e7e7e7">Example of `.pl6` class (1 x gutter-width padding-left).</p>
+                        <p class="[modifier class] box">Example of [modifier class] paragraph</p>
 
                     </div>
                 </div>
 
                 
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Modifiers</p>
+                        <div class="co_subsection-content co_modifier col-md-9 clearfix mb2">
+                                                            <p><code>.ma1</code></p>
+                                <p>Sets <code>margin</code> to <strong>1 x gutter size</strong> (also available: <code>.ma2</code>, <code>.ma3</code>, <code>.ma4</code>, <code>.ma5</code>, <code>.ma6</code>)</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p class="ma1 box">Example of ma1 paragraph</p>
+
+                                </div>
+                                                            <p><code>.mt1</code></p>
+                                <p>Sets <code>margin-to</code> to <strong>1 x gutter size</strong> (also available: <code>.mr2</code>, <code>.mr3</code>, <code>.mr4</code>, <code>.mr5</code>, <code>.mr6</code>)</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p class="mt1 box">Example of mt1 paragraph</p>
+
+                                </div>
+                                                            <p><code>.mr1</code></p>
+                                <p>Sets <code>margin-right</code> to <strong>1 x gutter size</strong> (also available: <code>.mr2</code>, <code>.mr3</code>, <code>.mr4</code>, <code>.mr5</code>, <code>.mr6</code>)</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p class="mr1 box">Example of mr1 paragraph</p>
+
+                                </div>
+                                                            <p><code>.mb1</code></p>
+                                <p>Sets <code>margin-bottom</code> to <strong>1 x gutter size</strong> (also available: <code>.mb2</code>, <code>.mb3</code>, <code>.mb4</code>, <code>.mb5</code>, <code>.mb6</code>)</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p class="mb1 box">Example of mb1 paragraph</p>
+
+                                </div>
+                                                            <p><code>.ml1</code></p>
+                                <p>Sets <code>margin-left</code> to <strong>1 x gutter size</strong> (also available: <code>.ml2</code>, <code>.ml3</code>, <code>.ml4</code>, <code>.ml5</code>, <code>.ml6</code>)</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p class="ml1 box">Example of ml1 paragraph</p>
+
+                                </div>
+                                                            <p><code>.pa1</code></p>
+                                <p>Sets <code>padding</code> to <strong>1 x gutter size</strong> (also available: <code>.pa2</code>, <code>.pa3</code>, <code>.pa4</code>, <code>.pa5</code>, <code>.pa6</code>)</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p class="pa1 box">Example of pa1 paragraph</p>
+
+                                </div>
+                                                            <p><code>.pt1</code></p>
+                                <p>Sets <code>padding-top</code> to <strong>1 x gutter size</strong> (also available: <code>.pa2</code>, <code>.pa3</code>, <code>.pa4</code>, <code>.pa5</code>, <code>.pa6</code>)</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p class="pt1 box">Example of pt1 paragraph</p>
+
+                                </div>
+                                                            <p><code>.pr1</code></p>
+                                <p>Sets <code>padding-right</code> to <strong>1 x gutter size</strong> (also available: <code>.pr2</code>, <code>.pr3</code>, <code>.pr4</code>, <code>.pr5</code>, <code>.pr6</code>)</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p class="pr1 box">Example of pr1 paragraph</p>
+
+                                </div>
+                                                            <p><code>.pb1</code></p>
+                                <p>Sets <code>padding-bottom</code> to <strong>1 x gutter size</strong> (also available: <code>.pb2</code>, <code>.pb3</code>, <code>.pb4</code>, <code>.pb5</code>, <code>.pb6</code>)</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p class="pb1 box">Example of pb1 paragraph</p>
+
+                                </div>
+                                                            <p><code>.pl1</code></p>
+                                <p>Sets <code>padding-left</code> to <strong>1 x gutter size</strong> (also available: <code>.pl2</code>, <code>.pl3</code>, <code>.pl4</code>, <code>.pl5</code>, <code>.pl6</code>)</p>
+                                <div class="co_modifier-example clearfix mb3">
+                                    <p class="pl1 box">Example of pl1 paragraph</p>
+
+                                </div>
+                                                    </div>
+                    </div>
+
                 
                 
                                     <div class="co_subsection clearfix">
                         <p class="co_subsection-title col-md-3">Markup</p>
                         <div class="co_subsection-content co_markup col-md-9">
                             <p class="co_expand"><span class="btn">click to expand</span></p>
-                            <pre class="pa1 prettyprint linenums lang-html"><code data-language="html">&lt;p class=&quot;pa1&quot; style=&quot;background:#e7e7e7&quot;&gt;Example of `.pa1` class (1 x gutter-width padding on all side).&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p class=&quot;pt3&quot; style=&quot;background:#e7e7e7&quot;&gt;Example of `.pt3` class (1 x gutter-width padding-top).&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p class=&quot;pl6&quot; style=&quot;background:#e7e7e7&quot;&gt;Example of `.pl6` class (1 x gutter-width padding-left).&lt;/p&gt;
+                            <pre class="pa1 prettyprint linenums lang-html"><code data-language="html">&lt;p class=&quot;[modifier class] box&quot;&gt;Example of [modifier class] paragraph&lt;/p&gt;
 </code></pre>
                             <p class="co_markup-action font-secondary align-right"><span class="collapse pr1">Collaspe</span><span>Open code in new tab</span></p>
                         </div>
