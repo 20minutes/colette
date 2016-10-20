@@ -124,6 +124,14 @@ pre {
 .co_section-depth-1 {
   padding: 3em 0;
   background-color: #3b4b5e;
+  color: #fff;
+}
+.co_section-depth-1 a {
+  color: #fff;
+  text-decoration: underline;
+}
+.co_section-depth-1 a:hover {
+  text-decoration: none;
 }
 .co_section-depth-2 {
   padding-top: 9em;
