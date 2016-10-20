@@ -18,12 +18,12 @@
         transform translateY(-50%)
 
 .tabs
-    @extends .list-type-none
-    @extends .clearfix
+    {clearfix}
     display inline-block
     height 32px
     overflow hidden
     line-height @height
+    list-style-type none
 
     a
         position relative
@@ -31,7 +31,7 @@
         color $color-tertiary
 
 .tabs-item
-    @extends .font-secondary
+    {fontSecondary}
     position relative
     height 32px
     margin 0 0 0 36px
@@ -75,7 +75,6 @@
         line-height 1.2
 
     .tabs-name
-        /*width 100px*/
         background-color $color-highlight
         font-size 1.4rem
         color $color-white
@@ -125,15 +124,14 @@
  * ---------------------------------------------------------------------------------------- */
 for key, value in $colors
     .tabs.{key} .is-active a, .tabs.{key} a:hover
-        @extends .color-{key}
+        color value
 
     .tabs.{key} .tabs-name
-        @extends $.bg-{key}
-        @extends $.border-color-{key}
+        border 1px solid value
+        background-color value
 
     .tabs.{key} .tabs-name:after
-        @extends $.bg-{key}
-
+        background-color value
 /* ----------------------------------------------------------------------------------------
  * ] Theme */
 

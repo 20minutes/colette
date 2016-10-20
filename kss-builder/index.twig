@@ -80,7 +80,7 @@
 
             {# section description #}
             {% if section.description %}
-                <div class="co_subsection clearfix">
+                <div class="co_subsection clearfix{% if 1 == depth %} co_content{% endif %}">
                     <p class="co_subsection-title col-md-3">Description</p>
                     <div class="co_subsection-content col-md-9">
                         {{ section.description|raw }}

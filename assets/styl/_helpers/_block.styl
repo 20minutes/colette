@@ -16,10 +16,7 @@
 //
 // Styleguide Helpers.BlockElements
 .inline
-    display inline
-
-    > li
-        display inline
+    {inlined}
 
 .inline-block
     display inline-block
@@ -40,15 +37,7 @@
     clear both
 
 .clearfix
-    &:after
-        content ''
-        display block
-        height 0
-        clear both
-        visibility hidden
+    {clearfix}
 
 .responsive
-    display block
-    width 100%
-    max-width 100%
-    height auto
+    {fullWidth}
