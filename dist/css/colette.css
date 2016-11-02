@@ -1021,6 +1021,74 @@ footer a:hover {
   padding-right: 6px;
   font-size: 2.1rem;
 }
+.form-single-row-white input[type='submit'],
+.form-single-row-white button[type='submit'] {
+  border-top: 1px solid #b7b7b7;
+  border-right: 1px solid #b7b7b7;
+  border-bottom: 1px solid #b7b7b7;
+  background-color: #fff;
+  color: #878787;
+}
+.form-single-row-base input[type='submit'],
+.form-single-row-base button[type='submit'] {
+  background-color: #4c4d4e;
+  color: #fff;
+}
+.form-single-row-default input[type='submit'],
+.form-single-row-default button[type='submit'] {
+  background-color: #0b4892;
+  color: #fff;
+}
+.form-single-row-sport input[type='submit'],
+.form-single-row-sport button[type='submit'] {
+  background-color: #00b9f3;
+  color: #fff;
+}
+.form-single-row-entertainment input[type='submit'],
+.form-single-row-entertainment button[type='submit'] {
+  background-color: #cc190f;
+  color: #fff;
+}
+.form-single-row-economy input[type='submit'],
+.form-single-row-economy button[type='submit'] {
+  background-color: #053042;
+  color: #fff;
+}
+.form-single-row-community input[type='submit'],
+.form-single-row-community button[type='submit'] {
+  background-color: #930b48;
+  color: #fff;
+}
+.form-single-row-weird input[type='submit'],
+.form-single-row-weird button[type='submit'] {
+  background-color: #ef2a82;
+  color: #fff;
+}
+.form-single-row-partner input[type='submit'],
+.form-single-row-partner button[type='submit'] {
+  background-color: #ff5400;
+  color: #fff;
+}
+.form-single-row-planet input[type='submit'],
+.form-single-row-planet button[type='submit'] {
+  background-color: #48930b;
+  color: #fff;
+}
+.form-single-row-media input[type='submit'],
+.form-single-row-media button[type='submit'] {
+  background-color: #000;
+  color: #fff;
+}
+.form-single-row-hightech input[type='submit'],
+.form-single-row-hightech button[type='submit'] {
+  background-color: #686868;
+  color: #fff;
+}
+.form-single-row-native input[type='submit'],
+.form-single-row-native button[type='submit'] {
+  background-color: #fff7e2;
+  color: #fff;
+}
 .form-field-widget label {
   display: block;
 }
@@ -1056,13 +1124,14 @@ footer a:hover {
   padding: 0.2em 0.3em;
   text-align: center;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
-  font-size: 1em;
+  font-size: 0.6875em;
+  font-weight: bold;
   color: inherit;
   text-decoration: none;
 }
 .icon-picto {
-  height: 3.25em;
-  width: 3.25em;
+  height: 2.5em;
+  width: 2.5em;
   display: block;
   margin: 0 auto;
   fill: currentcolor;
@@ -1070,7 +1139,7 @@ footer a:hover {
 }
 .icon-label {
   display: block;
-  line-height: 1.3em;
+  line-height: 1em;
   padding: 0 0.2em;
   text-transform: uppercase;
 }

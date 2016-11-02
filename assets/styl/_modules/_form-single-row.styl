@@ -4,6 +4,20 @@
 //
 // Weight: 3
 //
+// White and editorial colors are available to style the button according to its context.
+//
+// .form-single-row-white            - white color button
+// .form-single-row-sport            - sport color button
+// .form-single-row-entertainment    - entertainment color button
+// .form-single-row-economy          - economy color button
+// .form-single-row-community        - community color button
+// .form-single-row-weird            - weird color button
+// .form-single-row-partner          - partner color button
+// .form-single-row-planet           - planet color button
+// .form-single-row-media            - media color button
+// .form-single-row-hightech         - hightech color button
+// .form-single-row-native           - native color button
+//
 // Markup: form-single-row.twig
 //
 // Styleguide Components.Forms.FormSingleRow
@@ -33,3 +47,21 @@
     [data-icon=search]
         padding-right 6px
         font-size 2.1rem
+
+
+    &-white
+        input[type='submit']
+        button[type='submit']
+            border-top 1px solid $color-secondary
+            border-right @border-top
+            border-bottom @border-top
+            background-color $color-white
+            color $color-tertiary
+
+    for key, value in $colors
+        &-{key}
+            input[type='submit']
+            button[type='submit']
+                icon-text-color = _contrast-check($color-white, value) ? $color-white : $color-black
+                background-color value
+                color icon-text-color
