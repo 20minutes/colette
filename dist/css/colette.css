@@ -1534,6 +1534,9 @@ footer a:hover {
   width: 100%;
   height: 72px;
 }
+.breakingnews > a {
+  display: block;
+}
 .breakingnews .tabs-alert,
 .breakingnews .tabs-name,
 .breakingnews .tabs-close {
