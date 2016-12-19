@@ -8,12 +8,12 @@
     <meta name="generator" content="kss-node">
     <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="dist/css/colette.min.css">
-<link rel="stylesheet" href="kss-assets/co-styles.css">
+    <link rel="stylesheet" href="kss-assets/co-styles.css">
+<link rel="stylesheet" href="dist/css/colette.min.css">
 
 
 </head>
-<body>
+<body class="co">
 
 <div style="height:0;width:0;position:absolute;visibility:hidden;overflow:hidden"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="symbol-clock" viewBox="0 0 32 32">
     <path d="M20.586 23.414l-6.586-6.586v-8.828h4v7.172l5.414 5.414zM16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 28c-6.627 0-12-5.373-12-12s5.373-12 12-12c6.627 0 12 5.373 12 12s-5.373 12-12 12z"/>
@@ -69,7 +69,7 @@
 </symbol><symbol id="symbol-social-whatsapp" viewBox="0 0 32 32">
     <path d="M20.42 17.512q0.252 0 1.89 0.853t1.735 1.027q0.039 0.097 0.039 0.291 0 0.64-0.329 1.473-0.31 0.756-1.376 1.269t-1.977 0.514q-1.105 0-3.682-1.202-1.899-0.872-3.295-2.287t-2.868-3.585q-1.395-2.074-1.376-3.76v-0.155q0.058-1.764 1.434-3.062 0.465-0.426 1.008-0.426 0.116 0 0.349 0.029t0.368 0.029q0.368 0 0.514 0.126t0.3 0.533q0.155 0.388 0.64 1.705t0.485 1.453q0 0.407-0.669 1.114t-0.669 0.901q0 0.136 0.097 0.291 0.659 1.415 1.977 2.655 1.085 1.027 2.926 1.957 0.233 0.136 0.426 0.136 0.291 0 1.046-0.94t1.008-0.94zM16.486 27.783q2.461 0 4.719-0.969t3.886-2.597 2.597-3.886 0.969-4.719-0.969-4.719-2.597-3.886-3.886-2.597-4.719-0.969-4.719 0.969-3.886 2.597-2.597 3.886-0.969 4.719q0 3.934 2.326 7.132l-1.531 4.515 4.69-1.492q3.062 2.015 6.686 2.015zM16.486 1q2.965 0 5.669 1.163t4.661 3.12 3.12 4.661 1.163 5.669-1.163 5.669-3.12 4.661-4.661 3.12-5.669 1.163q-3.779 0-7.074-1.822l-8.081 2.597 2.636-7.849q-2.093-3.45-2.093-7.539 0-2.965 1.163-5.669t3.12-4.661 4.661-3.12 5.669-1.163z"/>
 </symbol></svg></div>
-<div id="co_wrapper">
+<div class="co_wrapper">
     
     <nav class="navbar co_navbar">
         <div class="co_content clearfix">
@@ -105,15 +105,15 @@
     </nav>
 
     
-    <article role="main" id="co_page" class="pt4 pb6">
+    <article role="main" class="co_page pt4 pb6">
         
         
         
-                                            <div id="kssref-basics" class="co_section-depth-1  pl2 pr2">
+                                            <div id="kssref-basics" class="co_section-depth-1 ">
 
 
             
-                        <h1 class="co_section-h1 co_content pl2 pr2">
+                        <h1 class="co_section-h1 pl2 pr2 co_content">
                 
                                     <strong class="co_section-ref">1</strong>
                     Basics
@@ -138,11 +138,11 @@
             
             
         </div>
-                                            <section id="kssref-basics-fonts" class="co_section-depth-2  co_content pl2 pr2">
+                                            <section id="kssref-basics-fonts" class="co_section-depth-2  co_content">
 
 
             
-                        <h2 class="co_section-h2">
+                        <h2 class="co_section-h2 pl2 pr2">
                 
                                     <a href="#kssref-basics-fonts">
                                     <strong class="co_section-ref">1.1</strong>
@@ -191,61 +191,14 @@
             
             
         </section>
-                                            <section id="kssref-basics-normalize" class="co_section-depth-2  co_content pl2 pr2">
+                                            <section id="kssref-basics-symbols" class="co_section-depth-2  co_content">
 
 
             
-                        <h2 class="co_section-h2">
-                
-                                    <a href="#kssref-basics-normalize">
-                                    <strong class="co_section-ref">1.2</strong>
-                    Normalize
-                                    </a>
-                            </h2>
-            
-
-            
-                            <div class="co_subsection clearfix">
-                    <p class="co_subsection-title col-md-3">Source</p>
-                    <p class="co_subsection-content co_source col-md-9">
-                        <code>_base/_normalize.styl</code>
-                    </p>
-                </div>
-            
-
-            
-                            <div class="co_subsection clearfix">
-                    <p class="co_subsection-title col-md-3">Description</p>
-                    <div class="co_subsection-content col-md-9">
-                        <p>Colette comes with a collection of HTML element and attribute style-normalizations.
-It takes a lot of inspiration and default styles from <a href="https://github.com/necolas/normalize.css/blob/master/normalize.css">normalizecss</a>.</p>
-<p>@TODO <br />
-<a href="https://github.com/20minutes/colette/issues/20">Issue #20</a>: Remove this file and add <code>normalizecss</code> as an <code>npm</code> dependency.</p>
-
-                    </div>
-                </div>
-            
-
-            
-            
-
-            
-            
-
-            
-            
-
-            
-            
-        </section>
-                                            <section id="kssref-basics-symbols" class="co_section-depth-2  co_content pl2 pr2">
-
-
-            
-                        <h2 class="co_section-h2">
+                        <h2 class="co_section-h2 pl2 pr2">
                 
                                     <a href="#kssref-basics-symbols">
-                                    <strong class="co_section-ref">1.3</strong>
+                                    <strong class="co_section-ref">1.2</strong>
                     Symbols
                                     </a>
                             </h2>
@@ -283,7 +236,7 @@ It takes a lot of inspiration and default styles from <a href="https://github.co
                                                     Example
                         
                     </p>
-                    <div class="co_subsection-content col-md-9 clearfix mb1">
+                    <div class="co_subsection-demo col-md-9 clearfix mb1">
                         <svg width="40" height="40"><use xlink:href="#symbol-clock"/></svg>
 <svg width="40" height="40"><use xlink:href="#symbol-comments"/></svg>
 <svg width="40" height="40"><use xlink:href="#symbol-mail"/></svg>
@@ -352,14 +305,14 @@ It takes a lot of inspiration and default styles from <a href="https://github.co
             
             
         </section>
-                                            <section id="kssref-basics-typography" class="co_section-depth-2  co_content pl2 pr2">
+                                            <section id="kssref-basics-typography" class="co_section-depth-2  co_content">
 
 
             
-                        <h2 class="co_section-h2">
+                        <h2 class="co_section-h2 pl2 pr2">
                 
                                     <a href="#kssref-basics-typography">
-                                    <strong class="co_section-ref">1.4</strong>
+                                    <strong class="co_section-ref">1.3</strong>
                     Typography
                                     </a>
                             </h2>
@@ -397,7 +350,7 @@ It takes a lot of inspiration and default styles from <a href="https://github.co
                                                     Example
                         
                     </p>
-                    <div class="co_subsection-content col-md-9 clearfix mb1">
+                    <div class="co_subsection-demo col-md-9 clearfix mb1">
                         <h1>Heading 1</h1>
 <h2>Heading 2</h2>
 <h3>Heading 3</h3>
@@ -406,9 +359,11 @@ It takes a lot of inspiration and default styles from <a href="https://github.co
 <h6>Heading 6</h6>
 <p>Paragraph / Body text</p>
 <p>Example of a <small>small text</small></p>
+
 <blockquote>
     <p>Example of a blockquote<br />on multiple lines</p>
-</blockquote>
+</blockquote>`
+
 <table>
     <thead>
         <tr>
@@ -430,6 +385,42 @@ It takes a lot of inspiration and default styles from <a href="https://github.co
     </tfoot>
 </table>
 
+<ul>
+    <li>List, item 1</li>
+    <li>List, item 2</li>
+    <li>List, item 3
+        <ul>
+            <li>List, item 1</li>
+            <li>List, item 2</li>
+            <li>List, item 3
+                <ul>
+                    <li>List, item 1</li>
+                    <li>List, item 2</li>
+                    <li>List, item 3</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<ol>
+    <li>Ordered list, item 1</li>
+    <li>Ordered list, item 2</li>
+    <li>Ordered list, item 3
+        <ol>
+            <li>Ordered list, item 1</li>
+            <li>Ordered list, item 2</li>
+            <li>Ordered list, item 3
+                <ol>
+                    <li>Ordered list, item 1</li>
+                    <li>Ordered list, item 2</li>
+                    <li>Ordered list, item 3</li>
+                </ol>
+            </li>
+        </ol>
+    </li>
+</ol>
+
                     </div>
                 </div>
 
@@ -448,9 +439,11 @@ It takes a lot of inspiration and default styles from <a href="https://github.co
 &lt;h6&gt;Heading 6&lt;/h6&gt;
 &lt;p&gt;Paragraph / Body text&lt;/p&gt;
 &lt;p&gt;Example of a &lt;small&gt;small text&lt;/small&gt;&lt;/p&gt;
+
 &lt;blockquote&gt;
     &lt;p&gt;Example of a blockquote&lt;br /&gt;on multiple lines&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;/blockquote&gt;`
+
 &lt;table&gt;
     &lt;thead&gt;
         &lt;tr&gt;
@@ -471,6 +464,42 @@ It takes a lot of inspiration and default styles from <a href="https://github.co
         &lt;/tr&gt;
     &lt;/tfoot&gt;
 &lt;/table&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;List, item 1&lt;/li&gt;
+    &lt;li&gt;List, item 2&lt;/li&gt;
+    &lt;li&gt;List, item 3
+        &lt;ul&gt;
+            &lt;li&gt;List, item 1&lt;/li&gt;
+            &lt;li&gt;List, item 2&lt;/li&gt;
+            &lt;li&gt;List, item 3
+                &lt;ul&gt;
+                    &lt;li&gt;List, item 1&lt;/li&gt;
+                    &lt;li&gt;List, item 2&lt;/li&gt;
+                    &lt;li&gt;List, item 3&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+    &lt;li&gt;Ordered list, item 1&lt;/li&gt;
+    &lt;li&gt;Ordered list, item 2&lt;/li&gt;
+    &lt;li&gt;Ordered list, item 3
+        &lt;ol&gt;
+            &lt;li&gt;Ordered list, item 1&lt;/li&gt;
+            &lt;li&gt;Ordered list, item 2&lt;/li&gt;
+            &lt;li&gt;Ordered list, item 3
+                &lt;ol&gt;
+                    &lt;li&gt;Ordered list, item 1&lt;/li&gt;
+                    &lt;li&gt;Ordered list, item 2&lt;/li&gt;
+                    &lt;li&gt;Ordered list, item 3&lt;/li&gt;
+                &lt;/ol&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/li&gt;
+&lt;/ol&gt;
 </code></pre>
                             <p class="co_markup-action font-secondary align-right"><span class="collapse pr1">Collaspe</span><span>Open code in new tab</span></p>
                         </div>
@@ -483,7 +512,7 @@ It takes a lot of inspiration and default styles from <a href="https://github.co
             </article>
 
     
-    <footer class="co_footer">
+    <footer class="co_footer footer">
         <div class="co_content clearfix">
             <p class="float-left">© Copyright <a href="http://www.20minutes.fr">20 Minutes</a></p>
             <p class="float-right"><a href="https://twitter.com/Tech20Minutes" class="ml2" data-icon="twitter"> Follow us </a></p>

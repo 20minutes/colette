@@ -33,7 +33,9 @@ gulp.task('styles', function () {
         .pipe(stylus({
             linenos: false,
             use: [require('nib')()],
-            import: ['nib']
+            import: ['nib'],
+            include: ['node_modules'],
+            'include css': true
         }))
         .pipe(gulp.dest(cfg.distDir + 'css'))
         .pipe(rename('colette.min.css'))

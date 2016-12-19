@@ -1,101 +1,29 @@
-body {
+.co {
   background-color: #f8f8f8;
   color: #333;
+/* navbar */
+/* section */
+/* subsection */
+/* modifier */
+/* colors */
+/* icons */
+/* example */
+/* expand markup */
+/* markup */
+/* source */
+/* footer */
 }
-h1 {
-  padding-bottom: 0.25em;
-  font-weight: normal;
-  color: #000;
-}
-h1 a {
-  color: inherit;
-}
-h1 a:hover {
-  color: #44638a;
-}
-h1 a:hover strong {
-  color: inherit;
-}
-h2 {
-  padding-bottom: 0.25em;
-  font-weight: normal;
-  color: #000;
-}
-h2 a {
-  color: inherit;
-}
-h2 a:hover {
-  color: #44638a;
-}
-h2 a:hover strong {
-  color: inherit;
-}
-h3 {
-  padding-bottom: 0.25em;
-  font-weight: normal;
-  color: #000;
-}
-h3 a {
-  color: inherit;
-}
-h3 a:hover {
-  color: #44638a;
-}
-h3 a:hover strong {
-  color: inherit;
-}
-h4 {
-  padding-bottom: 0.25em;
-  font-weight: normal;
-  color: #000;
-}
-h4 a {
-  color: inherit;
-}
-h4 a:hover {
-  color: #44638a;
-}
-h4 a:hover strong {
-  color: inherit;
-}
-h5 {
-  padding-bottom: 0.25em;
-  font-weight: normal;
-  color: #000;
-}
-h5 a {
-  color: inherit;
-}
-h5 a:hover {
-  color: #44638a;
-}
-h5 a:hover strong {
-  color: inherit;
-}
-h6 {
-  padding-bottom: 0.25em;
-  font-weight: normal;
-  color: #000;
-}
-h6 a {
-  color: inherit;
-}
-h6 a:hover {
-  color: #44638a;
-}
-h6 a:hover strong {
-  color: inherit;
-}
-pre {
+.co_markup pre,
+.co_section-home pre {
   padding: 1em;
-  margin-bottom: 1.6rem;
+  margin: 0 0 1.6rem;
   border-radius: 0.25em;
   border: 1px solid #c7d0dc;
   background-color: #fff;
   font-size: 1em;
   line-height: 1.2;
 }
-#co_page {
+.co_page {
   position: relative;
   z-index: 1;
 }
@@ -104,7 +32,120 @@ pre {
   max-width: 1024px;
   margin: 0 auto;
 }
-/* navbar */
+.co_section-home h1,
+.co_section-h1 {
+  padding: 0 0 0.25em;
+  margin: 0 auto;
+  font-weight: normal;
+  color: #000;
+}
+.co_section-home h1 a,
+.co_section-h1 a {
+  color: inherit;
+}
+.co_section-home h1 a:hover,
+.co_section-h1 a:hover {
+  color: #44638a;
+}
+.co_section-home h1 a:hover strong,
+.co_section-h1 a:hover strong {
+  color: inherit;
+}
+.co_section-home h2,
+.co_section-h2 {
+  padding: 0 0 0.25em;
+  margin: 0 auto;
+  font-weight: normal;
+  color: #000;
+}
+.co_section-home h2 a,
+.co_section-h2 a {
+  color: inherit;
+}
+.co_section-home h2 a:hover,
+.co_section-h2 a:hover {
+  color: #44638a;
+}
+.co_section-home h2 a:hover strong,
+.co_section-h2 a:hover strong {
+  color: inherit;
+}
+.co_section-home h3,
+.co_section-h3 {
+  padding: 0 0 0.25em;
+  margin: 0 auto;
+  font-weight: normal;
+  color: #000;
+}
+.co_section-home h3 a,
+.co_section-h3 a {
+  color: inherit;
+}
+.co_section-home h3 a:hover,
+.co_section-h3 a:hover {
+  color: #44638a;
+}
+.co_section-home h3 a:hover strong,
+.co_section-h3 a:hover strong {
+  color: inherit;
+}
+.co_section-home h4,
+.co_section-h4 {
+  padding: 0 0 0.25em;
+  margin: 0 auto;
+  font-weight: normal;
+  color: #000;
+}
+.co_section-home h4 a,
+.co_section-h4 a {
+  color: inherit;
+}
+.co_section-home h4 a:hover,
+.co_section-h4 a:hover {
+  color: #44638a;
+}
+.co_section-home h4 a:hover strong,
+.co_section-h4 a:hover strong {
+  color: inherit;
+}
+.co_section-home h5,
+.co_section-h5 {
+  padding: 0 0 0.25em;
+  margin: 0 auto;
+  font-weight: normal;
+  color: #000;
+}
+.co_section-home h5 a,
+.co_section-h5 a {
+  color: inherit;
+}
+.co_section-home h5 a:hover,
+.co_section-h5 a:hover {
+  color: #44638a;
+}
+.co_section-home h5 a:hover strong,
+.co_section-h5 a:hover strong {
+  color: inherit;
+}
+.co_section-home h6,
+.co_section-h6 {
+  padding: 0 0 0.25em;
+  margin: 0 auto;
+  font-weight: normal;
+  color: #000;
+}
+.co_section-home h6 a,
+.co_section-h6 a {
+  color: inherit;
+}
+.co_section-home h6 a:hover,
+.co_section-h6 a:hover {
+  color: #44638a;
+}
+.co_section-home h6 a:hover strong,
+.co_section-h6 a:hover strong {
+  color: inherit;
+}
 .co_navbar-animated {
   transition: all 0.15s ease-in-out;
 }
@@ -114,13 +155,11 @@ pre {
 .co_navbar-unpinned {
   transform: translateY(-100%);
 }
-/* brand */
-.co_brand {
+.co_navbar .co_brand {
   background-color: transparent;
   color: #44638a;
   font-size: 2.7em;
 }
-/* section */
 .co_section-depth-1 {
   padding: 3em 0;
   background-color: #3b4b5e;
@@ -153,6 +192,7 @@ pre {
 }
 .co_section-h2,
 .co_section-home h1 {
+  margin-top: 0;
   margin-bottom: 1em;
   border-bottom: 1px solid #c7d0dc;
   font-size: 3.6em;
@@ -174,12 +214,12 @@ pre {
 .co_section-ref:before {
   content: 'section ';
 }
-/* subsection */
 .co_subsection {
   padding: 0.5em 0;
 }
 .co_subsection-title {
   font-weight: bold;
+  margin: 0;
 }
 @media screen and (min-width: 48em) {
   .co_subsection-title {
@@ -187,8 +227,12 @@ pre {
     text-align: right;
   }
 }
+.co_subsection-content {
+  margin: 0;
+}
 .co_subsection-content > p,
 .co_subsection-content > ul {
+  margin: 0;
   padding-bottom: 1.6rem;
 }
 .co_subsection-content > ul > li {
@@ -199,16 +243,14 @@ pre {
   background-color: #e0e5eb;
   color: #c36;
 }
-/* modifier */
-.co_modifier > p {
-  padding-bottom: 0;
-}
-.co_modifier-example {
+.co_subsection-demo {
   margin-top: 0.6rem;
   padding-bottom: 0.6rem;
   border-bottom: 1px solid #c7d0dc;
 }
-/* colors */
+.co_modifier > p {
+  padding-bottom: 0;
+}
 .co_colors {
   padding: 0;
   margin: 0;
@@ -242,7 +284,6 @@ pre {
   text-transform: uppercase;
   color: #44638a;
 }
-/* icons */
 .co_icons {
   padding: 0;
   margin: 0;
@@ -279,14 +320,12 @@ pre {
   background-color: #f1f1f1;
   color: #000;
 }
-/* example */
 .co_example-header {
   color: #000;
   font-family: 'Open Sans';
   font-size: 1.5em;
   font-style: italic;
 }
-/* expand markup */
 .co_expand {
   position: absolute;
   z-index: 2;
@@ -308,9 +347,13 @@ pre {
   transform: translateX(-50%);
   transition: background-color 0.2s;
 }
-/* markup */
 .co_markup {
   position: relative;
+/* prettyprint.js */
+/* SPAN elements with the classes below are added by prettyprint. */
+/* punctuation, lisp open bracket, lisp close bracket */
+/* Use higher contrast and text-weight for printable form. */
+/* Specify class=linenums on a pre to get line numbering */
 }
 .co_markup pre {
   position: relative;
@@ -331,7 +374,7 @@ pre {
   display: none;
 }
 .co_markup-expanded:hover .btn {
-  dsiplay: block;
+  display: block;
 }
 .co_markup-expanded pre {
   max-height: 100em;
@@ -345,95 +388,90 @@ pre {
 .co_markup-expanded .co_expand {
   background: none;
 }
-/* source */
+.co_markup .pln {
+  color: #000;
+}
+.co_markup .str {
+  color: #080;
+}
+.co_markup .kwd {
+  color: #008;
+}
+.co_markup .com {
+  color: #800;
+}
+.co_markup .typ {
+  color: #606;
+}
+.co_markup .lit {
+  color: #066;
+}
+.co_markup .pun,
+.co_markup .opn,
+.co_markup .clo {
+  color: #660;
+}
+.co_markup .tag {
+  color: #008;
+}
+.co_markup .atn {
+  color: #606;
+}
+.co_markup .atv {
+  color: #080;
+}
+.co_markup .dec,
+.co_markup .var {
+  color: #606;
+}
+.co_markup .fun {
+  color: #f00;
+}
+@media print, projection {
+  .co_markup .str {
+    color: #060;
+  }
+  .co_markup .kwd {
+    color: #006;
+    font-weight: bold;
+  }
+  .co_markup .com {
+    color: #600;
+    font-style: italic;
+  }
+  .co_markup .typ {
+    color: #404;
+    font-weight: bold;
+  }
+  .co_markup .lit {
+    color: #044;
+  }
+  .co_markup .pun,
+  .co_markup .opn,
+  .co_markup .clo {
+    color: #440;
+  }
+  .co_markup .tag {
+    color: #006;
+    font-weight: bold;
+  }
+  .co_markup .atn {
+    color: #404;
+  }
+  .co_markup .atv {
+    color: #060;
+  }
+}
+.co_markup ol.linenums {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
 .co_source {
   color: #c36;
   font-size: 0.9em;
 }
-/* footer */
-.co_footer {
+.co_footer.footer {
   border-color: #c7d0dc;
   background-color: #44638a;
-}
-/* prettyprint.js */
-/* SPAN elements with the classes below are added by prettyprint. */
-.pln {
-  color: #000;
-}
-.str {
-  color: #080;
-}
-.kwd {
-  color: #008;
-}
-.com {
-  color: #800;
-}
-.typ {
-  color: #606;
-}
-.lit {
-  color: #066;
-}
-/* punctuation, lisp open bracket, lisp close bracket */
-.pun,
-.opn,
-.clo {
-  color: #660;
-}
-.tag {
-  color: #008;
-}
-.atn {
-  color: #606;
-}
-.atv {
-  color: #080;
-}
-.dec,
-.var {
-  color: #606;
-}
-.fun {
-  color: #f00;
-}
-/* Use higher contrast and text-weight for printable form. */
-@media print, projection {
-  .str {
-    color: #060;
-  }
-  .kwd {
-    color: #006;
-    font-weight: bold;
-  }
-  .com {
-    color: #600;
-    font-style: italic;
-  }
-  .typ {
-    color: #404;
-    font-weight: bold;
-  }
-  .lit {
-    color: #044;
-  }
-  .pun,
-  .opn,
-  .clo {
-    color: #440;
-  }
-  .tag {
-    color: #006;
-    font-weight: bold;
-  }
-  .atn {
-    color: #404;
-  }
-  .atv {
-    color: #060;
-  }
-}
-/* Specify class=linenums on a pre to get line numbering */
-ol.linenums {
-  list-style-type: none;
 }

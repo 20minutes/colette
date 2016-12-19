@@ -13,6 +13,33 @@
 // Markup: form-elements.twig
 //
 // Styleguide: Components.Forms.FormElements
+form
+    p
+        margin 0
+
+label
+button
+input
+    vertical-align middle
+
+button
+input
+select
+textarea
+    font-family inherit
+
+
+/* Cursor:pointer to every clickable elements */
+label
+button
+input[type='submit']
+input[type='button']
+input[type='reset']
+    cursor pointer
+
+    &[disabled]
+        cursor default
+
 label
     font-weight bold
 
@@ -60,8 +87,19 @@ select
 
 textarea
     vertical-align top
+    border 1px solid $color-base-lighten
+    resize vertical
 
 button
 input[type='button']
 input[type='submit']
     border-style none
+
+/* Avoid deformation on radios, checkboxes and images inputs and different display on some IE */
+input[type='radio']
+input[type='checkbox']
+input[type='image']
+    background-color none
+    border 0
+    width auto
+
