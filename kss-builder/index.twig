@@ -38,7 +38,7 @@
         {# homepage #}
         {% if homepage %}
             <div id="kssref-homepage" class="co_section-depth-1">
-                <h1 class="co_section-h1 co_content">About</h1>
+                <h1 class="co_section-h1 co_content pl2 pr2">About</h1>
             </div>
             <section id="kssref-homepage" class="co_section-home co_section-depth-2 co_content pl2 pr2">
                 {{ homepage|raw }}
@@ -49,12 +49,12 @@
         {% for section in sections %}
             {% set depth = section.depth %}
             {% set sectionElement = loop.first ? 'div' : 'section' %}
-            <{{ sectionElement }} id="kssref-{{ section.referenceURI }}" class="co_section-depth-{{ depth }} {% if depth > 1 %} co_content{% endif %}">
+            <{{ sectionElement }} id="kssref-{{ section.referenceURI }}" class="co_section-depth-{{ depth }} {% if depth > 1 %} co_content pl2 pr2{% endif %}">
 
 
             {# section header #}
             {% set headerElement = (depth > 6) ? 'h6' : 'h' ~ depth %}
-            <{{ headerElement }} class="co_section-h{{ depth }} pl2 pr2{% if 1 == depth %} co_content{% endif %}">
+            <{{ headerElement }} class="co_section-h{{ depth }} {% if 1 == depth %} co_content pl2 pr2{% endif %}">
                 {# section title #}
                 {% if depth > 1 %}
                     <a href="#kssref-{{ section.referenceURI }}">
