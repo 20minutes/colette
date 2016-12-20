@@ -711,7 +711,15 @@ ul,
 ol {
   margin-top: 1.2rem;
   margin-bottom: 1.2rem;
-  padding-left: 0 0 0 1.1em;
+  padding: 0 0 0 1.1em;
+}
+/* Reset of margin/padding on nested elements */
+li p,
+li ul {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-top: 0;
 }
 hr {
   clear: both;
@@ -769,24 +777,13 @@ th {
   border-width: 0;
   padding: 0.6rem 1.2rem;
 }
-/*
- * Typographie [
- * ---------------------------------------------------------------------------------------- */
-/* Suppression des margin/padding supplémentaires sur éléments imbriqués */
-li p,
-li ul {
-  margin-bottom: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-top: 0;
-}
-/* (1) Important : l'attribut [title] doit être présent
- * (2) Pour IE 8/9, Safari 5, and Chrome : qui n'ont pas de style par défaut pou cette balise
+/* (1) Important : [title] attribut must be present
+ * (2) For IE 8/9, Safari 5, and Chrome : they have not default style for this tag
  */
 abbr[title] {
   border-bottom: 1px dotted;
 }
-/* Evite les débordement de texte en forçant le retour à la ligne */
+/* Avoid text overflow forcing return to new line */
 textarea,
 table,
 td,
