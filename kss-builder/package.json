@@ -5,9 +5,9 @@
   "main": "builder.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "./node_modules/.bin/node-sass --output-style compressed kss-assets/kss.scss kss-assets/kss.css"
+    "stylus": "./node_modules/.bin/stylus -w kss-assets/co-styles.styl -o kss-assets/co-styles.css"
   },
   "devDependencies": {
-    "node-sass": "^3.4.2"
+    "stylus": "^0.54.5"
   }
 }

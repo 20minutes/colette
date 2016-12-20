@@ -11,13 +11,13 @@
     {{ styles|raw }}
 
 </head>
-<body>
+<body class="co">
 {#
   Inject svg symboles
   use this inline style to prevent bug from display:none with svg mask and gradients
 #}
 <div style="height:0;width:0;position:absolute;visibility:hidden;overflow:hidden">{% include '../dist/svg/svg.svg' %}</div>
-<div id="co_wrapper">
+<div class="co_wrapper">
     {# top navigation #}
     <nav class="navbar co_navbar">
         <div class="co_content clearfix">
@@ -34,13 +34,13 @@
     </nav>
 
     {# page content #}
-    <article role="main" id="co_page" class="pt4 pb6">
+    <article role="main" class="co_page pt4 pb6">
         {# homepage #}
         {% if homepage %}
-            <div id="kssref-homepage" class="co_section-depth-1  pl2 pr2">
-                <h1 class="co_section-h1 co_content pl2 pr2">About</h1>
+            <div id="kssref-homepage" class="co_section-depth-1">
+                <h1 class="co_section-h1 co_content">About</h1>
             </div>
-            <section id="kssref-homepage" class="co_section-home co_section-depth-2  co_content pl2 pr2">
+            <section id="kssref-homepage" class="co_section-home co_section-depth-2 co_content pl2 pr2">
                 {{ homepage|raw }}
             </section>
         {% endif %}
@@ -49,12 +49,12 @@
         {% for section in sections %}
             {% set depth = section.depth %}
             {% set sectionElement = loop.first ? 'div' : 'section' %}
-            <{{ sectionElement }} id="kssref-{{ section.referenceURI }}" class="co_section-depth-{{ depth }} {% if depth > 1 %} co_content{% endif %} pl2 pr2">
+            <{{ sectionElement }} id="kssref-{{ section.referenceURI }}" class="co_section-depth-{{ depth }} {% if depth > 1 %} co_content{% endif %}">
 
 
             {# section header #}
             {% set headerElement = (depth > 6) ? 'h6' : 'h' ~ depth %}
-            <{{ headerElement }} class="co_section-h{{ depth }}{% if 1 == depth %} co_content pl2 pr2{% endif %}">
+            <{{ headerElement }} class="co_section-h{{ depth }} pl2 pr2{% if 1 == depth %} co_content{% endif %}">
                 {# section title #}
                 {% if depth > 1 %}
                     <a href="#kssref-{{ section.referenceURI }}">
@@ -137,7 +137,7 @@
                         {% endif %}
 
                     </p>
-                    <div class="co_subsection-content col-md-9 clearfix mb1">
+                    <div class="co_subsection-demo col-md-9 clearfix mb1">
                         {{ section.example|raw }}
                     </div>
                 </div>
@@ -150,7 +150,7 @@
                             {% for modifier in section.modifiers %}
                                 <p><code>{{ modifier.name }}</code></p>
                                 <p>{{ modifier.description|raw }}</p>
-                                <div class="co_modifier-example clearfix mb3">
+                                <div class="co_subsection-demo clearfix mb3">
                                     {{ modifier.markup|raw }}
                                 </div>
                             {% endfor %}
@@ -192,7 +192,7 @@
     </article>
 
     {# footer #}
-    <footer class="co_footer">
+    <footer class="co_footer footer">
         <div class="co_content clearfix">
             <p class="float-left">© Copyright <a href="http://www.20minutes.fr">20 Minutes</a></p>
             <p class="float-right"><a href="https://twitter.com/Tech20Minutes" class="ml2" data-icon="twitter"> Follow us </a></p>
