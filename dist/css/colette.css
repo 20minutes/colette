@@ -2478,38 +2478,110 @@ figure {
   clear: both;
   visibility: hidden;
 }
+.border-color-base {
+  border: 1px solid #4c4d4e;
+}
+.bg-base {
+  background-color: #4c4d4e;
+}
 .color-base {
   color: #4c4d4e;
+}
+.border-color-default {
+  border: 1px solid #0b4892;
+}
+.bg-default {
+  background-color: #0b4892;
 }
 .color-default {
   color: #0b4892;
 }
+.border-color-sport {
+  border: 1px solid #00b9f3;
+}
+.bg-sport {
+  background-color: #00b9f3;
+}
 .color-sport {
   color: #00b9f3;
+}
+.border-color-entertainment {
+  border: 1px solid #cc190f;
+}
+.bg-entertainment {
+  background-color: #cc190f;
 }
 .color-entertainment {
   color: #cc190f;
 }
+.border-color-economy {
+  border: 1px solid #053042;
+}
+.bg-economy {
+  background-color: #053042;
+}
 .color-economy {
   color: #053042;
+}
+.border-color-community {
+  border: 1px solid #930b48;
+}
+.bg-community {
+  background-color: #930b48;
 }
 .color-community {
   color: #930b48;
 }
+.border-color-weird {
+  border: 1px solid #ef2a82;
+}
+.bg-weird {
+  background-color: #ef2a82;
+}
 .color-weird {
   color: #ef2a82;
+}
+.border-color-partner {
+  border: 1px solid #ff5400;
+}
+.bg-partner {
+  background-color: #ff5400;
 }
 .color-partner {
   color: #ff5400;
 }
+.border-color-planet {
+  border: 1px solid #48930b;
+}
+.bg-planet {
+  background-color: #48930b;
+}
 .color-planet {
   color: #48930b;
+}
+.border-color-media {
+  border: 1px solid #000;
+}
+.bg-media {
+  background-color: #000;
 }
 .color-media {
   color: #000;
 }
+.border-color-hightech {
+  border: 1px solid #686868;
+}
+.bg-hightech {
+  background-color: #686868;
+}
 .color-hightech {
   color: #686868;
+}
+.border-color-native {
+  border: 1px solid #fff7e2;
+}
+.bg-native {
+  background-color: #fff7e2;
 }
 .color-native {
   color: #fff7e2;
