@@ -1,48 +1,64 @@
 {
-  "name": "colette",
-  "version": "0.14.3",
-  "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "bower_components",
-    "docs",
-    "kss-builder",
-    "node_modules",
-    "test",
-    "tests",
-    "favicon-preview.ico",
-    "gulpfile.js",
-    "kss.json",
-    "package.json"
-  ],
-  "dependencies": {
-    "headroom.js": "~0.7.0"
-  },
-  "devDependencies": {},
-  "author": "Olivia Ly <oly@20minutes.fr>",
-  "description": "A css and js starter kit for 20 Minutes web projects",
-  "main": [
-    "dist/css/colette.css",
-    "dist/js/colette.js"
-  ],
-  "keywords": [
-    "20minutes",
-    "boilerplate",
-    "css",
-    "css3",
-    "framework",
-    "grid",
-    "helpers",
-    "html",
-    "html5",
-    "responsive design",
-    "rwd",
-    "stylus",
-    "typography"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/20minutes/colette/"
-  },
-  "homepage": "https://20minutes.github.io/colette/"
+    "name": "colette",
+    "version": "0.14.3",
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "bower_components",
+        "docs",
+        "kss-builder",
+        "node_modules",
+        "test",
+        "tests",
+        "favicon-preview.ico",
+        "gulpfile.js",
+        "kss.json",
+        "package.json"
+    ],
+    "dependencies": {
+        "headroom.js": "~0.7.0",
+        "normalize.css": "5.0.0"
+    },
+    "devDependencies": {
+        "gulp": "^3.9.0",
+        "gulp-concat": "^2.6.0",
+        "gulp-cssnano": "^2.1.2",
+        "gulp-plumber": "^1.0.1",
+        "gulp-rename": "^1.2.2",
+        "gulp-run": "^1.7.1",
+        "gulp-stylint": "^3.0.0",
+        "gulp-stylus": "^2.0.7",
+        "gulp-svgstore": "^6.0.0",
+        "gulp-uglify": "^1.4.1",
+        "kss": "^3.0.0-beta.14",
+        "nib": "^1.1.0",
+        "run-sequence": "^1.2.1",
+        "stylint": "^1.5.6"
+    },
+    "author": "Olivia Ly <oly@20minutes.fr>",
+    "description": "A css and js starter kit for 20 Minutes web projects",
+    "main": [
+        "dist/css/colette.css",
+        "dist/js/colette.js"
+    ],
+    "keywords": [
+        "20minutes",
+        "boilerplate",
+        "css",
+        "css3",
+        "framework",
+        "grid",
+        "helpers",
+        "html",
+        "html5",
+        "responsive design",
+        "rwd",
+        "stylus",
+        "typography"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/20minutes/colette/"
+    },
+    "homepage": "https://20minutes.github.io/colette/"
 }
