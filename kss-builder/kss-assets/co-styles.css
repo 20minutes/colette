@@ -9,12 +9,15 @@
 /* icons */
 /* example */
 /* expand markup */
+/* table */
+/* grid examples */
 /* markup */
 /* source */
 /* footer */
 }
 .co_markup pre,
-.co_section-home pre {
+.co_section-home pre,
+.co_subsection pre {
   padding: 1em;
   margin: 0 0 1.6rem;
   border-radius: 0.25em;
@@ -245,7 +248,6 @@
   color: #c36;
 }
 .co_subsection-demo {
-  margin-top: 0.6rem;
   padding-bottom: 0.6rem;
   border-bottom: 1px solid #c7d0dc;
 }
@@ -347,6 +349,26 @@
   font-size: 0.7em;
   transform: translateX(-50%);
   transition: background-color 0.2s;
+}
+.co_table {
+  width: 100%;
+  background-color: #fff;
+}
+.co_table thead tr {
+  background-color: #44638a;
+}
+.co_table tbody tr:nth-child(2n + 1) {
+  background-color: rgba(68,99,138,0.2);
+}
+.co_grid-demo {
+  padding-bottom: 2em;
+}
+.co_grid-demo [class^=col-]:not(.clearfix) {
+  padding: 1em;
+  border-top: 1px solid #f8f8f8;
+  border-right: 1px solid #f8f8f8;
+  background-color: rgba(68,99,138,0.2);
+  text-align: center;
 }
 .co_markup {
   position: relative;

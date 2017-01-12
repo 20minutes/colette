@@ -1,52 +1,11 @@
-/*
- * Handles grid system
- * This takes a lot of inspiration from Bootstrap grid system
- */
-// Grid
-//
-// Styleguide Layout.Grid
-
-// Mixins
-//
-// Colette also provides mixins to create custom responsive layout.
-//
-// Styleguide Layout.Grid.Mixins
-
-// _column(size)
-//
-// Generate grid columns.
-//
-// size     : the number of columns (out of 12) it must span
-// flt      : the float direction (default: left, if set to none, the property won't be output)
-//
-// Styleguide Layout.Grid.Mixins.Columns
-_column(size, flt=left)
-    float unquote(flt) if none != unquote(flt)
-    width round(size * 100 / $columns, 3) * 1%
-
-_offset(size)
-    margin-left round(size * 100 / $columns, 3) * 1%
-
-// _gridColumn(breakpoint, size)
-//
-// Generate grid columns to breakpoints and media queries defined in settings.
-//
-// breakpoint   : the targeted breakpoint
-// size         : the number of columns (out of 12) it must span
-//
-// Styleguide Layout.Grid.Mixins.Columns
-_gridColumn(breakpoint, size)
-    @media $breakpoints[breakpoint]
-        _column(size)
-
-// Predefined classes
+// Grid classes
 //
 // Colette provides predefined classes to built responsive / 12-columns-based layout.
 // Grid classes are set according to:
 // - a targeted breakpoint (among those defined in the `$breakpoints` collection),
 // - a width, which must correspond to a number of columns (out of 12 from the grid).
 //
-// <table>
+// <table class="co_table mb2">
 //  <thead>
 //      <tr>
 //          <th>Breakpoint</th>
@@ -75,13 +34,12 @@ _gridColumn(breakpoint, size)
 //  </tbody>
 // </table>
 //
-// **Usage**
-//
+// **Usage**<br />
 // Columns should come within a `<div class="clearfix>` container.
 //
 // Markup: grid.twig
 //
-// Styleguide Layout.Grid.Classes
+// Styleguide Layout.Grid
 for breakpoint, query in $breakpoints
     @media query
         for i in (1..$columns)

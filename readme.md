@@ -13,6 +13,7 @@ content teasers, media, and loading animation
 
 ---
 ## Dependencies
+- [normalize.css](https://github.com/necolas/normalize.css/) by [Nicolas Gallagher](https://github.com/necolas): a collection of HTML element and attribute style-normalizations 
 - [Headroom.js](https://github.com/WickyNilliams/headroom.js) 
 by [Nick Williams](https://github.com/WickyNilliams): 
 a lightweight, high-performance JS widget (with no dependencies!)

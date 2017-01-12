@@ -179,8 +179,7 @@
                     <p class="co_subsection-title col-md-3">Parameters</p>
                     <div class="co_subsection-content co_parameters col-md-9">
                         {% for parameter in section.parameters %}
-                            <p><code>{{ parameter.name }}</code> {% if parameter.defaultValue %}(<code>{{ parameter.defaultValue }}</code>){% endif %}</p>
-                            <p>{{ parameter.description|raw }}</p>
+                            <p><code>{{ parameter.name }}</code>{% if parameter.defaultValue %} (<code>{{ parameter.defaultValue }}</code>){% endif %}: {{ parameter.description|raw }}</p>
 
                         {% endfor %}
                     </div>

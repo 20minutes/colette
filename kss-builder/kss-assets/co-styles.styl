@@ -4,18 +4,20 @@ $co-color-tertiary = #ffffff // lightest color
 $co-color-highlight = #cc3366
 $co-color-borders = #c7d0dc
 $co-color-background = #a1b1c4
+$co-color-body = #f8f8f8
 
 
 // do not style html elements in doc css
 
 
 .co
-    background-color #f8f8f8
+    background-color $co-color-body
     color #333
 
 
     &_markup
     &_section-home
+    &_subsection
         pre
             padding 1em
             margin 0 0 1.6rem
@@ -163,7 +165,6 @@ $co-color-background = #a1b1c4
                 color $co-color-highlight
 
         &-demo
-            margin-top .6rem
             padding-bottom .6rem
             border-bottom 1px solid $co-color-borders
 
@@ -276,6 +277,31 @@ $co-color-background = #a1b1c4
             font-size .7em
             transform translateX(-50%)
             transition background-color .2s
+
+    /* table */
+    &_table
+        width 100%
+        background-color $co-color-tertiary
+
+        thead
+            tr
+                background-color $co-color-primary
+
+        tbody
+            tr:nth-child(2n + 1)
+                background-color alpha($co-color-primary, .2)
+
+    /* grid examples */
+    &_grid-demo
+        padding-bottom 2em
+
+        [class^=col-]:not(.clearfix)
+            padding 1em
+            border-top 1px solid $co-color-body
+            border-right 1px solid $co-color-body
+            background-color alpha($co-color-primary, .2)
+            text-align center
+
 
     /* markup */
     &_markup

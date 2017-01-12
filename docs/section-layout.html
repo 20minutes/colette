@@ -220,7 +220,7 @@
                 
                                     <a href="#kssref-layout-grid">
                                     <strong class="co_section-ref">2.2</strong>
-                    Grid
+                    Grid classes
                                     </a>
                             </h2>
             
@@ -229,44 +229,7 @@
                             <div class="co_subsection clearfix">
                     <p class="co_subsection-title col-md-3">Source</p>
                     <p class="co_subsection-content co_source col-md-9">
-                        <code>_layout/_grid.styl, Line: line 5</code>
-                    </p>
-                </div>
-            
-
-            
-            
-
-            
-            
-
-            
-            
-
-            
-            
-
-            
-            
-        </section>
-                                            <section id="kssref-layout-grid-classes" class="co_section-depth-3  co_content pl2 pr2">
-
-
-            
-                        <h3 class="co_section-h3 ">
-                
-                                    <a href="#kssref-layout-grid-classes">
-                                    <strong class="co_section-ref">2.2.1</strong>
-                    Predefined classes
-                                    </a>
-                            </h3>
-            
-
-            
-                            <div class="co_subsection clearfix">
-                    <p class="co_subsection-title col-md-3">Source</p>
-                    <p class="co_subsection-content co_source col-md-9">
-                        <code>_layout/_grid.styl, Line: line 42</code>
+                        <code>_layout/_grid.styl</code>
                     </p>
                 </div>
             
@@ -281,7 +244,7 @@ Grid classes are set according to:</p>
 <li>a targeted breakpoint (among those defined in the <code>$breakpoints</code> collection),</li>
 <li>a width, which must correspond to a number of columns (out of 12 from the grid).</li>
 </ul>
-<table>
+<table class="co_table mb2">
  <thead>
      <tr>
          <th>Breakpoint</th>
@@ -310,8 +273,8 @@ Grid classes are set according to:</p>
  </tbody>
 </table>
 
-<p><strong>Usage</strong></p>
-<p>Columns should come within a <code>&lt;div class=&quot;clearfix&gt;</code> container.</p>
+<p><strong>Usage</strong><br />
+Columns should come within a <code>&lt;div class=&quot;clearfix&gt;</code> container.</p>
 
                     </div>
                 </div>
@@ -332,29 +295,27 @@ Grid classes are set according to:</p>
                     </p>
                     <div class="co_subsection-demo col-md-9 clearfix mb1">
                         <p><b>Example 1</b> - Columns convert to clearfixs under medium breakpoint:</p>
-<div class="clearfix">
-    <div class="col-md-2" style="background:#f1f1f1">col-md-2</div>
-    <div class="col-md-2" style="background:#f1f1f1">col-md-2</div>
-    <div class="col-md-2" style="background:#f1f1f1">col-md-2</div>
-    <div class="col-md-2" style="background:#f1f1f1">col-md-2</div>
-    <div class="col-md-2" style="background:#f1f1f1">col-md-2</div>
-    <div class="col-md-2" style="background:#f1f1f1">col-md-2</div>
+<div class="co_grid-demo clearfix">
+    <div class="col-md-2">col-md-2</div>
+    <div class="col-md-2">col-md-2</div>
+    <div class="col-md-2">col-md-2</div>
+    <div class="col-md-2">col-md-2</div>
+    <div class="col-md-2">col-md-2</div>
+    <div class="col-md-2">col-md-2</div>
 </div>
-<hr />
 <p><b>Example 2</b> - Columns convert to clearfixs under small breakpoint:</p>
-<div class="clearfix">
-    <div class="col-sm-4" style="background:#f1f1f1">col-sm-4</div>
-    <div class="col-sm-4" style="background:#f1f1f1">col-sm-4</div>
-    <div class="col-sm-4" style="background:#f1f1f1">col-sm-4</div>
+<div class="co_grid-demo clearfix">
+    <div class="col-sm-4">col-sm-4</div>
+    <div class="col-sm-4">col-sm-4</div>
+    <div class="col-sm-4">col-sm-4</div>
 </div>
-<hr />
 <p><b>Example 3</b> - Col3 should convert to clearfix under medium breakpoint, and Col1, Col2 under small breakpoint:</p>
-<div class="clearfix">
-    <div class="col-md-8 clearfix" style="background:#f1f1f1">
-        <div class="col-sm-6">Col1</div>
-        <div class="col-sm-6">Col2</div>
+<div class="co_grid-demo clearfix">
+    <div class="col-md-8 clearfix">
+        <div class="col-sm-6">Col1 (col-sm-6)</div>
+        <div class="col-sm-6">Col2 (col-sm-6)</div>
     </div>
-    <div class="col-md-4" style="background:#c7c7c7">Col3</div>
+    <div class="col-md-4">Col3 (col-md-4)</div>
 </div>
 
                     </div>
@@ -368,171 +329,33 @@ Grid classes are set according to:</p>
                         <div class="co_subsection-content co_markup col-md-9">
                             <p class="co_expand"><span class="btn">click to expand</span></p>
                             <pre class="pa1 prettyprint linenums lang-html"><code data-language="html">&lt;p&gt;&lt;b&gt;Example 1&lt;/b&gt; - Columns convert to clearfixs under medium breakpoint:&lt;/p&gt;
-&lt;div class=&quot;clearfix&quot;&gt;
-    &lt;div class=&quot;col-md-2&quot; style=&quot;background:#f1f1f1&quot;&gt;col-md-2&lt;/div&gt;
-    &lt;div class=&quot;col-md-2&quot; style=&quot;background:#f1f1f1&quot;&gt;col-md-2&lt;/div&gt;
-    &lt;div class=&quot;col-md-2&quot; style=&quot;background:#f1f1f1&quot;&gt;col-md-2&lt;/div&gt;
-    &lt;div class=&quot;col-md-2&quot; style=&quot;background:#f1f1f1&quot;&gt;col-md-2&lt;/div&gt;
-    &lt;div class=&quot;col-md-2&quot; style=&quot;background:#f1f1f1&quot;&gt;col-md-2&lt;/div&gt;
-    &lt;div class=&quot;col-md-2&quot; style=&quot;background:#f1f1f1&quot;&gt;col-md-2&lt;/div&gt;
+&lt;div class=&quot;co_grid-demo clearfix&quot;&gt;
+    &lt;div class=&quot;col-md-2&quot;&gt;col-md-2&lt;/div&gt;
+    &lt;div class=&quot;col-md-2&quot;&gt;col-md-2&lt;/div&gt;
+    &lt;div class=&quot;col-md-2&quot;&gt;col-md-2&lt;/div&gt;
+    &lt;div class=&quot;col-md-2&quot;&gt;col-md-2&lt;/div&gt;
+    &lt;div class=&quot;col-md-2&quot;&gt;col-md-2&lt;/div&gt;
+    &lt;div class=&quot;col-md-2&quot;&gt;col-md-2&lt;/div&gt;
 &lt;/div&gt;
-&lt;hr /&gt;
 &lt;p&gt;&lt;b&gt;Example 2&lt;/b&gt; - Columns convert to clearfixs under small breakpoint:&lt;/p&gt;
-&lt;div class=&quot;clearfix&quot;&gt;
-    &lt;div class=&quot;col-sm-4&quot; style=&quot;background:#f1f1f1&quot;&gt;col-sm-4&lt;/div&gt;
-    &lt;div class=&quot;col-sm-4&quot; style=&quot;background:#f1f1f1&quot;&gt;col-sm-4&lt;/div&gt;
-    &lt;div class=&quot;col-sm-4&quot; style=&quot;background:#f1f1f1&quot;&gt;col-sm-4&lt;/div&gt;
+&lt;div class=&quot;co_grid-demo clearfix&quot;&gt;
+    &lt;div class=&quot;col-sm-4&quot;&gt;col-sm-4&lt;/div&gt;
+    &lt;div class=&quot;col-sm-4&quot;&gt;col-sm-4&lt;/div&gt;
+    &lt;div class=&quot;col-sm-4&quot;&gt;col-sm-4&lt;/div&gt;
 &lt;/div&gt;
-&lt;hr /&gt;
 &lt;p&gt;&lt;b&gt;Example 3&lt;/b&gt; - Col3 should convert to clearfix under medium breakpoint, and Col1, Col2 under small breakpoint:&lt;/p&gt;
-&lt;div class=&quot;clearfix&quot;&gt;
-    &lt;div class=&quot;col-md-8 clearfix&quot; style=&quot;background:#f1f1f1&quot;&gt;
-        &lt;div class=&quot;col-sm-6&quot;&gt;Col1&lt;/div&gt;
-        &lt;div class=&quot;col-sm-6&quot;&gt;Col2&lt;/div&gt;
+&lt;div class=&quot;co_grid-demo clearfix&quot;&gt;
+    &lt;div class=&quot;col-md-8 clearfix&quot;&gt;
+        &lt;div class=&quot;col-sm-6&quot;&gt;Col1 (col-sm-6)&lt;/div&gt;
+        &lt;div class=&quot;col-sm-6&quot;&gt;Col2 (col-sm-6)&lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;col-md-4&quot; style=&quot;background:#c7c7c7&quot;&gt;Col3&lt;/div&gt;
+    &lt;div class=&quot;col-md-4&quot;&gt;Col3 (col-md-4)&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
                             <p class="co_markup-action font-secondary align-right"><span class="collapse pr1">Collaspe</span><span>Open code in new tab</span></p>
                         </div>
                     </div>
                             
-
-            
-            
-        </section>
-                                            <section id="kssref-layout-grid-mixins" class="co_section-depth-3  co_content pl2 pr2">
-
-
-            
-                        <h3 class="co_section-h3 ">
-                
-                                    <a href="#kssref-layout-grid-mixins">
-                                    <strong class="co_section-ref">2.2.2</strong>
-                    Mixins
-                                    </a>
-                            </h3>
-            
-
-            
-                            <div class="co_subsection clearfix">
-                    <p class="co_subsection-title col-md-3">Source</p>
-                    <p class="co_subsection-content co_source col-md-9">
-                        <code>_layout/_grid.styl, Line: line 9</code>
-                    </p>
-                </div>
-            
-
-            
-                            <div class="co_subsection clearfix">
-                    <p class="co_subsection-title col-md-3">Description</p>
-                    <div class="co_subsection-content col-md-9">
-                        <p>Colette also provides mixins to create custom responsive layout.</p>
-
-                    </div>
-                </div>
-            
-
-            
-            
-
-            
-            
-
-            
-            
-
-            
-            
-        </section>
-                                            <section id="kssref-layout-grid-mixins-columns" class="co_section-depth-4  co_content pl2 pr2">
-
-
-            
-                        <h4 class="co_section-h4 ">
-                
-                                    <a href="#kssref-layout-grid-mixins-columns">
-                                    <strong class="co_section-ref">2.2.2.1</strong>
-                    _gridColumn(breakpoint, size)
-                                    </a>
-                            </h4>
-            
-
-            
-                            <div class="co_subsection clearfix">
-                    <p class="co_subsection-title col-md-3">Source</p>
-                    <p class="co_subsection-content co_source col-md-9">
-                        <code>_layout/_grid.styl, Line: line 30</code>
-                    </p>
-                </div>
-            
-
-            
-                            <div class="co_subsection clearfix">
-                    <p class="co_subsection-title col-md-3">Description</p>
-                    <div class="co_subsection-content col-md-9">
-                        <p>Generate grid columns to breakpoints and media queries defined in settings.</p>
-<p>breakpoint   : the targeted breakpoint
-size         : the number of columns (out of 12) it must span</p>
-
-                    </div>
-                </div>
-            
-
-            
-            
-
-            
-            
-
-            
-            
-
-            
-            
-        </section>
-                                            <section id="kssref-layout-grid-mixins-columns" class="co_section-depth-4  co_content pl2 pr2">
-
-
-            
-                        <h4 class="co_section-h4 ">
-                
-                                    <a href="#kssref-layout-grid-mixins-columns">
-                                    <strong class="co_section-ref">2.2.2.1</strong>
-                    _column(size)
-                                    </a>
-                            </h4>
-            
-
-            
-                            <div class="co_subsection clearfix">
-                    <p class="co_subsection-title col-md-3">Source</p>
-                    <p class="co_subsection-content co_source col-md-9">
-                        <code>_layout/_grid.styl, Line: line 15</code>
-                    </p>
-                </div>
-            
-
-            
-                            <div class="co_subsection clearfix">
-                    <p class="co_subsection-title col-md-3">Description</p>
-                    <div class="co_subsection-content col-md-9">
-                        <p>Generate grid columns.</p>
-<p>size     : the number of columns (out of 12) it must span
-flt      : the float direction (default: left, if set to none, the property won&#39;t be output)</p>
-
-                    </div>
-                </div>
-            
-
-            
-            
-
-            
-            
-
-            
-            
 
             
             
