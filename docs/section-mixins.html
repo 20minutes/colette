@@ -184,14 +184,212 @@
                             <div class="co_subsection clearfix">
                     <p class="co_subsection-title col-md-3">Parameters</p>
                     <div class="co_subsection-content co_parameters col-md-9">
-                                                    <p><code>$foreground-color</code> </p>
-                            <p>text color to check</p>
+                                                    <p><code>$foreground-color</code>: text color to check</p>
 
-                                                    <p><code>$background-color</code> (<code>$color-white</code>)</p>
-                            <p>background color to compare</p>
+                                                    <p><code>$background-color</code> (<code>$color-white</code>): background color to compare</p>
 
-                                                    <p><code>$min</code> (<code>$contrast</code>)</p>
-                            <p>minimum contrast ratio</p>
+                                                    <p><code>$min</code> (<code>$contrast</code>): minimum contrast ratio</p>
+
+                                            </div>
+                </div>
+            
+        </section>
+                                            <section id="kssref-mixins-grids" class="co_section-depth-2  co_content pl2 pr2">
+
+
+            
+                        <h2 class="co_section-h2 ">
+                
+                                    <a href="#kssref-mixins-grids">
+                                    <strong class="co_section-ref">7.2</strong>
+                    Grid
+                                    </a>
+                            </h2>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_mixins/_grid.styl</code>
+                    </p>
+                </div>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Colette provides mixins to create custom responsive grid layouts.</p>
+
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+        </section>
+                                            <section id="kssref-mixins-grids-column" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3 ">
+                
+                                    <a href="#kssref-mixins-grids-column">
+                                    <strong class="co_section-ref">7.2.1</strong>
+                    _column(size)
+                                    </a>
+                            </h3>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_mixins/_grid.styl, Line: line 7</code>
+                    </p>
+                </div>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Generate grid columns.</p>
+
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Parameters</p>
+                    <div class="co_subsection-content co_parameters col-md-9">
+                                                    <p><code>$size</code>: the number of columns (out of 12) it must span</p>
+
+                                                    <p><code>$flt</code> (<code>left</code>): the float direction (if set to <code>none</code>, the property won&#39;t be output)</p>
+
+                                            </div>
+                </div>
+            
+        </section>
+                                            <section id="kssref-mixins-grids-gridcolumn" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3 ">
+                
+                                    <a href="#kssref-mixins-grids-gridcolumn">
+                                    <strong class="co_section-ref">7.2.2</strong>
+                    _gridColumn(breakpoint, size)
+                                    </a>
+                            </h3>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_mixins/_grid.styl, Line: line 31</code>
+                    </p>
+                </div>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Generate grid columns according to breakpoints and media queries defined in settings.</p>
+
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Parameters</p>
+                    <div class="co_subsection-content co_parameters col-md-9">
+                                                    <p><code>$breakpoint</code>: the targeted breakpoint</p>
+
+                                                    <p><code>$size</code>: the number of columns (out of 12) it must span</p>
+
+                                            </div>
+                </div>
+            
+        </section>
+                                            <section id="kssref-mixins-grids-offset" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3 ">
+                
+                                    <a href="#kssref-mixins-grids-offset">
+                                    <strong class="co_section-ref">7.2.3</strong>
+                    _offset(size)
+                                    </a>
+                            </h3>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Source</p>
+                    <p class="co_subsection-content co_source col-md-9">
+                        <code>_mixins/_grid.styl, Line: line 20</code>
+                    </p>
+                </div>
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Generate an offset left margin, based on column width.</p>
+
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Parameters</p>
+                    <div class="co_subsection-content co_parameters col-md-9">
+                                                    <p><code>$size</code>: the number of columns (out of 12) that defines the width of the margin</p>
 
                                             </div>
                 </div>
@@ -204,7 +402,7 @@
                         <h2 class="co_section-h2 ">
                 
                                     <a href="#kssref-mixins-mask">
-                                    <strong class="co_section-ref">7.2</strong>
+                                    <strong class="co_section-ref">7.3</strong>
                     Mask
                                     </a>
                             </h2>
@@ -243,8 +441,7 @@
                             <div class="co_subsection clearfix">
                     <p class="co_subsection-title col-md-3">Parameters</p>
                     <div class="co_subsection-content co_parameters col-md-9">
-                                                    <p><code>$important</code> (<code>false</code>)</p>
-                            <p>If set to <code>true</code>, makes all rules <code>!important</code></p>
+                                                    <p><code>$important</code> (<code>false</code>): If set to <code>true</code>, makes all rules <code>!important</code></p>
 
                                             </div>
                 </div>
@@ -257,7 +454,7 @@
                         <h2 class="co_section-h2 ">
                 
                                     <a href="#kssref-mixins-spaces">
-                                    <strong class="co_section-ref">7.3</strong>
+                                    <strong class="co_section-ref">7.4</strong>
                     Spaces
                                     </a>
                             </h2>
@@ -302,7 +499,7 @@
                         <h3 class="co_section-h3 ">
                 
                                     <a href="#kssref-mixins-spaces-ma">
-                                    <strong class="co_section-ref">7.3.1</strong>
+                                    <strong class="co_section-ref">7.4.1</strong>
                     _ma()
                                     </a>
                             </h3>
@@ -346,8 +543,7 @@ margin: 20px;
                             <div class="co_subsection clearfix">
                     <p class="co_subsection-title col-md-3">Parameters</p>
                     <div class="co_subsection-content co_parameters col-md-9">
-                                                    <p><code>$i</code> </p>
-                            <p>multiplier of <code>$gutter</code></p>
+                                                    <p><code>$i</code>: multiplier of <code>$gutter</code></p>
 
                                             </div>
                 </div>
@@ -360,7 +556,7 @@ margin: 20px;
                         <h3 class="co_section-h3 ">
                 
                                     <a href="#kssref-mixins-spaces-mb">
-                                    <strong class="co_section-ref">7.3.2</strong>
+                                    <strong class="co_section-ref">7.4.2</strong>
                     _mb()
                                     </a>
                             </h3>
@@ -404,8 +600,7 @@ margin-bottom: 20px;
                             <div class="co_subsection clearfix">
                     <p class="co_subsection-title col-md-3">Parameters</p>
                     <div class="co_subsection-content co_parameters col-md-9">
-                                                    <p><code>$i</code> </p>
-                            <p>multiplier of <code>$gutter</code></p>
+                                                    <p><code>$i</code>: multiplier of <code>$gutter</code></p>
 
                                             </div>
                 </div>
@@ -418,7 +613,7 @@ margin-bottom: 20px;
                         <h3 class="co_section-h3 ">
                 
                                     <a href="#kssref-mixins-spaces-ml">
-                                    <strong class="co_section-ref">7.3.3</strong>
+                                    <strong class="co_section-ref">7.4.3</strong>
                     _ml()
                                     </a>
                             </h3>
@@ -462,8 +657,7 @@ margin-left: 20px;
                             <div class="co_subsection clearfix">
                     <p class="co_subsection-title col-md-3">Parameters</p>
                     <div class="co_subsection-content co_parameters col-md-9">
-                                                    <p><code>$i</code> </p>
-                            <p>multiplier of <code>$gutter</code></p>
+                                                    <p><code>$i</code>: multiplier of <code>$gutter</code></p>
 
                                             </div>
                 </div>
@@ -476,7 +670,7 @@ margin-left: 20px;
                         <h3 class="co_section-h3 ">
                 
                                     <a href="#kssref-mixins-spaces-mr">
-                                    <strong class="co_section-ref">7.3.4</strong>
+                                    <strong class="co_section-ref">7.4.4</strong>
                     _mr()
                                     </a>
                             </h3>
@@ -520,8 +714,7 @@ margin-right: 20px;
                             <div class="co_subsection clearfix">
                     <p class="co_subsection-title col-md-3">Parameters</p>
                     <div class="co_subsection-content co_parameters col-md-9">
-                                                    <p><code>$i</code> </p>
-                            <p>multiplier of <code>$gutter</code></p>
+                                                    <p><code>$i</code>: multiplier of <code>$gutter</code></p>
 
                                             </div>
                 </div>
@@ -534,7 +727,7 @@ margin-right: 20px;
                         <h3 class="co_section-h3 ">
                 
                                     <a href="#kssref-mixins-spaces-mt">
-                                    <strong class="co_section-ref">7.3.5</strong>
+                                    <strong class="co_section-ref">7.4.5</strong>
                     _mt()
                                     </a>
                             </h3>
@@ -578,8 +771,7 @@ margin-top: 20px;
                             <div class="co_subsection clearfix">
                     <p class="co_subsection-title col-md-3">Parameters</p>
                     <div class="co_subsection-content co_parameters col-md-9">
-                                                    <p><code>$i</code> </p>
-                            <p>multiplier of <code>$gutter</code></p>
+                                                    <p><code>$i</code>: multiplier of <code>$gutter</code></p>
 
                                             </div>
                 </div>
@@ -592,7 +784,7 @@ margin-top: 20px;
                         <h3 class="co_section-h3 ">
                 
                                     <a href="#kssref-mixins-spaces-pa">
-                                    <strong class="co_section-ref">7.3.6</strong>
+                                    <strong class="co_section-ref">7.4.6</strong>
                     _pa()
                                     </a>
                             </h3>
@@ -636,8 +828,7 @@ padding: 20px;
                             <div class="co_subsection clearfix">
                     <p class="co_subsection-title col-md-3">Parameters</p>
                     <div class="co_subsection-content co_parameters col-md-9">
-                                                    <p><code>$i</code> </p>
-                            <p>multiplier of <code>$gutter</code></p>
+                                                    <p><code>$i</code>: multiplier of <code>$gutter</code></p>
 
                                             </div>
                 </div>
@@ -650,7 +841,7 @@ padding: 20px;
                         <h3 class="co_section-h3 ">
                 
                                     <a href="#kssref-mixins-spaces-pb">
-                                    <strong class="co_section-ref">7.3.7</strong>
+                                    <strong class="co_section-ref">7.4.7</strong>
                     _pb()
                                     </a>
                             </h3>
@@ -694,8 +885,7 @@ padding-bottom: 20px;
                             <div class="co_subsection clearfix">
                     <p class="co_subsection-title col-md-3">Parameters</p>
                     <div class="co_subsection-content co_parameters col-md-9">
-                                                    <p><code>$i</code> </p>
-                            <p>multiplier of <code>$gutter</code></p>
+                                                    <p><code>$i</code>: multiplier of <code>$gutter</code></p>
 
                                             </div>
                 </div>
@@ -708,7 +898,7 @@ padding-bottom: 20px;
                         <h3 class="co_section-h3 ">
                 
                                     <a href="#kssref-mixins-spaces-pl">
-                                    <strong class="co_section-ref">7.3.8</strong>
+                                    <strong class="co_section-ref">7.4.8</strong>
                     _pl()
                                     </a>
                             </h3>
@@ -752,8 +942,7 @@ padding-left: 20px;
                             <div class="co_subsection clearfix">
                     <p class="co_subsection-title col-md-3">Parameters</p>
                     <div class="co_subsection-content co_parameters col-md-9">
-                                                    <p><code>$i</code> </p>
-                            <p>multiplier of <code>$gutter</code></p>
+                                                    <p><code>$i</code>: multiplier of <code>$gutter</code></p>
 
                                             </div>
                 </div>
@@ -766,7 +955,7 @@ padding-left: 20px;
                         <h3 class="co_section-h3 ">
                 
                                     <a href="#kssref-mixins-spaces-pr">
-                                    <strong class="co_section-ref">7.3.9</strong>
+                                    <strong class="co_section-ref">7.4.9</strong>
                     _pr()
                                     </a>
                             </h3>
@@ -810,8 +999,7 @@ padding-right: 20px;
                             <div class="co_subsection clearfix">
                     <p class="co_subsection-title col-md-3">Parameters</p>
                     <div class="co_subsection-content co_parameters col-md-9">
-                                                    <p><code>$i</code> </p>
-                            <p>multiplier of <code>$gutter</code></p>
+                                                    <p><code>$i</code>: multiplier of <code>$gutter</code></p>
 
                                             </div>
                 </div>
@@ -824,7 +1012,7 @@ padding-right: 20px;
                         <h3 class="co_section-h3 ">
                 
                                     <a href="#kssref-mixins-spaces-pt">
-                                    <strong class="co_section-ref">7.3.10</strong>
+                                    <strong class="co_section-ref">7.4.10</strong>
                     _pt()
                                     </a>
                             </h3>
@@ -868,8 +1056,7 @@ padding-top: 20px;
                             <div class="co_subsection clearfix">
                     <p class="co_subsection-title col-md-3">Parameters</p>
                     <div class="co_subsection-content co_parameters col-md-9">
-                                                    <p><code>$i</code> </p>
-                            <p>multiplier of <code>$gutter</code></p>
+                                                    <p><code>$i</code>: multiplier of <code>$gutter</code></p>
 
                                             </div>
                 </div>
