@@ -863,10 +863,6 @@ figure {
 .footer a:hover {
   text-decoration: underline;
 }
-/*
- * Handles grid system
- * This takes a lot of inspiration from Bootstrap grid system
- */
 @media screen and (min-width: 420px) {
   .col-sm-1 {
     float: left;
@@ -2146,9 +2142,6 @@ figure {
 .teaser-summary {
   margin: 0;
   padding-top: 0.3rem;
-}
-.native {
-  background-color: #fff7e2;
 }
 /* Text skins */
 .skin-blog .media:before,
