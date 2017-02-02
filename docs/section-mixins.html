@@ -388,6 +388,14 @@
                     <p class="co_subsection-title col-md-3">Description</p>
                     <div class="co_subsection-content col-md-9">
                         <p>Returns encoded inline svg</p>
+<p>$svg - svg code</p>
+<pre><code>.foo
+    background-image _inlineSvg(&#39;&lt;svg viewBox=&quot;0 0 90 30&quot; width=&quot;30&quot; height=&quot;30&quot;&gt;&lt;circle cx=&quot;15&quot; cy=&quot;15&quot; r=&quot;10&quot; class=&quot;bounce1&quot;/&gt;&lt;/svg&gt;&#39;)
+</code></pre><p>will return</p>
+<pre><code class="lang-css">.foo {
+    background-image url(&quot;data:image/svg+xml,%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 90 30&#39; width=&#39;30&#39; height=&#39;30&#39;%3E%3Ccircle cx=&#39;15&#39; cy=&#39;15&#39; r=&#39;10&#39; class=&#39;bounce1&#39;/%3E%3C/svg%3E&quot;);
+}
+</code></pre>
 
                     </div>
                 </div>
@@ -403,13 +411,6 @@
             
 
             
-                            <div class="co_subsection clearfix">
-                    <p class="co_subsection-title col-md-3">Parameters</p>
-                    <div class="co_subsection-content co_parameters col-md-9">
-                                                    <p><code>$svg</code>: svg code</p>
-
-                                            </div>
-                </div>
             
         </section>
                                             <section id="kssref-mixins-mask" class="co_section-depth-2  co_content pl2 pr2">
