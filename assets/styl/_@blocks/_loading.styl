@@ -1,0 +1,21 @@
+// {loading}
+//
+// display an animated svg loader
+//
+// Advice: use it in a pseudo element (`:before` or `:after)
+//
+// **Usage**
+// ```
+// /* my_file.styl */
+// .foo
+//     {loading}
+// ```
+//
+// Styleguide @blocks.Block.Loading
+loading = @block
+    display block
+    // this svg inline with autoprefixed css with this setting `IE>=9, >1%`
+    background-image _inlineSvg('<svg viewBox="0 0 90 30" width="90" height="30"><style>circle{fill:'+$color-base+';-webkit-animation:bouncedelay 1.4s infinite ease-in-out;animation:bouncedelay 1.4s infinite ease-in-out;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-transform-origin:50% 50%;-ms-transform-origin:50% 50%;transform-origin:50% 50%;}.bounce1{-webkit-animation-delay:-.32s;animation-delay:-.32s;}.bounce2{-webkit-animation-delay:-.16s;animation-delay:-.16s;}@-webkit-keyframes bouncedelay{0%,80%,100%{-webkit-transform:scale(0);transform:scale(0);}40%{-webkit-transform:scale(1);transform:scale(1);}}@keyframes bouncedelay{0%,80%,100%{-webkit-transform:scale(0);transform:scale(0);}40%{-webkit-transform:scale(1);transform:scale(1);}}</style><circle cx="15" cy="15" r="10" class="bounce1"/><circle cx="45" cy="15" r="10" class="bounce2"/><circle cx="75" cy="15" r="10" class="bounce3"/></svg>');
+    background-size 3em 1em
+    background-repeat no-repeat
+    background-position center center
