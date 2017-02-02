@@ -367,6 +367,52 @@
                 </div>
             
         </section>
+                                            <section id="kssref-mixins-inline-svg" class="co_section-depth-2  co_content pl2 pr2">
+
+
+            
+                        <h2 class="co_section-h2 ">
+                
+                                    <a href="#kssref-mixins-inline-svg">
+                                    <strong class="co_section-ref">7.3</strong>
+                    Inline SVG
+                                    </a>
+                            </h2>
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Returns encoded inline svg</p>
+<p>$svg - svg code</p>
+<pre><code>.foo
+    background-image _inlineSvg(&#39;&lt;svg viewBox=&quot;0 0 90 30&quot; width=&quot;30&quot; height=&quot;30&quot;&gt;&lt;circle cx=&quot;15&quot; cy=&quot;15&quot; r=&quot;10&quot; class=&quot;bounce1&quot;/&gt;&lt;/svg&gt;&#39;)
+</code></pre><p>will return</p>
+<pre><code class="lang-css">.foo {
+    background-image url(&quot;data:image/svg+xml,%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 90 30&#39; width=&#39;30&#39; height=&#39;30&#39;%3E%3Ccircle cx=&#39;15&#39; cy=&#39;15&#39; r=&#39;10&#39; class=&#39;bounce1&#39;/%3E%3C/svg%3E&quot;);
+}
+</code></pre>
+
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+        </section>
                                             <section id="kssref-mixins-mask" class="co_section-depth-2  co_content pl2 pr2">
 
 
@@ -374,7 +420,7 @@
                         <h2 class="co_section-h2 ">
                 
                                     <a href="#kssref-mixins-mask">
-                                    <strong class="co_section-ref">7.3</strong>
+                                    <strong class="co_section-ref">7.4</strong>
                     Mask
                                     </a>
                             </h2>
@@ -420,7 +466,7 @@
                         <h2 class="co_section-h2 ">
                 
                                     <a href="#kssref-mixins-spaces">
-                                    <strong class="co_section-ref">7.4</strong>
+                                    <strong class="co_section-ref">7.5</strong>
                     Spaces
                                     </a>
                             </h2>
@@ -459,7 +505,7 @@
                         <h3 class="co_section-h3 ">
                 
                                     <a href="#kssref-mixins-spaces-ma">
-                                    <strong class="co_section-ref">7.4.1</strong>
+                                    <strong class="co_section-ref">7.5.1</strong>
                     _ma()
                                     </a>
                             </h3>
@@ -510,7 +556,7 @@ margin: 20px;
                         <h3 class="co_section-h3 ">
                 
                                     <a href="#kssref-mixins-spaces-mb">
-                                    <strong class="co_section-ref">7.4.2</strong>
+                                    <strong class="co_section-ref">7.5.2</strong>
                     _mb()
                                     </a>
                             </h3>
@@ -561,7 +607,7 @@ margin-bottom: 20px;
                         <h3 class="co_section-h3 ">
                 
                                     <a href="#kssref-mixins-spaces-ml">
-                                    <strong class="co_section-ref">7.4.3</strong>
+                                    <strong class="co_section-ref">7.5.3</strong>
                     _ml()
                                     </a>
                             </h3>
@@ -612,7 +658,7 @@ margin-left: 20px;
                         <h3 class="co_section-h3 ">
                 
                                     <a href="#kssref-mixins-spaces-mr">
-                                    <strong class="co_section-ref">7.4.4</strong>
+                                    <strong class="co_section-ref">7.5.4</strong>
                     _mr()
                                     </a>
                             </h3>
@@ -663,7 +709,7 @@ margin-right: 20px;
                         <h3 class="co_section-h3 ">
                 
                                     <a href="#kssref-mixins-spaces-mt">
-                                    <strong class="co_section-ref">7.4.5</strong>
+                                    <strong class="co_section-ref">7.5.5</strong>
                     _mt()
                                     </a>
                             </h3>
@@ -714,7 +760,7 @@ margin-top: 20px;
                         <h3 class="co_section-h3 ">
                 
                                     <a href="#kssref-mixins-spaces-pa">
-                                    <strong class="co_section-ref">7.4.6</strong>
+                                    <strong class="co_section-ref">7.5.6</strong>
                     _pa()
                                     </a>
                             </h3>
@@ -765,7 +811,7 @@ padding: 20px;
                         <h3 class="co_section-h3 ">
                 
                                     <a href="#kssref-mixins-spaces-pb">
-                                    <strong class="co_section-ref">7.4.7</strong>
+                                    <strong class="co_section-ref">7.5.7</strong>
                     _pb()
                                     </a>
                             </h3>
@@ -816,7 +862,7 @@ padding-bottom: 20px;
                         <h3 class="co_section-h3 ">
                 
                                     <a href="#kssref-mixins-spaces-pl">
-                                    <strong class="co_section-ref">7.4.8</strong>
+                                    <strong class="co_section-ref">7.5.8</strong>
                     _pl()
                                     </a>
                             </h3>
@@ -867,7 +913,7 @@ padding-left: 20px;
                         <h3 class="co_section-h3 ">
                 
                                     <a href="#kssref-mixins-spaces-pr">
-                                    <strong class="co_section-ref">7.4.9</strong>
+                                    <strong class="co_section-ref">7.5.9</strong>
                     _pr()
                                     </a>
                             </h3>
@@ -918,7 +964,7 @@ padding-right: 20px;
                         <h3 class="co_section-h3 ">
                 
                                     <a href="#kssref-mixins-spaces-pt">
-                                    <strong class="co_section-ref">7.4.10</strong>
+                                    <strong class="co_section-ref">7.5.10</strong>
                     _pt()
                                     </a>
                             </h3>

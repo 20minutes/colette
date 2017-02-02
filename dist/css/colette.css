@@ -1584,6 +1584,24 @@ figure {
   display: inline-block;
   vertical-align: middle;
 }
+.loading {
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 90 30' width='90' height='30'%3E%3Cstyle%3Ecircle%7Bfill:%234c4d4e;-webkit-animation:bouncedelay 1.4s infinite ease-in-out;animation:bouncedelay 1.4s infinite ease-in-out;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-transform-origin:50%25 50%25;-ms-transform-origin:50%25 50%25;transform-origin:50%25 50%25;%7D.bounce1%7B-webkit-animation-delay:-.32s;animation-delay:-.32s;%7D.bounce2%7B-webkit-animation-delay:-.16s;animation-delay:-.16s;%7D@-webkit-keyframes bouncedelay%7B0%25,80%25,100%25%7B-webkit-transform:scale(0);transform:scale(0);%7D40%25%7B-webkit-transform:scale(1);transform:scale(1);%7D%7D@keyframes bouncedelay%7B0%25,80%25,100%25%7B-webkit-transform:scale(0);transform:scale(0);%7D40%25%7B-webkit-transform:scale(1);transform:scale(1);%7D%7D%3C/style%3E%3Ccircle cx='15' cy='15' r='10' class='bounce1'/%3E%3Ccircle cx='45' cy='15' r='10' class='bounce2'/%3E%3Ccircle cx='75' cy='15' r='10' class='bounce3'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 9.6rem;
+  height: 2.4rem;
+  -webkit-background-size: 9rem 3rem;
+  -moz-background-size: 9rem 3rem;
+  background-size: 9rem 3rem;
+}
+.loading-small {
+  -webkit-background-size: 4.8rem 1.6rem;
+  -moz-background-size: 4.8rem 1.6rem;
+  background-size: 4.8rem 1.6rem;
+}
 .spinner {
   margin: 0 auto;
   width: 9.6rem;
@@ -1595,14 +1613,11 @@ figure {
   height: 1.8rem;
   margin: 0 0.3rem;
   border-radius: 100%;
-}
-.spinner:not(.spinner-small) > span {
   background-color: #4c4d4e;
 }
 .spinner-small > span {
   width: 0.9rem;
   height: 0.9rem;
-  background-color: #4c4d4e;
 }
 .spinner .bounce1,
 .spinner .bounce2,

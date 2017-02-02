@@ -111,15 +111,15 @@
         
         
         
-                                            <div id="kssref-mixins-spaces-pa" class="co_section-depth-3  co_content pl2 pr2">
+                                            <div id="kssref--blocks-block-loading" class="co_section-depth-3  co_content pl2 pr2">
 
 
             
                         <h3 class="co_section-h3 ">
                 
-                                    <a href="#kssref-mixins-spaces-pa">
-                                    <strong class="co_section-ref">7.5.6</strong>
-                    _pa()
+                                    <a href="#kssref--blocks-block-loading">
+                                    <strong class="co_section-ref">8.1.4</strong>
+                    {loading}
                                     </a>
                             </h3>
             
@@ -131,14 +131,23 @@
                             <div class="co_subsection clearfix">
                     <p class="co_subsection-title col-md-3">Description</p>
                     <div class="co_subsection-content col-md-9">
-                        <p>Returns a <code>padding</code> based on <code>$gutter</code> value.</p>
-<pre><code>/* my_file.styl */
-$gutter = 20px // overrides colette&#39;s default value
-_pa(1)
-</code></pre><p>will compile to</p>
-<pre><code>/* my_file.css */
-padding: 20px;
+                        <p>display an animated svg loader</p>
+<p>Advice: use it in a pseudo element (<code>:before</code> or `:after)</p>
+<p><strong>Usage</strong></p>
+<pre><code class="lang-stylus">/* my_file.styl */
+.foo
+    {loading}
 </code></pre>
+<p>will compile to</p>
+<pre><code class="lang-css">/* my_file.css */
+.foo {
+    display:block;
+    background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 90 30&#39; width=&#39;90&#39; height=&#39;30&#39;%3E%3Cstyle%3Ecircle{fill:%234c4d4e;-webkit-animation:bouncedelay 1.4s infinite ease-in-out;animation:bouncedelay 1.4s infinite ease-in-out;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-transform-origin:50%25 50%25;-ms-transform-origin:50%25 50%25;transform-origin:50%25 50%25}.bounce1{-webkit-animation-delay:-.32s;animation-delay:-.32s}.bounce2{-webkit-animation-delay:-.16s;animation-delay:-.16s}@-webkit-keyframes bouncedelay{0%25,80%25,to{-webkit-transform:scale(0);transform:scale(0)}40%25{-webkit-transform:scale(1);transform:scale(1)}}@keyframes bouncedelay{0%25,80%25,to{-webkit-transform:scale(0);transform:scale(0)}40%25{-webkit-transform:scale(1);transform:scale(1)}}%3C/style%3E%3Ccircle cx=&#39;15&#39; cy=&#39;15&#39; r=&#39;10&#39; class=&#39;bounce1&#39;/%3E%3Ccircle cx=&#39;45&#39; cy=&#39;15&#39; r=&#39;10&#39; class=&#39;bounce2&#39;/%3E%3Ccircle cx=&#39;75&#39; cy=&#39;15&#39; r=&#39;10&#39; class=&#39;bounce3&#39;/%3E%3C/svg%3E&quot;);
+    background-repeat:no-repeat;
+    background-position:50%;
+}
+</code></pre>
+
                     </div>
                 </div>
             
@@ -153,13 +162,6 @@ padding: 20px;
             
 
             
-                            <div class="co_subsection clearfix">
-                    <p class="co_subsection-title col-md-3">Parameters</p>
-                    <div class="co_subsection-content co_parameters col-md-9">
-                                                    <p><code>$i</code>: multiplier of <code>$gutter</code></p>
-
-                                            </div>
-                </div>
             
         </div>
             </article>

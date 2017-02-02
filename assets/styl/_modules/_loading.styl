@@ -5,44 +5,49 @@
 // Markup: loading.twig
 //
 // Styleguide Components.Loading
+.loading
+    margin 0 auto
+    text-align center
+    {loading}
+    width 9.6rem
+    height 2.4rem
+    background-size 9rem 3rem
+
+    &-small
+        background-size 4.8rem 1.6rem
+
+// TODO: remove .spinner class
+// DEPRECATED
 .spinner
     margin 0 auto
     width 9.6rem
     text-align center
 
-
-.spinner
     > span
         display inline-block
         width 1.8rem
         height @width
         margin 0 .3rem
         border-radius 100%
-
-.spinner:not(.spinner-small)
-    > span
         background-color $color-base
 
-.spinner-small
-    > span
-        width .9rem
-        height @width
-        background-color $color-base
+    &-small
+        > span
+            width .9rem
+            height @width
 
-.spinner .bounce1
-.spinner .bounce2
-.spinner .bounce3
-    animation bouncedelay 1.4s infinite ease-in-out
-    /* Prevent first frame from flickering when animation starts */
-    animation-fill-mode both
+    .bounce1
+    .bounce2
+    .bounce3
+        animation bouncedelay 1.4s infinite ease-in-out
+        /* Prevent first frame from flickering when animation starts */
+        animation-fill-mode both
 
+    .bounce1
+        animation-delay -.32s
 
-.spinner .bounce1
-    animation-delay -.32s
-
-
-.spinner .bounce2
-    animation-delay -.16s
+    .bounce2
+        animation-delay -.16s
 
 
 @-webkit-keyframes bouncedelay
