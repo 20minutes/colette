@@ -1,6 +1,6 @@
 {
     "name": "colette",
-    "version": "0.14.7",
+    "version": "0.14.8",
     "license": "MIT",
     "ignore": [
         "**/.*",
@@ -20,18 +20,19 @@
         "normalize.css": "5.0.0"
     },
     "devDependencies": {
+        "autoprefixer": "^6.7.2",
         "gulp": "^3.9.0",
         "gulp-concat": "^2.6.0",
         "gulp-cssnano": "^2.1.2",
         "gulp-plumber": "^1.0.1",
+        "gulp-postcss": "^6.3.0",
         "gulp-rename": "^1.2.2",
         "gulp-run": "^1.7.1",
-        "gulp-stylint": "^3.0.0",
+        "gulp-stylint": "^4.0.0",
         "gulp-stylus": "^2.0.7",
         "gulp-svgstore": "^6.0.0",
-        "gulp-uglify": "^1.4.1",
-        "kss": "^3.0.0-beta.14",
-        "nib": "^1.1.0",
+        "gulp-uglify": "^2.0.1",
+        "kss": "3.0.0-beta.17",
         "run-sequence": "^1.2.1",
         "stylint": "^1.5.6"
     },

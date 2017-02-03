@@ -1,16 +1,18 @@
-var gulp      = require('gulp'),
-    concat    = require('gulp-concat'),
-    cssnano   = require('gulp-cssnano'),
-    plumber   = require('gulp-plumber'),
-    rename    = require('gulp-rename'),
-    stylus    = require('gulp-stylus'),
-    stylint   = require('gulp-stylint'),
-    uglify    = require('gulp-uglify'),
-    path      = require('path'),
-    run       = require('gulp-run'),
-    sequence  = require('run-sequence'),
-    svgstore  = require('gulp-svgstore'),
-    kss       = require('kss');
+var gulp = require('gulp'),
+    concat = require('gulp-concat'),
+    cssnano = require('gulp-cssnano'),
+    plumber = require('gulp-plumber'),
+    postcss = require('gulp-postcss'),
+    autoprefixer = require('autoprefixer'),
+    rename = require('gulp-rename'),
+    stylus = require('gulp-stylus'),
+    stylint = require('gulp-stylint'),
+    uglify = require('gulp-uglify'),
+    path = require('path'),
+    run = require('gulp-run'),
+    sequence = require('run-sequence'),
+    svgstore = require('gulp-svgstore'),
+    kss = require('kss');
 
 var cfg = {
     bowerDir: 'bower_components/',
@@ -32,11 +34,12 @@ gulp.task('styles', function () {
     return gulp.src(cfg.cssDir + 'colette.styl')
         .pipe(stylus({
             linenos: false,
-            use: [require('nib')()],
-            import: ['nib'],
             include: ['node_modules'],
             'include css': true
         }))
+        .pipe(postcss([
+            autoprefixer({browsers: ['> 0.5%']}),
+        ]))
         .pipe(gulp.dest(cfg.distDir + 'css'))
         .pipe(rename('colette.min.css'))
         .pipe(cssnano())
