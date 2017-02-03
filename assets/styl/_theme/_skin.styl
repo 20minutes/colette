@@ -36,7 +36,9 @@
     .media
         &:before
         &:after
-            absolute top 0 left 0
+            position absolute
+            top 0
+            left 0
 
         &:before
             {fontSecondary}
@@ -163,13 +165,15 @@
         &:before
         &:after
             display block
+            position absolute
+            bottom 6px
+            left 6px
             padding 6px
             width 60px
             height 42px
 
         &:before
             z-index 2
-            absolute bottom 6px left 6px
             font-size 3.6rem
             text-align center
             line-height 42px
@@ -178,7 +182,6 @@
         &:after
             content ''
             z-index 1
-            absolute bottom 6px left 6px
             border-radius 3px
             background-color $color-media
             opacity .5

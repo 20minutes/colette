@@ -2334,6 +2334,9 @@ figure {
 .skin-gallery .media > div:first-child:after,
 .skin-video .media > div:first-child:after {
   display: block;
+  position: absolute;
+  bottom: 6px;
+  left: 6px;
   padding: 6px;
   width: 60px;
   height: 42px;
@@ -2343,9 +2346,6 @@ figure {
 .skin-gallery .media > div:first-child:before,
 .skin-video .media > div:first-child:before {
   z-index: 2;
-  position: absolute;
-  bottom: 6px;
-  left: 6px;
   font-size: 3.6rem;
   text-align: center;
   line-height: 42px;
@@ -2357,9 +2357,6 @@ figure {
 .skin-video .media > div:first-child:after {
   content: '';
   z-index: 1;
-  position: absolute;
-  bottom: 6px;
-  left: 6px;
   border-radius: 3px;
   background-color: #000;
   opacity: 0.5;
