@@ -498,8 +498,6 @@ template {
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 html,
@@ -562,9 +560,6 @@ textarea {
   background-color: #fff;
   line-height: 1.3;
   -webkit-transition: border-color 0.2s;
-  -moz-transition: border-color 0.2s;
-  -o-transition: border-color 0.2s;
-  -ms-transition: border-color 0.2s;
   transition: border-color 0.2s;
 }
 input[type='text']:focus,
@@ -616,16 +611,14 @@ textarea[disabled] {
 }
 input[type='search'] {
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 select {
   padding-right: 2em;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"100\" fill=\"#000\"><polygon points=\"0, 0 100, 0 50, 50\" /></svg>");
   background-repeat: no-repeat;
   background-position: calc(100% - 0.75em) 1em;
-  -webkit-background-size: 0.5em 0.5em;
-  -moz-background-size: 0.5em 0.5em;
   background-size: 0.5em 0.5em;
   -webkit-appearance: none;
 }
@@ -655,8 +648,7 @@ html {
   font-family: sans-serif;
   font-size: 62.5%;
   -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+          text-size-adjust: 100%;
 }
 body {
   color: #4c4d4e;
@@ -776,9 +768,8 @@ td,
 th {
   word-wrap: break-word;
   -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
   border-width: 0;
   padding: 0.6rem 1.2rem;
 }
@@ -800,9 +791,8 @@ div,
 p {
   word-wrap: break-word;
   -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
 }
 /* (1) On conserve les espaces / retours à la ligne autant que possible */
 code,
@@ -1589,17 +1579,14 @@ figure {
   text-align: center;
   display: block;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 90 30' width='90' height='30'%3E%3Cstyle%3Ecircle%7Bfill:%234c4d4e;-webkit-animation:bouncedelay 1.4s infinite ease-in-out;animation:bouncedelay 1.4s infinite ease-in-out;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-transform-origin:50%25 50%25;-ms-transform-origin:50%25 50%25;transform-origin:50%25 50%25;%7D.bounce1%7B-webkit-animation-delay:-.32s;animation-delay:-.32s;%7D.bounce2%7B-webkit-animation-delay:-.16s;animation-delay:-.16s;%7D@-webkit-keyframes bouncedelay%7B0%25,80%25,100%25%7B-webkit-transform:scale(0);transform:scale(0);%7D40%25%7B-webkit-transform:scale(1);transform:scale(1);%7D%7D@keyframes bouncedelay%7B0%25,80%25,100%25%7B-webkit-transform:scale(0);transform:scale(0);%7D40%25%7B-webkit-transform:scale(1);transform:scale(1);%7D%7D%3C/style%3E%3Ccircle cx='15' cy='15' r='10' class='bounce1'/%3E%3Ccircle cx='45' cy='15' r='10' class='bounce2'/%3E%3Ccircle cx='75' cy='15' r='10' class='bounce3'/%3E%3C/svg%3E");
+  background-size: 3em 1em;
   background-repeat: no-repeat;
   background-position: center center;
   width: 9.6rem;
   height: 2.4rem;
-  -webkit-background-size: 9rem 3rem;
-  -moz-background-size: 9rem 3rem;
   background-size: 9rem 3rem;
 }
 .loading-small {
-  -webkit-background-size: 4.8rem 1.6rem;
-  -moz-background-size: 4.8rem 1.6rem;
   background-size: 4.8rem 1.6rem;
 }
 .spinner {
@@ -1623,109 +1610,47 @@ figure {
 .spinner .bounce2,
 .spinner .bounce3 {
   -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
-  -moz-animation: bouncedelay 1.4s infinite ease-in-out;
-  -o-animation: bouncedelay 1.4s infinite ease-in-out;
-  -ms-animation: bouncedelay 1.4s infinite ease-in-out;
-  animation: bouncedelay 1.4s infinite ease-in-out;
+          animation: bouncedelay 1.4s infinite ease-in-out;
 /* Prevent first frame from flickering when animation starts */
   -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  -ms-animation-fill-mode: both;
-  animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 .spinner .bounce1 {
   -webkit-animation-delay: -0.32s;
-  -moz-animation-delay: -0.32s;
-  -o-animation-delay: -0.32s;
-  -ms-animation-delay: -0.32s;
-  animation-delay: -0.32s;
+          animation-delay: -0.32s;
 }
 .spinner .bounce2 {
   -webkit-animation-delay: -0.16s;
-  -moz-animation-delay: -0.16s;
-  -o-animation-delay: -0.16s;
-  -ms-animation-delay: -0.16s;
-  animation-delay: -0.16s;
+          animation-delay: -0.16s;
 }
 @-webkit-keyframes bouncedelay {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -o-transform: scale(0);
-    -ms-transform: scale(0);
-    transform: scale(0);
+            transform: scale(0);
   }
   40% {
     -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -o-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-  }
-}
-@-moz-keyframes bouncedelay {
-  0%, 80%, 100% {
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -o-transform: scale(0);
-    -ms-transform: scale(0);
-    transform: scale(0);
-  }
-  40% {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -o-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
+            transform: scale(1);
   }
 }
 @-webkit-keyframes bouncedelay {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -o-transform: scale(0);
-    -ms-transform: scale(0);
-    transform: scale(0);
+            transform: scale(0);
   }
   40% {
     -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -o-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-  }
-}
-@-o-keyframes bouncedelay {
-  0%, 80%, 100% {
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -o-transform: scale(0);
-    -ms-transform: scale(0);
-    transform: scale(0);
-  }
-  40% {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -o-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
+            transform: scale(1);
   }
 }
 @keyframes bouncedelay {
   0%, 80%, 100% {
     -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -o-transform: scale(0);
-    -ms-transform: scale(0);
-    transform: scale(0);
+            transform: scale(0);
   }
   40% {
     -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -o-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
+            transform: scale(1);
   }
 }
 .media {
@@ -1744,9 +1669,7 @@ figure {
 }
 .media-credit {
   display: inline-block;
-  position: absolute;
-  right: 0;
-  top: 0;
+  absolute: right 0 top 0;
   padding: 0.2rem 0.6rem;
   margin: 0;
   background-color: rgba(0,0,0,0.6);
@@ -1789,7 +1712,6 @@ figure {
   z-index: 20;
   width: 100%;
   height: 4.8rem;
-  -webkit-box-shadow: 0 2px 4px -2px #4c4d4e;
   box-shadow: 0 2px 4px -2px #4c4d4e;
   background-color: #fff;
   line-height: 4.8rem;
@@ -1813,9 +1735,6 @@ figure {
   color: #4c4d4e;
   text-align: center;
   -webkit-transition: background-color 0.2s;
-  -moz-transition: background-color 0.2s;
-  -o-transition: background-color 0.2s;
-  -ms-transition: background-color 0.2s;
   transition: background-color 0.2s;
 }
 .navbar ul a:hover {
@@ -1871,10 +1790,7 @@ figure {
   top: 50%;
   z-index: 10;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 .tabs {
   margin: 0;
@@ -1918,13 +1834,9 @@ figure {
   display: block;
   width: 32px;
   height: 32px;
-  -webkit-box-shadow: 2px -2px 2px rgba(0,0,0,0.25);
   box-shadow: 2px -2px 2px rgba(0,0,0,0.25);
   -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 .tabs-name {
   color: #fff;
@@ -2220,8 +2132,6 @@ figure {
   height: 36px;
   background-color: #000;
   opacity: 0.3;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
-  filter: alpha(opacity=30);
 }
 .skin-blog p {
   color: #930b48;
@@ -2360,8 +2270,6 @@ figure {
   border-radius: 3px;
   background-color: #000;
   opacity: 0.5;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-  filter: alpha(opacity=50);
 }
 .skin-video .media > p:first-child:before,
 .skin-video .media > div:first-child:before {
@@ -2467,7 +2375,7 @@ figure {
 .box {
   position: relative;
   padding: 1px;
-  border: 1px solid #c7c7c7;
+  border: #c7c7c7;
   background-color: #fff;
 }
 .box-footer {
