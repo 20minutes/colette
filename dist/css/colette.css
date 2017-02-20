@@ -2513,10 +2513,6 @@ figure {
   text-transform: none;
   line-height: 1;
 }
-a[data-icon],
-a[data-icon-after] {
-  display: block;
-}
 [data-icon] em,
 [data-icon-after] em {
   position: absolute;
@@ -2529,12 +2525,6 @@ a[data-icon-after] {
   height: 1px;
   overflow: hidden;
   white-space: nowrap;
-}
-[data-icon] p,
-[data-icon-after] p,
-[data-icon] ul,
-[data-icon-after] ul {
-  overflow: hidden;
 }
 [data-icon=logo-21e]:before,
 [data-icon-after=logo-21e]:after {

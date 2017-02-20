@@ -168,19 +168,13 @@ $icons = {
     'aquarius': 'Ä'
     'pisces': 'Ë'
 }
+
 [data-icon]
 [data-icon-after]
     {icon}
 
-    a&
-        display block
-
     em
         _mask()
-
-    p
-    ul
-        overflow hidden
 
 for key, value in $icons
     [data-icon={key}]:before
