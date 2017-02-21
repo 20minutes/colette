@@ -358,11 +358,19 @@ If applied to a <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code> tag, all its 
 </code></pre>
 <p>will compile to</p>
 <pre><code class="lang-css">/* my_file.css */
-.foo {
-    display:block;
-    background-image:url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 90 30&#39; width=&#39;90&#39; height=&#39;30&#39;%3E%3Cstyle%3Ecircle{fill:%234c4d4e}%3C/style%3E%3Ccircle cx=&#39;15&#39; cy=&#39;15&#39; r=&#39;0&#39;%3E%3Canimate attributeName=&#39;r&#39; attributeType=&#39;XML&#39; from=&#39;0&#39; to=&#39;0&#39; begin=&#39;0&#39; dur=&#39;1.4s&#39; values=&#39;0;10;0;0&#39; keyTimes=&#39;0;0.2;0.7;1&#39; calcMode=&#39;spline&#39; keySplines=&#39;0.42 0 0.58 1;0.42 0 0.58 1;0 0 1 1&#39; repeatCount=&#39;indefinite&#39;/%3E%3C/circle%3E%3Ccircle cx=&#39;45&#39; cy=&#39;15&#39; r=&#39;0&#39;%3E%3Canimate attributeName=&#39;r&#39; attributeType=&#39;XML&#39; from=&#39;0&#39; to=&#39;0&#39; begin=&#39;0.3s&#39; dur=&#39;1.4s&#39; values=&#39;0;10;0;0&#39; keyTimes=&#39;0;0.2;0.7;1&#39; calcMode=&#39;spline&#39; keySplines=&#39;0.42 0 0.58 1;0.42 0 0.58 1;0 0 1 1&#39; repeatCount=&#39;indefinite&#39;/%3E%3C/circle%3E%3Ccircle cx=&#39;75&#39; cy=&#39;15&#39; r=&#39;0&#39;%3E%3Canimate attributeName=&#39;r&#39; attributeType=&#39;XML&#39; from=&#39;0&#39; to=&#39;0&#39; begin=&#39;0.6s&#39; dur=&#39;1.4s&#39; values=&#39;0;10;0;0&#39; keyTimes=&#39;0;0.2;0.7;1&#39; calcMode=&#39;spline&#39; keySplines=&#39;0.42 0 0.58 1;0.42 0 0.58 1;0 0 1 1&#39; repeatCount=&#39;indefinite&#39;/%3E%3C/circle%3E%3C/svg%3E&quot;);
-    background-repeat:no-repeat;
-    background-position:50%;
+.foo::before {
+    content: &#39;&#39;;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: transparent;
+    width: 1.2em;
+    height: 1.2em;
+    margin: -2.6em 0 0 -.6em;
+    border-radius: 10em;
+    box-shadow: -2em 2em 0 0 currentColor, 0 2em 0 0 currentColor, 2em 2em 0 0 currentColor;
+    animation: loadingAnimate 1.4s infinite linear;
 }
 </code></pre>
 
