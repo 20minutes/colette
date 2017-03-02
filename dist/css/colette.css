@@ -823,6 +823,7 @@ th {
  * (2) For IE 8/9, Safari 5, and Chrome : they have not default style for this tag
  */
 abbr[title] {
+  text-decoration: none;
   border-bottom: 1px dotted;
 }
 /* Avoid text overflow forcing return to new line */
