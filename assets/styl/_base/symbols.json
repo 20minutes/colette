@@ -1,6 +1,7 @@
 {
     "symbols": [
         "clock",
+        "clock2",
         "comments",
         "mail",
         "home",
@@ -8,6 +9,7 @@
         "menu",
         "newspaper",
         "more",
+        "reply",
         "search",
         "settings",
         "switch",
