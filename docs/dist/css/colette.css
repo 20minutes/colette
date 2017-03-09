@@ -554,8 +554,40 @@ body {
 body {
   background-color: #e7e7e7;
 }
+form {
+  position: relative;
+}
 form p {
   margin: 0;
+}
+form[aria-busy=true]:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: transparent;
+  width: 1.2em;
+  height: 1.2em;
+  margin: -2.6em 0 0 -0.6em;
+  border-radius: 10em;
+  box-shadow: -2em 2em 0 0 currentColor, 0 2em 0 0 currentColor, 2em 2em 0 0 currentColor;
+  -webkit-animation: loadingAnimation 1.4s infinite linear;
+          animation: loadingAnimation 1.4s infinite linear;
+}
+form[aria-busy=true]:before {
+  z-index: 6;
+}
+form[aria-busy=true]:after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: rgba(255,255,255,0.8);
 }
 label,
 button,
@@ -823,6 +855,7 @@ th {
  * (2) For IE 8/9, Safari 5, and Chrome : they have not default style for this tag
  */
 abbr[title] {
+  text-decoration: none;
   border-bottom: 1px dotted;
 }
 /* Avoid text overflow forcing return to new line */
