@@ -14,8 +14,26 @@
 //
 // Styleguide: Components.Forms.FormElements
 form
+    position relative
+
     p
         margin 0
+
+    &[aria-busy=true]
+        {loading}
+        &:before
+            z-index 6
+
+        &:after
+            content ''
+            display block
+            position absolute
+            z-index 5
+            left 0
+            right 0
+            bottom 0
+            top 0
+            background rgba($color-white, .8)
 
 label
 button
