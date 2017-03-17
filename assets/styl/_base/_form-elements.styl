@@ -81,12 +81,12 @@ textarea
     line-height 1.3
     transition border-color .2s
 
+    &.is-invalid
+        border-color $color-error
+
     &:focus
         border-color $color-tertiary
         outline 0
-
-        &:invalid
-            border-color $color-error
 
     &[disabled]
         background-color $color-bg-base
