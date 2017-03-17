@@ -640,6 +640,21 @@ textarea {
   -webkit-transition: border-color 0.2s;
   transition: border-color 0.2s;
 }
+input[type='text'].is-invalid,
+input[type='password'].is-invalid,
+input[type='email'].is-invalid,
+input[type='url'].is-invalid,
+input[type='time'].is-invalid,
+input[type='date'].is-invalid,
+input[type='datetime'].is-invalid,
+input[type='datetime-local'].is-invalid,
+input[type='tel'].is-invalid,
+input[type='number'].is-invalid,
+input[type='search'].is-invalid,
+select.is-invalid,
+textarea.is-invalid {
+  border-color: #cc190f;
+}
 input[type='text']:focus,
 input[type='password']:focus,
 input[type='email']:focus,
@@ -655,21 +670,6 @@ select:focus,
 textarea:focus {
   border-color: #878787;
   outline: 0;
-}
-input[type='text']:focus:invalid,
-input[type='password']:focus:invalid,
-input[type='email']:focus:invalid,
-input[type='url']:focus:invalid,
-input[type='time']:focus:invalid,
-input[type='date']:focus:invalid,
-input[type='datetime']:focus:invalid,
-input[type='datetime-local']:focus:invalid,
-input[type='tel']:focus:invalid,
-input[type='number']:focus:invalid,
-input[type='search']:focus:invalid,
-select:focus:invalid,
-textarea:focus:invalid {
-  border-color: #cc190f;
 }
 input[type='text'][disabled],
 input[type='password'][disabled],
@@ -1567,9 +1567,6 @@ figure {
 }
 .form-help-success {
   color: #3c7a09;
-}
-.form-required {
-  color: #cc190f;
 }
 .icon {
   display: inline-block;
