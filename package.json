@@ -1,6 +1,6 @@
 {
   "name": "colette",
-  "version": "0.14.16",
+  "version": "0.14.17",
   "license": "MIT",
   "private": true,
   "dependencies": {
@@ -20,7 +20,7 @@
     "gulp-stylus": "^2.0.7",
     "gulp-svgstore": "^6.0.0",
     "gulp-uglify": "^2.0.1",
-    "kss": "3.0.0-beta.17",
+    "kss": "3.0.0-beta.18",
     "run-sequence": "^1.2.1",
     "stylint": "^1.5.6"
   },
