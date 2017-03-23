@@ -1238,12 +1238,18 @@ figure {
   width: 2.625em;
   height: 2.625em;
   border-radius: 80em;
+  background: #c7c7c7;
   border: 0.2em solid #c7c7c7;
 }
-.avatar > img {
+.avatar > img,
+.avatar > svg {
   display: block;
   width: 100%;
   height: auto;
+  fill: #4c4d4e;
+}
+.avatar > svg {
+  margin-top: 0.05em;
 }
 .breadcrumb-list {
   margin: 0;

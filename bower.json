@@ -1,6 +1,6 @@
 {
     "name": "colette",
-    "version": "0.14.17",
+    "version": "0.14.18",
     "license": "MIT",
     "ignore": [
         "**/.*",
