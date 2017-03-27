@@ -92,20 +92,11 @@
                 color $color-highlight
 
     &-lastminute
-        background-color $color-highlight!important // overrides .box background
-
-        .box-footer
-        .media
-        .teaser
-            // keep white borders despite of the red background:
-            margin -1px
-            border 1px solid $color-white
+        // overrides .box background
+        background-color $color-highlight!important // @stylint ignore
+        box-shadow inset 0 0 0px 1px $color-white // keep white borders despite of the red background
 
         .box-counter
-            // keep white right|left borders despite of the red background
-            margin 0 -1px
-            border-right 1px solid $color-white
-            border-left 1px solid $color-white
             background-color $color-white
 
         .media
