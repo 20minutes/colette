@@ -1,0 +1,28 @@
+// Second skin
+//
+// Add a style on the teaser of a content preview.
+//
+// Note that the `.secondskin-#` class is applied on a content preview selector which must contain a `.teaser` child
+//
+// .secondskin-live            - Teaser summary color: highlight
+// .secondskin-community       - Teaser summary color: community
+// .secondskin-community-all   - Teaser title and summary color: community
+//
+// Markup: skin.twig
+//
+// Styleguide Theme.styles
+.secondskin
+    &-live
+        .teaser-summary
+            color $color-highlight
+
+    &-community
+        .teaser-summary
+            color $color-community
+
+    &-community-all
+        .teaser
+            &-headline
+            &-title
+            &-summary
+                color $color-community

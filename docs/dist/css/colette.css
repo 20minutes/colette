@@ -2157,7 +2157,6 @@ figure {
 .skin-blog .media:before,
 .skin-chat .media:before,
 .skin-exclusive .media:before,
-.skin-diaporama .media:before,
 .skin-lastminute .media:before,
 .skin-live .media:before,
 .skin-partner .media:before,
@@ -2167,7 +2166,6 @@ figure {
 .skin-blog .media:after,
 .skin-chat .media:after,
 .skin-exclusive .media:after,
-.skin-diaporama .media:after,
 .skin-lastminute .media:after,
 .skin-live .media:after,
 .skin-partner .media:after,
@@ -2181,7 +2179,6 @@ figure {
 .skin-blog .media:before,
 .skin-chat .media:before,
 .skin-exclusive .media:before,
-.skin-diaporama .media:before,
 .skin-lastminute .media:before,
 .skin-live .media:before,
 .skin-partner .media:before,
@@ -2202,7 +2199,6 @@ figure {
 .skin-blog .media:after,
 .skin-chat .media:after,
 .skin-exclusive .media:after,
-.skin-diaporama .media:after,
 .skin-lastminute .media:after,
 .skin-live .media:after,
 .skin-partner .media:after,
@@ -2216,27 +2212,18 @@ figure {
   background-color: #000;
   opacity: 0.3;
 }
-.skin-blog p {
-  color: #930b48;
-}
 .skin-blog .media:before {
   content: 'blog';
   background-color: #930b48;
 }
+.skin-blog .teaser-headline,
+.skin-blog .teaser-title,
+.skin-blog .teaser-summary {
+  color: #930b48;
+}
 .skin-chat .media:before {
   content: 'chat';
   background-color: #930b48;
-}
-.skin-diaporama .media:before {
-  width: 130px;
-  background-color: #000;
-  content: 'diaporama';
-}
-.skin-diaporama .media:after {
-  width: 136px;
-}
-.skin-exclusive p {
-  color: #cc190f;
 }
 .skin-exclusive .media:before {
   content: 'exclusif';
@@ -2246,16 +2233,17 @@ figure {
 .skin-exclusive .media:after {
   width: 96px;
 }
+.skin-exclusive .teaser-headline,
+.skin-exclusive .teaser-title,
+.skin-exclusive .teaser-summary {
+  color: #cc190f;
+}
 .skin-lastminute {
-  padding: 0;
-  background-color: #cc190f;
+  background-color: #cc190f !important;
+  box-shadow: inset 0 0 0px 1px #fff;
 }
-.skin-lastminute p {
-  color: #fff;
-}
-.skin-lastminute a:first-child {
-  display: block;
-  border: 1px solid #fff;
+.skin-lastminute .box-counter {
+  background-color: #fff;
 }
 .skin-lastminute .media:before {
   content: 'dernière minute';
@@ -2264,6 +2252,11 @@ figure {
 }
 .skin-lastminute .media:after {
   width: 136px;
+}
+.skin-lastminute .teaser-headline,
+.skin-lastminute .teaser-title,
+.skin-lastminute .teaser-summary {
+  color: #fff;
 }
 .skin-live .media:before {
   content: 'live';
@@ -2285,18 +2278,19 @@ figure {
   content: 'People';
   background-color: #cc190f;
 }
-.skin-quiz {
-  color: #930b48;
-}
 .skin-quiz .media:before {
   content: 'quiz';
   background-color: #930b48;
+}
+.skin-quiz .teaser-headline,
+.skin-quiz .teaser-title,
+.skin-quiz .teaser-summary {
+  color: #930b48;
 }
 .skin-weird .media:before {
   content: 'T’as vu';
   background-color: #ef2a82;
 }
-/* Icon skins */
 .skin-gallery .media > p:first-child,
 .skin-video .media > p:first-child,
 .skin-gallery .media > div:first-child,
@@ -2361,6 +2355,17 @@ figure {
 .skin-gallery .media > p:first-child:before,
 .skin-gallery .media > div:first-child:before {
   content: 'I';
+}
+.secondskin-live .teaser-summary {
+  color: #cc190f;
+}
+.secondskin-community .teaser-summary {
+  color: #930b48;
+}
+.secondskin-community-all .teaser-headline,
+.secondskin-community-all .teaser-title,
+.secondskin-community-all .teaser-summary {
+  color: #930b48;
 }
 .bold {
   font-weight: bold;

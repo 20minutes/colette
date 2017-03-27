@@ -138,6 +138,7 @@
                         <p>Add a skin over the image of a content block on listing pages, and depending on the skin, modify the teaser text and/or background colors.
 Note that:</p>
 <ul>
+<li>the <code>.skin-#</code> class is applied on a content preview selector (which may contain <code>.media</code> | <code>.teaser</code> | <code>.box-counter</code> | <code>.box-footer</code> children)</li>
 <li>the skin is applied on a <code>&lt;figure clas=&quot;media&quot;&gt;</code> tag,</li>
 <li>the image must be placed within a <code>&lt;p&gt;</code> or a <code>&lt;div&gt;</code> tag for icon skins</li>
 </ul>
@@ -160,7 +161,7 @@ Note that:</p>
                         
                     </p>
                     <div class="co_subsection-demo col-md-9 clearfix mb1">
-                        <article class="">
+                        <article class="box ">
     <figure class="media">
         <div><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image" /></div>
     </figure>
@@ -169,6 +170,8 @@ Note that:</p>
         <p class="teaser-title">This is the content title</p>
         <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
     </div>
+    <p class="box-counter pa1">Counters line</p>
+    <p class="box-footer pa1">Footer line</p>
 </article>
 
 
@@ -180,9 +183,9 @@ Note that:</p>
                         <p class="co_subsection-title col-md-3">Modifiers</p>
                         <div class="co_subsection-content co_modifier col-md-9 clearfix mb2">
                                                             <p><code>.skin-blog</code></p>
-                                <p>text skin: &quot;blog&quot;, text color: community</p>
+                                <p>Text skin: &quot;blog&quot;, text color: community</p>
                                 <div class="co_subsection-demo clearfix mb3">
-                                    <article class="skin-blog">
+                                    <article class="box skin-blog">
     <figure class="media">
         <div><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image" /></div>
     </figure>
@@ -191,14 +194,16 @@ Note that:</p>
         <p class="teaser-title">This is the content title</p>
         <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
     </div>
+    <p class="box-counter pa1">Counters line</p>
+    <p class="box-footer pa1">Footer line</p>
 </article>
 
 
                                 </div>
                                                             <p><code>.skin-chat</code></p>
-                                <p>text skin: &quot;chat&quot;</p>
+                                <p>Text skin: &quot;chat&quot;</p>
                                 <div class="co_subsection-demo clearfix mb3">
-                                    <article class="skin-chat">
+                                    <article class="box skin-chat">
     <figure class="media">
         <div><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image" /></div>
     </figure>
@@ -207,30 +212,16 @@ Note that:</p>
         <p class="teaser-title">This is the content title</p>
         <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
     </div>
-</article>
-
-
-                                </div>
-                                                            <p><code>.skin-diaporama</code></p>
-                                <p>text skin: &quot;diaporama&quot;</p>
-                                <div class="co_subsection-demo clearfix mb3">
-                                    <article class="skin-diaporama">
-    <figure class="media">
-        <div><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image" /></div>
-    </figure>
-    <div class="teaser">
-        <p class="teaser-headline color-default">Label</p>
-        <p class="teaser-title">This is the content title</p>
-        <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
-    </div>
+    <p class="box-counter pa1">Counters line</p>
+    <p class="box-footer pa1">Footer line</p>
 </article>
 
 
                                 </div>
                                                             <p><code>.skin-exclusive</code></p>
-                                <p>text skin: &quot;exclusif&quot;, text color: highlight</p>
+                                <p>Text skin: &quot;exclusif&quot;, text color: highlight</p>
                                 <div class="co_subsection-demo clearfix mb3">
-                                    <article class="skin-exclusive">
+                                    <article class="box skin-exclusive">
     <figure class="media">
         <div><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image" /></div>
     </figure>
@@ -239,14 +230,16 @@ Note that:</p>
         <p class="teaser-title">This is the content title</p>
         <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
     </div>
+    <p class="box-counter pa1">Counters line</p>
+    <p class="box-footer pa1">Footer line</p>
 </article>
 
 
                                 </div>
                                                             <p><code>.skin-lastminute</code></p>
-                                <p>text skin: &quot;dernière minute&quot;, text color: white, background-color: highlight</p>
+                                <p>Text skin: &quot;dernière minute&quot;, text color: white, background-color: highlight</p>
                                 <div class="co_subsection-demo clearfix mb3">
-                                    <article class="skin-lastminute">
+                                    <article class="box skin-lastminute">
     <figure class="media">
         <div><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image" /></div>
     </figure>
@@ -255,14 +248,16 @@ Note that:</p>
         <p class="teaser-title">This is the content title</p>
         <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
     </div>
+    <p class="box-counter pa1">Counters line</p>
+    <p class="box-footer pa1">Footer line</p>
 </article>
 
 
                                 </div>
                                                             <p><code>.skin-live</code></p>
-                                <p>text skin: &quot;live&quot;, headline color: highlight</p>
+                                <p>Text skin: &quot;live&quot;, headline color: highlight</p>
                                 <div class="co_subsection-demo clearfix mb3">
-                                    <article class="skin-live">
+                                    <article class="box skin-live">
     <figure class="media">
         <div><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image" /></div>
     </figure>
@@ -271,14 +266,16 @@ Note that:</p>
         <p class="teaser-title">This is the content title</p>
         <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
     </div>
+    <p class="box-counter pa1">Counters line</p>
+    <p class="box-footer pa1">Footer line</p>
 </article>
 
 
                                 </div>
                                                             <p><code>.skin-partner</code></p>
-                                <p>text skin: &quot;partenaire&quot;</p>
+                                <p>Text skin: &quot;partenaire&quot;</p>
                                 <div class="co_subsection-demo clearfix mb3">
-                                    <article class="skin-partner">
+                                    <article class="box skin-partner">
     <figure class="media">
         <div><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image" /></div>
     </figure>
@@ -287,14 +284,16 @@ Note that:</p>
         <p class="teaser-title">This is the content title</p>
         <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
     </div>
+    <p class="box-counter pa1">Counters line</p>
+    <p class="box-footer pa1">Footer line</p>
 </article>
 
 
                                 </div>
                                                             <p><code>.skin-people</code></p>
-                                <p>text skin: &quot;people&quot;</p>
+                                <p>Text skin: &quot;people&quot;</p>
                                 <div class="co_subsection-demo clearfix mb3">
-                                    <article class="skin-people">
+                                    <article class="box skin-people">
     <figure class="media">
         <div><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image" /></div>
     </figure>
@@ -303,14 +302,16 @@ Note that:</p>
         <p class="teaser-title">This is the content title</p>
         <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
     </div>
+    <p class="box-counter pa1">Counters line</p>
+    <p class="box-footer pa1">Footer line</p>
 </article>
 
 
                                 </div>
                                                             <p><code>.skin-quiz</code></p>
-                                <p>text skin: &quot;quiz&quot;, title/description color: community</p>
+                                <p>Text skin: &quot;quiz&quot;, title and description color: community</p>
                                 <div class="co_subsection-demo clearfix mb3">
-                                    <article class="skin-quiz">
+                                    <article class="box skin-quiz">
     <figure class="media">
         <div><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image" /></div>
     </figure>
@@ -319,14 +320,16 @@ Note that:</p>
         <p class="teaser-title">This is the content title</p>
         <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
     </div>
+    <p class="box-counter pa1">Counters line</p>
+    <p class="box-footer pa1">Footer line</p>
 </article>
 
 
                                 </div>
                                                             <p><code>.skin-weird</code></p>
-                                <p>text skin: &quot;t&#39;as vu&quot;</p>
+                                <p>Text skin: &quot;t&#39;as vu&quot;</p>
                                 <div class="co_subsection-demo clearfix mb3">
-                                    <article class="skin-weird">
+                                    <article class="box skin-weird">
     <figure class="media">
         <div><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image" /></div>
     </figure>
@@ -335,14 +338,16 @@ Note that:</p>
         <p class="teaser-title">This is the content title</p>
         <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
     </div>
+    <p class="box-counter pa1">Counters line</p>
+    <p class="box-footer pa1">Footer line</p>
 </article>
 
 
                                 </div>
                                                             <p><code>.skin-gallery</code></p>
-                                <p>icon skin: &#39;images&#39;</p>
+                                <p>Icon skin: &#39;images&#39;</p>
                                 <div class="co_subsection-demo clearfix mb3">
-                                    <article class="skin-gallery">
+                                    <article class="box skin-gallery">
     <figure class="media">
         <div><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image" /></div>
     </figure>
@@ -351,14 +356,16 @@ Note that:</p>
         <p class="teaser-title">This is the content title</p>
         <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
     </div>
+    <p class="box-counter pa1">Counters line</p>
+    <p class="box-footer pa1">Footer line</p>
 </article>
 
 
                                 </div>
                                                             <p><code>.skin-video</code></p>
-                                <p>icon skin: &#39;play&#39;</p>
+                                <p>Icon skin: &#39;play&#39;</p>
                                 <div class="co_subsection-demo clearfix mb3">
-                                    <article class="skin-video">
+                                    <article class="box skin-video">
     <figure class="media">
         <div><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image" /></div>
     </figure>
@@ -367,6 +374,8 @@ Note that:</p>
         <p class="teaser-title">This is the content title</p>
         <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
     </div>
+    <p class="box-counter pa1">Counters line</p>
+    <p class="box-footer pa1">Footer line</p>
 </article>
 
 
@@ -380,7 +389,7 @@ Note that:</p>
                         <p class="co_subsection-title col-md-3">Markup</p>
                         <div class="co_subsection-content co_markup col-md-9">
                             <p class="co_expand"><span class="btn">click to expand</span></p>
-                            <pre class="pa1 prettyprint linenums lang-html"><code data-language="html">&lt;article class=&quot;{{ modifier_class }}&quot;&gt;
+                            <pre class="pa1 prettyprint linenums lang-html"><code data-language="html">&lt;article class=&quot;box {{ modifier_class }}&quot;&gt;
     &lt;figure class=&quot;media&quot;&gt;
         &lt;div&gt;&lt;img src=&quot;http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg&quot; alt=&quot;This is an image&quot; /&gt;&lt;/div&gt;
     &lt;/figure&gt;
@@ -389,6 +398,8 @@ Note that:</p>
         &lt;p class=&quot;teaser-title&quot;&gt;This is the content title&lt;/p&gt;
         &lt;p class=&quot;teaser-summary&quot;&gt;This is the summary lorm ipsum sic amet color baba orum.&lt;/p&gt;
     &lt;/div&gt;
+    &lt;p class=&quot;box-counter pa1&quot;&gt;Counters line&lt;/p&gt;
+    &lt;p class=&quot;box-footer pa1&quot;&gt;Footer line&lt;/p&gt;
 &lt;/article&gt;
 
 </code></pre>
