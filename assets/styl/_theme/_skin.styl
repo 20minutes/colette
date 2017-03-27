@@ -2,200 +2,213 @@
 //
 // Add a skin over the image of a content block on listing pages, and depending on the skin, modify the teaser text and/or background colors.
 // Note that:
+// - the `.skin-#` class is applied on a content preview selector (which may contain `.media` | `.teaser` | `.box-counter` | `.box-footer` children)
 // - the skin is applied on a `<figure clas="media">` tag,
 // - the image must be placed within a `<p>` or a `<div>` tag for icon skins
 //
-// .skin-blog        - text skin: "blog", text color: community
-// .skin-chat        - text skin: "chat"
-// .skin-diaporama   - text skin: "diaporama"
-// .skin-exclusive   - text skin: "exclusif", text color: highlight
-// .skin-lastminute  - text skin: "dernière minute", text color: white, background-color: highlight
-// .skin-live        - text skin: "live", headline color: highlight
-// .skin-partner     - text skin: "partenaire"
-// .skin-people      - text skin: "people"
-// .skin-quiz        - text skin: "quiz", title/description color: community
-// .skin-weird       - text skin: "t'as vu"
-// .skin-gallery     - icon skin: 'images'
-// .skin-video       - icon skin: 'play'
+// .skin-blog        - Text skin: "blog", text color: community
+// .skin-chat        - Text skin: "chat"
+// .skin-exclusive   - Text skin: "exclusif", text color: highlight
+// .skin-lastminute  - Text skin: "dernière minute", text color: white, background-color: highlight
+// .skin-live        - Text skin: "live", headline color: highlight
+// .skin-partner     - Text skin: "partenaire"
+// .skin-people      - Text skin: "people"
+// .skin-quiz        - Text skin: "quiz", title and description color: community
+// .skin-weird       - Text skin: "t'as vu"
+// .skin-gallery     - Icon skin: 'images'
+// .skin-video       - Icon skin: 'play'
 //
 // Markup: skin.twig
 //
 // Styleguide Theme.skins
 
 /* Text skins */
-.skin-blog
-.skin-chat
-.skin-exclusive
-.skin-diaporama
-.skin-lastminute
-.skin-live
-.skin-partner
-.skin-people
-.skin-quiz
-.skin-weird
-    .media
-        &:before
-        &:after
-            position absolute
-            top 0
-            left 0
-
-        &:before
-            {fontSecondary}
-            z-index 2
-            width 60px
-            height 30px
-            color $color-white
-            text-align center
-            line-height 30px
-
-        &:after
-            content ''
-            z-index 1
-            width 66px
-            height 36px
-            background-color $color-black
-            opacity .3
-
-.skin-blog
-    p
-        color $color-community
-
-    .media
-        &:before
-            content 'blog'
-            background-color $color-community
-
-.skin-chat
-    .media
-        &:before
-            content 'chat'
-            background-color $color-community
-
-.skin-diaporama
-    .media
-        &:before
-            width 130px
-            background-color $color-media
-            content 'diaporama'
-
-        &:after
-            width 136px
-
-.skin-exclusive
-    p
-        color $color-highlight
-
-    .media
-        &:before
-            content 'exclusif'
-            width 90px
-            background-color $color-highlight
-
-        &:after
-            width 96px
-
-.skin-lastminute
-    padding 0
-    background-color $color-highlight
-
-    p
-        color $color-white
-
-    a:first-child
-        display block
-        border 1px solid $color-white
-
-    .media
-        &:before
-            content 'dernière minute'
-            width 130px
-            background-color $color-highlight
-
-        &:after
-            width 136px
-
-.skin-live
-    .media
-        &:before
-            content 'live'
-            background-color $color-highlight
-
-    .teaser-headline
-        color $color-highlight
-
-.skin-partner
-    .media
-        &:before
-            content 'Partenaire'
-            width 90px
-            background-color $color-native
-            color $color-base
-
-        &:after
-            width 96px
-
-.skin-people
-    .media
-        &:before
-            content 'People'
-            background-color $color-entertainment
-
-.skin-quiz
-    color $color-community
-    .media
-        &:before
-            content 'quiz'
-            background-color $color-community
-
-.skin-weird
-    .media
-        &:before
-            content 'T’as vu'
-            background-color $color-weird
-
-/* Icon skins */
-.skin-gallery
-.skin-video
-    .media > p:first-child
-    .media > div:first-child
-        {icon}
-        position relative
-
-        &:before
-        &:after
-            display block
-            position absolute
-            bottom 6px
-            left 6px
-            padding 6px
-            width 60px
-            height 42px
-
-        &:before
-            z-index 2
-            font-size 3.6rem
-            text-align center
-            line-height 42px
-            color $color-white
-
-        &:after
-            content ''
-            z-index 1
-            border-radius 3px
-            background-color $color-media
-            opacity .5
-
-.skin-video
-    .media
-        > p:first-child
-        > div:first-child
+.skin
+    &-blog
+    &-chat
+    &-exclusive
+    &-lastminute
+    &-live
+    &-partner
+    &-people
+    &-quiz
+    &-weird
+        .media
             &:before
-                content 'p'
+            &:after
+                position absolute
+                top 0
+                left 0
 
-.skin-gallery
-    .media
-        > p:first-child
-        > div:first-child
             &:before
-                content 'I'
+                {fontSecondary}
+                z-index 2
+                width 60px
+                height 30px
+                color $color-white
+                text-align center
+                line-height 30px
+
+            &:after
+                content ''
+                z-index 1
+                width 66px
+                height 36px
+                background-color $color-black
+                opacity .3
+
+    &-blog
+        .media
+            &:before
+                content 'blog'
+                background-color $color-community
+
+        .teaser
+            &-headline
+            &-title
+            &-summary
+                color $color-community
+
+    &-chat
+        .media
+            &:before
+                content 'chat'
+                background-color $color-community
+
+    &-exclusive
+        .media
+            &:before
+                content 'exclusif'
+                width 90px
+                background-color $color-highlight
+
+            &:after
+                width 96px
+
+        .teaser
+            &-headline
+            &-title
+            &-summary
+                color $color-highlight
+
+    &-lastminute
+        background-color $color-highlight!important // overrides .box background
+
+        .box-footer
+        .media
+        .teaser
+            // keep white borders despite of the red background:
+            margin -1px
+            border 1px solid $color-white
+
+        .box-counter
+            // keep white right|left borders despite of the red background
+            margin 0 -1px
+            border-right 1px solid $color-white
+            border-left 1px solid $color-white
+            background-color $color-white
+
+        .media
+            &:before
+                content 'dernière minute'
+                width 130px
+                background-color $color-highlight
+
+            &:after
+                width 136px
+
+        .teaser
+            &-headline
+            &-title
+            &-summary
+                color $color-white
+
+    &-live
+        .media
+            &:before
+                content 'live'
+                background-color $color-highlight
+
+        .teaser-headline
+            color $color-highlight
+
+    &-partner
+        .media
+            &:before
+                content 'Partenaire'
+                width 90px
+                background-color $color-native
+                color $color-base
+
+            &:after
+                width 96px
+
+    &-people
+        .media
+            &:before
+                content 'People'
+                background-color $color-entertainment
+
+    &-quiz
+        .media
+            &:before
+                content 'quiz'
+                background-color $color-community
+
+        .teaser
+            &-headline
+            &-title
+            &-summary
+                color $color-community
+
+    &-weird
+        .media
+            &:before
+                content 'T’as vu'
+                background-color $color-weird
+
+    /* Icon skins */
+    &-gallery
+    &-video
+        .media > p:first-child
+        .media > div:first-child
+            {icon}
+            position relative
+
+            &:before
+            &:after
+                display block
+                position absolute
+                bottom 6px
+                left 6px
+                padding 6px
+                width 60px
+                height 42px
+
+            &:before
+                z-index 2
+                font-size 3.6rem
+                text-align center
+                line-height 42px
+                color $color-white
+
+            &:after
+                content ''
+                z-index 1
+                border-radius 3px
+                background-color $color-media
+                opacity .5
+
+    &-video
+        .media
+            > p:first-child
+            > div:first-child
+                &:before
+                    content 'p'
+
+    &-gallery
+        .media
+            > p:first-child
+            > div:first-child
+                &:before
+                    content 'I'
