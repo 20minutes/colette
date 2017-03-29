@@ -1,6 +1,6 @@
 {
   "name": "colette",
-  "version": "0.14.19",
+  "version": "0.15",
   "license": "MIT",
   "private": true,
   "dependencies": {

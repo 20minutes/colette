@@ -57,7 +57,8 @@ gulp.task('stylint', function () {
 gulp.task('scripts', function () {
     return gulp.src([
             cfg.bowerDir + 'headroom.js/dist/headroom.js',
-            cfg.jsDir + 'colette/js/colette.js'
+            cfg.jsDir + 'colette/js/colette.js',
+            cfg.jsDir + 'colette/js/colette-iframeResizer.js'
         ])
         .pipe(plumber())
         .pipe(concat('colette.js'))
