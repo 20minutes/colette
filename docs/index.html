@@ -119,7 +119,7 @@
             <section id="kssref-homepage" class="co_section-home co_section-depth-2 co_content pl2 pr2">
                 <h1 id="introducing-colette">Introducing Colette</h1>
 <p>Colette is a css and js starter kit for 20 Minutes web projects.
-It provides basic styles and mixins to build responsive layouts, 
+It provides basic styles and mixins to build responsive layouts,
 based on the 20 Minutes digital identity guidelines.</p>
 <hr>
 <h2 id="features">Features</h2>
@@ -127,15 +127,15 @@ based on the 20 Minutes digital identity guidelines.</p>
 <li>basic typography: headings, body text, lists, etc.</li>
 <li>helpers: colors, borders, icons, etc.</li>
 <li>grid system: 12-columns based, with customizable breakpoints</li>
-<li>ready-to-use html/css components: buttons, navbar, socialbar, 
+<li>ready-to-use html/css components: buttons, navbar, socialbar,
 content teasers, media, and loading animation</li>
 </ul>
 <hr>
 <h2 id="dependencies">Dependencies</h2>
 <ul>
-<li><a href="https://github.com/necolas/normalize.css/">normalize.css</a> by <a href="https://github.com/necolas">Nicolas Gallagher</a>: a collection of HTML element and attribute style-normalizations </li>
-<li><a href="https://github.com/WickyNilliams/headroom.js">Headroom.js</a> 
-by <a href="https://github.com/WickyNilliams">Nick Williams</a>: 
+<li><a href="https://github.com/necolas/normalize.css/">normalize.css</a> by <a href="https://github.com/necolas">Nicolas Gallagher</a>: a collection of HTML element and attribute style-normalizations</li>
+<li><a href="https://github.com/WickyNilliams/headroom.js">Headroom.js</a>
+by <a href="https://github.com/WickyNilliams">Nick Williams</a>:
 a lightweight, high-performance JS widget (with no dependencies!)
 that allows you to react to the user&#39;s scroll.</li>
 </ul>
@@ -148,11 +148,96 @@ that allows you to react to the user&#39;s scroll.</li>
 </code></pre><hr>
 <h2 id="download">Download</h2>
 <ul>
-<li>See the <a href="https://github.com/20minutes/colette/dist/"><code>dist/</code></a> 
+<li>See the <a href="https://github.com/20minutes/colette/dist/"><code>dist/</code></a>
 directory for ready-to-use css files.</li>
-<li>If you want to use Colette as a kickstarter for custom stylus/css 
+<li>If you want to use Colette as a kickstarter for custom stylus/css
 projects, check <a href="https://github.com/20minutes/colette/assets/"><code>src/</code></a>.</li>
 </ul>
+<hr>
+<h2 id="use-from-stylus-sources">Use from Stylus sources</h2>
+<p>You can use <code>colette.css</code> as is.</p>
+<p>But the best way to use Colette is by Stylus sources directly with Stylus or with a task-runner (ex: gulp).</p>
+<h3 id="use-gulp">Use gulp</h3>
+<p>To compile your stylus, use <a href="https://github.com/gulpjs/gulp"><code>gulp</code></a> and <a href="https://github.com/stevelacy/gulp-stylus"><code>gulp-stylus</code></a></p>
+<pre><code class="lang-javascript">/* gulpfile.js */
+gulp.task(&#39;css&#39;, function () {
+   return gulp.src(cfg.cssDir + &#39;*.styl&#39;)
+   .pipe(stylus({
+        include: [
+            PATH_TO_STYLUS_IMPORT,
+            AN_OTHER_PATH_TO_FIND_STYLUS_MODULES
+        ],
+        &#39;include css&#39;: true
+    }))
+   .pipe(gulp.dest(&#39;css/&#39;))
+})
+</code></pre>
+<p><code>PATH_TO_STYLUS_IMPORT</code> could be <code>node_modules</code> for example if you use npm.</p>
+<h3 id="partial-import">Partial import</h3>
+<p>Colette is a collection of stylus features. You can define which styles you want to include into your final css file with stylus import.</p>
+<p>By default, you include all <code>colette.styl</code> and all features are in your css.
+You can select features needed by copying <code>colette.styl</code> content and choose your imports rules.</p>
+<pre><code>/* my_css_file.styl */
+
+// Your own settings
+
+// Import colette
+@require &#39;colette/assets/styl/colette&#39;
+
+/* =&gt; will compile to my_css_file.css */
+</code></pre><p>But can be usefull to:</p>
+<ul>
+<li>change order of imports,</li>
+<li>import only needed features,</li>
+<li>separate your critical css from your global css.</li>
+</ul>
+<h4 id="usage-example-handle-critical-css">Usage example: Handle critical css</h4>
+<p>You need to create a specific stylus file to handle your critical css.</p>
+<pre><code>/* my_criticalcss_file.styl */
+
+// Your own settings
+@require &#39;_settings&#39;
+
+// Colette Imports
+
+// colette settings
+@require &#39;colette/assets/styl/_settings&#39;
+
+// colette mixins
+@require &#39;colette/assets/styl/_mixins/*&#39;
+
+// colette @blocks
+@require &#39;colette/assets/styl/_@blocks/*&#39;
+
+// normalize
+@require &#39;normalize.css/normalize.css&#39;
+
+// colette base
+@require &#39;colette/assets/styl/_base/_init&#39;
+@require &#39;colette/assets/styl/_base/_typography&#39;
+
+// colette components
+@require &#39;colette/assets/styl/_modules/_media&#39;
+@require &#39;colette/assets/styl/_modules/_navbar&#39;
+@require &#39;colette/assets/styl/_modules/_tabs&#39;
+@require &#39;colette/assets/styl/_modules/_teasers&#39;
+
+// custom components
+@require &#39;_modules/_navbar&#39;
+@require &#39;_modules/_teasers&#39;
+
+// colette helpers
+@require &#39;colette/assets/styl/_helpers/_box&#39;
+@require &#39;colette/assets/styl/_helpers/_mask&#39;
+@require &#39;colette/assets/styl/_helpers/_spaces&#39;
+
+/* =&gt; will compile to my_criticalcss_file.css */
+</code></pre><p>and then simply include the compiled css file into your template
+(do not forget the <code>&lt;style&gt;</code> tag around your <code>include</code>!):</p>
+<pre><code class="lang-twig">&lt;style&gt;
+   {% include &#39;css/my_criticalcss_file.css&#39; %}
+&lt;/style&gt;
+</code></pre>
 
             </section>
         
