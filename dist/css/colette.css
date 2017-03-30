@@ -506,7 +506,6 @@ template {
   display: none;
 }
 
-/* Open Sans */
 @font-face {
   font-family: 'Open Sans';
   font-weight: normal;
@@ -535,24 +534,10 @@ template {
   font-weight: 900;
   src: url("../fonts/OpenSans-ExtraBold.eot?#iefix") format('embedded-opentype'), url("../fonts/OpenSans-ExtraBold.woff") format('woff');
 }
-/* icons */
 @font-face {
   font-family: '20mn';
   font-style: normal;
   src: url("../fonts/20mn.eot?#iefix") format('embedded-opentype'), url("../fonts/20mn.woff") format('woff');
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html,
-body {
-  height: 100%;
-  min-height: 100%;
-}
-body {
-  background-color: #e7e7e7;
 }
 form {
   position: relative;
@@ -601,7 +586,6 @@ textarea {
   font-family: inherit;
   font-size: 1em;
 }
-/* Cursor:pointer to every clickable elements */
 label,
 button,
 input[type='submit'],
@@ -710,7 +694,6 @@ input[type='button'],
 input[type='submit'] {
   border-style: none;
 }
-/* Avoid deformation on radios, checkboxes and images inputs and different display on some IE */
 input[type='radio'],
 input[type='checkbox'],
 input[type='image'] {
@@ -721,6 +704,19 @@ input[type='image'] {
 iframe {
   display: block;
   width: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+body {
+  background-color: #e7e7e7;
 }
 html {
   font-family: sans-serif;
@@ -788,7 +784,6 @@ ol {
   margin-bottom: 1.2rem;
   padding: 0 0 0 1.1em;
 }
-/* Reset of margin/padding on nested elements */
 li p,
 li ul {
   margin-bottom: 0;
@@ -830,7 +825,6 @@ blockquote:before {
   font-size: 3em;
   color: #b7b7b7;
 }
-/* Tables */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -851,14 +845,10 @@ th {
   border-width: 0;
   padding: 0.6rem 1.2rem;
 }
-/* (1) Important : [title] attribut must be present
- * (2) For IE 8/9, Safari 5, and Chrome : they have not default style for this tag
- */
 abbr[title] {
   text-decoration: none;
   border-bottom: 1px dotted;
 }
-/* Avoid text overflow forcing return to new line */
 textarea,
 table,
 td,
@@ -873,13 +863,11 @@ p {
       -ms-hyphens: none;
           hyphens: none;
 }
-/* (1) On conserve les espaces / retours à la ligne autant que possible */
 code,
 pre,
 samp {
   white-space: pre-wrap;
 }
-/* Un "début" de responsive : largeur maxi (donc hauteur auto) de certains élements */
 img,
 table,
 td,
@@ -1930,9 +1918,6 @@ figure {
   position: relative;
   z-index: 2;
 }
-/*
- * Specials [
- * ---------------------------------------------------------------------------------------- */
 .breakingnews {
   display: table;
   width: 100%;
@@ -1994,11 +1979,6 @@ figure {
   line-height: 1;
   text-align: center;
 }
-/* ----------------------------------------------------------------------------------------
- * ] Specials */
-/*
- * Theme [
- * ---------------------------------------------------------------------------------------- */
 .tabs.base .is-active a,
 .tabs.base a:hover {
   color: #4c4d4e;
@@ -2131,8 +2111,6 @@ figure {
 .tabs.native .tabs-name:after {
   background-color: #fff7e2;
 }
-/* ----------------------------------------------------------------------------------------
- * ] Theme */
 .teaser {
   padding: 2.4rem;
 }
@@ -2153,7 +2131,17 @@ figure {
   margin: 0;
   padding-top: 0.3rem;
 }
-/* Text skins */
+.secondskin-live .teaser-summary {
+  color: #cc190f;
+}
+.secondskin-community .teaser-summary {
+  color: #930b48;
+}
+.secondskin-community-all .teaser-headline,
+.secondskin-community-all .teaser-title,
+.secondskin-community-all .teaser-summary {
+  color: #930b48;
+}
 .skin-blog .media:before,
 .skin-chat .media:before,
 .skin-exclusive .media:before,
@@ -2355,53 +2343,6 @@ figure {
 .skin-gallery .media > p:first-child:before,
 .skin-gallery .media > div:first-child:before {
   content: 'I';
-}
-.secondskin-live .teaser-summary {
-  color: #cc190f;
-}
-.secondskin-community .teaser-summary {
-  color: #930b48;
-}
-.secondskin-community-all .teaser-headline,
-.secondskin-community-all .teaser-title,
-.secondskin-community-all .teaser-summary {
-  color: #930b48;
-}
-.bold {
-  font-weight: bold;
-}
-.italic {
-  font-style: italic;
-}
-.align-center {
-  text-align: center;
-}
-.align-left {
-  text-align: left;
-}
-.align-right {
-  text-align: right;
-}
-.align-justify {
-  text-align: justify;
-}
-.uppercase {
-  text-transform: uppercase;
-}
-.font-secondary {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-}
-.list-pos-outside,
-.list-pos-outside li {
-  list-style-position: inside;
-  padding-left: 1em;
-  text-indent: -1em;
-}
-.list-type-none {
-  list-style: none;
 }
 .inline {
   display: inline;
@@ -2890,7 +2831,6 @@ figure {
   overflow: hidden;
   white-space: nowrap;
 }
-/* Set a few default helpers */
 .pa0 {
   padding: 0rem;
 }
@@ -3100,4 +3040,40 @@ figure {
 }
 .ml6 {
   margin-left: 7.2rem;
+}
+.bold {
+  font-weight: bold;
+}
+.italic {
+  font-style: italic;
+}
+.align-center {
+  text-align: center;
+}
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+.align-justify {
+  text-align: justify;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.font-secondary {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+.list-pos-outside,
+.list-pos-outside li {
+  list-style-position: inside;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+.list-type-none {
+  list-style: none;
 }

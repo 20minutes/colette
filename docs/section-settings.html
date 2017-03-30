@@ -605,96 +605,6 @@ $contrast-high: 7</p>
             
             
         </section>
-                                            <section id="kssref-settings-csscollections" class="co_section-depth-2  co_content pl2 pr2">
-
-
-            
-                        <h2 class="co_section-h2 ">
-                
-                                    <a href="#kssref-settings-csscollections">
-                                    <strong class="co_section-ref">6.4</strong>
-                    CSS Settings
-                                    </a>
-                            </h2>
-            
-
-            
-            
-
-            
-                            <div class="co_subsection clearfix">
-                    <p class="co_subsection-title col-md-3">Description</p>
-                    <div class="co_subsection-content col-md-9">
-                        <p>Colette provides a <code>$css-main</code> collection to let you define which styles you want to include into your final css file.</p>
-<p>By default, <code>$css-main</code> includes all Colette&#39;s files, but you can override it in your project stylus file.</p>
-<p><strong>Example 1: use of <code>$css-main</code> </strong></p>
-<pre><code>/* my_stylus_file.styl */
-
-$css-main = {
-   &#39;base-fonts&#39;: &#39;_base/_fonts&#39;,
-   &#39;base-form-elements&#39;: &#39;_base/_form-elements&#39;,
-   &#39;base-init&#39;: &#39;_base/_init&#39;,
-   &#39;base-typography&#39;: &#39;_base/_typography&#39;,
-   &#39;layout-grid&#39;: &#39;_layout/_grid&#39;,
-   &#39;modules-alerts&#39;: &#39;_modules/_alerts&#39;,
-   &#39;modules-teasers&#39;: &#39;_modules/_teasers&#39;,
-   &#39;theme-skin&#39;: &#39;_theme/_skin&#39;
-}
-
-@require `colette.styl` /* will only &#39;@require&#39; files listed in &#39;$css-main */
-
-/* my custom styles */
-</code></pre><p><strong>Example 2: handle critical css`</strong></p>
-<p>You need to create a specific stylus file to handle your critical css.</p>
-<pre><code>/* my_criticalcss_file.styl */
-
-$css-critical = {
-   /* colette needed styles */
-   &#39;modules-avatar&#39;: &#39;_modules/_avatar&#39;,
-   &#39;modules-breadcrumb&#39;: &#39;_modules/_breadcrumb&#39;,
-   &#39;modules-buttons&#39;: &#39;_modules/_buttons&#39;,
-   &#39;modules-socialbar&#39;: &#39;_modules/_socialbar&#39;,
-   &#39;modules-tabs&#39;: &#39;_modules/_tabs&#39;,
-   /* custom project stylus files */
-   ...
-}
-
-/* @require files */
-for name, file in $css-critical
-    @require file
-
-/* =&gt; will compile to my_criticalcss_file.css */
-</code></pre><p>Then you&#39;ll need to compile the css and inline it into your html markup.
-Suppose you have a gulpfile in your project, and work with Twig templates,
-you can create a <code>gulp</code> task to compile the css:</p>
-<pre><code>/* gulpfile.js */
-gulp.task(&#39;criticalcss&#39;, function () {
-   return gulp.src(cfg.cssDir + &#39;loop.styl&#39;)
-   .pipe(stylus())
-   .pipe(gulp.dest(&#39;css/&#39;))
-})
-</code></pre><p>and then simply include the compiled css file into your template
-(dont&#39;t forget the <code>&lt;style&gt;</code> tag aroud your <code>include</code>!):</p>
-<pre><code>&lt;style&gt;
-   {%  include &#39;css/my_criticalcss_file.css&#39; %}
-&lt;/style&gt;
-</code></pre>
-                    </div>
-                </div>
-            
-
-            
-            
-
-            
-            
-
-            
-            
-
-            
-            
-        </section>
                                             <section id="kssref-settings-fonts" class="co_section-depth-2  co_content pl2 pr2">
 
 
@@ -702,7 +612,7 @@ gulp.task(&#39;criticalcss&#39;, function () {
                         <h2 class="co_section-h2 ">
                 
                                     <a href="#kssref-settings-fonts">
-                                    <strong class="co_section-ref">6.5</strong>
+                                    <strong class="co_section-ref">6.4</strong>
                     Fonts
                                     </a>
                             </h2>
