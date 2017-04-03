@@ -2360,21 +2360,6 @@ figure {
 .skin-gallery .media > div:first-child:before {
   content: 'I';
 }
-.inline {
-  display: inline;
-}
-.inline > li {
-  display: inline;
-}
-.inline-block {
-  display: inline-block;
-}
-.hidden {
-  display: none;
-}
-.vsb-hidden {
-  visibility: hidden;
-}
 .float-left {
   float: left !important;
 }
@@ -2389,6 +2374,21 @@ figure {
   display: block;
   height: 0;
   clear: both;
+  visibility: hidden;
+}
+.inline {
+  display: inline;
+}
+.inline > li {
+  display: inline;
+}
+.inline-block {
+  display: inline-block;
+}
+.hidden {
+  display: none;
+}
+.vsb-hidden {
   visibility: hidden;
 }
 .responsive {
@@ -3063,6 +3063,15 @@ figure {
 .italic {
   font-style: italic;
 }
+.uppercase {
+  text-transform: uppercase;
+}
+.font-secondary {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
 .align-center {
   text-align: center;
 }
@@ -3074,15 +3083,6 @@ figure {
 }
 .align-justify {
   text-align: justify;
-}
-.uppercase {
-  text-transform: uppercase;
-}
-.font-secondary {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 1.1rem;
-  text-transform: uppercase;
 }
 .list-pos-outside,
 .list-pos-outside li {

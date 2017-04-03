@@ -123,7 +123,7 @@
                 
                                     <a href="#kssref-theme-styles">
                                     <strong class="co_section-ref">4.2</strong>
-                    Second skin
+                    Block link skin
                                     </a>
                             </h2>
             
@@ -136,7 +136,7 @@
                     <p class="co_subsection-title col-md-3">Description</p>
                     <div class="co_subsection-content col-md-9">
                         <p>Add a style on the teaser of a content preview.</p>
-<p>Note that the <code>.secondskin-#</code> class is applied on a content preview selector which must contain a <code>.teaser</code> child</p>
+<p>Note that the <code>.blocklinkskin-#</code> class is applied on a content preview selector which must contain a <code>.teaser</code> child</p>
 
                     </div>
                 </div>
@@ -177,10 +177,10 @@
                                     <div class="co_subsection clearfix">
                         <p class="co_subsection-title col-md-3">Modifiers</p>
                         <div class="co_subsection-content co_modifier col-md-9 clearfix mb2">
-                                                            <p><code>.secondskin-live</code></p>
-                                <p>Teaser summary color: highlight</p>
+                                                            <p><code>.blocklinkskin-communication</code></p>
+                                <p>Teaser summary color &amp; style: italic, tertiary gray &amp; native yellow</p>
                                 <div class="co_subsection-demo clearfix mb3">
-                                    <article class="box secondskin-live">
+                                    <article class="box blocklinkskin-communication">
     <figure class="media">
         <div><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image" /></div>
     </figure>
@@ -195,10 +195,10 @@
 
 
                                 </div>
-                                                            <p><code>.secondskin-community</code></p>
-                                <p>Teaser summary color: community</p>
+                                                            <p><code>.blocklinkskin-publishing</code></p>
+                                <p>Teaser summary color &amp; style: italic &amp; tertiary gray</p>
                                 <div class="co_subsection-demo clearfix mb3">
-                                    <article class="box secondskin-community">
+                                    <article class="box blocklinkskin-publishing">
     <figure class="media">
         <div><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image" /></div>
     </figure>
@@ -213,10 +213,10 @@
 
 
                                 </div>
-                                                            <p><code>.secondskin-community-all</code></p>
-                                <p>Teaser title and summary color: community</p>
+                                                            <p><code>.blocklinkskin-brand</code></p>
+                                <p>block article background color &amp; style: native yellow &amp; italic, tertiary gray</p>
                                 <div class="co_subsection-demo clearfix mb3">
-                                    <article class="box secondskin-community-all">
+                                    <article class="box blocklinkskin-brand">
     <figure class="media">
         <div><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image" /></div>
     </figure>
@@ -298,14 +298,6 @@
 
     for (var i = 0; i < markups.length; i++) {
         markups[i].addEventListener('click', function(e) {
-            this.classList.toggle('co_markup-expanded');
-        }, false);
-    }
-
-</script>
-</body>
-</html>
-EventListener('click', function(e) {
             this.classList.toggle('co_markup-expanded');
         }, false);
     }

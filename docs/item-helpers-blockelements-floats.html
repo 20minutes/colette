@@ -115,17 +115,17 @@
         
         
         
-                                            <div id="kssref-helpers-textelements" class="co_section-depth-2  co_content pl2 pr2">
+                                            <div id="kssref-helpers-blockelements-floats" class="co_section-depth-3  co_content pl2 pr2">
 
 
             
-                        <h2 class="co_section-h2 ">
+                        <h3 class="co_section-h3 ">
                 
-                                    <a href="#kssref-helpers-textelements">
-                                    <strong class="co_section-ref">5.7</strong>
-                    Helpers: Text elements
+                                    <a href="#kssref-helpers-blockelements-floats">
+                                    <strong class="co_section-ref">5.8.1</strong>
+                    Floating blocks
                                     </a>
-                            </h2>
+                            </h3>
             
 
             
@@ -135,8 +135,25 @@
                             <div class="co_subsection clearfix">
                     <p class="co_subsection-title col-md-3">Description</p>
                     <div class="co_subsection-content col-md-9">
-                        <p>Text elements helpers.</p>
+                        <ul>
+<li><strong>.float-left</strong>:   float left</li>
+<li><strong>.float-right</strong>:  float right</li>
+<li><strong>.clear</strong>:        clear both</li>
+<li><strong>.clearfix</strong>:     clear floats (must be applied on the parent container)</li>
+</ul>
+<p><strong>Usage examples</strong></p>
+<pre><code>/* example 1 */
+&lt;div class=&quot;clearfix&quot;&gt;
+  &lt;p class=&quot;float-right&quot;&gt;...&lt;/p&gt;
+  &lt;p class=&quot;float-left&quot;&gt;...&lt;/p&gt;
+  /* .clearfix class on parent div will break paragraphs&#39; float */
+&lt;/div&gt;
 
+/* example 2 */
+&lt;p class=&quot;float-right&quot;&gt;...&lt;/p&gt;
+&lt;p class=&quot;float-left&quot;&gt;...&lt;/p&gt;
+&lt;p class=&quot;clear&quot;&gt;/* .clear class will break paragraphs&#39; floar */&lt;/div&gt;
+</code></pre>
                     </div>
                 </div>
             

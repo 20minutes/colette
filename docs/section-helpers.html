@@ -1076,19 +1076,45 @@ and can be applied either on top | right | bottom | left | all side(s) of an ele
                             <div class="co_subsection clearfix">
                     <p class="co_subsection-title col-md-3">Description</p>
                     <div class="co_subsection-content col-md-9">
-                        <p>Some default classes are available for text elements:</p>
-<ul>
-<li><strong>.bold</strong>:             bold text</li>
-<li><strong>.italic</strong>:           italic text</li>
-<li><strong>.uppercase</strong>:        uppercase text</li>
-<li><strong>.font-secondary</strong>:   small uppercase text (used on labels and pagers for example)</li>
-<li><strong>.align-right</strong>:      right-aligned block</li>
-<li><strong>.align-left</strong>:       left-aligned block</li>
-<li><strong>.align-centered</strong>:   centered block</li>
-<li><strong>.align-justify</strong>:    justified block</li>
-<li><strong>.list-pos-outside</strong>: list-item with outside positionned marks</li>
-<li><strong>.list-type-none</strong>:   list-item with no marks</li>
-</ul>
+                        <p>Text elements helpers.</p>
+
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+        </section>
+                                            <section id="kssref-helpers-textelements-lists" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3 ">
+                
+                                    <a href="#kssref-helpers-textelements-lists">
+                                    <strong class="co_section-ref">5.7.1</strong>
+                    Lists
+                                    </a>
+                            </h3>
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Classes to handle list items display.</p>
 
                     </div>
                 </div>
@@ -1104,55 +1130,227 @@ and can be applied either on top | right | bottom | left | all side(s) of an ele
                             
                 <div class="co_subsection clearfix">
                     <p class="co_subsection-title col-md-3">
-                                                    Example
+                                                    Default styling
                         
                     </p>
                     <div class="co_subsection-demo col-md-9 clearfix mb1">
-                        <p>Example of <span class="bold">bold text</span></p>
-<p>Example of <span class="italic">italic text</span></p>
-<p>Example of <span class="uppercase">uppercase text</span></p>
-<p>Example of <span class="font-secondary">small uppercase text text</span></p>
-<hr/>
-<p class="align-right" style="background-color:#f1f1f1">Example of right aligned text</p>
-<p class="align-left" style="background-color:#f1f1f1">Example of right aligned text</p>
-<p class="align-center" style="background-color:#f1f1f1">Example of centered text</p>
-<p class="align-justify" style="background-color:#f1f1f1">Example of justified text. Example of justified text. Example of justified text. Example of justified text</p>
-<hr />
-<ul>
-    <li>Default list-item display</li>
-    <li class="list-pos-outside">List-item with outside mark</li>
-    <li class="list-type-none">List-item with no mark</li>
+                        <ul class="">
+    <li>List-item </li>
+    <li>List-item </li>
 </ul>
 
                     </div>
                 </div>
 
                 
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Modifiers</p>
+                        <div class="co_subsection-content co_modifier col-md-9 clearfix mb2">
+                                                            <p><code>.list-pos-outside</code></p>
+                                <p>list-item with outside positionned marks</p>
+                                <div class="co_subsection-demo clearfix mb3">
+                                    <ul class="list-pos-outside">
+    <li>List-item list-pos-outside</li>
+    <li>List-item list-pos-outside</li>
+</ul>
+
+                                </div>
+                                                            <p><code>.list-type-none</code></p>
+                                <p>list-item with no marks</p>
+                                <div class="co_subsection-demo clearfix mb3">
+                                    <ul class="list-type-none">
+    <li>List-item list-type-none</li>
+    <li>List-item list-type-none</li>
+</ul>
+
+                                </div>
+                                                    </div>
+                    </div>
+
                 
                 
                                     <div class="co_subsection clearfix">
                         <p class="co_subsection-title col-md-3">Markup</p>
                         <div class="co_subsection-content co_markup col-md-9">
                             <p class="co_expand"><span class="btn">click to expand</span></p>
-                            <pre class="pa1 prettyprint linenums lang-html"><code data-language="html">&lt;p&gt;Example of &lt;span class=&quot;bold&quot;&gt;bold text&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Example of &lt;span class=&quot;italic&quot;&gt;italic text&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Example of &lt;span class=&quot;uppercase&quot;&gt;uppercase text&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Example of &lt;span class=&quot;font-secondary&quot;&gt;small uppercase text text&lt;/span&gt;&lt;/p&gt;
-&lt;hr/&gt;
-&lt;p class=&quot;align-right&quot; style=&quot;background-color:#f1f1f1&quot;&gt;Example of right aligned text&lt;/p&gt;
-&lt;p class=&quot;align-left&quot; style=&quot;background-color:#f1f1f1&quot;&gt;Example of right aligned text&lt;/p&gt;
-&lt;p class=&quot;align-center&quot; style=&quot;background-color:#f1f1f1&quot;&gt;Example of centered text&lt;/p&gt;
-&lt;p class=&quot;align-justify&quot; style=&quot;background-color:#f1f1f1&quot;&gt;Example of justified text. Example of justified text. Example of justified text. Example of justified text&lt;/p&gt;
-&lt;hr /&gt;
-&lt;ul&gt;
-    &lt;li&gt;Default list-item display&lt;/li&gt;
-    &lt;li class=&quot;list-pos-outside&quot;&gt;List-item with outside mark&lt;/li&gt;
-    &lt;li class=&quot;list-type-none&quot;&gt;List-item with no mark&lt;/li&gt;
+                            <pre class="pa1 prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;{{ modifier_class }}&quot;&gt;
+    &lt;li&gt;List-item {{ modifier_class }}&lt;/li&gt;
+    &lt;li&gt;List-item {{ modifier_class }}&lt;/li&gt;
 &lt;/ul&gt;
 </code></pre>
                             <p class="co_markup-action font-secondary align-right"><span class="collapse pr1">Collaspe</span><span>Open code in new tab</span></p>
                         </div>
                     </div>
+                            
+
+            
+            
+        </section>
+                                            <section id="kssref-helpers-textelements-textalignment" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3 ">
+                
+                                    <a href="#kssref-helpers-textelements-textalignment">
+                                    <strong class="co_section-ref">5.7.2</strong>
+                    Text alignment
+                                    </a>
+                            </h3>
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Text alignement classes.</p>
+
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+                            
+                <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">
+                                                    Default styling
+                        
+                    </p>
+                    <div class="co_subsection-demo col-md-9 clearfix mb1">
+                        <p class="">Example of  text. In hac habitasse platea dictumst. Sed augue ipsum, egestas nec, vestibulum et, malesuada adipiscing, dui. Nullam sagittis. Morbi nec metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+
+                    </div>
+                </div>
+
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Modifiers</p>
+                        <div class="co_subsection-content co_modifier col-md-9 clearfix mb2">
+                                                            <p><code>.align-right</code></p>
+                                <p>right-aligned text</p>
+                                <div class="co_subsection-demo clearfix mb3">
+                                    <p class="align-right">Example of align-right text. In hac habitasse platea dictumst. Sed augue ipsum, egestas nec, vestibulum et, malesuada adipiscing, dui. Nullam sagittis. Morbi nec metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+
+                                </div>
+                                                            <p><code>.align-left</code></p>
+                                <p>left-aligned text</p>
+                                <div class="co_subsection-demo clearfix mb3">
+                                    <p class="align-left">Example of align-left text. In hac habitasse platea dictumst. Sed augue ipsum, egestas nec, vestibulum et, malesuada adipiscing, dui. Nullam sagittis. Morbi nec metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+
+                                </div>
+                                                            <p><code>.align-center</code></p>
+                                <p>centered text</p>
+                                <div class="co_subsection-demo clearfix mb3">
+                                    <p class="align-center">Example of align-center text. In hac habitasse platea dictumst. Sed augue ipsum, egestas nec, vestibulum et, malesuada adipiscing, dui. Nullam sagittis. Morbi nec metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+
+                                </div>
+                                                            <p><code>.align-justify</code></p>
+                                <p>justified text</p>
+                                <div class="co_subsection-demo clearfix mb3">
+                                    <p class="align-justify">Example of align-justify text. In hac habitasse platea dictumst. Sed augue ipsum, egestas nec, vestibulum et, malesuada adipiscing, dui. Nullam sagittis. Morbi nec metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+
+                                </div>
+                                                    </div>
+                    </div>
+
+                
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Markup</p>
+                        <div class="co_subsection-content co_markup col-md-9">
+                            <p class="co_expand"><span class="btn">click to expand</span></p>
+                            <pre class="pa1 prettyprint linenums lang-html"><code data-language="html">&lt;p class=&quot;{{ modifier_class }}&quot;&gt;Example of {{ modifier_class }} text. In hac habitasse platea dictumst. Sed augue ipsum, egestas nec, vestibulum et, malesuada adipiscing, dui. Nullam sagittis. Morbi nec metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.&lt;/p&gt;
+</code></pre>
+                            <p class="co_markup-action font-secondary align-right"><span class="collapse pr1">Collaspe</span><span>Open code in new tab</span></p>
+                        </div>
+                    </div>
+                            
+
+            
+            
+        </section>
+                                            <section id="kssref-helpers-textelements-textformat" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3 ">
+                
+                                    <a href="#kssref-helpers-textelements-textformat">
+                                    <strong class="co_section-ref">5.7.3</strong>
+                    Text format
+                                    </a>
+                            </h3>
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Classes to format text.</p>
+
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+                            
+                <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">
+                                                    Default styling
+                        
+                    </p>
+                    <div class="co_subsection-demo col-md-9 clearfix mb1">
+                        helpers-text.twig NOT FOUND!
+                    </div>
+                </div>
+
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Modifiers</p>
+                        <div class="co_subsection-content co_modifier col-md-9 clearfix mb2">
+                                                            <p><code>.bold</code></p>
+                                <p>bold text</p>
+                                <div class="co_subsection-demo clearfix mb3">
+                                    helpers-text.twig NOT FOUND!
+                                </div>
+                                                            <p><code>.italic</code></p>
+                                <p>italic text</p>
+                                <div class="co_subsection-demo clearfix mb3">
+                                    helpers-text.twig NOT FOUND!
+                                </div>
+                                                            <p><code>.uppercase</code></p>
+                                <p>uppercase text</p>
+                                <div class="co_subsection-demo clearfix mb3">
+                                    helpers-text.twig NOT FOUND!
+                                </div>
+                                                            <p><code>.font-secondary</code></p>
+                                <p>small uppercase text (used on labels and pagers for example)</p>
+                                <div class="co_subsection-demo clearfix mb3">
+                                    helpers-text.twig NOT FOUND!
+                                </div>
+                                                    </div>
+                    </div>
+
+                
+                
                             
 
             
@@ -1178,69 +1376,213 @@ and can be applied either on top | right | bottom | left | all side(s) of an ele
                             <div class="co_subsection clearfix">
                     <p class="co_subsection-title col-md-3">Description</p>
                     <div class="co_subsection-content col-md-9">
-                        <p>Some default classes are available for block elements:</p>
-<ul>
+                        <p>Block elements helpers.</p>
+
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+        </section>
+                                            <section id="kssref-helpers-blockelements-floats" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3 ">
+                
+                                    <a href="#kssref-helpers-blockelements-floats">
+                                    <strong class="co_section-ref">5.8.1</strong>
+                    Floating blocks
+                                    </a>
+                            </h3>
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <ul>
 <li><strong>.float-left</strong>:   float left</li>
 <li><strong>.float-right</strong>:  float right</li>
+<li><strong>.clear</strong>:        clear both</li>
 <li><strong>.clearfix</strong>:     clear floats (must be applied on the parent container)</li>
-<li><strong>.inline</strong>:       display inline of a block or a list</li>
-<li><strong>.inline-block</strong>: display inline-block</li>
+</ul>
+<p><strong>Usage examples</strong></p>
+<pre><code>/* example 1 */
+&lt;div class=&quot;clearfix&quot;&gt;
+  &lt;p class=&quot;float-right&quot;&gt;...&lt;/p&gt;
+  &lt;p class=&quot;float-left&quot;&gt;...&lt;/p&gt;
+  /* .clearfix class on parent div will break paragraphs&#39; float */
+&lt;/div&gt;
+
+/* example 2 */
+&lt;p class=&quot;float-right&quot;&gt;...&lt;/p&gt;
+&lt;p class=&quot;float-left&quot;&gt;...&lt;/p&gt;
+&lt;p class=&quot;clear&quot;&gt;/* .clear class will break paragraphs&#39; floar */&lt;/div&gt;
+</code></pre>
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+        </section>
+                                            <section id="kssref-helpers-blockelements-fullwidth" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3 ">
+                
+                                    <a href="#kssref-helpers-blockelements-fullwidth">
+                                    <strong class="co_section-ref">5.8.2</strong>
+                    Full width blocks
+                                    </a>
+                            </h3>
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <ul>
+<li><strong>.responsive</strong>:   makes an element stretch full width of its parent container</li>
+</ul>
+<p><strong>Usage example</strong></p>
+<pre><code>&lt;div&gt;
+  &lt;img class=&quot;responsive&quot; src=&quot;...&quot; /&gt;
+  /* image will be full width, with height auto */
+&lt;/div&gt;
+</code></pre>
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+        </section>
+                                            <section id="kssref-helpers-blockelements-hide" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3 ">
+                
+                                    <a href="#kssref-helpers-blockelements-hide">
+                                    <strong class="co_section-ref">5.8.3</strong>
+                    Hidden blocks
+                                    </a>
+                            </h3>
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <ul>
 <li><strong>.hidden</strong>:       display none</li>
 <li><strong>.vsb-hidden</strong>:   visibility hidden</li>
 </ul>
-
-                    </div>
-                </div>
-            
-
-            
-            
-
-            
-            
-
-            
-                            
-                <div class="co_subsection clearfix">
-                    <p class="co_subsection-title col-md-3">
-                                                    Example
-                        
-                    </p>
-                    <div class="co_subsection-demo col-md-9 clearfix mb1">
-                        <ul class="inline">
-    <li>First inline list item</li>
-    <li>Second item</li>
-</ul>
-<hr />
-<div class="clearfix bbs bts">
-    <p class="float-right" style="background-color:#f1f1f1">Floating paragraphs in a div.clearfix</p>
-    <p class="float-left" style="background-color:#f1f1f1">Paragraph.float-left</p>
-</div>
-
-                    </div>
-                </div>
-
-                
-                
-                
-                                    <div class="co_subsection clearfix">
-                        <p class="co_subsection-title col-md-3">Markup</p>
-                        <div class="co_subsection-content co_markup col-md-9">
-                            <p class="co_expand"><span class="btn">click to expand</span></p>
-                            <pre class="pa1 prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;inline&quot;&gt;
-    &lt;li&gt;First inline list item&lt;/li&gt;
-    &lt;li&gt;Second item&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;div class=&quot;clearfix bbs bts&quot;&gt;
-    &lt;p class=&quot;float-right&quot; style=&quot;background-color:#f1f1f1&quot;&gt;Floating paragraphs in a div.clearfix&lt;/p&gt;
-    &lt;p class=&quot;float-left&quot; style=&quot;background-color:#f1f1f1&quot;&gt;Paragraph.float-left&lt;/p&gt;
-&lt;/div&gt;
+<p><strong>Usage example</strong></p>
+<pre><code>&lt;p class=&quot;hidden&quot;&gt;...&lt;/p&gt;
+&lt;p class=&quot;vsb-hidden&quot;&gt;...&lt;/p&gt;
 </code></pre>
-                            <p class="co_markup-action font-secondary align-right"><span class="collapse pr1">Collaspe</span><span>Open code in new tab</span></p>
-                        </div>
                     </div>
-                            
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+        </section>
+                                            <section id="kssref-helpers-blockelements-inline" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3 ">
+                
+                                    <a href="#kssref-helpers-blockelements-inline">
+                                    <strong class="co_section-ref">5.8.4</strong>
+                    Inline blocks
+                                    </a>
+                            </h3>
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <ul>
+<li><strong>.inline</strong>:       display inline of a block or a list</li>
+<li><strong>.inline-block</strong>: display inline-block</li>
+</ul>
+<p><strong>Usage example</strong></p>
+<pre><code>&lt;ul class=&quot;inline&quot;&gt;
+  /* Applied on a list, .inline class will make all list-item display inline */
+  &lt;li&gt;...&lt;/li&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;inline-block&quot;&gt;...&lt;/p&gt;
+</code></pre>
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
 
             
             
