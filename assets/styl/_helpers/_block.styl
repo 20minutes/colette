@@ -1,32 +1,34 @@
 // Helpers: Block elements
 //
-// Some default classes are available for block elements:
-//
-// - **.float-left**:   float left
-// - **.float-right**:  float right
-// - **.clearfix**:     clear floats (must be applied on the parent container)
-// - **.inline**:       display inline of a block or a list
-// - **.inline-block**: display inline-block
-// - **.hidden**:       display none
-// - **.vsb-hidden**:   visibility hidden
+// Block elements helpers.
 //
 // Weight: 12
 //
-// Markup: helpers-block.twig
-//
 // Styleguide Helpers.BlockElements
-.inline
-    {inlined}
 
-.inline-block
-    display inline-block
-
-.hidden
-    display none
-
-.vsb-hidden
-    visibility hidden
-
+// Floating blocks
+//
+// - **.float-left**:   float left
+// - **.float-right**:  float right
+// - **.clear**:        clear both
+// - **.clearfix**:     clear floats (must be applied on the parent container)
+//
+// **Usage examples**
+// ```
+// /* example 1 */
+// <div class="clearfix">
+//   <p class="float-right">...</p>
+//   <p class="float-left">...</p>
+//   /* .clearfix class on parent div will break paragraphs' float */
+// </div>
+//
+// /* example 2 */
+// <p class="float-right">...</p>
+// <p class="float-left">...</p>
+// <p class="clear">/* .clear class will break paragraphs' floar */</div>
+// ```
+//
+// Styleguide Helpers.BlockElements.Floats
 .float-left
     float left!important // @stylint ignore
 
@@ -39,5 +41,59 @@
 .clearfix
     {clearfix}
 
+// Inline blocks
+//
+// - **.inline**:       display inline of a block or a list
+// - **.inline-block**: display inline-block
+//
+// **Usage example**
+// ```
+// <ul class="inline">
+//   /* Applied on a list, .inline class will make all list-item display inline */
+//   <li>...</li>
+//   <li>...</li>
+// </ul>
+//
+// <p class="inline-block">...</p>
+// ```
+//
+// Styleguide Helpers.BlockElements.Inline
+.inline
+    {inlined}
+
+.inline-block
+    display inline-block
+
+// Hidden blocks
+//
+// - **.hidden**:       display none
+// - **.vsb-hidden**:   visibility hidden
+//
+// **Usage example**
+// ```
+// <p class="hidden">...</p>
+// <p class="vsb-hidden">...</p>
+// ```
+//
+// Styleguide Helpers.BlockElements.Hide
+.hidden
+    display none
+
+.vsb-hidden
+    visibility hidden
+
+// Full width blocks
+//
+// - **.responsive**:   makes an element stretch full width of its parent container
+//
+// **Usage example**
+// ```
+// <div>
+//   <img class="responsive" src="..." />
+//   /* image will be full width, with height auto */
+// </div>
+// ```
+//
+// Styleguide Helpers.BlockElements.FullWidth
 .responsive
     {fullWidth}
