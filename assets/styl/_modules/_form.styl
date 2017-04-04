@@ -1,0 +1,60 @@
+// Forms widgets
+//
+// Colette provides styles for:
+// - Fields descriptions (with valid / invalid color indication)
+// - Valid / Invalid fields
+//
+// Note: you can also use Alerts components to handle success or errors messages.
+//
+// Weight: 2
+//
+// Markup: form-widget.twig
+//
+// Styleguide: Components.Forms.FormWidgets
+.form
+    &-field-widget
+        // display a widget for form element that must be filled with text content
+        // e.g. input[text|password|email|url]
+
+        label
+            display block
+
+        ul
+            margin 0
+
+        //special style for a flex parent with 3 children (label, infolink, input 100%)
+        &-flex3
+            display flex
+            flex-wrap wrap
+
+            label
+                flex 1 auto
+
+            .form-infolink
+                color $color-links
+                font-size .85em
+                padding-top 3px
+                flex 1 auto
+                text-align right
+
+            input
+                width 100%
+
+    &-field-error
+        border-color $color-error!important // @stylint ignore: must override default form elements border-color
+
+    &-field-success
+        border-color $color-success!important // @stylint ignore: must override default form elements border-color
+
+    &-help
+        padding-top .3em
+        color $color-tertiary
+        font-size .88em
+        font-style italic
+        line-height 1.1
+
+        &-error
+            color $color-error
+
+        &-success
+            color $color-success
