@@ -2391,6 +2391,7 @@ figure {
 .vsb-hidden {
   visibility: hidden;
 }
+.full-width,
 .responsive {
   display: block;
   width: 100%;
