@@ -1261,6 +1261,7 @@ figure {
 }
 .btn {
   display: inline-block;
+  text-align: center;
   padding: 0.5em 1.5em;
   border-radius: 20em;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
@@ -1542,6 +1543,23 @@ figure {
 }
 .form-field-widget ul {
   margin: 0;
+}
+.form-field-widget-flex3 {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-field-widget-flex3 label {
+  -webkit-box-flex: 1;
+          flex: 1 auto;
+}
+.form-field-widget-flex3 .form-infolink {
+  color: #0091aa;
+  font-size: 0.85em;
+  padding-top: 3px;
+}
+.form-field-widget-flex3 input {
+  width: 100%;
 }
 .form-field-error {
   border-color: #cc190f !important;

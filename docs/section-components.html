@@ -1239,13 +1239,13 @@ All editorial colors are available to style the button according to its context.
             
             
         </section>
-                                            <section id="kssref-components-forms-formwidgets" class="co_section-depth-3  co_content pl2 pr2">
+                                            <section id="kssref-components-forms-form" class="co_section-depth-3  co_content pl2 pr2">
 
 
             
                         <h3 class="co_section-h3 ">
                 
-                                    <a href="#kssref-components-forms-formwidgets">
+                                    <a href="#kssref-components-forms-form">
                                     <strong class="co_section-ref">3.5.3</strong>
                     Forms widgets
                                     </a>
@@ -1263,6 +1263,7 @@ All editorial colors are available to style the button according to its context.
 <ul>
 <li>Fields descriptions (with valid / invalid color indication)</li>
 <li>Valid / Invalid fields</li>
+<li>Also a special style for a flex parent with 3 children (label, infolink, input 100%)</li>
 </ul>
 <p>Note: you can also use Alerts components to handle success or errors messages.</p>
 
@@ -1311,6 +1312,11 @@ All editorial colors are available to style the button according to its context.
             </p>
             <p id="text_13_desc" class="form-help form-help-success">This field is valid</p>
         </div>
+        <div class="form-field-widget-flex3 col-md-12">
+            <label>Flex field with info link</label>
+            <a class="form-infolink" href="/membre/oublie">Info link lorem ipsum dolor sit amet</a>
+            <input type="text" required="required">
+        </div>
     </div>
 </form>
 
@@ -1350,6 +1356,11 @@ All editorial colors are available to style the button according to its context.
                 &lt;input class=&quot;form-field-success&quot; type=&quot;text&quot; id=&quot;text_13&quot; value=&quot;lorem ipsum&quot; aria-describedby=&quot;text_13_desc&quot; /&gt;
             &lt;/p&gt;
             &lt;p id=&quot;text_13_desc&quot; class=&quot;form-help form-help-success&quot;&gt;This field is valid&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-field-widget-flex3 col-md-12&quot;&gt;
+            &lt;label&gt;Flex field with info link&lt;/label&gt;
+            &lt;a class=&quot;form-infolink&quot; href=&quot;{{ desktop_base_url ~ &#039;/membre/oublie&#039; }}&quot;&gt;Info link lorem ipsum dolor sit amet&lt;/a&gt;
+            &lt;input type=&quot;text&quot; required=&quot;required&quot;&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/form&gt;
