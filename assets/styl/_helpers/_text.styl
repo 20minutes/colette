@@ -1,29 +1,47 @@
 // Helpers: Text elements
 //
-// Some default classes are available for text elements:
-//
-// - **.bold**:             bold text
-// - **.italic**:           italic text
-// - **.uppercase**:        uppercase text
-// - **.font-secondary**:   small uppercase text (used on labels and pagers for example)
-// - **.align-right**:      right-aligned block
-// - **.align-left**:       left-aligned block
-// - **.align-centered**:   centered block
-// - **.align-justify**:    justified block
-// - **.list-pos-outside**: list-item with outside positionned marks
-// - **.list-type-none**:   list-item with no marks
+// Text elements helpers.
 //
 // Weight: 11
 //
-// Markup: helpers-text.twig
-//
 // Styleguide Helpers.TextElements
+
+// Text format
+//
+// Classes to format text.
+//
+// .bold               - bold text
+// .italic             - italic text
+// .uppercase          - uppercase text
+// .font-secondary     - small uppercase text (used on labels and pagers for example)
+//
+// Markup: helpers-text-format.twig
+//
+// Styleguide Helpers.TextElements.TextFormat
 .bold
     font-weight bold
 
 .italic
     font-style italic
 
+.uppercase
+    text-transform uppercase
+
+.font-secondary
+    {fontSecondary}
+
+// Text alignment
+//
+// Text alignement classes.
+//
+// .align-right      - right-aligned text
+// .align-left       - left-aligned text
+// .align-center     - centered text
+// .align-justify    - justified text
+//
+// Markup: helpers-text-align.twig
+//
+// Styleguide Helpers.TextElements.TextAlignment
 .align-center
     text-align center
 
@@ -36,12 +54,17 @@
 .align-justify
     text-align justify
 
-.uppercase
-    text-transform uppercase
 
-.font-secondary
-    {fontSecondary}
-
+// Lists
+//
+// Classes to handle list items display.
+//
+// .list-pos-outside   - list-item with outside positionned marks
+// .list-type-none     - list-item with no marks
+//
+// Markup: helpers-text-lists.twig
+//
+// Styleguide Helpers.TextElements.Lists
 .list-pos-outside
     {listPosOutside}
 

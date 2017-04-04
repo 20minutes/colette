@@ -115,17 +115,17 @@
         
         
         
-                                            <div id="kssref-helpers-textelements" class="co_section-depth-2  co_content pl2 pr2">
+                                            <div id="kssref-helpers-textelements-lists" class="co_section-depth-3  co_content pl2 pr2">
 
 
             
-                        <h2 class="co_section-h2 ">
+                        <h3 class="co_section-h3 ">
                 
-                                    <a href="#kssref-helpers-textelements">
-                                    <strong class="co_section-ref">5.7</strong>
-                    Helpers: Text elements
+                                    <a href="#kssref-helpers-textelements-lists">
+                                    <strong class="co_section-ref">5.7.1</strong>
+                    Lists
                                     </a>
-                            </h2>
+                            </h3>
             
 
             
@@ -135,7 +135,7 @@
                             <div class="co_subsection clearfix">
                     <p class="co_subsection-title col-md-3">Description</p>
                     <div class="co_subsection-content col-md-9">
-                        <p>Text elements helpers.</p>
+                        <p>Classes to handle list items display.</p>
 
                     </div>
                 </div>
@@ -148,7 +148,61 @@
             
 
             
-            
+                            
+                <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">
+                                                    Default styling
+                        
+                    </p>
+                    <div class="co_subsection-demo col-md-9 clearfix mb1">
+                        <ul class="">
+    <li>List-item </li>
+    <li>List-item </li>
+</ul>
+
+                    </div>
+                </div>
+
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Modifiers</p>
+                        <div class="co_subsection-content co_modifier col-md-9 clearfix mb2">
+                                                            <p><code>.list-pos-outside</code></p>
+                                <p>list-item with outside positionned marks</p>
+                                <div class="co_subsection-demo clearfix mb3">
+                                    <ul class="list-pos-outside">
+    <li>List-item list-pos-outside</li>
+    <li>List-item list-pos-outside</li>
+</ul>
+
+                                </div>
+                                                            <p><code>.list-type-none</code></p>
+                                <p>list-item with no marks</p>
+                                <div class="co_subsection-demo clearfix mb3">
+                                    <ul class="list-type-none">
+    <li>List-item list-type-none</li>
+    <li>List-item list-type-none</li>
+</ul>
+
+                                </div>
+                                                    </div>
+                    </div>
+
+                
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Markup</p>
+                        <div class="co_subsection-content co_markup col-md-9">
+                            <p class="co_expand"><span class="btn">click to expand</span></p>
+                            <pre class="pa1 prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;{{ modifier_class }}&quot;&gt;
+    &lt;li&gt;List-item {{ modifier_class }}&lt;/li&gt;
+    &lt;li&gt;List-item {{ modifier_class }}&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+                            <p class="co_markup-action font-secondary align-right"><span class="collapse pr1">Collaspe</span><span>Open code in new tab</span></p>
+                        </div>
+                    </div>
+                            
 
             
             
