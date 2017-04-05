@@ -1544,21 +1544,20 @@ figure {
 .form-field-widget ul {
   margin: 0;
 }
-.form-field-widget-flex3 {
+.form-field-widget-flex {
   display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
 }
-.form-field-widget-flex3 label {
+.form-field-widget-flex .form-infolink {
+  padding-top: 0.2em;
+}
+.form-field-widget-flex label {
   -webkit-box-flex: 1;
-          flex: 1 auto;
+          flex-grow: 1;
+  flex-basis: auto;
 }
-.form-field-widget-flex3 .form-infolink {
-  color: #0091aa;
-  font-size: 0.85em;
-  padding-top: 3px;
-}
-.form-field-widget-flex3 input {
+.form-field-widget-flex input {
   width: 100%;
 }
 .form-field-error {
@@ -1566,6 +1565,10 @@ figure {
 }
 .form-field-success {
   border-color: #3c7a09 !important;
+}
+.form-infolink {
+  color: #0091aa;
+  font-size: 0.85em;
 }
 .form-help {
   padding-top: 0.3em;
