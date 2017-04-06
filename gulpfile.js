@@ -24,6 +24,7 @@ var cfg = {
     docDir: 'docs/',
     distDir: 'dist/',
     stylusPattern: '**/*.styl',
+    twigPattern: '**/*.twig',
     kssPattern: '**/*',
     jsPattern: '**/*.js',
     svgPattern: '**/*.svg'
@@ -101,6 +102,7 @@ gulp.task('svg', function () {
 
 // watch
 gulp.task('watch', function () {
+    gulp.watch(cfg.cssDir + cfg.twigPattern, ['kss']);
     gulp.watch(cfg.cssDir + cfg.stylusPattern, ['styles', 'kss']);
     gulp.watch([cfg.cssDir + cfg.stylusPattern, cfg.kssBuilderDir + cfg.kssPattern], ['styles', 'kss']);
     gulp.watch(cfg.jsDir + cfg.jsPattern, ['scripts']);
