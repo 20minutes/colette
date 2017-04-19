@@ -6,12 +6,14 @@ colette.iframeResizer = (function() {
             selector: '#iframeContent',
             el: null,
             delay: 0,
-            resizeInternal: false
+            resizeInternal: false,
+            iframeId: 'iframeId'
         };
 
     pub.init = function(args)
     {
         cfg.delay = args.delay || cfg.delay;
+        cfg.iframeId = args.iframeId || cfg.iframeId;
         cfg.el = document.querySelector(args.selector || cfg.selector);
 
         window.addEventListener('message', function(e) {
@@ -49,7 +51,7 @@ colette.iframeResizer = (function() {
 
     var sendHeight = function()
     {
-        window.top.postMessage({type: 'doResize', height: cfg.el.offsetHeight}, '*');
+        window.top.postMessage({type: 'doResize', height: cfg.el.offsetHeight, iframeId: cfg.iframeId}, '*');
         cfg.resizeInternal = true;
     };
 
