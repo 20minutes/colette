@@ -63,15 +63,15 @@
 //
 // We also have a few styles available for social buttons:
 //
-// - **[data-icon="facebook"]**: facebook button
-// - **[data-icon="googleplus"]**: googleplus button
-// - **[data-icon="hootsuite"]**: hootsuite button
-// - **[data-icon="linkedin"]**: linkedin button
-// - **[data-icon="pinterest"]**: pinterest button
-// - **[data-icon="pocket"]** pocket button
-// - **[data-icon="sms"]** sms button
-// - **[data-icon="twitter"]**: twitter button
-// - **[data-icon="whatsapp"]**: whatsapp button
+// - **.btn-icon-facebook**: facebook button
+// - **.btn-icon-googleplus**: googleplus button
+// - **.btn-icon-hootsuite**: hootsuite button
+// - **.btn-icon-linkedin**: linkedin button
+// - **.btn-icon-pinterest**: pinterest button
+// - **.btn-icon-pocket** pocket button
+// - **.btn-icon-sms** sms button
+// - **.btn-icon-twitter**: twitter button
+// - **.btn-icon-whatsapp**: whatsapp button
 //
 // Markup: buttons-icon-social.twig
 //
@@ -91,57 +91,56 @@ $btn-whatsapp-color ?= #01a85a
 
 .btn-icon
     display inline-block
-    padding 0
-    width 1.6667em
-    height 1.6667em
     border-radius 60em // oversize radius to keep it round
-    font-size 1em
-    line-height 1.833333em
-    text-align center
     background-color $color-secondary
     color $color-base
 
+    svg
+        width 1em
+        height 1em
+        margin .33em
+        display block
+
     /* social: button per button styles */
-    &[data-icon=facebook]
+    &-facebook
         background-color $btn-facebook-color
         color $color-white
 
-    &[data-icon=googleplus]
+    &-googleplus
         background-color $btn-googleplus-color
         color $color-white
 
-    &[data-icon=hootsuite]
+    &-hootsuite
         background-color $btn-hootsuite-color
         color $color-white
 
-    &[data-icon=linkedin]
+    &-linkedin
         background-color $btn-linkedin-color
         color $color-white
 
-    &[data-icon=pinterest]
+    &-pinterest
         background-color $btn-pinterest-color
         color $color-white
 
-    &[data-icon=pocket]
+    &-pocket
         background-color $btn-pocket-color
         color $btn-pocket-color1
-        border .2rem solid $btn-pocket-color2
+        border .1em solid $btn-pocket-color2
 
-    &[data-icon=sms]
+    &-sms
         background-color $btn-sms-color
         color $color-white
 
         &:before
             line-height 1.8em
 
-    &[data-icon=twitter]
+    &-twitter
         background-color $btn-twitter-color
         color $color-white
 
-    &[data-icon=whatsapp]
+    &-whatsapp
         background-color $btn-whatsapp-color
         color $color-white
-
 
 // btn theme color
 .btn

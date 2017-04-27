@@ -718,6 +718,9 @@ body {
 body {
   background-color: #e7e7e7;
 }
+svg {
+  fill: currentColor;
+}
 html {
   font-family: sans-serif;
   font-size: 62.5%;
@@ -1276,54 +1279,54 @@ figure {
 }
 .btn-icon {
   display: inline-block;
-  padding: 0;
-  width: 1.6667em;
-  height: 1.6667em;
   border-radius: 60em;
-  font-size: 1em;
-  line-height: 1.833333em;
-  text-align: center;
   background-color: #b7b7b7;
   color: #4c4d4e;
 /* social: button per button styles */
 }
-.btn-icon[data-icon=facebook] {
+.btn-icon svg {
+  width: 1em;
+  height: 1em;
+  margin: 0.33em;
+  display: block;
+}
+.btn-icon-facebook {
   background-color: #4c64a0;
   color: #fff;
 }
-.btn-icon[data-icon=googleplus] {
+.btn-icon-googleplus {
   background-color: #d14836;
   color: #fff;
 }
-.btn-icon[data-icon=hootsuite] {
+.btn-icon-hootsuite {
   background-color: #000;
   color: #fff;
 }
-.btn-icon[data-icon=linkedin] {
+.btn-icon-linkedin {
   background-color: #0177b5;
   color: #fff;
 }
-.btn-icon[data-icon=pinterest] {
+.btn-icon-pinterest {
   background-color: #bd081c;
   color: #fff;
 }
-.btn-icon[data-icon=pocket] {
+.btn-icon-pocket {
   background-color: #fff;
   color: #ed4054;
-  border: 0.2rem solid #b7b7b7;
+  border: 0.1em solid #b7b7b7;
 }
-.btn-icon[data-icon=sms] {
+.btn-icon-sms {
   background-color: #48930b;
   color: #fff;
 }
-.btn-icon[data-icon=sms]:before {
+.btn-icon-sms:before {
   line-height: 1.8em;
 }
-.btn-icon[data-icon=twitter] {
+.btn-icon-twitter {
   background-color: #00a7e7;
   color: #fff;
 }
-.btn-icon[data-icon=whatsapp] {
+.btn-icon-whatsapp {
   background-color: #01a85a;
   color: #fff;
 }
@@ -1869,9 +1872,6 @@ figure {
 }
 .socialbar li:not(:first-child) {
   margin-left: 1.4rem;
-}
-.socialbar a {
-  display: block;
 }
 .tabs-wrapper {
   overflow: hidden;
