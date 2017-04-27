@@ -1,5 +1,14 @@
 <p>
-    <a href="#" class="btn-icon float-left {{ modifier_class }} mr1" data-icon="mail"><em>Call to action</em></a>
-    <button class="btn-icon {{ modifier_class }} mr1" type="submit" data-icon="mail"><em>Submit</em></button>
-    <button class="btn-icon {{ modifier_class }}" disabled type="submit" data-icon="mail"><em>Submit (disabled)</em></button>
+    <a href="#" class="btn-icon float-left {{ modifier_class }} mr1">
+        <svg height="16" width="16"><use xlink:href="#symbol-mail"></use></svg>
+        <span class="mask">Call to action</span>
+    </a>
+    <button class="btn-icon {{ modifier_class }} mr1" type="submit">
+        <svg height="16" width="16"><use xlink:href="#symbol-mail"></use></svg>
+        <span class="mask">Submit</span>
+    </button>
+    <button class="btn-icon {{ modifier_class }}" disabled type="submit">
+        <svg height="16" width="16"><use xlink:href="#symbol-mail"></use></svg>
+        <span class="mask">Submit (disabled)</span>
+    </button>
 </p>
