@@ -64,10 +64,10 @@ $breakpoints ?= merge($mainpoints, $tweakpoints)
 // ```
 //
 // Styleguide: Settings.Fonts
-$font-base = 'Helvetica Neue', Helvetica, Arial, sans-serif // default font / body text
-$font-headings = 'Open Sans', 'Arial', 'Helvetica Neue', Helvetica, sans-serif // headings
-$font-secondary = 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif // article label, call to action, pagers... etc.
-$font-icon = '20mn' // icon font
+$font-base ?= 'Helvetica Neue', Helvetica, Arial, sans-serif // default font / body text
+$font-headings ?= 'Open Sans', 'Arial', 'Helvetica Neue', Helvetica, sans-serif // headings
+$font-secondary ?= 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif // article label, call to action, pagers... etc.
+$font-icon ?= '20mn' // icon font
 
 // Colors
 //
