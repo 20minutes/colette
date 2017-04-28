@@ -2265,7 +2265,7 @@ figure {
 }
 .skin-lastminute {
   background-color: #cc190f !important;
-  box-shadow: inset 0 0 0px 1px #fff;
+  box-shadow: inset 0 0 0 1px #fff;
 }
 .skin-lastminute .box-counter {
   background-color: #fff;
