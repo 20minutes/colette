@@ -1,5 +1,15 @@
 <p>
     <a href="#" class="btn {{ modifier_class }} mr1">Call to action</a>
+    <a href="#" class="btn {{ modifier_class }} mr1">
+        <svg height="14" width="14"><use xlink:href="#symbol-more"></use></svg>
+        <span>With left icon</span>
+    </a>
+    <a href="#" class="btn {{ modifier_class }} mr1">
+        <span>With right icon</span>
+        <svg height="14" width="14"><use xlink:href="#symbol-arrow-right"></use></svg>
+    </a>
+</p>
+<p class="mt2">
     <button class="btn {{ modifier_class }} mr1" type="submit">Submit</button>
     <button class="btn {{ modifier_class }} mr1" disabled type="submit">Submit (disabled)</button>
 </p>
