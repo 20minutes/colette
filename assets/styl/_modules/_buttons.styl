@@ -4,6 +4,8 @@
 //
 // Styleguide Components.Buttons
 
+// Weight: 0
+//
 // Default Buttons
 //
 // All editorial colors are available to style the button according to its context.
@@ -33,11 +35,22 @@
     font-weight bold
     text-transform uppercase
     background-color $color-secondary
+    transition background-color .2s ease
     color $color-base
 
-    &:disabled
-        background-color alpha($color-secondary, .5)
+    svg
+        width .9em
+        height .9em
+        margin-bottom -.1em
 
+        &.left
+            margin-right .3em
+
+        &.right
+            margin-left .3em
+
+// Weight: 1
+//
 // Icon Buttons: default styles
 //
 // Icon buttons are icons in a colored circle.
@@ -59,6 +72,8 @@
 //
 // Styleguide Components.Buttons.IconButtonsDefault
 
+// Weight: 2
+//
 // Icon Buttons: social styles
 //
 // We also have a few styles available for social buttons:
@@ -77,22 +92,12 @@
 //
 // Styleguide Components.Buttons.IconButtonsSocial
 //
-$btn-facebook-color ?= #4c64a0
-$btn-googleplus-color ?= #d14836
-$btn-hootsuite-color ?= #000000
-$btn-linkedin-color ?= #0177b5
-$btn-pinterest-color ?= #bd081c
-$btn-pocket-color ?= #ffffff
-$btn-pocket-color1 ?= #ed4054
-$btn-pocket-color2 ?= #b7b7b7
-$btn-sms-color ?= #48930b
-$btn-twitter-color ?= #00a7e7
-$btn-whatsapp-color ?= #01a85a
 
 .btn-icon
     display inline-block
     border-radius 60em // oversize radius to keep it round
     background-color $color-secondary
+    transition background-color .2s ease
     color $color-base
 
     svg
@@ -101,57 +106,37 @@ $btn-whatsapp-color ?= #01a85a
         margin .33em
         display block
 
-    /* social: button per button styles */
-    &-facebook
-        background-color $btn-facebook-color
-        color $color-white
+//disabled & hover effect
+.btn
+.btn-icon
+    &:disabled
+        background-color alpha($color-secondary, .5)
+        color alpha($color-base, .5)
 
-    &-googleplus
-        background-color $btn-googleplus-color
-        color $color-white
-
-    &-hootsuite
-        background-color $btn-hootsuite-color
-        color $color-white
-
-    &-linkedin
-        background-color $btn-linkedin-color
-        color $color-white
-
-    &-pinterest
-        background-color $btn-pinterest-color
-        color $color-white
-
-    &-pocket
-        background-color $btn-pocket-color
-        color $btn-pocket-color1
-        border .1em solid $btn-pocket-color2
-
-    &-sms
-        background-color $btn-sms-color
-        color $color-white
-
-        &:before
-            line-height 1.8em
-
-    &-twitter
-        background-color $btn-twitter-color
-        color $color-white
-
-    &-whatsapp
-        background-color $btn-whatsapp-color
-        color $color-white
+    &:enabled:hover
+        background-color darken($color-secondary, 20%)
 
 // btn theme color
 .btn
 .btn-icon
     for key, value in $colors
         &.btn-{key}
+        &.btn-icon-{key}
             background-color value
             color $color-white
 
             &:disabled
                 background-color alpha(value, .5)
 
+            &:enabled:hover
+                background-color darken(value, 20%)
+
     &.btn-native
         color $color-base
+
+        &:disabled
+            color alpha($color-base, .5)
+
+    &.btn-icon.btn-icon-pocket
+        color $color-pocket1
+        border solid .1em $color-pocket2
