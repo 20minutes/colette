@@ -42,18 +42,12 @@
         width .9em
         height .9em
         margin-bottom -.1em
-        margin-right .3em //default style for left icon
 
-    //overrides for right icon
-    span + svg
-        margin-right 0
-        margin-left .3em
+        &.left
+            margin-right .3em
 
-    &:disabled
-        background-color alpha($color-secondary, .5)
-
-    &:enabled:hover
-        background-color darken($color-secondary, 20%)
+        &.right
+            margin-left .3em
 
 // Weight: 1
 //
@@ -112,6 +106,16 @@
         margin .33em
         display block
 
+//disabled & hover effect
+.btn
+.btn-icon
+    &:disabled
+        background-color alpha($color-secondary, .5)
+        color alpha($color-base, .5)
+
+    &:enabled:hover
+        background-color darken($color-secondary, 20%)
+
 // btn theme color
 .btn
 .btn-icon
@@ -129,6 +133,9 @@
 
     &.btn-native
         color $color-base
+
+        &:disabled
+            color alpha($color-base, .5)
 
     &.btn-icon.btn-icon-pocket
         color $color-pocket1

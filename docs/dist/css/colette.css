@@ -1280,17 +1280,12 @@ figure {
   width: 0.9em;
   height: 0.9em;
   margin-bottom: -0.1em;
+}
+.btn svg.left {
   margin-right: 0.3em;
 }
-.btn span + svg {
-  margin-right: 0;
+.btn svg.right {
   margin-left: 0.3em;
-}
-.btn:disabled {
-  background-color: rgba(183,183,183,0.5);
-}
-.btn:enabled:hover {
-  background-color: #929292;
 }
 .btn-icon {
   display: inline-block;
@@ -1305,6 +1300,15 @@ figure {
   height: 1em;
   margin: 0.33em;
   display: block;
+}
+.btn:disabled,
+.btn-icon:disabled {
+  background-color: rgba(183,183,183,0.5);
+  color: rgba(76,77,78,0.5);
+}
+.btn:enabled:hover,
+.btn-icon:enabled:hover {
+  background-color: #929292;
 }
 .btn.btn-base,
 .btn-icon.btn-base,
@@ -1746,6 +1750,10 @@ figure {
 .btn.btn-native,
 .btn-icon.btn-native {
   color: #4c4d4e;
+}
+.btn.btn-native:disabled,
+.btn-icon.btn-native:disabled {
+  color: rgba(76,77,78,0.5);
 }
 .btn.btn-icon.btn-icon-pocket,
 .btn-icon.btn-icon.btn-icon-pocket {
