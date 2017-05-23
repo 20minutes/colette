@@ -3,7 +3,7 @@
 // Add a skin over the image of a content block on listing pages, and depending on the skin, modify the teaser text and/or background colors.
 // Note that:
 // - the `.skin-#` class is applied on a content preview selector (which may contain `.media` | `.teaser` | `.box-counter` | `.box-footer` children)
-// - the skin is applied on a `<figure clas="media">` tag,
+// - the skin is applied on a `<figure class="media">` tag,
 // - the image must be placed within a `<p>` or a `<div>` tag for icon skins
 //
 // .skin-blog        - Text skin: "blog", text color: community
@@ -35,27 +35,17 @@
     &-weird
         .media
             &:before
-            &:after
+                {fontSecondary}
                 position absolute
                 top 0
                 left 0
-
-            &:before
-                {fontSecondary}
                 z-index 2
-                width 60px
-                height 30px
+                padding 0 1em
+                height 2.8em
+                line-height @height
                 color $color-white
                 text-align center
-                line-height 30px
-
-            &:after
-                content ''
-                z-index 1
-                width 66px
-                height 36px
-                background-color $color-black
-                opacity .3
+                box-shadow: .27em .27em 0px .27em rgba(0, 0, 0, 0.3);
 
     &-blog
         .media
@@ -79,11 +69,7 @@
         .media
             &:before
                 content 'exclusif'
-                width 90px
                 background-color $color-highlight
-
-            &:after
-                width 96px
 
         .teaser
             &-headline
@@ -102,11 +88,7 @@
         .media
             &:before
                 content 'dernière minute'
-                width 130px
                 background-color $color-highlight
-
-            &:after
-                width 136px
 
         .teaser
             &-headline
@@ -127,12 +109,8 @@
         .media
             &:before
                 content 'Partenaire'
-                width 90px
                 background-color $color-native
                 color $color-base
-
-            &:after
-                width 96px
 
     &-people
         .media

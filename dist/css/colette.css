@@ -2725,55 +2725,21 @@ figure {
 .skin-partner .media:before,
 .skin-people .media:before,
 .skin-quiz .media:before,
-.skin-weird .media:before,
-.skin-blog .media:after,
-.skin-chat .media:after,
-.skin-exclusive .media:after,
-.skin-lastminute .media:after,
-.skin-live .media:after,
-.skin-partner .media:after,
-.skin-people .media:after,
-.skin-quiz .media:after,
-.skin-weird .media:after {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.skin-blog .media:before,
-.skin-chat .media:before,
-.skin-exclusive .media:before,
-.skin-lastminute .media:before,
-.skin-live .media:before,
-.skin-partner .media:before,
-.skin-people .media:before,
-.skin-quiz .media:before,
 .skin-weird .media:before {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: bold;
   font-size: 1.1rem;
   text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 2;
-  width: 60px;
-  height: 30px;
+  padding: 0 1em;
+  height: 2.8em;
+  line-height: 2.8em;
   color: #fff;
   text-align: center;
-  line-height: 30px;
-}
-.skin-blog .media:after,
-.skin-chat .media:after,
-.skin-exclusive .media:after,
-.skin-lastminute .media:after,
-.skin-live .media:after,
-.skin-partner .media:after,
-.skin-people .media:after,
-.skin-quiz .media:after,
-.skin-weird .media:after {
-  content: '';
-  z-index: 1;
-  width: 66px;
-  height: 36px;
-  background-color: #000;
-  opacity: 0.3;
+  box-shadow: 0.27em 0.27em 0px 0.27em rgba(0,0,0,0.3);
 }
 .skin-blog .media:before {
   content: 'blog';
@@ -2790,11 +2756,7 @@ figure {
 }
 .skin-exclusive .media:before {
   content: 'exclusif';
-  width: 90px;
   background-color: #cc190f;
-}
-.skin-exclusive .media:after {
-  width: 96px;
 }
 .skin-exclusive .teaser-headline,
 .skin-exclusive .teaser-title,
@@ -2810,11 +2772,7 @@ figure {
 }
 .skin-lastminute .media:before {
   content: 'dernière minute';
-  width: 130px;
   background-color: #cc190f;
-}
-.skin-lastminute .media:after {
-  width: 136px;
 }
 .skin-lastminute .teaser-headline,
 .skin-lastminute .teaser-title,
@@ -2830,12 +2788,8 @@ figure {
 }
 .skin-partner .media:before {
   content: 'Partenaire';
-  width: 90px;
   background-color: #fff7e2;
   color: #4c4d4e;
-}
-.skin-partner .media:after {
-  width: 96px;
 }
 .skin-people .media:before {
   content: 'People';
