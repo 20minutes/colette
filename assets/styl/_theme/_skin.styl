@@ -141,43 +141,34 @@
     &-video
         .media > p:first-child
         .media > div:first-child
-            {icon}
-            position relative
 
             &:before
-            &:after
                 display block
                 position absolute
-                bottom 6px
-                left 6px
-                padding 6px
-                width 60px
-                height 42px
-
-            &:before
-                z-index 2
-                font-size 3.6rem
-                text-align center
-                line-height 42px
-                color $color-white
-
-            &:after
-                content ''
                 z-index 1
-                border-radius 3px
-                background-color $color-media
-                opacity .5
+                content ''
+                bottom .5em
+                left .5em
+                padding .5em
+                width 3.5em
+                height 2.4em
+                border-radius .3em
+                background-color rgba(0, 0, 0, 0.5);
+                background-repeat no-repeat
+                background-size 2.4em
+                background-position center center
 
     &-video
         .media
             > p:first-child
             > div:first-child
                 &:before
-                    content 'p'
+                    background-image _inlineSvg('<svg viewBox="0 0 32 32" width="32" height="32"><path fill="#fff" d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 29c-7.18 0-13-5.82-13-13s5.82-13 13-13 13 5.82 13 13-5.82 13-13 13zM12 9l12 7-12 7z"></path></svg>')
 
     &-gallery
         .media
             > p:first-child
             > div:first-child
                 &:before
-                    content 'I'
+                    background-image _inlineSvg('<svg viewBox="0 0 32 32" width="32" height="32"><path fill="#fff" d="M4 8.666v20.001h28.001v-20.001h-28.001zM29.999 25.335l-3.997-6.669-4.535 3.781-3.467-5.779-11.998 10.001v-16.001h23.998v14.668zM7.999 15.667c0 1.655 1.344 2.998 3 2.998 1.658 0 3-1.343 3-2.998 0-1.658-1.342-3-3-3-1.656 0-3 1.342-3 3zM28 4.667h-27.999v19.999h1.999v-17.998h26.001v-2.001z"></path></svg>')
+

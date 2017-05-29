@@ -2808,70 +2808,32 @@ figure {
   content: 'T’as vu';
   background-color: #ef2a82;
 }
-.skin-gallery .media > p:first-child,
-.skin-video .media > p:first-child,
-.skin-gallery .media > div:first-child,
-.skin-video .media > div:first-child {
-  position: relative;
-}
 .skin-gallery .media > p:first-child:before,
 .skin-video .media > p:first-child:before,
 .skin-gallery .media > div:first-child:before,
-.skin-video .media > div:first-child:before,
-.skin-gallery .media > p:first-child:after,
-.skin-video .media > p:first-child:after,
-.skin-gallery .media > div:first-child:after,
-.skin-video .media > div:first-child:after {
-  font-family: '20mn';
-  speak: none;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-}
-.skin-gallery .media > p:first-child:before,
-.skin-video .media > p:first-child:before,
-.skin-gallery .media > div:first-child:before,
-.skin-video .media > div:first-child:before,
-.skin-gallery .media > p:first-child:after,
-.skin-video .media > p:first-child:after,
-.skin-gallery .media > div:first-child:after,
-.skin-video .media > div:first-child:after {
+.skin-video .media > div:first-child:before {
   display: block;
   position: absolute;
-  bottom: 6px;
-  left: 6px;
-  padding: 6px;
-  width: 60px;
-  height: 42px;
-}
-.skin-gallery .media > p:first-child:before,
-.skin-video .media > p:first-child:before,
-.skin-gallery .media > div:first-child:before,
-.skin-video .media > div:first-child:before {
-  z-index: 2;
-  font-size: 3.6rem;
-  text-align: center;
-  line-height: 42px;
-  color: #fff;
-}
-.skin-gallery .media > p:first-child:after,
-.skin-video .media > p:first-child:after,
-.skin-gallery .media > div:first-child:after,
-.skin-video .media > div:first-child:after {
-  content: '';
   z-index: 1;
-  border-radius: 3px;
-  background-color: #000;
-  opacity: 0.5;
+  content: '';
+  bottom: 0.5em;
+  left: 0.5em;
+  padding: 0.5em;
+  width: 3.5em;
+  height: 2.4em;
+  border-radius: 0.3em;
+  background-color: rgba(0,0,0,0.5);
+  background-repeat: no-repeat;
+  background-size: 2.4em;
+  background-position: center center;
 }
 .skin-video .media > p:first-child:before,
 .skin-video .media > div:first-child:before {
-  content: 'p';
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32'%3E%3Cpath fill='%23fff' d='M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 29c-7.18 0-13-5.82-13-13s5.82-13 13-13 13 5.82 13 13-5.82 13-13 13zM12 9l12 7-12 7z'%3E%3C/path%3E%3C/svg%3E");
 }
 .skin-gallery .media > p:first-child:before,
 .skin-gallery .media > div:first-child:before {
-  content: 'I';
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32'%3E%3Cpath fill='%23fff' d='M4 8.666v20.001h28.001v-20.001h-28.001zM29.999 25.335l-3.997-6.669-4.535 3.781-3.467-5.779-11.998 10.001v-16.001h23.998v14.668zM7.999 15.667c0 1.655 1.344 2.998 3 2.998 1.658 0 3-1.343 3-2.998 0-1.658-1.342-3-3-3-1.656 0-3 1.342-3 3zM28 4.667h-27.999v19.999h1.999v-17.998h26.001v-2.001z'%3E%3C/path%3E%3C/svg%3E");
 }
 .float-left {
   float: left !important;
