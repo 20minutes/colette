@@ -25,6 +25,29 @@
 // Markup: buttons-default.twig
 //
 // Styleguide Components.Buttons.ButtonsDefault
+
+// Weight: 1
+//
+// Default Social Buttons
+//
+// All social colors are available to style the button according to its context.
+//
+// .btn-facebook         - facebook color button
+// .btn-messenger        - messenger color button
+// .btn-twitter          - twitter color button
+// .btn-pinterest        - pinterest color button
+// .btn-linkedin         - linkedin color button
+// .btn-googleplus       - googleplus color button
+// .btn-pocket           - pocket color button
+// .btn-snapchat         - snapchat color button
+// .btn-whatsapp         - whatsapp color button
+// .btn-hootsuite        - hootsuite color button
+// .btn-github           - github color button
+// .btn-sms              - sms color button
+//
+// Markup: buttons-default-socials.twig
+//
+// Styleguide Components.Buttons.ButtonsDefaultSocials
 .btn
     display inline-block
     text-align center
@@ -49,7 +72,7 @@
         &.right
             margin-left .3em
 
-// Weight: 1
+// Weight: 2
 //
 // Icon Buttons: default styles
 //
@@ -68,30 +91,33 @@
 // .btn-hightech         - hightech color button
 // .btn-native           - native color button
 //
-// Markup: buttons-icon-default.twig
+// Markup: buttons-icon.twig
 //
-// Styleguide Components.Buttons.IconButtonsDefault
+// Styleguide Components.Buttons.IconButtons
 
-// Weight: 2
+// Weight: 3
 //
 // Icon Buttons: social styles
 //
-// We also have a few styles available for social buttons:
+// Icon buttons are icons in a colored circle.
+// All social colors are available to style the button according to its context.
 //
-// - **.btn-icon-facebook**: facebook button
-// - **.btn-icon-googleplus**: googleplus button
-// - **.btn-icon-hootsuite**: hootsuite button
-// - **.btn-icon-linkedin**: linkedin button
-// - **.btn-icon-pinterest**: pinterest button
-// - **.btn-icon-pocket** pocket button
-// - **.btn-icon-sms** sms button
-// - **.btn-icon-twitter**: twitter button
-// - **.btn-icon-whatsapp**: whatsapp button
+// .btn-facebook         - facebook color button
+// .btn-messenger        - messenger color button
+// .btn-twitter          - twitter color button
+// .btn-pinterest        - pinterest color button
+// .btn-linkedin         - linkedin color button
+// .btn-googleplus       - googleplus color button
+// .btn-pocket           - pocket color button
+// .btn-snapchat         - snapchat color button
+// .btn-whatsapp         - whatsapp color button
+// .btn-hootsuite        - hootsuite color button
+// .btn-github           - github color button
+// .btn-sms              - sms color button
 //
-// Markup: buttons-icon-social.twig
+// Markup: buttons-icon-socials.twig
 //
-// Styleguide Components.Buttons.IconButtonsSocial
-//
+// Styleguide Components.Buttons.IconButtonsSocials
 
 .btn-icon
     display inline-block
@@ -106,12 +132,11 @@
         margin .33em
         display block
 
-//disabled & hover effect
+//disabled & hover default effect (for buttons without a key color)
 .btn
 .btn-icon
     &:disabled
-        background-color alpha($color-secondary, .5)
-        color alpha($color-base, .5)
+        opacity .5
 
     &:enabled:hover
         background-color darken($color-secondary, 20%)
@@ -119,24 +144,18 @@
 // btn theme color
 .btn
 .btn-icon
-    for key, value in $colors
+    for key, value in merge($colors, $colors-socials)
         &.btn-{key}
-        &.btn-icon-{key}
             background-color value
             color $color-white
-
-            &:disabled
-                background-color alpha(value, .5)
 
             &:enabled:hover
                 background-color darken(value, 20%)
 
     &.btn-native
+    &.btn-snapchat
         color $color-base
 
-        &:disabled
-            color alpha($color-base, .5)
-
-    &.btn-icon.btn-icon-pocket
+    &.btn-pocket
         color $color-pocket1
         border solid .1em $color-pocket2

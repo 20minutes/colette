@@ -70,6 +70,9 @@
     <path d="M12 11h5.535v2.837h0.079c0.77-1.381 2.655-2.837 5.464-2.837 5.842 0 6.922 3.637 6.922 8.367v9.633h-5.769v-8.54c0-2.037-0.042-4.657-3.001-4.657-3.005 0-3.463 2.218-3.463 4.509v8.688h-5.767v-18z"/>
     <path d="M2 11h6v18h-6v-18z"/>
     <path d="M8 6c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"/>
+</symbol><symbol id="symbol-social-messenger" viewBox="0 0 32 32">
+    <path d="M15.9,2.4C8.4,2.4,2.4,8,2.4,15c0,4,2,7.5,5,9.8v4.8L12,27c1.2,0.3,2.5,0.5,3.9,0.5c7.5,0,13.5-5.6,13.5-12.6
+    S23.4,2.4,15.9,2.4z M17.2,19.4l-3.4-3.7l-6.7,3.7l7.4-7.9l3.5,3.7l6.6-3.7L17.2,19.4z"/>
 </symbol><symbol id="symbol-social-pinterest" viewBox="0 0 32 32">
     <path d="M4.493 12.804q0-1.929 0.67-3.634t1.848-2.973 2.714-2.196 3.304-1.393 3.607-0.464q2.821 0 5.25 1.188t3.946 3.455 1.518 5.125q0 1.714-0.339 3.357t-1.071 3.161-1.786 2.67-2.589 1.839-3.375 0.688q-1.214 0-2.411-0.571t-1.714-1.571q-0.179 0.696-0.5 2.009t-0.42 1.696-0.366 1.268-0.464 1.268-0.571 1.116-0.821 1.384-1.107 1.545l-0.25 0.089-0.161-0.179q-0.268-2.804-0.268-3.357 0-1.643 0.384-3.688t1.188-5.134 0.929-3.625q-0.571-1.161-0.571-3.018 0-1.482 0.929-2.786t2.357-1.304q1.089 0 1.696 0.723t0.607 1.83q0 1.179-0.786 3.411t-0.786 3.339q0 1.125 0.804 1.866t1.946 0.741q0.982 0 1.821-0.446t1.402-1.214 1-1.696 0.679-1.973 0.357-1.982 0.116-1.777q0-3.089-1.955-4.813t-5.098-1.723q-3.571 0-5.964 2.313t-2.393 5.866q0 0.786 0.223 1.518t0.482 1.161 0.482 0.813 0.223 0.545q0 0.5-0.268 1.304t-0.661 0.804q-0.036 0-0.304-0.054-0.911-0.268-1.616-1t-1.089-1.688-0.58-1.929-0.196-1.902z"/>
 </symbol><symbol id="symbol-social-pocket" viewBox="0 0 32 32">
@@ -165,43 +168,49 @@
                     <div class="co_subsection-demo col-md-9 clearfix mb1">
                         <ul class="socialbar">
         <li>
-        <a class="btn-icon btn-icon-facebook" href="#" target="_blank">
+        <a class="btn-icon btn-messenger" href="#" target="_blank">
+            <svg height="16" width="16"><use xlink:href="#symbol-social-messenger"></use></svg>
+            <span class="mask">Messenger</span>
+        </a>
+    </li>
+        <li>
+        <a class="btn-icon btn-facebook" href="#" target="_blank">
             <svg height="16" width="16"><use xlink:href="#symbol-social-facebook"></use></svg>
             <span class="mask">Facebook</span>
         </a>
     </li>
         <li>
-        <a class="btn-icon btn-icon-twitter" href="#" target="_blank">
+        <a class="btn-icon btn-twitter" href="#" target="_blank">
             <svg height="16" width="16"><use xlink:href="#symbol-social-twitter"></use></svg>
             <span class="mask">Twitter</span>
         </a>
     </li>
         <li>
-        <a class="btn-icon btn-icon-linkedin" href="#" target="_blank">
+        <a class="btn-icon btn-linkedin" href="#" target="_blank">
             <svg height="16" width="16"><use xlink:href="#symbol-social-linkedin"></use></svg>
             <span class="mask">LinkedIn</span>
         </a>
     </li>
         <li>
-        <a class="btn-icon btn-icon-googleplus" href="#" target="_blank">
+        <a class="btn-icon btn-googleplus" href="#" target="_blank">
             <svg height="16" width="16"><use xlink:href="#symbol-social-googleplus"></use></svg>
             <span class="mask">Google Plus</span>
         </a>
     </li>
         <li>
-        <a class="btn-icon btn-icon-pinterest" href="#" target="_blank">
+        <a class="btn-icon btn-pinterest" href="#" target="_blank">
             <svg height="16" width="16"><use xlink:href="#symbol-social-pinterest"></use></svg>
             <span class="mask">Pinterest</span>
         </a>
     </li>
         <li>
-        <a class="btn-icon btn-icon-whatsapp" href="#" target="_blank">
+        <a class="btn-icon btn-whatsapp" href="#" target="_blank">
             <svg height="16" width="16"><use xlink:href="#symbol-social-whatsapp"></use></svg>
             <span class="mask">What's App</span>
         </a>
     </li>
         <li>
-        <a class="btn-icon btn-icon-sms" href="#" target="_blank">
+        <a class="btn-icon btn-sms" href="#" target="_blank">
             <svg height="16" width="16"><use xlink:href="#symbol-social-sms"></use></svg>
             <span class="mask">SMS</span>
         </a>
@@ -221,7 +230,7 @@
                             <pre class="pa1 prettyprint linenums lang-html"><code data-language="html">&lt;ul class=&quot;socialbar&quot;&gt;
     {% for key, name in socials %}
     &lt;li&gt;
-        &lt;a class=&quot;btn-icon btn-icon-{{ key }}&quot; href=&quot;#&quot; target=&quot;_blank&quot;&gt;
+        &lt;a class=&quot;btn-icon btn-{{ key }}&quot; href=&quot;#&quot; target=&quot;_blank&quot;&gt;
             &lt;svg height=&quot;16&quot; width=&quot;16&quot;&gt;&lt;use xlink:href=&quot;#symbol-social-{{ key }}&quot;&gt;&lt;/use&gt;&lt;/svg&gt;
             &lt;span class=&quot;mask&quot;&gt;{{ name }}&lt;/span&gt;
         &lt;/a&gt;
