@@ -2293,7 +2293,7 @@ figure {
 .tabs-wrapper {
   overflow: hidden;
   position: relative;
-  height: 36px;
+  height: calc(2.2em + 4px);
 }
 .tabs-wrapper .menu-scroll {
   top: 50%;
@@ -2305,9 +2305,9 @@ figure {
   margin: 0;
   padding: 0;
   display: inline-block;
-  height: 32px;
+  height: 2.2em;
   overflow: hidden;
-  line-height: 32px;
+  line-height: 2.2em;
   list-style: none;
 }
 .tabs:after {
@@ -2328,9 +2328,9 @@ figure {
   font-weight: bold;
   font-size: 1.1rem;
   text-transform: uppercase;
+  font-size: 0.65em;
   position: relative;
-  height: 32px;
-  margin: 0 0 0 36px;
+  margin: 0 0 0 3em;
   float: left;
 }
 .tabs-item:after,
@@ -2338,64 +2338,61 @@ figure {
   z-index: 1;
   content: '';
   position: absolute;
-  top: 0;
-  right: -12px;
   display: block;
-  width: 32px;
-  height: 32px;
-  box-shadow: 2px -2px 2px rgba(0,0,0,0.25);
+  height: 2.5em;
+  width: 2.5em;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  top: calc(50% - 1.25em);
+  right: -1.25em;
+  box-shadow: 2px -2px 2px rgba(0,0,0,0.25);
 }
 .tabs-name {
   color: #fff;
   margin-left: 0;
-  padding-left: 12px;
+  padding-left: 1.1em;
 }
 .tabs-name span {
   position: relative;
   z-index: 2;
 }
 .breakingnews {
-  display: table;
   width: 100%;
-  height: 72px;
+  height: 3.1em;
+  display: table;
 }
 .breakingnews > a {
   display: block;
+  overflow: hidden;
 }
 .breakingnews .tabs-alert,
 .breakingnews .tabs-name,
 .breakingnews .tabs-close {
+  height: 2.5em;
+  line-height: 1.2em;
   float: none;
   display: table-cell;
   vertical-align: middle;
-  height: 70px;
-  line-height: 1.2;
+}
+.breakingnews .tabs-name:after,
+.breakingnews .tabs-item:after {
+  height: 3.2em;
+  width: 3.2em;
+  top: calc(50% - 1.6em);
+  right: -1.6em;
+  background-color: #cc190f;
 }
 .breakingnews .tabs-name {
   background-color: #cc190f;
-  font-size: 1.4rem;
+  font-size: 0.86em;
   color: #fff;
 }
-.breakingnews .tabs-name:after {
-  width: 50px;
-  height: 50px;
-  top: 10px;
-  right: -24px;
-  background-color: #cc190f;
-}
 .breakingnews .tabs-alert {
-  padding-left: 42px;
+  padding-left: 2em;
   font-family: 'Open Sans', 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: bold;
   color: #cc190f;
-  font-size: 1.4rem;
-}
-@media screen and (min-width: 48em) {
-  .breakingnews .tabs-alert {
-    font-size: 2.4rem;
-  }
+  font-size: 2.4rem;
 }
 .breakingnews .tabs-alert a {
   color: #cc190f;
@@ -2421,10 +2418,7 @@ figure {
 .tabs.base a:hover {
   color: #4c4d4e;
 }
-.tabs.base .tabs-name {
-  border: 1px solid #4c4d4e;
-  background-color: #4c4d4e;
-}
+.tabs.base .tabs-name,
 .tabs.base .tabs-name:after {
   background-color: #4c4d4e;
 }
@@ -2432,10 +2426,7 @@ figure {
 .tabs.default a:hover {
   color: #0b4892;
 }
-.tabs.default .tabs-name {
-  border: 1px solid #0b4892;
-  background-color: #0b4892;
-}
+.tabs.default .tabs-name,
 .tabs.default .tabs-name:after {
   background-color: #0b4892;
 }
@@ -2443,10 +2434,7 @@ figure {
 .tabs.sport a:hover {
   color: #00b9f3;
 }
-.tabs.sport .tabs-name {
-  border: 1px solid #00b9f3;
-  background-color: #00b9f3;
-}
+.tabs.sport .tabs-name,
 .tabs.sport .tabs-name:after {
   background-color: #00b9f3;
 }
@@ -2454,10 +2442,7 @@ figure {
 .tabs.entertainment a:hover {
   color: #cc190f;
 }
-.tabs.entertainment .tabs-name {
-  border: 1px solid #cc190f;
-  background-color: #cc190f;
-}
+.tabs.entertainment .tabs-name,
 .tabs.entertainment .tabs-name:after {
   background-color: #cc190f;
 }
@@ -2465,10 +2450,7 @@ figure {
 .tabs.economy a:hover {
   color: #053042;
 }
-.tabs.economy .tabs-name {
-  border: 1px solid #053042;
-  background-color: #053042;
-}
+.tabs.economy .tabs-name,
 .tabs.economy .tabs-name:after {
   background-color: #053042;
 }
@@ -2476,10 +2458,7 @@ figure {
 .tabs.community a:hover {
   color: #930b48;
 }
-.tabs.community .tabs-name {
-  border: 1px solid #930b48;
-  background-color: #930b48;
-}
+.tabs.community .tabs-name,
 .tabs.community .tabs-name:after {
   background-color: #930b48;
 }
@@ -2487,10 +2466,7 @@ figure {
 .tabs.weird a:hover {
   color: #ef2a82;
 }
-.tabs.weird .tabs-name {
-  border: 1px solid #ef2a82;
-  background-color: #ef2a82;
-}
+.tabs.weird .tabs-name,
 .tabs.weird .tabs-name:after {
   background-color: #ef2a82;
 }
@@ -2498,10 +2474,7 @@ figure {
 .tabs.partner a:hover {
   color: #ff5400;
 }
-.tabs.partner .tabs-name {
-  border: 1px solid #ff5400;
-  background-color: #ff5400;
-}
+.tabs.partner .tabs-name,
 .tabs.partner .tabs-name:after {
   background-color: #ff5400;
 }
@@ -2509,10 +2482,7 @@ figure {
 .tabs.planet a:hover {
   color: #48930b;
 }
-.tabs.planet .tabs-name {
-  border: 1px solid #48930b;
-  background-color: #48930b;
-}
+.tabs.planet .tabs-name,
 .tabs.planet .tabs-name:after {
   background-color: #48930b;
 }
@@ -2520,10 +2490,7 @@ figure {
 .tabs.media a:hover {
   color: #000;
 }
-.tabs.media .tabs-name {
-  border: 1px solid #000;
-  background-color: #000;
-}
+.tabs.media .tabs-name,
 .tabs.media .tabs-name:after {
   background-color: #000;
 }
@@ -2531,10 +2498,7 @@ figure {
 .tabs.hightech a:hover {
   color: #686868;
 }
-.tabs.hightech .tabs-name {
-  border: 1px solid #686868;
-  background-color: #686868;
-}
+.tabs.hightech .tabs-name,
 .tabs.hightech .tabs-name:after {
   background-color: #686868;
 }
@@ -2542,10 +2506,7 @@ figure {
 .tabs.native a:hover {
   color: #fff7e2;
 }
-.tabs.native .tabs-name {
-  border: 1px solid #fff7e2;
-  background-color: #fff7e2;
-}
+.tabs.native .tabs-name,
 .tabs.native .tabs-name:after {
   background-color: #fff7e2;
 }
@@ -2553,10 +2514,7 @@ figure {
 .tabs.facebook a:hover {
   color: #4c64a0;
 }
-.tabs.facebook .tabs-name {
-  border: 1px solid #4c64a0;
-  background-color: #4c64a0;
-}
+.tabs.facebook .tabs-name,
 .tabs.facebook .tabs-name:after {
   background-color: #4c64a0;
 }
@@ -2564,10 +2522,7 @@ figure {
 .tabs.googleplus a:hover {
   color: #d14836;
 }
-.tabs.googleplus .tabs-name {
-  border: 1px solid #d14836;
-  background-color: #d14836;
-}
+.tabs.googleplus .tabs-name,
 .tabs.googleplus .tabs-name:after {
   background-color: #d14836;
 }
@@ -2575,10 +2530,7 @@ figure {
 .tabs.hootsuite a:hover {
   color: #000;
 }
-.tabs.hootsuite .tabs-name {
-  border: 1px solid #000;
-  background-color: #000;
-}
+.tabs.hootsuite .tabs-name,
 .tabs.hootsuite .tabs-name:after {
   background-color: #000;
 }
@@ -2586,10 +2538,7 @@ figure {
 .tabs.linkedin a:hover {
   color: #0177b5;
 }
-.tabs.linkedin .tabs-name {
-  border: 1px solid #0177b5;
-  background-color: #0177b5;
-}
+.tabs.linkedin .tabs-name,
 .tabs.linkedin .tabs-name:after {
   background-color: #0177b5;
 }
@@ -2597,10 +2546,7 @@ figure {
 .tabs.pinterest a:hover {
   color: #bd081c;
 }
-.tabs.pinterest .tabs-name {
-  border: 1px solid #bd081c;
-  background-color: #bd081c;
-}
+.tabs.pinterest .tabs-name,
 .tabs.pinterest .tabs-name:after {
   background-color: #bd081c;
 }
@@ -2608,10 +2554,7 @@ figure {
 .tabs.pocket a:hover {
   color: #fff;
 }
-.tabs.pocket .tabs-name {
-  border: 1px solid #fff;
-  background-color: #fff;
-}
+.tabs.pocket .tabs-name,
 .tabs.pocket .tabs-name:after {
   background-color: #fff;
 }
@@ -2619,10 +2562,7 @@ figure {
 .tabs.pocket1 a:hover {
   color: #ed4054;
 }
-.tabs.pocket1 .tabs-name {
-  border: 1px solid #ed4054;
-  background-color: #ed4054;
-}
+.tabs.pocket1 .tabs-name,
 .tabs.pocket1 .tabs-name:after {
   background-color: #ed4054;
 }
@@ -2630,10 +2570,7 @@ figure {
 .tabs.pocket2 a:hover {
   color: #b7b7b7;
 }
-.tabs.pocket2 .tabs-name {
-  border: 1px solid #b7b7b7;
-  background-color: #b7b7b7;
-}
+.tabs.pocket2 .tabs-name,
 .tabs.pocket2 .tabs-name:after {
   background-color: #b7b7b7;
 }
@@ -2641,10 +2578,7 @@ figure {
 .tabs.sms a:hover {
   color: #48930b;
 }
-.tabs.sms .tabs-name {
-  border: 1px solid #48930b;
-  background-color: #48930b;
-}
+.tabs.sms .tabs-name,
 .tabs.sms .tabs-name:after {
   background-color: #48930b;
 }
@@ -2652,10 +2586,7 @@ figure {
 .tabs.twitter a:hover {
   color: #00a7e7;
 }
-.tabs.twitter .tabs-name {
-  border: 1px solid #00a7e7;
-  background-color: #00a7e7;
-}
+.tabs.twitter .tabs-name,
 .tabs.twitter .tabs-name:after {
   background-color: #00a7e7;
 }
@@ -2663,10 +2594,7 @@ figure {
 .tabs.whatsapp a:hover {
   color: #01a85a;
 }
-.tabs.whatsapp .tabs-name {
-  border: 1px solid #01a85a;
-  background-color: #01a85a;
-}
+.tabs.whatsapp .tabs-name,
 .tabs.whatsapp .tabs-name:after {
   background-color: #01a85a;
 }

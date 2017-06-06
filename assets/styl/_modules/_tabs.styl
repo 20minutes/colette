@@ -1,7 +1,7 @@
 // Tabs
 //
 // - **Default:** adds a navigation within a section
-// - **Breaking news:** is used to disaply hot news on a page
+// - **Breaking news:** is used to display hot news on a page
 //
 // Markup: tabs.twig
 //
@@ -9,7 +9,7 @@
 .tabs-wrapper
     overflow hidden
     position relative
-    height 36px
+    height calc(2.2em + 4px)
 
     .menu-scroll
         top 50%
@@ -21,7 +21,7 @@
     margin 0
     padding 0
     display inline-block
-    height 32px
+    height 2.2em
     overflow hidden
     line-height @height
     list-style none
@@ -31,76 +31,74 @@
         z-index 2
         color $color-tertiary
 
-.tabs-item
-    {fontSecondary}
-    position relative
-    height 32px
-    margin 0 0 0 36px
-    float left
-
-    &:after
-        z-index 1
-        content ''
-        position absolute
-        top 0
-        right -12px
-        display block
-        width 32px
-        height 32px
-        box-shadow 2px -2px 2px rgba(0, 0, 0, .25)
-        transform rotate(45deg)
-
-.tabs-name
-    @extends .tabs-item
-    color $color-white
-    margin-left 0
-    padding-left 12px
-
-    span
+    &-item
+        {fontSecondary}
+        font-size .65em
         position relative
-        z-index 2
+        margin 0 0 0 3em
+        float left
 
-/*
- * Specials [
- * ---------------------------------------------------------------------------------------- */
+        &:after
+            z-index 1
+            content ''
+            position absolute
+            display block
+            height 2.5em
+            width 2.5em
+            transform rotate(45deg)
+            top calc(50% - 1.25em)
+            right -1.25em
+            box-shadow 2px -2px 2px rgba(0, 0, 0, .25)
+
+    &-name
+        @extends .tabs-item
+        color $color-white
+        margin-left 0
+        padding-left 1.1em
+
+        span
+            position relative
+            z-index 2
+
+// Special rules for Breaking News
 .breakingnews
-    display table
     width 100%
-    height 72px
+    height 3.1em
+    display table
 
     > a
         display block
+        overflow hidden
 
     .tabs-alert
     .tabs-name
     .tabs-close
+        height 2.5em
+        line-height 1.2em
         float none
         display table-cell
         vertical-align middle
-        height 70px
-        line-height 1.2
+
+    .tabs-name
+    .tabs-item
+        &:after
+            height 3.2em
+            width 3.2em
+            top calc(50% - 1.6em)
+            right -1.6em
+            background-color $color-highlight
 
     .tabs-name
         background-color $color-highlight
-        font-size 1.4rem
+        font-size 0.86em
         color $color-white
 
-        &:after
-            width 50px
-            height 50px
-            top 10px
-            right -24px
-            background-color $color-highlight
-
     .tabs-alert
-        padding-left 42px
+        padding-left 2em
         font-family $font-headings
         font-weight bold
         color $color-highlight
-        font-size 1.4rem
-
-        @media screen and (min-width: 48em)
-            font-size 2.4rem
+        font-size 2.4rem
 
         a
             color $color-highlight
@@ -122,22 +120,11 @@
             line-height 1
             text-align center
 
-/* ----------------------------------------------------------------------------------------
- * ] Specials */
-
-/*
- * Theme [
- * ---------------------------------------------------------------------------------------- */
+// Theme colors
 for key, value in $colors
     .tabs.{key} .is-active a, .tabs.{key} a:hover
         color value
 
     .tabs.{key} .tabs-name
-        border 1px solid value
-        background-color value
-
     .tabs.{key} .tabs-name:after
         background-color value
-/* ----------------------------------------------------------------------------------------
- * ] Theme */
-
