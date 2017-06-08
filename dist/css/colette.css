@@ -2209,11 +2209,15 @@ figure {
   color: #fff;
 }
 .breakingnews .tabs-alert {
-  padding-left: 2em;
+  padding-left: 2.5em;
   font-family: 'Open Sans', 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: bold;
   color: #cc190f;
-  font-size: 2.4rem;
+}
+@media screen and (min-width: 768px) {
+  .breakingnews .tabs-alert {
+    font-size: 2.4rem;
+  }
 }
 .breakingnews .tabs-alert a {
   color: #cc190f;

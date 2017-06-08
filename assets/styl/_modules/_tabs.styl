@@ -73,7 +73,7 @@
     .tabs-alert
     .tabs-name
     .tabs-close
-        height 2.5em
+        height 3.1em
         line-height 1.2em
         float none
         display table-cell
@@ -94,11 +94,14 @@
         color $color-white
 
     .tabs-alert
-        padding-left 2em
+        padding-left 2.5em
+        height 3.1em
         font-family $font-headings
         font-weight bold
         color $color-highlight
-        font-size 2.4rem
+
+        @media $breakpoints.md
+            font-size 2.4rem
 
         a
             color $color-highlight
