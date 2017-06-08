@@ -55,6 +55,7 @@
         color $color-white
         margin-left 0
         padding-left 1.1em
+        box-shadow 2px -2px 2px rgba(0, 0, 0, .25)
 
         span
             position relative
@@ -90,11 +91,12 @@
 
     .tabs-name
         background-color $color-highlight
-        font-size 0.86em
+        font-size .86em
         color $color-white
 
     .tabs-alert
         padding-left 2.5em
+        padding-right .5em
         height 3.1em
         font-family $font-headings
         font-weight bold
@@ -102,6 +104,8 @@
 
         @media $breakpoints.md
             font-size 2.4rem
+            padding-left 2em
+            height 2.5em
 
         a
             color $color-highlight
