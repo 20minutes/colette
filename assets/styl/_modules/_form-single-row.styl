@@ -62,6 +62,5 @@
         &-{key}
             input[type='submit']
             button[type='submit']
-                icon-text-color = _contrast-check($color-white, value) ? $color-white : $color-black
                 background-color value
-                color icon-text-color
+                color _contrast_choose(value, $color-white $color-black)

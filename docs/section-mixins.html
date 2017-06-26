@@ -155,15 +155,15 @@
             
             
         </div>
-                                            <section id="kssref-mixins-contrast-check" class="co_section-depth-2  co_content pl2 pr2">
+                                            <section id="kssref-mixins-contrast" class="co_section-depth-2  co_content pl2 pr2">
 
 
             
                         <h2 class="co_section-h2 ">
                 
-                                    <a href="#kssref-mixins-contrast-check">
+                                    <a href="#kssref-mixins-contrast">
                                     <strong class="co_section-ref">7.1</strong>
-                    Contrast-check
+                    Contrast
                                     </a>
                             </h2>
             
@@ -175,8 +175,62 @@
                             <div class="co_subsection clearfix">
                     <p class="co_subsection-title col-md-3">Description</p>
                     <div class="co_subsection-content col-md-9">
-                        <p>Returns true if constast is OK.</p>
-<p>Returns false and throws a warning message if it’s not.</p>
+                        <p>Library to manage contrast for a11y.</p>
+<blockquote>
+<p>In this examples <code>$constast = 4.5</code> and <code>$contrast-high = 7</code></p>
+</blockquote>
+
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+        </section>
+                                            <section id="kssref-mixins-contrast-choose" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3 ">
+                
+                                    <a href="#kssref-mixins-contrast-choose">
+                                    <strong class="co_section-ref">7.1.1</strong>
+                    _contrast_choose($color, $list, $min = $contrast)
+                                    </a>
+                            </h3>
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Returns first color of the list matching contrast ratio.</p>
+<p>Returns false and throws a warning message if no match.</p>
+<p>This stylus code</p>
+<pre><code class="lang-stylus">.foo
+    background #000
+    color _contrast_choose(#000, #888 #aaa #ddd #fff)
+    border-bottom 1px solid _contrast_choose(#000, #888 #aaa #ddd #fff, $contrast-high)
+</code></pre>
+<p>Will render this css</p>
+<pre><code class="lang-css">.foo {
+    background: #000;
+    color: #888;
+    border-bottom: 1px solid #aaa;
+}
+</code></pre>
 
                     </div>
                 </div>
@@ -195,9 +249,9 @@
                             <div class="co_subsection clearfix">
                     <p class="co_subsection-title col-md-3">Parameters</p>
                     <div class="co_subsection-content co_parameters col-md-9">
-                                                    <p><code>$foreground-color</code>: text color to check</p>
+                                                    <p><code>$color</code>: color to compare</p>
 
-                                                    <p><code>$background-color</code> (<code>$color-white</code>): background color to compare</p>
+                                                    <p><code>$list</code>: list of color to choose the first match</p>
 
                                                     <p><code>$min</code> (<code>$contrast</code>): minimum contrast ratio</p>
 
