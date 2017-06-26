@@ -43,9 +43,8 @@
 
     for key, value in $colors
         &-{key}
-            icon-text-color = _contrast-check($color-white, value) ? $color-white : $color-black
             background-color value
-            color icon-text-color
+            color _contrast_choose(value, $color-white $color-black)
 
     &-inline
         text-align left

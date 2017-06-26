@@ -1,0 +1,73 @@
+// Contrast
+//
+// Library to manage contrast for a11y.
+//
+// > In this examples `$constast = 4.5` and `$contrast-high = 7`
+//
+// Styleguide Mixins.Contrast
+
+// Contrast Check
+//
+// Returns true if constast is OK.
+//
+// $foreground-color                  - text color to check
+// $background-color = $color-white   - background color to compare
+// $min = $contrast                   - minimum contrast ratio
+//
+_contrast_check($foreground-color, $background-color = $color-white, $min = $contrast)
+    return contrast($foreground-color, $background-color).ratio >= $min
+
+// Contrast find first match
+//
+// Returns first color of the list matching contrast ratio from `$index`.
+//
+// Or return false if no match.
+//
+// $color            - color to compare
+// $list             - list of colors
+// $min = $contrast  - minimum contrast ratio
+// $index = 0        - index of start
+//
+_contrast_findFirstMatch($color, $list, $min = $contrast, $index = 0)
+    if (length($list) <= $index)
+        return false
+
+    if (_contrast_check($color, $list[$index], $min))
+        return $list[$index]
+
+    return _contrast_findFirstMatch($color, $list, $contrast, $index + 1)
+
+// _contrast_choose($color, $list, $min = $contrast)
+//
+// Returns first color of the list matching contrast ratio.
+//
+// Returns false and throws a warning message if no match.
+//
+// This stylus code
+// ```stylus
+// .foo
+//     background #000
+//     color _contrast_choose(#000, #888 #aaa #ddd #fff)
+//     border-bottom 1px solid _contrast_choose(#000, #888 #aaa #ddd #fff, $contrast-high)
+// ```
+//
+// Will render this css
+// ```css
+// .foo {
+//     background: #000;
+//     color: #888;
+//     border-bottom: 1px solid #aaa;
+// }
+// ```
+//
+// $color             - color to compare
+// $list              - list of color to choose the first match
+// $min = $contrast   - minimum contrast ratio
+//
+// Styleguide Mixins.Contrast.Choose
+_contrast_choose($color, $list, $min = $contrast)
+    $found = _contrast_findFirstMatch($color, $list, $min)
+    if ($found == false)
+        warn('No color valid for ' + $color + ' with contrast ratio >= ' + $min + ' in this $list 😥 : ' + join(', ', $list))
+
+    return $found

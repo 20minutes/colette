@@ -144,7 +144,8 @@
 // btn theme color
 .btn
 .btn-icon
-    for key, value in merge($colors, $colors-socials)
+    $tmpColors = {}
+    for key, value in merge($tmpColors, $colors, $colors-socials)
         &.btn-{key}
             background-color value
             color $color-white
