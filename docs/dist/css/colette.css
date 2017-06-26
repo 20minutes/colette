@@ -1606,7 +1606,7 @@ figure {
 .form-single-row-sport input[type='submit'],
 .form-single-row-sport button[type='submit'] {
   background-color: #00b9f3;
-  color: #fff;
+  color: #000;
 }
 .form-single-row-entertainment input[type='submit'],
 .form-single-row-entertainment button[type='submit'] {
@@ -1626,17 +1626,17 @@ figure {
 .form-single-row-weird input[type='submit'],
 .form-single-row-weird button[type='submit'] {
   background-color: #ef2a82;
-  color: #fff;
+  color: #000;
 }
 .form-single-row-partner input[type='submit'],
 .form-single-row-partner button[type='submit'] {
   background-color: #ff5400;
-  color: #fff;
+  color: #000;
 }
 .form-single-row-planet input[type='submit'],
 .form-single-row-planet button[type='submit'] {
   background-color: #48930b;
-  color: #fff;
+  color: #000;
 }
 .form-single-row-media input[type='submit'],
 .form-single-row-media button[type='submit'] {
@@ -1651,77 +1651,7 @@ figure {
 .form-single-row-native input[type='submit'],
 .form-single-row-native button[type='submit'] {
   background-color: #fff7e2;
-  color: #fff;
-}
-.form-single-row-facebook input[type='submit'],
-.form-single-row-facebook button[type='submit'] {
-  background-color: #4c64a0;
-  color: #fff;
-}
-.form-single-row-messenger input[type='submit'],
-.form-single-row-messenger button[type='submit'] {
-  background-color: #3d6bfb;
-  color: #fff;
-}
-.form-single-row-googleplus input[type='submit'],
-.form-single-row-googleplus button[type='submit'] {
-  background-color: #d14836;
-  color: #fff;
-}
-.form-single-row-hootsuite input[type='submit'],
-.form-single-row-hootsuite button[type='submit'] {
-  background-color: #000;
-  color: #fff;
-}
-.form-single-row-linkedin input[type='submit'],
-.form-single-row-linkedin button[type='submit'] {
-  background-color: #0177b5;
-  color: #fff;
-}
-.form-single-row-pinterest input[type='submit'],
-.form-single-row-pinterest button[type='submit'] {
-  background-color: #bd081c;
-  color: #fff;
-}
-.form-single-row-pocket input[type='submit'],
-.form-single-row-pocket button[type='submit'] {
-  background-color: #fff;
-  color: #fff;
-}
-.form-single-row-pocket1 input[type='submit'],
-.form-single-row-pocket1 button[type='submit'] {
-  background-color: #ed4054;
-  color: #fff;
-}
-.form-single-row-pocket2 input[type='submit'],
-.form-single-row-pocket2 button[type='submit'] {
-  background-color: #b7b7b7;
-  color: #fff;
-}
-.form-single-row-sms input[type='submit'],
-.form-single-row-sms button[type='submit'] {
-  background-color: #48930b;
-  color: #fff;
-}
-.form-single-row-twitter input[type='submit'],
-.form-single-row-twitter button[type='submit'] {
-  background-color: #00a7e7;
-  color: #fff;
-}
-.form-single-row-whatsapp input[type='submit'],
-.form-single-row-whatsapp button[type='submit'] {
-  background-color: #01a85a;
-  color: #fff;
-}
-.form-single-row-github input[type='submit'],
-.form-single-row-github button[type='submit'] {
-  background-color: #791e8f;
-  color: #fff;
-}
-.form-single-row-snapchat input[type='submit'],
-.form-single-row-snapchat button[type='submit'] {
-  background-color: #fdfe00;
-  color: #fff;
+  color: #000;
 }
 .form-field-widget label {
   display: block;
@@ -1804,7 +1734,7 @@ figure {
 }
 .icon-sport {
   background-color: #00b9f3;
-  color: #fff;
+  color: #000;
 }
 .icon-entertainment {
   background-color: #cc190f;
@@ -1820,15 +1750,15 @@ figure {
 }
 .icon-weird {
   background-color: #ef2a82;
-  color: #fff;
+  color: #000;
 }
 .icon-partner {
   background-color: #ff5400;
-  color: #fff;
+  color: #000;
 }
 .icon-planet {
   background-color: #48930b;
-  color: #fff;
+  color: #000;
 }
 .icon-media {
   background-color: #000;
@@ -1840,63 +1770,7 @@ figure {
 }
 .icon-native {
   background-color: #fff7e2;
-  color: #fff;
-}
-.icon-facebook {
-  background-color: #4c64a0;
-  color: #fff;
-}
-.icon-messenger {
-  background-color: #3d6bfb;
-  color: #fff;
-}
-.icon-googleplus {
-  background-color: #d14836;
-  color: #fff;
-}
-.icon-hootsuite {
-  background-color: #000;
-  color: #fff;
-}
-.icon-linkedin {
-  background-color: #0177b5;
-  color: #fff;
-}
-.icon-pinterest {
-  background-color: #bd081c;
-  color: #fff;
-}
-.icon-pocket {
-  background-color: #fff;
-  color: #fff;
-}
-.icon-pocket1 {
-  background-color: #ed4054;
-  color: #fff;
-}
-.icon-pocket2 {
-  background-color: #b7b7b7;
-  color: #fff;
-}
-.icon-sms {
-  background-color: #48930b;
-  color: #fff;
-}
-.icon-twitter {
-  background-color: #00a7e7;
-  color: #fff;
-}
-.icon-whatsapp {
-  background-color: #01a85a;
-  color: #fff;
-}
-.icon-github {
-  background-color: #791e8f;
-  color: #fff;
-}
-.icon-snapchat {
-  background-color: #fdfe00;
-  color: #fff;
+  color: #000;
 }
 .icon-inline {
   text-align: left;
@@ -2340,118 +2214,6 @@ figure {
 .tabs.native .tabs-name:after {
   background-color: #fff7e2;
 }
-.tabs.facebook .is-active a,
-.tabs.facebook a:hover {
-  color: #4c64a0;
-}
-.tabs.facebook .tabs-name,
-.tabs.facebook .tabs-name:after {
-  background-color: #4c64a0;
-}
-.tabs.messenger .is-active a,
-.tabs.messenger a:hover {
-  color: #3d6bfb;
-}
-.tabs.messenger .tabs-name,
-.tabs.messenger .tabs-name:after {
-  background-color: #3d6bfb;
-}
-.tabs.googleplus .is-active a,
-.tabs.googleplus a:hover {
-  color: #d14836;
-}
-.tabs.googleplus .tabs-name,
-.tabs.googleplus .tabs-name:after {
-  background-color: #d14836;
-}
-.tabs.hootsuite .is-active a,
-.tabs.hootsuite a:hover {
-  color: #000;
-}
-.tabs.hootsuite .tabs-name,
-.tabs.hootsuite .tabs-name:after {
-  background-color: #000;
-}
-.tabs.linkedin .is-active a,
-.tabs.linkedin a:hover {
-  color: #0177b5;
-}
-.tabs.linkedin .tabs-name,
-.tabs.linkedin .tabs-name:after {
-  background-color: #0177b5;
-}
-.tabs.pinterest .is-active a,
-.tabs.pinterest a:hover {
-  color: #bd081c;
-}
-.tabs.pinterest .tabs-name,
-.tabs.pinterest .tabs-name:after {
-  background-color: #bd081c;
-}
-.tabs.pocket .is-active a,
-.tabs.pocket a:hover {
-  color: #fff;
-}
-.tabs.pocket .tabs-name,
-.tabs.pocket .tabs-name:after {
-  background-color: #fff;
-}
-.tabs.pocket1 .is-active a,
-.tabs.pocket1 a:hover {
-  color: #ed4054;
-}
-.tabs.pocket1 .tabs-name,
-.tabs.pocket1 .tabs-name:after {
-  background-color: #ed4054;
-}
-.tabs.pocket2 .is-active a,
-.tabs.pocket2 a:hover {
-  color: #b7b7b7;
-}
-.tabs.pocket2 .tabs-name,
-.tabs.pocket2 .tabs-name:after {
-  background-color: #b7b7b7;
-}
-.tabs.sms .is-active a,
-.tabs.sms a:hover {
-  color: #48930b;
-}
-.tabs.sms .tabs-name,
-.tabs.sms .tabs-name:after {
-  background-color: #48930b;
-}
-.tabs.twitter .is-active a,
-.tabs.twitter a:hover {
-  color: #00a7e7;
-}
-.tabs.twitter .tabs-name,
-.tabs.twitter .tabs-name:after {
-  background-color: #00a7e7;
-}
-.tabs.whatsapp .is-active a,
-.tabs.whatsapp a:hover {
-  color: #01a85a;
-}
-.tabs.whatsapp .tabs-name,
-.tabs.whatsapp .tabs-name:after {
-  background-color: #01a85a;
-}
-.tabs.github .is-active a,
-.tabs.github a:hover {
-  color: #791e8f;
-}
-.tabs.github .tabs-name,
-.tabs.github .tabs-name:after {
-  background-color: #791e8f;
-}
-.tabs.snapchat .is-active a,
-.tabs.snapchat a:hover {
-  color: #fdfe00;
-}
-.tabs.snapchat .tabs-name,
-.tabs.snapchat .tabs-name:after {
-  background-color: #fdfe00;
-}
 .teaser {
   padding: 2.4rem;
 }
@@ -2521,7 +2283,7 @@ figure {
   line-height: 2.8em;
   color: #fff;
   text-align: center;
-  box-shadow: 0.27em 0.27em 0px 0.27em rgba(0,0,0,0.3);
+  box-shadow: 0.27em 0.27em 0 0.27em rgba(0,0,0,0.3);
 }
 .skin-blog .media:before {
   content: 'blog';
@@ -2804,132 +2566,6 @@ figure {
 }
 .color-native {
   color: #fff7e2;
-}
-.border-color-facebook {
-  border: 1px solid #4c64a0;
-}
-.bg-facebook {
-  background-color: #4c64a0;
-}
-.color-facebook {
-  color: #4c64a0;
-}
-.border-color-messenger {
-  border: 1px solid #3d6bfb;
-}
-.bg-messenger {
-  background-color: #3d6bfb;
-}
-.color-messenger {
-  color: #3d6bfb;
-}
-.border-color-googleplus {
-  border: 1px solid #d14836;
-}
-.bg-googleplus {
-  background-color: #d14836;
-}
-.color-googleplus {
-  color: #d14836;
-}
-.border-color-hootsuite {
-  border: 1px solid #000;
-}
-.bg-hootsuite {
-  background-color: #000;
-}
-.color-hootsuite {
-  color: #000;
-}
-.border-color-linkedin {
-  border: 1px solid #0177b5;
-}
-.bg-linkedin {
-  background-color: #0177b5;
-}
-.color-linkedin {
-  color: #0177b5;
-}
-.border-color-pinterest {
-  border: 1px solid #bd081c;
-}
-.bg-pinterest {
-  background-color: #bd081c;
-}
-.color-pinterest {
-  color: #bd081c;
-}
-.border-color-pocket {
-  border: 1px solid #fff;
-}
-.bg-pocket {
-  background-color: #fff;
-}
-.color-pocket {
-  color: #fff;
-}
-.border-color-pocket1 {
-  border: 1px solid #ed4054;
-}
-.bg-pocket1 {
-  background-color: #ed4054;
-}
-.color-pocket1 {
-  color: #ed4054;
-}
-.border-color-pocket2 {
-  border: 1px solid #b7b7b7;
-}
-.bg-pocket2 {
-  background-color: #b7b7b7;
-}
-.color-pocket2 {
-  color: #b7b7b7;
-}
-.border-color-sms {
-  border: 1px solid #48930b;
-}
-.bg-sms {
-  background-color: #48930b;
-}
-.color-sms {
-  color: #48930b;
-}
-.border-color-twitter {
-  border: 1px solid #00a7e7;
-}
-.bg-twitter {
-  background-color: #00a7e7;
-}
-.color-twitter {
-  color: #00a7e7;
-}
-.border-color-whatsapp {
-  border: 1px solid #01a85a;
-}
-.bg-whatsapp {
-  background-color: #01a85a;
-}
-.color-whatsapp {
-  color: #01a85a;
-}
-.border-color-github {
-  border: 1px solid #791e8f;
-}
-.bg-github {
-  background-color: #791e8f;
-}
-.color-github {
-  color: #791e8f;
-}
-.border-color-snapchat {
-  border: 1px solid #fdfe00;
-}
-.bg-snapchat {
-  background-color: #fdfe00;
-}
-.color-snapchat {
-  color: #fdfe00;
 }
 [data-icon]:before,
 [data-icon-after]:before,
