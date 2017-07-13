@@ -621,7 +621,6 @@ textarea {
   border: 1px solid #e7e7e7;
   background-color: #fff;
   line-height: 1.3;
-  -webkit-transition: border-color 0.2s;
   transition: border-color 0.2s;
 }
 input[type='text'].is-invalid,
@@ -1272,7 +1271,6 @@ figure {
   font-weight: bold;
   text-transform: uppercase;
   background-color: #b7b7b7;
-  -webkit-transition: background-color 0.2s ease;
   transition: background-color 0.2s ease;
   color: #4c4d4e;
 }
@@ -1291,7 +1289,6 @@ figure {
   display: inline-block;
   border-radius: 60em;
   background-color: #b7b7b7;
-  -webkit-transition: background-color 0.2s ease;
   transition: background-color 0.2s ease;
   color: #4c4d4e;
 }
@@ -1941,7 +1938,6 @@ figure {
   padding: 0 1.8rem;
   color: #4c4d4e;
   text-align: center;
-  -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
 }
 .navbar ul a:hover {
@@ -2235,20 +2231,10 @@ figure {
   padding-top: 0.3rem;
 }
 .blocklinkskin-communication .teaser-summary {
-  color: #878787;
   background-color: #fff7e2;
-  font-style: italic;
-}
-.blocklinkskin-publishing .teaser-summary {
-  color: #878787;
-  font-style: italic;
 }
 .blocklinkskin-brand.box {
   background-color: #fff7e2;
-}
-.blocklinkskin-brand .teaser-summary {
-  color: #878787;
-  font-style: italic;
 }
 .secondskin-live .teaser-summary {
   color: #cc190f;
@@ -2310,9 +2296,6 @@ figure {
 .skin-lastminute {
   background-color: #cc190f !important;
   box-shadow: inset 0 0 0 1px #fff;
-}
-.skin-lastminute .box-counter {
-  background-color: #fff;
 }
 .skin-lastminute .media:before {
   content: 'dernière minute';
