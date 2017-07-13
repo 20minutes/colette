@@ -4,9 +4,8 @@
 //
 // Note that the `.blocklinkskin-#` class is applied on a content preview selector which must contain a `.teaser` child
 //
-// .blocklinkskin-communication - Teaser summary color & style: italic, tertiary gray & native yellow
-// .blocklinkskin-publishing    - Teaser summary color & style: italic & tertiary gray
-// .blocklinkskin-brand         - block article background color & style: native yellow & italic, tertiary gray
+// .blocklinkskin-communication - Teaser summary background color: native yellow
+// .blocklinkskin-brand         - Block article background color: native yellow
 //
 // Markup: skin.twig
 //
@@ -14,19 +13,8 @@
 .blocklinkskin
     &-communication
         .teaser-summary
-            color $color-tertiary
             background-color $color-native
-            font-style italic
-
-    &-publishing
-        .teaser-summary
-            color $color-tertiary
-            font-style italic
 
     &-brand
         &.box
             background-color $color-native
-
-        .teaser-summary
-            color $color-tertiary
-            font-style italic
