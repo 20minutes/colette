@@ -2,7 +2,7 @@
 //
 // Add a skin over the image of a content block on listing pages, and depending on the skin, modify the teaser text and/or background colors.
 // Note that:
-// - the `.skin-#` class is applied on a content preview selector (which may contain `.media` | `.teaser` | `.box-counter` | `.box-footer` children)
+// - the `.skin-#` class is applied on a content preview selector (which may contain `.media` | `.teaser` | `.box-footer` children)
 // - the skin is applied on a `<figure class="media">` tag,
 // - the image must be placed within a `<p>` or a `<div>` tag for icon skins
 //
@@ -81,9 +81,6 @@
         // overrides .box background
         background-color $color-highlight !important // @stylint ignore
         box-shadow inset 0 0 0 1px $color-white // keep white borders despite of the red background
-
-        .box-counter
-            background-color $color-white
 
         .media
             &:before
