@@ -1,5 +1,5 @@
 # Introducing Colette
-Colette is a css and js starter kit for 20 Minutes web projects.
+Colette is a CSS and JS starter kit for 20 Minutes web projects.
 It provides basic styles and mixins to build responsive layouts,
 based on the 20 Minutes digital identity guidelines.
 
@@ -8,7 +8,7 @@ based on the 20 Minutes digital identity guidelines.
 - basic typography: headings, body text, lists, etc.
 - helpers: colors, borders, icons, etc.
 - grid system: 12-columns based, with customizable breakpoints
-- ready-to-use html/css components: buttons, navbar, socialbar,
+- ready-to-use HTML/CSS components: buttons, navbar, socialbar,
 content teasers, media, and loading animation
 
 ---
@@ -34,7 +34,7 @@ npm install colette --save
 ---
 ## Download
 - See the [`dist/`](https://github.com/20minutes/colette/dist/)
-directory for ready-to-use css files.
+directory for ready-to-use CSS files.
 - If you want to use Colette as a kickstarter for custom stylus/css
 projects, check [`src/`](https://github.com/20minutes/colette/assets/).
 
@@ -69,9 +69,9 @@ gulp.task('css', function () {
 
 ### Partial import
 
-Colette is a collection of stylus features. You can define which styles you want to include into your final css file with stylus import.
+Colette is a collection of stylus features. You can define which styles you want to include into your final CSS file with stylus import.
 
-By default, you include all `colette.styl` and all features are in your css.
+By default, you include all `colette.styl` and all features are in your CSS.
 You can select features needed by copying `colette.styl` content and choose your imports rules.
 
 ```
@@ -88,11 +88,11 @@ You can select features needed by copying `colette.styl` content and choose your
 But can be usefull to:
 * change order of imports,
 * import only needed features,
-* separate your critical css from your global css.
+* separate your critical CSS from your global CSS.
 
-#### Usage example: Handle critical css
+#### Usage example: Handle critical CSS
 
-You need to create a specific stylus file to handle your critical css.
+You need to create a specific stylus file to handle your critical CSS.
 
 ```
 /* my_criticalcss_file.styl */
@@ -136,7 +136,7 @@ You need to create a specific stylus file to handle your critical css.
 /* => will compile to my_criticalcss_file.css */
 ```
 
-and then simply include the compiled css file into your template
+and then simply include the compiled CSS file into your template
 (do not forget the `<style>` tag around your `include`!):
 
 ```twig
