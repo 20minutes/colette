@@ -1,3 +1,3 @@
 Base styles:
-- address html <tags> only
+- address HTML <tags> only
 - no classes nor ids
