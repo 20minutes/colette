@@ -129,7 +129,7 @@
             </div>
             <section id="kssref-homepage" class="co_section-home co_section-depth-2 co_content pl2 pr2">
                 <h1 id="introducing-colette">Introducing Colette</h1>
-<p>Colette is a css and js starter kit for 20 Minutes web projects.
+<p>Colette is a CSS and JS starter kit for 20 Minutes web projects.
 It provides basic styles and mixins to build responsive layouts,
 based on the 20 Minutes digital identity guidelines.</p>
 <hr>
@@ -138,7 +138,7 @@ based on the 20 Minutes digital identity guidelines.</p>
 <li>basic typography: headings, body text, lists, etc.</li>
 <li>helpers: colors, borders, icons, etc.</li>
 <li>grid system: 12-columns based, with customizable breakpoints</li>
-<li>ready-to-use html/css components: buttons, navbar, socialbar,
+<li>ready-to-use HTML/CSS components: buttons, navbar, socialbar,
 content teasers, media, and loading animation</li>
 </ul>
 <hr>
@@ -160,7 +160,7 @@ that allows you to react to the user&#39;s scroll.</li>
 <h2 id="download">Download</h2>
 <ul>
 <li>See the <a href="https://github.com/20minutes/colette/dist/"><code>dist/</code></a>
-directory for ready-to-use css files.</li>
+directory for ready-to-use CSS files.</li>
 <li>If you want to use Colette as a kickstarter for custom stylus/css
 projects, check <a href="https://github.com/20minutes/colette/assets/"><code>src/</code></a>.</li>
 </ul>
@@ -185,8 +185,8 @@ gulp.task(&#39;css&#39;, function () {
 </code></pre>
 <p><code>PATH_TO_STYLUS_IMPORT</code> could be <code>node_modules</code> for example if you use npm.</p>
 <h3 id="partial-import">Partial import</h3>
-<p>Colette is a collection of stylus features. You can define which styles you want to include into your final css file with stylus import.</p>
-<p>By default, you include all <code>colette.styl</code> and all features are in your css.
+<p>Colette is a collection of stylus features. You can define which styles you want to include into your final CSS file with stylus import.</p>
+<p>By default, you include all <code>colette.styl</code> and all features are in your CSS.
 You can select features needed by copying <code>colette.styl</code> content and choose your imports rules.</p>
 <pre><code>/* my_css_file.styl */
 
@@ -200,10 +200,10 @@ You can select features needed by copying <code>colette.styl</code> content and 
 <ul>
 <li>change order of imports,</li>
 <li>import only needed features,</li>
-<li>separate your critical css from your global css.</li>
+<li>separate your critical CSS from your global CSS.</li>
 </ul>
-<h4 id="usage-example-handle-critical-css">Usage example: Handle critical css</h4>
-<p>You need to create a specific stylus file to handle your critical css.</p>
+<h4 id="usage-example-handle-critical-css">Usage example: Handle critical CSS</h4>
+<p>You need to create a specific stylus file to handle your critical CSS.</p>
 <pre><code>/* my_criticalcss_file.styl */
 
 // Your own settings
@@ -243,7 +243,7 @@ You can select features needed by copying <code>colette.styl</code> content and 
 @require &#39;colette/assets/styl/_helpers/_spaces&#39;
 
 /* =&gt; will compile to my_criticalcss_file.css */
-</code></pre><p>and then simply include the compiled css file into your template
+</code></pre><p>and then simply include the compiled CSS file into your template
 (do not forget the <code>&lt;style&gt;</code> tag around your <code>include</code>!):</p>
 <pre><code class="lang-twig">&lt;style&gt;
    {% include &#39;css/my_criticalcss_file.css&#39; %}
