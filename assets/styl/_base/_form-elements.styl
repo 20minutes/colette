@@ -58,9 +58,6 @@ input[type='reset']
     &[disabled]
         cursor default
 
-label
-    font-weight bold
-
 input[type='text']
 input[type='password']
 input[type='email']
@@ -121,8 +118,61 @@ input[type='image']
     border 0
     width auto
 
-// iframe should be block by default
-iframe
-    display block
-    width 100%
 
+// Radio buttons
+//
+// Default styles for radio buttons.
+// Styling method takes a lot of inspiration from Materialize CSS.
+//
+// Markup: form-radiobutton.twig
+//
+// Styleguide: Components.Forms.RadioButtons
+
+// Checkboxes
+//
+// Default styles for checkboxes.
+// Styling method takes a lot of inspiration from Materialize CSS.
+//
+// Markup: form-checkbox.twig
+//
+// Styleguide: Components.Forms.Checkboxes
+input[type='checkbox']
+input[type='radio']
+    position absolute
+    opacity 0
+    pointer-events none
+
+    &:not(:checked) + label
+    &:checked + label
+        display inline-block
+        position relative
+        padding-left 1.5em
+
+        &:after
+        &:before
+            content ''
+            display inline-block
+            position absolute
+            top .25em
+            left 0
+            width .75em
+            height @width
+            border .125em solid $color-tertiary
+
+        &:after
+            background-color $color-default
+            opacity 0
+            transition opacity .2s, border-color .2s
+
+    &:checked + label
+        &:after
+            border-color $color-base
+            background-color $color-base
+            opacity 1
+
+input[type='radio']
+    &:not(:checked) + label
+    &:checked + label
+        &:after
+        &:before
+            border-radius 20em // high value to make it round
