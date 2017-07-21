@@ -1,0 +1,31 @@
+{
+    "textfields": [{
+        "id": "textWithPlaceholder",
+        "type": "text",
+        "label": "Text field with a placeholder",
+        "placeholder": "Placeholder text",
+        "attrs": "",
+        "value": ""
+    },{
+        "id": "textReadOnly",
+        "type": "text",
+        "label": "Read only text field",
+        "placeholder": "",
+        "attrs": "readonly",
+        "value": "This is a 'read only' text field"
+    },{
+        "id": "textDisabled",
+        "type": "text",
+        "label": "Disabled text field",
+        "placeholder": "",
+        "attrs": "disabled",
+        "value": "This text field is disabled"
+    },{
+        "id": "textPassword",
+        "type": "password",
+        "label": "Password text field",
+        "placeholder": "",
+        "attrs": "",
+        "value": "password"
+    }]
+}

@@ -1,0 +1,38 @@
+{
+    "textfields": [{
+        "id": "textURL",
+        "type": "url",
+        "label": "URL input field",
+        "placeholder": "",
+        "attrs": "",
+        "value": "http://www.url.com"
+    },{
+        "id": "textTime",
+        "type": "time",
+        "label": "Time input field",
+        "placeholder": "",
+        "attrs": "",
+        "value": ""
+    },{
+        "id": "textDate",
+        "type": "date",
+        "label": "Date input field",
+        "placeholder": "",
+        "attrs": "",
+        "value": ""
+    },{
+        "id": "Number",
+        "type": "number",
+        "label": "Number input",
+        "placeholder": "",
+        "attrs": "",
+        "value": ""
+    },{
+        "id": "Search",
+        "type": "search",
+        "label": "Search field",
+        "placeholder": "",
+        "attrs": "",
+        "value": ""
+    }]
+}
