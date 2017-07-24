@@ -56,7 +56,7 @@ button
 input[type='submit']
 input[type='button']
 input[type='reset']
-    cursor pointer /* cursor: pointer to every clickable elements */
+    cursor pointer // cursor: pointer to every clickable elements
 
     &[disabled]
         cursor default
@@ -189,8 +189,7 @@ input[type='radio']
     opacity 0
     pointer-events none
 
-    &:not(:checked) + label
-    &:checked + label
+    + label
         display inline-block
         position relative
         padding-left 1.5em
@@ -217,9 +216,11 @@ input[type='radio']
             background-color $color-base
             opacity 1
 
+    &:focus + label
+        outline thin dotted
+
 input[type='radio']
-    &:not(:checked) + label
-    &:checked + label
+    + label
         &:after
         &:before
             border-radius 20em // high value to make it round
