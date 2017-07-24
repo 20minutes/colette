@@ -1,4 +1,4 @@
-// Forms
+// Form elements
 //
 // Colette comes with basic CSS to style forms' elements.
 //
@@ -9,6 +9,19 @@ form
 
     p
         margin 0
+
+    // Form attributes
+    //
+    // Styleguide: Components.FormsAttributes
+
+    // Busy status
+    //
+    // You can apply an animated 'waiting' status on a form (after submitting for example):
+    // if you add the `aria-busy="true"` to the `<form>` tag, you will get a **Loading** animation over it.
+    //
+    // Markup: form-ariabusy.twig
+    //
+    // Styleguide: Components.FormsAttributes.AriaBusy
 
     &[aria-busy=true]
         {loading}
