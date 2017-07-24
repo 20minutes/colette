@@ -1,0 +1,7 @@
+<form action="#">
+    <p>
+        <input{% if 'link' not in modifier_class %} class="{{ modifier_class|replace({'help': 'field' }) }}"{% endif %} type="text" />
+    </p>
+    <p class="form-help {{ modifier_class }}" role="alert">Help text</p>
+</form>
+

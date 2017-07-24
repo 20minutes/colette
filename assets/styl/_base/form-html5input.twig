@@ -1,6 +1,6 @@
 <form action="#">
     {% for textfield in textfields %}
-        <div class="form-field-widget pb2">
+        <div class="form-field pb2">
             <p>
                 <label for="{{ textfield.id }}">{{ textfield.label }}</label>
                 <input id="{{ textfield.id }}" type="{{ textfield.type }}"

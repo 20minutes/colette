@@ -1,19 +1,25 @@
-// Forms widgets
+// Form components
 //
-// Colette provides styles for:
-// - Fields descriptions (with valid / invalid color indication)
-// - Valid / Invalid fields
-// - Also a special style for a flex parent with 3 children (label, infolink, input 100%)
+// Special form components.
 //
-// Note: you can also use Alerts components to handle success or errors messages.
-//
-// Weight: 2
-//
-// Markup: form.twig
-//
-// Styleguide: Components.Forms.Form
+// Styleguide: Components.FormComponents
+
 .form
-    &-field-widget
+    // Form field
+    //
+    // **Form field** component provides styles for:
+    // - Field `label`
+    // - Valid / invalid fields status
+    //
+    // .form-field-success      - valid field format
+    // .form-field-error        - invalid field format
+    //
+    // Weight: 1
+    //
+    // Markup: form-field.twig
+    //
+    // Styleguide: Components.FormComponents.FormField
+    &-field
         // display a widget for form element that must be filled with text content
         // e.g. input[text|password|email|url]
 
@@ -21,35 +27,29 @@
             display block
             font-weight bold
 
-
         ul
             margin 0
 
-        // special style for a flex parent
-        &-flex
-            display flex
-            flex-wrap wrap
+        &-error
+            border-color $color-error!important // @stylint ignore: must override default form elements border-color
 
-            .form-infolink
-                padding-top .2em
+        &-success
+            border-color $color-success!important // @stylint ignore: must override default form elements border-color
 
-            label
-                flex-grow 1
-                flex-basis auto
-
-            input
-                width 100%
-
-    &-field-error
-        border-color $color-error!important // @stylint ignore: must override default form elements border-color
-
-    &-field-success
-        border-color $color-success!important // @stylint ignore: must override default form elements border-color
-
-    &-infolink
-        color $color-links
-        font-size .85em
-
+    // Form help
+    //
+    // **Form help** component provides styles for fields descriptions, with valid / invalid color indications.
+    // It can be used in combination with **Form field** to highlight the valid / invalid status of their related fields.
+    // <br />Note that you can also use **Alerts** component to handle success or error messages.
+    //
+    // .form-help-success      - help text for valid field format
+    // .form-help-error        - help text for invalid field format
+    //
+    // Weight: 2
+    //
+    // Markup: form-help.twig
+    //
+    // Styleguide: Components.FormComponents.FormHelp
     &-help
         padding-top .3em
         color $color-tertiary
@@ -62,3 +62,17 @@
 
         &-success
             color $color-success
+
+    // Form contextual link
+    //
+    // Provides style for a contextual link related to a specific piece of a form.
+    //
+    // Weight: 3
+    //
+    // Markup: form-link.twig
+    //
+    // Styleguide: Components.FormComponents.FormLink
+    &-link
+        padding-top .15em
+        color $color-links
+        font-size .85em
