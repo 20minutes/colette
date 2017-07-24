@@ -1,23 +1,27 @@
-// Forms
+// Form elements
 //
-// Colette comes with basic CSS to style forms.
+// Colette comes with basic CSS to style forms' elements.
 //
 // Styleguide: Components.Forms
 
-// Forms elements
-//
-// Default styles for forms elements.
-//
-// Weight: 1
-//
-// Markup: form-elements.twig
-//
-// Styleguide: Components.Forms.FormElements
 form
     position relative
 
     p
         margin 0
+
+    // Form attributes
+    //
+    // Styleguide: Components.FormsAttributes
+
+    // Busy status
+    //
+    // You can apply an animated 'waiting' status on a form (after submitting for example):
+    // if you add the `aria-busy="true"` to the `<form>` tag, you will get a **Loading** animation over it.
+    //
+    // Markup: form-ariabusy.twig
+    //
+    // Styleguide: Components.FormsAttributes.AriaBusy
 
     &[aria-busy=true]
         {loading}
@@ -47,20 +51,36 @@ textarea
     font-family inherit
     font-size 1em
 
-/* Cursor:pointer to every clickable elements */
 label
 button
 input[type='submit']
 input[type='button']
 input[type='reset']
-    cursor pointer
+    cursor pointer // cursor: pointer to every clickable elements
 
     &[disabled]
         cursor default
 
-label
-    font-weight bold
+// Text inputs
+//
+// Default styles for text fields.
+//
+// Markup: form-textinput.twig
+//
+// Weight: 1
+//
+// Styleguide: Components.Forms.TextInputs
 
+// HTML5 inputs
+//
+// Colette styles also apply to the following HTML5 input types.
+// <br/>Fields display and interaction may vary according to browsers supports.
+//
+// Markup: form-html5input.twig
+//
+// Weight: 2
+//
+// Styleguide: Components.Forms.HTML5Inputs
 input[type='text']
 input[type='password']
 input[type='email']
@@ -95,6 +115,16 @@ textarea
 input[type='search']
     appearance none // fix display on Safari & FF
 
+
+// Select
+//
+// Default styles for `<select>` field.
+//
+// Markup: form-select.twig
+//
+// Weight: 3
+//
+// Styleguide: Components.Forms.Select
 select
     padding-right 2em
     background-image url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"100\" fill=\"#000\"><polygon points=\"0, 0 100, 0 50, 50\" /></svg>')
@@ -103,6 +133,16 @@ select
     background-size .5em .5em
     -webkit-appearance none // the svg background arrow doesn't display on FF, so we only target -webkit
 
+
+// Textarea
+//
+// Default styles for `<textarea>` field.
+//
+// Markup: form-textarea.twig
+//
+// Weight: 4
+//
+// Styleguide: Components.Forms.Textarea
 textarea
     vertical-align top
     border 1px solid $color-base-lighten
@@ -121,8 +161,66 @@ input[type='image']
     border 0
     width auto
 
-// iframe should be block by default
-iframe
-    display block
-    width 100%
 
+// Radio buttons
+//
+// Default styles for radio buttons.
+// Styling method takes a lot of inspiration from Materialize CSS.
+//
+// Markup: form-radiobutton.twig
+//
+// Weight: 5
+//
+// Styleguide: Components.Forms.RadioButtons
+
+// Checkboxes
+//
+// Default styles for checkboxes.
+// Styling method takes a lot of inspiration from Materialize CSS.
+//
+// Markup: form-checkbox.twig
+//
+// Weight: 6
+//
+// Styleguide: Components.Forms.Checkboxes
+input[type='checkbox']
+input[type='radio']
+    position absolute
+    opacity 0
+    pointer-events none
+
+    + label
+        display inline-block
+        position relative
+        padding-left 1.5em
+
+        &:after
+        &:before
+            content ''
+            display inline-block
+            position absolute
+            top .25em
+            left 0
+            width .75em
+            height @width
+            border .125em solid $color-tertiary
+
+        &:after
+            background-color $color-default
+            opacity 0
+            transition opacity .2s, border-color .2s
+
+    &:checked + label
+        &:after
+            border-color $color-base
+            background-color $color-base
+            opacity 1
+
+    &:focus + label
+        outline thin dotted
+
+input[type='radio']
+    + label
+        &:after
+        &:before
+            border-radius 20em // high value to make it round

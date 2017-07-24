@@ -1725,15 +1725,15 @@ All social colors are available to style the button according to its context.</p
             
             
         </section>
-                                            <section id="kssref-components-forms" class="co_section-depth-2  co_content pl2 pr2">
+                                            <section id="kssref-components-formcomponents" class="co_section-depth-2  co_content pl2 pr2">
 
 
             
                         <h2 class="co_section-h2 ">
                 
-                                    <a href="#kssref-components-forms">
+                                    <a href="#kssref-components-formcomponents">
                                     <strong class="co_section-ref">3.5</strong>
-                    Forms
+                    Form components
                                     </a>
                             </h2>
             
@@ -1745,7 +1745,7 @@ All social colors are available to style the button according to its context.</p
                             <div class="co_subsection clearfix">
                     <p class="co_subsection-title col-md-3">Description</p>
                     <div class="co_subsection-content col-md-9">
-                        <p>Colette comes with basic CSS to style forms.</p>
+                        <p>Special form components.</p>
 
                     </div>
                 </div>
@@ -1763,13 +1763,13 @@ All social colors are available to style the button according to its context.</p
             
             
         </section>
-                                            <section id="kssref-components-forms-required" class="co_section-depth-3  co_content pl2 pr2">
+                                            <section id="kssref-components-formcomponents-required" class="co_section-depth-3  co_content pl2 pr2">
 
 
             
                         <h3 class="co_section-h3 ">
                 
-                                    <a href="#kssref-components-forms-required">
+                                    <a href="#kssref-components-formcomponents-required">
                                     <strong class="co_section-ref">3.5.1</strong>
                     Required Marker
                                     </a>
@@ -1780,6 +1780,13 @@ All social colors are available to style the button according to its context.</p
             
 
             
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Provide styles for a required field marker, most often associated with the label.</p>
+
+                    </div>
+                </div>
             
 
             
@@ -1796,7 +1803,7 @@ All social colors are available to style the button according to its context.</p
                         
                     </p>
                     <div class="co_subsection-demo col-md-9 clearfix mb1">
-                        <abbr class="required" title="(ce champ est obligatoire)">*</abbr>
+                        <label>This is the label of a require field <abbr class="required" title="(ce champ est obligatoire)">*</abbr></label>
 
                     </div>
                 </div>
@@ -1808,7 +1815,7 @@ All social colors are available to style the button according to its context.</p
                         <p class="co_subsection-title col-md-3">Markup</p>
                         <div class="co_subsection-content co_markup col-md-9">
                             <p class="co_expand"><span class="btn">click to expand</span></p>
-                            <pre class="pa1 prettyprint linenums lang-html"><code data-language="html">&lt;abbr class=&quot;required&quot; title=&quot;(ce champ est obligatoire)&quot;&gt;*&lt;/abbr&gt;
+                            <pre class="pa1 prettyprint linenums lang-html"><code data-language="html">&lt;label&gt;This is the label of a require field &lt;abbr class=&quot;required&quot; title=&quot;(ce champ est obligatoire)&quot;&gt;*&lt;/abbr&gt;&lt;/label&gt;
 </code></pre>
                             <p class="co_markup-action font-secondary align-right"><span class="collapse pr1">Collaspe</span><span>Open code in new tab</span></p>
                         </div>
@@ -1818,15 +1825,15 @@ All social colors are available to style the button according to its context.</p
             
             
         </section>
-                                            <section id="kssref-components-forms-formelements" class="co_section-depth-3  co_content pl2 pr2">
+                                            <section id="kssref-components-formcomponents-formfield" class="co_section-depth-3  co_content pl2 pr2">
 
 
             
                         <h3 class="co_section-h3 ">
                 
-                                    <a href="#kssref-components-forms-formelements">
+                                    <a href="#kssref-components-formcomponents-formfield">
                                     <strong class="co_section-ref">3.5.2</strong>
-                    Forms elements
+                    Form field
                                     </a>
                             </h3>
             
@@ -1838,7 +1845,229 @@ All social colors are available to style the button according to its context.</p
                             <div class="co_subsection clearfix">
                     <p class="co_subsection-title col-md-3">Description</p>
                     <div class="co_subsection-content col-md-9">
-                        <p>Default styles for forms elements.</p>
+                        <p><strong>Form field</strong> component provides styles for:</p>
+<ul>
+<li>Field <code>label</code></li>
+<li>Valid / invalid fields status</li>
+</ul>
+
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+                            
+                <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">
+                                                    Default styling
+                        
+                    </p>
+                    <div class="co_subsection-demo col-md-9 clearfix mb1">
+                        <form action="#">
+    <div class="form-field">
+        <p>
+            <label for="">Label</label>
+            <input class="" type="text" id="" />
+        </p>
+    </div>
+</form>
+
+
+                    </div>
+                </div>
+
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Modifiers</p>
+                        <div class="co_subsection-content co_modifier col-md-9 clearfix mb2">
+                                                            <p><code>.form-field-success</code></p>
+                                <p>valid field format</p>
+                                <div class="co_subsection-demo clearfix mb3">
+                                    <form action="#">
+    <div class="form-field">
+        <p>
+            <label for="form-field-success">Label</label>
+            <input class="form-field-success" type="text" id="form-field-success" />
+        </p>
+    </div>
+</form>
+
+
+                                </div>
+                                                            <p><code>.form-field-error</code></p>
+                                <p>invalid field format</p>
+                                <div class="co_subsection-demo clearfix mb3">
+                                    <form action="#">
+    <div class="form-field">
+        <p>
+            <label for="form-field-error">Label</label>
+            <input class="form-field-error" type="text" id="form-field-error" />
+        </p>
+    </div>
+</form>
+
+
+                                </div>
+                                                    </div>
+                    </div>
+
+                
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Markup</p>
+                        <div class="co_subsection-content co_markup col-md-9">
+                            <p class="co_expand"><span class="btn">click to expand</span></p>
+                            <pre class="pa1 prettyprint linenums lang-html"><code data-language="html">&lt;form action=&quot;#&quot;&gt;
+    &lt;div class=&quot;form-field&quot;&gt;
+        &lt;p&gt;
+            &lt;label for=&quot;{{ modifier_class|replace({&#039;.&#039;: &#039;&#039;}) }}&quot;&gt;Label&lt;/label&gt;
+            &lt;input class=&quot;{{ modifier_class }}&quot; type=&quot;text&quot; id=&quot;{{ modifier_class|replace({&#039;.&#039;: &#039;&#039;}) }}&quot; /&gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+
+</code></pre>
+                            <p class="co_markup-action font-secondary align-right"><span class="collapse pr1">Collaspe</span><span>Open code in new tab</span></p>
+                        </div>
+                    </div>
+                            
+
+            
+            
+        </section>
+                                            <section id="kssref-components-formcomponents-formhelp" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3 ">
+                
+                                    <a href="#kssref-components-formcomponents-formhelp">
+                                    <strong class="co_section-ref">3.5.3</strong>
+                    Form help
+                                    </a>
+                            </h3>
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p><strong>Form help</strong> component provides styles for fields descriptions, with valid / invalid color indications.
+It can be used in combination with <strong>Form field</strong> to highlight the valid / invalid status of their related fields.
+<br />Note that you can also use <strong>Alerts</strong> component to handle success or error messages.</p>
+
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+                            
+                <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">
+                                                    Default styling
+                        
+                    </p>
+                    <div class="co_subsection-demo col-md-9 clearfix mb1">
+                        <form action="#">
+    <p>
+        <input class="" type="text" />
+    </p>
+    <p class="form-help " role="alert">Help text</p>
+</form>
+
+
+                    </div>
+                </div>
+
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Modifiers</p>
+                        <div class="co_subsection-content co_modifier col-md-9 clearfix mb2">
+                                                            <p><code>.form-help-success</code></p>
+                                <p>help text for valid field format</p>
+                                <div class="co_subsection-demo clearfix mb3">
+                                    <form action="#">
+    <p>
+        <input class="form-field-success" type="text" />
+    </p>
+    <p class="form-help form-help-success" role="alert">Help text</p>
+</form>
+
+
+                                </div>
+                                                            <p><code>.form-help-error</code></p>
+                                <p>help text for invalid field format</p>
+                                <div class="co_subsection-demo clearfix mb3">
+                                    <form action="#">
+    <p>
+        <input class="form-field-error" type="text" />
+    </p>
+    <p class="form-help form-help-error" role="alert">Help text</p>
+</form>
+
+
+                                </div>
+                                                    </div>
+                    </div>
+
+                
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Markup</p>
+                        <div class="co_subsection-content co_markup col-md-9">
+                            <p class="co_expand"><span class="btn">click to expand</span></p>
+                            <pre class="pa1 prettyprint linenums lang-html"><code data-language="html">&lt;form action=&quot;#&quot;&gt;
+    &lt;p&gt;
+        &lt;input{% if &#039;link&#039; not in modifier_class %} class=&quot;{{ modifier_class|replace({&#039;help&#039;: &#039;field&#039; }) }}&quot;{% endif %} type=&quot;text&quot; /&gt;
+    &lt;/p&gt;
+    &lt;p class=&quot;form-help {{ modifier_class }}&quot; role=&quot;alert&quot;&gt;Help text&lt;/p&gt;
+&lt;/form&gt;
+
+</code></pre>
+                            <p class="co_markup-action font-secondary align-right"><span class="collapse pr1">Collaspe</span><span>Open code in new tab</span></p>
+                        </div>
+                    </div>
+                            
+
+            
+            
+        </section>
+                                            <section id="kssref-components-formcomponents-formlink" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3 ">
+                
+                                    <a href="#kssref-components-formcomponents-formlink">
+                                    <strong class="co_section-ref">3.5.4</strong>
+                    Form contextual link
+                                    </a>
+                            </h3>
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Provides style for a contextual link related to a specific piece of a form.</p>
 
                     </div>
                 </div>
@@ -1859,96 +2088,11 @@ All social colors are available to style the button according to its context.</p
                     </p>
                     <div class="co_subsection-demo col-md-9 clearfix mb1">
                         <form action="#">
-    <div class="form-field-widget pb2">
+    <div class="form-field">
         <p>
-            <label for="text_1">Text</label>
-            <input type="text" id="text_11" placeholder="placeholder" />
-        </p>
-    </div>
-    <div class="form-field-widget pb2">
-        <p>
-            <label for="text_2">Text readonly</label>
-            <input type="text" id="text_2" readonly value="readonly" />
-        </p>
-    </div>
-    <div class="form-field-widget pb2">
-        <p>
-            <label for="text_3">Text disabled</label>
-            <input type="text" id="text_3" disabled value="disabled" />
-        </p>
-    </div>
-    <div class="form-field-widget pb2">
-        <p>
-            <label for="email">Email</label>
-            <input type="email" id="email" value="me@me.com" />
-        </p>
-    </div>
-    <div class="form-field-widget pb2">
-        <p>
-            <label for="password">Password</label>
-            <input type="password" id="password" value="password" />
-        </p>
-    </div>
-    <div class="form-field-widget pb2">
-        <p>
-            <label for="url">URL</label>
-            <input type="url" id="url" value="url.com" />
-        </p>
-    </div>
-    <div class="form-field-widget pb2">
-        <p>
-            <label for="time">Time</label>
-            <input type="time" id="time" />
-        </p>
-    </div>
-    <div class="form-field-widget pb2">
-        <p>
-            <label for="date">Date</label>
-            <input type="date" id="date" />
-        </p>
-    </div>
-    <div class="form-field-widget pb2">
-        <p>
-            <label for="tel">Tel</label>
-            <input type="tel" id="tel" />
-        </p>
-    </div>
-    <div class="form-field-widget pb2">
-        <p>
-            <label for="number">Number</label>
-            <input type="number" id="number" />
-        </p>
-    </div>
-    <div class="form-field-widget pb2">
-        <p>
-            <label for="search">Search</label>
-            <input type="search" id="search" />
-        </p>
-    </div>
-    <div class="form-field-widget pb2">
-        <p>
-            <label for="select">Select</label>
-            <select id="select">
-                <option>option 1</option>
-                <option>option 2</option>
-                <option>option 3</option>
-            </select>
-        </p>
-    </div>
-    <div class="form-field-widget pb2">
-        <p>
-            <label for="textarea">Textarea</label>
-            <textarea id="textarea" row="4" cols="50" />default value</textarea>
-        </p>
-    </div>
-</form>
-
-<p>Busy/loading form:</p>
-<form action="#" aria-busy="true">
-    <div class="form-field-widget pb2">
-        <p>
-            <label for="textarea">Textarea</label>
-            <textarea id="textarea" disable="disabled" row="4" cols="50" />default value</textarea>
+            <label for="textfield">Label</label>
+            <input type="text" id="textfield" />
+            <a href="#" class="form-link">Click here for more option</a>
         </p>
     </div>
 </form>
@@ -1964,96 +2108,11 @@ All social colors are available to style the button according to its context.</p
                         <div class="co_subsection-content co_markup col-md-9">
                             <p class="co_expand"><span class="btn">click to expand</span></p>
                             <pre class="pa1 prettyprint linenums lang-html"><code data-language="html">&lt;form action=&quot;#&quot;&gt;
-    &lt;div class=&quot;form-field-widget pb2&quot;&gt;
+    &lt;div class=&quot;form-field&quot;&gt;
         &lt;p&gt;
-            &lt;label for=&quot;text_1&quot;&gt;Text&lt;/label&gt;
-            &lt;input type=&quot;text&quot; id=&quot;text_11&quot; placeholder=&quot;placeholder&quot; /&gt;
-        &lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;form-field-widget pb2&quot;&gt;
-        &lt;p&gt;
-            &lt;label for=&quot;text_2&quot;&gt;Text readonly&lt;/label&gt;
-            &lt;input type=&quot;text&quot; id=&quot;text_2&quot; readonly value=&quot;readonly&quot; /&gt;
-        &lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;form-field-widget pb2&quot;&gt;
-        &lt;p&gt;
-            &lt;label for=&quot;text_3&quot;&gt;Text disabled&lt;/label&gt;
-            &lt;input type=&quot;text&quot; id=&quot;text_3&quot; disabled value=&quot;disabled&quot; /&gt;
-        &lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;form-field-widget pb2&quot;&gt;
-        &lt;p&gt;
-            &lt;label for=&quot;email&quot;&gt;Email&lt;/label&gt;
-            &lt;input type=&quot;email&quot; id=&quot;email&quot; value=&quot;me@me.com&quot; /&gt;
-        &lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;form-field-widget pb2&quot;&gt;
-        &lt;p&gt;
-            &lt;label for=&quot;password&quot;&gt;Password&lt;/label&gt;
-            &lt;input type=&quot;password&quot; id=&quot;password&quot; value=&quot;password&quot; /&gt;
-        &lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;form-field-widget pb2&quot;&gt;
-        &lt;p&gt;
-            &lt;label for=&quot;url&quot;&gt;URL&lt;/label&gt;
-            &lt;input type=&quot;url&quot; id=&quot;url&quot; value=&quot;url.com&quot; /&gt;
-        &lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;form-field-widget pb2&quot;&gt;
-        &lt;p&gt;
-            &lt;label for=&quot;time&quot;&gt;Time&lt;/label&gt;
-            &lt;input type=&quot;time&quot; id=&quot;time&quot; /&gt;
-        &lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;form-field-widget pb2&quot;&gt;
-        &lt;p&gt;
-            &lt;label for=&quot;date&quot;&gt;Date&lt;/label&gt;
-            &lt;input type=&quot;date&quot; id=&quot;date&quot; /&gt;
-        &lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;form-field-widget pb2&quot;&gt;
-        &lt;p&gt;
-            &lt;label for=&quot;tel&quot;&gt;Tel&lt;/label&gt;
-            &lt;input type=&quot;tel&quot; id=&quot;tel&quot; /&gt;
-        &lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;form-field-widget pb2&quot;&gt;
-        &lt;p&gt;
-            &lt;label for=&quot;number&quot;&gt;Number&lt;/label&gt;
-            &lt;input type=&quot;number&quot; id=&quot;number&quot; /&gt;
-        &lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;form-field-widget pb2&quot;&gt;
-        &lt;p&gt;
-            &lt;label for=&quot;search&quot;&gt;Search&lt;/label&gt;
-            &lt;input type=&quot;search&quot; id=&quot;search&quot; /&gt;
-        &lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;form-field-widget pb2&quot;&gt;
-        &lt;p&gt;
-            &lt;label for=&quot;select&quot;&gt;Select&lt;/label&gt;
-            &lt;select id=&quot;select&quot;&gt;
-                &lt;option&gt;option 1&lt;/option&gt;
-                &lt;option&gt;option 2&lt;/option&gt;
-                &lt;option&gt;option 3&lt;/option&gt;
-            &lt;/select&gt;
-        &lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;form-field-widget pb2&quot;&gt;
-        &lt;p&gt;
-            &lt;label for=&quot;textarea&quot;&gt;Textarea&lt;/label&gt;
-            &lt;textarea id=&quot;textarea&quot; row=&quot;4&quot; cols=&quot;50&quot; /&gt;default value&lt;/textarea&gt;
-        &lt;/p&gt;
-    &lt;/div&gt;
-&lt;/form&gt;
-
-&lt;p&gt;Busy/loading form:&lt;/p&gt;
-&lt;form action=&quot;#&quot; aria-busy=&quot;true&quot;&gt;
-    &lt;div class=&quot;form-field-widget pb2&quot;&gt;
-        &lt;p&gt;
-            &lt;label for=&quot;textarea&quot;&gt;Textarea&lt;/label&gt;
-            &lt;textarea id=&quot;textarea&quot; disable=&quot;disabled&quot; row=&quot;4&quot; cols=&quot;50&quot; /&gt;default value&lt;/textarea&gt;
+            &lt;label for=&quot;textfield&quot;&gt;Label&lt;/label&gt;
+            &lt;input type=&quot;text&quot; id=&quot;textfield&quot; /&gt;
+            &lt;a href=&quot;#&quot; class=&quot;form-link&quot;&gt;Click here for more option&lt;/a&gt;
         &lt;/p&gt;
     &lt;/div&gt;
 &lt;/form&gt;
@@ -2066,149 +2125,14 @@ All social colors are available to style the button according to its context.</p
             
             
         </section>
-                                            <section id="kssref-components-forms-form" class="co_section-depth-3  co_content pl2 pr2">
+                                            <section id="kssref-components-formcomponents-formsinglerow" class="co_section-depth-3  co_content pl2 pr2">
 
 
             
                         <h3 class="co_section-h3 ">
                 
-                                    <a href="#kssref-components-forms-form">
-                                    <strong class="co_section-ref">3.5.3</strong>
-                    Forms widgets
-                                    </a>
-                            </h3>
-            
-
-            
-            
-
-            
-                            <div class="co_subsection clearfix">
-                    <p class="co_subsection-title col-md-3">Description</p>
-                    <div class="co_subsection-content col-md-9">
-                        <p>Colette provides styles for:</p>
-<ul>
-<li>Fields descriptions (with valid / invalid color indication)</li>
-<li>Valid / Invalid fields</li>
-<li>Also a special style for a flex parent with 3 children (label, infolink, input 100%)</li>
-</ul>
-<p>Note: you can also use Alerts components to handle success or errors messages.</p>
-
-                    </div>
-                </div>
-            
-
-            
-            
-
-            
-            
-
-            
-                            
-                <div class="co_subsection clearfix">
-                    <p class="co_subsection-title col-md-3">
-                                                    Example
-                        
-                    </p>
-                    <div class="co_subsection-demo col-md-9 clearfix mb1">
-                        <form xmlns="http://www.w3.org/1999/html">
-    <div class="clearfix">
-        <div class="form-field-widget col-md-4 pb2">
-            <p>
-                <label for="text_11">Text</label>
-                <input type="text" id="text_11" aria-describedby="text_11_desc" />
-            </p>
-            <p id="text_11_desc" class="form-help">Field description/help text</p>
-        </div>
-        <div class="form-field-widget col-md-4 pb2">
-            <p>
-                <label for="text_12">Required text <abbr class="required" title="(ce champ est obligatoire)">*</abbr>
-</label>
-                <input class="form-field-error" type="text" id="text_12" required aria-describedby="text_12_desc" />
-            </p>
-            <ul>
-                <li id="text_12_desc" class="form-help form-help-error" role="alert">Invalid format</li>
-                <li id="text_12_desc" class="form-help form-help-error" role="alert">This field is required</li>
-            </ul>
-        </div>
-        <div class="form-field-widget col-md-4 pb2">
-            <p>
-                <label for="text_13">Text</label>
-                <input class="form-field-success" type="text" id="text_13" value="lorem ipsum" aria-describedby="text_13_desc" />
-            </p>
-            <p id="text_13_desc" class="form-help form-help-success">This field is valid</p>
-        </div>
-        <div class="form-field-widget form-field-widget-flex col-md-12">
-            <label>Flex field with info link</label>
-            <a class="form-infolink" href="#">Info link lorem ipsum dolor sit amet</a>
-            <input type="text" required="required">
-        </div>
-    </div>
-</form>
-
-
-                    </div>
-                </div>
-
-                
-                
-                
-                                    <div class="co_subsection clearfix">
-                        <p class="co_subsection-title col-md-3">Markup</p>
-                        <div class="co_subsection-content co_markup col-md-9">
-                            <p class="co_expand"><span class="btn">click to expand</span></p>
-                            <pre class="pa1 prettyprint linenums lang-html"><code data-language="html">&lt;form xmlns=&quot;http://www.w3.org/1999/html&quot;&gt;
-    &lt;div class=&quot;clearfix&quot;&gt;
-        &lt;div class=&quot;form-field-widget col-md-4 pb2&quot;&gt;
-            &lt;p&gt;
-                &lt;label for=&quot;text_11&quot;&gt;Text&lt;/label&gt;
-                &lt;input type=&quot;text&quot; id=&quot;text_11&quot; aria-describedby=&quot;text_11_desc&quot; /&gt;
-            &lt;/p&gt;
-            &lt;p id=&quot;text_11_desc&quot; class=&quot;form-help&quot;&gt;Field description/help text&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;form-field-widget col-md-4 pb2&quot;&gt;
-            &lt;p&gt;
-                &lt;label for=&quot;text_12&quot;&gt;Required text {% include &#039;required.twig&#039; %}&lt;/label&gt;
-                &lt;input class=&quot;form-field-error&quot; type=&quot;text&quot; id=&quot;text_12&quot; required aria-describedby=&quot;text_12_desc&quot; /&gt;
-            &lt;/p&gt;
-            &lt;ul&gt;
-                &lt;li id=&quot;text_12_desc&quot; class=&quot;form-help form-help-error&quot; role=&quot;alert&quot;&gt;Invalid format&lt;/li&gt;
-                &lt;li id=&quot;text_12_desc&quot; class=&quot;form-help form-help-error&quot; role=&quot;alert&quot;&gt;This field is required&lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;form-field-widget col-md-4 pb2&quot;&gt;
-            &lt;p&gt;
-                &lt;label for=&quot;text_13&quot;&gt;Text&lt;/label&gt;
-                &lt;input class=&quot;form-field-success&quot; type=&quot;text&quot; id=&quot;text_13&quot; value=&quot;lorem ipsum&quot; aria-describedby=&quot;text_13_desc&quot; /&gt;
-            &lt;/p&gt;
-            &lt;p id=&quot;text_13_desc&quot; class=&quot;form-help form-help-success&quot;&gt;This field is valid&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;form-field-widget form-field-widget-flex col-md-12&quot;&gt;
-            &lt;label&gt;Flex field with info link&lt;/label&gt;
-            &lt;a class=&quot;form-infolink&quot; href=&quot;#&quot;&gt;Info link lorem ipsum dolor sit amet&lt;/a&gt;
-            &lt;input type=&quot;text&quot; required=&quot;required&quot;&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/form&gt;
-
-</code></pre>
-                            <p class="co_markup-action font-secondary align-right"><span class="collapse pr1">Collaspe</span><span>Open code in new tab</span></p>
-                        </div>
-                    </div>
-                            
-
-            
-            
-        </section>
-                                            <section id="kssref-components-forms-formsinglerow" class="co_section-depth-3  co_content pl2 pr2">
-
-
-            
-                        <h3 class="co_section-h3 ">
-                
-                                    <a href="#kssref-components-forms-formsinglerow">
-                                    <strong class="co_section-ref">3.5.4</strong>
+                                    <a href="#kssref-components-formcomponents-formsinglerow">
+                                    <strong class="co_section-ref">3.5.5</strong>
                     Form single row
                                     </a>
                             </h3>
@@ -2375,6 +2299,706 @@ All social colors are available to style the button according to its context.</p
             
             
         </section>
+                                            <section id="kssref-components-forms" class="co_section-depth-2  co_content pl2 pr2">
+
+
+            
+                        <h2 class="co_section-h2 ">
+                
+                                    <a href="#kssref-components-forms">
+                                    <strong class="co_section-ref">3.6</strong>
+                    Form elements
+                                    </a>
+                            </h2>
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Colette comes with basic CSS to style forms&#39; elements.</p>
+
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+        </section>
+                                            <section id="kssref-components-forms-textinputs" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3 ">
+                
+                                    <a href="#kssref-components-forms-textinputs">
+                                    <strong class="co_section-ref">3.6.1</strong>
+                    Text inputs
+                                    </a>
+                            </h3>
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Default styles for text fields.</p>
+
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+                            
+                <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">
+                                                    Example
+                        
+                    </p>
+                    <div class="co_subsection-demo col-md-9 clearfix mb1">
+                        <form action="#">
+            <div class="form-field pb2">
+            <p>
+                <label for="textWithPlaceholder">Text field with a placeholder</label>
+                <input id="textWithPlaceholder" type="text"
+                                        placeholder="Placeholder text"                                    />
+            </p>
+        </div>
+            <div class="form-field pb2">
+            <p>
+                <label for="textReadOnly">Read only text field</label>
+                <input id="textReadOnly" type="text"
+                    value="This is a 'read only' text field"                                        readonly                />
+            </p>
+        </div>
+            <div class="form-field pb2">
+            <p>
+                <label for="textDisabled">Disabled text field</label>
+                <input id="textDisabled" type="text"
+                    value="This text field is disabled"                                        disabled                />
+            </p>
+        </div>
+            <div class="form-field pb2">
+            <p>
+                <label for="textPassword">Password text field</label>
+                <input id="textPassword" type="password"
+                    value="password"                                                        />
+            </p>
+        </div>
+    </form>
+
+                    </div>
+                </div>
+
+                
+                
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Markup</p>
+                        <div class="co_subsection-content co_markup col-md-9">
+                            <p class="co_expand"><span class="btn">click to expand</span></p>
+                            <pre class="pa1 prettyprint linenums lang-html"><code data-language="html">&lt;form action=&quot;#&quot;&gt;
+    {% for textfield in textfields %}
+        &lt;div class=&quot;form-field pb2&quot;&gt;
+            &lt;p&gt;
+                &lt;label for=&quot;{{ textfield.id }}&quot;&gt;{{ textfield.label }}&lt;/label&gt;
+                &lt;input id=&quot;{{ textfield.id }}&quot; type=&quot;{{ textfield.type }}&quot;
+                    {% if textfield.value is not empty %}value=&quot;{{ textfield.value }}&quot;{% endif %}
+                    {% if textfield.placeholder is not empty %}placeholder=&quot;{{ textfield.placeholder }}&quot;{% endif %}
+                    {% if textfield.attrs is not empty %}{{ textfield.attrs }}{% endif %}
+                /&gt;
+            &lt;/p&gt;
+        &lt;/div&gt;
+    {% endfor %}
+&lt;/form&gt;
+</code></pre>
+                            <p class="co_markup-action font-secondary align-right"><span class="collapse pr1">Collaspe</span><span>Open code in new tab</span></p>
+                        </div>
+                    </div>
+                            
+
+            
+            
+        </section>
+                                            <section id="kssref-components-forms-html5inputs" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3 ">
+                
+                                    <a href="#kssref-components-forms-html5inputs">
+                                    <strong class="co_section-ref">3.6.2</strong>
+                    HTML5 inputs
+                                    </a>
+                            </h3>
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Colette styles also apply to the following HTML5 input types.
+<br/>Fields display and interaction may vary according to browsers supports.</p>
+
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+                            
+                <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">
+                                                    Example
+                        
+                    </p>
+                    <div class="co_subsection-demo col-md-9 clearfix mb1">
+                        <form action="#">
+            <div class="form-field pb2">
+            <p>
+                <label for="textURL">URL input field</label>
+                <input id="textURL" type="url"
+                    value="http://www.url.com"                                                        />
+            </p>
+        </div>
+            <div class="form-field pb2">
+            <p>
+                <label for="textTime">Time input field</label>
+                <input id="textTime" type="time"
+                                                                            />
+            </p>
+        </div>
+            <div class="form-field pb2">
+            <p>
+                <label for="textDate">Date input field</label>
+                <input id="textDate" type="date"
+                                                                            />
+            </p>
+        </div>
+            <div class="form-field pb2">
+            <p>
+                <label for="Number">Number input</label>
+                <input id="Number" type="number"
+                                                                            />
+            </p>
+        </div>
+            <div class="form-field pb2">
+            <p>
+                <label for="Search">Search field</label>
+                <input id="Search" type="search"
+                                                                            />
+            </p>
+        </div>
+    </form>
+
+                    </div>
+                </div>
+
+                
+                
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Markup</p>
+                        <div class="co_subsection-content co_markup col-md-9">
+                            <p class="co_expand"><span class="btn">click to expand</span></p>
+                            <pre class="pa1 prettyprint linenums lang-html"><code data-language="html">&lt;form action=&quot;#&quot;&gt;
+    {% for textfield in textfields %}
+        &lt;div class=&quot;form-field pb2&quot;&gt;
+            &lt;p&gt;
+                &lt;label for=&quot;{{ textfield.id }}&quot;&gt;{{ textfield.label }}&lt;/label&gt;
+                &lt;input id=&quot;{{ textfield.id }}&quot; type=&quot;{{ textfield.type }}&quot;
+                    {% if textfield.value is not empty %}value=&quot;{{ textfield.value }}&quot;{% endif %}
+                    {% if textfield.placeholder is not empty %}placeholder=&quot;{{ textfield.placeholder }}&quot;{% endif %}
+                    {% if textfield.attrs is not empty %}{{ textfield.attrs }}{% endif %}
+                /&gt;
+            &lt;/p&gt;
+        &lt;/div&gt;
+    {% endfor %}
+&lt;/form&gt;
+</code></pre>
+                            <p class="co_markup-action font-secondary align-right"><span class="collapse pr1">Collaspe</span><span>Open code in new tab</span></p>
+                        </div>
+                    </div>
+                            
+
+            
+            
+        </section>
+                                            <section id="kssref-components-forms-select" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3 ">
+                
+                                    <a href="#kssref-components-forms-select">
+                                    <strong class="co_section-ref">3.6.3</strong>
+                    Select
+                                    </a>
+                            </h3>
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Default styles for <code>&lt;select&gt;</code> field.</p>
+
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+                            
+                <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">
+                                                    Example
+                        
+                    </p>
+                    <div class="co_subsection-demo col-md-9 clearfix mb1">
+                        <form action="#">
+    <div class="form-field">
+        <p>
+            <label for="select">Select</label>
+            <select id="select">
+                <option>option 1</option>
+                <option>option 2</option>
+                <option>option 3</option>
+            </select>
+        </p>
+    </div>
+</form>
+
+                    </div>
+                </div>
+
+                
+                
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Markup</p>
+                        <div class="co_subsection-content co_markup col-md-9">
+                            <p class="co_expand"><span class="btn">click to expand</span></p>
+                            <pre class="pa1 prettyprint linenums lang-html"><code data-language="html">&lt;form action=&quot;#&quot;&gt;
+    &lt;div class=&quot;form-field&quot;&gt;
+        &lt;p&gt;
+            &lt;label for=&quot;select&quot;&gt;Select&lt;/label&gt;
+            &lt;select id=&quot;select&quot;&gt;
+                &lt;option&gt;option 1&lt;/option&gt;
+                &lt;option&gt;option 2&lt;/option&gt;
+                &lt;option&gt;option 3&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+                            <p class="co_markup-action font-secondary align-right"><span class="collapse pr1">Collaspe</span><span>Open code in new tab</span></p>
+                        </div>
+                    </div>
+                            
+
+            
+            
+        </section>
+                                            <section id="kssref-components-forms-textarea" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3 ">
+                
+                                    <a href="#kssref-components-forms-textarea">
+                                    <strong class="co_section-ref">3.6.4</strong>
+                    Textarea
+                                    </a>
+                            </h3>
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Default styles for <code>&lt;textarea&gt;</code> field.</p>
+
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+                            
+                <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">
+                                                    Example
+                        
+                    </p>
+                    <div class="co_subsection-demo col-md-9 clearfix mb1">
+                        <form action="#">
+    <div class="form-field">
+        <p>
+            <label for="textarea">Textarea</label>
+            <textarea id="textarea" row="4" cols="50" />default value</textarea>
+        </p>
+    </div>
+</form>
+
+                    </div>
+                </div>
+
+                
+                
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Markup</p>
+                        <div class="co_subsection-content co_markup col-md-9">
+                            <p class="co_expand"><span class="btn">click to expand</span></p>
+                            <pre class="pa1 prettyprint linenums lang-html"><code data-language="html">&lt;form action=&quot;#&quot;&gt;
+    &lt;div class=&quot;form-field&quot;&gt;
+        &lt;p&gt;
+            &lt;label for=&quot;textarea&quot;&gt;Textarea&lt;/label&gt;
+            &lt;textarea id=&quot;textarea&quot; row=&quot;4&quot; cols=&quot;50&quot; /&gt;default value&lt;/textarea&gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+                            <p class="co_markup-action font-secondary align-right"><span class="collapse pr1">Collaspe</span><span>Open code in new tab</span></p>
+                        </div>
+                    </div>
+                            
+
+            
+            
+        </section>
+                                            <section id="kssref-components-forms-radiobuttons" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3 ">
+                
+                                    <a href="#kssref-components-forms-radiobuttons">
+                                    <strong class="co_section-ref">3.6.5</strong>
+                    Radio buttons
+                                    </a>
+                            </h3>
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Default styles for radio buttons.
+Styling method takes a lot of inspiration from Materialize CSS.</p>
+
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+                            
+                <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">
+                                                    Example
+                        
+                    </p>
+                    <div class="co_subsection-demo col-md-9 clearfix mb1">
+                        <form action="#">
+    <p>
+        <input id="radioButton1" name="radioButtonGroup" type="radio">
+        <label for="radioButton1">Label</label>
+    </p>
+    <p>
+        <input id="radioButton2" name="radioButtonGroup" type="radio">
+        <label for="radioButton2">Label</label>
+    </p>
+    <p>
+        <input id="radioButton3" name="radioButtonGroup" type="radio">
+        <label for="radioButton3">Label</label>
+    </p>
+</form>
+
+                    </div>
+                </div>
+
+                
+                
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Markup</p>
+                        <div class="co_subsection-content co_markup col-md-9">
+                            <p class="co_expand"><span class="btn">click to expand</span></p>
+                            <pre class="pa1 prettyprint linenums lang-html"><code data-language="html">&lt;form action=&quot;#&quot;&gt;
+    &lt;p&gt;
+        &lt;input id=&quot;radioButton1&quot; name=&quot;radioButtonGroup&quot; type=&quot;radio&quot;&gt;
+        &lt;label for=&quot;radioButton1&quot;&gt;Label&lt;/label&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+        &lt;input id=&quot;radioButton2&quot; name=&quot;radioButtonGroup&quot; type=&quot;radio&quot;&gt;
+        &lt;label for=&quot;radioButton2&quot;&gt;Label&lt;/label&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+        &lt;input id=&quot;radioButton3&quot; name=&quot;radioButtonGroup&quot; type=&quot;radio&quot;&gt;
+        &lt;label for=&quot;radioButton3&quot;&gt;Label&lt;/label&gt;
+    &lt;/p&gt;
+&lt;/form&gt;
+</code></pre>
+                            <p class="co_markup-action font-secondary align-right"><span class="collapse pr1">Collaspe</span><span>Open code in new tab</span></p>
+                        </div>
+                    </div>
+                            
+
+            
+            
+        </section>
+                                            <section id="kssref-components-forms-checkboxes" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3 ">
+                
+                                    <a href="#kssref-components-forms-checkboxes">
+                                    <strong class="co_section-ref">3.6.6</strong>
+                    Checkboxes
+                                    </a>
+                            </h3>
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>Default styles for checkboxes.
+Styling method takes a lot of inspiration from Materialize CSS.</p>
+
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+                            
+                <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">
+                                                    Example
+                        
+                    </p>
+                    <div class="co_subsection-demo col-md-9 clearfix mb1">
+                        <form action="#">
+    <p>
+        <input id="checkbox1" name="checkbox1" type="checkbox">
+        <label for="checkbox1">Label</label>
+    </p>
+    <p>
+        <input id="checkbox2" name="checkbox2" type="checkbox">
+        <label for="checkbox2">Label</label>
+    </p>
+    <p>
+        <input id="checkbox3" name="checkbox3" type="checkbox">
+        <label for="checkbox3">Label</label>
+    </p>
+</form>
+
+                    </div>
+                </div>
+
+                
+                
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Markup</p>
+                        <div class="co_subsection-content co_markup col-md-9">
+                            <p class="co_expand"><span class="btn">click to expand</span></p>
+                            <pre class="pa1 prettyprint linenums lang-html"><code data-language="html">&lt;form action=&quot;#&quot;&gt;
+    &lt;p&gt;
+        &lt;input id=&quot;checkbox1&quot; name=&quot;checkbox1&quot; type=&quot;checkbox&quot;&gt;
+        &lt;label for=&quot;checkbox1&quot;&gt;Label&lt;/label&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+        &lt;input id=&quot;checkbox2&quot; name=&quot;checkbox2&quot; type=&quot;checkbox&quot;&gt;
+        &lt;label for=&quot;checkbox2&quot;&gt;Label&lt;/label&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+        &lt;input id=&quot;checkbox3&quot; name=&quot;checkbox3&quot; type=&quot;checkbox&quot;&gt;
+        &lt;label for=&quot;checkbox3&quot;&gt;Label&lt;/label&gt;
+    &lt;/p&gt;
+&lt;/form&gt;
+</code></pre>
+                            <p class="co_markup-action font-secondary align-right"><span class="collapse pr1">Collaspe</span><span>Open code in new tab</span></p>
+                        </div>
+                    </div>
+                            
+
+            
+            
+        </section>
+                                            <section id="kssref-components-formsattributes" class="co_section-depth-2  co_content pl2 pr2">
+
+
+            
+                        <h2 class="co_section-h2 ">
+                
+                                    <a href="#kssref-components-formsattributes">
+                                    <strong class="co_section-ref">3.7</strong>
+                    Form attributes
+                                    </a>
+                            </h2>
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+
+            
+            
+        </section>
+                                            <section id="kssref-components-formsattributes-ariabusy" class="co_section-depth-3  co_content pl2 pr2">
+
+
+            
+                        <h3 class="co_section-h3 ">
+                
+                                    <a href="#kssref-components-formsattributes-ariabusy">
+                                    <strong class="co_section-ref">3.7.1</strong>
+                    Busy status
+                                    </a>
+                            </h3>
+            
+
+            
+            
+
+            
+                            <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">Description</p>
+                    <div class="co_subsection-content col-md-9">
+                        <p>You can apply an animated &#39;waiting&#39; status on a form (after submitting for example):
+if you add the <code>aria-busy=&quot;true&quot;</code> to the <code>&lt;form&gt;</code> tag, you will get a <strong>Loading</strong> animation over it.</p>
+
+                    </div>
+                </div>
+            
+
+            
+            
+
+            
+            
+
+            
+                            
+                <div class="co_subsection clearfix">
+                    <p class="co_subsection-title col-md-3">
+                                                    Example
+                        
+                    </p>
+                    <div class="co_subsection-demo col-md-9 clearfix mb1">
+                        <form action="#" aria-busy="true">
+    <div class="form-field pb2">
+        <p>
+            <label for="textarea">Textarea</label>
+            <textarea id="textarea" row="4" cols="50" />Textarea</textarea>
+        </p>
+    </div>
+</form>
+
+                    </div>
+                </div>
+
+                
+                
+                
+                                    <div class="co_subsection clearfix">
+                        <p class="co_subsection-title col-md-3">Markup</p>
+                        <div class="co_subsection-content co_markup col-md-9">
+                            <p class="co_expand"><span class="btn">click to expand</span></p>
+                            <pre class="pa1 prettyprint linenums lang-html"><code data-language="html">&lt;form action=&quot;#&quot; aria-busy=&quot;true&quot;&gt;
+    &lt;div class=&quot;form-field pb2&quot;&gt;
+        &lt;p&gt;
+            &lt;label for=&quot;textarea&quot;&gt;Textarea&lt;/label&gt;
+            &lt;textarea id=&quot;textarea&quot; row=&quot;4&quot; cols=&quot;50&quot; /&gt;Textarea&lt;/textarea&gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+                            <p class="co_markup-action font-secondary align-right"><span class="collapse pr1">Collaspe</span><span>Open code in new tab</span></p>
+                        </div>
+                    </div>
+                            
+
+            
+            
+        </section>
                                             <section id="kssref-components-icons" class="co_section-depth-2  co_content pl2 pr2">
 
 
@@ -2382,7 +3006,7 @@ All social colors are available to style the button according to its context.</p
                         <h2 class="co_section-h2 ">
                 
                                     <a href="#kssref-components-icons">
-                                    <strong class="co_section-ref">3.6</strong>
+                                    <strong class="co_section-ref">3.8</strong>
                     Icon
                                     </a>
                             </h2>
@@ -2665,7 +3289,7 @@ All social colors are available to style the button according to its context.</p
                         <h2 class="co_section-h2 ">
                 
                                     <a href="#kssref-components-loading">
-                                    <strong class="co_section-ref">3.7</strong>
+                                    <strong class="co_section-ref">3.9</strong>
                     Loading
                                     </a>
                             </h2>
@@ -2753,7 +3377,7 @@ All social colors are available to style the button according to its context.</p
                         <h2 class="co_section-h2 ">
                 
                                     <a href="#kssref-components-media">
-                                    <strong class="co_section-ref">3.8</strong>
+                                    <strong class="co_section-ref">3.10</strong>
                     Media
                                     </a>
                             </h2>
@@ -2853,7 +3477,7 @@ All social colors are available to style the button according to its context.</p
                         <h2 class="co_section-h2 ">
                 
                                     <a href="#kssref-components-navbar">
-                                    <strong class="co_section-ref">3.9</strong>
+                                    <strong class="co_section-ref">3.11</strong>
                     Navbar
                                     </a>
                             </h2>
@@ -2928,7 +3552,7 @@ Colette comes with a <a href="http://wicky.nillia.ms/headroom.js/">headroom.js</
                         <h2 class="co_section-h2 ">
                 
                                     <a href="#kssref-components-socialbar">
-                                    <strong class="co_section-ref">3.10</strong>
+                                    <strong class="co_section-ref">3.12</strong>
                     Socialbar
                                     </a>
                             </h2>
@@ -3048,7 +3672,7 @@ Colette comes with a <a href="http://wicky.nillia.ms/headroom.js/">headroom.js</
                         <h2 class="co_section-h2 ">
                 
                                     <a href="#kssref-components-tabs">
-                                    <strong class="co_section-ref">3.11</strong>
+                                    <strong class="co_section-ref">3.13</strong>
                     Tabs
                                     </a>
                             </h2>
@@ -3143,7 +3767,7 @@ Colette comes with a <a href="http://wicky.nillia.ms/headroom.js/">headroom.js</
                         <h2 class="co_section-h2 ">
                 
                                     <a href="#kssref-components-teaser">
-                                    <strong class="co_section-ref">3.12</strong>
+                                    <strong class="co_section-ref">3.14</strong>
                     Teaser
                                     </a>
                             </h2>

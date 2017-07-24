@@ -126,17 +126,17 @@
         
         
         
-                                            <div id="kssref-theme-styles" class="co_section-depth-2  co_content pl2 pr2">
+                                            <div id="kssref-components-formcomponents-required" class="co_section-depth-3  co_content pl2 pr2">
 
 
             
-                        <h2 class="co_section-h2 ">
+                        <h3 class="co_section-h3 ">
                 
-                                    <a href="#kssref-theme-styles">
-                                    <strong class="co_section-ref">4.2</strong>
-                    Second skin
+                                    <a href="#kssref-components-formcomponents-required">
+                                    <strong class="co_section-ref">3.5.1</strong>
+                    Required Marker
                                     </a>
-                            </h2>
+                            </h3>
             
 
             
@@ -146,8 +146,7 @@
                             <div class="co_subsection clearfix">
                     <p class="co_subsection-title col-md-3">Description</p>
                     <div class="co_subsection-content col-md-9">
-                        <p>Add a style on the teaser of a content preview.</p>
-<p>Note that the <code>.secondskin-#</code> class is applied on a content preview selector which must contain a <code>.teaser</code> child</p>
+                        <p>Provide styles for a required field marker, most often associated with the label.</p>
 
                     </div>
                 </div>
@@ -163,102 +162,23 @@
                             
                 <div class="co_subsection clearfix">
                     <p class="co_subsection-title col-md-3">
-                                                    Default styling
+                                                    Example
                         
                     </p>
                     <div class="co_subsection-demo col-md-9 clearfix mb1">
-                        <article class="box ">
-    <figure class="media">
-        <div><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image" /></div>
-    </figure>
-    <div class="teaser">
-        <p class="teaser-headline color-default">Label</p>
-        <p class="teaser-title">This is the content title</p>
-        <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
-    </div>
-    <p class="box-footer pa1">Footer line</p>
-</article>
-
+                        <label>This is the label of a require field <abbr class="required" title="(ce champ est obligatoire)">*</abbr></label>
 
                     </div>
                 </div>
 
                 
-                                    <div class="co_subsection clearfix">
-                        <p class="co_subsection-title col-md-3">Modifiers</p>
-                        <div class="co_subsection-content co_modifier col-md-9 clearfix mb2">
-                                                            <p><code>.secondskin-live</code></p>
-                                <p>Teaser summary color: highlight</p>
-                                <div class="co_subsection-demo clearfix mb3">
-                                    <article class="box secondskin-live">
-    <figure class="media">
-        <div><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image" /></div>
-    </figure>
-    <div class="teaser">
-        <p class="teaser-headline color-default">Label</p>
-        <p class="teaser-title">This is the content title</p>
-        <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
-    </div>
-    <p class="box-footer pa1">Footer line</p>
-</article>
-
-
-                                </div>
-                                                            <p><code>.secondskin-community</code></p>
-                                <p>Teaser summary color: community</p>
-                                <div class="co_subsection-demo clearfix mb3">
-                                    <article class="box secondskin-community">
-    <figure class="media">
-        <div><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image" /></div>
-    </figure>
-    <div class="teaser">
-        <p class="teaser-headline color-default">Label</p>
-        <p class="teaser-title">This is the content title</p>
-        <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
-    </div>
-    <p class="box-footer pa1">Footer line</p>
-</article>
-
-
-                                </div>
-                                                            <p><code>.secondskin-community-all</code></p>
-                                <p>Teaser title and summary color: community</p>
-                                <div class="co_subsection-demo clearfix mb3">
-                                    <article class="box secondskin-community-all">
-    <figure class="media">
-        <div><img src="http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg" alt="This is an image" /></div>
-    </figure>
-    <div class="teaser">
-        <p class="teaser-headline color-default">Label</p>
-        <p class="teaser-title">This is the content title</p>
-        <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
-    </div>
-    <p class="box-footer pa1">Footer line</p>
-</article>
-
-
-                                </div>
-                                                    </div>
-                    </div>
-
                 
                 
                                     <div class="co_subsection clearfix">
                         <p class="co_subsection-title col-md-3">Markup</p>
                         <div class="co_subsection-content co_markup col-md-9">
                             <p class="co_expand"><span class="btn">click to expand</span></p>
-                            <pre class="pa1 prettyprint linenums lang-html"><code data-language="html">&lt;article class=&quot;box {{ modifier_class }}&quot;&gt;
-    &lt;figure class=&quot;media&quot;&gt;
-        &lt;div&gt;&lt;img src=&quot;http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/648x415_20mn-11765.jpg&quot; alt=&quot;This is an image&quot; /&gt;&lt;/div&gt;
-    &lt;/figure&gt;
-    &lt;div class=&quot;teaser&quot;&gt;
-        &lt;p class=&quot;teaser-headline color-default&quot;&gt;Label&lt;/p&gt;
-        &lt;p class=&quot;teaser-title&quot;&gt;This is the content title&lt;/p&gt;
-        &lt;p class=&quot;teaser-summary&quot;&gt;This is the summary lorm ipsum sic amet color baba orum.&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;p class=&quot;box-footer pa1&quot;&gt;Footer line&lt;/p&gt;
-&lt;/article&gt;
-
+                            <pre class="pa1 prettyprint linenums lang-html"><code data-language="html">&lt;label&gt;This is the label of a require field &lt;abbr class=&quot;required&quot; title=&quot;(ce champ est obligatoire)&quot;&gt;*&lt;/abbr&gt;&lt;/label&gt;
 </code></pre>
                             <p class="co_markup-action font-secondary align-right"><span class="collapse pr1">Collaspe</span><span>Open code in new tab</span></p>
                         </div>
