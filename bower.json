@@ -1,6 +1,6 @@
 {
     "name": "colette",
-    "version": "0.26.1",
+    "version": "0.27.0",
     "license": "MIT",
     "ignore": [
         "**/.*",
@@ -17,7 +17,8 @@
     ],
     "dependencies": {
         "headroom.js": "0.9.4",
-        "normalize.css": "7.0.0"
+        "normalize.css": "7.0.0",
+        "stylus-svg": "ryuran/stylus-svg#v0.2.0"
     },
     "devDependencies": {
         "autoprefixer": "^7.1.2",
