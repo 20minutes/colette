@@ -1,8 +1,9 @@
 .co {
-  background-color: #f8f8f8;
+  background-color: #f1f1f1;
   color: #333;
 /* trigger sidebar */
 /* sidebar */
+/* overlay */
 /* section */
 /* subsection */
 /* modifier */
@@ -26,6 +27,11 @@
   background-color: #fff;
   font-size: 1em;
   line-height: 1.2;
+}
+@media screen and (max-width: 959px) {
+  .co_wrapper {
+    padding-top: 4.8rem;
+  }
 }
 @media screen and (min-width: 960px) and (max-width: 1503px) {
   .co_wrapper {
@@ -161,8 +167,15 @@
   top: 0;
   right: 0;
   left: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  height: 4.8rem;
   background-color: #3b4b5e;
 /* brand */
+}
+.co_trigger-sidebar button {
+  background-color: transparent;
 }
 .co_trigger-sidebar svg {
   fill: #fff;
@@ -188,7 +201,7 @@
 }
 .co_sidebar {
   position: fixed;
-  z-index: 7;
+  z-index: 20;
   top: 0;
   bottom: 0;
   left: 0;
@@ -200,9 +213,16 @@
   overflow: hidden;
   transition: transform 0.2s;
 }
+.co_sidebar:hover {
+  overflow-y: auto;
+}
 @media screen and (max-width: 959px) {
   .co_sidebar {
     transform: translateX(-100%);
+  }
+  .co_sidebar-open {
+    transform: translateX(0);
+    overflow-y: auto;
   }
 }
 .co_sidebar li {
@@ -216,9 +236,6 @@
 }
 .co_sidebar a:hover {
   background-color: rgba(199,208,220,0.4);
-}
-.co_sidebar:hover {
-  overflow-y: scroll;
 }
 .co_sidebar-children {
   padding-left: 0;
@@ -248,6 +265,31 @@
   fill: #44638a;
   transform: translateX(-50%);
 /* a bit heavy to center the logo, but this prevents from blinking when we get the scroll bar on hover */
+}
+.co_overlay {
+  display: block;
+  position: fixed;
+  z-index: 15;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.8);
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+.co_overlay[aria-hidden=true] {
+  display: none;
+  opacity: 0;
+}
+.co_overlay > button {
+  position: absolute;
+  top: 1em;
+  left: calc(1em + 24rem);
+  background-color: transparent;
+  color: #fff;
+  font-size: 2em;
+  line-height: 1;
 }
 .co_section-depth-1 {
   padding: 3em 0;
@@ -450,8 +492,8 @@
 }
 .co_grid-demo [class^=col-]:not(.clearfix) {
   padding: 1em;
-  border-top: 1px solid #f8f8f8;
-  border-right: 1px solid #f8f8f8;
+  border-top: 1px solid #f1f1f1;
+  border-right: 1px solid #f1f1f1;
   background-color: rgba(68,99,138,0.2);
   text-align: center;
 }
