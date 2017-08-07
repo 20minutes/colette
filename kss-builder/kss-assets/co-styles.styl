@@ -28,7 +28,10 @@ $co-color-body = #f8f8f8
             line-height 1.2
 
     &_wrapper
-        //
+        @media screen and (min-width: 960px) and (max-width: 1503px) /* .co_content width + 2 * .co_sidebar width */
+            // when screen size < 1503px the sidebar overlays the content, so we need to add a padding on the wrapper */
+            // when screen size < 960px the sidebar isn't display, so we don't need that padding on the wrapper */
+            padding-left 24rem
 
     &_page
         position relative
@@ -59,23 +62,70 @@ $co-color-body = #f8f8f8
                     strong
                         color inherit
 
+    /* sidebar */
+    &_sidebar
+        position fixed
+        z-index 7
+        top 0
+        bottom 0
+        left 0
+        margin 0
+        padding-left 0
+        width 24rem
+        background-color $co-color-tertiary
+        box-shadow 2px 0px 4px -2px $co-color-secondary
+        overflow hidden
+        transition transform .2s
 
-    /* navbar */
-    &_navbar
-        &-animated
-            transition all .15s ease-in-out
+        @media screen and (max-width: 959px)
+            transform translateX(-100%)
 
-        &-pinned
-            transform translateY(0%)
+        li
+            list-style none
 
-        &-unpinned
-            transform translateY(-100%)
+        a
+            display block
+            padding .75em 1.5em
+            background-color rgba($co-color-borders, 0)
+            transition background-color .3s
 
-        /* brand */
-        .co_brand
-            background-color transparent
-            color $co-color-primary
-            font-size 2.7em
+            &:hover
+                background-color rgba($co-color-borders, .4)
+
+        &:hover
+            overflow-y scroll
+
+        &-children
+            padding-left 0
+            display none
+
+            li
+                a
+                    padding-left 3em
+
+        &-active
+            > a
+                color $co-color-highlight
+
+            ul
+                display block
+
+        &-brand
+            a
+                position relative
+                height calc(6rem + 1.5em) /* logo height + vertical paddings */
+
+            a:hover
+                background-color transparent
+
+            svg
+                position absolute
+                left 12rem /* sidebar width/2 */
+                width 6rem
+                height @width
+                fill $co-color-primary
+                transform translateX(-50%)
+                /* a bit heavy to center the logo, but this prevents from blinking when we get the scroll bar on hover */
 
     /* section */
     &_section

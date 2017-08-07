@@ -1,7 +1,7 @@
 .co {
   background-color: #f8f8f8;
   color: #333;
-/* navbar */
+/* sidebar */
 /* section */
 /* subsection */
 /* modifier */
@@ -150,19 +150,63 @@
 .co_section-h6 a:hover strong {
   color: inherit;
 }
-.co_navbar-animated {
-  transition: all 0.15s ease-in-out;
+.co_sidebar {
+  position: fixed;
+  z-index: 7;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding-left: 0;
+  width: 30rem;
+  background-color: #fff;
+  box-shadow: 2px 0px 4px -2px #000;
+  overflow: hidden;
+/* nested list for menu children */
 }
-.co_navbar-pinned {
-  transform: translateY(0%);
+.co_sidebar li {
+  list-style: none;
 }
-.co_navbar-unpinned {
-  transform: translateY(-100%);
+.co_sidebar a {
+  display: block;
+  padding: 0.75em 1.5em;
+  background-color: rgba(199,208,220,0);
+  transition: background-color 0.3s;
 }
-.co_navbar .co_brand {
+.co_sidebar a:hover {
+  background-color: rgba(199,208,220,0.4);
+}
+.co_sidebar:hover {
+  overflow-y: scroll;
+}
+.co_sidebar-children {
+  padding-left: 0;
+  display: none;
+}
+.co_sidebar-children li a {
+  padding-left: 3em;
+}
+.co_sidebar-active > a {
+  color: #c36;
+}
+.co_sidebar-active ul {
+  display: block;
+}
+.co_sidebar-brand a {
+  position: relative;
+  height: calc(6rem + 1.5em);
+}
+.co_sidebar-brand svg {
+  position: absolute;
+  left: 150px;
+  width: 6rem;
+  height: 6rem;
+  fill: #44638a;
+  transform: translateX(-50%);
+/* a bit heavy to center the logo, but this prevents blinking when we hover the sidebar and get the scroll bar */
+}
+.co_sidebar-brand a:hover {
   background-color: transparent;
-  color: #44638a;
-  font-size: 2.7em;
 }
 .co_section-depth-1 {
   padding: 3em 0;
