@@ -19,31 +19,41 @@
 <div style="height:0;width:0;position:absolute;visibility:hidden;overflow:hidden">{% include '../dist/svg/svg.svg' %}</div>
 <div class="co_wrapper">
     {# side navigation #}
-    <ul class="co_sidebar">
-        <li class="co_sidebar-brand">
-            <a href="./">
-                <svg width="60" height="60"><use xlink:href="#symbol-logo"/></svg>
-                <span class="mask">Retour à l'accueil</span>
-            </a>
-        </li>
-        <li><a href="./">About</a></li>
-        {% for menu_item in menu %}
-            <li{% if menu_item.isActive %} class="co_sidebar-active"{% endif %}>
-                <a href="section-{{ menu_item.referenceURI }}.html">{{ menu_item.header }}</a>
-
-                {% if menu_item.children|length %}
-                    {# Display 1st level of sub navigation #}
-                    <ul class="co_sidebar-children">
-                        {% for child in menu_item.children if not child.isGrandChild %}
-                            <li{% if child.isActive %} class="co_sidebar-active"{% endif %}>
-                                <a href="section-{{ menu_item.referenceURI ~ '.html#kssref-' ~ child.referenceURI }}">{{ child.header }}</a>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
+    <header>
+        <div class="co_trigger-sidebar">
+            <p class="co_content pt1 pr2 pb1 pl2">
+                <a href="#sidebar">
+                    <svg width="30" height="30"><use xlink:href="#symbol-menu"/></svg>
+                    <span class="mask">Aller au menu</span>
+                </a>
+            </p>
+        </div>
+        <ul id="sidebar" class="co_sidebar">
+            <li class="co_sidebar-brand">
+                <a href="./">
+                    <svg width="60" height="60"><use xlink:href="#symbol-logo"/></svg>
+                    <span class="mask">Retour à l'accueil</span>
+                </a>
             </li>
-        {% endfor %}
-    </ul>
+            <li><a href="./">About</a></li>
+            {% for menu_item in menu %}
+                <li{% if menu_item.isActive %} class="co_sidebar-active"{% endif %}>
+                    <a href="section-{{ menu_item.referenceURI }}.html">{{ menu_item.header }}</a>
+
+                    {% if menu_item.children|length %}
+                        {# Display 1st level of sub navigation #}
+                        <ul class="co_sidebar-children">
+                            {% for child in menu_item.children if not child.isGrandChild %}
+                                <li{% if child.isActive %} class="co_sidebar-active"{% endif %}>
+                                    <a href="section-{{ menu_item.referenceURI ~ '.html#kssref-' ~ child.referenceURI }}">{{ child.header }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </header>
 
     {# page content #}
     <article role="main" class="co_page pb6">
@@ -215,6 +225,18 @@
 <script src="kss-assets/prettify.js"></script>
 {{ scripts|raw }}
 <script>
+    {# headroom #}
+    var headroom  = new Headroom(document.querySelector('.co_trigger-sidebar'), {
+        offset: 205,
+        tolerance: 5,
+        classes: {
+            initial: 'co_trigger-sidebar-animated',
+            pinned: 'co_trigger-sidebar-pinned',
+            unpinned: 'co_trigger-sidebar-unpinned'
+        }
+    });
+    headroom.init();
+
     {# prettyPrint #}
     prettyPrint();
 

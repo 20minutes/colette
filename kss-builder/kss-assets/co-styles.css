@@ -1,6 +1,7 @@
 .co {
   background-color: #f8f8f8;
   color: #333;
+/* trigger sidebar */
 /* sidebar */
 /* section */
 /* subsection */
@@ -25,6 +26,11 @@
   background-color: #fff;
   font-size: 1em;
   line-height: 1.2;
+}
+@media screen and (min-width: 960px) and (max-width: 1503px) {
+  .co_wrapper {
+    padding-left: 24rem;
+  }
 }
 .co_page {
   position: relative;
@@ -150,6 +156,36 @@
 .co_section-h6 a:hover strong {
   color: inherit;
 }
+.co_trigger-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #3b4b5e;
+/* brand */
+}
+.co_trigger-sidebar svg {
+  fill: #fff;
+}
+.co_trigger-sidebar-animated {
+  transition: all 0.15s ease-in-out;
+}
+.co_trigger-sidebar-pinned {
+  transform: translateY(0%);
+}
+.co_trigger-sidebar-unpinned {
+  transform: translateY(-100%);
+}
+.co_trigger-sidebar .co_brand {
+  background-color: transparent;
+  color: #44638a;
+  font-size: 2.7em;
+}
+@media screen and (min-width: 960px) {
+  .co_trigger-sidebar {
+    display: none;
+  }
+}
 .co_sidebar {
   position: fixed;
   z-index: 7;
@@ -158,11 +194,16 @@
   left: 0;
   margin: 0;
   padding-left: 0;
-  width: 30rem;
+  width: 24rem;
   background-color: #fff;
   box-shadow: 2px 0px 4px -2px #000;
   overflow: hidden;
-/* nested list for menu children */
+  transition: transform 0.2s;
+}
+@media screen and (max-width: 959px) {
+  .co_sidebar {
+    transform: translateX(-100%);
+  }
 }
 .co_sidebar li {
   list-style: none;
@@ -196,17 +237,17 @@
   position: relative;
   height: calc(6rem + 1.5em);
 }
+.co_sidebar-brand a:hover {
+  background-color: transparent;
+}
 .co_sidebar-brand svg {
   position: absolute;
-  left: 150px;
+  left: 12rem;
   width: 6rem;
   height: 6rem;
   fill: #44638a;
   transform: translateX(-50%);
-/* a bit heavy to center the logo, but this prevents blinking when we hover the sidebar and get the scroll bar */
-}
-.co_sidebar-brand a:hover {
-  background-color: transparent;
+/* a bit heavy to center the logo, but this prevents from blinking when we get the scroll bar on hover */
 }
 .co_section-depth-1 {
   padding: 3em 0;
