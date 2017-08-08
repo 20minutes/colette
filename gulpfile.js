@@ -12,6 +12,7 @@ var gulp = require('gulp'),
     run = require('gulp-run'),
     sequence = require('run-sequence'),
     svgstore = require('gulp-svgstore'),
+    ghPages = require('gulp-gh-pages'),
     kss = require('kss');
 
 var cfg = {
@@ -122,4 +123,14 @@ gulp.task('watch', function () {
 
 // build
 gulp.task('build', ['stylint', 'svg', 'styles', 'scripts', 'assets', 'kss']);
+
+// default
 gulp.task('default', ['build', 'watch']);
+
+// deploy
+gulp.task('deploy', function() {
+    return gulp.src('./docs/**/*')
+      .pipe(ghPages({
+          remoteUrl: 'https://github.com/20minutes/colette.git',
+      }));
+});
