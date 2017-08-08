@@ -2,6 +2,7 @@
 /bin/
 /composer.phar
 /vendor/
-/web/bundles/
+docs
 node_modules
 bower_components
+kss-builder/kss-assets/co-styles.min.css

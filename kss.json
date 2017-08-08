@@ -3,7 +3,7 @@
     "destination": "docs",
     "//": "The css and js paths are URLs relative to the style guide destination.",
     "css": [
-        "kss-assets/co-styles.css",
+        "kss-assets/co-styles.min.css",
         "dist/css/colette.min.css"
     ],
     "js": [

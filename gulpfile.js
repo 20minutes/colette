@@ -1,6 +1,5 @@
 var gulp = require('gulp'),
     concat = require('gulp-concat'),
-    cssnano = require('gulp-cssnano'),
     plumber = require('gulp-plumber'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
@@ -35,6 +34,7 @@ var cfg = {
 gulp.task('styles', function () {
     return gulp.src(cfg.cssDir + 'colette.styl')
         .pipe(stylus({
+            compress: true,
             linenos: false,
             include: ['node_modules'],
             'include css': true,
@@ -43,9 +43,7 @@ gulp.task('styles', function () {
         .pipe(postcss([
             autoprefixer({browsers: ['> 0.5%']}),
         ]))
-        .pipe(gulp.dest(cfg.distDir + 'css'))
         .pipe(rename('colette.min.css'))
-        .pipe(cssnano())
         .pipe(gulp.dest(cfg.distDir + 'css'));
 });
 
@@ -80,6 +78,18 @@ gulp.task('assets', function () {
 
 // kss
 gulp.task('kss', function () {
+    // compile kss-builder css
+    gulp.src(cfg.kssBuilderDir + '/styl/co-styles.styl')
+      .pipe(stylus({
+          compress: true,
+          linenos: false,
+      }))
+      .pipe(postcss([
+          autoprefixer({browsers: ['> 0.5%']}),
+      ]))
+      .pipe(rename('co-styles.min.css'))
+      .pipe(gulp.dest(cfg.kssBuilderDir + 'kss-assets/'));
+
     // generate doc
     kss(require('./kss.json'));
 
