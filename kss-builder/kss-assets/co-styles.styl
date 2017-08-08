@@ -4,7 +4,7 @@ $co-color-tertiary = #ffffff // lightest color
 $co-color-highlight = #cc3366
 $co-color-borders = #c7d0dc
 $co-color-background = #a1b1c4
-$co-color-body = #f8f8f8
+$co-color-body = #f1f1f1
 
 
 // do not style html elements in doc css
@@ -28,7 +28,13 @@ $co-color-body = #f8f8f8
             line-height 1.2
 
     &_wrapper
-        //
+        @media screen and (max-width: 959px)
+            padding-top 4.8rem /* menu button height */
+
+        @media screen and (min-width: 960px) and (max-width: 1503px) /* .co_content width + 2 * .co_sidebar width */
+            // when screen size < 1503px the sidebar overlays the content, so we need to add a padding on the wrapper */
+            // when screen size < 960px the sidebar isn't displayed, so we don't need that padding on the wrapper */
+            padding-left 24rem
 
     &_page
         position relative
@@ -59,9 +65,24 @@ $co-color-body = #f8f8f8
                     strong
                         color inherit
 
+    /* trigger sidebar */
+    &_trigger-sidebar
+        position fixed
+        top 0
+        right 0
+        left 0
+        z-index 10
+        display flex
+        align-items center
+        height 4.8rem
+        background-color darken($co-color-background, 40)
 
-    /* navbar */
-    &_navbar
+        button
+            background-color transparent
+
+        svg
+            fill $co-color-tertiary
+
         &-animated
             transition all .15s ease-in-out
 
@@ -76,6 +97,105 @@ $co-color-body = #f8f8f8
             background-color transparent
             color $co-color-primary
             font-size 2.7em
+
+        @media screen and (min-width: 960px)
+            display none
+
+
+    /* sidebar */
+    &_sidebar
+        position fixed
+        z-index 20
+        top 0
+        bottom 0
+        left 0
+        margin 0
+        padding-left 0
+        width 24rem
+        background-color $co-color-tertiary
+        box-shadow 2px 0px 4px -2px $co-color-secondary
+        overflow hidden
+        transition transform .2s
+
+        &:hover
+            overflow-y auto
+
+        @media screen and (max-width: 959px)
+            transform translateX(-100%)
+
+            &-open
+                transform translateX(0)
+                overflow-y: auto
+
+        li
+            list-style none
+
+        a
+            display block
+            padding .75em 1.5em
+            background-color rgba($co-color-borders, 0)
+            transition background-color .3s
+
+            &:hover
+                background-color rgba($co-color-borders, .4)
+
+        &-children
+            padding-left 0
+            display none
+
+            li
+                a
+                    padding-left 3em
+
+        &-active
+            > a
+                color $co-color-highlight
+
+            ul
+                display block
+
+        &-brand
+            a
+                position relative
+                height calc(6rem + 1.5em) /* logo height + vertical paddings */
+
+            a:hover
+                background-color transparent
+
+            svg
+                position absolute
+                left 12rem /* sidebar width/2 */
+                width 6rem
+                height @width
+                fill $co-color-primary
+                transform translateX(-50%)
+                /* a bit heavy to center the logo, but this prevents from blinking when we get the scroll bar on hover */
+
+    /* overlay */
+    &_overlay
+        display block
+        position fixed
+        z-index 15
+        top 0
+        right 0
+        bottom 0
+        left 0
+        background-color rgba(0, 0, 0, .8)
+        opacity 1
+        transition opacity .2s
+
+        &[aria-hidden=true]
+            display none
+            opacity 0
+
+        > button
+            position absolute
+            top 1em
+            left calc(1em + 24rem) /* 1em margin + sidebar width */
+            background-color transparent
+            color $co-color-tertiary
+            font-size 2em
+            line-height 1
 
     /* section */
     &_section

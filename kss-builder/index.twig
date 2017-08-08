@@ -18,23 +18,45 @@
 #}
 <div style="height:0;width:0;position:absolute;visibility:hidden;overflow:hidden">{% include '../dist/svg/svg.svg' %}</div>
 <div class="co_wrapper">
-    {# top navigation #}
-    <nav class="navbar co_navbar">
-        <div class="co_content clearfix">
-            <a href="./" class="navbar-brand co_brand" data-icon="logo"><em>Retour à l'accueil</em></a>
-            <ul>
-                <li><a href="./">About</a></li>
-                {% for menu_item in menu %}
-                    <li>
-                        <a href="section-{{ menu_item.referenceURI }}.html">{{ menu_item.header }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
+    {# side navigation #}
+    <header>
+        <div class="co_trigger-sidebar">
+            <p class="co_content pr2 pl2">
+                <button id="trigger">
+                    <svg width="30" height="30"><use xlink:href="#symbol-menu"/></svg>
+                    <span class="mask">Aller au menu</span>
+                </button>
+            </p>
         </div>
-    </nav>
+        <ul id="sidebar" class="co_sidebar">
+            <li class="co_sidebar-brand">
+                <a href="./">
+                    <svg width="60" height="60"><use xlink:href="#symbol-logo"/></svg>
+                    <span class="mask">Retour à l'accueil</span>
+                </a>
+            </li>
+            <li><a href="./">About</a></li>
+            {% for menu_item in menu %}
+                <li{% if menu_item.isActive %} class="co_sidebar-active"{% endif %}>
+                    <a href="section-{{ menu_item.referenceURI }}.html">{{ menu_item.header }}</a>
+
+                    {% if menu_item.children|length %}
+                        {# Display 1st level of sub navigation #}
+                        <ul class="co_sidebar-children">
+                            {% for child in menu_item.children if not child.isGrandChild %}
+                                <li{% if child.isActive %} class="co_sidebar-active"{% endif %}>
+                                    <a href="section-{{ menu_item.referenceURI ~ '.html#kssref-' ~ child.referenceURI }}">{{ child.header }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </header>
 
     {# page content #}
-    <article role="main" class="co_page pt4 pb6">
+    <article role="main" class="co_page pb6">
         {# homepage #}
         {% if homepage %}
             <div id="kssref-homepage" class="co_section-depth-1">
@@ -199,32 +221,58 @@
         </div>
     </footer>
 </div>
+<span id="overlay" class="co_overlay" aria-hidden="true">
+    <button id="close">✕<span class="mask">Fermer</span></button>
+</span>
+
 <!-- scripts -->
 <script src="kss-assets/prettify.js"></script>
 {{ scripts|raw }}
 <script>
-    {# headroom #}
-    var headroom  = new Headroom(document.querySelector('.co_navbar'), {
-        offset: 205,
-        tolerance: 5,
-        classes: {
-            initial: 'co_navbar-animated',
-            pinned: 'co_navbar-pinned',
-            unpinned: 'co_navbar-unpinned'
-        }
-    });
+    var trigger = document.getElementById('trigger'),
+        sidebar = document.getElementById('sidebar'),
+        overlay = document.getElementById('overlay'),
+        close = document.getElementById('close'),
+        triggerClose = {1: close, 2: sidebar, 3: overlay},
+        markups = document.getElementsByClassName('co_markup'),
+        headroom = new Headroom(document.querySelector('.co_trigger-sidebar'), {
+            offset: 50,
+            tolerance: 5,
+            classes: {
+                initial: 'co_trigger-sidebar-animated',
+                pinned: 'co_trigger-sidebar-pinned',
+                unpinned: 'co_trigger-sidebar-unpinned'
+            }
+        });
+
+    {# init headroom #}
     headroom.init();
 
     {# prettyPrint #}
     prettyPrint();
 
     {# expand code blocks #}
-    var markups = document.getElementsByClassName('co_markup');
-
     for (var i = 0; i < markups.length; i++) {
         markups[i].addEventListener('click', function(e) {
             this.classList.toggle('co_markup-expanded');
         }, false);
+    }
+
+    {# trigger sidebar #}
+    trigger.addEventListener('click', function(){
+        document.body.style.overflow = "hidden"; // body should not scroll when sidebar is open
+        sidebar.classList.add('co_sidebar-open');
+        overlay.removeAttribute('aria-hidden');
+    })
+
+    {# close sidebar #}
+    function closeSidebar() {
+        document.body.removeAttribute('style');
+        sidebar.classList.remove('co_sidebar-open');
+        overlay.setAttribute('aria-hidden', true);
+    }
+    for (var key in triggerClose) {
+        triggerClose[key].addEventListener('click', closeSidebar);
     }
 
 </script>

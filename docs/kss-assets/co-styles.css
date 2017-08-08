@@ -1,7 +1,9 @@
 .co {
-  background-color: #f8f8f8;
+  background-color: #f1f1f1;
   color: #333;
-/* navbar */
+/* trigger sidebar */
+/* sidebar */
+/* overlay */
 /* section */
 /* subsection */
 /* modifier */
@@ -25,6 +27,16 @@
   background-color: #fff;
   font-size: 1em;
   line-height: 1.2;
+}
+@media screen and (max-width: 959px) {
+  .co_wrapper {
+    padding-top: 4.8rem;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1503px) {
+  .co_wrapper {
+    padding-left: 24rem;
+  }
 }
 .co_page {
   position: relative;
@@ -150,19 +162,134 @@
 .co_section-h6 a:hover strong {
   color: inherit;
 }
-.co_navbar-animated {
+.co_trigger-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  height: 4.8rem;
+  background-color: #3b4b5e;
+/* brand */
+}
+.co_trigger-sidebar button {
+  background-color: transparent;
+}
+.co_trigger-sidebar svg {
+  fill: #fff;
+}
+.co_trigger-sidebar-animated {
   transition: all 0.15s ease-in-out;
 }
-.co_navbar-pinned {
+.co_trigger-sidebar-pinned {
   transform: translateY(0%);
 }
-.co_navbar-unpinned {
+.co_trigger-sidebar-unpinned {
   transform: translateY(-100%);
 }
-.co_navbar .co_brand {
+.co_trigger-sidebar .co_brand {
   background-color: transparent;
   color: #44638a;
   font-size: 2.7em;
+}
+@media screen and (min-width: 960px) {
+  .co_trigger-sidebar {
+    display: none;
+  }
+}
+.co_sidebar {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding-left: 0;
+  width: 24rem;
+  background-color: #fff;
+  box-shadow: 2px 0px 4px -2px #000;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+.co_sidebar:hover {
+  overflow-y: auto;
+}
+@media screen and (max-width: 959px) {
+  .co_sidebar {
+    transform: translateX(-100%);
+  }
+  .co_sidebar-open {
+    transform: translateX(0);
+    overflow-y: auto;
+  }
+}
+.co_sidebar li {
+  list-style: none;
+}
+.co_sidebar a {
+  display: block;
+  padding: 0.75em 1.5em;
+  background-color: rgba(199,208,220,0);
+  transition: background-color 0.3s;
+}
+.co_sidebar a:hover {
+  background-color: rgba(199,208,220,0.4);
+}
+.co_sidebar-children {
+  padding-left: 0;
+  display: none;
+}
+.co_sidebar-children li a {
+  padding-left: 3em;
+}
+.co_sidebar-active > a {
+  color: #c36;
+}
+.co_sidebar-active ul {
+  display: block;
+}
+.co_sidebar-brand a {
+  position: relative;
+  height: calc(6rem + 1.5em);
+}
+.co_sidebar-brand a:hover {
+  background-color: transparent;
+}
+.co_sidebar-brand svg {
+  position: absolute;
+  left: 12rem;
+  width: 6rem;
+  height: 6rem;
+  fill: #44638a;
+  transform: translateX(-50%);
+/* a bit heavy to center the logo, but this prevents from blinking when we get the scroll bar on hover */
+}
+.co_overlay {
+  display: block;
+  position: fixed;
+  z-index: 15;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.8);
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+.co_overlay[aria-hidden=true] {
+  display: none;
+  opacity: 0;
+}
+.co_overlay > button {
+  position: absolute;
+  top: 1em;
+  left: calc(1em + 24rem);
+  background-color: transparent;
+  color: #fff;
+  font-size: 2em;
+  line-height: 1;
 }
 .co_section-depth-1 {
   padding: 3em 0;
@@ -365,8 +492,8 @@
 }
 .co_grid-demo [class^=col-]:not(.clearfix) {
   padding: 1em;
-  border-top: 1px solid #f8f8f8;
-  border-right: 1px solid #f8f8f8;
+  border-top: 1px solid #f1f1f1;
+  border-right: 1px solid #f1f1f1;
   background-color: rgba(68,99,138,0.2);
   text-align: center;
 }
