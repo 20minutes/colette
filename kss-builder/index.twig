@@ -229,11 +229,12 @@
 <script src="kss-assets/prettify.js"></script>
 {{ scripts|raw }}
 <script>
-    var trigger = document.querySelector('#trigger'),
-        sidebar = document.querySelector('#sidebar'),
-        overlay = document.querySelector('#overlay'),
-        close = document.querySelector('#close'),
-        triggerClose = {1: close, 2: sidebar, 3: overlay}
+    var trigger = document.getElementById('trigger'),
+        sidebar = document.getElementById('sidebar'),
+        overlay = document.getElementById('overlay'),
+        close = document.getElementById('close'),
+        triggerClose = {1: close, 2: sidebar, 3: overlay},
+        markups = document.getElementsByClassName('co_markup'),
         headroom = new Headroom(document.querySelector('.co_trigger-sidebar'), {
             offset: 50,
             tolerance: 5,
@@ -251,8 +252,6 @@
     prettyPrint();
 
     {# expand code blocks #}
-    var markups = document.getElementsByClassName('co_markup');
-
     for (var i = 0; i < markups.length; i++) {
         markups[i].addEventListener('click', function(e) {
             this.classList.toggle('co_markup-expanded');
@@ -267,12 +266,13 @@
     })
 
     {# close sidebar #}
+    function closeSidebar() {
+        document.body.removeAttribute('style');
+        sidebar.classList.remove('co_sidebar-open');
+        overlay.setAttribute('aria-hidden', true);
+    }
     for (var key in triggerClose) {
-        triggerClose[key].addEventListener('click', function(){
-            document.body.removeAttribute('style');
-            sidebar.classList.remove('co_sidebar-open');
-            overlay.setAttribute('aria-hidden', true);
-        });
+        triggerClose[key].addEventListener('click', closeSidebar);
     }
 
 </script>
