@@ -6,6 +6,7 @@ var gulp = require('gulp'),
     autoprefixer = require('autoprefixer'),
     rename = require('gulp-rename'),
     stylus = require('gulp-stylus'),
+    stylusSvgImport = require('stylus-svg'),
     stylint = require('gulp-stylint'),
     uglify = require('gulp-uglify'),
     path = require('path'),
@@ -36,7 +37,8 @@ gulp.task('styles', function () {
         .pipe(stylus({
             linenos: false,
             include: ['node_modules'],
-            'include css': true
+            'include css': true,
+            // use: [stylusSvgImport()]
         }))
         .pipe(postcss([
             autoprefixer({browsers: ['> 0.5%']}),
