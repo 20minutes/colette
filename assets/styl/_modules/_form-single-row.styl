@@ -6,7 +6,7 @@
 //
 // White and editorial colors are available to style the button according to its context.
 //
-// .form-single-row-white            - white color button
+// .form-single-row-transparent      - transparent color button
 // .form-single-row-sport            - sport color button
 // .form-single-row-entertainment    - entertainment color button
 // .form-single-row-economy          - economy color button
@@ -22,40 +22,40 @@
 //
 // Styleguide Components.FormComponents.FormSingleRow
 .form-single-row
-    {clearfix}
+    overflow hidden
+    position relative
 
+    input[type='search']
     input[type='text']
-    input[type='submit']
-    button[type='submit']
-        float left
         height 3.6rem
-
-    input[type='text']
-        width calc(100% - 4.2rem)
+        width 100%
+        padding-right 4.2rem
         border 1px solid $color-secondary
-        border-right 0
-        border-radius 1.8rem 0 0 1.8rem
+        border-radius 1.8rem
 
     input[type='submit']
     button[type='submit']
+        position absolute
+        top 0
+        right 0
+        bottom 0
         width 4.2rem
         border 0
         border-radius 0 1.8rem 1.8rem 0
         background-color $color-default
         color white
 
-    [data-icon=search]
-        padding-right 6px
-        font-size 2.1rem
+        svg
+            font-size 2.1rem
+            margin-right .6rem
+            height 1em
+            width 1em
 
-
-    &-white
+    &-transparent
         input[type='submit']
         button[type='submit']
-            border-top 1px solid $color-secondary
-            border-right @border-top
-            border-bottom @border-top
-            background-color $color-white
+            border-top 1px solid transparent
+            background-color transparent
             color $color-tertiary
 
     for key, value in $colors
