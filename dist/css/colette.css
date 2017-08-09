@@ -655,9 +655,8 @@ textarea[disabled] {
   color: #878787;
 }
 input[type='search'] {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
 }
 select {
   padding-right: 2em;
@@ -1584,43 +1583,41 @@ figure {
   color: #ed4054;
   border: solid 0.1em #b7b7b7;
 }
-.form-single-row:after {
-  content: '';
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
+.form-single-row {
+  overflow: hidden;
+  position: relative;
 }
-.form-single-row input[type='text'],
-.form-single-row input[type='submit'],
-.form-single-row button[type='submit'] {
-  float: left;
-  height: 3.6rem;
-}
+.form-single-row input[type='search'],
 .form-single-row input[type='text'] {
-  width: calc(100% - 4.2rem);
+  height: 3.6rem;
+  width: 100%;
+  padding-right: 4.2rem;
   border: 1px solid #b7b7b7;
-  border-right: 0;
-  border-radius: 1.8rem 0 0 1.8rem;
+  border-radius: 1.8rem;
 }
 .form-single-row input[type='submit'],
 .form-single-row button[type='submit'] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
   width: 4.2rem;
   border: 0;
   border-radius: 0 1.8rem 1.8rem 0;
   background-color: #0b4892;
   color: #fff;
 }
-.form-single-row [data-icon=search] {
-  padding-right: 6px;
+.form-single-row input[type='submit'] svg,
+.form-single-row button[type='submit'] svg {
   font-size: 2.1rem;
+  margin-right: 0.6rem;
+  height: 1em;
+  width: 1em;
 }
-.form-single-row-white input[type='submit'],
-.form-single-row-white button[type='submit'] {
-  border-top: 1px solid #b7b7b7;
-  border-right: 1px solid #b7b7b7;
-  border-bottom: 1px solid #b7b7b7;
-  background-color: #fff;
+.form-single-row-transparent input[type='submit'],
+.form-single-row-transparent button[type='submit'] {
+  border-top: 1px solid transparent;
+  background-color: transparent;
   color: #878787;
 }
 .form-single-row-base input[type='submit'],

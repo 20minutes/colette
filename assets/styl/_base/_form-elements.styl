@@ -113,7 +113,8 @@ textarea
         color $color-tertiary
 
 input[type='search']
-    appearance none // fix display on Safari & FF
+    -moz-appearance textfield // fix display on FF
+    -webkit-appearance textfield // fix display on Safari and iOs
 
 
 // Select
