@@ -13,6 +13,7 @@ var gulp = require('gulp'),
     sequence = require('run-sequence'),
     svgstore = require('gulp-svgstore'),
     ghPages = require('gulp-gh-pages'),
+    fs = require('fs'),
     kss = require('kss');
 
 var cfg = {
@@ -31,11 +32,11 @@ var cfg = {
     svgPattern: '**/*.svg'
 };
 
-// css
-gulp.task('styles', function () {
-    return gulp.src(cfg.cssDir + 'colette.styl')
+// compileStyles
+compileStyles = function (src, dest, outputFilename, minify = false) {
+    return gulp.src(src)
         .pipe(stylus({
-            compress: true,
+            compress: minify,
             linenos: false,
             include: ['node_modules'],
             'include css': true,
@@ -44,8 +45,16 @@ gulp.task('styles', function () {
         .pipe(postcss([
             autoprefixer({browsers: ['> 0.5%']}),
         ]))
-        .pipe(rename('colette.min.css'))
-        .pipe(gulp.dest(cfg.distDir + 'css'));
+        .pipe(gulp.dest(dest))
+        .pipe(rename(outputFilename))
+        .pipe(gulp.dest(dest));
+};
+
+
+// build css
+gulp.task('styles', function () {
+    compileStyles(cfg.cssDir + 'colette.styl', cfg.distDir + 'css', 'colette.css');
+    compileStyles(cfg.cssDir + 'colette.styl', cfg.distDir + 'css', 'colette.min.css', true);
 });
 
 // lint css
@@ -79,25 +88,34 @@ gulp.task('assets', function () {
 
 // kss
 gulp.task('kss', function () {
-    // compile kss-builder css
-    gulp.src(cfg.kssBuilderDir + '/styl/co-styles.styl')
-      .pipe(stylus({
-          compress: true,
-          linenos: false,
-      }))
-      .pipe(postcss([
-          autoprefixer({browsers: ['> 0.5%']}),
-      ]))
-      .pipe(rename('co-styles.min.css'))
-      .pipe(gulp.dest(cfg.kssBuilderDir + 'kss-assets/'));
+    // we need the dist/ folder to build docs/
+    // so we check if it exists and throw an error if needed
+    return fs.access(cfg.distDir, function (err){
+        if (err) {
+            console.log("Can't access the dist/ folder.");
+            console.log("Try running 'gulp build' to solve the problem.");
+            console.log(err)
+        } else {
+            // compile kss-builder css
+            gulp.src(cfg.kssBuilderDir + '/styl/co-styles.styl')
+                .pipe(stylus({
+                    compress: true,
+                    linenos: false,
+                }))
+                .pipe(postcss([
+                    autoprefixer({browsers: ['> 0.5%']}),
+                ]))
+                .pipe(rename('co-styles.min.css'))
+                .pipe(gulp.dest(cfg.kssBuilderDir + 'kss-assets/'));
 
-    // generate doc
-    kss(require('./kss.json'));
+              // generate doc
+              kss(require('./kss.json'));
 
-    // retrieve dist directory
-    gulp.src(cfg.distDir + '*/**')
-        .pipe(gulp.dest(cfg.docDir + 'dist/'));
-
+              // retrieve dist directory
+              gulp.src(cfg.distDir + '*/**')
+                  .pipe(gulp.dest(cfg.docDir + 'dist/'));
+        }
+    });
 });
 
 // svg
@@ -122,7 +140,7 @@ gulp.task('watch', function () {
 });
 
 // build
-gulp.task('build', ['stylint', 'svg', 'styles', 'scripts', 'assets', 'kss']);
+gulp.task('build', ['stylint', 'svg', 'styles', 'scripts', 'assets']);
 
 // default
 gulp.task('default', ['build', 'watch']);
