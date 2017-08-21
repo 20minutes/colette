@@ -10,19 +10,17 @@
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
+    "cssnano": "^3.10.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
-    "gulp-gh-pages": "^0.5.4",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^7.0.0",
     "gulp-rename": "^1.2.2",
-    "gulp-run": "^1.7.1",
     "gulp-stylint": "^4.0.0",
     "gulp-stylus": "^2.6.0",
     "gulp-svgstore": "^6.1.0",
     "gulp-uglify": "^3.0.0",
     "kss": "3.0.0-beta.18",
-    "run-sequence": "^2.1.0",
     "stylint": "^1.5.9"
   },
   "author": "Olivia Ly <oly@20minutes.fr>",
@@ -49,7 +47,7 @@
     "favicon.ico"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
