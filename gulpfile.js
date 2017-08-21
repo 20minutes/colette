@@ -30,23 +30,6 @@ var cfg = {
     svgPattern: '**/*.svg'
 };
 
-// compileStyles
-function compileStyles(src, dest, outputFilename, minify = false) {
-    return gulp.src(src)
-        .pipe(stylus({
-            compress: false, // cssnano do it
-            linenos: false,
-            include: ['node_modules'],
-            'include css': true
-        }))
-        .pipe(postcss([
-            autoprefixer({browsers: ['> 0.5%']}),
-        ]))
-        .pipe(rename(outputFilename))
-        .pipe(gulp.dest(dest));
-};
-
-
 // build css
 gulp.task('styles', function () {
     var dest = cfg.distDir + 'css';
