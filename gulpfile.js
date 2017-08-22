@@ -3,16 +3,14 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
+    cssnano = require('cssnano'),
     rename = require('gulp-rename'),
     stylus = require('gulp-stylus'),
     stylusSvgImport = require('stylus-svg'),
     stylint = require('gulp-stylint'),
     uglify = require('gulp-uglify'),
     path = require('path'),
-    run = require('gulp-run'),
-    sequence = require('run-sequence'),
     svgstore = require('gulp-svgstore'),
-    ghPages = require('gulp-gh-pages'),
     fs = require('fs'),
     kss = require('kss');
 
@@ -32,11 +30,13 @@ var cfg = {
     svgPattern: '**/*.svg'
 };
 
-// compileStyles
-compileStyles = function (src, dest, outputFilename, minify = false) {
-    return gulp.src(src)
+// build css
+gulp.task('styles', function () {
+    var dest = cfg.distDir + 'css';
+
+    gulp.src(cfg.cssDir + 'colette.styl')
         .pipe(stylus({
-            compress: minify,
+            compress: false, // cssnano do it
             linenos: false,
             include: ['node_modules'],
             'include css': true,
@@ -45,23 +45,21 @@ compileStyles = function (src, dest, outputFilename, minify = false) {
         .pipe(postcss([
             autoprefixer({browsers: ['> 0.5%']}),
         ]))
+        .pipe(rename('colette.css'))
         .pipe(gulp.dest(dest))
-        .pipe(rename(outputFilename))
+        .pipe(postcss([
+            cssnano
+        ]))
+        .pipe(rename('colette.min.css'))
         .pipe(gulp.dest(dest));
-};
-
-
-// build css
-gulp.task('styles', function () {
-    compileStyles(cfg.cssDir + 'colette.styl', cfg.distDir + 'css', 'colette.css');
-    compileStyles(cfg.cssDir + 'colette.styl', cfg.distDir + 'css', 'colette.min.css', true);
 });
 
 // lint css
 gulp.task('stylint', function () {
     return gulp.src(cfg.cssDir + cfg.stylusPattern)
         .pipe(stylint({ config: '.stylintrc' }))
-        .pipe(stylint.reporter());
+		.pipe(stylint.reporter())
+		.pipe(stylint.reporter('fail', { failOnWarning: true }));
 });
 
 // js
@@ -92,18 +90,19 @@ gulp.task('kss', function () {
     // so we check if it exists and throw an error if needed
     return fs.access(cfg.distDir, function (err){
         if (err) {
-            console.log("Can't access the dist/ folder.");
-            console.log("Try running 'gulp build' to solve the problem.");
+            console.log('Can’t access the dist/ folder.');
+            console.log('Try running `gulp build` to solve the problem.');
             console.log(err)
         } else {
             // compile kss-builder css
             gulp.src(cfg.kssBuilderDir + '/styl/co-styles.styl')
                 .pipe(stylus({
-                    compress: true,
+                    compress: false, // cssnano do it
                     linenos: false,
                 }))
                 .pipe(postcss([
                     autoprefixer({browsers: ['> 0.5%']}),
+                    cssnano
                 ]))
                 .pipe(rename('co-styles.min.css'))
                 .pipe(gulp.dest(cfg.kssBuilderDir + 'kss-assets/'));
@@ -134,21 +133,20 @@ gulp.task('svg', function () {
 // watch
 gulp.task('watch', function () {
     gulp.watch(cfg.cssDir + cfg.twigPattern, ['kss']);
-    gulp.watch(cfg.cssDir + cfg.stylusPattern, ['styles', 'kss']);
-    gulp.watch([cfg.cssDir + cfg.stylusPattern, cfg.kssBuilderDir + cfg.kssPattern], ['styles', 'kss']);
+    gulp.watch(cfg.cssDir + cfg.stylusPattern, ['stylint', 'styles', 'kss']);
+    gulp.watch(cfg.svgDir + cfg.svgPattern, ['svg', 'kss']);
     gulp.watch(cfg.jsDir + cfg.jsPattern, ['scripts']);
 });
 
 // build
-gulp.task('build', ['stylint', 'svg', 'styles', 'scripts', 'assets']);
+gulp.task('build', ['svg', 'styles', 'scripts', 'assets']);
+
+// build
+gulp.task('docs', ['kss']);
+
+// test
+gulp.task('test', ['stylint']);
 
 // default
 gulp.task('default', ['build', 'watch']);
 
-// deploy
-gulp.task('deploy', function() {
-    return gulp.src('./docs/**/*')
-      .pipe(ghPages({
-          remoteUrl: 'https://github.com/20minutes/colette.git',
-      }));
-});
