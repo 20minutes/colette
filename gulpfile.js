@@ -97,7 +97,7 @@ gulp.task('kss', function () {
             // compile kss-builder css
             gulp.src(cfg.kssBuilderDir + '/styl/co-styles.styl')
                 .pipe(stylus({
-                    compress: true, // cssnono do it
+                    compress: false, // cssnano do it
                     linenos: false,
                 }))
                 .pipe(postcss([
@@ -133,7 +133,7 @@ gulp.task('svg', function () {
 // watch
 gulp.task('watch', function () {
     gulp.watch(cfg.cssDir + cfg.twigPattern, ['kss']);
-    gulp.watch([cfg.cssDir + cfg.stylusPattern], ['stylint', 'styles', 'kss']);
+    gulp.watch(cfg.cssDir + cfg.stylusPattern, ['stylint', 'styles', 'kss']);
     gulp.watch(cfg.svgDir + cfg.svgPattern, ['svg', 'kss']);
     gulp.watch(cfg.jsDir + cfg.jsPattern, ['scripts']);
 });
