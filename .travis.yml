@@ -3,7 +3,11 @@ language: node_js
 node_js:
   - "4"
   - "lts/*"
-  - "stable"
+
+matrix:
+  include:
+    - node_js: "stable"
+      env: DEPLOY=run
 
 cache:
   directories:
@@ -16,3 +20,4 @@ deploy:
   local_dir: docs
   on:
     branch: master
+    condition: $DEPLOY = run
