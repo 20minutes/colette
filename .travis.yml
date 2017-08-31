@@ -13,6 +13,10 @@ cache:
   directories:
     - "node_modules"
 
+script:
+  - gulp build
+  - gulp docs
+
 deploy:
   provider: pages
   skip_cleanup: true
