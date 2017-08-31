@@ -47,7 +47,6 @@
     "favicon.ico"
   ],
   "scripts": {
-    "postinstall": "gulp build && gulp docs",
     "test": "gulp test"
   },
   "repository": {
