@@ -1,0 +1,37 @@
+// LinkWithSvg
+//
+// Colette comes with a basic style for a link associated with an SVG (placed in front of it).
+// It can be a link and modified by `-small`
+//
+// Styleguide Components.LinkWithSvg
+
+// Weight: 0
+//
+// Default View
+//
+// Markup: linkwithsvg-default.twig
+//
+// Styleguide Components.LinkWithSvg.LinkWithSvgDefault
+
+// Weight: 1
+//
+// Small Link with svg
+//
+// Markup: linkwithsvg-small.twig
+//
+// Styleguide Components.LinkWithSvg.LinkWithSvgSmall
+.linkwithsvg
+    svg
+        display inline-block
+        width 1em
+        height @width
+        margin 0 .3em -.2em 0
+
+    &-label
+        vertical-align middle
+
+    &-small
+        font-size .8em
+
+        svg
+            margin 0
