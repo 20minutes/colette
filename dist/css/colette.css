@@ -704,8 +704,8 @@ input[type='radio'] + label:before {
   position: absolute;
   top: 0.25em;
   left: 0;
-  width: 0.75em;
-  height: 0.75em;
+  width: 1em;
+  height: 1em;
   border: 0.125em solid #878787;
 }
 input[type='checkbox'] + label:after,
