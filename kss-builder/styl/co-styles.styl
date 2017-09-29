@@ -164,12 +164,10 @@ $co-color-body = #f1f1f1
 
             svg
                 position absolute
-                left 12rem /* sidebar width/2 */
+                left calc(24rem/2 - 6rem/2) /* sidebar width / 2 - logo width / 2 AVOID % here, otherwise it will cause the logo to blink when the scrollbar appears */
                 width 6rem
                 height @width
                 fill $co-color-primary
-                transform translateX(-50%)
-                /* a bit heavy to center the logo, but this prevents from blinking when we get the scroll bar on hover */
 
     /* overlay */
     &_overlay
