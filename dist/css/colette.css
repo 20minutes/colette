@@ -658,6 +658,14 @@ input[type='search'] {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
 }
+input[type='time']::-webkit-datetime-edit,
+input[type='date']::-webkit-datetime-edit {
+  line-height: 1.15em;
+}
+input[type='time']::-webkit-inner-spin-button,
+input[type='date']::-webkit-inner-spin-button {
+  height: 1em;
+}
 select {
   padding-right: 2em;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"100\" fill=\"#000\"><polygon points=\"0, 0 100, 0 50, 50\" /></svg>");
