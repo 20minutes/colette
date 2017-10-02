@@ -116,6 +116,13 @@ input[type='search']
     -moz-appearance textfield // fix display on FF
     -webkit-appearance textfield // fix display on Safari and iOs
 
+input[type='time']
+input[type='date']
+    &::-webkit-datetime-edit
+        line-height 1.15em
+
+    &::-webkit-inner-spin-button
+        height 1em
 
 // Select
 //
