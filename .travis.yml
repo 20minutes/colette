@@ -18,10 +18,18 @@ script:
   - gulp docs
 
 deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-  local_dir: docs
-  on:
-    branch: master
-    condition: $DEPLOY = run
+  - provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+    local_dir: docs
+    on:
+      branch: master
+      condition: "$DEPLOY = run"
+
+  - provider: npm
+    skip_cleanup: true
+    email: "web-tech+npm@20minutes.fr"
+    api_key:
+      secure: PmexQ0XJin/EmAXMFnsO49imEe25DRYMWMsSOwIpO8Yst/MrdN53dgAw5LScJiwEw9VvK/mdNrswpZb5UDh0Mx6EQBIEPw6gNaGrxSVIJ4ku9TfMkeZ7pcqsA2OWNc2yDlhGI1ph7kECpCXGbI/3MzwrK5HUmel7qUuBggQqDT7yHGccEQwdBzJi9yxZ/+YsPnkjx8XM2jP6aIiT5Hekp0uk72my+Sdu9yWg9eJMyO0k4nijxAeyC7R3fURd8f12c11lFHtRK/ayUcUbXmHJGzLoChBtALuk96WkL4G1m4uZ3qWlEkFybNIK0L7IdjhPLAXpHhVnrmFOlFCP61mg2OQx/aodic9rtfKaAc+zHq+YAUwEPv1o/s1rYi5WNBMBLkvbYdbDO87MyBQEOAiFwab7nOEcOZoDtwDk8g7MEX6Xhy524a53Ksq3Dxv8wULWWbkm4z2iufarhccyA1h8louUfB8RwSzqEZHu5lP7tzmaP6tiY9YivAyl48lqNXQP4rM/yH9cIj3Es1YJuCLp/c4GMZTZJn/f6CQ0dT1ZidmPXVlJN/GbyQ4b5QpoigjDQQZXun/gfmou7eMbw26yr7mN5JJQDj44I2LgFthQ/PNuIwEdnNGAbUXK/Z2/IzLNUz7QcrgrRztBy2pTNcYTXqtRP8bi8iyDm3BW2mnTPDY=
+    on:
+      tags: true
