@@ -2,7 +2,6 @@
   "name": "colette",
   "version": "0.28.5",
   "license": "MIT",
-  "private": true,
   "dependencies": {
     "headroom.js": "0.9.4",
     "normalize.css": "7.0.0",
@@ -23,7 +22,7 @@
     "kss": "3.0.0-beta.18",
     "stylint": "^1.5.9"
   },
-  "author": "Olivia Ly <oly@20minutes.fr>",
+  "author": "20 Minutes <web-tech@20minutes.fr>",
   "description": "A CSS and JS starter kit for 20 Minutes web projects",
   "keywords": [
     "20minutes",
