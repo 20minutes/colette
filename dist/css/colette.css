@@ -2243,6 +2243,9 @@ figure {
   font-family: 'Open Sans', 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: bold;
   line-height: 1.2;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
 }
 .teaser-summary {
   margin: 0;
