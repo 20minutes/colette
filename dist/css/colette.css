@@ -605,6 +605,7 @@ textarea {
   border: 1px solid #e7e7e7;
   background-color: #fff;
   line-height: 1.3;
+  color: #4c4d4e;
   transition: border-color 0.2s;
 }
 input[type='text'].is-invalid,
