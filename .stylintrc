@@ -6,7 +6,9 @@
     "commaSpace": "always",
     "commentSpace": "always",
     "cssLiteral": "never",
-    "customProperties": [],
+    "customProperties": [
+        "font-display"
+    ],
     "depthLimit": 5,
     "duplicates": false,
     "efficient": "always",
@@ -19,7 +21,6 @@
     "maxErrors": false,
     "maxWarnings": false,
     "mixed": false,
-    "mixins": [],
     "namingConvention": false,
     "namingConventionStrict": false,
     "none": "never",
