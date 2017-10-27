@@ -15,7 +15,12 @@
     height 4.8rem
     box-shadow 0 2px 4px -2px $color-base
     background-color $color-white
-    line-height @height
+
+    a
+        transition background-color .2s
+
+        &:hover
+             background-color $color-bg-base
 
     ul
         height inherit
@@ -24,22 +29,30 @@
         padding 0
 
         a
-            display block
             padding 0 1.8rem
             color $color-base
-            text-align center
-            transition background-color .2s
+            display flex
 
-            &:hover
-                background-color $color-bg-base
+            *
+                margin auto
+
+            svg
+                width 1.5em
+                height @width
 
     li
         float left
+        height inherit
+        display flex
 
     &-brand
         float left
         padding 0 .6rem
         height inherit
-        background-color $color-default
-        font-size 3.6rem
-        color $color-white
+        color $color-default
+        display flex
+
+        svg
+            width 2.2em
+            height @width
+            margin auto
