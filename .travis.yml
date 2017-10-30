@@ -14,8 +14,8 @@ cache:
     - "node_modules"
 
 script:
-  - gulp build
-  - gulp docs
+  - npm run build
+  - npm test
 
 deploy:
   - provider: pages

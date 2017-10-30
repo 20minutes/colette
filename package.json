@@ -9,7 +9,14 @@
   },
   "devDependencies": {
     "autoprefixer": "^7.1.6",
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-loader": "7.1.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "cssnano": "^3.10.0",
+    "finalhandler": "^1.1.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-plumber": "^1.1.0",
@@ -18,9 +25,13 @@
     "gulp-stylint": "^4.0.0",
     "gulp-stylus": "^2.6.0",
     "gulp-svgstore": "^6.1.0",
-    "gulp-uglify": "^3.0.0",
     "kss": "3.0.0-beta.18",
-    "stylint": "^1.5.9"
+    "serve-static": "^1.13.1",
+    "stylint": "^1.5.9",
+    "unminified-webpack-plugin": "^1.4.1",
+    "vinyl-named": "^1.1.0",
+    "webpack": "3.6.0",
+    "webpack-stream": "^4.0.0"
   },
   "author": "20 Minutes <web-tech@20minutes.fr>",
   "description": "A CSS and JS starter kit for 20 Minutes web projects",
@@ -39,6 +50,7 @@
     "stylus",
     "typography"
   ],
+  "browserslist": "> 0.5%",
   "main": "dist/css/colette.css",
   "files": [
     "dist",
@@ -46,7 +58,9 @@
     "favicon.ico"
   ],
   "scripts": {
-    "test": "gulp test"
+    "start": "gulp",
+    "build": "gulp docs",
+    "test": "gulp lint"
   },
   "repository": {
     "type": "git",

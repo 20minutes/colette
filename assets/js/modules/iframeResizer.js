@@ -50,6 +50,6 @@ IframeResizer.prototype.sendHeight = function sendHeight() {
     this.resizeInternal = true;
 };
 
-module.exports = function(cfg) {
+export default function(cfg) {
     return new IframeResizer(cfg);
 }

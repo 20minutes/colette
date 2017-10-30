@@ -1,5 +1,11 @@
 const colette = window.colette || {};
 
-colette.iframeResizer = require('./module/iframeResizer');
+import iframeResizer from './modules/iframeResizer';
+colette.iframeResizer = iframeResizer;
 
-module.exports = colette;
+import headroom from 'headroom.js';
+colette.headroom = headroom;
+
+export {
+    colette
+};
