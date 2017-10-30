@@ -1951,12 +1951,6 @@ figure {
   clear: both;
   visibility: hidden;
 }
-.navbar a {
-  transition: background-color 0.2s;
-}
-.navbar a:hover {
-  background-color: #f8f8f8;
-}
 .navbar ul {
   height: inherit;
   list-style: none;
@@ -1968,13 +1962,19 @@ figure {
   color: #4c4d4e;
   display: -webkit-box;
   display: flex;
-}
-.navbar ul a * {
-  margin: auto;
+  background-color: rgba(248,248,248,0);
+  transition: background-color 0.2s;
 }
 .navbar ul a svg {
   width: 1.5em;
   height: 1.5em;
+  margin: auto;
+}
+.navbar ul a span {
+  margin: auto;
+}
+.navbar ul a:hover {
+  background-color: #f8f8f8;
 }
 .navbar li {
   float: left;
@@ -1989,11 +1989,16 @@ figure {
   color: #0b4892;
   display: -webkit-box;
   display: flex;
+  background-color: rgba(248,248,248,0);
+  transition: background-color 0.2s;
 }
 .navbar-brand svg {
   width: 2.2em;
   height: 2.2em;
   margin: auto;
+}
+.navbar-brand:hover {
+  background-color: #f8f8f8;
 }
 .required {
   color: #cc190f;

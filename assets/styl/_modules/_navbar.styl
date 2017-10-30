@@ -16,12 +16,6 @@
     box-shadow 0 2px 4px -2px $color-base
     background-color $color-white
 
-    a
-        transition background-color .2s
-
-        &:hover
-             background-color $color-bg-base
-
     ul
         height inherit
         list-style none
@@ -32,13 +26,19 @@
             padding 0 1.8rem
             color $color-base
             display flex
-
-            *
-                margin auto
+            background-color rgba($color-bg-base, 0)
+            transition background-color .2s
 
             svg
                 width 1.5em
                 height @width
+                margin auto
+
+            span
+                margin auto
+
+            &:hover
+                background-color $color-bg-base
 
     li
         float left
@@ -51,8 +51,13 @@
         height inherit
         color $color-default
         display flex
+        background-color rgba($color-bg-base, 0)
+        transition background-color .2s
 
         svg
             width 2.2em
             height @width
             margin auto
+
+        &:hover
+            background-color $color-bg-base
