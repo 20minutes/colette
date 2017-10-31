@@ -169,7 +169,7 @@ function kssBuild() {
 
 function watch() {
     gulp.watch(cfg.cssDir + cfg.twigPattern, ['kss']);
-    gulp.watch(cfg.cssDir + cfg.stylusPattern, ['stylint', 'styles', 'kss']);
+    gulp.watch(cfg.cssDir + cfg.stylusPattern, ['lint:css', 'styles', 'kss']);
     gulp.watch(cfg.svgDir + cfg.svgPattern, ['svg', 'kss']);
     gulp.watch(cfg.jsDir + cfg.jsPattern, ['scripts']);
 }

@@ -21,14 +21,15 @@ that allows you to react to the user's scroll.
 
 ---
 ## Installation
-**Install with Bower**
-```
-bower install colette --save
+
+### With npm (recomended)
+```bash
+npm install colette --save
 ```
 
-**Install with npm**
-```
-npm install colette --save
+### With Bower
+```bash
+bower install colette --save
 ```
 
 ---
@@ -41,9 +42,9 @@ projects, check [`src/`](https://github.com/20minutes/colette/assets/).
 ---
 ## Use from Stylus sources
 
-You can use `colette.css` as is.
+You can use `colette.css` and `colette.js` as is (or minified files `colette.min.css` and `colette.min.js`).
 
-But the best way to use Colette is by Stylus sources directly with Stylus or with a task-runner (ex: gulp).
+But the best way to use Colette is by Stylus and JavaScript sources with a task-runner (ex: gulp, webpack).
 
 ### Use gulp
 
@@ -74,7 +75,7 @@ Colette is a collection of stylus features. You can define which styles you want
 By default, you include all `colette.styl` and all features are in your CSS.
 You can select features needed by copying `colette.styl` content and choose your imports rules.
 
-```
+```stylus
 /* my_css_file.styl */
 
 // Your own settings
@@ -89,59 +90,3 @@ But can be usefull to:
 * change order of imports,
 * import only needed features,
 * separate your critical CSS from your global CSS.
-
-#### Usage example: Handle critical CSS
-
-You need to create a specific stylus file to handle your critical CSS.
-
-```
-/* my_criticalcss_file.styl */
-
-// Your own settings
-@require '_settings'
-
-// Colette Imports
-
-// colette settings
-@require 'colette/assets/styl/_settings'
-
-// colette mixins
-@require 'colette/assets/styl/_mixins/*'
-
-// colette @blocks
-@require 'colette/assets/styl/_@blocks/*'
-
-// normalize
-@require 'normalize.css/normalize.css'
-
-// colette base
-@require 'colette/assets/styl/_base/_init'
-@require 'colette/assets/styl/_base/_typography'
-
-// colette components
-@require 'colette/assets/styl/_modules/_media'
-@require 'colette/assets/styl/_modules/_navbar'
-@require 'colette/assets/styl/_modules/_tabs'
-@require 'colette/assets/styl/_modules/_teasers'
-
-// custom components
-@require '_modules/_navbar'
-@require '_modules/_teasers'
-
-// colette helpers
-@require 'colette/assets/styl/_helpers/_box'
-@require 'colette/assets/styl/_helpers/_mask'
-@require 'colette/assets/styl/_helpers/_spaces'
-
-/* => will compile to my_criticalcss_file.css */
-```
-
-and then simply include the compiled CSS file into your template
-(do not forget the `<style>` tag around your `include`!):
-
-```twig
-<style>
-   {% include 'css/my_criticalcss_file.css' %}
-</style>
-```
-
