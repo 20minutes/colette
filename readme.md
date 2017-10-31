@@ -40,9 +40,9 @@ directory for ready-to-use CSS files.
 projects, check [`src/`](https://github.com/20minutes/colette/assets/).
 
 ---
-## Use from Stylus sources
+## Use Colette’s styles from Stylus sources
 
-You can use `colette.css` and `colette.js` as is (or minified files `colette.min.css` and `colette.min.js`).
+You can use `colette.css` as is (or minified files `colette.min.css`).
 
 But the best way to use Colette is by Stylus and JavaScript sources with a task-runner (ex: gulp, webpack).
 
@@ -90,3 +90,11 @@ But can be usefull to:
 * change order of imports,
 * import only needed features,
 * separate your critical CSS from your global CSS.
+
+## Use Colette’s JavaScript from sources
+
+You can use `colette.js` as is (or minified files `colette.min.js`).
+
+But the best way to use it is with a task-runner by JavaScript sources (ex: gulp, webpack).
+
+You should use babel to transpile colette code to Javascript for Browsers.
