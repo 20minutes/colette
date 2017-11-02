@@ -153,7 +153,7 @@ function IframeResizer(cfg) {
 
     window.addEventListener('load', this.height.bind(this));
     window.addEventListener('resize', this.height.bind(this));
-};
+}
 
 IframeResizer.prototype.iframeResizeComplete = function iframeResizeComplete() {
     var _this2 = this;

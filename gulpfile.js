@@ -117,7 +117,6 @@ function stylesLint() {
     .pipe(stylint.reporter('fail', { failOnWarning: true }));
 }
 
-
 function scriptsLint() {
     return gulp.src(cfg.jsDir + cfg.jsPattern)
     .pipe(plumber())
