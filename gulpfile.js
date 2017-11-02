@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     stylus = require('gulp-stylus'),
     stylusSvgImport = require('stylus-svg'),
     stylint = require('gulp-stylint'),
+    eslint = require('gulp-eslint'),
     webpack = require('webpack'),
     gulpWebpack = require('webpack-stream'),
     UnminifiedWebpackPlugin = require('unminified-webpack-plugin'),
@@ -116,6 +117,15 @@ function stylesLint() {
     .pipe(stylint.reporter('fail', { failOnWarning: true }));
 }
 
+
+function scriptsLint() {
+    return gulp.src(cfg.jsDir + cfg.jsPattern)
+    .pipe(plumber())
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
+}
+
 function assetsCopy() {
     // Retrieve fonts into dist/ directory
     gulp.src(cfg.fontsDir + '*')
@@ -171,7 +181,7 @@ function watch() {
     gulp.watch(cfg.cssDir + cfg.twigPattern, ['kss']);
     gulp.watch(cfg.cssDir + cfg.stylusPattern, ['lint:css', 'styles', 'kss']);
     gulp.watch(cfg.svgDir + cfg.svgPattern, ['svg', 'kss']);
-    gulp.watch(cfg.jsDir + cfg.jsPattern, ['scripts']);
+    gulp.watch(cfg.jsDir + cfg.jsPattern, ['lint:js', 'scripts']);
 }
 
 function startServer() {
@@ -190,8 +200,11 @@ gulp.task('connect', startServer);
 // lint:css
 gulp.task('lint:css', stylesLint);
 
+// lint:js
+gulp.task('lint:js', scriptsLint);
+
 // lint
-gulp.task('lint', ['lint:css']);
+gulp.task('lint', ['lint:js', 'lint:css']);
 
 // build css
 gulp.task('styles', stylesBuild);

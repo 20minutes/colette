@@ -24,8 +24,7 @@ function IframeResizer(cfg) {
 
     window.addEventListener('load', this.height.bind(this));
     window.addEventListener('resize', this.height.bind(this));
-
-};
+}
 
 IframeResizer.prototype.iframeResizeComplete = function iframeResizeComplete() {
     setTimeout(() => {
@@ -50,6 +49,6 @@ IframeResizer.prototype.sendHeight = function sendHeight() {
     this.resizeInternal = true;
 };
 
-export default function(cfg) {
+export default function (cfg) {
     return new IframeResizer(cfg);
 }
