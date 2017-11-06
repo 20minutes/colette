@@ -1,6 +1,6 @@
 {
     "name": "colette",
-    "version": "0.30.1",
+    "version": "0.31.0",
     "license": "MIT",
     "ignore": [
         "**/.*",
@@ -21,19 +21,32 @@
         "stylus-svg": "ryuran/stylus-svg#v0.3.0"
     },
     "devDependencies": {
-        "autoprefixer": "^7.1.2",
+        "autoprefixer": "^7.1.6",
+        "babel-cli": "6.26.0",
+        "babel-core": "6.26.0",
+        "babel-loader": "7.1.2",
+        "babel-plugin-add-module-exports": "^0.2.1",
+        "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+        "babel-preset-env": "^1.6.1",
         "cssnano": "^3.10.0",
+        "eslint": "^4.10.0",
+        "finalhandler": "^1.1.0",
         "gulp": "^3.9.1",
         "gulp-concat": "^2.6.1",
+        "gulp-eslint": "^4.0.0",
         "gulp-plumber": "^1.1.0",
         "gulp-postcss": "^7.0.0",
         "gulp-rename": "^1.2.2",
         "gulp-stylint": "^4.0.0",
         "gulp-stylus": "^2.6.0",
         "gulp-svgstore": "^6.1.0",
-        "gulp-uglify": "^3.0.0",
         "kss": "3.0.0-beta.18",
-        "stylint": "^1.5.9"
+        "serve-static": "^1.13.1",
+        "stylint": "^1.5.9",
+        "unminified-webpack-plugin": "^1.4.1",
+        "vinyl-named": "^1.1.0",
+        "webpack": "3.6.0",
+        "webpack-stream": "^4.0.0"
     },
     "author": "Olivia Ly <oly@20minutes.fr>",
     "description": "A CSS and JS starter kit for 20 Minutes web projects",
