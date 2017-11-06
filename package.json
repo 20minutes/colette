@@ -1,6 +1,6 @@
 {
   "name": "colette",
-  "version": "0.31.0",
+  "version": "0.31.1",
   "license": "MIT",
   "dependencies": {
     "headroom.js": "0.9.4",
