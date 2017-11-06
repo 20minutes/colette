@@ -530,7 +530,6 @@ template {
   font-family: '20mn';
   font-style: normal;
   src: url("../fonts/20mn.eot?#iefix") format('embedded-opentype'), url("../fonts/20mn.woff") format('woff');
-  font-display: optional;
 }
 form {
   position: relative;
