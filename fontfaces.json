@@ -1,5 +1,5 @@
 [{
-    "family": "'Open Sans WebFont'",
+    "family": "Open Sans WebFont",
     "weight": "normal",
     "style": "normal",
     "src":[
@@ -9,7 +9,7 @@
         "url('../fonts/OpenSans-Regular.woff') format('woff')"
     ]
 },{
-    "family": "'Open Sans WebFont'",
+    "family": "Open Sans WebFont",
     "weight": "normal",
     "style": "italic",
     "src":[
@@ -19,7 +19,7 @@
         "url('../fonts/OpenSans-Italic.woff') format('woff')"
     ]
 },{
-    "family": "'Open Sans WebFont'",
+    "family": "Open Sans WebFont",
     "weight": "bold",
     "style": "normal",
     "src": [
@@ -29,7 +29,7 @@
         "url('../fonts/OpenSans-Bold.woff') format('woff')"
     ]
 },{
-    "family": "'Open Sans WebFont'",
+    "family": "Open Sans WebFont",
     "weight": "bold",
     "style": "italic",
     "src": [
@@ -39,7 +39,7 @@
         "url('../fonts/OpenSans-BoldItalic.woff') format('woff')"
     ]
 },{
-    "family": "'Open Sans WebFont'",
+    "family": "Open Sans WebFont",
     "weight": 900,
     "style": "normal",
     "src": [

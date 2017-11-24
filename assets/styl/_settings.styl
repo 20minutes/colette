@@ -72,14 +72,11 @@ $font-icon ?= '20mn' // icon font
 
 // Fontfaces
 //
-// `$fontload` is by default optional and is related to `font-display` property.
-//
-// This parametter do not affect the font-icon.
-//
-// Set `$fontload-js` to `false` if you not use font loader js.
+// `$fontface` is an hash import from `$fontface-file` path of a json.
 //
 // Styleguide: Settings.Fonts.FontFaces
-$fontface ?= json('../../fontfaces.json', {hash: true})
+$fontface-file ?= '../../fontfaces.json'
+$fontface ?= json($fontface-file, {hash: true})
 
 // Font loading strategy
 //
@@ -87,7 +84,7 @@ $fontface ?= json('../../fontfaces.json', {hash: true})
 //
 // Styleguide: Settings.Fonts.Load
 $fontload ?= optional
-$fontload-js ?= false // js load is not aplemented yet
+$fontload-js ?= true // js load is not aplemented yet
 
 // Colors
 //

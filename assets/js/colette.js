@@ -6,6 +6,8 @@ colette.iframeResizer = iframeResizer;
 import headroom from 'headroom.js';
 colette.headroom = headroom;
 
+import './modules/fontFaceLoader';
+
 export {
     colette
 };

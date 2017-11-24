@@ -8,26 +8,33 @@
 //
 // Styleguide Mixins.FontLoad
 _fontload($family, $weight = @font-weight, $style = @font-style)
-    $weight = $weight ? $weight : 'normal'
-    $style = $style ? $style : 'normal'
-    $family-fallback = clone($family)
-    $font = shift($family-fallback)
-
-    $classPostFix = replace(' ', '', $font)
-
-    if ($weight)
-        $classPostFix = $classPostFix + '-' + $weight
-
-    if ($style)
-        $classPostFix = $classPostFix + '-' + $style
-
-    if ($fontload-js)
-        font-family $family-fallback
-
-        .wf-{$classPostFix} &
-            font-family $family
-
-        @supports (font-display $fontload)
-            font-family $family
-    else
+    if (!$fontload-js)
         font-family $family
+    else
+        $weight = $weight ? $weight : 'normal'
+        $style = $style ? $style : 'normal'
+        $family-fallback = clone($family)
+        $font = shift($family-fallback)
+
+        $isCustom = false
+        for key, val in $fontface
+            $isCustom = $isCustom || (('' + val.family) == $font)
+
+        if (!$isCustom)
+            font-family $family
+        else
+            $classPostFix = replace(' ', '', $font)
+
+            if ($weight)
+                $classPostFix = $classPostFix + '-' + $weight
+
+            if ($style)
+                $classPostFix = $classPostFix + '-' + $style
+
+            font-family $family-fallback
+
+            .wf-{$classPostFix} &
+                font-family $family
+
+            @supports (font-display $fontload)
+                font-family $family

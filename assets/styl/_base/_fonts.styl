@@ -20,10 +20,10 @@ for i, $font in $fontface
         for j, font in $font.src
             push(fontSrc, font)
 
-        font-family: $font.family // stylus fails if we ommit `:` for hashes getter
+        font-family: join(' ', $font.family) // stylus fails if we ommit `:` for hashes getter
         font-weight: $font.weight // stylus fails if we ommit `:` for hashes getter
         font-style: $font.style // stylus fails if we ommit `:` for hashes getter
-        src unquote(join(', ', fontSrc))
+        src s(join(', ', fontSrc))
         font-display $fontload
 
 // icons
