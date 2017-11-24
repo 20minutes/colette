@@ -13,8 +13,8 @@ html
     text-size-adjust 100% // 3
 
 body
+    _fontload($font-base)
     color $color-base
-    font-family $font-base
     font-size 1.6em
     line-height 1.5
     -webkit-font-smoothing antialiased
@@ -30,7 +30,7 @@ a
 
 for $i in 1..6
     h{$i}
-        font-family $font-headings
+        _fontload($font-headings)
         font-weight bold
         line-height 1.2
 
@@ -89,7 +89,7 @@ blockquote
         top 0
         left 0
         content '\201C'
-        font-family 'Georgia', Times New Roman, Times, serif
+        font-family 'Georgia', 'Times New Roman', Times, serif
         font-size 3em
         color $color-secondary
 

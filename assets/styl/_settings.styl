@@ -69,6 +69,23 @@ $font-headings ?= 'Open Sans WebFont', Arial, 'Helvetica Neue', Helvetica, sans-
 $font-secondary ?= 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif // article label, call to action, pagers... etc.
 $font-icon ?= '20mn' // icon font
 
+
+// Fontfaces
+//
+// `$fontface` is an hash import from `$fontface-file` path of a json.
+//
+// Styleguide: Settings.Fonts.FontFaces
+$fontface-file ?= '../../fontfaces.json'
+$fontface ?= json($fontface-file, {hash: true})
+
+// Font loading strategy
+//
+// `$fontload` is by default optional and is related to `font-display` property.
+//
+// Styleguide: Settings.Fonts.Load
+$fontload ?= optional
+$fontload-js ?= true // js load is not aplemented yet
+
 // Colors
 //
 // Every colors in this project are variables

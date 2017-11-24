@@ -1,21 +1,18 @@
 var gulp = require('gulp'),
-    concat = require('gulp-concat'),
     plumber = require('gulp-plumber'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
     cssnano = require('cssnano'),
     rename = require('gulp-rename'),
     stylus = require('gulp-stylus'),
-    stylusSvgImport = require('stylus-svg'),
     stylint = require('gulp-stylint'),
     eslint = require('gulp-eslint'),
     webpack = require('webpack'),
     gulpWebpack = require('webpack-stream'),
     UnminifiedWebpackPlugin = require('unminified-webpack-plugin'),
-    path = require('path'),
     svgstore = require('gulp-svgstore'),
     fs = require('fs'),
-    kss = require('kss')
+    kss = require('kss'),
     finalhandler = require('finalhandler'),
     http = require('http'),
     serveStatic = require('serve-static'),
@@ -45,8 +42,7 @@ function stylesBuild() {
         compress: false, // cssnano do it
         linenos: false,
         include: ['node_modules'],
-        'include css': true,
-        // use: [stylusSvgImport()]
+        'include css': true
     }))
     .pipe(postcss([
         autoprefixer(),
@@ -128,7 +124,7 @@ function scriptsLint() {
 function assetsCopy() {
     // Retrieve fonts into dist/ directory
     gulp.src(cfg.fontsDir + '*')
-        .pipe(gulp.dest(cfg.distDir + 'fonts'));
+    .pipe(gulp.dest(cfg.distDir + 'fonts'));
 }
 
 function svgBuild() {
@@ -146,7 +142,7 @@ function svgBuild() {
 function kssBuild() {
     // we need the dist/ folder to build docs/
     // so we check if it exists and throw an error if needed
-    return fs.access(cfg.distDir, function (err){
+    return fs.access(cfg.distDir, function (err) {
         if (err) {
             console.log('Can’t access the dist/ folder.');
             console.log('Try running `gulp build` to solve the problem.');
@@ -158,7 +154,7 @@ function kssBuild() {
         gulp.src(cfg.kssBuilderDir + '/styl/co-styles.styl')
         .pipe(stylus({
             compress: false, // cssnano do it
-            linenos: false,
+            linenos: false
         }))
         .pipe(postcss([
             autoprefixer(),
@@ -187,9 +183,9 @@ function startServer() {
     var serve = serveStatic('docs');
 
     var server = http.createServer(function (req, res) {
-      var done = finalhandler(req, res);
-      serve(req, res, done);
-    })
+        var done = finalhandler(req, res);
+        serve(req, res, done);
+    });
 
     server.listen(8000);
 }

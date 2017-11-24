@@ -10,7 +10,7 @@
         "dist/js/colette.min.js"
     ],
     "title": "Colette Style Guide",
-    "verbose": true,
+    "verbose": false,
     "homepage": "../../readme.md",
     "builder": "kss-builder",
     "extend": "kss-builder/extend",
