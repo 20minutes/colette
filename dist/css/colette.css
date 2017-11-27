@@ -904,11 +904,19 @@ small {
   font-size: 0.75em;
 }
 blockquote {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
   position: relative;
   padding: 0.75em 1.5em 0;
-  font-family: 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif;
   font-style: italic;
   line-height: 1.3;
+}
+.wf-OpenSansWebFont-normal-italic blockquote {
+  font-family: 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif;
+}
+@supports (font-display: optional) {
+  blockquote {
+    font-family: 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif;
+  }
 }
 blockquote:before {
   position: absolute;
@@ -1355,17 +1363,25 @@ figure {
   content: none;
 }
 .btn {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
   display: inline-block;
   text-align: center;
   padding: 0.5em 1.5em;
   border-radius: 20em;
-  font-family: 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 0.875em;
   font-weight: bold;
   text-transform: uppercase;
   background-color: #b7b7b7;
   transition: background-color 0.2s ease;
   color: #4c4d4e;
+}
+.wf-OpenSansWebFont-bold-normal .btn {
+  font-family: 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif;
+}
+@supports (font-display: optional) {
+  .btn {
+    font-family: 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif;
+  }
 }
 .btn svg {
   width: 0.9em;
@@ -1773,16 +1789,24 @@ figure {
   font-size: 0.85em;
 }
 .icon {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
   display: inline-block;
   vertical-align: top;
   border-radius: 0.5em;
   padding: 0.2em 0.3em;
   text-align: center;
-  font-family: 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 0.6875em;
   font-weight: bold;
   color: inherit;
   text-decoration: none;
+}
+.wf-OpenSansWebFont-bold-normal .icon {
+  font-family: 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif;
+}
+@supports (font-display: optional) {
+  .icon {
+    font-family: 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif;
+  }
 }
 .icon-picto {
   height: 2.5em;
@@ -1957,6 +1981,7 @@ figure {
   line-height: 1;
 }
 .media-credit {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
   display: inline-block;
   position: absolute;
   right: 0;
@@ -1964,11 +1989,18 @@ figure {
   padding: 0.2rem 0.6rem;
   margin: 0;
   background-color: rgba(0,0,0,0.6);
-  font-family: 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif;
   text-transform: uppercase;
   font-size: 1.1rem;
   font-weight: bold;
   color: #fff;
+}
+.wf-OpenSansWebFont-bold-normal .media-credit {
+  font-family: 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif;
+}
+@supports (font-display: optional) {
+  .media-credit {
+    font-family: 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif;
+  }
 }
 .media-video-container {
   position: relative;
@@ -2172,12 +2204,20 @@ figure {
   color: #fff;
 }
 .breakingnews .tabs-alert {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
   padding-left: 2.5em;
   padding-right: 0.5em;
   height: 3.1em;
-  font-family: 'Open Sans WebFont', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: bold;
   color: #cc190f;
+}
+.wf-OpenSansWebFont-bold-normal .breakingnews .tabs-alert {
+  font-family: 'Open Sans WebFont', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+@supports (font-display: optional) {
+  .breakingnews .tabs-alert {
+    font-family: 'Open Sans WebFont', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  }
 }
 @media screen and (min-width: 768px) {
   .breakingnews .tabs-alert {
@@ -2306,17 +2346,33 @@ figure {
   padding: 2.4rem;
 }
 .teaser-headline {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
   margin: 0;
-  font-family: 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: bold;
   font-size: 1.1rem;
   text-transform: uppercase;
 }
+.wf-OpenSansWebFont-bold-normal .teaser-headline {
+  font-family: 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif;
+}
+@supports (font-display: optional) {
+  .teaser-headline {
+    font-family: 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif;
+  }
+}
 .teaser-title {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
   margin: 0;
-  font-family: 'Open Sans WebFont', Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: bold;
   line-height: 1.2;
+}
+.wf-OpenSansWebFont-bold-normal .teaser-title {
+  font-family: 'Open Sans WebFont', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+@supports (font-display: optional) {
+  .teaser-title {
+    font-family: 'Open Sans WebFont', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  }
 }
 .teaser-summary {
   margin: 0;
