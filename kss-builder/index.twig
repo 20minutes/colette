@@ -8,8 +8,12 @@
     <meta name="generator" content="kss-node">
     <meta name="viewport" content="width=device-width">
 
-    <script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');</script>
-
+    <script>
+        document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
+        if (window.localStorage && window.localStorage.getItem('colette-font')) {
+            document.documentElement.className += ' webfont';
+        }
+    </script>
     {{ styles|raw }}
 </head>
 <body class="co">
@@ -261,7 +265,7 @@
 
     {# trigger sidebar #}
     trigger.addEventListener('click', function(){
-        document.body.style.overflow = "hidden"; // body should not scroll when sidebar is open
+        document.body.style.overflow = 'hidden'; // body should not scroll when sidebar is open
         sidebar.classList.add('co_sidebar-open');
         overlay.removeAttribute('aria-hidden');
     })

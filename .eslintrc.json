@@ -132,7 +132,7 @@
         "key-spacing": [
             2,
             {
-            "afterColon": true
+                "afterColon": true
             }
         ],
         "indent": [

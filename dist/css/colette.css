@@ -495,38 +495,30 @@ template {
 
 @font-face {
   font-family: 'Open Sans WebFont';
-  font-weight: normal;
   font-style: normal;
   src: local('Open Sans Regular'), local('Open-Sans-Regular'), url('../fonts/OpenSans-Regular.woff2') format('woff2'), url('../fonts/OpenSans-Regular.woff') format('woff');
-  font-display: optional;
 }
 @font-face {
   font-family: 'Open Sans WebFont';
-  font-weight: normal;
   font-style: italic;
   src: local('Open Sans Italic'), local('Open-Sans-Italic'), url('../fonts/OpenSans-Italic.woff2') format('woff2'), url('../fonts/OpenSans-Italic.woff') format('woff');
-  font-display: optional;
 }
 @font-face {
   font-family: 'Open Sans WebFont';
   font-weight: bold;
-  font-style: normal;
   src: local('Open Sans Bold'), local('Open-Sans-Bold'), url('../fonts/OpenSans-Bold.woff2') format('woff2'), url('../fonts/OpenSans-Bold.woff') format('woff');
-  font-display: optional;
 }
 @font-face {
   font-family: 'Open Sans WebFont';
   font-weight: bold;
   font-style: italic;
   src: local('Open Sans Bold Italic'), local('Open-Sans-Bold-Italic'), url('../fonts/OpenSans-BoldItalic.woff2') format('woff2'), url('../fonts/OpenSans-BoldItalic.woff') format('woff');
-  font-display: optional;
 }
 @font-face {
   font-family: 'Open Sans WebFont';
   font-weight: 900;
   font-style: normal;
   src: local('Open Sans ExtraBold'), local('Open-Sans-ExtraBold'), url('../fonts/OpenSans-ExtraBold.woff2') format('woff2'), url('../fonts/OpenSans-ExtraBold.woff') format('woff');
-  font-display: optional;
 }
 @font-face {
   font-family: '20mn';
@@ -790,78 +782,48 @@ h1 {
   font-weight: bold;
   line-height: 1.2;
 }
-.wf-OpenSansWebFont-bold-normal h1 {
+.webfont h1 {
   font-family: 'Open Sans WebFont', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-}
-@supports (font-display: optional) {
-  h1 {
-    font-family: 'Open Sans WebFont', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-  }
 }
 h2 {
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: bold;
   line-height: 1.2;
 }
-.wf-OpenSansWebFont-bold-normal h2 {
+.webfont h2 {
   font-family: 'Open Sans WebFont', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-}
-@supports (font-display: optional) {
-  h2 {
-    font-family: 'Open Sans WebFont', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-  }
 }
 h3 {
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: bold;
   line-height: 1.2;
 }
-.wf-OpenSansWebFont-bold-normal h3 {
+.webfont h3 {
   font-family: 'Open Sans WebFont', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-}
-@supports (font-display: optional) {
-  h3 {
-    font-family: 'Open Sans WebFont', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-  }
 }
 h4 {
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: bold;
   line-height: 1.2;
 }
-.wf-OpenSansWebFont-bold-normal h4 {
+.webfont h4 {
   font-family: 'Open Sans WebFont', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-}
-@supports (font-display: optional) {
-  h4 {
-    font-family: 'Open Sans WebFont', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-  }
 }
 h5 {
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: bold;
   line-height: 1.2;
 }
-.wf-OpenSansWebFont-bold-normal h5 {
+.webfont h5 {
   font-family: 'Open Sans WebFont', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-}
-@supports (font-display: optional) {
-  h5 {
-    font-family: 'Open Sans WebFont', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-  }
 }
 h6 {
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: bold;
   line-height: 1.2;
 }
-.wf-OpenSansWebFont-bold-normal h6 {
+.webfont h6 {
   font-family: 'Open Sans WebFont', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-}
-@supports (font-display: optional) {
-  h6 {
-    font-family: 'Open Sans WebFont', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-  }
 }
 h1 {
   font-size: 2.1rem;
@@ -910,13 +872,8 @@ blockquote {
   font-style: italic;
   line-height: 1.3;
 }
-.wf-OpenSansWebFont-normal-italic blockquote {
+.webfont blockquote {
   font-family: 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif;
-}
-@supports (font-display: optional) {
-  blockquote {
-    font-family: 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif;
-  }
 }
 blockquote:before {
   position: absolute;
@@ -1375,13 +1332,8 @@ figure {
   transition: background-color 0.2s ease;
   color: #4c4d4e;
 }
-.wf-OpenSansWebFont-bold-normal .btn {
+.webfont .btn {
   font-family: 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif;
-}
-@supports (font-display: optional) {
-  .btn {
-    font-family: 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif;
-  }
 }
 .btn svg {
   width: 0.9em;
@@ -1800,13 +1752,8 @@ figure {
   color: inherit;
   text-decoration: none;
 }
-.wf-OpenSansWebFont-bold-normal .icon {
+.webfont .icon {
   font-family: 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif;
-}
-@supports (font-display: optional) {
-  .icon {
-    font-family: 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif;
-  }
 }
 .icon-picto {
   height: 2.5em;
@@ -1994,13 +1941,8 @@ figure {
   font-weight: bold;
   color: #fff;
 }
-.wf-OpenSansWebFont-bold-normal .media-credit {
+.webfont .media-credit {
   font-family: 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif;
-}
-@supports (font-display: optional) {
-  .media-credit {
-    font-family: 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif;
-  }
 }
 .media-video-container {
   position: relative;
@@ -2211,13 +2153,8 @@ figure {
   font-weight: bold;
   color: #cc190f;
 }
-.wf-OpenSansWebFont-bold-normal .breakingnews .tabs-alert {
+.webfont .breakingnews .tabs-alert {
   font-family: 'Open Sans WebFont', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-}
-@supports (font-display: optional) {
-  .breakingnews .tabs-alert {
-    font-family: 'Open Sans WebFont', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-  }
 }
 @media screen and (min-width: 768px) {
   .breakingnews .tabs-alert {
@@ -2352,13 +2289,8 @@ figure {
   font-size: 1.1rem;
   text-transform: uppercase;
 }
-.wf-OpenSansWebFont-bold-normal .teaser-headline {
+.webfont .teaser-headline {
   font-family: 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif;
-}
-@supports (font-display: optional) {
-  .teaser-headline {
-    font-family: 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif;
-  }
 }
 .teaser-title {
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
@@ -2366,13 +2298,8 @@ figure {
   font-weight: bold;
   line-height: 1.2;
 }
-.wf-OpenSansWebFont-bold-normal .teaser-title {
+.webfont .teaser-title {
   font-family: 'Open Sans WebFont', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-}
-@supports (font-display: optional) {
-  .teaser-title {
-    font-family: 'Open Sans WebFont', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-  }
 }
 .teaser-summary {
   margin: 0;

@@ -100,7 +100,13 @@ var _headroom = __webpack_require__(3);
 
 var _headroom2 = _interopRequireDefault(_headroom);
 
-__webpack_require__(4);
+var _fontFaceLoader = __webpack_require__(4);
+
+var _fontFaceLoader2 = _interopRequireDefault(_fontFaceLoader);
+
+var _fontfaces = __webpack_require__(7);
+
+var _fontfaces2 = _interopRequireDefault(_fontfaces);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -109,6 +115,8 @@ var colette = window.colette || {};
 colette.iframeResizer = _iframeResizer2.default;
 
 colette.headroom = _headroom2.default;
+
+colette.fonts = new _fontFaceLoader2.default({ data: _fontfaces2.default });
 
 exports.colette = colette;
 
@@ -646,39 +654,138 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
 var _fontfaceobserver = __webpack_require__(5);
 
 var _fontfaceobserver2 = _interopRequireDefault(_fontfaceobserver);
 
-var _fontfaces = __webpack_require__(7);
-
-var _fontfaces2 = _interopRequireDefault(_fontfaces);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-if (!CSS.supports('font-display')) {
+/**
+ * Check if FontFaceSet API is supported, along with some browser quirks
+ * Mainly return false if the browser has the Safari 10 bugs. The
+ * native font load API in Safari 10 has two bugs that cause
+ * the document.fonts.load and FontFace.prototype.load methods
+ * to return promises that don't reliably get fired.
+ *
+ * The bugs are described in more detail here:
+ *  - https://bugs.webkit.org/show_bug.cgi?id=165037
+ *  - https://bugs.webkit.org/show_bug.cgi?id=164902
+ *
+ * If the browser is made by Apple, and has native font
+ * loading support, it is potentially affected. But the API
+ * was fixed around AppleWebKit version 603, so any newer
+ * versions that that does not contain the bug.
+ *
+ * @return {boolean}
+ */
+function isFontFaceSetCompatible() {
+    var compatible = document.fonts && document.fonts.load;
+    if (compatible && /Apple/.test(window.navigator.vendor)) {
+        var match = /AppleWebKit\/([0-9]+)(?:\.([0-9]+))(?:\.([0-9]+))/.exec(window.navigator.userAgent);
+        compatible = !(match && parseInt(match[1], 10) < 603);
+    }
+    return compatible;
+}
+
+var defaultConfig = {
+    localStorageKey: 'colette-font',
+    data: [],
+    class: 'webfont',
+    optional: true
+};
+
+function FontLoader(cfg) {
+    this.config = Object.assign({}, defaultConfig, cfg);
+    this.isActive = false;
+
+    this.init();
+}
+
+FontLoader.prototype.isFontLoaded = function isFontLoaded() {
+    // TODO: test if it's possible to be used only if font-display is not supported
+    // ('fontDisplay' in document.documentElement.style) ||
+    return localStorage && localStorage.getItem(this.config.localStorageKey) === 'loaded';
+};
+
+FontLoader.prototype.activeFonts = function activeFonts() {
+    document.documentElement.classList.add(this.config.class);
+    this.isActive = true;
+};
+
+FontLoader.prototype.init = function init() {
+    var _this = this;
+
+    // Initialize font loader only if it is not loaded previously
+    if (this.config.optional && this.isFontLoaded()) {
+        this.activeFonts();
+        return;
+    }
+
+    window.addEventListener('load', function () {
+        if (window.requestAnimationFrame) {
+            window.requestAnimationFrame(_this.load.bind(_this));
+            return;
+        }
+
+        _this.load();
+    });
+};
+
+FontLoader.prototype.updateLocalStorage = function updateLocalStorage() {
+    try {
+        localStorage.setItem(this.config.localStorageKey, 'loaded');
+    } catch (e) {
+        // Either localStorage not present or quota has exceeded
+        // Another reason Safari private mode
+        // https://stackoverflow.com/questions/14555347/html5-localstorage-error-with-safari-quota-exceeded-err-dom-exception-22-an
+    }
+};
+
+FontLoader.prototype.load = function load() {
+    var _this2 = this;
+
     var fontPromises = [];
 
-    _fontfaces2.default.forEach(function (font) {
-        var family = font.family.replace('\'', '');
-        var loader = new _fontfaceobserver2.default(family, {
-            weight: font.weight,
-            style: font.style
-        });
+    this.config.data.forEach(function (font) {
+        var fontFamily = font.family.replace('\'', '');
+        var fontWeight = font.weight ? font.weight : 'normal';
+        var fontStyle = font.style ? font.style : 'normal';
+        var promise = void 0;
 
-        var promise = loader.load();
+        if (isFontFaceSetCompatible()) {
+            document.fonts.load([fontStyle, fontWeight, '1em', fontFamily].join(' '));
+            promise = document.fonts.ready;
+        } else {
+            var loader = new _fontfaceobserver2.default(fontFamily, {
+                weight: fontWeight,
+                style: fontStyle
+            });
+            promise = loader.load();
+        }
+
         fontPromises.push(promise);
 
-        promise.then(function () {
-            document.documentElement.className += ' wf-' + font.family.replace(/\s/g, '') + '-' + font.weight + '-' + font.style;
-        });
+        promise.catch(function () {});
     });
 
-    // Maybe we should throw an event when fonts ar loaded
-    // Promise.all(fontPromises).then(function () {
-    //     console.log('All fonts loaded');
-    // });
-}
+    var allFontsPromise = Promise.all(fontPromises);
+
+    allFontsPromise.then(function () {
+        if (_this2.config.optional) {
+            _this2.updateLocalStorage();
+        } else {
+            _this2.activeFonts();
+        }
+    }).catch(function () {});
+
+    return allFontsPromise;
+};
+
+exports.default = FontLoader;
 
 /***/ }),
 /* 5 */
@@ -819,7 +926,7 @@ module.exports = function (module) {
 /* 7 */
 /***/ (function(module, exports) {
 
-module.exports = [{"family":"Open Sans WebFont","weight":"normal","style":"normal","src":["local('Open Sans Regular')","local('Open-Sans-Regular')","url('../fonts/OpenSans-Regular.woff2') format('woff2')","url('../fonts/OpenSans-Regular.woff') format('woff')"]},{"family":"Open Sans WebFont","weight":"normal","style":"italic","src":["local('Open Sans Italic')","local('Open-Sans-Italic')","url('../fonts/OpenSans-Italic.woff2') format('woff2')","url('../fonts/OpenSans-Italic.woff') format('woff')"]},{"family":"Open Sans WebFont","weight":"bold","style":"normal","src":["local('Open Sans Bold')","local('Open-Sans-Bold')","url('../fonts/OpenSans-Bold.woff2') format('woff2')","url('../fonts/OpenSans-Bold.woff') format('woff')"]},{"family":"Open Sans WebFont","weight":"bold","style":"italic","src":["local('Open Sans Bold Italic')","local('Open-Sans-Bold-Italic')","url('../fonts/OpenSans-BoldItalic.woff2') format('woff2')","url('../fonts/OpenSans-BoldItalic.woff') format('woff')"]},{"family":"Open Sans WebFont","weight":900,"style":"normal","src":["local('Open Sans ExtraBold')","local('Open-Sans-ExtraBold')","url('../fonts/OpenSans-ExtraBold.woff2') format('woff2')","url('../fonts/OpenSans-ExtraBold.woff') format('woff')"]}]
+module.exports = [{"family":"Open Sans WebFont","style":"normal","src":["local('Open Sans Regular')","local('Open-Sans-Regular')","url('../fonts/OpenSans-Regular.woff2') format('woff2')","url('../fonts/OpenSans-Regular.woff') format('woff')"]},{"family":"Open Sans WebFont","style":"italic","src":["local('Open Sans Italic')","local('Open-Sans-Italic')","url('../fonts/OpenSans-Italic.woff2') format('woff2')","url('../fonts/OpenSans-Italic.woff') format('woff')"]},{"family":"Open Sans WebFont","weight":"bold","src":["local('Open Sans Bold')","local('Open-Sans-Bold')","url('../fonts/OpenSans-Bold.woff2') format('woff2')","url('../fonts/OpenSans-Bold.woff') format('woff')"]},{"family":"Open Sans WebFont","weight":"bold","style":"italic","src":["local('Open Sans Bold Italic')","local('Open-Sans-Bold-Italic')","url('../fonts/OpenSans-BoldItalic.woff2') format('woff2')","url('../fonts/OpenSans-BoldItalic.woff') format('woff')"]},{"family":"Open Sans WebFont","weight":900,"style":"normal","src":["local('Open Sans ExtraBold')","local('Open-Sans-ExtraBold')","url('../fonts/OpenSans-ExtraBold.woff2') format('woff2')","url('../fonts/OpenSans-ExtraBold.woff') format('woff')"]}]
 
 /***/ })
 /******/ ]);
