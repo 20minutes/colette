@@ -44,7 +44,7 @@ function FontLoader(cfg) {
 FontLoader.prototype.isFontLoaded = function isFontLoaded() {
     // TODO: test if it's possible to be used only if font-display is not supported
     // ('fontDisplay' in document.documentElement.style) ||
-    return (localStorage && localStorage.getItem(this.config.localStorageKey) === 'loaded');
+    return localStorage && localStorage.getItem(this.config.localStorageKey) === 'loaded';
 };
 
 FontLoader.prototype.activeFonts = function activeFonts() {
@@ -84,8 +84,8 @@ FontLoader.prototype.load = function load() {
 
     this.config.data.forEach((font) => {
         const fontFamily = font.family.replace('\'', '');
-        const fontWeight = (font.weight) ? font.weight : 'normal';
-        const fontStyle = (font.style) ? font.style : 'normal';
+        const fontWeight = font.weight ? font.weight : 'normal';
+        const fontStyle = font.style ? font.style : 'normal';
         let promise;
 
         if (isFontFaceSetCompatible()) {
