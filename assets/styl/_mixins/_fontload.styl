@@ -7,12 +7,10 @@
 // $style     - style of font (by default current `font-style` or `normal`)
 //
 // Styleguide Mixins.FontLoad
-_fontload($family, $weight = @font-weight, $style = @font-style)
+_fontload($family)
     if (!$fontload-js)
         font-family $family
     else
-        $weight = $weight ? $weight : 'normal'
-        $style = $style ? $style : 'normal'
         $family-fallback = clone($family)
         $font = shift($family-fallback)
 
@@ -23,18 +21,7 @@ _fontload($family, $weight = @font-weight, $style = @font-style)
         if (!$isCustom)
             font-family $family
         else
-            $classPostFix = replace(' ', '', $font)
-
-            if ($weight)
-                $classPostFix = $classPostFix + '-' + $weight
-
-            if ($style)
-                $classPostFix = $classPostFix + '-' + $style
-
             font-family $family-fallback
 
-            .wf-{$classPostFix} &
-                font-family $family
-
-            @supports (font-display $fontload)
+            .{$fontload-class} &
                 font-family $family

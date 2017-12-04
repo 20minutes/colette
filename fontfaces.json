@@ -1,6 +1,5 @@
 [{
     "family": "Open Sans WebFont",
-    "weight": "normal",
     "style": "normal",
     "src":[
         "local('Open Sans Regular')",
@@ -10,7 +9,6 @@
     ]
 },{
     "family": "Open Sans WebFont",
-    "weight": "normal",
     "style": "italic",
     "src":[
         "local('Open Sans Italic')",
@@ -21,7 +19,6 @@
 },{
     "family": "Open Sans WebFont",
     "weight": "bold",
-    "style": "normal",
     "src": [
         "local('Open Sans Bold')",
         "local('Open-Sans-Bold')",

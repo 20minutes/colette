@@ -21,10 +21,16 @@ for i, $font in $fontface
             push(fontSrc, font)
 
         font-family: join(' ', $font.family) // stylus fails if we ommit `:` for hashes getter
-        font-weight: $font.weight // stylus fails if we ommit `:` for hashes getter
-        font-style: $font.style // stylus fails if we ommit `:` for hashes getter
+        if $font.weight
+            font-weight: $font.weight // stylus fails if we ommit `:` for hashes getter
+
+        if $font.style
+            font-style: $font.style // stylus fails if we ommit `:` for hashes getter
+
         src s(join(', ', fontSrc))
-        font-display $fontload
+
+        if (!$fontload-js)
+            font-display $fontload
 
 // icons
 // TODO: Remove

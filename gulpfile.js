@@ -50,7 +50,12 @@ function stylesBuild() {
     .pipe(rename('colette.css'))
     .pipe(gulp.dest(dest))
     .pipe(postcss([
-        cssnano
+        cssnano({
+            zindex: false,
+            minifyFontValues: {
+                removeQuotes: false
+            }
+        })
     ]))
     .pipe(rename('colette.min.css'))
     .pipe(gulp.dest(dest));
