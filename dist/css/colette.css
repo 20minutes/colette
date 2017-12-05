@@ -560,6 +560,10 @@ form[aria-busy=true]:after {
   top: 0;
   background: rgba(255,255,255,0.8);
 }
+fieldset {
+  border: 0;
+  padding: 0;
+}
 label,
 button,
 input {
