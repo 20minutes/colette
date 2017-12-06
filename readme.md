@@ -27,11 +27,6 @@ that allows you to react to the user's scroll.
 npm install colette --save
 ```
 
-### With Bower
-```bash
-bower install colette --save
-```
-
 ---
 ## Download
 - See the [`dist/`](https://github.com/20minutes/colette/dist/)

@@ -19,7 +19,6 @@ var gulp = require('gulp'),
     named = require('vinyl-named');
 
 var cfg = {
-    bowerDir: 'bower_components/',
     fontsDir: 'assets/fonts/',
     cssDir: 'assets/styl/',
     jsDir: 'assets/js/',
