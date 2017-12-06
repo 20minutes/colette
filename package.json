@@ -1,6 +1,6 @@
 {
   "name": "colette",
-  "version": "0.35.0",
+  "version": "0.35.1",
   "license": "MIT",
   "dependencies": {
     "fontfaceobserver": "^2.0.13",
