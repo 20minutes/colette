@@ -746,6 +746,10 @@ input[type='radio'] + label:before {
   padding: 0;
   box-sizing: border-box;
 }
+*:focus {
+  outline: dashed thin #4c4d4e;
+  outline-offset: 0.3em;
+}
 :before,
 :after {
   box-sizing: border-box;
@@ -778,10 +782,6 @@ body {
 a {
   color: #4c4d4e;
   text-decoration: none;
-}
-a:focus {
-  outline: dashed thin #4c4d4e;
-  outline-offset: 0.3em;
 }
 h1 {
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
@@ -1352,10 +1352,6 @@ figure {
 .btn svg.right {
   margin-left: 0.3em;
 }
-.btn:focus {
-  outline: dashed thin #4c4d4e;
-  outline-offset: 0.3em;
-}
 .btn-icon {
   display: inline-block;
   border-radius: 60em;
@@ -1655,11 +1651,6 @@ figure {
   margin-right: 0.6rem;
   height: 1em;
   width: 1em;
-}
-.form-single-row input[type='submit']:focus,
-.form-single-row button[type='submit']:focus {
-  outline: dashed thin #4c4d4e;
-  outline-offset: 0.3em;
 }
 .form-single-row-transparent input[type='submit'],
 .form-single-row-transparent button[type='submit'] {
