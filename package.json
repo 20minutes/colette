@@ -1,6 +1,6 @@
 {
   "name": "colette",
-  "version": "0.35.1",
+  "version": "0.35.2",
   "license": "MIT",
   "dependencies": {
     "fontfaceobserver": "^2.0.13",
@@ -57,7 +57,8 @@
   "files": [
     "dist",
     "assets",
-    "favicon.ico"
+    "favicon.ico",
+    "fontfaces.json"
   ],
   "scripts": {
     "start": "gulp",
