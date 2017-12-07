@@ -33,6 +33,29 @@ clearfix = @block
         clear both
         visibility hidden
 
+// {outline}
+//
+// Add a style on the focused outline.
+//
+// **Usage**
+// ```
+// /* my_file.styl */
+// .foo
+//     {outline}
+// ```
+// will compile to
+// ```
+// /* my_file.css */
+// .foo
+//    outline dashed thin $color-base
+//    outline-offset .3em
+// ```
+//
+// Styleguide @blocks.Block.outline
+outline = @block
+    outline dashed thin $color-base
+    outline-offset .3em
+
 // {fullWidth}
 //
 // Streches an element to match the width of its parent.
