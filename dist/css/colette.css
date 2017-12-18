@@ -734,8 +734,7 @@ input[type='radio']:checked + label:after {
 }
 input[type='checkbox']:focus + label,
 input[type='radio']:focus + label {
-  outline: dashed thin #4c4d4e;
-  outline-offset: 0.3em;
+  outline: dotted thin #878787;
 }
 input[type='radio'] + label:after,
 input[type='radio'] + label:before {
@@ -747,8 +746,7 @@ input[type='radio'] + label:before {
   box-sizing: border-box;
 }
 *:focus {
-  outline: dashed thin #4c4d4e;
-  outline-offset: 0.3em;
+  outline: dotted thin #878787;
 }
 :before,
 :after {
@@ -1366,8 +1364,7 @@ figure {
   display: block;
 }
 .btn-icon:focus {
-  outline: dashed thin #4c4d4e;
-  outline-offset: 0.3em;
+  outline: dotted thin #878787;
 }
 .btn:disabled,
 .btn-icon:disabled {
