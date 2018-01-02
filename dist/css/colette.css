@@ -736,6 +736,10 @@ input[type='checkbox']:focus + label,
 input[type='radio']:focus + label {
   outline: dotted thin #878787;
 }
+.js-focus-ring input[type='checkbox']:focus:not(.focus-ring) + label,
+.js-focus-ring input[type='radio']:focus:not(.focus-ring) + label {
+  outline: 0;
+}
 input[type='radio'] + label:after,
 input[type='radio'] + label:before {
   border-radius: 20em;
@@ -747,6 +751,9 @@ input[type='radio'] + label:before {
 }
 *:focus {
   outline: dotted thin #878787;
+}
+.js-focus-ring *:focus:not(.focus-ring) {
+  outline: 0;
 }
 :before,
 :after {
@@ -1362,9 +1369,6 @@ figure {
   height: 1em;
   margin: 0.33em;
   display: block;
-}
-.btn-icon:focus {
-  outline: dotted thin #878787;
 }
 .btn:disabled,
 .btn-icon:disabled {
