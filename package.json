@@ -1,12 +1,15 @@
 {
   "name": "colette",
-  "version": "0.35.4",
+  "version": "0.36.0",
   "license": "MIT",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "dom4": "^2.0.0",
     "fontfaceobserver": "^2.0.13",
     "headroom.js": "0.9.4",
     "normalize.css": "7.0.0",
-    "stylus-svg": "^0.3.2"
+    "stylus-svg": "^0.3.2",
+    "wicg-focus-ring": "^3.0.2"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.6",
@@ -28,6 +31,7 @@
     "gulp-stylus": "^2.6.0",
     "gulp-svgstore": "^6.1.0",
     "kss": "3.0.0-beta.18",
+    "postcss-focus-ring": "^1.0.0",
     "serve-static": "^1.13.1",
     "stylint": "^1.5.9",
     "unminified-webpack-plugin": "^1.4.2",

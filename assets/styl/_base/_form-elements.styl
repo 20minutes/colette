@@ -229,8 +229,12 @@ input[type='radio']
             background-color $color-base
             opacity 1
 
-    &:focus + label
-        {outline}
+    &:focus
+        + label
+            {outline}
+
+        .js-focus-ring &:not(:focus-ring) + label
+            outline 0
 
 input[type='radio']
     + label
