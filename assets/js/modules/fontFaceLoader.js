@@ -19,9 +19,9 @@ import FontFaceObserver from 'fontfaceobserver';
  * @return {boolean}
  */
 function isFontFaceSetCompatible() {
-    var compatible = document.fonts && document.fonts.load;
+    let compatible = document.fonts && document.fonts.load;
     if (compatible && /Apple/.test(window.navigator.vendor)) {
-        var match = /AppleWebKit\/([0-9]+)(?:\.([0-9]+))(?:\.([0-9]+))/.exec(window.navigator.userAgent);
+        const match = /AppleWebKit\/([0-9]+)(?:\.([0-9]+))(?:\.([0-9]+))/.exec(window.navigator.userAgent);
         compatible = !(match && parseInt(match[1], 10) < 603);
     }
     return compatible;

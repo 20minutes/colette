@@ -1,24 +1,25 @@
-var gulp = require('gulp'),
-    plumber = require('gulp-plumber'),
-    postcss = require('gulp-postcss'),
-    autoprefixer = require('autoprefixer'),
-    cssnano = require('cssnano'),
-    rename = require('gulp-rename'),
-    stylus = require('gulp-stylus'),
-    stylint = require('gulp-stylint'),
-    eslint = require('gulp-eslint'),
-    webpack = require('webpack'),
-    gulpWebpack = require('webpack-stream'),
-    UnminifiedWebpackPlugin = require('unminified-webpack-plugin'),
-    svgstore = require('gulp-svgstore'),
-    fs = require('fs'),
-    kss = require('kss'),
-    finalhandler = require('finalhandler'),
-    http = require('http'),
-    serveStatic = require('serve-static'),
-    named = require('vinyl-named');
+const gulp = require('gulp');
+const plumber = require('gulp-plumber');
+const rename = require('gulp-rename');
+const stylus = require('gulp-stylus');
+const stylint = require('gulp-stylint');
+const eslint = require('gulp-eslint');
+const webpack = require('webpack');
+const gulpWebpack = require('webpack-stream');
+const UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
+const svgstore = require('gulp-svgstore');
+const fs = require('fs');
+const kss = require('kss');
+const finalhandler = require('finalhandler');
+const http = require('http');
+const serveStatic = require('serve-static');
+const named = require('vinyl-named');
+const postcss = require('gulp-postcss');
+const cssnano = require('cssnano');
+const autoprefixer = require('autoprefixer');
+const postcssFocusRing = require('postcss-focus-ring');
 
-var cfg = {
+const cfg = {
     fontsDir: 'assets/fonts/',
     cssDir: 'assets/styl/',
     jsDir: 'assets/js/',
@@ -34,7 +35,7 @@ var cfg = {
 };
 
 function stylesBuild() {
-    var dest = cfg.distDir + 'css';
+    const dest = cfg.distDir + 'css';
 
     gulp.src(cfg.cssDir + 'colette.styl')
     .pipe(stylus({
@@ -44,7 +45,8 @@ function stylesBuild() {
         'include css': true
     }))
     .pipe(postcss([
-        autoprefixer(),
+        postcssFocusRing(),
+        autoprefixer()
     ]))
     .pipe(rename('colette.css'))
     .pipe(gulp.dest(dest))
@@ -135,7 +137,7 @@ function svgBuild() {
     return gulp
     .src(cfg.svgDir + cfg.svgPattern, {base: cfg.svgDir})
     .pipe(rename(function (filePath) {
-        var name = filePath.dirname !== '.' ? filePath.dirname.split(filePath.sep) : [];
+        const name = filePath.dirname !== '.' ? filePath.dirname.split(filePath.sep) : [];
         name.push(filePath.basename);
         filePath.basename = 'symbol-' + name.join('-');
     }))
@@ -160,9 +162,10 @@ function kssBuild() {
             compress: false, // cssnano do it
             linenos: false
         }))
-        .pipe(postcss([
+        .pipe(require('gulp-postcss')([
+            postcssFocusRing(),
             autoprefixer(),
-            cssnano
+            cssnano()
         ]))
         .pipe(rename('co-styles.min.css'))
         .pipe(gulp.dest(cfg.kssBuilderDir + 'kss-assets/'));
@@ -184,10 +187,10 @@ function watch() {
 }
 
 function startServer() {
-    var serve = serveStatic('docs');
+    const serve = serveStatic('docs');
 
-    var server = http.createServer(function (req, res) {
-        var done = finalhandler(req, res);
+    const server = http.createServer(function (req, res) {
+        const done = finalhandler(req, res);
         serve(req, res, done);
     });
 
