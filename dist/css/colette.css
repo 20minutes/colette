@@ -983,261 +983,352 @@ figure {
 .footerbar a:hover {
   text-decoration: underline;
 }
+.g:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.g-col-1 {
+  float: left;
+  width: 8.333%;
+}
+.g-offset-1 {
+  margin-left: 8.333%;
+}
+.g-col-2 {
+  float: left;
+  width: 16.667%;
+}
+.g-offset-2 {
+  margin-left: 16.667%;
+}
+.g-col-3 {
+  float: left;
+  width: 25%;
+}
+.g-offset-3 {
+  margin-left: 25%;
+}
+.g-col-4 {
+  float: left;
+  width: 33.333%;
+}
+.g-offset-4 {
+  margin-left: 33.333%;
+}
+.g-col-5 {
+  float: left;
+  width: 41.667%;
+}
+.g-offset-5 {
+  margin-left: 41.667%;
+}
+.g-col-6 {
+  float: left;
+  width: 50%;
+}
+.g-offset-6 {
+  margin-left: 50%;
+}
+.g-col-7 {
+  float: left;
+  width: 58.333%;
+}
+.g-offset-7 {
+  margin-left: 58.333%;
+}
+.g-col-8 {
+  float: left;
+  width: 66.667%;
+}
+.g-offset-8 {
+  margin-left: 66.667%;
+}
+.g-col-9 {
+  float: left;
+  width: 75%;
+}
+.g-offset-9 {
+  margin-left: 75%;
+}
+.g-col-10 {
+  float: left;
+  width: 83.333%;
+}
+.g-offset-10 {
+  margin-left: 83.333%;
+}
+.g-col-11 {
+  float: left;
+  width: 91.667%;
+}
+.g-offset-11 {
+  margin-left: 91.667%;
+}
+.g-col-12 {
+  float: left;
+  width: 100%;
+}
+.g-offset-12 {
+  margin-left: 100%;
+}
 @media screen and (min-width: 420px) {
-  .col-sm-1 {
+  .g-col-sm-1 {
     float: left;
     width: 8.333%;
   }
-  .offset-sm-1 {
+  .g-offset-sm-1 {
     margin-left: 8.333%;
   }
-  .col-sm-2 {
+  .g-col-sm-2 {
     float: left;
     width: 16.667%;
   }
-  .offset-sm-2 {
+  .g-offset-sm-2 {
     margin-left: 16.667%;
   }
-  .col-sm-3 {
+  .g-col-sm-3 {
     float: left;
     width: 25%;
   }
-  .offset-sm-3 {
+  .g-offset-sm-3 {
     margin-left: 25%;
   }
-  .col-sm-4 {
+  .g-col-sm-4 {
     float: left;
     width: 33.333%;
   }
-  .offset-sm-4 {
+  .g-offset-sm-4 {
     margin-left: 33.333%;
   }
-  .col-sm-5 {
+  .g-col-sm-5 {
     float: left;
     width: 41.667%;
   }
-  .offset-sm-5 {
+  .g-offset-sm-5 {
     margin-left: 41.667%;
   }
-  .col-sm-6 {
+  .g-col-sm-6 {
     float: left;
     width: 50%;
   }
-  .offset-sm-6 {
+  .g-offset-sm-6 {
     margin-left: 50%;
   }
-  .col-sm-7 {
+  .g-col-sm-7 {
     float: left;
     width: 58.333%;
   }
-  .offset-sm-7 {
+  .g-offset-sm-7 {
     margin-left: 58.333%;
   }
-  .col-sm-8 {
+  .g-col-sm-8 {
     float: left;
     width: 66.667%;
   }
-  .offset-sm-8 {
+  .g-offset-sm-8 {
     margin-left: 66.667%;
   }
-  .col-sm-9 {
+  .g-col-sm-9 {
     float: left;
     width: 75%;
   }
-  .offset-sm-9 {
+  .g-offset-sm-9 {
     margin-left: 75%;
   }
-  .col-sm-10 {
+  .g-col-sm-10 {
     float: left;
     width: 83.333%;
   }
-  .offset-sm-10 {
+  .g-offset-sm-10 {
     margin-left: 83.333%;
   }
-  .col-sm-11 {
+  .g-col-sm-11 {
     float: left;
     width: 91.667%;
   }
-  .offset-sm-11 {
+  .g-offset-sm-11 {
     margin-left: 91.667%;
   }
-  .col-sm-12 {
+  .g-col-sm-12 {
     float: left;
     width: 100%;
   }
-  .offset-sm-12 {
+  .g-offset-sm-12 {
     margin-left: 100%;
   }
 }
 @media screen and (min-width: 768px) {
-  .col-md-1 {
+  .g-col-md-1 {
     float: left;
     width: 8.333%;
   }
-  .offset-md-1 {
+  .g-offset-md-1 {
     margin-left: 8.333%;
   }
-  .col-md-2 {
+  .g-col-md-2 {
     float: left;
     width: 16.667%;
   }
-  .offset-md-2 {
+  .g-offset-md-2 {
     margin-left: 16.667%;
   }
-  .col-md-3 {
+  .g-col-md-3 {
     float: left;
     width: 25%;
   }
-  .offset-md-3 {
+  .g-offset-md-3 {
     margin-left: 25%;
   }
-  .col-md-4 {
+  .g-col-md-4 {
     float: left;
     width: 33.333%;
   }
-  .offset-md-4 {
+  .g-offset-md-4 {
     margin-left: 33.333%;
   }
-  .col-md-5 {
+  .g-col-md-5 {
     float: left;
     width: 41.667%;
   }
-  .offset-md-5 {
+  .g-offset-md-5 {
     margin-left: 41.667%;
   }
-  .col-md-6 {
+  .g-col-md-6 {
     float: left;
     width: 50%;
   }
-  .offset-md-6 {
+  .g-offset-md-6 {
     margin-left: 50%;
   }
-  .col-md-7 {
+  .g-col-md-7 {
     float: left;
     width: 58.333%;
   }
-  .offset-md-7 {
+  .g-offset-md-7 {
     margin-left: 58.333%;
   }
-  .col-md-8 {
+  .g-col-md-8 {
     float: left;
     width: 66.667%;
   }
-  .offset-md-8 {
+  .g-offset-md-8 {
     margin-left: 66.667%;
   }
-  .col-md-9 {
+  .g-col-md-9 {
     float: left;
     width: 75%;
   }
-  .offset-md-9 {
+  .g-offset-md-9 {
     margin-left: 75%;
   }
-  .col-md-10 {
+  .g-col-md-10 {
     float: left;
     width: 83.333%;
   }
-  .offset-md-10 {
+  .g-offset-md-10 {
     margin-left: 83.333%;
   }
-  .col-md-11 {
+  .g-col-md-11 {
     float: left;
     width: 91.667%;
   }
-  .offset-md-11 {
+  .g-offset-md-11 {
     margin-left: 91.667%;
   }
-  .col-md-12 {
+  .g-col-md-12 {
     float: left;
     width: 100%;
   }
-  .offset-md-12 {
+  .g-offset-md-12 {
     margin-left: 100%;
   }
 }
 @media screen and (min-width: 960px) {
-  .col-lg-1 {
+  .g-col-lg-1 {
     float: left;
     width: 8.333%;
   }
-  .offset-lg-1 {
+  .g-offset-lg-1 {
     margin-left: 8.333%;
   }
-  .col-lg-2 {
+  .g-col-lg-2 {
     float: left;
     width: 16.667%;
   }
-  .offset-lg-2 {
+  .g-offset-lg-2 {
     margin-left: 16.667%;
   }
-  .col-lg-3 {
+  .g-col-lg-3 {
     float: left;
     width: 25%;
   }
-  .offset-lg-3 {
+  .g-offset-lg-3 {
     margin-left: 25%;
   }
-  .col-lg-4 {
+  .g-col-lg-4 {
     float: left;
     width: 33.333%;
   }
-  .offset-lg-4 {
+  .g-offset-lg-4 {
     margin-left: 33.333%;
   }
-  .col-lg-5 {
+  .g-col-lg-5 {
     float: left;
     width: 41.667%;
   }
-  .offset-lg-5 {
+  .g-offset-lg-5 {
     margin-left: 41.667%;
   }
-  .col-lg-6 {
+  .g-col-lg-6 {
     float: left;
     width: 50%;
   }
-  .offset-lg-6 {
+  .g-offset-lg-6 {
     margin-left: 50%;
   }
-  .col-lg-7 {
+  .g-col-lg-7 {
     float: left;
     width: 58.333%;
   }
-  .offset-lg-7 {
+  .g-offset-lg-7 {
     margin-left: 58.333%;
   }
-  .col-lg-8 {
+  .g-col-lg-8 {
     float: left;
     width: 66.667%;
   }
-  .offset-lg-8 {
+  .g-offset-lg-8 {
     margin-left: 66.667%;
   }
-  .col-lg-9 {
+  .g-col-lg-9 {
     float: left;
     width: 75%;
   }
-  .offset-lg-9 {
+  .g-offset-lg-9 {
     margin-left: 75%;
   }
-  .col-lg-10 {
+  .g-col-lg-10 {
     float: left;
     width: 83.333%;
   }
-  .offset-lg-10 {
+  .g-offset-lg-10 {
     margin-left: 83.333%;
   }
-  .col-lg-11 {
+  .g-col-lg-11 {
     float: left;
     width: 91.667%;
   }
-  .offset-lg-11 {
+  .g-offset-lg-11 {
     margin-left: 91.667%;
   }
-  .col-lg-12 {
+  .g-col-lg-12 {
     float: left;
     width: 100%;
   }
-  .offset-lg-12 {
+  .g-offset-lg-12 {
     margin-left: 100%;
   }
 }
@@ -1761,7 +1852,7 @@ figure {
   width: 2.5em;
   display: block;
   margin: 0 auto;
-  fill: currentcolor;
+  fill: currentColor;
   padding: 0 0.2em;
 }
 .icon-label {
