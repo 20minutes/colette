@@ -1817,9 +1817,6 @@ figure {
   display: block;
   font-weight: bold;
 }
-.form-field ul {
-  margin: 0;
-}
 .form-field-error {
   border-color: #cc190f !important;
 }
