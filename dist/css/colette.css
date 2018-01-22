@@ -983,12 +983,24 @@ figure {
 .footerbar a:hover {
   text-decoration: underline;
 }
+.g {
+  padding: 0 !important;
+}
 .g:after {
   content: '';
   display: block;
   height: 0;
   clear: both;
   visibility: hidden;
+}
+.g-withgutters {
+  margin-left: -0.6rem;
+  margin-right: -0.6rem;
+}
+.g-withgutters > * {
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  margin: 0;
 }
 .g-col-1 {
   float: left;

@@ -413,10 +413,11 @@ $co-color-body = #f1f1f1
     &_grid-demo
         padding-bottom 2em
 
-        [class^=g-col-]:not(.g)
+        [class^=g-col-]:empty:before
+            content attr(class)
+            display block
             padding 1em
-            border-top 1px solid $co-color-body
-            border-right 1px solid $co-color-body
+            border 1px solid $co-color-body
             background-color alpha($co-color-primary, .2)
             text-align center
 
