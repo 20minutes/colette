@@ -1,6 +1,6 @@
 {
   "name": "colette",
-  "version": "0.41.1",
+  "version": "0.42.0",
   "license": "MIT",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
