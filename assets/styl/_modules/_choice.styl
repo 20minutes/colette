@@ -1,0 +1,40 @@
+// Special Choice Radio buttons
+//
+// Specific styles for radio buttons.
+// Radio Buttons will look like buttons.
+//
+// Markup: choice.twig
+//
+// Weight: 7
+//
+// Styleguide: Components.Forms.choice
+.choice
+    &-list
+        margin-top 0
+        margin-bottom 0
+
+        li
+            list-style-type none
+
+        label
+            display inline-block
+            position relative
+            text-align center
+            border solid 1px $color-base-lighten
+            background-color $color-white
+            border-radius .3em
+            width 100%
+            height 3.8rem
+            line-height calc(3.8rem - 2px)
+
+        input[type=radio]
+            & + label
+                padding-left 0
+
+                &:before
+                &:after
+                    display none
+
+            &:checked + label
+                color $color-white
+                background $color-base
