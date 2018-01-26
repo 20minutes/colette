@@ -5,25 +5,40 @@
 //
 // Styleguide Mixins.Spaces
 
-// _pa()
+@require '_gutterToRem'
+@require '_map'
+
+// _p()
 //
 // Returns a `padding` based on `$gutter` value.
 // ```
 // /* my_file.styl */
 // $gutter = 20px // overrides colette's default value
-// _pa(1)
+// .one-argument
+//     _p(1)
+//
+// .multiple-arguments
+//     _p(1 2 3 4)
 // ```
 // will compile to
 // ```
 // /* my_file.css */
-// padding: 20px;
+// .one-argument {
+//     padding: 2rem;
+// }
+//
+// .multiple-arguments {
+//     padding: 2rem 4rem 6rem 8rem;
+// }
 // ```
 //
-// $i   - multiplier of `$gutter`
+// args   - multiplier of `$gutter`
 //
 // Styleguide Mixins.Spaces.pa
-_pa(i)
-    padding i * $gutter * .1rem
+_p(values)
+    if length(values) > 4
+        warn('_p can only receive a list of 4 numbers max')
+    padding map(values, gutterToRem)
 
 
 // _pt()
@@ -37,14 +52,14 @@ _pa(i)
 // will compile to
 // ```
 // /* my_file.css */
-// padding-top: 20px;
+// padding-top: 2rem;
 // ```
 //
 // $i   - multiplier of `$gutter`
 //
 // Styleguide Mixins.Spaces.pt
 _pt(i)
-    padding-top i * $gutter * .1rem
+    padding-top gutterToRem(i)
 
 
 // _pr()
@@ -58,14 +73,14 @@ _pt(i)
 // will compile to
 // ```
 // /* my_file.css */
-// padding-right: 20px;
+// padding-right: 2rem;
 // ```
 //
 // $i   - multiplier of `$gutter`
 //
 // Styleguide Mixins.Spaces.pr
 _pr(i)
-    padding-right i * $gutter * .1rem
+    padding-right gutterToRem(i)
 
 
 // _pb()
@@ -79,14 +94,14 @@ _pr(i)
 // will compile to
 // ```
 // /* my_file.css */
-// padding-bottom: 20px;
+// padding-bottom: 2rem;
 // ```
 //
 // $i   - multiplier of `$gutter`
 //
 // Styleguide Mixins.Spaces.pb
 _pb(i)
-    padding-bottom i * $gutter * .1rem
+    padding-bottom gutterToRem(i)
 
 
 // _pl()
@@ -100,35 +115,47 @@ _pb(i)
 // will compile to
 // ```
 // /* my_file.css */
-// padding-left: 20px;
+// padding-left: 2rem;
 // ```
 //
 // $i   - multiplier of `$gutter`
 //
 // Styleguide Mixins.Spaces.pl
 _pl(i)
-    padding-left i * $gutter * .1rem
+    padding-left gutterToRem(i)
 
 
-// _ma()
+// _m()
 //
 // Returns a `margin` based on `$gutter` value.
 // ```
 // /* my_file.styl */
 // $gutter = 20px // overrides colette's default value
-// _ma(1)
+// .one-argument
+//     _m(1)
+//
+// .multiple-arguments
+//     _m(1 2 3 4)
 // ```
 // will compile to
 // ```
 // /* my_file.css */
-// margin: 20px;
+// .one-argument {
+//     margin: 2rem;
+// }
+//
+// .multiple-arguments {
+//     margin: 2rem 4rem 6rem 8rem;
+// }
 // ```
 //
-// $i   - multiplier of `$gutter`
+// args   - multiplier of `$gutter`
 //
 // Styleguide Mixins.Spaces.ma
-_ma(i)
-    margin i * $gutter * .1rem
+_m(values)
+    if length(values) > 4
+        warn('_m can only receive a list of 4 numbers max')
+    margin map(values, gutterToRem)
 
 
 // _mt()
@@ -142,14 +169,14 @@ _ma(i)
 // will compile to
 // ```
 // /* my_file.css */
-// margin-top: 20px;
+// margin-top: 2rem;
 // ```
 //
 // $i   - multiplier of `$gutter`
 //
 // Styleguide Mixins.Spaces.mt
 _mt(i)
-    margin-top i * $gutter * .1rem
+    margin-top gutterToRem(i)
 
 
 // _mr()
@@ -163,14 +190,14 @@ _mt(i)
 // will compile to
 // ```
 // /* my_file.css */
-// margin-right: 20px;
+// margin-right: 2rem;
 // ```
 //
 // $i   - multiplier of `$gutter`
 //
 // Styleguide Mixins.Spaces.mr
 _mr(i)
-    margin-right i * $gutter * .1rem
+    margin-right gutterToRem(i)
 
 
 // _mb()
@@ -184,14 +211,14 @@ _mr(i)
 // will compile to
 // ```
 // /* my_file.css */
-// margin-bottom: 20px;
+// margin-bottom: 2rem;
 // ```
 //
 // $i   - multiplier of `$gutter`
 //
 // Styleguide Mixins.Spaces.mb
 _mb(i)
-    margin-bottom i * $gutter * .1rem
+    margin-bottom gutterToRem(i)
 
 
 // _ml()
@@ -205,11 +232,11 @@ _mb(i)
 // will compile to
 // ```
 // /* my_file.css */
-// margin-left: 20px;
+// margin-left: 2rem;
 // ```
 //
 // $i   - multiplier of `$gutter`
 //
 // Styleguide Mixins.Spaces.ml
 _ml(i)
-    margin-left i * $gutter * .1rem
+    margin-left gutterToRem(i)

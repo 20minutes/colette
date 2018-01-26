@@ -1,0 +1,26 @@
+// Map
+//
+// Creates a new list with the results of calling a function for every list element.
+//
+// ```
+// /* my_file.styl */
+// myList = (1 2 3 4)
+// myFunc(i)
+//     return i * 2
+// map(myList, myFunc)
+// ```
+// will compile to
+// ```
+// /* my_file.css */
+// 2 4 6 8
+// ```
+//
+// $list   - list of items
+// $fn   - function calling once for every item on the list
+//
+// Styleguide Mixins.Map
+map(list, fn)
+    result = ()
+    for item in list
+        push(result, fn(item))
+    return result
