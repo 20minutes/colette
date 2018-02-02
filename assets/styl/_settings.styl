@@ -41,7 +41,7 @@
 // Styleguide: Settings.Grid
 /* Grid */
 $columns ?= 12 // number of columns
-$gutter ?= 12 // gutter width
+$gutter ?= 1.2rem // gutter width (should be set with `rem` unit)
 /* Default primary grid breakpoints */
 $mainpoints ?= {
     'sm': "screen and (min-width: 420px)"
@@ -66,7 +66,6 @@ $breakpoints ?= merge($mainpoints, $tweakpoints)
 $font-base ?= 'Helvetica Neue', Helvetica, Arial, sans-serif // default font / body text
 $font-headings ?= 'Open Sans WebFont', Arial, 'Helvetica Neue', Helvetica, sans-serif // headings
 $font-secondary ?= 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif // article label, call to action, pagers... etc.
-
 
 // Fontfaces
 //
