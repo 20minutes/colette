@@ -1,14 +1,12 @@
 <form action="#">
     {% for textfield in textfields %}
         <div class="form-field pb2">
-            <p>
-                <label for="{{ textfield.id }}">{{ textfield.label }}</label>
-                <input id="{{ textfield.id }}" type="{{ textfield.type }}"
-                    {% if textfield.value is not empty %}value="{{ textfield.value }}"{% endif %}
-                    {% if textfield.placeholder is not empty %}placeholder="{{ textfield.placeholder }}"{% endif %}
-                    {% if textfield.attrs is not empty %}{{ textfield.attrs }}{% endif %}
-                />
-            </p>
+            <label for="{{ textfield.id }}">{{ textfield.label }}</label>
+            <input id="{{ textfield.id }}" type="{{ textfield.type }}"
+                {% if textfield.value is not empty %}value="{{ textfield.value }}"{% endif %}
+                {% if textfield.placeholder is not empty %}placeholder="{{ textfield.placeholder }}"{% endif %}
+                {% if textfield.attrs is not empty %}{{ textfield.attrs }}{% endif %}
+            />
         </div>
     {% endfor %}
 </form>

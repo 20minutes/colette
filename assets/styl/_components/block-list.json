@@ -1,0 +1,11 @@
+{
+    "classes": ["box"],
+    "blockTitle": "Example of a block title",
+    "data": {
+        "data": [
+            "Paris (75000)",
+            "Marseille (13000)",
+            "Versailles (78000)"
+        ]
+    }
+}

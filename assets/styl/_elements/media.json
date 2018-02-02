@@ -1,0 +1,10 @@
+{
+    "media": {
+        "src": "http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/%format_20mn-11765.jpg",
+        "caption": "The media caption",
+        "credit": "by someone"
+    },
+    "defaultFormat": "648x415",
+    "mediaFormats": ["648x415"],
+    "displayCaption": true
+}

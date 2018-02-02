@@ -1,0 +1,18 @@
+{#
+ # @extends block.twig
+ #
+ # template for content small block
+ #}
+{% extends 'block.twig' %}
+
+{% block block_attribute '' %}
+
+{% block block_body %}
+    <ul class="block-list">
+        {% block block_body_content %}
+            {% for content in data.data %}
+                <li class="block-list-item"><a class="pl1 pr1" href="#">Paris (75000)</a></li>
+            {% endfor %}
+        {% endblock %}
+    </ul>
+{% endblock %}

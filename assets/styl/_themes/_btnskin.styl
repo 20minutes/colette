@@ -1,0 +1,106 @@
+
+// Buttons skins
+//
+// All editorial colors are available to style the button according to its context.
+//
+// Text color is choosen for contrast between white and black.
+// But `native` and `snapchat` buttons have text in `$color-base`.
+//
+// .btnskin-default          - default color button
+// .btnskin-sport            - sport color button
+// .btnskin-entertainment    - entertainment color button
+// .btnskin-economy          - economy color button
+// .btnskin-community        - community color button
+// .btnskin-weird            - weird color button
+// .btnskin-partner          - partner color button
+// .btnskin-planet           - planet color button
+// .btnskin-media            - media color button
+// .btnskin-hightech         - hightech color button
+// .btnskin-native           - native color button
+//
+// Markup: ../_elements/btn.twig
+//
+// Styleguide Theme.Buttons
+
+// Default Social Buttons skin
+//
+// All social colors are available to style the button according to its context.
+//
+// .btnskin-facebook         - facebook color button
+// .btnskin-messenger        - messenger color button
+// .btnskin-twitter          - twitter color button
+// .btnskin-pinterest        - pinterest color button
+// .btnskin-linkedin         - linkedin color button
+// .btnskin-googleplus       - googleplus color button
+// .btnskin-pocket           - pocket color button
+// .btnskin-snapchat         - snapchat color button
+// .btnskin-whatsapp         - whatsapp color button
+// .btnskin-hootsuite        - hootsuite color button
+// .btnskin-github           - github color button
+// .btnskin-sms              - sms color button
+//
+// Markup: ../_elements/btn-socials.twig
+//
+// Weight: 1
+//
+// Styleguide Theme.Buttons.Socials
+
+// Icon Buttons: default styles
+//
+// Icon buttons are icons in a colored circle.
+// All editorial colors are available to style the button according to its context.
+//
+// .btnskin-default          - default color button
+// .btnskin-sport            - sport color button
+// .btnskin-entertainment    - entertainment color button
+// .btnskin-economy          - economy color button
+// .btnskin-community        - community color button
+// .btnskin-weird            - weird color button
+// .btnskin-partner          - partner color button
+// .btnskin-planet           - planet color button
+// .btnskin-media            - media color button
+// .btnskin-hightech         - hightech color button
+// .btnskin-native           - native color button
+//
+// Markup: ../_elements/btnicon.twig
+//
+// Weight: 2
+//
+// Styleguide Theme.Buttons.IconButtons
+
+// Icon Buttons: social styles
+//
+// Icon buttons are icons in a colored circle.
+// All social colors are available to style the button according to its context.
+//
+// .btnskin-facebook         - facebook color button
+// .btnskin-messenger        - messenger color button
+// .btnskin-twitter          - twitter color button
+// .btnskin-pinterest        - pinterest color button
+// .btnskin-linkedin         - linkedin color button
+// .btnskin-googleplus       - googleplus color button
+// .btnskin-pocket           - pocket color button
+// .btnskin-snapchat         - snapchat color button
+// .btnskin-whatsapp         - whatsapp color button
+// .btnskin-hootsuite        - hootsuite color button
+// .btnskin-github           - github color button
+// .btnskin-sms              - sms color button
+//
+// Markup: ../_elements/btnicon-socials.twig
+//
+// Weight: 3
+//
+// Styleguide Theme.Buttons.IconButtonsSocials
+.btnskin
+    $tmpColors = {}
+    for key, value in merge($tmpColors, $colors, $colors-socials)
+        &-{key}
+            background-color value
+            color $color-white
+
+            &:enabled:hover
+                background-color darken(value, 20%)
+
+    &-native
+    &-snapchat
+        color $color-base

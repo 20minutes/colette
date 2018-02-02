@@ -1,4 +1,14 @@
+@charset 'utf-8'
+
 use('stylus-svg/index.js')
+
+// Design
+//
+// Every design rules and assets, colors, icons, etc.
+//
+// Weight: 1
+//
+// Styleguide: Design
 
 // Settings
 //
@@ -7,7 +17,9 @@ use('stylus-svg/index.js')
 // Styleguide: Settings
 @require '_settings'
 
-// Mixins
+// Mixins & functions
+//
+// Stylus utils.
 //
 // Weight: 12
 //
@@ -27,37 +39,50 @@ use('stylus-svg/index.js')
 // normalize
 @require 'normalize.css/normalize.css'
 
-// Basics
-//
-// Weight: 1
-//
-// Styleguide: Basics
+// style html native elements
 @require '_base/*'
 
 // Layout
 //
-// Weight: 2
+// Sets of classe to manage layout and organize components on the page.
+//
+// Weight: 5
 //
 // Styleguide: Layout
-@require '_layout/*'
+@require '_layouts/*'
+
+// Elements
+//
+// Every littles UI elements.
+//
+// Weight: 2
+//
+// Styleguide: Elements
+@require '_elements/*'
 
 // Components
+//
+// More complex elements composed or able to contains some others elements.
 //
 // Weight: 3
 //
 // Styleguide: Components
-@require '_modules/*'
+@require '_components/*'
 
 // Theme
 //
-// Weight: 4
+// Super class able to modify apparence of some components or elements.
+//
+// Weight: 6
 //
 // Styleguide: Theme
-@require '_theme/*'
+@require '_themes/*'
 
 // Helpers
 //
-// Weight: 5
+// Small classe to manage details in the page.
+//
+// Weight: 4
 //
 // Styleguide: Helpers
 @require '_helpers/*'

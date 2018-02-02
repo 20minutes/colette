@@ -1,0 +1,14 @@
+// Required Marker
+//
+// Provide styles for a required field marker, most often associated with the label.
+//
+// Markup: required.twig
+//
+// Styleguide Forms.Required
+.required
+    color $color-error
+    text-decoration none // `abbr` are `underline` dotted on firefox
+
+    &[title] // stronger selector to override `abbr[title]` styles
+        border-bottom 0
+        text-decoration none
