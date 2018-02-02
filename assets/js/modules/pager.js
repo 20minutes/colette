@@ -9,7 +9,17 @@ function Pager(cfg) {
 
     this.blockList = this.config.blockList;
     this.block = this.blockList.closest('.block');
+    if (!this.block) {
+        return;
+    }
+    this.pager = this.block.querySelector('.pager');
+    if (!this.pager) {
+        return;
+    }
     this.items = this.blockList.querySelectorAll('li');
+    if (!this.items) {
+        return;
+    }
 
     // get config from attribute
     const attributConfigItemPerPage = this.blockList.getAttribute('data-item-per-page');
@@ -19,8 +29,8 @@ function Pager(cfg) {
     this.totalPage = Math.ceil(this.items.length / this.itemPerPage);
     this.currentPage = 1;
 
-    this.btnPrev = this.block.querySelector('.pager-prev');
-    this.btnNext = this.block.querySelector('.pager-next');
+    this.btnPrev = this.pager.querySelector('.pager-prev');
+    this.btnNext = this.pager.querySelector('.pager-next');
 
     // event handlers
     this.btnPrev.addEventListener('click', this.paginateEventHandler.bind(this));

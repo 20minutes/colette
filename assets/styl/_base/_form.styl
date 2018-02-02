@@ -1,0 +1,204 @@
+// Form
+//
+// Styleguide: Forms
+
+// Form elements
+//
+// Colette comes with basic CSS to style form’s elements.
+//
+// Styleguide: Forms.Base
+fieldset
+    border 0
+    padding 0
+
+label
+button
+input
+    vertical-align middle
+
+button
+input
+select
+textarea
+    font-family inherit
+    font-size 1em
+
+label
+button
+input[type='submit']
+input[type='button']
+input[type='reset']
+    cursor pointer // cursor: pointer to every clickable elements
+
+    &[disabled]
+        cursor default
+
+// Text inputs
+//
+// Default styles for text fields.
+//
+// Markup: form-textinput.twig
+//
+// Weight: 1
+//
+// Styleguide: Forms.Base.TextInputs
+
+// HTML5 inputs
+//
+// Colette styles also apply to the following HTML5 input types.
+// <br/>Fields display and interaction may vary according to browsers supports.
+//
+// Markup: form-html5input.twig
+//
+// Weight: 2
+//
+// Styleguide: Forms.Base.HTML5Inputs
+input[type='text']
+input[type='password']
+input[type='email']
+input[type='url']
+input[type='time']
+input[type='date']
+input[type='datetime']
+input[type='datetime-local']
+input[type='tel']
+input[type='number']
+input[type='search']
+select
+textarea
+    padding .5em
+    border-radius .3em
+    border 1px solid $color-base-lighten
+    background-color $color-white
+    line-height 1.3
+    color $color-base
+    box-shadow none // to prevent the red box-shadow Firefox is adding
+    transition border-color .2s
+
+    &.is-invalid
+        border-color $color-error
+
+    &:focus
+        border-color $color-tertiary
+        outline 0
+
+    &[disabled]
+        background-color $color-bg-base
+        color $color-tertiary
+
+input[type='search']
+    -moz-appearance textfield // fix display on FF
+    -webkit-appearance textfield // fix display on Safari and iOs
+
+input[type='time']
+input[type='date']
+    &::-webkit-datetime-edit
+        line-height 1.15em
+
+    &::-webkit-inner-spin-button
+        height 1em
+
+// Select
+//
+// Default styles for `<select>` field.
+//
+// Markup: form-select.twig
+//
+// Weight: 3
+//
+// Styleguide: Forms.Base.Select
+select
+    padding-right 2em
+    background-image url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"100\" fill=\"#000\"><polygon points=\"0, 0 100, 0 50, 50\" /></svg>')
+    background-repeat no-repeat
+    background-position calc(100% - .75em) 1em
+    background-size .5em .5em
+    -webkit-appearance none // the svg background arrow doesn't display on FF, so we only target -webkit
+
+// Textarea
+//
+// Default styles for `<textarea>` field.
+//
+// Markup: form-textarea.twig
+//
+// Weight: 4
+//
+// Styleguide: Forms.Base.Textarea
+textarea
+    vertical-align top
+    border 1px solid $color-base-lighten
+    resize vertical
+
+button
+input[type='button']
+input[type='submit']
+    border-style none
+
+/* Avoid deformation on radios, checkboxes and images inputs and different display on some IE */
+input[type='radio']
+input[type='checkbox']
+input[type='image']
+    background-color transparent
+    border 0
+    width auto
+
+// Radio buttons
+//
+// Default styles for radio buttons.
+// Styling method takes a lot of inspiration from Materialize CSS.
+//
+// Markup: form-radiobutton.twig
+//
+// Weight: 5
+//
+// Styleguide: Forms.Base.RadioButtons
+
+// Checkboxes
+//
+// Default styles for checkboxes.
+// Styling method takes a lot of inspiration from Materialize CSS.
+//
+// Markup: form-checkbox.twig
+//
+// Weight: 6
+//
+// Styleguide: Forms.Base.Checkboxes
+input[type='checkbox']
+input[type='radio']
+    position absolute
+    opacity 0
+    pointer-events none
+
+    + label
+        display inline-block
+        position relative
+        padding-left 1.5em
+
+        &:before
+            content ''
+            display inline-block
+            position absolute
+            top .25em
+            left 0
+            width 1em
+            height @width
+            color $color-tertiary
+            background-color currentColor
+            border .125em solid $color-tertiary
+            box-shadow inset 0 0 0 1em $color-white
+            transition box-shadow .3s ease, color .3s linear
+
+    &:checked + label:before
+        color $color-base
+        box-shadow inset 0 0 0 .1em $color-white
+
+    &:focus + label
+        {outline}
+
+    .js-focus-visible &:not(:focus-visible) + label
+        outline 0
+
+input[type='radio']
+    + label
+        &:before
+            border-radius 20em // high value to make it round

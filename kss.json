@@ -13,7 +13,10 @@
     "verbose": false,
     "homepage": "../../readme.md",
     "builder": "kss-builder",
-    "extend": "kss-builder/extend",
+    "extend": [
+        "assets/twig/filters",
+        "kss-builder/extend"
+    ],
     "custom": [
         "Colors",
         "Icons"

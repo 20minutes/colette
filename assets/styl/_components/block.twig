@@ -1,0 +1,36 @@
+{#
+ # @param str       blockTitle         (required)
+ # @param str       blockTitleTag      (optional)
+ # @param str       blockIcon          (optional)
+ # @param array     blockClasses       (optional)
+ # @param array     blockTitleClasses  (optional)
+ #
+ # @block block_header           (optional)
+ # @block block_body             (optional)
+ # @block block_footer           (optional)
+ # @block block_footer_content   (optional)
+ # @block block_classes          (optional)
+ # @block block_attribute        (optional)
+ # @block block_title_classes    (optional)
+ # @block block_title_attributes (optional)
+ #}
+{%- set blockClasses = blockClasses|default([]) -%}
+{%- if modifier_class %}{% set blockClasses = blockClasses|merge([modifier_class]) %}{% endif -%}
+
+{% set blockTitleTag = blockTitleTag|default('p') %}
+<div class="block {% block block_classes %}{{ blockClasses|default([])|join(' ') }}{% endblock %}" {% block block_attribute '' %}">
+    {% block block_header %}
+        <{{ blockTitleTag }} class="block-title {% block block_title_classes %}{{ blockTitleClasses|default([])|join(' ') }}{% endblock %}" {% block block_title_attributes %}{% endblock %}>{% if blockIcon is defined %}<svg height="11" width="11"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#symbol-{{ blockIcon }}"></use></svg>{% endif %}{{ blockTitle|raw }}</{{ blockTitleTag }}>
+    {% endblock %}
+    {% block block_body %}
+        <p class="pa1">Example of a block content</p>
+    {% endblock %}
+    {% block block_footer %}
+        <div class="block-footer">
+            {#- It shouldn’t have space in this div if it is empty to respect `:empty` css pseudo-classe -#}
+            {%- block block_footer_content -%}
+                <p>Example of a block footer</p>
+            {%- endblock -%}
+        </div>
+    {% endblock %}
+</div>

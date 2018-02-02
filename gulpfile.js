@@ -6,7 +6,6 @@ const stylint = require('gulp-stylint');
 const eslint = require('gulp-eslint');
 const webpack = require('webpack');
 const gulpWebpack = require('webpack-stream');
-const UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 const svgstore = require('gulp-svgstore');
 const fs = require('fs');
 const kss = require('kss');
@@ -73,6 +72,7 @@ function scriptsBuild() {
             filename: '[name].min.js',
             libraryTarget: 'umd'
         },
+        mode: 'production',
         module: {
             rules: [{
                 test: /(\.jsx|\.js|\.es6)$/,
@@ -99,15 +99,7 @@ function scriptsBuild() {
             ],
             extensions: ['.js', '.es6']
         },
-        devtool: 'source-map',
-        plugins: [
-            new webpack.optimize.UglifyJsPlugin({
-                compress: {
-                    warnings: false
-                }
-            }),
-            new UnminifiedWebpackPlugin()
-        ]
+        devtool: 'source-map'
     }, webpack))
     .pipe(gulp.dest(cfg.distDir + 'js'));
 }

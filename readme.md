@@ -88,7 +88,7 @@ But can be usefull to:
 
 ## Use Colette’s JavaScript from sources
 
-You can use `colette.js` as is (or minified files `colette.min.js`).
+You can use `colette.min.js` as is.
 
 But the best way to use it is with a task-runner by JavaScript sources (ex: gulp, webpack).
 

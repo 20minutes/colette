@@ -15,6 +15,7 @@ import FontFaceLoader from './modules/fontFaceLoader';
 import Pager from './modules/pager';
 import fontsData from '../../fontfaces.json';
 import headroom from 'headroom.js';
+import Blazy from 'blazy';
 
 // Init Colette object
 const colette = window.colette || {};
@@ -25,6 +26,11 @@ colette.fonts = new FontFaceLoader({data: fontsData});
 colette.pagers = [];
 Array.prototype.forEach.call(document.querySelectorAll('.block-list'), (item) => {
     colette.pagers.push(new Pager({blockList: item}));
+});
+
+// lazyload init (images)
+colette.lazy = new Blazy({
+    offset: 500
 });
 
 export {

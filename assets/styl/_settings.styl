@@ -88,7 +88,7 @@ $fontload-class ?= 'webfont'
 //
 // Every colors in this project are variables
 //
-// Styleguide: Settings.Colors
+// Styleguide: Design.Colors
 
 // Project colors
 //
@@ -106,7 +106,7 @@ $fontload-class ?= 'webfont'
 // $color-bg-base:      #f8f8f8 - background color
 // $color-bg-light:     #f1f1f1 - background color light
 //
-// Styleguide: Settings.Colors.Project
+// Styleguide: Design.Colors.Interface
 $color-base ?= #4c4d4e
 $color-base-lighten ?= #e7e7e7
 $color-secondary ?= #b7b7b7
@@ -128,7 +128,7 @@ $color-bg-light ?= #f1f1f1
 // $color-warning: #b05105 - Warning
 // $color-error:   #cc190f - Error
 //
-// Styleguide: Settings.Colors.Alerts
+// Styleguide: Design.Colors.Alerts
 $color-info ?= #0b4892
 $color-success ?= #3c7a09
 $color-warning ?= #b05105
@@ -136,13 +136,13 @@ $color-error ?= #cc190f
 
 // Black & White
 //
-// Universal real black and white
+// Universal real black and white, use for shade and lights.
 //
 // Colors:
-// $color-black: #000 - default text color
-// $color-white: #fff - background color
+// $color-black: #000 - real black
+// $color-white: #fff - real white
 //
-// Styleguide: Settings.Colors.BnW
+// Styleguide: Design.Colors.BnW
 $color-black ?= #000
 $color-white ?= #fff
 
@@ -167,7 +167,7 @@ $color-white ?= #fff
 // $color-hightech:      #686868
 // $color-native:        #fff7e2
 //
-// Styleguide: Settings.Colors.Theme
+// Styleguide: Design.Colors.Theme
 $color-default ?= #0b4892
 $color-sport  ?= #00b9f3
 $color-entertainment ?= #cc190f
@@ -176,7 +176,7 @@ $color-community ?= #930b48
 $color-weird ?= #ef2a82
 $color-partner ?= #ff5400
 $color-planet ?= #48930b
-$color-media ?= #000000
+$color-media ?= #000
 $color-hightech ?= #686868
 $color-native ?= #fff7e2
 
@@ -196,7 +196,25 @@ $colors ?= {
     native: $color-native
 }
 
-// colors socials (not in base theme)
+// Social colors
+//
+// The social color palette.
+//
+// Colors:
+// $color-facebook:    #4c64a0
+// $color-messenger:   #3d6bfb
+// $color-googleplus:  #d14836
+// $color-hootsuite:   #000000
+// $color-linkedin:    #0177b5
+// $color-pinterest:   #bd081c
+// $color-pocket:      #ed4054
+// $color-sms:         #48930b
+// $color-twitter:     #00a7e7
+// $color-whatsapp:    #01a85a
+// $color-github:      #791e8f
+// $color-snapchat:    #fdfe00
+//
+// Styleguide: Design.Colors.Social
 $color-facebook ?= #4c64a0
 $color-messenger ?= #3d6bfb
 $color-googleplus ?= #d14836
@@ -239,7 +257,7 @@ $colors-socials ?= {
 // $contrast-low:  3
 // $contrast-high: 7
 //
-// Styleguide: Settings.Contrast
+// Styleguide: Design.Contrast
 $contrast ?= 4.5
 $contrast-low ?= 3
 $contrast-high ?= 7
@@ -302,3 +320,13 @@ $zIndex ?= {
     overlay: 10
     layout: 20
 }
+
+
+// Rounded corners
+//
+// Radius for rounded corners
+//
+// $boxBorderRadius: 8px
+//
+// Styleguide: Design.Rounded
+$boxBorderRadius ?= .8rem

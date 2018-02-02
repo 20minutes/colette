@@ -1,0 +1,182 @@
+// Skins
+//
+// Add a skin over the image of a content block on listing pages, and depending on the skin, modify the teaser text and/or background colors.
+// Note that:
+// - the `.skin-#` class is applied on a content preview selector (which may contain `.media` | `.teaser` | `.box-footer` children)
+// - the skin is applied on a `<figure class="media">` tag,
+// - the image must be placed within a `<p>` or a `<div>` tag for icon skins
+//
+// .skin-blog        - Text skin: "blog", text color: community
+// .skin-bytheweb    - Text skin: "by the web", text color: hightech
+// .skin-chat        - Text skin: "chat"
+// .skin-exclusive   - Text skin: "exclusif", text color: highlight
+// .skin-fakeoff     - Text skin: "fake off", text color: default
+// .skin-lastminute  - Text skin: "dernière minute", text color: white, background-color: highlight
+// .skin-live        - Text skin: "live", headline color: highlight
+// .skin-partner     - Text skin: "partenaire"
+// .skin-people      - Text skin: "people"
+// .skin-quiz        - Text skin: "quiz", title and description color: community
+// .skin-weird       - Text skin: "t'as vu"
+// .skin-gallery     - Icon skin: 'images'
+// .skin-podcast     - Icon skin: 'podcast'
+// .skin-video       - Icon skin: 'play'
+//
+// Markup: skin.twig
+//
+// Styleguide Theme.skins
+
+/* Text skins */
+.skin
+    &-blog
+    &-bytheweb
+    &-chat
+    &-exclusive
+    &-fakeoff
+    &-lastminute
+    &-live
+    &-partner
+    &-people
+    &-quiz
+    &-weird
+        .media-wrap:before
+            {fontSecondary}
+            position absolute
+            top 0
+            left 0
+            z-index: $zIndex.base
+            padding 0 1em
+            height 2.8em
+            line-height @height
+            color $color-white
+            text-align center
+            box-shadow .27em .27em 0 .27em rgba(0, 0, 0, .3)
+
+    &-blog
+        .media-wrap:before
+            content 'blog'
+            background-color $color-community
+
+        .teaser
+            &-headline
+            &-title
+            &-summary
+                color $color-community
+
+    &-bytheweb
+        .media
+            &:before
+                content 'by the web'
+                background-color $color-hightech
+
+    &-chat
+        .media-wrap:before
+            content 'chat'
+            background-color $color-community
+
+    &-exclusive
+        .media-wrap:before
+            content 'exclusif'
+            background-color $color-highlight
+
+        .teaser
+            &-headline
+            &-title
+            &-summary
+                color $color-highlight
+
+    &-fakeoff
+        .media
+            &:before
+                content 'fake off'
+                background-color $color-default
+
+    &-lastminute
+        // overrides .box background
+        background-color $color-highlight !important // @stylint ignore
+        box-shadow inset 0 0 0 1px $color-white // keep white borders despite of the red background
+
+        .media-wrap:before
+            content 'dernière minute'
+            background-color $color-highlight
+
+        .teaser
+            &-headline
+            &-title
+            &-summary
+                color $color-white
+
+    &-live
+        .media-wrap:before
+            content 'live'
+            background-color $color-highlight
+
+        .teaser-headline
+            color $color-highlight
+
+    &-partner
+        .media-wrap:before
+            content 'Partenaire'
+            background-color $color-native
+            color $color-base
+
+    &-people
+        .media-wrap:before
+            content 'People'
+            background-color $color-entertainment
+
+    &-quiz
+        .media-wrap:before
+            content 'quiz'
+            background-color $color-community
+
+        .teaser
+            &-headline
+            &-title
+            &-summary
+                color $color-community
+
+    &-weird
+        .media-wrap:before
+            content 'T’as vu'
+            background-color $color-weird
+
+    /* Icon skins */
+    &-gallery
+    &-podcast
+    &-video
+        .media-wrap:before
+            display block
+            position absolute
+            z-index: $zIndex.base
+            content ''
+            bottom .5em
+            left .5em
+            padding .5em
+            width 3.5em
+            height 2.5em
+            border-radius .3em
+            background-color rgba(0, 0, 0, .5)
+            background-repeat no-repeat
+            background-size 1.9em
+            background-position center center
+
+    &-video
+        .media-wrap:before
+            background-image svgImport('../svg/play.svg', '
+                path
+                    fill ' + $color-white + '
+            ') // @stylint ignore
+
+    &-podcast
+        .media-wrap:before
+            background-image svgImport('../../svg/podcast.svg', '
+                path
+                    fill ' + $color-white + '
+            ') // @stylint ignore
+
+    &-gallery
+        .media-wrap:before
+            background-image svgImport('../svg/diapo.svg', '
+                path
+                    fill ' + $color-white + '
+            ') // @stylint ignore

@@ -1,0 +1,28 @@
+
+// Icon Buttons
+//
+// Icon buttons are icons in a colored circle.
+//
+// Markup: btnicon.twig
+//
+// Weight: 2
+//
+// Styleguide Elements.IconButtons
+.btnicon
+    display inline-block
+    border-radius 60em // oversize radius to keep it round
+    background-color $color-secondary
+    transition background-color .2s ease
+    color $color-base
+
+    svg
+        width 1em
+        height 1em
+        margin .33em
+        display block
+
+    &:disabled
+        opacity .5
+
+    &:enabled:hover
+        background-color darken($color-secondary, 20%)
