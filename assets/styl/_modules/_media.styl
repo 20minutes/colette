@@ -18,10 +18,7 @@
         width 100%
         height auto
         background-color lighten($color-default, 80%)
-        background-image svgImport('../svg/logo.svg', '
-            path
-                fill rgba(255, 255, 255, .5)
-        ') // @stylint ignore
+        background-image svgImport($svgLogo, $svgLogoStyle)
         background-size 65% 65%
         background-position 50%
         background-repeat no-repeat

@@ -9,7 +9,7 @@
     "customProperties": [
         "font-display"
     ],
-    "depthLimit": 5,
+    "depthLimit": 7,
     "duplicates": false,
     "efficient": "always",
     "exclude": [],

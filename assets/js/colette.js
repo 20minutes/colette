@@ -14,6 +14,7 @@ import 'wicg-focus-ring';
 //modules
 import iframeResizer from './modules/iframeResizer';
 import FontFaceLoader from './modules/fontFaceLoader';
+import Pager from './modules/pager';
 import fontsData from '../../fontfaces.json';
 import headroom from 'headroom.js';
 
@@ -23,6 +24,10 @@ const colette = window.colette || {};
 colette.iframeResizer = iframeResizer;
 colette.headroom = headroom;
 colette.fonts = new FontFaceLoader({data: fontsData});
+colette.pagers = [];
+Array.prototype.forEach.call(document.querySelectorAll('.block-list'), (item) => {
+    colette.pagers.push(new Pager({blockList: item}));
+});
 
 export {
     colette

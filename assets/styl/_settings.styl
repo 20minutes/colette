@@ -107,6 +107,7 @@ $fontload-class ?= 'webfont'
 // $color-borders:      #c7c7c7 - borders color
 // $color-footer:       #73a0d6 - footer color
 // $color-bg-base:      #f8f8f8 - background color
+// $color-bg-light:     #f1f1f1 - background color light
 //
 // Styleguide: Settings.Colors.Project
 $color-base ?= #4c4d4e
@@ -118,6 +119,7 @@ $color-highlight ?= #cc190f
 $color-borders ?= #c7c7c7
 $color-footer ?= #73a0d6
 $color-bg-base ?= #f8f8f8
+$color-bg-light ?= #f1f1f1
 
 
 // Alerts colors
@@ -250,4 +252,26 @@ $contrast-low ?= 3
 $contrast-high ?= 7
 
 // SVG
-$svgLogo ?= 'logo.svg'
+//
+// SVG basic settings
+//
+// Default svg value for the logo:
+// ```
+// $svgLogo: '../svg/logo.svg'
+// ```
+// Default svg style for the logo:
+// ```
+// $svgLogoStyle: 'path fill rgba(255, 255, 255, .5)'
+// ```
+// Default quadratic margin value (in usual CSS order), used when there is a picto SVG in front of some text, to position it right:
+// ```
+// $svgDefaultMargins: 0 .3em -.1em 0
+// ```
+//
+// Styleguide: Settings.SVG
+$svgLogo ?= '../svg/logo.svg'
+$svgLogoStyle ?= '
+    path
+        fill rgba(255, 255, 255, .5)
+' // @stylint ignore
+$svgDefaultMargins ?= 0 .3em -.1em 0
