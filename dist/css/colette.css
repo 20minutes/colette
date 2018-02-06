@@ -1983,6 +1983,46 @@ figure {
   color: #ed4054;
   border: solid 0.1em #b7b7b7;
 }
+.card {
+  margin: 0rem;
+  display: block;
+  padding: 0.5em 0.2em 0.5em 0.4em;
+  transition: background-color 0.2s ease;
+  border: 0 solid currentColor;
+}
+.card:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.card-lined {
+  border-left-width: 0.3rem;
+}
+.card:link:hover {
+  background-color: #f1f1f1;
+}
+.card .media {
+  float: left;
+  width: 7.5em;
+  height: 4.9em;
+  overflow: hidden;
+}
+.card .teaser {
+  padding: 0rem 0.6rem;
+  height: 4.85em;
+  overflow: hidden;
+}
+.card .teaser-headline {
+  color: currentColor;
+}
+.card .teaser-title {
+  color: #4c4d4e;
+  font-weight: normal;
+  font-size: 1.3rem;
+  line-height: 1.2em;
+}
 .choice-list {
   margin-top: 0;
   margin-bottom: 0;
@@ -2220,6 +2260,21 @@ figure {
 .icon-inline .icon-label {
   display: inline-block;
   vertical-align: middle;
+}
+.linkwithsvg svg {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin: 0 0.3em -0.1em 0;
+}
+.linkwithsvg-label {
+  vertical-align: middle;
+}
+.linkwithsvg-small {
+  font-size: 0.8em;
+}
+.linkwithsvg-small svg {
+  margin: 0;
 }
 .loading {
   position: relative;
@@ -2766,61 +2821,6 @@ figure {
 .teaser-summary {
   margin: 0;
   padding-top: 0.3rem;
-}
-.card {
-  margin: 0rem;
-  display: block;
-  padding: 0.5em 0.2em 0.5em 0.4em;
-  transition: background-color 0.2s ease;
-  border: 0 solid currentColor;
-}
-.card:after {
-  content: '';
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
-}
-.card-lined {
-  border-left-width: 0.3rem;
-}
-.card:link:hover {
-  background-color: #f1f1f1;
-}
-.card .media {
-  float: left;
-  width: 7.5em;
-  height: 4.9em;
-  overflow: hidden;
-}
-.card .teaser {
-  padding: 0rem 0.6rem;
-  height: 4.85em;
-  overflow: hidden;
-}
-.card .teaser-headline {
-  color: currentColor;
-}
-.card .teaser-title {
-  color: #4c4d4e;
-  font-weight: normal;
-  font-size: 1.3rem;
-  line-height: 1.2em;
-}
-.linkwithsvg svg {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  margin: 0 0.3em -0.2em 0;
-}
-.linkwithsvg-label {
-  vertical-align: middle;
-}
-.linkwithsvg-small {
-  font-size: 0.8em;
-}
-.linkwithsvg-small svg {
-  margin: 0;
 }
 .blocklinkskin-communication .teaser-summary {
   background-color: #fff7e2;
