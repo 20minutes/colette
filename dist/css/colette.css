@@ -1399,7 +1399,7 @@ figure {
 .avatar > svg {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   fill: #4c4d4e;
 }
 .avatar > svg {
