@@ -2175,6 +2175,7 @@ figure {
   padding-top: 0.15em;
   color: #0091aa;
   font-size: 0.85em;
+  background: transparent;
 }
 .icon {
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
@@ -2260,6 +2261,9 @@ figure {
 .icon-inline .icon-label {
   display: inline-block;
   vertical-align: middle;
+}
+.linkwithsvg {
+  background: transparent;
 }
 .linkwithsvg svg {
   display: inline-block;
