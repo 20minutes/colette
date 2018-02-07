@@ -707,8 +707,6 @@ input[type='radio'] + label {
   position: relative;
   padding-left: 1.5em;
 }
-input[type='checkbox'] + label:after,
-input[type='radio'] + label:after,
 input[type='checkbox'] + label:before,
 input[type='radio'] + label:before {
   content: '';
@@ -718,29 +716,17 @@ input[type='radio'] + label:before {
   left: 0;
   width: 1em;
   height: 1em;
+  color: #878787;
+  background-color: currentColor;
   border: 0.125em solid #878787;
+  box-shadow: inset 0 0 0 1em #fff;
+  transition: box-shadow 0.3s ease, color 0.3s linear;
 }
-input[type='checkbox'] + label:after,
-input[type='radio'] + label:after {
-  background-color: #0b4892;
-  opacity: 0;
-  transition: opacity 0.2s, border-color 0.2s;
+input[type='checkbox']:checked + label:before,
+input[type='radio']:checked + label:before {
+  color: #4c4d4e;
+  box-shadow: inset 0 0 0 0.1em #fff;
 }
-input[type='checkbox']:checked + label:after,
-input[type='radio']:checked + label:after {
-  border-color: #4c4d4e;
-  background-color: #4c4d4e;
-  opacity: 1;
-}
-input[type='checkbox']:focus + label,
-input[type='radio']:focus + label {
-  outline: dotted thin #878787;
-}
-.js-focus-ring input[type='checkbox']:focus:not(.focus-ring) + label,
-.js-focus-ring input[type='radio']:focus:not(.focus-ring) + label {
-  outline: 0;
-}
-input[type='radio'] + label:after,
 input[type='radio'] + label:before {
   border-radius: 20em;
 }
