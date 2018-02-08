@@ -11,7 +11,7 @@
 //
 // Styleguide Components.Blocks
 
-// Weight: 2
+// Weight: 1
 //
 // Block title and modifiers
 //
@@ -25,15 +25,23 @@
 //
 // Styleguide Components.Blocks.BlockTitle
 
-// Weight: 1
+// Weight: 2
 //
-// Block List with a pager, also using card component
+// Block List with a pager
 //
 // Markup: block-list.twig
 //
 // .block-stretch - stretch content to keep 100% height of container
 //
 // Styleguide Components.Blocks.BlockList
+
+// Weight: 3
+//
+// Block List can be used with article cards
+//
+// Markup: block-list-with-cards.twig
+//
+// Styleguide Components.Blocks.BlockList-with-Cards
 $block-custom-color ?= $color-base-lighten
 $block-header-minheight ?= 3.6rem
 
@@ -107,6 +115,9 @@ $block-header-minheight ?= 3.6rem
                 display table-cell
                 height auto
                 vertical-align middle
+
+            > :link:hover
+                background-color $color-bg-light
 
     /* Block footer */
     &-footer
