@@ -5,29 +5,33 @@
 // You can add a 'box' class to Block, it will give it a border and paddings. It's optionnal too.
 // It can be modified by `-stretch`, it'll be useful to make it stretch in height.
 //
+// Markup: block.twig
+//
+// block-default - default theme color
+//
 // Styleguide Components.Blocks
 
-// Weight: 0
+// Weight: 2
 //
-// Default Block
+// Block title and modifiers
 //
-// Markup: block-default.twig
+// Markup:
+// <p class="block-title {{ modifier_class }}">
+//     <svg height="11" width="11"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#symbol-clock"></use></svg>
+//     Example of a title
+// </p>
 //
-// Styleguide Components.Blocks.BlockDefault
+// block-title-lined - title with bottom border instead of background color
+//
+// Styleguide Components.Blocks.BlockTitle
 
 // Weight: 1
-//
-// Block with lined style title
-//
-// Markup: block-linedtitle.twig
-//
-// Styleguide Components.Blocks.BlockLinedTitle
-
-// Weight: 2
 //
 // Block List with a pager, also using card component
 //
 // Markup: block-list.twig
+//
+// .block-stretch - stretch content to keep 100% height of container
 //
 // Styleguide Components.Blocks.BlockList
 $block-custom-color ?= $color-base-lighten
@@ -96,6 +100,14 @@ $block-header-minheight ?= 3.6rem
             &[aria-hidden=true]
                 display none
 
+            // change display of the child with stronger selector than simple class
+            > p
+            > div
+            > a
+                display table-cell
+                height auto
+                vertical-align middle
+
     /* Block footer */
     &-footer
         {fontSecondary}
@@ -110,14 +122,6 @@ $block-header-minheight ?= 3.6rem
 
         a
             color $color-base
-
-    /* Modifier/Theme */
-    /* Block latest */
-    /* - change block ui color to $color-highlight*/
-    /* - add a border to teaser colored by news category */
-    &-latest
-        .teaser
-            border-left .2em solid $block-custom-color
 
     /* Category theme */
     /* Applies theme color on title background and footer icons */

@@ -1397,10 +1397,6 @@ figure {
   position: relative;
   text-align: left;
 /* Block footer */
-/* Modifier/Theme */
-/* Block latest */
-/* - change block ui color to $color-highlight*/
-/* - add a border to teaser colored by news category */
 /* Category theme */
 /* Applies theme color on title background and footer icons */
 }
@@ -1413,8 +1409,7 @@ figure {
 }
 .block-stretch {
   height: 100%;
-  -webkit-box-flex: 999;
-          flex-grow: 999;
+  flex-grow: 999;
   overflow: hidden;
 }
 .block-stretch .block-footer {
@@ -1468,6 +1463,13 @@ figure {
 .block-list-item[aria-hidden=true] {
   display: none;
 }
+.block-list-item > p,
+.block-list-item > div,
+.block-list-item > a {
+  display: table-cell;
+  height: auto;
+  vertical-align: middle;
+}
 .block-footer {
   font-weight: bold;
   font-size: 1.1rem;
@@ -1483,9 +1485,6 @@ figure {
 }
 .block-footer a {
   color: #4c4d4e;
-}
-.block-latest .teaser {
-  border-left: 0.2em solid #e7e7e7;
 }
 .block-base .block-title {
   background-color: #4c4d4e;
@@ -2422,7 +2421,6 @@ figure {
 .navbar ul a {
   padding: 0 1.8rem;
   color: #4c4d4e;
-  display: -webkit-box;
   display: flex;
   background-color: rgba(248,248,248,0);
   transition: background-color 0.2s;
@@ -2441,7 +2439,6 @@ figure {
 .navbar li {
   float: left;
   height: inherit;
-  display: -webkit-box;
   display: flex;
 }
 .navbar-brand {
@@ -2449,7 +2446,6 @@ figure {
   padding: 0 0.6rem;
   height: inherit;
   color: #0b4892;
-  display: -webkit-box;
   display: flex;
   background-color: rgba(248,248,248,0);
   transition: background-color 0.2s;
@@ -2465,12 +2461,9 @@ figure {
 .pager {
   color: #b7b7b7;
   font-family: 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 .pager:disabled,
 .pager[aria-disabled] {
@@ -2525,8 +2518,7 @@ figure {
   margin-right: 1.2rem;
 }
 .pager-withlist .pager-next {
-  -webkit-box-ordinal-group: 1001;
-          order: 1000;
+  order: 1000;
 }
 .required {
   color: #cc190f;
