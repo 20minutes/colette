@@ -11,8 +11,11 @@ function Pager(cfg) {
     this.block = this.blockList.closest('.block');
     this.items = this.blockList.querySelectorAll('li');
 
+    // get config from attribute
+    const attributConfigItemPerPage = this.blockList.getAttribute('data-item-per-page');
+
     // Variables used for pager
-    this.itemPerPage = this.blockList.getAttribute('data-item-per-page') || this.config.itemPerPage;
+    this.itemPerPage = attributConfigItemPerPage ? parseInt(attributConfigItemPerPage) : this.config.itemPerPage;
     this.totalPage = Math.ceil(this.items.length / this.itemPerPage);
     this.currentPage = 1;
 
