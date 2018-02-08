@@ -1471,6 +1471,9 @@ figure {
   height: auto;
   vertical-align: middle;
 }
+.block-list-item > :link:hover {
+  background-color: #f1f1f1;
+}
 .block-footer {
   font-weight: bold;
   font-size: 1.1rem;
