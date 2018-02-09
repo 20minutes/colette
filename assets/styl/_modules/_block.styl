@@ -136,7 +136,6 @@ $block-header-minheight ?= 3.6rem
 
     /* Category theme */
     /* Applies theme color on title background and footer icons */
-
     for key, value in $colors
         &-{key}
             .block-title
@@ -150,7 +149,8 @@ $block-header-minheight ?= 3.6rem
                 &-lined
                     background-color transparent // overide theme for `.block-title`
                     border-bottom .3rem solid value
-                    color value
+                    text-shadow none
+                    color _contrast_choose($color-white, value darken(value, 10%) darken(value, 20%) darken(value, 30%) darken(value, 40%) $color-base)
 
             .block-footer
                 .linkwithsvg
