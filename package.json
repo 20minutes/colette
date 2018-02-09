@@ -1,13 +1,13 @@
 {
   "name": "colette",
-  "version": "0.46.0",
+  "version": "0.46.1",
   "license": "MIT",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "dom4": "^2.0.1",
     "fontfaceobserver": "^2.0.13",
     "headroom.js": "0.9.4",
-    "normalize.css": "7.0.0",
+    "normalize.css": "8.0.0",
     "stylus-svg": "^0.3.2",
     "wicg-focus-ring": "^3.0.2"
   },
