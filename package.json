@@ -1,6 +1,6 @@
 {
   "name": "colette",
-  "version": "0.46.1",
+  "version": "0.47.0",
   "license": "MIT",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
@@ -12,7 +12,7 @@
     "wicg-focus-ring": "^3.0.2"
   },
   "devDependencies": {
-    "autoprefixer": "^7.2.5",
+    "autoprefixer": "^8.0.0",
     "babel-cli": "6.26.0",
     "babel-core": "6.26.0",
     "babel-loader": "7.1.2",
@@ -36,7 +36,7 @@
     "stylint": "^1.5.9",
     "unminified-webpack-plugin": "^1.4.2",
     "vinyl-named": "^1.1.0",
-    "webpack": "3.10.0",
+    "webpack": "3.11.0",
     "webpack-stream": "^4.0.0"
   },
   "author": "20 Minutes <web-tech@20minutes.fr>",
