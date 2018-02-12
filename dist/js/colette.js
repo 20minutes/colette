@@ -7,7 +7,7 @@
 		var a = factory();
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(typeof self !== 'undefined' ? self : this, function() {
+})(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -7564,7 +7564,7 @@ THE SOFTWARE.
         };
       }
       patch(document);
-      patch(Element.prototype);
+      patch(HTMLElement.prototype);
     })();
   }
 
@@ -7573,8 +7573,10 @@ THE SOFTWARE.
     document.querySelector(':scope *');
   } catch (o_O) {
     (function () {
-      var dataScope = 'data-scope-' + (Math.random() * 1e9 >>> 0);
-      var proto = Element.prototype;
+      var counter = 0;
+      var parent = createElement('div');
+      var prefix = 'scope-' + (Math.random() * 1e9 >>> 0) + '-';
+      var proto = HTMLElement.prototype;
       var querySelector = proto.querySelector;
       var querySelectorAll = proto.querySelectorAll;
       proto.querySelector = function qS(css) {
@@ -7584,11 +7586,15 @@ THE SOFTWARE.
         return find(this, querySelectorAll, css);
       };
       function find(node, method, css) {
-        node.setAttribute(dataScope, null);
-        var result = method.call(node, css.replace(/(^|,\s*)(:scope([ >]|$))/g, function ($0, $1, $2, $3) {
-          return $1 + '[' + dataScope + ']' + ($3 || ' ');
+        var oldID = node.id;
+        var noParent = !node.parentNode;
+        node.id = oldID || prefix + counter++;
+        if (noParent) parent.appendChild(node);
+        var result = method.call(node.parentNode, css.replace(/(^|,\s*)(:scope([ >]|$))?/g, function ($0, $1, $2, $3) {
+          return $1 + '#' + node.id + ($3 || ' ');
         }));
-        node.removeAttribute(dataScope);
+        if (noParent) parent.removeChild(node);
+        node.id = oldID;
         return result;
       }
     })();
