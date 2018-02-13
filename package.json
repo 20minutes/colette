@@ -1,6 +1,6 @@
 {
   "name": "colette",
-  "version": "0.47.0",
+  "version": "0.48.0",
   "license": "MIT",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
@@ -22,7 +22,7 @@
     "cssnano": "^3.10.0",
     "eslint": "^4.17.0",
     "finalhandler": "^1.1.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-eslint": "^4.0.2",
     "gulp-plumber": "^1.2.0",
     "gulp-postcss": "^7.0.1",
