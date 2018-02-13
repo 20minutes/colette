@@ -37,7 +37,7 @@ const cfg = {
 function stylesBuild() {
     const dest = cfg.distDir + 'css';
 
-    gulp.src(cfg.cssDir + 'colette.styl')
+    return gulp.src(cfg.cssDir + 'colette.styl')
     .pipe(stylus({
         compress: false, // cssnano do it
         linenos: false,
@@ -71,7 +71,7 @@ function scriptsBuild() {
     .pipe(gulpWebpack({
         output: {
             filename: '[name].min.js',
-            libraryTarget: 'umd',
+            libraryTarget: 'umd'
         },
         module: {
             rules: [{
@@ -129,7 +129,7 @@ function scriptsLint() {
 
 function assetsCopy() {
     // Retrieve fonts into dist/ directory
-    gulp.src(cfg.fontsDir + '*')
+    return gulp.src(cfg.fontsDir + '*')
     .pipe(gulp.dest(cfg.distDir + 'fonts'));
 }
 
@@ -145,7 +145,7 @@ function svgBuild() {
     .pipe(gulp.dest(cfg.distDir + 'svg/'));
 }
 
-function kssBuild() {
+function kssBuild(done) {
     // we need the dist/ folder to build docs/
     // so we check if it exists and throw an error if needed
     return fs.access(cfg.distDir, function (err) {
@@ -176,25 +176,29 @@ function kssBuild() {
         // retrieve dist directory
         gulp.src(cfg.distDir + '*/**')
         .pipe(gulp.dest(cfg.docDir + 'dist/'));
+
+        done();
     });
 }
 
 function watch() {
-    gulp.watch(cfg.cssDir + cfg.twigPattern, ['kss']);
-    gulp.watch(cfg.cssDir + cfg.stylusPattern, ['lint:css', 'styles', 'kss']);
-    gulp.watch(cfg.svgDir + cfg.svgPattern, ['svg', 'kss']);
-    gulp.watch(cfg.jsDir + cfg.jsPattern, ['lint:js', 'scripts']);
+    gulp.watch(cfg.cssDir + cfg.twigPattern, gulp.series('kss'));
+    gulp.watch(cfg.cssDir + cfg.stylusPattern, gulp.parallel('lint:css', 'styles'), gulp.series('kss'));
+    gulp.watch(cfg.svgDir + cfg.svgPattern, gulp.series('svg', 'kss'));
+    gulp.watch(cfg.jsDir + cfg.jsPattern, gulp.parallel('lint:js', 'scripts'));
 }
 
-function startServer() {
+function startServer(done) {
     const serve = serveStatic('docs');
 
     const server = http.createServer(function (req, res) {
-        const done = finalhandler(req, res);
+        done = finalhandler(req, res);
         serve(req, res, done);
     });
 
     server.listen(8000);
+
+    done();
 }
 
 gulp.task('connect', startServer);
@@ -206,7 +210,7 @@ gulp.task('lint:css', stylesLint);
 gulp.task('lint:js', scriptsLint);
 
 // lint
-gulp.task('lint', ['lint:js', 'lint:css']);
+gulp.task('lint', gulp.series('lint:js', 'lint:css'));
 
 // build css
 gulp.task('styles', stylesBuild);
@@ -227,10 +231,10 @@ gulp.task('svg', svgBuild);
 gulp.task('watch', watch);
 
 // build
-gulp.task('build', ['svg', 'styles', 'scripts', 'assets']);
+gulp.task('build', gulp.parallel('svg', 'styles', 'scripts', 'assets'));
 
 // build docs
-gulp.task('docs', ['build'], kssBuild);
+gulp.task('docs', gulp.series('build', 'kss'));
 
 // default build docs and run watch
-gulp.task('default', ['connect', 'lint', 'docs'], watch);
+gulp.task('default', gulp.series('connect', 'lint', 'docs', 'watch'));
