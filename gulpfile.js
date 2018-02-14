@@ -183,7 +183,7 @@ function kssBuild(done) {
 
 function watch() {
     gulp.watch(cfg.cssDir + cfg.twigPattern, gulp.series('kss'));
-    gulp.watch(cfg.cssDir + cfg.stylusPattern, gulp.parallel('lint:css', 'styles'), gulp.series('kss'));
+    gulp.watch(cfg.cssDir + cfg.stylusPattern, gulp.series(gulp.parallel('lint:css', 'styles'), 'kss'));
     gulp.watch(cfg.svgDir + cfg.svgPattern, gulp.series('svg', 'kss'));
     gulp.watch(cfg.jsDir + cfg.jsPattern, gulp.parallel('lint:js', 'scripts'));
 }
