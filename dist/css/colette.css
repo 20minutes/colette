@@ -1596,15 +1596,15 @@ figure {
 .webfont .btn {
   font-family: 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif;
 }
-.btn svg {
+.btn-picto {
   width: 0.9em;
   height: 0.9em;
   margin-bottom: -0.1em;
 }
-.btn svg.left {
+.btn-picto-left {
   margin-right: 0.3em;
 }
-.btn svg.right {
+.btn-picto-right {
   margin-left: 0.3em;
 }
 .btn-icon {
