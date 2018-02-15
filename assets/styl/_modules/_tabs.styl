@@ -28,7 +28,7 @@
 
     a
         position relative
-        z-index 2
+        z-index: $zIndex.base + 1
         color $color-tertiary
 
     &-item
@@ -39,7 +39,7 @@
         float left
 
         &:after
-            z-index 1
+            z-index: $zIndex.base
             content ''
             position absolute
             display block
@@ -59,7 +59,7 @@
 
         span
             position relative
-            z-index 2
+            z-index: $zIndex.base + 1
 
 // Special rules for Breaking News
 .breakingnews

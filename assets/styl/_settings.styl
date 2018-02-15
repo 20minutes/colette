@@ -273,3 +273,37 @@ $svgLogoStyle ?= '
         fill rgba(255, 255, 255, .5)
 ' // @stylint ignore
 $svgDefaultMargins ?= 0 .3em -.1em 0
+
+// Z-Index
+//
+// Colette provides 3 default `z-index`
+//
+// ```
+// $zIndex ?= {
+//     base: 1
+//     overlay: 10
+//     layout: 20
+// }
+// ```
+//
+// **Usage example**
+// ```
+// /* stylus file */
+// z-index zIndex.layout + 4
+// ```
+//
+// will compile to
+// ```
+// /* CSS file */
+// z-index: 24
+//     /* styles */
+// ```
+//
+//
+//
+// Styleguide: Settings.Z-Index
+$zIndex ?= {
+    base: 1
+    overlay: 10
+    layout: 20
+}
