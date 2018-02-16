@@ -436,13 +436,13 @@ form[aria-busy=true]:before {
           animation: loadingAnimation 1.4s infinite linear;
 }
 form[aria-busy=true]:before {
-  z-index: 6;
+  z-index: 11;
 }
 form[aria-busy=true]:after {
   content: '';
   display: block;
   position: absolute;
-  z-index: 5;
+  z-index: 10;
   left: 0;
   right: 0;
   bottom: 0;
@@ -2741,7 +2741,7 @@ figure {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 1;
   padding: 0 1em;
   height: 2.8em;
   line-height: 2.8em;
