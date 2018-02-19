@@ -6,10 +6,8 @@ import 'babel-polyfill';
 // dom4 polyfill
 import 'dom4';
 
-// focus-ring polyfill
-// TODO: replace by focus-visible polyfill as soon as it exist
-// https://github.com/WICG/focus-ring/pull/90
-import 'wicg-focus-ring';
+// focus-visible polyfill
+import 'focus-visible';
 
 //modules
 import iframeResizer from './modules/iframeResizer';

@@ -628,7 +628,7 @@ input[type='radio'] + label:before {
 *:focus {
   outline: dotted thin #878787;
 }
-.js-focus-ring *:focus:not(.focus-ring) {
+.js-focus-visible *:focus:not(.focus-visible) {
   outline: 0;
 }
 :before,
