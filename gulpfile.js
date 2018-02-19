@@ -17,7 +17,7 @@ const named = require('vinyl-named');
 const postcss = require('gulp-postcss');
 const cssnano = require('cssnano');
 const autoprefixer = require('autoprefixer');
-const postcssFocusRing = require('postcss-focus-ring');
+const postcssFocusVisible = require('postcss-focus-visible');
 
 const cfg = {
     fontsDir: 'assets/fonts/',
@@ -45,7 +45,7 @@ function stylesBuild() {
         'include css': true
     }))
     .pipe(postcss([
-        postcssFocusRing(),
+        postcssFocusVisible(),
         autoprefixer()
     ]))
     .pipe(rename('colette.css'))
@@ -163,7 +163,7 @@ function kssBuild(done) {
             linenos: false
         }))
         .pipe(require('gulp-postcss')([
-            postcssFocusRing(),
+            postcssFocusVisible(),
             autoprefixer(),
             cssnano()
         ]))
