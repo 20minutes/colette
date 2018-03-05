@@ -617,6 +617,14 @@ input[type='radio']:checked + label:before {
   color: #4c4d4e;
   box-shadow: inset 0 0 0 0.1em #fff;
 }
+input[type='checkbox']:focus + label,
+input[type='radio']:focus + label {
+  outline: dotted thin #878787;
+}
+.js-focus-visible input[type='checkbox']:not(.focus-visible) + label,
+.js-focus-visible input[type='radio']:not(.focus-visible) + label {
+  outline: 0;
+}
 input[type='radio'] + label:before {
   border-radius: 20em;
 }
