@@ -1600,6 +1600,8 @@ figure {
   background-color: #b7b7b7;
   transition: background-color 0.2s ease;
   color: #4c4d4e;
+  line-height: 1.5em;
+  vertical-align: baseline;
 }
 .webfont .btn {
   font-family: 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif;
@@ -1800,30 +1802,12 @@ figure {
 }
 .btn.btn-pocket,
 .btn-icon.btn-pocket {
-  background-color: #fff;
+  background-color: #ed4054;
   color: #fff;
 }
 .btn.btn-pocket:enabled:hover,
 .btn-icon.btn-pocket:enabled:hover {
-  background-color: #ccc;
-}
-.btn.btn-pocket1,
-.btn-icon.btn-pocket1 {
-  background-color: #ed4054;
-  color: #fff;
-}
-.btn.btn-pocket1:enabled:hover,
-.btn-icon.btn-pocket1:enabled:hover {
   background-color: #dc152c;
-}
-.btn.btn-pocket2,
-.btn-icon.btn-pocket2 {
-  background-color: #b7b7b7;
-  color: #fff;
-}
-.btn.btn-pocket2:enabled:hover,
-.btn-icon.btn-pocket2:enabled:hover {
-  background-color: #929292;
 }
 .btn.btn-sms,
 .btn-icon.btn-sms {
@@ -1875,11 +1859,6 @@ figure {
 .btn.btn-snapchat,
 .btn-icon.btn-snapchat {
   color: #4c4d4e;
-}
-.btn.btn-pocket,
-.btn-icon.btn-pocket {
-  color: #ed4054;
-  border: solid 0.1em #b7b7b7;
 }
 .card {
   margin: 0rem;
