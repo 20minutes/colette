@@ -1900,6 +1900,9 @@ figure {
   font-size: 1.3rem;
   line-height: 1.2em;
 }
+.choice legend {
+  font-weight: bold;
+}
 .choice-list {
   margin-top: 0;
   margin-bottom: 0;
