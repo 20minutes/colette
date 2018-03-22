@@ -14,7 +14,7 @@
 // Styleguide Mixins.Grids.column
 _column(size, flt=left)
     float unquote(flt) if none != unquote(flt)
-    width round(size * 100 / $columns, 3) * 1%
+    width round(size * 100 / $grid-columns, 3) * 1%
 
 
 // _offset(size)
@@ -25,7 +25,7 @@ _column(size, flt=left)
 //
 // Styleguide Mixins.Grids.offset
 _offset(size)
-    margin-left round(size * 100 / $columns, 3) * 1%
+    margin-left round(size * 100 / $grid-columns, 3) * 1%
 
 
 // _gridColumn(breakpoint, size)

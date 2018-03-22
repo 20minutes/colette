@@ -632,7 +632,7 @@ body {
   font-size: 1.6em;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale /* FF */;
+  -moz-osx-font-smoothing: grayscale;
 }
 a {
   color: #4c4d4e;
@@ -721,7 +721,7 @@ kbd,
 samp,
 pre {
   border-radius: 0.2rem;
-  font-size: 1.2em /* em value to make it relative to the body text size */;
+  font-size: 1.2em;
 }
 small {
   font-size: 0.75em;
@@ -1286,6 +1286,7 @@ figure {
 }
 .btnicon {
   display: inline-block;
+  vertical-align: middle;
   border-radius: 60em;
   background-color: #b7b7b7;
   transition: background-color 0.2s ease;
@@ -1335,101 +1336,34 @@ figure {
   color: #fff;
   background: #4c4d4e;
 }
-.form-single-row {
+.formSingleInput {
   position: relative;
 }
-.form-single-row input[type='search'],
-.form-single-row input[type='text'] {
+.formSingleInput-input {
   height: 3.6rem;
   width: 100%;
+}
+input.formSingleInput-input {
   padding-right: 4.2rem;
-  border: 1px solid #b7b7b7;
   border-radius: 1.8rem;
 }
-.form-single-row input[type='submit'],
-.form-single-row button[type='submit'] {
+.formSingleInput-btn {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   width: 4.2rem;
   border: 0;
+  border: 1px solid #b7b7b7;
   border-radius: 0 1.8rem 1.8rem 0;
-  background-color: #0b4892;
-  color: #fff;
+  background-color: #b7b7b7;
+  color: #4c4d4e;
 }
-.form-single-row input[type='submit'] svg,
-.form-single-row button[type='submit'] svg {
+.formSingleInput-btn svg {
   font-size: 2.1rem;
   margin-right: 0.6rem;
   height: 1em;
   width: 1em;
-}
-.form-single-row-transparent input[type='submit'],
-.form-single-row-transparent button[type='submit'] {
-  border-top: 1px solid transparent;
-  background-color: transparent;
-  color: #878787;
-}
-.form-single-row-base input[type='submit'],
-.form-single-row-base button[type='submit'] {
-  background-color: #4c4d4e;
-  color: #fff;
-}
-.form-single-row-default input[type='submit'],
-.form-single-row-default button[type='submit'] {
-  background-color: #0b4892;
-  color: #fff;
-}
-.form-single-row-sport input[type='submit'],
-.form-single-row-sport button[type='submit'] {
-  background-color: #00b9f3;
-  color: #000;
-}
-.form-single-row-entertainment input[type='submit'],
-.form-single-row-entertainment button[type='submit'] {
-  background-color: #cc190f;
-  color: #fff;
-}
-.form-single-row-economy input[type='submit'],
-.form-single-row-economy button[type='submit'] {
-  background-color: #053042;
-  color: #fff;
-}
-.form-single-row-community input[type='submit'],
-.form-single-row-community button[type='submit'] {
-  background-color: #930b48;
-  color: #fff;
-}
-.form-single-row-weird input[type='submit'],
-.form-single-row-weird button[type='submit'] {
-  background-color: #ef2a82;
-  color: #000;
-}
-.form-single-row-partner input[type='submit'],
-.form-single-row-partner button[type='submit'] {
-  background-color: #ff5400;
-  color: #000;
-}
-.form-single-row-planet input[type='submit'],
-.form-single-row-planet button[type='submit'] {
-  background-color: #48930b;
-  color: #000;
-}
-.form-single-row-media input[type='submit'],
-.form-single-row-media button[type='submit'] {
-  background-color: #000;
-  color: #fff;
-}
-.form-single-row-hightech input[type='submit'],
-.form-single-row-hightech button[type='submit'] {
-  background-color: #686868;
-  color: #fff;
-}
-.form-single-row-native input[type='submit'],
-.form-single-row-native button[type='submit'] {
-  background-color: #fff7e2;
-  color: #000;
 }
 .icon {
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
@@ -1516,23 +1450,18 @@ figure {
   display: inline-block;
   vertical-align: middle;
 }
-.linkwithsvg {
+.linkIcon {
   background: transparent;
 }
-.linkwithsvg svg {
+.linkIcon svg {
   display: inline-block;
   width: 1em;
   height: 1em;
-  margin: 0 0.3em -0.2em 0;
-}
-.linkwithsvg-label {
-  vertical-align: middle;
-}
-.linkwithsvg-small {
-  font-size: 0.8em;
-}
-.linkwithsvg-small svg {
   margin: 0;
+  vertical-align: baseline;
+}
+.linkIcon-label {
+  vertical-align: top;
 }
 .loading {
   position: relative;
@@ -1978,8 +1907,8 @@ figure {
   box-shadow: 0 0 0 0.1rem rgba(0,0,0,0.02), 0 0.1rem 0.4rem 0.1rem rgba(0,0,0,0.06);
 }
 .breakingnews {
-  display: flex;
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  display: flex;
   background: #fff;
   font-weight: bold;
   flex-wrap: nowrap;
@@ -2244,177 +2173,206 @@ figure {
 .blocklinkskin-brand.box {
   background-color: #fff7e2;
 }
-.btnskin-base {
+.btnSkin-base {
   background-color: #4c4d4e;
   color: #fff;
+  border-color: #4c4d4e;
 }
-.btnskin-base:enabled:hover {
+.btnSkin-base:enabled:hover {
   background-color: #3d3e3e;
 }
-.btnskin-default {
+.btnSkin-default {
   background-color: #0b4892;
   color: #fff;
+  border-color: #0b4892;
 }
-.btnskin-default:enabled:hover {
+.btnSkin-default:enabled:hover {
   background-color: #093a75;
 }
-.btnskin-sport {
+.btnSkin-sport {
   background-color: #00b9f3;
   color: #fff;
+  border-color: #00b9f3;
 }
-.btnskin-sport:enabled:hover {
+.btnSkin-sport:enabled:hover {
   background-color: #0094c2;
 }
-.btnskin-entertainment {
+.btnSkin-entertainment {
   background-color: #cc190f;
   color: #fff;
+  border-color: #cc190f;
 }
-.btnskin-entertainment:enabled:hover {
+.btnSkin-entertainment:enabled:hover {
   background-color: #a3140c;
 }
-.btnskin-economy {
+.btnSkin-economy {
   background-color: #053042;
   color: #fff;
+  border-color: #053042;
 }
-.btnskin-economy:enabled:hover {
+.btnSkin-economy:enabled:hover {
   background-color: #042635;
 }
-.btnskin-community {
+.btnSkin-community {
   background-color: #930b48;
   color: #fff;
+  border-color: #930b48;
 }
-.btnskin-community:enabled:hover {
+.btnSkin-community:enabled:hover {
   background-color: #76093a;
 }
-.btnskin-weird {
+.btnSkin-weird {
   background-color: #ef2a82;
   color: #fff;
+  border-color: #ef2a82;
 }
-.btnskin-weird:enabled:hover {
+.btnSkin-weird:enabled:hover {
   background-color: #d11066;
 }
-.btnskin-partner {
+.btnSkin-partner {
   background-color: #ff5400;
   color: #fff;
+  border-color: #ff5400;
 }
-.btnskin-partner:enabled:hover {
+.btnSkin-partner:enabled:hover {
   background-color: #cc4300;
 }
-.btnskin-planet {
+.btnSkin-planet {
   background-color: #48930b;
   color: #fff;
+  border-color: #48930b;
 }
-.btnskin-planet:enabled:hover {
+.btnSkin-planet:enabled:hover {
   background-color: #3a7609;
 }
-.btnskin-media {
+.btnSkin-media {
   background-color: #000;
   color: #fff;
+  border-color: #000;
 }
-.btnskin-media:enabled:hover {
+.btnSkin-media:enabled:hover {
   background-color: #000;
 }
-.btnskin-hightech {
+.btnSkin-hightech {
   background-color: #686868;
   color: #fff;
+  border-color: #686868;
 }
-.btnskin-hightech:enabled:hover {
+.btnSkin-hightech:enabled:hover {
   background-color: #535353;
 }
-.btnskin-native {
+.btnSkin-native {
   background-color: #fff7e2;
   color: #fff;
+  border-color: #fff7e2;
 }
-.btnskin-native:enabled:hover {
+.btnSkin-native:enabled:hover {
   background-color: #ffdc82;
 }
-.btnskin-facebook {
+.btnSkin-facebook {
   background-color: #4c64a0;
   color: #fff;
+  border-color: #4c64a0;
 }
-.btnskin-facebook:enabled:hover {
+.btnSkin-facebook:enabled:hover {
   background-color: #3d5080;
 }
-.btnskin-messenger {
+.btnSkin-messenger {
   background-color: #3d6bfb;
   color: #fff;
+  border-color: #3d6bfb;
 }
-.btnskin-messenger:enabled:hover {
+.btnSkin-messenger:enabled:hover {
   background-color: #053ff5;
 }
-.btnskin-googleplus {
+.btnSkin-googleplus {
   background-color: #d14836;
   color: #fff;
+  border-color: #d14836;
 }
-.btnskin-googleplus:enabled:hover {
+.btnSkin-googleplus:enabled:hover {
   background-color: #ab3727;
 }
-.btnskin-hootsuite {
+.btnSkin-hootsuite {
   background-color: #000;
   color: #fff;
+  border-color: #000;
 }
-.btnskin-hootsuite:enabled:hover {
+.btnSkin-hootsuite:enabled:hover {
   background-color: #000;
 }
-.btnskin-linkedin {
+.btnSkin-linkedin {
   background-color: #0177b5;
   color: #fff;
+  border-color: #0177b5;
 }
-.btnskin-linkedin:enabled:hover {
+.btnSkin-linkedin:enabled:hover {
   background-color: #015f91;
 }
-.btnskin-pinterest {
+.btnSkin-pinterest {
   background-color: #bd081c;
   color: #fff;
+  border-color: #bd081c;
 }
-.btnskin-pinterest:enabled:hover {
+.btnSkin-pinterest:enabled:hover {
   background-color: #970616;
 }
-.btnskin-pocket {
+.btnSkin-pocket {
   background-color: #ed4054;
   color: #fff;
+  border-color: #ed4054;
 }
-.btnskin-pocket:enabled:hover {
+.btnSkin-pocket:enabled:hover {
   background-color: #dc152c;
 }
-.btnskin-sms {
+.btnSkin-sms {
   background-color: #48930b;
   color: #fff;
+  border-color: #48930b;
 }
-.btnskin-sms:enabled:hover {
+.btnSkin-sms:enabled:hover {
   background-color: #3a7609;
 }
-.btnskin-twitter {
+.btnSkin-twitter {
   background-color: #00a7e7;
   color: #fff;
+  border-color: #00a7e7;
 }
-.btnskin-twitter:enabled:hover {
+.btnSkin-twitter:enabled:hover {
   background-color: #0086b9;
 }
-.btnskin-whatsapp {
+.btnSkin-whatsapp {
   background-color: #01a85a;
   color: #fff;
+  border-color: #01a85a;
 }
-.btnskin-whatsapp:enabled:hover {
+.btnSkin-whatsapp:enabled:hover {
   background-color: #018648;
 }
-.btnskin-github {
+.btnSkin-github {
   background-color: #791e8f;
   color: #fff;
+  border-color: #791e8f;
 }
-.btnskin-github:enabled:hover {
+.btnSkin-github:enabled:hover {
   background-color: #611872;
 }
-.btnskin-snapchat {
+.btnSkin-snapchat {
   background-color: #fdfe00;
   color: #fff;
+  border-color: #fdfe00;
 }
-.btnskin-snapchat:enabled:hover {
+.btnSkin-snapchat:enabled:hover {
   background-color: #cacb00;
 }
-.btnskin-native,
-.btnskin-snapchat {
+.btnSkin-native,
+.btnSkin-snapchat {
   color: #4c4d4e;
+}
+.btnSkin-transparent {
+  background-color: transparent;
+  border-color: transparent;
+  color: #878787;
 }
 .secondskin-live .teaser-summary {
   color: #cc190f;

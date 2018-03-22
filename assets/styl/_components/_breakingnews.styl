@@ -7,8 +7,8 @@
 //
 // Styleguide Components.BreakingNews
 .breakingnews
+    _fontload($fontstack-secondary)
     display flex
-    _fontload($font-secondary)
     background $color-white
     font-weight bold
     flex-wrap nowrap
@@ -35,7 +35,7 @@
 
     &-title
         _p(.5 1)
-        _fontload($font-secondary)
+        _fontload($fontstack-secondary)
         flex-grow 999 // excessive value to take maximum of available space
         min-height 6.2rem
         color $color-highlight

@@ -6,17 +6,17 @@
 // Text color is choosen for contrast between white and black.
 // But `native` and `snapchat` buttons have text in `$color-base`.
 //
-// .btnskin-default          - default color button
-// .btnskin-sport            - sport color button
-// .btnskin-entertainment    - entertainment color button
-// .btnskin-economy          - economy color button
-// .btnskin-community        - community color button
-// .btnskin-weird            - weird color button
-// .btnskin-partner          - partner color button
-// .btnskin-planet           - planet color button
-// .btnskin-media            - media color button
-// .btnskin-hightech         - hightech color button
-// .btnskin-native           - native color button
+// .btnSkin-default          - default color button
+// .btnSkin-sport            - sport color button
+// .btnSkin-entertainment    - entertainment color button
+// .btnSkin-economy          - economy color button
+// .btnSkin-community        - community color button
+// .btnSkin-weird            - weird color button
+// .btnSkin-partner          - partner color button
+// .btnSkin-planet           - planet color button
+// .btnSkin-media            - media color button
+// .btnSkin-hightech         - hightech color button
+// .btnSkin-native           - native color button
 //
 // Markup: ../_elements/btn.twig
 //
@@ -26,18 +26,18 @@
 //
 // All social colors are available to style the button according to its context.
 //
-// .btnskin-facebook         - facebook color button
-// .btnskin-messenger        - messenger color button
-// .btnskin-twitter          - twitter color button
-// .btnskin-pinterest        - pinterest color button
-// .btnskin-linkedin         - linkedin color button
-// .btnskin-googleplus       - googleplus color button
-// .btnskin-pocket           - pocket color button
-// .btnskin-snapchat         - snapchat color button
-// .btnskin-whatsapp         - whatsapp color button
-// .btnskin-hootsuite        - hootsuite color button
-// .btnskin-github           - github color button
-// .btnskin-sms              - sms color button
+// .btnSkin-facebook         - facebook color button
+// .btnSkin-messenger        - messenger color button
+// .btnSkin-twitter          - twitter color button
+// .btnSkin-pinterest        - pinterest color button
+// .btnSkin-linkedin         - linkedin color button
+// .btnSkin-googleplus       - googleplus color button
+// .btnSkin-pocket           - pocket color button
+// .btnSkin-snapchat         - snapchat color button
+// .btnSkin-whatsapp         - whatsapp color button
+// .btnSkin-hootsuite        - hootsuite color button
+// .btnSkin-github           - github color button
+// .btnSkin-sms              - sms color button
 //
 // Markup: ../_elements/btn-socials.twig
 //
@@ -50,17 +50,17 @@
 // Icon buttons are icons in a colored circle.
 // All editorial colors are available to style the button according to its context.
 //
-// .btnskin-default          - default color button
-// .btnskin-sport            - sport color button
-// .btnskin-entertainment    - entertainment color button
-// .btnskin-economy          - economy color button
-// .btnskin-community        - community color button
-// .btnskin-weird            - weird color button
-// .btnskin-partner          - partner color button
-// .btnskin-planet           - planet color button
-// .btnskin-media            - media color button
-// .btnskin-hightech         - hightech color button
-// .btnskin-native           - native color button
+// .btnSkin-default          - default color button
+// .btnSkin-sport            - sport color button
+// .btnSkin-entertainment    - entertainment color button
+// .btnSkin-economy          - economy color button
+// .btnSkin-community        - community color button
+// .btnSkin-weird            - weird color button
+// .btnSkin-partner          - partner color button
+// .btnSkin-planet           - planet color button
+// .btnSkin-media            - media color button
+// .btnSkin-hightech         - hightech color button
+// .btnSkin-native           - native color button
 //
 // Markup: ../_elements/btnicon.twig
 //
@@ -73,30 +73,31 @@
 // Icon buttons are icons in a colored circle.
 // All social colors are available to style the button according to its context.
 //
-// .btnskin-facebook         - facebook color button
-// .btnskin-messenger        - messenger color button
-// .btnskin-twitter          - twitter color button
-// .btnskin-pinterest        - pinterest color button
-// .btnskin-linkedin         - linkedin color button
-// .btnskin-googleplus       - googleplus color button
-// .btnskin-pocket           - pocket color button
-// .btnskin-snapchat         - snapchat color button
-// .btnskin-whatsapp         - whatsapp color button
-// .btnskin-hootsuite        - hootsuite color button
-// .btnskin-github           - github color button
-// .btnskin-sms              - sms color button
+// .btnSkin-facebook         - facebook color button
+// .btnSkin-messenger        - messenger color button
+// .btnSkin-twitter          - twitter color button
+// .btnSkin-pinterest        - pinterest color button
+// .btnSkin-linkedin         - linkedin color button
+// .btnSkin-googleplus       - googleplus color button
+// .btnSkin-pocket           - pocket color button
+// .btnSkin-snapchat         - snapchat color button
+// .btnSkin-whatsapp         - whatsapp color button
+// .btnSkin-hootsuite        - hootsuite color button
+// .btnSkin-github           - github color button
+// .btnSkin-sms              - sms color button
 //
 // Markup: ../_elements/btnicon-socials.twig
 //
 // Weight: 3
 //
 // Styleguide Theme.Buttons.IconButtonsSocials
-.btnskin
+.btnSkin
     $tmpColors = {}
     for key, value in merge($tmpColors, $colors, $colors-socials)
         &-{key}
             background-color value
             color $color-white
+            border-color value
 
             &:enabled:hover
                 background-color darken(value, 20%)
@@ -104,3 +105,8 @@
     &-native
     &-snapchat
         color $color-base
+
+    &-transparent
+        background-color transparent
+        border-color transparent
+        color $color-tertiary

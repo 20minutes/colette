@@ -68,6 +68,6 @@ _contrast_findFirstMatch($color, $list, $min = $contrast, $index = 0)
 _contrast_choose($color, $list, $min = $contrast)
     $found = _contrast_findFirstMatch($color, $list, $min)
     if ($found == false)
-        warn('No color valid for ' + $color + ' with contrast ratio >= ' + $min + ' in this $list 😥 : ' + join(', ', $list))
+        warn('No color valid for ' + $color + ' with contrast ratio >= ' + $min + ' in this $list 😥: ' + join(', ', $list))
 
     return $found

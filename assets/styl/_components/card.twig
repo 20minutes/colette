@@ -1,25 +1,25 @@
 {# Card
  #
- # @param uri   isDated                (optional) (default true)
- # @param str   theme                  (optional) override theme
- # @param bool  lazyloadImg            (optional) image lazyload (default false)
- # @param array classes                (optional) classes array added to each cards (defaut [])
- # @param str   attributes             (optional) (default '')
- # @param bool  priorityToSectionTitle (optional) (default false)
- # @param array article    (required) content
- #       -> str   media    (optional)
- #       -> array label    (optional)
- #           -> str  default  (required)
- #       -> array title    (required)
- #           -> str  default  (required)
- #           -> str  shore    (optional)
- #       -> array section  (required)
- #           -> str  theme  (optional)
- #       -> array date     (optional)
- #           -> str publication (optional)
- #       -> array rank     (optional) ranking and scoring
- #       -> array uri      (required)
- #           -> str  current  (required) uri
+ # @param bool    isDated                (optional) (default true)
+ # @param string  theme                  (optional) override theme
+ # @param bool    lazyloadImg            (optional) image lazyload (default false)
+ # @param array   classes                (optional) classes array added to each cards (defaut [])
+ # @param string  attributes             (optional) (default '')
+ # @param bool    priorityToSectionTitle (optional) (default false)
+ # @param array   article                (required) content
+ #       -> array  media    (optional)
+ #       -> array  label    (optional)
+ #           -> string   default     (required)
+ #       -> array  title    (required)
+ #           -> string   default     (required)
+ #           -> string   shore       (optional)
+ #       -> array  section  (required)
+ #           -> string   theme       (optional)
+ #       -> array  date     (optional)
+ #           -> string   publication (optional)
+ #       -> array  rank     (optional) ranking and scoring
+ #       -> array  uri      (required)
+ #           -> string   current     (required) uri
  #}
 {%- set classes = classes|default([]) -%}
 {%- if modifier_class %}{% set classes = classes|merge([modifier_class]) %}{% endif -%}
