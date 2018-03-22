@@ -1,0 +1,9 @@
+{
+    "media": {
+        "caption": "Missing image",
+        "credit": "by someone"
+    },
+    "defaultFormat": "648x415",
+    "mediaFormats": ["648x415"],
+    "displayCaption": true
+}

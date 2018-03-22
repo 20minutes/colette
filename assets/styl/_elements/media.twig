@@ -1,0 +1,60 @@
+{##
+ # Base for media blocks
+ #
+ # @param array    media
+ #                 -> src
+ #                 -> caption
+ #                 -> credit
+ # @param string   defaultFormat  (optional) Images sizes format ( width x height )
+ # @param array    mediaFormats   (optional) Images sizes formats ( width x height )
+ # @param array    sizes          (optional) Images sizes attritute
+ # @param array    classes        (optional) Additional classes
+ # @param bool     displayCaption (optional) default false
+ #
+ # @block media                  (optional)
+ # @block media_img              (optional)
+ # @block media_caption          (optional)
+ # @block block_classes          (optional)
+ # @block block_attributes       (optional)
+ # @block block_title_classes    (optional)
+ # @block block_title_attributes (optional)
+ #}
+{% set mediaFormats = mediaFormats is defined ? mediaFormats : [] %}
+{% set sizes = sizes is defined ? sizes : [] %}
+{% set classes = classes is defined ? classes : [] %}
+{% set displayCaption = displayCaption == true %}
+
+{% import '../../twig/macros/_img.twig' as _img -%}
+
+{% set alt = media.caption %}
+{%- if media.credit is not empty %}
+    {% set alt = alt ~ ' — ' ~ media.credit  %}
+{% endif -%}
+
+{% block media %}
+    <figure class="media{% block block_classes %} {{ classes|join(' ') }}{% endblock %}" role="group"{% block block_attributes '' %}>
+        {% block media_figure %}
+            <div class="media-wrap">
+                {{ _img.img(
+                    media.src,
+                    defaultFormat,
+                    mediaFormats,
+                    alt,
+                    false,
+                    [],
+                    '',
+                    sizes
+                ) }}
+                {% block media_rank '' %}
+            </div>
+        {% endblock %}
+        {% block media_caption -%}
+            {% if displayCaption %}
+                <figcaption class="media-caption">
+                    {{ media.caption }}
+                    {%- if media.credit is not empty %} — <em>{{ media.credit }}</em>{% endif %}
+                </figcaption>
+            {% endif %}
+        {%- endblock %}
+    </figure>
+{% endblock %}

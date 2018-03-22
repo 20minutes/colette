@@ -1,0 +1,49 @@
+{# Card
+ #
+ # @param bool    isDated                (optional) (default true)
+ # @param string  theme                  (optional) override theme
+ # @param bool    lazyloadImg            (optional) image lazyload (default false)
+ # @param array   classes                (optional) classes array added to each cards (defaut [])
+ # @param string  attributes             (optional) (default '')
+ # @param bool    priorityToSectionTitle (optional) (default false)
+ # @param array   article                (required) content
+ #       -> array  media    (optional)
+ #       -> array  label    (optional)
+ #           -> string   default     (required)
+ #       -> array  title    (required)
+ #           -> string   default     (required)
+ #           -> string   shore       (optional)
+ #       -> array  section  (required)
+ #           -> string   theme       (optional)
+ #       -> array  date     (optional)
+ #           -> string   publication (optional)
+ #       -> array  rank     (optional) ranking and scoring
+ #       -> array  uri      (required)
+ #           -> string   current     (required) uri
+ #}
+{%- set classes = classes|default([]) -%}
+{%- if modifier_class %}{% set classes = classes|merge([modifier_class]) %}{% endif -%}
+{%- set media = article.medias is defined ? article.medias.data|first : {} -%}
+{%- set priorityToSectionTitle = priorityToSectionTitle|default(false) -%}
+{%- set theme = theme is defined and theme is not empty ? theme : article.section.theme|default('default') -%}
+<a class="{{ ['card']|merge(classes)|join(' ') }}" href="#">
+    {% include '../_elements/media.twig' with {
+        'media': media,
+        'classes': [],
+        'rank': article.rank|default(null),
+        'defaultFormat': '120x78',
+        'mediaFormats': ['120x78'],
+        'lazyloadImg': lazyloadImg|default(false),
+    } only %}
+    <div class="teaser">
+        <p class="teaser-headline">
+            {% if isDated %}<time datetime="{{ article.date.publication }}">{{ article.date.publication|time_or_date }}</time> | {% endif %}
+            {% if priorityToSectionTitle %}
+                {{ article.section.title|default(article.label.default|default('')) }}
+            {% else %}
+                {{ article.label.default|default(article.section.title|default('')) }}
+            {% endif %}
+        </p>
+        <p class="teaser-title">{{ article.title.short|default(article.title.default|smart_cut(75)) }}</p>
+    </div>
+</a>

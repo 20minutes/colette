@@ -1,19 +1,21 @@
 // Spaces
 //
-// Spaces mixins return `margin` and `padding` properties based on a multiple of the `$gutter` size.
-// <br /> Note that `$gutter` value is defined in Colette's settings, but it can be overridden in your project stylus file.
+// Spaces mixins return `margin` and `padding` properties based on a multiple of the `$grid-gutter` size.
+// <br /> Note that `$grid-gutter` value is defined in Colette's settings, but it can be overridden in your project stylus file.
 //
 // Styleguide Mixins.Spaces
 
-@require '_gutterToRem'
 @require '_map'
+
+_gutters(i)
+    return i * $grid-gutter
 
 // _p()
 //
-// Returns a `padding` based on `$gutter` value.
+// Returns a `padding` based on `$grid-gutter` value.
 // ```
 // /* my_file.styl */
-// $gutter = 20px // overrides colette's default value
+// $grid-gutter = 2rem // overrides colette's default value
 // .one-argument
 //     _p(1)
 //
@@ -32,21 +34,21 @@
 // }
 // ```
 //
-// args   - multiplier of `$gutter`
+// args   - multiplier of `$grid-gutter`
 //
 // Styleguide Mixins.Spaces.pa
 _p(values)
     if length(values) > 4
         warn('_p can only receive a list of 4 numbers max')
-    padding map(values, gutterToRem)
+    padding map(values, _gutters)
 
 
 // _pt()
 //
-// Returns a `padding-top` based on `$gutter` value.
+// Returns a `padding-top` based on `$grid-gutter` value.
 // ```
 // /* my_file.styl */
-// $gutter = 20px // overrides colette's default value
+// $grid-gutter = 2rem // overrides colette's default value
 // _pt(1)
 // ```
 // will compile to
@@ -55,19 +57,19 @@ _p(values)
 // padding-top: 2rem;
 // ```
 //
-// $i   - multiplier of `$gutter`
+// $i   - multiplier of `$grid-gutter`
 //
 // Styleguide Mixins.Spaces.pt
 _pt(i)
-    padding-top gutterToRem(i)
+    padding-top _gutters(i)
 
 
 // _pr()
 //
-// Returns a `padding-right` based on `$gutter` value.
+// Returns a `padding-right` based on `$grid-gutter` value.
 // ```
 // /* my_file.styl */
-// $gutter = 20px // overrides colette's default value
+// $grid-gutter = 2rem // overrides colette's default value
 // _pr(1)
 // ```
 // will compile to
@@ -76,19 +78,19 @@ _pt(i)
 // padding-right: 2rem;
 // ```
 //
-// $i   - multiplier of `$gutter`
+// $i   - multiplier of `$grid-gutter`
 //
 // Styleguide Mixins.Spaces.pr
 _pr(i)
-    padding-right gutterToRem(i)
+    padding-right _gutters(i)
 
 
 // _pb()
 //
-// Returns a `padding-bottom` based on `$gutter` value.
+// Returns a `padding-bottom` based on `$grid-gutter` value.
 // ```
 // /* my_file.styl */
-// $gutter = 20px // overrides colette's default value
+// $grid-gutter = 2rem // overrides colette's default value
 // _pb(1)
 // ```
 // will compile to
@@ -97,19 +99,19 @@ _pr(i)
 // padding-bottom: 2rem;
 // ```
 //
-// $i   - multiplier of `$gutter`
+// $i   - multiplier of `$grid-gutter`
 //
 // Styleguide Mixins.Spaces.pb
 _pb(i)
-    padding-bottom gutterToRem(i)
+    padding-bottom _gutters(i)
 
 
 // _pl()
 //
-// Returns a `padding-left` based on `$gutter` value.
+// Returns a `padding-left` based on `$grid-gutter` value.
 // ```
 // /* my_file.styl */
-// $gutter = 20px // overrides colette's default value
+// $grid-gutter = 2rem // overrides colette's default value
 // _pl(1)
 // ```
 // will compile to
@@ -118,19 +120,19 @@ _pb(i)
 // padding-left: 2rem;
 // ```
 //
-// $i   - multiplier of `$gutter`
+// $i   - multiplier of `$grid-gutter`
 //
 // Styleguide Mixins.Spaces.pl
 _pl(i)
-    padding-left gutterToRem(i)
+    padding-left _gutters(i)
 
 
 // _m()
 //
-// Returns a `margin` based on `$gutter` value.
+// Returns a `margin` based on `$grid-gutter` value.
 // ```
 // /* my_file.styl */
-// $gutter = 20px // overrides colette's default value
+// $grid-gutter = 2rem // overrides colette's default value
 // .one-argument
 //     _m(1)
 //
@@ -149,21 +151,21 @@ _pl(i)
 // }
 // ```
 //
-// args   - multiplier of `$gutter`
+// args   - multiplier of `$grid-gutter`
 //
 // Styleguide Mixins.Spaces.ma
 _m(values)
     if length(values) > 4
         warn('_m can only receive a list of 4 numbers max')
-    margin map(values, gutterToRem)
+    margin map(values, _gutters)
 
 
 // _mt()
 //
-// Returns a `margin-top` based on `$gutter` value.
+// Returns a `margin-top` based on `$grid-gutter` value.
 // ```
 // /* my_file.styl */
-// $gutter = 20px // overrides colette's default value
+// $grid-gutter = 2rem // overrides colette's default value
 // _mt(1)
 // ```
 // will compile to
@@ -172,19 +174,19 @@ _m(values)
 // margin-top: 2rem;
 // ```
 //
-// $i   - multiplier of `$gutter`
+// $i   - multiplier of `$grid-gutter`
 //
 // Styleguide Mixins.Spaces.mt
 _mt(i)
-    margin-top gutterToRem(i)
+    margin-top _gutters(i)
 
 
 // _mr()
 //
-// Returns a `margin-right` based on `$gutter` value.
+// Returns a `margin-right` based on `$grid-gutter` value.
 // ```
 // /* my_file.styl */
-// $gutter = 20px // overrides colette's default value
+// $grid-gutter = 2rem // overrides colette's default value
 // _mr(1)
 // ```
 // will compile to
@@ -193,19 +195,19 @@ _mt(i)
 // margin-right: 2rem;
 // ```
 //
-// $i   - multiplier of `$gutter`
+// $i   - multiplier of `$grid-gutter`
 //
 // Styleguide Mixins.Spaces.mr
 _mr(i)
-    margin-right gutterToRem(i)
+    margin-right _gutters(i)
 
 
 // _mb()
 //
-// Returns a `margin-bottom` based on `$gutter` value.
+// Returns a `margin-bottom` based on `$grid-gutter` value.
 // ```
 // /* my_file.styl */
-// $gutter = 20px // overrides colette's default value
+// $grid-gutter = 2rem // overrides colette's default value
 // _mb(1)
 // ```
 // will compile to
@@ -214,19 +216,19 @@ _mr(i)
 // margin-bottom: 2rem;
 // ```
 //
-// $i   - multiplier of `$gutter`
+// $i   - multiplier of `$grid-gutter`
 //
 // Styleguide Mixins.Spaces.mb
 _mb(i)
-    margin-bottom gutterToRem(i)
+    margin-bottom _gutters(i)
 
 
 // _ml()
 //
-// Returns a `margin-left` based on `$gutter` value.
+// Returns a `margin-left` based on `$grid-gutter` value.
 // ```
 // /* my_file.styl */
-// $gutter = 20px // overrides colette's default value
+// $grid-gutter = 2rem // overrides colette's default value
 // _ml(1)
 // ```
 // will compile to
@@ -235,8 +237,8 @@ _mb(i)
 // margin-left: 2rem;
 // ```
 //
-// $i   - multiplier of `$gutter`
+// $i   - multiplier of `$grid-gutter`
 //
 // Styleguide Mixins.Spaces.ml
 _ml(i)
-    margin-left gutterToRem(i)
+    margin-left _gutters(i)

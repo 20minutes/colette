@@ -1,0 +1,75 @@
+// Pagers
+//
+// Colette comes with basic styles for paginations.
+//
+// The default Pager is showing no list. It's a counter that's giving you the number of the page you're on, versus the total number of pages.
+//
+// Markup: pager-default.twig
+//
+// Styleguide Components.Pager
+
+// Pager with a list
+//
+// This is the list version of the Pager.
+//
+// Markup: pager-withlist.twig
+//
+// Styleguide Components.Pager.PagerWithlist
+.pager
+    color $color-secondary
+    font-family $fontstack-secondary
+    display flex
+    align-items center
+    justify-content center
+
+    &:disabled
+    &[aria-disabled]
+        display none
+
+    &-current
+    &-max
+        color $color-base
+
+    &-next
+    &-prev
+        background transparent
+        color $color-base
+        line-height 1em
+        margin-bottom -.1em
+
+        &:disabled
+        &[aria-hidden] // disabled link is a span[aria-hidden]
+            color $color-secondary
+
+        svg
+            width 1em
+            height @width
+
+    &-prev
+        margin-right .2em
+
+    &-next
+        margin-left .2em
+
+    &-count
+        margin 0 .5em
+
+    &-list
+        margin 0
+        padding 0
+        cursor default
+
+        a
+        strong // current page is strong
+            color $color-base
+
+        > li
+            display inline-block
+            margin 0 .5em
+
+    &-withlist
+        _ml(1)
+        _mr(1)
+
+        .pager-next
+            order 1000 // excessive value to stay the last

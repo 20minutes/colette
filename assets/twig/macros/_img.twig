@@ -1,0 +1,97 @@
+{{ 'This files is only for macros' }}
+
+{##
+ # Display img
+ #
+ # @param string    src            [required] if missing or empty it will display empti svg
+ # @param string    defaultFormat  [required]
+ # @param string    alt            [optional]
+ # @param bool      lazyload       [optional]
+ #
+ # @param array         formats    [optional] Array string (image format)
+ # @param array         sizes      [optional]
+ #
+ # @param array         classes    [optional] default []
+ # @param string        attributes [optional]
+ #}
+{% macro img(src, defaultFormat, formats, alt, lazyload, classes, attributes, sizes) -%}
+    {%- set formats = formats|default([]) -%}
+    {%- set alt = alt|default('') %}
+    {%- set lazyload = lazyload|default(false) -%}
+    {%- set classes = classes|default([]) -%}
+    {%- set attributes = attributes|default('') -%}
+    {%- set sizes = sizes|default(['100vw']) -%}
+    {%- set src = src|default(null) -%}
+
+    {%- set srcset = [] -%}
+    {%- for format in formats -%}
+        {%- set width = format|split('x')[0] -%}
+        {%- set srcset = srcset|merge([src|replace({'%format': format}) ~ ' ' ~ width ~ 'w']) -%}
+    {%- endfor -%}
+    {%- set classes = (classes is iterable) ? classes : [classes] -%}
+    {%- if lazyload and src is not null -%}
+        {%- set classes = classes|merge(['b-lazy']) -%}
+    {%- endif -%}
+
+    {%- set dimensions = defaultFormat|split('x') -%}
+
+    <img {% if classes is not empty %} class="{{ classes|join(' ') }}" {% endif %} width="{{ dimensions[0] }}" height="{{ dimensions[1] }}"
+        {% if lazyload or src is null %}
+            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='{{ dimensions[0] }}'%20height='{{ dimensions[1] }}'%3E%3C/svg%3E"
+        {% endif %}
+        {% if src is not null %}
+            {{ lazyload ? 'data-' -}}src="{{ src|replace({'%format': defaultFormat}) }}"
+            {% if srcset is not empty %}
+                {{ lazyload ? 'data-' -}}srcset="{{ srcset|join(', ') }}"
+                sizes="{{ sizes|join(', ') }}"
+            {% endif %}
+        {% endif %}
+        alt="{{ alt }}"
+        {{ attributes|raw }} />
+{%- endmacro %}
+
+{##
+ # Display picture
+ #
+ # create a picture with sources for different media-queries
+ # use macro `img`
+ #
+ # <picture>
+ #   <source srcset="mdn-logo-wide.png" media="(min-width: 600px)">
+ #   <img src="mdn-logo-narrow.png" alt="MDN">
+ # </picture>
+ #
+ # @param string        src            [required]
+ # @param string        defaultFormat  [required]
+ # @param array         mqs            [required]
+ #                      -> default     [required] Array string (image format)
+ #                      -> …           [*]        Array string (image format) by mediaquery
+ # @param string        alt            [optional]
+ # @param bool          lazyload       [optional]
+ # @param array         classes        [optional] default []
+ # @param string        attributes     [optional]
+ # @param array         sizes          [optional]
+ # @param array         imgClasses     [optional] default []
+ # @param string        imgAttributes  [optional]
+ #}
+{% macro picture(src, defaultFormat, mqs, alt, lazyload, classes, attributes, sizes, imgClasses, imgAttributes) -%}
+    {%- set alt = alt|default('') %}
+    {%- set lazyload = lazyload|default(false) -%}
+    {%- set classes = classes|default([]) -%}
+    {%- set attributes = attributes|default('') -%}
+    {%- set sizes = sizes|default(['100vw']) -%}
+    {%- set imgClasses = imgClasses|default([]) -%}
+    {%- set imgAttributes = imgAttributes|default('') -%}
+
+    <picture {% if classes is not empty %}class="{{ classes|join(' ') }}" {% endif %}{{ attributes|raw }}>
+        {% for mq, formats in mqs if mq != 'default' %}
+            {% set srcset = [] %}
+            {% for format in formats %}
+                {% set width = format|split('x')[0] %}
+                {% set srcset = srcset|merge([src|replace({'%format': format}) ~ ' ' ~ width ~ 'w']) %}
+            {% endfor %}
+            <source srcset="{{ srcset|join(', ') }}" media="{{ mq }}">
+        {% endfor %}
+        {{ _self.img(src, defaultFormat, mqs['default'], alt, lazyload, imgClasses, imgAttributes, sizes) }}
+    </picture>
+{%- endmacro %}

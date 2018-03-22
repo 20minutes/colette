@@ -1,0 +1,62 @@
+// Media
+//
+// A media is either an image or a video, displayed with caption and/or credit mention.
+// - **Video**: videos are made responsive, on the basis of a 16/9 ratio
+// - **Empty media**: if the media (image or video) is not available for any reason, the block display a default N/A image instead
+//
+// Markup: media.twig
+//
+// Styleguide Elements.Media
+
+// Media Video
+//
+// Videos are made responsive, on the basis of a 16/9 ratio
+//
+// Markup: media-video.twig
+//
+// Styleguide Elements.Media.Video
+
+// Media Empty
+//
+// If the media (image or video) is not available for any reason, the block display a default N/A image instead
+//
+// Markup: media-empty.twig
+//
+// Styleguide Elements.Media.Empty
+.media
+    position relative
+
+    iframe
+        display block
+        width 100%
+
+    img
+        display block
+        width 100%
+        height auto
+        background-color lighten($color-default, 80%)
+        background-image svgImport($mediaPlaceholder, $mediaPlaceholder-style)
+        background-size 65% 65%
+        background-position 50%
+        background-repeat no-repeat
+
+    &-caption
+    figcaption
+        _pt(.5)
+        font-size .85em
+        color $color-tertiary
+        line-height 1
+
+    &-wrap
+        position relative
+
+        &-video
+            width 100%
+            height 0
+            padding-bottom 56% // 16/9
+
+            > iframe
+                position absolute
+                top 0
+                left 0
+                height 100%
