@@ -58,7 +58,7 @@
             _pr(.5)
             margin 0
 
-    for i in (1..$columns)
+    for i in (1..$grid-columns)
         &-col-{i}
             _column(i)
 
@@ -67,7 +67,7 @@
 
     for breakpoint, query in $breakpoints
         @media query
-            for i in (1..$columns)
+            for i in (1..$grid-columns)
                 &-col-{breakpoint}-{i}
                     _column(i)
 

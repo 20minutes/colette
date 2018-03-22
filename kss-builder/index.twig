@@ -238,7 +238,6 @@
         sidebar = document.getElementById('sidebar'),
         overlay = document.getElementById('overlay'),
         close = document.getElementById('close'),
-        triggerClose = {1: close, 2: sidebar, 3: overlay},
         markups = document.getElementsByClassName('co_markup'),
         headroom = new colette.headroom(document.querySelector('.co_trigger-sidebar'), {
             offset: 50,
@@ -258,13 +257,13 @@
 
     {# expand code blocks #}
     for (var i = 0; i < markups.length; i++) {
-        markups[i].addEventListener('click', function(e) {
+        markups[i].addEventListener('click', function (e) {
             this.classList.toggle('co_markup-expanded');
         }, false);
     }
 
     {# trigger sidebar #}
-    trigger.addEventListener('click', function(){
+    trigger.addEventListener('click', function () {
         document.body.style.overflow = 'hidden'; // body should not scroll when sidebar is open
         sidebar.classList.add('co_sidebar-open');
         overlay.removeAttribute('aria-hidden');
@@ -276,9 +275,10 @@
         sidebar.classList.remove('co_sidebar-open');
         overlay.setAttribute('aria-hidden', true);
     }
-    for (var key in triggerClose) {
-        triggerClose[key].addEventListener('click', closeSidebar);
-    }
+
+    close.addEventListener('click', closeSidebar);
+    sidebar.addEventListener('click', closeSidebar);
+    overlay.addEventListener('click', closeSidebar);
 
 </script>
 </body>

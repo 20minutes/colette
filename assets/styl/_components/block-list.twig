@@ -10,8 +10,8 @@
 {% block block_body %}
     <ul class="block-list">
         {% block block_body_content %}
-            {% for content in data.data %}
-                <li class="block-list-item"><a class="pl1 pr1" href="#">Paris (75000)</a></li>
+            {% for item in list %}
+                <li class="block-list-item"><a class="pl1 pr1" href="#">{{ item }}</a></li>
             {% endfor %}
         {% endblock %}
     </ul>
