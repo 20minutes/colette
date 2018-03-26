@@ -1,0 +1,26 @@
+{
+    "classes": ["box preview mb2"],
+    "medias": {
+        "data": [
+            {
+                "src": "https://img.20mn.fr/9IR7-SzgSIidHDx0YJA3Pw/%format_bouchons-autoroute-pres-vienne-2-aout-2014"
+            }
+        ]
+    },
+    "mediaClasses": ["media-fixheight"],
+    "defaultFormat": "478x190",
+    "mediaFormats": ["478x190", "814x360", "310x190", "226x190"],
+    "title": "This is the content title",
+    "theme": "default",
+    "label": "This is the label content",
+    "summary": "This is the summary content",
+    "list": [
+        {
+            "label": "Related link"
+        },
+        {
+            "label": "Related link"
+        }
+    ],
+    "footer": "This is the content footer"
+}

@@ -1,0 +1,112 @@
+// Preview
+//
+// An article preview is a `.box` with `.preview` class component that includes media group, a teaser and a footer.
+// It can be modified by `-stretch`, it'll be useful to make it stretch in height.
+// Can contain optional related links.
+//
+// .preview-cover    -    The image's height is set to 36rem and the title is bigger.
+// .preview-stretch    -    In a flexbox, stretch or height 100%
+//
+// Markup: preview.twig
+//
+// Styleguide: Components.preview
+.preview
+    text-align left
+    white-space normal
+
+    &-media
+        position relative
+
+    .media
+        margin 0
+
+        img
+            object-fit cover
+
+        &-caption
+            display none
+
+    .teaser
+        _p(1)
+
+        &-title
+            font-size 1.3125em
+
+            @media $breakpoints.xs
+                font-size 1.125em
+
+        &-summary
+            font-weight normal
+
+            @media $breakpoints.sm
+                font-size .9em
+
+        &-catchline
+            background-color $color-native
+
+    &-cover
+        .media
+            img
+                height 36rem
+
+        .teaser-title
+            @media $breakpoints.md
+                font-size 2.5em
+                letter-spacing -.024em
+                line-height 1.1
+
+    &-related // related links in cover
+        {clearfix}
+        _m(0 1 1)
+        padding 0
+        list-style none
+
+        @media $breakpoints.md
+            > li
+                width 50%
+                display block
+                float left
+
+                &:nth-child(odd)
+                    padding-right 1em
+                    clear left
+
+        &-link
+            display inline-block
+            position relative
+
+            svg
+                width 1em
+                height @width
+                margin $vega-svg-margins
+
+            &:hover
+                color $color-links
+
+        for key, value in $colors
+            &-{key}
+                .preview-related-link
+                    svg
+                        color value
+
+    &-footer
+        position relative
+
+    &-stretch // when in a flexbox stretch or height 100%
+        $footerHeight = 4.8rem
+        padding-bottom $footerHeight
+        position relative
+
+        .preview-footer
+            position absolute
+            left 0
+            right 0
+            bottom 0
+
+    // SPECIAL LAST MINUTE SKIN
+    &.skin-lastminute
+        .preview-related-link
+            color $color-white
+
+            svg
+                color $color-white
