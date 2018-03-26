@@ -1660,6 +1660,56 @@ input.formSingleInput-input {
   padding-top: 0.1875rem;
   margin: 0;
 }
+.teaser-blog {
+  font-family: $font-headings;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.teaser-blog:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.teaser-blog-img {
+  max-width: 33%;
+}
+.teaser-blog-name {
+  display: block;
+}
+.teaser-blog-publisher {
+  font-family: $font-secondary;
+  color: #878787;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.teaser-brand {
+  padding-bottom: 1.2rem;
+  background-color: #fff7e2;
+}
+.teaser-communication,
+.teaser-production {
+  padding-right: 0;
+  padding-left: 0;
+}
+.teaser-communication .teaser-title,
+.teaser-production .teaser-title,
+.teaser-communication .teaser-summary,
+.teaser-production .teaser-summary,
+.teaser-communication .teaser-headline,
+.teaser-production .teaser-headline,
+.teaser-communication .date,
+.teaser-production .date {
+  margin-right: 1.2rem;
+  margin-left: 1.2rem;
+}
+.teaser-communication .teaser-blog,
+.teaser-production .teaser-blog {
+  padding: 1.2rem;
+  background-color: #fff7e2;
+}
 .block {
   width: 100%;
   background-color: #fff;
@@ -2184,6 +2234,145 @@ input.formSingleInput-input {
 }
 .navbar-brand:hover {
   background-color: #f8f8f8;
+}
+.preview {
+  text-align: left;
+  white-space: normal;
+}
+.preview-media {
+  position: relative;
+}
+.preview .media {
+  margin: 0;
+}
+.preview .media img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.preview .media-caption {
+  display: none;
+}
+.preview .teaser {
+  padding: 1.2rem;
+}
+.preview .teaser-title {
+  font-size: 1.3125em;
+}
+@media  {
+  .preview .teaser-title {
+    font-size: 1.125em;
+  }
+}
+.preview .teaser-summary {
+  font-weight: normal;
+}
+@media screen and (min-width: 420px) {
+  .preview .teaser-summary {
+    font-size: 0.9em;
+  }
+}
+.preview .teaser-catchline {
+  background-color: #fff7e2;
+}
+.preview-cover .media img {
+  height: 36rem;
+}
+@media screen and (min-width: 768px) {
+  .preview-cover .teaser-title {
+    font-size: 2.5em;
+    letter-spacing: -0.024em;
+    line-height: 1.1;
+  }
+}
+.preview-related {
+  margin: 0rem 1.2rem 1.2rem;
+  padding: 0;
+  list-style: none;
+}
+.preview-related:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+@media screen and (min-width: 768px) {
+  .preview-related > li {
+    width: 50%;
+    display: block;
+    float: left;
+  }
+  .preview-related > li:nth-child(odd) {
+    padding-right: 1em;
+    clear: left;
+  }
+}
+.preview-related-link {
+  display: inline-block;
+  position: relative;
+}
+.preview-related-link svg {
+  width: 1em;
+  height: 1em;
+  margin: $vega-svg-margins;
+}
+.preview-related-link:hover {
+  color: #0091aa;
+}
+.preview-related-base .preview-related-link svg {
+  color: #4c4d4e;
+}
+.preview-related-default .preview-related-link svg {
+  color: #0b4892;
+}
+.preview-related-sport .preview-related-link svg {
+  color: #00b9f3;
+}
+.preview-related-entertainment .preview-related-link svg {
+  color: #cc190f;
+}
+.preview-related-economy .preview-related-link svg {
+  color: #053042;
+}
+.preview-related-community .preview-related-link svg {
+  color: #930b48;
+}
+.preview-related-weird .preview-related-link svg {
+  color: #ef2a82;
+}
+.preview-related-partner .preview-related-link svg {
+  color: #ff5400;
+}
+.preview-related-planet .preview-related-link svg {
+  color: #48930b;
+}
+.preview-related-media .preview-related-link svg {
+  color: #000;
+}
+.preview-related-hightech .preview-related-link svg {
+  color: #686868;
+}
+.preview-related-native .preview-related-link svg {
+  color: #fff7e2;
+}
+.preview-footer {
+  position: relative;
+}
+.preview-stretch {
+  padding-bottom: 4.8rem;
+  position: relative;
+}
+.preview-stretch .preview-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.preview.skin-lastminute .preview-related-link {
+  color: #fff;
+}
+.preview.skin-lastminute .preview-related-link svg {
+  color: #fff;
 }
 .socialbar {
   padding: 0;
