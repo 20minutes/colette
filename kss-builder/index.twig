@@ -22,7 +22,7 @@
   use this inline style to prevent bug from display:none with svg mask and gradients
 #}
 <div style="height:0;width:0;position:absolute;visibility:hidden;overflow:hidden">{% include '../dist/svg/svg.svg' %}</div>
-<div class="co_wrapper">
+<li class="co_wrapper">
     {# side navigation #}
     <header>
         <div class="co_trigger-sidebar">
@@ -37,7 +37,7 @@
             <li class="co_sidebar-brand">
                 <a href="./">
                     <svg width="60" height="60"><use xlink:href="#symbol-logo"/></svg>
-                    <span class="mask">Retour à l'accueil</span>
+                    <span class="mask">Retour à l’accueil</span>
                 </a>
             </li>
             <li><a href="./">About</a></li>
@@ -104,7 +104,6 @@
                 </div>
             {% endif %}
 
-
             {# section description #}
             {% if section.description %}
                 <div class="co_subsection clearfix{% if 1 == depth %} co_content{% endif %}">
@@ -115,42 +114,61 @@
                 </div>
             {% endif %}
 
-
             {# section colors #}
             {% if section.colors %}
                 <ul class="co_colors clearfix">
                     {% kssColors section.colors %}
-                    {# Available data, but not used in the template:
-                        -> color.rgb [r|g|b]
-                        -> color.hsl [h|s|l]
-                        -> color.desc
-                    #}
-                    <li class="box">
-                        <div class="co_colors-demo" style="background-color:{{color.hex}}"></div>
-                        <p class="co_colors-name">{{ color.name }}</p>
-                        <p class="co_colors-hex">{{ color.hex }}</p>
-                    </li>
+                        {# Available data, but not used in the template:
+                            -> color.rgb [r|g|b]
+                            -> color.hsl [h|s|l]
+                            -> color.desc
+                        #}
+                        <li class="box">
+                            <div class="co_colors-demo" style="background-color:{{color.hex}}"></div>
+                            <p class="co_colors-name">{{ color.name }}</p>
+                            <p class="co_colors-hex">{{ color.hex }}</p>
+                        </li>
                     {% endkssColors %}
                 </ul>
             {% endif %}
-
 
             {# section icons #}
             {% if section.icons %}
                 <ul class="co_icons clearfix">
                     {% kssIcons section.icons %}
-                    {# Available data, but not used in the template:
-                        -> icon.character
-                        -> icon.desc
-                    #}
-                    <li class="box">
-                        <div class="co_icons-demo">{{ icon.character }}</div>
-                        <div><span class="co_icons-name">{{ icon.name }}</span></div>
-                    </li>
+                        {# Available data, but not used in the template:
+                            -> icon.character
+                            -> icon.desc
+                        #}
+                        <li class="box">
+                            <div class="co_icons-demo">{{ icon.character }}</div>
+                            <div><span class="co_icons-name">{{ icon.name }}</span></div>
+                        </li>
                     {% endkssIcons %}
                 </ul>
             {% endif %}
 
+
+            {# section symbols #}
+            {% if section.symbols %}
+                <ul class="co_symbols clearfix">
+                    {% kssSymbols section.symbols '../assets/svg' section.source.path %}
+                        {% if list %}
+                            <li class="co_symbols-group">
+                                <p class="co_symbols-group-title">{{ name }}</p>
+                                <ul class="co_symbols clearfix">{{ list|raw }}</ul>
+                            </li>
+                        {% else %}
+                            <li class="co_symbols-symbol box">
+                                <div class="co_symbols-demo">
+                                    <svg width="40" height="40"><use xlink:href="#symbol-{{ id }}"></use></svg>
+                                </div>
+                                <div class="co_symbols-name">{{ name }}</div>
+                            </li>
+                        {% endif %}
+                    {% endkssSymbols %}
+                </ul>
+            {% endif %}
 
             {# section example #}
             {% if section.example %}
@@ -162,7 +180,6 @@
                         {% else %}
                             Example
                         {% endif %}
-
                     </p>
                     <div class="co_subsection-demo col-md-9 clearfix mb1">
                         {{ section.example|raw }}
@@ -183,7 +200,6 @@
                             {% endfor %}
                         </div>
                     </div>
-
                 {% endif %}
 
                 {# markup #}
