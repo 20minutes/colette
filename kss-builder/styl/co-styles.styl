@@ -313,7 +313,7 @@ $co-color-body = #f1f1f1
         &-name
         &-hex
             margin-top 0
-            background-color #f1f1f1
+            background-color $co-color-body
             color $co-color-secondary
             text-align center
 
@@ -339,7 +339,6 @@ $co-color-body = #f1f1f1
             border-radius .25em
             text-align center
 
-
         &-demo
             display block
             height 1.5em
@@ -351,8 +350,48 @@ $co-color-body = #f1f1f1
         &-name
             display block
             border-radius .25em
-            background-color #f1f1f1
+            background-color $co-color-body
             color $co-color-secondary
+
+    /* symbols */
+    &_symbols
+        padding 0
+        margin 0
+        list-style none
+
+        &-symbol
+            float left
+            width 8em
+            padding 1em .25em .25em
+            margin 0 1em 1em 0
+            border-radius .25em
+            text-align center
+
+        &-demo
+            display block
+            padding .25em
+            margin-bottom .25em
+
+        &-name
+            display block
+            border-radius .25em
+            background-color $co-color-body
+            color $co-color-secondary
+
+        &-group
+            clear both
+            float none
+            margin 1em 0 2em
+
+            > ul
+                margin 1em 0
+                border-bottom 1px solid $co-color-borders
+
+            &-title
+                padding 0 0 1.2rem
+                font-weight bold
+                font-size 1.4em
+                border-bottom 1px solid $co-color-borders
 
     /* example */
     &_example-header
