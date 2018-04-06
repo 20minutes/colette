@@ -25,28 +25,28 @@
     position relative
 
     &-input
-        height 3.6rem
+        height _rem(36px)
         width 100%
 
         // this selector need to be stronger than default input selecor
         input&
-            padding-right 4.2rem
-            border-radius 1.8rem
+            padding-right _rem(42px)
+            border-radius 20em // excessive value to keep it round
 
     &-btn
         position absolute
         top 0
         right 0
         bottom 0
-        width 4.2rem
+        width _rem(42px)
         border 0
         border 1px solid $color-secondary
-        border-radius 0 1.8rem 1.8rem 0
+        border-radius 0 20em 20em 0 // excessive value to keep it round
         background-color $color-secondary
         color $color-base
 
         svg
-            font-size 2.1rem
-            margin-right .6rem
+            _mr(.5)
+            font-size _rem(21px)
             height 1em
             width 1em

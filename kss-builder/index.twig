@@ -22,7 +22,7 @@
   use this inline style to prevent bug from display:none with svg mask and gradients
 #}
 <div style="height:0;width:0;position:absolute;visibility:hidden;overflow:hidden">{% include '../dist/svg/svg.svg' %}</div>
-<li class="co_wrapper">
+<div class="co_wrapper">
     {# side navigation #}
     <header>
         <div class="co_trigger-sidebar">
@@ -42,14 +42,14 @@
             </li>
             <li><a href="./">About</a></li>
             {% for menu_item in menu %}
-                <li{% if menu_item.isActive %} class="co_sidebar-active"{% endif %}>
+                <li {% if menu_item.isActive %} class="co_sidebar-active"{% endif %}>
                     <a href="section-{{ menu_item.referenceURI }}.html">{{ menu_item.header }}</a>
 
                     {% if menu_item.children|length %}
                         {# Display 1st level of sub navigation #}
                         <ul class="co_sidebar-children">
                             {% for child in menu_item.children if not child.isGrandChild %}
-                                <li{% if child.isActive %} class="co_sidebar-active"{% endif %}>
+                                <li {% if child.isActive %}class="co_sidebar-active"{% endif %}>
                                     <a href="section-{{ menu_item.referenceURI ~ '.html#kssref-' ~ child.referenceURI }}">{{ child.header }}</a>
                                 </li>
                             {% endfor %}
@@ -147,7 +147,6 @@
                     {% endkssIcons %}
                 </ul>
             {% endif %}
-
 
             {# section symbols #}
             {% if section.symbols %}
