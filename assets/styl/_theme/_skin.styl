@@ -7,8 +7,10 @@
 // - the image must be placed within a `<p>` or a `<div>` tag for icon skins
 //
 // .skin-blog        - Text skin: "blog", text color: community
+// .skin-bytheweb    - Text skin: "by the web", text color: hightech
 // .skin-chat        - Text skin: "chat"
 // .skin-exclusive   - Text skin: "exclusif", text color: highlight
+// .skin-fakeoff     - Text skin: "fake off", text color: default
 // .skin-lastminute  - Text skin: "dernière minute", text color: white, background-color: highlight
 // .skin-live        - Text skin: "live", headline color: highlight
 // .skin-partner     - Text skin: "partenaire"
@@ -16,6 +18,7 @@
 // .skin-quiz        - Text skin: "quiz", title and description color: community
 // .skin-weird       - Text skin: "t'as vu"
 // .skin-gallery     - Icon skin: 'images'
+// .skin-podcast     - Icon skin: 'podcast'
 // .skin-video       - Icon skin: 'play'
 //
 // Markup: skin.twig
@@ -25,8 +28,10 @@
 /* Text skins */
 .skin
     &-blog
+    &-bytheweb
     &-chat
     &-exclusive
+    &-fakeoff
     &-lastminute
     &-live
     &-partner
@@ -59,6 +64,12 @@
             &-summary
                 color $color-community
 
+    &-bytheweb
+        .media
+            &:before
+                content 'by the web'
+                background-color $color-hightech
+
     &-chat
         .media
             &:before
@@ -76,6 +87,12 @@
             &-title
             &-summary
                 color $color-highlight
+
+    &-fakeoff
+        .media
+            &:before
+                content 'fake off'
+                background-color $color-default
 
     &-lastminute
         // overrides .box background
@@ -135,6 +152,7 @@
 
     /* Icon skins */
     &-gallery
+    &-podcast
     &-video
         .media > p:first-child
         .media > div:first-child
@@ -160,6 +178,12 @@
         > div:first-child
             &:before
                 background-image _inlineSvg('<svg viewBox="0 0 32 32" width="32" height="32"><path fill="#fff" d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 29c-7.18 0-13-5.82-13-13s5.82-13 13-13 13 5.82 13 13-5.82 13-13 13zM12 9l12 7-12 7z"></path></svg>')
+
+    &-podcast .media
+        > p:first-child
+        > div:first-child
+            &:before
+                background-image _inlineSvg('<svg viewBox="0 0 32 32" width="32" height="32"><path fill="#fff" d="M16 0C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0zm0 29C8.8 29 3 23.2 3 16S8.8 3 16 3s13 5.8 13 13-5.8 13-13 13z"/><path fill="#fff" d="M16 9c-.4 0-.8.3-.8.8v12.5c0 .4.3.8.8.8.4 0 .8-.3.8-.8V9.7c0-.4-.4-.7-.8-.7zM18.4 11.4c-.4 0-.8.3-.8.8v7.6c0 .4.3.8.8.8s.8-.3.8-.8v-7.6c-.1-.4-.4-.8-.8-.8zM20.7 12.9c-.4 0-.8.3-.8.8v4.6c0 .4.3.8.8.8s.8-.3.8-.8v-4.6c0-.4-.4-.8-.8-.8zM23 11c-.4 0-.8.3-.8.8v8.5c0 .4.3.8.8.8s.8-.3.8-.8v-8.5c0-.5-.3-.8-.8-.8zM25.4 13.9c-.4 0-.8.3-.8.8v2.6c0 .4.3.8.8.8.4 0 .8-.3.8-.8v-2.6c0-.4-.4-.8-.8-.8zM13.6 7.9c-.4 0-.8.3-.8.8v14.7c0 .4.3.8.8.8.4 0 .8-.3.8-.8V8.7c0-.5-.3-.8-.8-.8zM11.3 10.6c-.4 0-.8.3-.8.8v9.2c0 .4.3.8.8.8.4 0 .8-.3.8-.8v-9.2c0-.5-.3-.8-.8-.8zM9 13.9c-.4 0-.8.3-.8.8v2.6c0 .4.3.8.8.8.4 0 .8-.3.8-.8v-2.6c-.1-.4-.4-.8-.8-.8zM6.6 13.5c-.4 0-.8.3-.8.8v3.4c0 .4.3.8.8.8s.8-.3.8-.8v-3.4c0-.5-.4-.8-.8-.8z"/></svg>')
 
     &-gallery .media
         > p:first-child
