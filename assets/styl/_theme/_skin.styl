@@ -7,8 +7,10 @@
 // - the image must be placed within a `<p>` or a `<div>` tag for icon skins
 //
 // .skin-blog        - Text skin: "blog", text color: community
+// .skin-bytheweb    - Text skin: "by the web", text color: hightech
 // .skin-chat        - Text skin: "chat"
 // .skin-exclusive   - Text skin: "exclusif", text color: highlight
+// .skin-fakeoff     - Text skin: "fake off", text color: default
 // .skin-lastminute  - Text skin: "dernière minute", text color: white, background-color: highlight
 // .skin-live        - Text skin: "live", headline color: highlight
 // .skin-partner     - Text skin: "partenaire"
@@ -16,6 +18,7 @@
 // .skin-quiz        - Text skin: "quiz", title and description color: community
 // .skin-weird       - Text skin: "t'as vu"
 // .skin-gallery     - Icon skin: 'images'
+// .skin-podcast     - Icon skin: 'podcast'
 // .skin-video       - Icon skin: 'play'
 //
 // Markup: skin.twig
@@ -25,8 +28,10 @@
 /* Text skins */
 .skin
     &-blog
+    &-bytheweb
     &-chat
     &-exclusive
+    &-fakeoff
     &-lastminute
     &-live
     &-partner
@@ -59,6 +64,12 @@
             &-summary
                 color $color-community
 
+    &-bytheweb
+        .media
+            &:before
+                content 'by the web'
+                background-color $color-hightech
+
     &-chat
         .media
             &:before
@@ -76,6 +87,12 @@
             &-title
             &-summary
                 color $color-highlight
+
+    &-fakeoff
+        .media
+            &:before
+                content 'fake off'
+                background-color $color-default
 
     &-lastminute
         // overrides .box background
@@ -135,9 +152,9 @@
 
     /* Icon skins */
     &-gallery
+    &-podcast
     &-video
-        .media > p:first-child
-        .media > div:first-child
+        .media-wrap
 
             &:before
                 display block
@@ -155,15 +172,21 @@
                 background-size 1.9em
                 background-position center center
 
-    &-video .media
-        > p:first-child
-        > div:first-child
+    &-video
+        .media-wrap
             &:before
                 background-image _inlineSvg('<svg viewBox="0 0 32 32" width="32" height="32"><path fill="#fff" d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 29c-7.18 0-13-5.82-13-13s5.82-13 13-13 13 5.82 13 13-5.82 13-13 13zM12 9l12 7-12 7z"></path></svg>')
 
-    &-gallery .media
-        > p:first-child
-        > div:first-child
+    &-podcast
+        .media-wrap
+            &:before
+                background-image svgImport('../../svg/podcast.svg', '
+                    path
+                        fill ' + $color-white + '
+                ') // @stylint ignore
+
+    &-gallery
+        .media-wrap
             &:before
                 background-image _inlineSvg('<svg viewBox="0 0 32 32" width="32" height="32"><path fill="#fff" d="M4 8.666v20.001h28.001v-20.001h-28.001zM29.999 25.335l-3.997-6.669-4.535 3.781-3.467-5.779-11.998 10.001v-16.001h23.998v14.668zM7.999 15.667c0 1.655 1.344 2.998 3 2.998 1.658 0 3-1.343 3-2.998 0-1.658-1.342-3-3-3-1.656 0-3 1.342-3 3zM28 4.667h-27.999v19.999h1.999v-17.998h26.001v-2.001z"></path></svg>')
 
