@@ -1,5 +1,5 @@
-_em(value, context = $fontSizeRoot)
+_em(value, context = $rootFontSize)
     return unit(value/context, 'em')
 
 _rem(value)
-    return unit(value/$fontSizeRoot, 'rem')
+    return unit(value/$rootFontSize, 'rem')

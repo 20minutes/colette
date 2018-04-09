@@ -43,7 +43,7 @@
 //
 // Styleguide Components.Block.BlockList-with-Cards
 $block-custom-color ?= $color-base-lighten
-$block-header-minheight ?= 3.6rem
+$block-header-minheight ?= _rem(36px)
 
 .block
     {clearfix}
@@ -56,13 +56,13 @@ $block-header-minheight ?= 3.6rem
         height 100%
         flex-grow 999
         overflow hidden
-        padding-bottom 3rem // 3rem = .block-footer height
+        padding-bottom _rem(30px) // 30px = .block-footer height
 
         .block-footer
             position absolute
-            bottom 1px
-            left 1px
-            right 1px
+            bottom 0
+            left 0
+            right 0
 
     &-title
         _pt(.75)
@@ -70,10 +70,10 @@ $block-header-minheight ?= 3.6rem
         _pb(.5)
         _pl(1)
         min-height $block-header-minheight
-        line-height 1.9rem
+        line-height _rem(19px)
         color $color-white
         background-color $color-base
-        font-size 1.4rem
+        font-size _rem(14px)
         font-family $fontstack-headings
         font-weight bold
         text-transform uppercase
@@ -85,7 +85,7 @@ $block-header-minheight ?= 3.6rem
 
         &-lined
             background-color transparent
-            border-bottom .3rem solid $color-base
+            border-bottom _rem(3px) solid $color-base
             color $color-base
 
     &-list
@@ -121,7 +121,7 @@ $block-header-minheight ?= 3.6rem
     &-footer
         {fontSecondary}
         _p(.5 1)
-        line-height 1.7rem
+        line-height _rem(17px)
         background-color $color-white
         border-top 1px solid $block-custom-color
         overflow hidden // clearfix, don't use `{clearfix}` here because `::after` invalid `:empty`
@@ -146,7 +146,7 @@ $block-header-minheight ?= 3.6rem
 
                 &-lined
                     background-color transparent // overide theme for `.block-title`
-                    border-bottom .3rem solid value
+                    border-bottom-color value
                     text-shadow none
                     color _contrast_choose($color-white, value darken(value, 10%) darken(value, 20%) darken(value, 30%) darken(value, 40%) $color-base)
 
