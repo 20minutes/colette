@@ -2068,6 +2068,7 @@ figure {
   font-weight: bold;
   color: inherit;
   text-decoration: none;
+  transition: background-color 0.2s ease;
 }
 .webfont .icon {
   font-family: 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif;
@@ -2090,49 +2091,85 @@ figure {
   background-color: #4c4d4e;
   color: #fff;
 }
+.icon-base:hover {
+  background-color: #3d3e3e;
+}
 .icon-default {
   background-color: #0b4892;
   color: #fff;
+}
+.icon-default:hover {
+  background-color: #093a75;
 }
 .icon-sport {
   background-color: #00b9f3;
   color: #000;
 }
+.icon-sport:hover {
+  background-color: #0094c2;
+}
 .icon-entertainment {
   background-color: #cc190f;
   color: #fff;
+}
+.icon-entertainment:hover {
+  background-color: #a3140c;
 }
 .icon-economy {
   background-color: #053042;
   color: #fff;
 }
+.icon-economy:hover {
+  background-color: #042635;
+}
 .icon-community {
   background-color: #930b48;
   color: #fff;
+}
+.icon-community:hover {
+  background-color: #76093a;
 }
 .icon-weird {
   background-color: #ef2a82;
   color: #000;
 }
+.icon-weird:hover {
+  background-color: #d11066;
+}
 .icon-partner {
   background-color: #ff5400;
   color: #000;
+}
+.icon-partner:hover {
+  background-color: #cc4300;
 }
 .icon-planet {
   background-color: #48930b;
   color: #000;
 }
+.icon-planet:hover {
+  background-color: #3a7609;
+}
 .icon-media {
   background-color: #000;
   color: #fff;
+}
+.icon-media:hover {
+  background-color: #000;
 }
 .icon-hightech {
   background-color: #686868;
   color: #fff;
 }
+.icon-hightech:hover {
+  background-color: #535353;
+}
 .icon-native {
   background-color: #fff7e2;
   color: #000;
+}
+.icon-native:hover {
+  background-color: #ffdc82;
 }
 .icon-inline {
   text-align: left;
