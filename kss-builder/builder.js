@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * This module is used to load the base KSS builder class needed by this builder
  * and to define any custom CLI options or extend any base class methods.
@@ -15,26 +13,7 @@
  *
  * @module kss/builder/twig
  */
-
-
-// We want to extend kss-node's Twig builder so we can add options that
-// are used in our templates.
-let KssBuilderBaseTwig;
-
-try {
-  // In order for a builder to be "kss clone"-able, it must use the
-  // require('kss/builder/path') syntax.
-  KssBuilderBaseTwig = require('kss/builder/base/twig');
-} catch (e) {
-  // The above require() line will always work.
-  //
-  // Unless you are one of the developers of kss-node and are using a git clone
-  // of kss-node where this code will not be inside a "node_modules/kss" folder
-  // which would allow node.js to find it with require('kss/anything'), forcing
-  // you to write a long-winded comment and catch the error and try again using
-  // a relative path.
-  KssBuilderBaseTwig = require('../base/twig');
-}
+const KssBuilderBaseTwig = require('kss/builder/base/twig')
 
 /**
  * A kss-node builder that takes input files and builds a style guide using Twig
@@ -46,7 +25,7 @@ class KssBuilderTwig extends KssBuilderBaseTwig {
    */
   constructor() {
     // First call the constructor of KssBuilderBaseTwig.
-    super();
+    super()
 
     // Then tell kss which Yargs-like options this builder adds.
     this.addOptionDefinitions({
@@ -55,10 +34,10 @@ class KssBuilderTwig extends KssBuilderBaseTwig {
         string: true,
         multiple: false,
         describe: 'Title of the style guide',
-        default: 'KSS Style Guide'
-      }
-    });
+        default: 'KSS Style Guide',
+      },
+    })
   }
 }
 
-module.exports = KssBuilderTwig;
+module.exports = KssBuilderTwig

@@ -7,66 +7,74 @@ $co-color-background = #a1b1c4
 $co-color-body = #f1f1f1
 
 
+// colette settings
+@require '../../assets/styl/_settings/*'
+
+// colette mixins and @blocks
+@require '../../assets/styl/_@blocks/*'
+@require '../../assets/styl/_mixins/*'
+
 // do not style html elements in doc css
++prefix-classes('co_')
+    @require '../../assets/styl/_elements/_btn'
 
+    @require '../../assets/styl/_components/_box'
+    @require '../../assets/styl/_components/_footerbar'
 
-.co
-    background-color $co-color-body
-    color #333
+    .body
+        background-color $co-color-body
+        color #333
 
-
-    &_markup
-    &_section-home
-    &_subsection
+    .markup
+    .section-home
+    .subsection
         pre
             padding 1em
-            margin 0 0 1.6rem
+            margin 0 0 _rem(16px)
             border-radius .25em
             border 1px solid $co-color-borders
             background-color $co-color-tertiary
             font-size 1em
             line-height 1.2
 
-    &_wrapper
-        @media screen and (max-width: 959px)
-            padding-top 4.8rem /* menu button height */
+    .wrapper
+        padding-top _rem(48px) /* menu button height */
 
-        @media screen and (min-width: 960px) and (max-width: 1503px) /* .co_content width + 2 * .co_sidebar width */
-            // when screen size < 1503px the sidebar overlays the content, so we need to add a padding on the wrapper */
+        @media screen and (min-width: 60em) /* .co_content width + 2 * .co_sidebar width */
             // when screen size < 960px the sidebar isn't displayed, so we don't need that padding on the wrapper */
-            padding-left 24rem
+            padding-top 0
+            padding-left _rem(240px)
 
-    &_page
+    .page
         position relative
         z-index 1
 
-    &_content
+    .content
         width 100%
         max-width 1024px
         margin 0 auto
         padding 0 1.2em
 
+    .section
+        for i in 1..6
+            &-home h{i}
+            &-h{i}
+                padding 0 0 .25em
+                margin 0 auto
+                font-weight normal
+                color $co-color-secondary
 
+                a
+                    color inherit
 
-    for i in 1..6
-        &_section-home h{i}
-        &_section-h{i}
-            padding 0 0 .25em
-            margin 0 auto
-            font-weight normal
-            color $co-color-secondary
+                    &:hover
+                        color $co-color-primary
 
-            a
-                color inherit
+                        strong
+                            color inherit
 
-                &:hover
-                    color $co-color-primary
-
-                    strong
-                        color inherit
-
-    /* trigger sidebar */
-    &_trigger-sidebar
+        /* trigger sidebar */
+    .trigger-sidebar
         position fixed
         top 0
         right 0
@@ -74,7 +82,7 @@ $co-color-body = #f1f1f1
         z-index 10
         display flex
         align-items center
-        height 4.8rem
+        height _rem(48px)
         background-color darken($co-color-background, 40)
 
         button
@@ -93,17 +101,17 @@ $co-color-body = #f1f1f1
             transform translateY(-100%)
 
         /* brand */
-        .co_brand
+        .brand
             background-color transparent
             color $co-color-primary
             font-size 2.7em
 
-        @media screen and (min-width: 960px)
+        @media screen and (min-width: 60em)
             display none
 
 
-    /* sidebar */
-    &_sidebar
+        /* sidebar */
+    .sidebar
         position fixed
         z-index 20
         top 0
@@ -111,7 +119,7 @@ $co-color-body = #f1f1f1
         left 0
         margin 0
         padding-left 0
-        width 24rem
+        width _rem(240px)
         background-color $co-color-tertiary
         box-shadow 2px 0px 4px -2px $co-color-secondary
         overflow hidden
@@ -120,7 +128,7 @@ $co-color-body = #f1f1f1
         &:hover
             overflow-y auto
 
-        @media screen and (max-width: 959px)
+        @media not screen and (min-width: 60em)
             transform translateX(-100%)
 
             &-open
@@ -157,20 +165,20 @@ $co-color-body = #f1f1f1
         &-brand
             a
                 position relative
-                height calc(6rem + 1.5em) /* logo height + vertical paddings */
+                height s('calc(%s + 1.5em)', _rem(60px)) /* logo height + vertical paddings */
 
             a:hover
                 background-color transparent
 
             svg
                 position absolute
-                left calc(24rem/2 - 6rem/2) /* sidebar width / 2 - logo width / 2 AVOID % here, otherwise it will cause the logo to blink when the scrollbar appears */
-                width 6rem
+                left _rem(240px/2 - 60px/2) /* sidebar width / 2 - logo width / 2 AVOID % here, otherwise it will cause the logo to blink when the scrollbar appears */
+                width _rem(60px)
                 height @width
                 fill $co-color-primary
 
     /* overlay */
-    &_overlay
+    .overlay
         display block
         position fixed
         z-index 15
@@ -189,14 +197,14 @@ $co-color-body = #f1f1f1
         > button
             position absolute
             top 1em
-            left calc(1em + 24rem) /* 1em margin + sidebar width */
+            left s('calc(1em + %s)', _rem(240px)) /* 1em margin + sidebar width */
             background-color transparent
             color $co-color-tertiary
             font-size 2em
             line-height 1
 
     /* section */
-    &_section
+    .section
         /* home */
         /* sections */
         &-depth-1
@@ -248,14 +256,14 @@ $co-color-body = #f1f1f1
         &-ref
             display block
             color #666
-            font-size 1.2rem
+            font-size _rem(12px)
             text-transform uppercase
 
             &:before
                 content 'section '
 
     /* subsection */
-    &_subsection
+    .subsection
         padding .5em 0
 
         &-title
@@ -272,7 +280,7 @@ $co-color-body = #f1f1f1
             > p
             > ul
                 margin 0
-                padding-bottom 1.6rem
+                padding-bottom _rem(16px)
 
             > ul > li
                 margin-left 1em
@@ -283,16 +291,16 @@ $co-color-body = #f1f1f1
                 color $co-color-highlight
 
         &-demo
-            padding-bottom .6rem
+            padding-bottom _rem(6px)
             border-bottom 1px solid $co-color-borders
 
     /* modifier */
-    &_modifier
+    .modifier
         > p
             padding-bottom 0
 
     /* colors */
-    &_colors
+    .colors
         padding 0
         margin 0
         list-style none
@@ -326,7 +334,7 @@ $co-color-body = #f1f1f1
             color $co-color-primary
 
     /* icons */
-    &_icons
+    .icons
         padding 0
         margin 0
         list-style none
@@ -354,7 +362,7 @@ $co-color-body = #f1f1f1
             color $co-color-secondary
 
     /* symbols */
-    &_symbols
+    .symbols
         padding 0
         margin 0
         list-style none
@@ -388,20 +396,20 @@ $co-color-body = #f1f1f1
                 border-bottom 1px solid $co-color-borders
 
             &-title
-                padding 0 0 1.2rem
+                padding 0 0 _rem(1.2px)
                 font-weight bold
                 font-size 1.4em
                 border-bottom 1px solid $co-color-borders
 
     /* example */
-    &_example-header
+    .example-header
         color $co-color-secondary
         font-family 'Open Sans'
         font-size 1.5em
         font-style italic
 
     /* expand markup */
-    &_expand
+    .expand
         position absolute
         z-index 2
         top 1px
@@ -423,7 +431,7 @@ $co-color-body = #f1f1f1
             transition background-color .2s
 
     /* table */
-    &_table
+    .table
         width 100%
         background-color $co-color-tertiary
 
@@ -436,7 +444,7 @@ $co-color-body = #f1f1f1
                 background-color alpha($co-color-primary, .2)
 
     /* grid examples */
-    &_grid-demo
+    .grid-demo
         padding-bottom 2em
 
         [class^=g-col-]:empty:before
@@ -449,136 +457,112 @@ $co-color-body = #f1f1f1
 
 
     /* markup */
-    &_markup
+    .markup
         position relative
 
         pre
             position relative
             z-index 1
-            max-height 4em
             margin-bottom 0
             overflow hidden
-            transition max-height .3s
-
-        &:hover
-            cursor pointer
-
-            .btn
-                display block
-                background-color $co-color-primary
-
-        &-action
-            display none
-
-        &-expanded
-            &:hover
-                .btn
-                    display block
-
-            pre
-                max-height 100em
-
-                &:after
-                    display none
-
-            .btn
-                display none
-
-            .co_expand
-                background none
-
-        /* prettyprint.js */
-        /* SPAN elements with the classes below are added by prettyprint. */
-        .pln
-            color #000   // plain text
-
-        .str
-            color #080   // string content
-
-        .kwd
-            color #008   // a keyword
-
-        .com
-            color #800   // a comment
-
-        .typ
-            color #606   // a type name
-
-        .lit
-            color #066   // a literal value
-
-        /* punctuation, lisp open bracket, lisp close bracket */
-        .pun,
-        .opn,
-        .clo
-            color #660
-
-        .tag
-            color #008   // a markup tag name
-
-        .atn
-            color #606   // a markup attribute name
-
-        .atv
-            color #080   // a markup attribute value
-
-        .dec,
-        .var
-            color #606   // a declaration a variable name
-
-        .fun
-            color red   // a function name
-
-        /* Use higher contrast and text-weight for printable form. */
-        @media print, projection
-            .str
-                color #060
-
-
-            .kwd
-                color #006
-                font-weight bold
-
-            .com
-                color #600
-                font-style italic
-
-            .typ
-                color #404
-                font-weight bold
-
-            .lit
-                color #044
-
-            .pun,
-            .opn,
-            .clo
-                color #440
-
-            .tag
-                color #006
-                font-weight bold
-
-            .atn
-                color #404
-
-            .atv
-                color #060
-
-        /* Specify class=linenums on a pre to get line numbering */
-        ol.linenums
-            margin 0
-            padding 0
-            list-style-type none
 
     /* source */
-    &_source
+    .source
         color $co-color-highlight
         font-size .9em
 
     /* footer */
-    &_footer.footerbar // stonger selector than colette
+    .footerbar
         border-color $co-color-borders
         background-color $co-color-primary
 
+    @require '../../assets/styl/_helpers/_block'
+    @require '../../assets/styl/_helpers/_borders'
+    @require '../../assets/styl/_helpers/_mask'
+    @require '../../assets/styl/_helpers/_spaces'
+    @require '../../assets/styl/_helpers/_text'
 
+/* prettyprint.js */
+.prettyprint
+    /* SPAN elements with the classes below are added by prettyprint. */
+    .pln
+        color #000   // plain text
+
+    .str
+        color #080   // string content
+
+    .kwd
+        color #008   // a keyword
+
+    .com
+        color #800   // a comment
+
+    .typ
+        color #606   // a type name
+
+    .lit
+        color #066   // a literal value
+
+    /* punctuation, lisp open bracket, lisp close bracket */
+    .pun,
+    .opn,
+    .clo
+        color #660
+
+    .tag
+        color #008   // a markup tag name
+
+    .atn
+        color #606   // a markup attribute name
+
+    .atv
+        color #080   // a markup attribute value
+
+    .dec,
+    .var
+        color #606   // a declaration a variable name
+
+    .fun
+        color red   // a function name
+
+    /* Use higher contrast and text-weight for printable form. */
+    @media print, projection
+        .str
+            color #060
+
+
+        .kwd
+            color #006
+            font-weight bold
+
+        .com
+            color #600
+            font-style italic
+
+        .typ
+            color #404
+            font-weight bold
+
+        .lit
+            color #044
+
+        .pun,
+        .opn,
+        .clo
+            color #440
+
+        .tag
+            color #006
+            font-weight bold
+
+        .atn
+            color #404
+
+        .atv
+            color #060
+
+    /* Specify class=linenums on a pre to get line numbering */
+    ol.linenums
+        margin 0
+        padding 0
+        list-style-type none
