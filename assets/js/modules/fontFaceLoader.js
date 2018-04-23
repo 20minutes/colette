@@ -1,4 +1,4 @@
-import FontFaceObserver from 'fontfaceobserver';
+import FontFaceObserver from 'fontfaceobserver'
 
 /**
  * Check if FontFaceSet API is supported, along with some browser quirks
@@ -19,102 +19,105 @@ import FontFaceObserver from 'fontfaceobserver';
  * @return {boolean}
  */
 function isFontFaceSetCompatible() {
-    let compatible = document.fonts && document.fonts.load;
-    if (compatible && /Apple/.test(window.navigator.vendor)) {
-        const match = /AppleWebKit\/([0-9]+)(?:\.([0-9]+))(?:\.([0-9]+))/.exec(window.navigator.userAgent);
-        compatible = !(match && parseInt(match[1], 10) < 603);
-    }
-    return compatible;
+  let compatible = document.fonts && document.fonts.load
+  if (compatible && /Apple/.test(window.navigator.vendor)) {
+    const match = /AppleWebKit\/([0-9]+)(?:\.([0-9]+))(?:\.([0-9]+))/.exec(window.navigator.userAgent)
+    compatible = !(match && parseInt(match[1], 10) < 603)
+  }
+
+  return compatible
 }
 
 const defaultConfig = {
-    localStorageKey: 'colette-font',
-    data: [],
-    class: 'webfont',
-    optional: true
-};
+  localStorageKey: 'colette-font',
+  data: [],
+  class: 'webfont',
+  optional: true,
+}
 
 function FontLoader(cfg) {
-    this.config = Object.assign({}, defaultConfig, cfg);
-    this.isActive = false;
+  this.config = Object.assign({}, defaultConfig, cfg)
+  this.isActive = false
 
-    this.init();
+  this.init()
 }
 
 FontLoader.prototype.isFontLoaded = function isFontLoaded() {
-    // TODO: test if it's possible to be used only if font-display is not supported
-    // ('fontDisplay' in document.documentElement.style) ||
-    return localStorage && localStorage.getItem(this.config.localStorageKey) === 'loaded';
-};
+  // TODO: test if it's possible to be used only if font-display is not supported
+  // ('fontDisplay' in document.documentElement.style) ||
+  return localStorage && localStorage.getItem(this.config.localStorageKey) === 'loaded'
+}
 
 FontLoader.prototype.activeFonts = function activeFonts() {
-    document.documentElement.classList.add(this.config.class);
-    this.isActive = true;
-};
+  document.documentElement.classList.add(this.config.class)
+  this.isActive = true
+}
 
 FontLoader.prototype.init = function init() {
-    // Initialize font loader only if it is not loaded previously
-    if (this.config.optional && this.isFontLoaded()) {
-        this.activeFonts();
-        return;
+// Initialize font loader only if it is not loaded previously
+  if (this.config.optional && this.isFontLoaded()) {
+    this.activeFonts()
+
+    return
+  }
+
+  window.addEventListener('load', () => {
+    if (window.requestAnimationFrame) {
+      window.requestAnimationFrame(this.load.bind(this))
+
+      return
     }
 
-    window.addEventListener('load', () => {
-        if (window.requestAnimationFrame) {
-            window.requestAnimationFrame(this.load.bind(this));
-            return;
-        }
-
-        this.load();
-    });
-};
+    this.load()
+  })
+}
 
 FontLoader.prototype.updateLocalStorage = function updateLocalStorage() {
-    try {
-        localStorage.setItem(this.config.localStorageKey, 'loaded');
-    } catch (e) {
-        // Either localStorage not present or quota has exceeded
-        // Another reason Safari private mode
-        // https://stackoverflow.com/questions/14555347/html5-localstorage-error-with-safari-quota-exceeded-err-dom-exception-22-an
-    }
-};
+  try {
+    localStorage.setItem(this.config.localStorageKey, 'loaded')
+  } catch (e) {
+    // Either localStorage not present or quota has exceeded
+    // Another reason Safari private mode
+    // https://stackoverflow.com/questions/14555347/html5-localstorage-error-with-safari-quota-exceeded-err-dom-exception-22-an
+  }
+}
 
 FontLoader.prototype.load = function load() {
-    const fontPromises = [];
+  const fontPromises = []
 
-    this.config.data.forEach((font) => {
-        const fontFamily = font.family.replace('\'', '');
-        const fontWeight = font.weight ? font.weight : 'normal';
-        const fontStyle = font.style ? font.style : 'normal';
-        let promise;
+  this.config.data.forEach((font) => {
+    const fontFamily = font.family.replace('\'', '')
+    const fontWeight = font.weight ? font.weight : 'normal'
+    const fontStyle = font.style ? font.style : 'normal'
+    let promise
 
-        if (isFontFaceSetCompatible()) {
-            document.fonts.load([fontStyle, fontWeight, '1em', fontFamily].join(' '));
-            promise = document.fonts.ready;
-        } else {
-            const loader = new FontFaceObserver(fontFamily, {
-                weight: fontWeight,
-                style: fontStyle
-            });
-            promise = loader.load();
-        }
+    if (isFontFaceSetCompatible()) {
+      document.fonts.load([fontStyle, fontWeight, '1em', fontFamily].join(' '))
+      promise = document.fonts.ready
+    } else {
+      const loader = new FontFaceObserver(fontFamily, {
+        weight: fontWeight,
+        style: fontStyle,
+      })
+      promise = loader.load()
+    }
 
-        fontPromises.push(promise);
+    fontPromises.push(promise)
 
-        promise.catch(() => {});
-    });
+    promise.catch(() => {})
+  })
 
-    const allFontsPromise = Promise.all(fontPromises);
+  const allFontsPromise = Promise.all(fontPromises)
 
-    allFontsPromise.then(() => {
-        if (this.config.optional) {
-            this.updateLocalStorage();
-        } else {
-            this.activeFonts();
-        }
-    }).catch(() => {});
+  allFontsPromise.then(() => {
+    if (this.config.optional) {
+      this.updateLocalStorage()
+    } else {
+      this.activeFonts()
+    }
+  }).catch(() => {})
 
-    return allFontsPromise;
-};
+  return allFontsPromise
+}
 
-export default FontLoader;
+export default FontLoader
