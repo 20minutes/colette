@@ -1,5 +1,31 @@
+{##
+ # Display teaser of content full page view
+ #
+ # @param string label         [required]
+ # @param string summary       [optional]
+ # @param string theme         [required] Color of the label
+ # @param string title         [required]
+ # @param string titleTag      [optional] default 'h2'
+ #
+ # @param array magazine       [optional] Magazine content info
+ #              -> [catchline]   string (required)
+ #              -> [type]        string (required)
+ #}
+ {% if magazine is defined and magazine is not empty %}
+    {% set theme = magazine.type == 'production' ? 'production' : theme %}
+{% endif %}
+
+{% set titleTag = titleTag|default('h2') %}
+
 <div class="teaser">
-    <p class="teaser-headline color-default">Label</p>
-    <p class="teaser-title">This is the content title</p>
-    <p class="teaser-summary">This is the summary lorm ipsum sic amet color baba orum.</p>
+    <div class="teaser-headline color-{{ theme }}">{{ label }}</div>
+    <{{ titleTag }} class="teaser-title">{{ title }}</{{ titleTag }}>
+
+    {% if summary is defined %}
+        <p class="teaser-summary">{{ summary }}</p>
+    {% endif %}
+
+    {% if magazine is defined and magazine is not empty %}
+        <p class="teaser-catchline teaser-catchline-{{ magazine.type }}">{{ magazine.catchline }}</p>
+    {% endif %}
 </div>
