@@ -591,6 +591,10 @@ input[type='radio']:focus + label {
 .js-focus-visible input[type='radio']:not(.focus-visible) + label {
   outline: 0;
 }
+.js-focus-visible input[type='checkbox']:not(:focus-visible) + label,
+.js-focus-visible input[type='radio']:not(:focus-visible) + label {
+  outline: 0;
+}
 input[type='radio'] + label:before {
   border-radius: 20em;
 }
@@ -603,6 +607,9 @@ input[type='radio'] + label:before {
   outline: dotted thin #878787;
 }
 .js-focus-visible *:focus:not(.focus-visible) {
+  outline: 0;
+}
+.js-focus-visible *:focus:not(:focus-visible) {
   outline: 0;
 }
 :before,
