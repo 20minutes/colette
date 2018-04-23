@@ -1,67 +1,68 @@
 /* jshint node:true */
 
-module.exports = function (Twig) {
-    'use strict';
+module.exports = function kssIconsTwigExtend(mainTwig) {
+  mainTwig.extend((Twig) => {
+    // example of extending a tag type that would
+    // restrict content to the specified "level"
+    Twig.exports.extendTag({
+      // unique name for tag type
+      type: 'kssIcons',
+      // regex for matching tag
+      regex: /^kssIcons\s+(.+)$/,
 
-    Twig.extend(function (Twig) {
+      // what type of tags can follow this one.
+      next: ['endkssIcons'], // match the type of the end tag
+      open: true,
+      compile: function compile(token) {
+        const expression = token.match[1]
 
-        // example of extending a tag type that would
-        // restrict content to the specified "level"
-        Twig.exports.extendTag({
-            // unique name for tag type
-            type: 'kssIcons',
-            // regex for matching tag
-            regex: /^kssIcons\s+(.+)$/,
+        // turn the string expression into tokens.
+        token.stack = Twig.expression.compile.apply(this, [{
+          type: Twig.expression.type.expression,
+          value: expression,
+        }]).stack
 
-            // what type of tags can follow this one.
-            next: ['endkssIcons'], // match the type of the end tag
-            open: true,
-            compile: function (token) {
-                var expression = token.match[1];
+        delete token.match // cleanup
 
-                // turn the string expression into tokens.
-                token.stack = Twig.expression.compile.apply(this, [{
-                    type: Twig.expression.type.expression,
-                    value: expression
-                }]).stack;
+        return token
+      },
+      parse: function parse(token, context, chain) {
+        const doc = Twig.expression.parse.apply(this, [token.stack, context])
+        const output = []
+        const regex = /^(\S+)\s*:\s*(\S+)(?:\s*-\s*(.*))?$/gm
+        let test = regex.exec(doc)
 
-                delete token.match; // cleanup
-                return token;
-            },
-            parse: function (token, context, chain) {
-                var doc = Twig.expression.parse.apply(this, [token.stack, context]);
-                var output = [];
-                var regex = /^(\S+)\s*:\s*(\S+)(?:\s*-\s*(.*))?$/gm;
-                var test;
+        while (test !== null) {
+          const innerContext = Twig.ChildContext(context)
+          innerContext.icon = {
+            name: test[1],
+            character: test[2],
+          }
+          if (test[3] !== undefined) {
+            const description = test[3]
+            innerContext.icon.description = description
+          }
 
-                while ((test = regex.exec(doc)) !== null) {
-                    var innerContext = Twig.ChildContext(context);
-                    innerContext.icon = {
-                        name: test[1],
-                        character: test[2]
-                    };
-                    if (test[3] !== undefined) {
-                        innerContext.icon.description = test[3];
-                    }
+          output.push(Twig.parse.apply(this, [token.output, innerContext]))
 
-                    output.push(Twig.parse.apply(this, [token.output, innerContext]));
+          Twig.merge(context, innerContext, true)
 
-                    Twig.merge(context, innerContext, true);
-                }
+          test = regex.exec(doc)
+        }
 
-                return {
-                    chain: chain,
-                    output: Twig.output.apply(this, [output])
-                };
-            }
-        });
+        return {
+          chain,
+          output: Twig.output.apply(this, [output]),
+        }
+      },
+    })
 
-        // a matching end tag type
-        Twig.exports.extendTag({
-            type: 'endkssIcons',
-            regex: /^endkssIcons$/,
-            next: [ ],
-            open: false
-        });
-    });
-};
+    // a matching end tag type
+    Twig.exports.extendTag({
+      type: 'endkssIcons',
+      regex: /^endkssIcons$/,
+      next: [],
+      open: false,
+    })
+  })
+}
