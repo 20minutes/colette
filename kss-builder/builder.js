@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  * This module is used to load the base KSS builder class needed by this builder
  * and to define any custom CLI options or extend any base class methods.
@@ -15,7 +13,7 @@
  *
  * @module kss/builder/twig
  */
-let KssBuilderBaseTwig = require('kss/builder/base/twig');
+const KssBuilderBaseTwig = require('kss/builder/base/twig')
 
 /**
  * A kss-node builder that takes input files and builds a style guide using Twig
@@ -27,7 +25,7 @@ class KssBuilderTwig extends KssBuilderBaseTwig {
    */
   constructor() {
     // First call the constructor of KssBuilderBaseTwig.
-    super();
+    super()
 
     // Then tell kss which Yargs-like options this builder adds.
     this.addOptionDefinitions({
@@ -36,10 +34,10 @@ class KssBuilderTwig extends KssBuilderBaseTwig {
         string: true,
         multiple: false,
         describe: 'Title of the style guide',
-        default: 'KSS Style Guide'
-      }
-    });
+        default: 'KSS Style Guide',
+      },
+    })
   }
 }
 
-module.exports = KssBuilderTwig;
+module.exports = KssBuilderTwig
