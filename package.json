@@ -41,6 +41,7 @@
     "postcss-focus-visible": "^3.0.0",
     "serve-static": "^1.13.2",
     "stylint": "^1.5.9",
+    "twig": "1.10.5",
     "unminified-webpack-plugin": "^2.0.0",
     "vinyl-named": "^1.1.0",
     "webpack": "4.6.0",
