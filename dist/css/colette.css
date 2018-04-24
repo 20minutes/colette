@@ -1291,7 +1291,7 @@ figure {
 .btn:enabled:hover {
   background-color: #929292;
 }
-.btnicon {
+.btnIcon {
   display: inline-block;
   vertical-align: middle;
   border-radius: 60em;
@@ -1299,16 +1299,16 @@ figure {
   transition: background-color 0.2s ease;
   color: #4c4d4e;
 }
-.btnicon svg {
+.btnIcon svg {
   width: 1em;
   height: 1em;
   margin: 0.33em;
   display: block;
 }
-.btnicon:disabled {
+.btnIcon:disabled {
   opacity: 0.5;
 }
-.btnicon:enabled:hover {
+.btnIcon:enabled:hover {
   background-color: #929292;
 }
 .choice legend {
