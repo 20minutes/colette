@@ -16,7 +16,7 @@
 // ```
 // /* my_file.css */
 // .foo
-//    font-family $font-secondary
+//    font-family $fontstack-secondary
 //    font-weight bold
 //    font-size 1.1rem
 //    text-transform uppercase
@@ -24,9 +24,9 @@
 //
 // Styleguide @blocks.Text.fontSecondary
 fontSecondary = @block
-    _fontload($font-secondary)
+    _fontload($fontstack-secondary)
     font-weight bold
-    font-size 1.1rem
+    font-size _rem(11px)
     text-transform uppercase
 
 // {listPosOutside}

@@ -1,7 +1,7 @@
 # Introducing Colette
-Colette is a CSS and JS starter kit for 20 Minutes web projects.
+Colette is a CSS and JS starter kit for 20 Minutes web projects.
 It provides basic styles and mixins to build responsive layouts,
-based on the 20 Minutes digital identity guidelines.
+based on the 20 Minutes digital identity guidelines.
 
 ---
 ## Features
@@ -82,13 +82,13 @@ You can select features needed by copying `colette.styl` content and choose your
 ```
 
 But can be usefull to:
-* change order of imports,
-* import only needed features,
-* separate your critical CSS from your global CSS.
+- change order of imports,
+- import only needed features,
+- separate your critical CSS from your global CSS.
 
 ## Use Colette’s JavaScript from sources
 
-You can use `colette.js` as is (or minified files `colette.min.js`).
+You can use `colette.min.js` as is.
 
 But the best way to use it is with a task-runner by JavaScript sources (ex: gulp, webpack).
 

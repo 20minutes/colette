@@ -1,0 +1,38 @@
+// Teaser
+//
+// Displayed in listings, a teaser is a content summary that contains:
+// - a label
+// - a title
+// - a summary text
+//
+// Markup: teaser.twig
+//
+// Styleguide Elements.Teaser
+.teaser
+    _p(2)
+
+    &-catchline
+        margin-top .3rem
+        font-size .9em
+        font-style italic
+
+        &-communication
+        &-production
+            background-color $color-native
+
+    &-headline
+        _fontload($fontstack-secondary)
+        margin 0
+        font-weight bold
+        font-size _rem(11px)
+        text-transform uppercase
+
+    &-title
+        _fontload($fontstack-headings)
+        margin 0
+        font-weight bold
+        line-height 1.2
+
+    &-summary
+        _pt(.25)
+        margin 0

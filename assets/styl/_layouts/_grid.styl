@@ -1,0 +1,75 @@
+// Grid
+//
+// Colette provides predefined classes to built responsive / 12-columns-based layout.
+// Grid classes are set according to:
+// - a targeted breakpoint (among those defined in the `$breakpoints` collection),
+// - a width, which must correspond to a number of columns (out of 12 from the grid).
+//
+// <table class="co_table mb2">
+//   <thead>
+//     <tr>
+//       <th>Breakpoint</th>
+//       <td></td>
+//       <th>sm</th>
+//       <th>md</th>
+//       <th>lg</th>
+//     </tr>
+//   </thead>
+//   <tbody>
+//     <tr>
+//       <td>Media query</td>
+//       <td align="center">default</td>
+//       <td align="center">min-width: 420px</td>
+//       <td align="center">min-width: 768px</td>
+//       <td align="center">min-width: 960px</td>
+//     </tr>
+//     <tr>
+//       <td>Class name</td>
+//       <td align="center">.g-col-[n]</td>
+//       <td align="center">.g-col-sm-[n]</td>
+//       <td align="center">.g-col-md-[n]</td>
+//       <td align="center">.g-col-lg-[n]</td>
+//     </tr>
+//     <tr>
+//       <td>CSS declaration</td>
+//       <td colspan="4" align="center">{ width: ([n] / 12) * 100 }</td>
+//     </tr>
+//   </tbody>
+// </table>
+//
+// **Usage**
+// Columns should come within a `<div class="g">` container.
+//
+// .g-withgutters - add gutters
+//
+// Markup: grid.twig
+//
+// Styleguide Layout.Grid
+.g
+    {clearfix}
+    padding 0 !important // @stylint ignore
+
+    &-withgutters
+        _ml(-.5)
+        _mr(-.5)
+
+        > *
+            _pl(.5)
+            _pr(.5)
+            margin 0
+
+    for i in (1..$grid-columns)
+        &-col-{i}
+            _column(i)
+
+        &-offset-{i}
+            _offset(i)
+
+    for breakpoint, query in $breakpoints
+        @media query
+            for i in (1..$grid-columns)
+                &-col-{breakpoint}-{i}
+                    _column(i)
+
+                &-offset-{breakpoint}-{i}
+                    _offset(i)

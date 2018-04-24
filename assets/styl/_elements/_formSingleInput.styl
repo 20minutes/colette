@@ -1,0 +1,52 @@
+// Form single input
+//
+// Display, on a single row, an input field + fixed-width icon submit button.
+//
+// White and editorial colors are available to style the button according to its context.
+//
+// .btnSkin-transparent     - transparent color button
+// .btnSkin-sport           - sport color button
+// .btnSkin-entertainment   - entertainment color button
+// .btnSkin-economy         - economy color button
+// .btnSkin-community       - community color button
+// .btnSkin-weird           - weird color button
+// .btnSkin-partner         - partner color button
+// .btnSkin-planet          - planet color button
+// .btnSkin-media           - media color button
+// .btnSkin-hightech        - hightech color button
+// .btnSkin-native          - native color button
+//
+// Markup: formSingleInput.twig
+//
+// Weight: 3
+//
+// Styleguide Forms.FormSingleInput
+.formSingleInput
+    position relative
+
+    &-input
+        height _rem(36px)
+        width 100%
+
+        // this selector need to be stronger than default input selecor
+        input&
+            padding-right _rem(42px)
+            border-radius 20em // excessive value to keep it round
+
+    &-btn
+        position absolute
+        top 0
+        right 0
+        bottom 0
+        width _rem(42px)
+        border 0
+        border 1px solid $color-secondary
+        border-radius 0 20em 20em 0 // excessive value to keep it round
+        background-color $color-secondary
+        color $color-base
+
+        svg
+            _mr(.5)
+            font-size _rem(21px)
+            height 1em
+            width 1em

@@ -1,0 +1,23 @@
+{#
+ # @extends block.twig
+ #
+ # template for content small block
+ #}
+{% extends 'block-list.twig' %}
+
+{% block block_body_content %}
+    {% for item in list %}
+        <li class="block-list-item" {{ loop.index > itemPerPage ? ' aria-hidden="true"' }}>
+            {% include 'card.twig' with {
+                'article': item,
+                'classes': cardsClasses|default([]),
+                'defaultFormat': formats.listing_low,
+                'mediaFormats': [],
+                'lazyloadImg': lazyloadImg,
+                'theme': globalTheme,
+                'isDated': isDated,
+                'priorityToSectionTitle': priorityToSectionTitle
+            } only %}
+        </li>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,158 @@
+// Blocks
+//
+// Colette comes with basic styles for block elements. Gives a white background, a full width, a relative position and align the text to the left.
+// Can provides optionnal title and footer. The SVG in the title is optionnal too.
+// You can add a 'box' class to Block, it will give it a border and paddings. It's optionnal too.
+// It can be modified by `-stretch`, it'll be useful to make it stretch in height.
+//
+// Markup: block.twig
+//
+// block-default - default theme color
+//
+// Styleguide Components.Block
+
+// Weight: 1
+//
+// Block title and modifiers
+//
+// Markup:
+// <p class="block-title {{ modifier_class }}">
+//     <svg height="11" width="11"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#symbol-clock"></use></svg>
+//     Example of a title
+// </p>
+//
+// block-title-lined - title with bottom border instead of background color
+//
+// Styleguide Components.Block.BlockTitle
+
+// Weight: 2
+//
+// Block List with a pager
+//
+// Markup: block-list.twig
+//
+// .block-stretch - stretch content to keep 100% height of container
+//
+// Styleguide Components.Block.BlockList
+
+// Weight: 3
+//
+// Block List can be used with article cards
+//
+// Markup: block-list-with-cards.twig
+//
+// Styleguide Components.Block.BlockList-with-Cards
+$block-custom-color ?= $color-base-lighten
+$block-header-minheight ?= _rem(36px)
+
+.block
+    {clearfix}
+    width 100%
+    background-color $color-white
+    position relative
+    text-align left
+
+    &-stretch
+        height 100%
+        flex-grow 999
+        overflow hidden
+        padding-bottom _rem(30px) // 30px = .block-footer height
+
+        .block-footer
+            position absolute
+            bottom 0
+            left 0
+            right 0
+
+    &-title
+        _pt(.75)
+        _pr(1)
+        _pb(.5)
+        _pl(1)
+        min-height $block-header-minheight
+        line-height _rem(19px)
+        color $color-white
+        background-color $color-base
+        font-size _rem(14px)
+        font-family $fontstack-headings
+        font-weight bold
+        text-transform uppercase
+
+        svg
+            width 1em
+            height @width
+            margin 0 .3em -.1em 0
+
+        &-lined
+            background-color transparent
+            border-bottom _rem(3px) solid $color-base
+            color $color-base
+
+    &-list
+        margin 0
+        padding 0
+        list-style none
+        display table
+        height s('calc(100% - %s)', $block-header-minheight) // .block-title height
+        width 100%
+        border-spacing 0 1px
+
+        &-item
+            display table-row
+
+            &:nth-child(even)
+                background-color $color-bg-base
+
+            &[aria-hidden=true]
+                display none
+
+            // change display of the child with stronger selector than simple class
+            > p
+            > div
+            > a
+                display table-cell
+                height auto
+                vertical-align middle
+
+            > :link:hover
+                background-color $color-bg-light
+
+    /* Block footer */
+    &-footer
+        {fontSecondary}
+        _p(.5 1)
+        line-height _rem(17px)
+        background-color $color-white
+        border-top 1px solid $block-custom-color
+        overflow hidden // clearfix, don't use `{clearfix}` here because `::after` invalid `:empty`
+
+        &:empty
+            display none
+
+        a
+            color $color-base
+
+    /* Category theme */
+    /* Applies theme color on title background and footer icons */
+    for key, value in $colors
+        &-{key}
+            .block-title
+                background-color value
+
+                if !_contrast_check($color-white, value, 1.5)
+                    color $color-base
+                else
+                    text-shadow 0 0 3px _contrast_choose($color-white, value darken(value, 20%) darken(value, 40%) darken(value, 60%) darken(value, 80%))
+
+                &-lined
+                    background-color transparent // overide theme for `.block-title`
+                    border-bottom-color value
+                    text-shadow none
+                    color _contrast_choose($color-white, value darken(value, 10%) darken(value, 20%) darken(value, 30%) darken(value, 40%) $color-base)
+
+            .block-footer
+                .linkwithsvg
+                .pager-next:not(:disabled)
+                .pager-prev:not(:disabled)
+                    svg
+                        color value

@@ -6,19 +6,19 @@
 //
 // Weight: 2
 //
-// Styleguide Basics.Typography
+// Styleguide Design.Typography
 html
-    font-family sans-serif // 2
-    font-size 62.5% // 1
-    text-size-adjust 100% // 3
+    font-family sans-serif
+    font-size 100%
+    text-size-adjust 100%
 
 body
-    _fontload($font-base)
+    _fontload($fontstack-base)
     color $color-base
-    font-size 1.6em
+    font-size 1rem
     line-height 1.5
     -webkit-font-smoothing antialiased
-    -moz-osx-font-smoothing grayscale /* FF */
+    -moz-osx-font-smoothing grayscale // FF
 
 a
     color $color-base
@@ -26,18 +26,18 @@ a
 
 for $i in 1..6
     h{$i}
-        _fontload($font-headings)
+        _fontload($fontstack-headings)
         font-weight bold
         line-height 1.2
 
 h1
-    font-size 2.1rem
+    font-size _rem(21px)
 
 h2
-    font-size 1.6rem
+    font-size _rem(16px)
 
 h3
-    font-size 1.4rem
+    font-size _rem(14px)
 
 // list
 ul
@@ -56,25 +56,25 @@ li ul
 
 //
 hr
+    _m(2 0 4)
     clear both
     background-color $color-base
     border 0
     height 1px
-    margin 2.4rem 0 4.8rem
 
 tt
 code
 kbd
 samp
 pre
-    border-radius .2rem
-    font-size 1.2em /* em value to make it relative to the body text size */
+    border-radius _rem(2px)
+    font-size 1.2em // em value to make it relative to the context font size
 
 small
     font-size .75em
 
 blockquote
-    _fontload($font-secondary, normal, normal)
+    _fontload($fontstack-secondary, normal, normal)
     position relative
     padding .75em 1.5em 0
     font-style italic
@@ -104,10 +104,10 @@ thead
 
 td
 th
+    _p(.5 1)
     word-wrap break-word
     hyphens none
     border-width 0
-    padding .6rem 1.2rem
 
 /* (1) Important : [title] attribut must be present
  * (2) For IE 8/9, Safari 5, and Chrome : they have not default style for this tag

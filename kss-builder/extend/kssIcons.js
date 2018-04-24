@@ -1,10 +1,7 @@
 /* jshint node:true */
 
-module.exports = function (Twig) {
-  'use strict';
-
-  Twig.extend(function (Twig) {
-
+module.exports = function kssIconsTwigExtend(mainTwig) {
+  mainTwig.extend((Twig) => {
     // example of extending a tag type that would
     // restrict content to the specified "level"
     Twig.exports.extendTag({
@@ -16,51 +13,56 @@ module.exports = function (Twig) {
       // what type of tags can follow this one.
       next: ['endkssIcons'], // match the type of the end tag
       open: true,
-      compile: function (token) {
-        var expression = token.match[1];
+      compile: function compile(token) {
+        const expression = token.match[1]
 
         // turn the string expression into tokens.
         token.stack = Twig.expression.compile.apply(this, [{
-          type:  Twig.expression.type.expression,
-          value: expression
-        }]).stack;
+          type: Twig.expression.type.expression,
+          value: expression,
+        }]).stack
 
-        delete token.match; // cleanup
-        return token;
+        delete token.match // cleanup
+
+        return token
       },
-      parse: function (token, context, chain) {
-        var doc = Twig.expression.parse.apply(this, [token.stack, context]);
-        var output = [];
-        var regex = /^(\S+)\s*:\s*(\S+)(?:\s*-\s*(.*))?$/gm;
-        var test;
+      parse: function parse(token, context, chain) {
+        const doc = Twig.expression.parse.apply(this, [token.stack, context])
+        const output = []
+        const regex = /^(\S+)\s*:\s*(\S+)(?:\s*-\s*(.*))?$/gm
+        let test = regex.exec(doc)
 
-        while ((test = regex.exec(doc)) !== null) {
-          var innerContext = Twig.ChildContext(context);
-          innerContext.icon = {};
-          innerContext.icon.name = test[1];
-          innerContext.icon.character = test[2];
+        while (test !== null) {
+          const innerContext = Twig.ChildContext(context)
+          innerContext.icon = {
+            name: test[1],
+            character: test[2],
+          }
           if (test[3] !== undefined) {
-            innerContext.icon.description = test[3];
+            const description = test[3]
+            innerContext.icon.description = description
           }
 
-          output.push(Twig.parse.apply(this, [token.output, innerContext]));
+          output.push(Twig.parse.apply(this, [token.output, innerContext]))
 
-          Twig.merge(context, innerContext, true);
+          Twig.merge(context, innerContext, true)
+
+          test = regex.exec(doc)
         }
 
         return {
-          chain: chain,
-          output: Twig.output.apply(this, [output])
-        };
-      }
-    });
+          chain,
+          output: Twig.output.apply(this, [output]),
+        }
+      },
+    })
 
     // a matching end tag type
     Twig.exports.extendTag({
-        type: 'endkssIcons',
-        regex: /^endkssIcons$/,
-        next: [ ],
-        open: false
-    });
-  });
-};
+      type: 'endkssIcons',
+      regex: /^endkssIcons$/,
+      next: [],
+      open: false,
+    })
+  })
+}

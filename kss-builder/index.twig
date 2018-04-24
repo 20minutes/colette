@@ -26,10 +26,10 @@
     {# side navigation #}
     <header>
         <div class="co_trigger-sidebar">
-            <p class="co_content pr2 pl2">
+            <p class="co_content co_pr2 co_pl2">
                 <button id="trigger">
                     <svg width="30" height="30"><use xlink:href="#symbol-menu"/></svg>
-                    <span class="mask">Aller au menu</span>
+                    <span class="co_mask">Aller au menu</span>
                 </button>
             </p>
         </div>
@@ -37,19 +37,19 @@
             <li class="co_sidebar-brand">
                 <a href="./">
                     <svg width="60" height="60"><use xlink:href="#symbol-logo"/></svg>
-                    <span class="mask">Retour à l'accueil</span>
+                    <span class="co_mask">Retour à l’accueil</span>
                 </a>
             </li>
             <li><a href="./">About</a></li>
             {% for menu_item in menu %}
-                <li{% if menu_item.isActive %} class="co_sidebar-active"{% endif %}>
+                <li {% if menu_item.isActive %} class="co_sidebar-active"{% endif %}>
                     <a href="section-{{ menu_item.referenceURI }}.html">{{ menu_item.header }}</a>
 
                     {% if menu_item.children|length %}
                         {# Display 1st level of sub navigation #}
                         <ul class="co_sidebar-children">
                             {% for child in menu_item.children if not child.isGrandChild %}
-                                <li{% if child.isActive %} class="co_sidebar-active"{% endif %}>
+                                <li {% if child.isActive %} class="co_sidebar-active"{% endif %}>
                                     <a href="section-{{ menu_item.referenceURI ~ '.html#kssref-' ~ child.referenceURI }}">{{ child.header }}</a>
                                 </li>
                             {% endfor %}
@@ -61,13 +61,13 @@
     </header>
 
     {# page content #}
-    <article role="main" class="co_page pb6">
+    <article role="main" class="co_page co_pb6">
         {# homepage #}
         {% if homepage %}
             <div id="kssref-homepage" class="co_section-depth-1">
-                <h1 class="co_section-h1 co_content pl2 pr2">About</h1>
+                <h1 class="co_section-h1 co_content co_pl2 co_pr2">About</h1>
             </div>
-            <section id="kssref-homepage" class="co_section-home co_section-depth-2 co_content pl2 pr2">
+            <section id="kssref-homepage" class="co_section-home co_section-depth-2 co_content co_pl2 co_pr2">
                 {{ homepage|raw }}
             </section>
         {% endif %}
@@ -81,7 +81,7 @@
 
             {# section header #}
             {% set headerElement = (depth > 6) ? 'h6' : 'h' ~ depth %}
-            <{{ headerElement }} class="co_section-h{{ depth }} {% if 1 == depth %} co_content pl2 pr2{% endif %}">
+            <{{ headerElement }} class="co_section-h{{ depth }} {% if 1 == depth %} co_content co_pl2 co_pr2{% endif %}">
                 {# section title #}
                 {% if depth > 1 %}
                     <a href="#kssref-{{ section.referenceURI }}">
@@ -96,118 +96,136 @@
 
             {# source #}
             {% if section.sourceFile.name and depth > 1 %}
-                <div class="co_subsection clearfix">
-                    <p class="co_subsection-title col-md-3">Source</p>
-                    <p class="co_subsection-content co_source col-md-9">
+                <div class="co_subsection co_clearfix">
+                    <p class="co_subsection-title co_col-md-3">Source</p>
+                    <p class="co_subsection-content co_source co_col-md-9">
                         <code>{{ section.sourceFile.name }}{% if section.sourceFile.line > 1 %}, Line: line {{ section.sourceFile.line }}{% endif %}</code>
                     </p>
                 </div>
             {% endif %}
 
-
             {# section description #}
             {% if section.description %}
-                <div class="co_subsection clearfix{% if 1 == depth %} co_content{% endif %}">
-                    <p class="co_subsection-title col-md-3">Description</p>
-                    <div class="co_subsection-content col-md-9">
+                <div class="co_subsection co_clearfix{% if 1 == depth %} co_content{% endif %}">
+                    <p class="co_subsection-title co_col-md-3">Description</p>
+                    <div class="co_subsection-content co_col-md-9">
                         {{ section.description|raw }}
                     </div>
                 </div>
             {% endif %}
 
-
             {# section colors #}
             {% if section.colors %}
-                <ul class="co_colors clearfix">
+                <ul class="co_colors co_clearfix">
                     {% kssColors section.colors %}
-                    {# Available data, but not used in the template:
-                        -> color.rgb [r|g|b]
-                        -> color.hsl [h|s|l]
-                        -> color.desc
-                    #}
-                    <li class="box">
-                        <div class="co_colors-demo" style="background-color:{{color.hex}}"></div>
-                        <p class="co_colors-name">{{ color.name }}</p>
-                        <p class="co_colors-hex">{{ color.hex }}</p>
-                    </li>
+                        {# Available data, but not used in the template:
+                            -> color.rgb [r|g|b]
+                            -> color.hsl [h|s|l]
+                            -> color.desc
+                        #}
+                        <li class="box">
+                            <div class="co_colors-demo" style="background-color:{{color.hex}}"></div>
+                            <p class="co_colors-name">{{ color.name }}</p>
+                            <p class="co_colors-hex">{{ color.hex }}</p>
+                        </li>
                     {% endkssColors %}
                 </ul>
             {% endif %}
 
-
             {# section icons #}
             {% if section.icons %}
-                <ul class="co_icons clearfix">
+                <ul class="co_icons co_clearfix">
                     {% kssIcons section.icons %}
-                    {# Available data, but not used in the template:
-                        -> icon.character
-                        -> icon.desc
-                    #}
-                    <li class="box">
-                        <div class="co_icons-demo">{{ icon.character }}</div>
-                        <div><span class="co_icons-name">{{ icon.name }}</span></div>
-                    </li>
+                        {# Available data, but not used in the template:
+                            -> icon.character
+                            -> icon.desc
+                        #}
+                        <li class="co_box">
+                            <div class="co_icons-demo">{{ icon.character }}</div>
+                            <div><span class="co_icons-name">{{ icon.name }}</span></div>
+                        </li>
                     {% endkssIcons %}
                 </ul>
             {% endif %}
 
 
+            {# section symbols #}
+            {% if section.symbols %}
+                <ul class="co_symbols co_clearfix">
+                    {% kssSymbols section.symbols section.source.path %}
+                        {% if list %}
+                            <li class="co_symbols-group">
+                                <p class="co_symbols-group-title">{{ name }}</p>
+                                <ul class="co_symbols clearfix">{{ list|raw }}</ul>
+                            </li>
+                        {% else %}
+                            <li class="co_symbols-symbol co_box">
+                                <div class="co_symbols-demo">
+                                    <svg width="40" height="40"><use xlink:href="#symbol-{{ id }}"></use></svg>
+                                </div>
+                                <div class="co_symbols-name">{{ name }}</div>
+                            </li>
+                        {% endif %}
+                    {% endkssSymbols %}
+                </ul>
+            {% endif %}
+
             {# section example #}
             {% if section.example %}
                 {# example / default styling #}
-                <div class="co_subsection clearfix">
-                    <p class="co_subsection-title col-md-3">
+                <div class="co_subsection co_clearfix">
+                    <p class="co_subsection-title co_col-md-3">
                         {% if section.modifiers is not empty %}
                             Default styling
                         {% else %}
                             Example
                         {% endif %}
-
                     </p>
-                    <div class="co_subsection-demo col-md-9 clearfix mb1">
+                    <div class="co_subsection-demo co_col-md-9 co_clearfix co_mb1">
                         {{ section.example|raw }}
                     </div>
                 </div>
 
                 {# modifiers #}
                 {% if section.modifiers is not empty %}
-                    <div class="co_subsection clearfix">
-                        <p class="co_subsection-title col-md-3">Modifiers</p>
-                        <div class="co_subsection-content co_modifier col-md-9 clearfix mb2">
+                    <div class="co_subsection co_clearfix">
+                        <p class="co_subsection-title co_col-md-3">Modifiers</p>
+                        <div class="co_subsection-content co_modifier co_col-md-9 co_clearfix co_mb2">
                             {% for modifier in section.modifiers %}
                                 <p><code>{{ modifier.name }}</code></p>
                                 <p>{{ modifier.description|raw }}</p>
-                                <div class="co_subsection-demo clearfix mb3">
+                                <div class="co_subsection-demo co_clearfix co_mb3">
                                     {{ modifier.markup|raw }}
                                 </div>
                             {% endfor %}
                         </div>
                     </div>
-
                 {% endif %}
 
                 {# markup #}
                 {% if section.markup %}
-                    <div class="co_subsection clearfix">
-                        <p class="co_subsection-title col-md-3">Markup</p>
-                        <div class="co_subsection-content co_markup col-md-9">
-                            <p class="co_expand"><span class="btn">click to expand</span></p>
-                            <pre class="pa1 prettyprint linenums lang-html"><code data-language="html">{{ section.markup|escape('html') }}</code></pre>
-                            <p class="co_markup-action font-secondary align-right"><span class="collapse pr1">Collaspe</span><span>Open code in new tab</span></p>
+                    <div class="co_subsection co_clearfix">
+                        <p class="co_subsection-title co_col-md-3">Markup</p>
+                        <div class="co_subsection-content co_markup co_col-md-9">
+                            <pre class="co_pa1 prettyprint linenums lang-html"><code>{{ section.markup|escape('html') }}</code></pre>
                         </div>
                     </div>
                 {% endif %}
+
+                {% if section.source.filename %}
+                    <p class="co_source co_style">Source: <code>{{ section.source.filename }}</code>, line {{ section.source.line }}</p>
+                {% endif %}
+
             {% endif %}
 
 
             {# parameters #}
             {% if section.parameters|length %}
-                <div class="co_subsection clearfix">
-                    <p class="co_subsection-title col-md-3">Parameters</p>
-                    <div class="co_subsection-content co_parameters col-md-9">
+                <div class="co_subsection co_clearfix">
+                    <p class="co_subsection-title co_col-md-3">Parameters</p>
+                    <div class="co_subsection-content co_parameters co_col-md-9">
                         {% for parameter in section.parameters %}
                             <p><code>{{ parameter.name }}</code>{% if parameter.defaultValue %} (<code>{{ parameter.defaultValue }}</code>){% endif %}: {{ parameter.description|raw }}</p>
-
                         {% endfor %}
                     </div>
                 </div>
@@ -218,16 +236,16 @@
     </article>
 
     {# footer #}
-    <footer class="co_footer footerbar">
-        <div class="co_content clearfix">
-            <p class="float-left">© Copyright <a href="http://www.20minutes.fr">20 Minutes</a></p>
-            <p class="float-right"><a href="https://twitter.com/Tech20Minutes" class="ml2" data-icon="twitter"> Follow us </a></p>
-            <p class="float-right"><a href="https://github.com/20minutes/colette" class="ml2" data-icon="github"> View it on Github</a></p>
+    <footer class="co_footer co_footerbar">
+        <div class="co_content co_clearfix">
+            <p class="co_float-left">© Copyright <a href="http://www.20minutes.fr">20 Minutes</a></p>
+            <p class="co_float-right"><a href="https://twitter.com/Tech20Minutes" class="co_ml2"> Follow us </a></p>
+            <p class="co_float-right"><a href="https://github.com/20minutes/colette" class="co_ml2"> View it on Github</a></p>
         </div>
     </footer>
 </div>
 <span id="overlay" class="co_overlay" aria-hidden="true">
-    <button id="close">✕<span class="mask">Fermer</span></button>
+    <button id="close">✕<span class="co_mask">Fermer</span></button>
 </span>
 
 <!-- scripts -->
@@ -238,7 +256,6 @@
         sidebar = document.getElementById('sidebar'),
         overlay = document.getElementById('overlay'),
         close = document.getElementById('close'),
-        triggerClose = {1: close, 2: sidebar, 3: overlay},
         markups = document.getElementsByClassName('co_markup'),
         headroom = new colette.headroom(document.querySelector('.co_trigger-sidebar'), {
             offset: 50,
@@ -250,35 +267,36 @@
             }
         });
 
-    {# init headroom #}
+    // init headroom
     headroom.init();
 
-    {# prettyPrint #}
+    // prettyPrint
     prettyPrint();
 
-    {# expand code blocks #}
+    // expand code blocks
     for (var i = 0; i < markups.length; i++) {
-        markups[i].addEventListener('click', function(e) {
+        markups[i].addEventListener('click', function (e) {
             this.classList.toggle('co_markup-expanded');
         }, false);
     }
 
-    {# trigger sidebar #}
-    trigger.addEventListener('click', function(){
+    // trigger sidebar
+    trigger.addEventListener('click', function () {
         document.body.style.overflow = 'hidden'; // body should not scroll when sidebar is open
         sidebar.classList.add('co_sidebar-open');
         overlay.removeAttribute('aria-hidden');
     })
 
-    {# close sidebar #}
+    // close sidebar
     function closeSidebar() {
         document.body.removeAttribute('style');
         sidebar.classList.remove('co_sidebar-open');
         overlay.setAttribute('aria-hidden', true);
     }
-    for (var key in triggerClose) {
-        triggerClose[key].addEventListener('click', closeSidebar);
-    }
+
+    close.addEventListener('click', closeSidebar);
+    sidebar.addEventListener('click', closeSidebar);
+    overlay.addEventListener('click', closeSidebar);
 
 </script>
 </body>

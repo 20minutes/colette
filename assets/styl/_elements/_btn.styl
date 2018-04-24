@@ -1,0 +1,38 @@
+// Buttons
+//
+// Colette comes with basic styles for call to action / buttons.
+//
+// Markup: btn.twig
+//
+// Styleguide Elements.Buttons
+.btn
+    _fontload($fontstack-secondary)
+    display inline-block
+    text-align center
+    padding .5em 1.5em
+    border-radius 20em
+    font-size .875em
+    font-weight bold
+    text-transform uppercase
+    background-color $color-secondary
+    transition background-color .2s ease
+    color $color-base
+    line-height 1.5em
+    vertical-align baseline
+
+    &-picto
+        width .9em
+        height .9em
+        margin-bottom -.1em
+
+        &-left
+            margin-right .3em
+
+        &-right
+            margin-left .3em
+
+    &:disabled
+        opacity .5
+
+    &:enabled:hover
+        background-color darken($color-secondary, 20%)

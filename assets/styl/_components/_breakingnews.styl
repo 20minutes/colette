@@ -1,0 +1,56 @@
+// Breaking News
+//
+// A banner with important title.
+// Is usualy a link to this article.
+//
+// Markup: breakingnews.twig
+//
+// Styleguide Components.BreakingNews
+.breakingnews
+    _fontload($fontstack-secondary)
+    display flex
+    background $color-white
+    font-weight bold
+    flex-wrap nowrap
+    align-items stretch
+    justify-content stretch
+    border 0 // no border even it’s box
+
+    &-label
+    &-title
+    &-cta
+        display flex
+        align-items center
+        line-height 1.3em
+
+    &-label
+        _p(1)
+        text-transform uppercase
+        background $color-highlight
+        color $color-white
+        font-size .75em
+
+        @media $breakpoints.md
+            font-size 1em
+
+    &-title
+        _p(.5 1)
+        _fontload($fontstack-secondary)
+        flex-grow 999 // excessive value to take maximum of available space
+        min-height _rem(62px)
+        color $color-highlight
+        font-size 1em
+        font-weight bold
+
+        @media $breakpoints.sm
+            font-size 1.375em
+
+    &-cta
+        _p(1)
+        display none
+        color $color-base
+        font-weight bold
+        font-size .875em
+
+        @media $breakpoints.md
+            display flex

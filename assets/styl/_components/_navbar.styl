@@ -1,0 +1,63 @@
+// Navbar
+//
+// Display a navigation bar at the top of the page.
+// Colette comes with a [headroom.js](http://wicky.nillia.ms/headroom.js/) dependency to handle navbar show/hide behavior on scroll.
+//
+// Markup: navbar.twig
+//
+// Styleguide Components.navbar
+.navbar
+    {clearfix}
+    position fixed
+    top 0
+    z-index: $zIndex.layout
+    width 100%
+    height _rem(48px)
+    box-shadow 0 _rem(2px) _rem(4px) _rem(-2px) $color-base
+    background-color $color-white
+
+    ul
+        height inherit
+        list-style none
+        margin 0
+        padding 0
+
+        a
+            _p(0 1.5)
+            color $color-base
+            display flex
+            background-color rgba($color-bg-base, 0)
+            transition background-color .2s
+
+            svg
+                width 1.5em
+                height @width
+                margin auto
+
+            span
+                margin auto
+
+            &:hover
+                background-color $color-bg-base
+
+    li
+        float left
+        height inherit
+        display flex
+
+    &-brand
+        _p(0 .5)
+        float left
+        height inherit
+        color $color-default
+        display flex
+        background-color rgba($color-bg-base, 0)
+        transition background-color .2s
+
+        svg
+            width 2.2em
+            height @width
+            margin auto
+
+        &:hover
+            background-color $color-bg-base
