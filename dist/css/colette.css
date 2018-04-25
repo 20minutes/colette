@@ -1351,6 +1351,7 @@ figure {
   width: 100%;
 }
 input.formSingleInput-input {
+  padding-left: 0.75rem;
   padding-right: 2.625rem;
   border-radius: 20em;
 }
