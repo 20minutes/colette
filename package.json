@@ -1,6 +1,6 @@
 {
   "name": "colette",
-  "version": "1.0.0-alpha",
+  "version": "1.0.0-alpha.1",
   "license": "MIT",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
@@ -37,7 +37,7 @@
     "gulp-stylint": "^4.0.1",
     "gulp-stylus": "^2.7.0",
     "gulp-svgstore": "^6.1.1",
-    "kss": "^3.0.0-beta.18",
+    "kss": "3.0.0-beta.18",
     "postcss-focus-visible": "^3.0.0",
     "serve-static": "^1.13.2",
     "stylint": "^1.5.9",

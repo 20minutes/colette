@@ -1351,6 +1351,7 @@ figure {
   width: 100%;
 }
 input.formSingleInput-input {
+  padding-left: 0.75rem;
   padding-right: 2.625rem;
   border-radius: 20em;
 }
@@ -1644,7 +1645,7 @@ input.formSingleInput-input {
   padding: 1.5rem;
 }
 .teaser-catchline {
-  margin-top: 0.3rem;
+  margin-top: 0.1875rem;
   font-size: 0.9em;
   font-style: italic;
 }
@@ -2240,7 +2241,7 @@ input.formSingleInput-input {
   background-color: #fff7e2;
 }
 .preview-cover .media img {
-  height: 36rem;
+  height: 22.5rem;
 }
 @media screen and (min-width: 768px) {
   .preview-cover .teaser-title {
@@ -2324,7 +2325,7 @@ input.formSingleInput-input {
   position: relative;
 }
 .preview-stretch {
-  padding-bottom: 4.8rem;
+  padding-bottom: 2.6875rem;
   position: relative;
 }
 .preview-stretch .preview-footer {
