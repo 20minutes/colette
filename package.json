@@ -66,7 +66,7 @@
     "typography"
   ],
   "browserslist": "> 0.5%",
-  "main": "dist/css/colette.css",
+  "main": "dist/js/colette.min.js",
   "files": [
     "dist",
     "assets",
