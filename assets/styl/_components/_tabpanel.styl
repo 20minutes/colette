@@ -1,0 +1,46 @@
+// Tab Panel
+//
+// Basic HTML structure with tab and panels
+//
+// Markup: tabpanel.twig
+//
+// Styleguide Components.TabPanel
+.tabpanel
+    &-list
+        display flex
+        margin 0
+        padding 0
+        list-style none
+
+        &-tab
+            _p(1 0)
+            flex 1
+            text-align center
+            background $color-base-lighten
+            border-color $color-borders
+            border-style solid
+            border-width 1px 0 1px 1px
+            color $color-base
+            font-family $fontstack-secondary
+            text-transform uppercase
+            cursor pointer
+
+            &:last-child
+                border-right-width 1px
+
+            &[aria-expanded=true]
+                background $color-white
+                border-width 0 0 0 3px
+                border-color currentColor
+                color currentColor
+                font-weight 700
+
+            &[aria-disabled=true]
+                background $color-secondary
+                cursor initial
+
+    &-body
+        _p(1)
+
+        &[aria-hidden=true]
+            display none

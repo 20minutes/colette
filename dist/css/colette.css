@@ -2353,6 +2353,45 @@ input.formSingleInput-input {
 .socialbar li:not(:first-child) {
   margin-left: 0.75rem;
 }
+.tabpanel-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tabpanel-list-tab {
+  padding: 0.75rem 0rem;
+  flex: 1;
+  text-align: center;
+  background: #e7e7e7;
+  border-color: #c7c7c7;
+  border-style: solid;
+  border-width: 1px 0 1px 1px;
+  color: #4c4d4e;
+  font-family: 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.tabpanel-list-tab:last-child {
+  border-right-width: 1px;
+}
+.tabpanel-list-tab[aria-expanded=true] {
+  background: #fff;
+  border-width: 0 0 0 3px;
+  border-color: currentColor;
+  color: currentColor;
+  font-weight: 700;
+}
+.tabpanel-list-tab[aria-disabled=true] {
+  background: #b7b7b7;
+  cursor: initial;
+}
+.tabpanel-body {
+  padding: 0.75rem;
+}
+.tabpanel-body[aria-hidden=true] {
+  display: none;
+}
 .blockLinkSkin-communication .teaser-summary {
   background-color: #fff7e2;
 }
