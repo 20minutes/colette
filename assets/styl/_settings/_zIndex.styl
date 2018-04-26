@@ -2,7 +2,7 @@
 //
 // Colette provides 3 default `z-index`
 //
-// ```
+// ```stylus
 // $zIndex ?= {
 //     base: 1
 //     overlay: 10
@@ -11,19 +11,18 @@
 // ```
 //
 // **Usage example**
-// ```
+// ```stylus
 // /* stylus file */
-// z-index: zIndex.layout + 4
+// .foo
+//     z-index: zIndex.layout + 4
 // ```
 //
-// will compile to
-// ```
+// will compile to:
+// ```css
 // /* CSS file */
-// z-index: 24
-//     /* styles */
+// .foo
+//     z-index: 24
 // ```
-//
-//
 //
 // Styleguide: Settings.Z-Index
 $zIndex ?= {

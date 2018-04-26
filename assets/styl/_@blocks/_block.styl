@@ -7,14 +7,12 @@
 // Adds a clearfix behavior on containers that have floating children.
 //
 // **Usage**
-// ```
-// /* my_file.styl */
+// ```stylus
 // .foo
 //     {clearfix}
 // ```
-// will compile to
-// ```
-// /* my_file.css */
+// is equivalent to
+// ```stylus
 // .foo
 //     &:after
 //         content ''
@@ -38,14 +36,12 @@ clearfix = @block
 // Add a style on the focused outline.
 //
 // **Usage**
-// ```
-// /* my_file.styl */
+// ```stylus
 // .foo
 //     {outline}
 // ```
-// will compile to
-// ```
-// /* my_file.css */
+// is equivalent to
+// ```stylus
 // .foo
 //    outline dashed thin $color-base
 //    outline-offset .3em
@@ -60,18 +56,15 @@ outline = @block
 // Streches an element to match the width of its parent.
 //
 // **Usage**
-// ```
-// /* my_file.styl */
+// ```stylus
 // .foo
 //     {fullWidth}
 // ```
-// will compile to
-// ```
-// /* my_file.css */
+// is equivalent to
+// ```stylus
 // .foo
 //    display block
 //    width 100%
-//    max-width 100%
 //    height auto
 // ```
 //
@@ -87,14 +80,12 @@ fullWidth = @block
 // If applied to a `<ul>` or `<ol>` tag, all its `<li>` children will be displayed inline as well.
 //
 // **Usage**
-// ```
-// /* my_file.styl */
+// ```stylus
 // .foo
 //     {inlined}
 // ```
-// will compile to
-// ```
-// /* my_file.css */
+// is equivalent to
+// ```stylus
 // .foo
 //    display inline
 //
