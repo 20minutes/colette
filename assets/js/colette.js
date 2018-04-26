@@ -18,7 +18,6 @@ colette.iframeResizer = iframeResizer
 colette.Headroom = Headroom
 colette.fonts = new FontFaceLoader({ data: fontsData })
 
-
 colette.Pager = Pager
 colette.pagers = []
 Array.prototype.forEach.call(document.querySelectorAll('.block-list'), (item) => {
@@ -27,8 +26,8 @@ Array.prototype.forEach.call(document.querySelectorAll('.block-list'), (item) =>
 
 colette.Tablist = Tablist
 colette.tablists = []
-Array.prototype.forEach.call(document.querySelectorAll('[role="tablist"]'), (item) => {
-  colette.pagers.push(new Tablist({ blockList: item }))
+Array.prototype.forEach.call(document.querySelectorAll('.tabpanel-list'), (item) => {
+  colette.tablists.push(new Tablist(item))
 })
 
 // lazyload init (images)

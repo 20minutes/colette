@@ -1,19 +1,21 @@
-<ul role="tablist">
-  <li role="tab" aria-controls="tab-1">Tab 1</li>
-  <li role="tab" aria-controls="tab-2">Tab 2</li>
-  <li role="tab" aria-disabled="true" aria-controls="tab-3">Tab 3</li>
-  <li role="tab" aria-controls="tab-4">Tab 4</li>
-</ul>
+<div class="tabpanel color-base box block">
+    <ul class="tabpanel-list" role="tablist">
+        <li class="tabpanel-list-tab" role="tab" aria-controls="tab-1">Tab 1</li>
+        <li class="tabpanel-list-tab" role="tab" aria-controls="tab-2" data-tab-open>Tab 2</li>
+        <li class="tabpanel-list-tab" role="tab" aria-disabled="true" aria-controls="tab-3">Tab 3</li>
+        <li class="tabpanel-list-tab" role="tab" aria-controls="tab-4">Tab 4</li>
+    </ul>
 
-<div role="tabpanel" id="tab-1">
-  <p>---</p>
-</div>
-<div role="tabpanel" id="tab-2">
-  <p>---</p>
-</div>
-<div role="tabpanel" id="tab-3">
-  <p>---</p>
-</div>
-<div role="tabpanel" id="tab-4">
-  <p>---</p>
+    <div class="tabpanel-body" role="tabpanel" id="tab-1">
+        <p>This is an expemple of the 1<sup>st</sup> panel</p>
+    </div>
+    <div class="tabpanel-body" role="tabpanel" id="tab-2">
+        <p>This the panel set to be open by default</p>
+    </div>
+    <div class="tabpanel-body" role="tabpanel" id="tab-3">
+        <p>This is an expemple of a disabled panel</p>
+    </div>
+    <div class="tabpanel-body" role="tabpanel" id="tab-4">
+        <p>This is an expemple of the 4<sup>th</sup> panel</p>
+    </div>
 </div>
