@@ -8,6 +8,7 @@ import Blazy from 'blazy'
 import iframeResizer from './modules/iframeResizer'
 import FontFaceLoader from './modules/fontFaceLoader'
 import Pager from './modules/pager'
+import TabPanel from './modules/tabpanel'
 import fontsData from '../../fontfaces.json'
 
 // Init Colette object
@@ -20,6 +21,7 @@ colette.pagers = []
 Array.prototype.forEach.call(document.querySelectorAll('.block-list'), (item) => {
   colette.pagers.push(new Pager({ blockList: item }))
 })
+colette.TabPanel = TabPanel()
 
 // lazyload init (images)
 colette.lazy = new Blazy({
