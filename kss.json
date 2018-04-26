@@ -1,25 +1,19 @@
 {
-    "source": "assets/styl",
-    "destination": "docs",
-    "//": "The css and js paths are URLs relative to the style guide destination.",
-    "css": [
-        "kss-assets/co-styles.min.css",
-        "dist/css/colette.min.css"
-    ],
-    "js": [
-        "dist/js/colette.min.js"
-    ],
-    "title": "Colette Style Guide",
-    "verbose": false,
-    "homepage": "../../readme.md",
-    "builder": "kss-builder",
-    "extend": [
-        "assets/twig/filters",
-        "kss-builder/extend"
-    ],
-    "custom": [
-        "Colors",
-        "Icons",
-        "Symbols"
-    ]
+  "source": "assets/styl",
+  "destination": "docs",
+  "//": "The css and js paths are URLs relative to the style guide destination.",
+  "css": [
+    "dist/css/colette.min.css"
+  ],
+  "js": [
+    "dist/js/colette.min.js"
+  ],
+  "title": "Colette Style Guide",
+  "verbose": false,
+  "homepage": "../../readme.md",
+  "builder": "colette-kss-builder",
+  "extend": [
+    "assets/twig/filters"
+  ],
+  "svg": "dist/svg/svg.svg"
 }
