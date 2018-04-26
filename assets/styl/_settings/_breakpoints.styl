@@ -3,7 +3,7 @@
 // Colette provide a collection of breakpoints and media queries, available in a `$breakpoints` hash.
 //
 // We handle 3 default primary breakpoints and related media queries:
-// ```
+// ```stylus
 // $breakpoints-main ?= {
 //     'sm': "screen and (min-width: 420px)"
 //     'md': "screen and (min-width: 768px)"
@@ -19,17 +19,17 @@
 // Both collections are merged within `$breakpoints`.
 //
 // **Usage example**
-// ```
+// ```stylus
 // /* stylus file */
 // @media $breakpoints.lg
 //     // styles
 // ```
 //
 // will compile to
-// ```
+// ```css
 // /* CSS file */
 // @media screen and (min-width: 960px)
-//     // styles
+//     /* styles */
 // ```
 //
 // Weight: -1

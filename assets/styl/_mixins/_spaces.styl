@@ -1,7 +1,7 @@
 // Spaces
 //
 // Spaces mixins return `margin` and `padding` properties based on a multiple of the `$grid-gutter` size.
-// <br /> Note that `$grid-gutter` value is defined in Colette's settings, but it can be overridden in your project stylus file.
+// <br /> Note that `$grid-gutter` value is defined in Colette’s settings, but it can be overridden in your project stylus file.
 //
 // Styleguide Mixins.Spaces
 
@@ -13,9 +13,9 @@ _gutters(i)
 // _p()
 //
 // Returns a `padding` based on `$grid-gutter` value.
-// ```
+// ```stylus
 // /* my_file.styl */
-// $grid-gutter = 2rem // overrides colette's default value
+// $grid-gutter = 16px // overrides colette’s default value
 // .one-argument
 //     _p(1)
 //
@@ -23,14 +23,14 @@ _gutters(i)
 //     _p(1 2 3 4)
 // ```
 // will compile to
-// ```
+// ```css
 // /* my_file.css */
 // .one-argument {
-//     padding: 2rem;
+//     padding: 1rem;
 // }
 //
 // .multiple-arguments {
-//     padding: 2rem 4rem 6rem 8rem;
+//     padding: 1rem 2rem 3rem 4rem;
 // }
 // ```
 //
@@ -46,15 +46,18 @@ _p(values)
 // _pt()
 //
 // Returns a `padding-top` based on `$grid-gutter` value.
-// ```
+// ```stylus
 // /* my_file.styl */
-// $grid-gutter = 2rem // overrides colette's default value
-// _pt(1)
+// $grid-gutter = 16px // overrides colette’s default value
+// .foo
+//     _pt(1)
 // ```
 // will compile to
-// ```
+// ```css
 // /* my_file.css */
-// padding-top: 2rem;
+// .foo {
+//     padding-top: 1rem;
+// }
 // ```
 //
 // $i   - multiplier of `$grid-gutter`
@@ -67,15 +70,18 @@ _pt(i)
 // _pr()
 //
 // Returns a `padding-right` based on `$grid-gutter` value.
-// ```
+// ```stylus
 // /* my_file.styl */
-// $grid-gutter = 2rem // overrides colette's default value
-// _pr(1)
+// $grid-gutter = 16px // overrides colette’s default value
+// .foo
+//     _pr(1)
 // ```
 // will compile to
-// ```
+// ```css
 // /* my_file.css */
-// padding-right: 2rem;
+// .foo {
+//     padding-right: 1rem;
+// }
 // ```
 //
 // $i   - multiplier of `$grid-gutter`
@@ -88,15 +94,18 @@ _pr(i)
 // _pb()
 //
 // Returns a `padding-bottom` based on `$grid-gutter` value.
-// ```
+// ```stylus
 // /* my_file.styl */
-// $grid-gutter = 2rem // overrides colette's default value
-// _pb(1)
+// $grid-gutter = 16px // overrides colette’s default value
+// .foo
+//     _pb(1)
 // ```
 // will compile to
-// ```
+// ```css
 // /* my_file.css */
-// padding-bottom: 2rem;
+// .foo {
+//     padding-bottom: 1rem;
+// }
 // ```
 //
 // $i   - multiplier of `$grid-gutter`
@@ -109,15 +118,18 @@ _pb(i)
 // _pl()
 //
 // Returns a `padding-left` based on `$grid-gutter` value.
-// ```
+// ```stylus
 // /* my_file.styl */
-// $grid-gutter = 2rem // overrides colette's default value
-// _pl(1)
+// $grid-gutter = 16px // overrides colette’s default value
+// .foo
+//     _pl(1)
 // ```
 // will compile to
-// ```
+// ```css
 // /* my_file.css */
-// padding-left: 2rem;
+// .foo {
+//     padding-left: 1rem;
+// }
 // ```
 //
 // $i   - multiplier of `$grid-gutter`
@@ -130,9 +142,9 @@ _pl(i)
 // _m()
 //
 // Returns a `margin` based on `$grid-gutter` value.
-// ```
+// ```stylus
 // /* my_file.styl */
-// $grid-gutter = 2rem // overrides colette's default value
+// $grid-gutter = 16px // overrides colette’s default value
 // .one-argument
 //     _m(1)
 //
@@ -140,14 +152,14 @@ _pl(i)
 //     _m(1 2 3 4)
 // ```
 // will compile to
-// ```
+// ```css
 // /* my_file.css */
 // .one-argument {
-//     margin: 2rem;
+//     margin: 1rem;
 // }
 //
 // .multiple-arguments {
-//     margin: 2rem 4rem 6rem 8rem;
+//     margin: 1rem 2rem 3rem 4rem;
 // }
 // ```
 //
@@ -163,15 +175,18 @@ _m(values)
 // _mt()
 //
 // Returns a `margin-top` based on `$grid-gutter` value.
-// ```
+// ```stylus
 // /* my_file.styl */
-// $grid-gutter = 2rem // overrides colette's default value
-// _mt(1)
+// $grid-gutter = 16px // overrides colette’s default value
+// .foo
+//     _mt(1)
 // ```
 // will compile to
-// ```
+// ```css
 // /* my_file.css */
-// margin-top: 2rem;
+// .foo {
+//     margin-top: 1rem;
+// }
 // ```
 //
 // $i   - multiplier of `$grid-gutter`
@@ -184,15 +199,18 @@ _mt(i)
 // _mr()
 //
 // Returns a `margin-right` based on `$grid-gutter` value.
-// ```
+// ```stylus
 // /* my_file.styl */
-// $grid-gutter = 2rem // overrides colette's default value
-// _mr(1)
+// $grid-gutter = 16px // overrides colette’s default value
+// .foo
+//     _mr(1)
 // ```
 // will compile to
-// ```
+// ```css
 // /* my_file.css */
-// margin-right: 2rem;
+// .foo {
+//     margin-right: 1rem;
+// }
 // ```
 //
 // $i   - multiplier of `$grid-gutter`
@@ -205,15 +223,18 @@ _mr(i)
 // _mb()
 //
 // Returns a `margin-bottom` based on `$grid-gutter` value.
-// ```
+// ```stylus
 // /* my_file.styl */
-// $grid-gutter = 2rem // overrides colette's default value
-// _mb(1)
+// $grid-gutter = 16px // overrides colette’s default value
+// .foo
+//     _mb(1)
 // ```
 // will compile to
-// ```
+// ```css
 // /* my_file.css */
-// margin-bottom: 2rem;
+// .foo {
+//     margin-bottom: 1rem;
+// }
 // ```
 //
 // $i   - multiplier of `$grid-gutter`
@@ -226,15 +247,18 @@ _mb(i)
 // _ml()
 //
 // Returns a `margin-left` based on `$grid-gutter` value.
-// ```
+// ```stylus
 // /* my_file.styl */
-// $grid-gutter = 2rem // overrides colette's default value
-// _ml(1)
+// $grid-gutter = 16px // overrides colette’s default value
+// .foo
+//     _ml(1)
 // ```
 // will compile to
-// ```
+// ```css
 // /* my_file.css */
-// margin-left: 2rem;
+// .foo {
+//     margin-left: 2rem;
+// }
 // ```
 //
 // $i   - multiplier of `$grid-gutter`

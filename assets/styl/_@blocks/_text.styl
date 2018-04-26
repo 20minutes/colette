@@ -7,18 +7,16 @@
 // Assigns the properties of the `.font-secondary` class to an element.
 //
 // **Usage**
-// ```
-// /* my_file.styl */
+// ```stylus
 // .foo
 //     {fontSecondary}
 // ```
-// will compile to
-// ```
-// /* my_file.css */
+// is equivalent to
+// ```stylus
 // .foo
 //    font-family $fontstack-secondary
 //    font-weight bold
-//    font-size 0.6875rem
+//    font-size _rem(11px)
 //    text-transform uppercase
 // ```
 //
@@ -34,14 +32,12 @@ fontSecondary = @block
 // Override the default positionning of the `list-style-position: outside`.
 //
 // **Usage**
-// ```
-// /* my_file.styl */
+// ```stylus
 // .foo
 //     {listPosOutside}
 // ```
-// will compile to
-// ```
-// /* my_file.css */
+// is equivalent to
+// ```stylus
 // .foo
 //    &
 //    li
