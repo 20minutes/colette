@@ -1959,6 +1959,9 @@ input.formSingleInput-input {
   background-color: #fff;
   box-shadow: 0 0 0 0.0625rem rgba(0,0,0,0.02), 0 0.0625rem 0.25rem 0.0625rem rgba(0,0,0,0.06);
 }
+.box-borderless {
+  border-width: 0;
+}
 .breakingnews {
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
   display: flex;
@@ -2359,28 +2362,40 @@ input.formSingleInput-input {
   padding: 0;
   list-style: none;
 }
+.no-js .tabpanel-list {
+  display: none;
+}
 .tabpanel-list-tab {
   padding: 0.75rem 0rem;
   flex: 1;
+  position: relative;
   text-align: center;
   background: #e7e7e7;
-  border-color: #c7c7c7;
-  border-style: solid;
-  border-width: 1px 0 1px 1px;
+  border: 1px solid #c7c7c7;
+  border-right-color: transparent;
   color: #4c4d4e;
   font-family: 'Open Sans WebFont', 'Helvetica Neue', Helvetica, sans-serif;
   text-transform: uppercase;
   cursor: pointer;
 }
 .tabpanel-list-tab:last-child {
-  border-right-width: 1px;
+  border-right-color: #c7c7c7;
 }
 .tabpanel-list-tab[aria-expanded=true] {
-  background: #fff;
-  border-width: 0 0 0 3px;
-  border-color: currentColor;
   color: currentColor;
+  background-color: #fff;
+  border-color: transparent;
   font-weight: 700;
+}
+.tabpanel-list-tab[aria-expanded=true]:before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  pointer-events: none;
+  background: currentColor;
+  width: 3px;
 }
 .tabpanel-list-tab[aria-disabled=true] {
   background: #b7b7b7;
@@ -2391,6 +2406,15 @@ input.formSingleInput-input {
 }
 .tabpanel-body[aria-hidden=true] {
   display: none;
+}
+.tabpanel.box {
+  border-width: 0;
+}
+.tabpanel.box > .tabpanel-list :first-child {
+  border-radius: 0.5rem 0 0 0;
+}
+.tabpanel.box > .tabpanel-list :last-child {
+  border-radius: 0 0.5rem 0 0;
 }
 .blockLinkSkin-communication .teaser-summary {
   background-color: #fff7e2;

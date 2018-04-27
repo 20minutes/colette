@@ -2,6 +2,8 @@
 //
 // Basic HTML structure with tab and panels
 //
+// Can use `.color-…` helpers on list
+//
 // Markup: tabpanel.twig
 //
 // Styleguide Components.TabPanel
@@ -12,28 +14,40 @@
         padding 0
         list-style none
 
+        .no-js &
+            display none
+
         &-tab
             _p(1 0)
             flex 1
+            position relative
             text-align center
             background $color-base-lighten
-            border-color $color-borders
-            border-style solid
-            border-width 1px 0 1px 1px
+            border 1px solid $color-borders
+            border-right-color transparent
             color $color-base
             font-family $fontstack-secondary
             text-transform uppercase
             cursor pointer
 
             &:last-child
-                border-right-width 1px
+                border-right-color $color-borders
 
             &[aria-expanded=true]
-                background $color-white
-                border-width 0 0 0 3px
-                border-color currentColor
                 color currentColor
+                background-color $color-white
+                border-color transparent
                 font-weight 700
+
+                &:before
+                    content ''
+                    position absolute
+                    top -1px
+                    bottom -1px
+                    left -1px
+                    pointer-events none
+                    background currentColor
+                    width 3px
 
             &[aria-disabled=true]
                 background $color-secondary
@@ -44,3 +58,12 @@
 
         &[aria-hidden=true]
             display none
+
+    &.box
+        border-width 0
+
+        > .tabpanel-list
+            :first-child
+                border-radius $radius 0 0 0
+            :last-child
+                border-radius 0 $radius 0 0
