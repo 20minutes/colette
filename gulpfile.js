@@ -120,8 +120,8 @@ function scriptsLint() {
 
 function assetsCopy() {
   // Retrieve fonts into dist/ directory
-  return gulp.src(`${cfg.fontsDir}*'`)
-    .pipe(gulp.dest(`${cfg.distDir}fonts`));
+  return gulp.src(`${cfg.fontsDir}**/*`)
+    .pipe(gulp.dest(`${cfg.distDir}fonts`))
 }
 
 function svgBuild() {
