@@ -19,19 +19,19 @@
  # @block block_title_classes    (optional)
  # @block block_title_attributes (optional)
  #}
-{% set mediaFormats = mediaFormats is defined ? mediaFormats : [] %}
-{% set sizes = sizes is defined ? sizes : [] %}
-{% set classes = classes is defined ? classes : [] %}
-{% set displayCaption = displayCaption == true %}
+{%- set mediaFormats = mediaFormats is defined ? mediaFormats : [] -%}
+{%- set sizes = sizes is defined ? sizes : [] -%}
+{%- set classes = classes is defined ? classes : [] -%}
+{%- set displayCaption = displayCaption == true -%}
 
-{% import '../../twig/macros/_img.twig' as _img -%}
+{%- import '../../twig/macros/_img.twig' as _img -%}
 
-{% set alt = media.caption %}
+{%- set alt = media.caption -%}
 {%- if media.credit is not empty %}
     {% set alt = alt ~ ' — ' ~ media.credit  %}
 {% endif -%}
 
-{% block media %}
+{%- block media -%}
     <figure class="media{% block block_classes %} {{ classes|join(' ') }}{% endblock %}" role="group"{% block block_attributes '' %}>
         {% block media_figure %}
             <div class="media-wrap">
@@ -57,4 +57,4 @@
             {% endif %}
         {%- endblock %}
     </figure>
-{% endblock %}
+{%- endblock -%}

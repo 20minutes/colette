@@ -27,14 +27,14 @@
 {%- set priorityToSectionTitle = priorityToSectionTitle|default(false) -%}
 {%- set theme = theme is defined and theme is not empty ? theme : article.section.theme|default('default') -%}
 <a class="{{ ['card']|merge(classes)|join(' ') }}" href="#">
-    {% include '../_elements/media.twig' with {
+    {%- include '../_elements/media.twig' with {
         'media': media,
         'classes': [],
         'rank': article.rank|default(null),
         'defaultFormat': '120x78',
         'mediaFormats': ['120x78'],
         'lazyloadImg': lazyloadImg|default(false),
-    } only %}
+    } only -%}
     <div class="teaser">
         <p class="teaser-headline">
             {% if isDated %}<time datetime="{{ article.date.publication }}">{{ article.date.publication|time_or_date }}</time> | {% endif %}

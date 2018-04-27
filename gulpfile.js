@@ -18,7 +18,6 @@ const cssnano = require('cssnano')
 const autoprefixer = require('autoprefixer')
 const postcssFocusVisible = require('postcss-focus-visible')
 const kssConfig = require('./kss.json')
-const postCss = require('gulp-postcss')
 
 const cfg = {
   fontsDir: 'assets/fonts/',
@@ -81,7 +80,7 @@ function scriptsBuild() {
             options: {
               presets: [
                 ['env', {
-                  useBuiltIns: true
+                  useBuiltIns: true,
                 }],
               ],
               plugins: [
@@ -129,12 +128,12 @@ function svgBuild() {
   return gulp
     .src(cfg.svgDir + cfg.svgPattern, { base: cfg.svgDir })
     .pipe(rename((filePath) => {
-      const name = filePath.dirname !== '.' ? filePath.dirname.split(filePath.sep) : [];
+      const name = filePath.dirname !== '.' ? filePath.dirname.split(filePath.sep) : []
       name.push(filePath.basename)
       filePath.basename = `symbol-${name.join('-')}`
     }))
     .pipe(svgstore({ inlineSvg: true }))
-    .pipe(gulp.dest(`${cfg.distDir}svg/`));
+    .pipe(gulp.dest(`${cfg.distDir}svg/`))
 }
 
 function kssBuild(done) {
@@ -149,28 +148,14 @@ function kssBuild(done) {
       return
     }
 
-    // compile kss-builder css
-    gulp.src(`${cfg.kssBuilderDir}/styl/co-styles.styl`)
-      .pipe(stylus({
-        compress: false, // cssnano do it
-        linenos: false,
-      }))
-      .pipe(postCss([
-        postcssFocusVisible(),
-        autoprefixer(),
-        cssnano(),
-      ]))
-      .pipe(rename('co-styles.min.css'))
-      .pipe(gulp.dest(`${cfg.kssBuilderDir}kss-assets/`))
-
     // generate doc
-    kss(kssConfig)
+    kss(kssConfig).then(() => {
+      // retrieve dist directory
+      gulp.src(`${cfg.distDir}*/**`)
+        .pipe(gulp.dest(`${cfg.docDir}dist/`))
 
-    // retrieve dist directory
-    gulp.src(`${cfg.distDir}*/**`)
-      .pipe(gulp.dest(`${cfg.docDir}dist/`))
-
-    done()
+      done()
+    })
   })
 }
 
@@ -182,7 +167,7 @@ function watch() {
 }
 
 function startServer(done) {
-  const serve = serveStatic('docs');
+  const serve = serveStatic('docs')
 
   const server = http.createServer((req, res) => {
     serve(req, res, finalhandler(req, res))

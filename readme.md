@@ -29,7 +29,7 @@ npm install colette --save
 
 ---
 ## Download
-- See the [`dist/`](https://github.com/20minutes/colette/dist/)
+- See the [`dist/`](https://github.com/20minutes/colette/tree/gh-pages/dist)
 directory for ready-to-use CSS files.
 - If you want to use Colette as a kickstarter for custom stylus/css
 projects, check [`src/`](https://github.com/20minutes/colette/assets/).
