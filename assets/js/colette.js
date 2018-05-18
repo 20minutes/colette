@@ -3,7 +3,6 @@ import 'babel-polyfill' // es polyfill
 import 'dom4' // dom4 polyfill
 import 'focus-visible' // focus-visible polyfill
 // modules
-import Headroom from 'headroom.js'
 import Blazy from 'blazy'
 import Tablist from 'accedeweb-tablist'
 import iframeResizer from './modules/iframeResizer'
@@ -15,7 +14,6 @@ import fontsData from '../../fontfaces.json'
 const colette = window.colette || {}
 
 colette.iframeResizer = iframeResizer
-colette.Headroom = Headroom
 colette.fonts = new FontFaceLoader({ data: fontsData })
 
 colette.Pager = Pager
