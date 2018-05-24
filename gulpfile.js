@@ -53,6 +53,7 @@ function stylesBuild() {
     .pipe(postcss([
       cssnano({
         zindex: false,
+        mergeRules: false, // mergeRules make :focus-visible buggy, keep it false
         minifyFontValues: {
           removeQuotes: false,
         },
