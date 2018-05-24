@@ -193,7 +193,7 @@ input[type='radio']
     &:focus + label
         {outline}
 
-    .js-focus-visible &:not(:focus-visible) + label
+    .js-focus-visible &:focus:not(:focus-visible) + label
         outline 0
 
 input[type='radio']

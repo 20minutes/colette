@@ -3,15 +3,17 @@
     padding 0
     box-sizing border-box
 
-    &:focus
-        {outline}
 
-        .js-focus-visible &:not(:focus-visible)
-            outline 0
 
 :before
 :after
     box-sizing border-box
+
+:focus
+    {outline}
+
+    .js-focus-visible &:not(:focus-visible)
+        outline 0
 
 html
 body
