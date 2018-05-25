@@ -1,0 +1,25 @@
+{
+  "classes": ["box"],
+  "prefixId": "tab-",
+  "panelsClasses": ["pa1"],
+  "tabs": [
+    {
+      "title": "Tab 1",
+      "body": "<p>This is an expemple of the 1<sup>st</sup> panel</p>"
+    },
+    {
+      "title": "Tab 2",
+      "open": true,
+      "body": "<p>This panel is set to be open by default</p>"
+    },
+    {
+      "title": "Tab 3",
+      "disabled": true,
+      "body": "<p>This is an expemple of a disabled panel</p>"
+    },
+    {
+      "title": "Tab 4",
+      "body": "<p>This is an expemple of the 4<sup>th</sup> panel</p>"
+    }
+  ]
+}

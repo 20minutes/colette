@@ -1,20 +1,18 @@
-<div class="tabpanel box">
+
+{%- set classes = classes|default([]) -%}
+{%- if modifier_class -%}{% set classes = classes|merge([modifier_class]) %}{% endif -%}
+
+<div class="tabpanel{{ ' ' ~ classes|join(' ') }}">
     <ul class="tabpanel-list color-default" role="tablist">
-        <li class="tabpanel-list-tab" role="tab" aria-controls="tab-1">Tab 1</li>
-        <li class="tabpanel-list-tab" role="tab" aria-controls="tab-2" data-tab-open>Tab 2</li>
-        <li class="tabpanel-list-tab" role="tab" aria-disabled="true" aria-controls="tab-3">Tab 3</li>
-        <li class="tabpanel-list-tab" role="tab" aria-controls="tab-4">Tab 4</li>
+        {% for tab in tabs -%}
+            <li class="tabpanel-list-tab" role="tab" aria-controls="{{ prefixId ~ loop.index }}"{{ (tab.open) ? ' data-tab-open'|raw }}{{ (tab.disabled) ? ' aria-disabled="true"'|raw }}>{{ tab.title }}</li>
+        {%- endfor %}
     </ul>
-    <div class="tabpanel-body" role="tabpanel" id="tab-1">
-        <p>This is an expemple of the 1<sup>st</sup> panel</p>
-    </div>
-    <div class="tabpanel-body" role="tabpanel" id="tab-2">
-        <p>This the panel set to be open by default</p>
-    </div>
-    <div class="tabpanel-body" role="tabpanel" id="tab-3">
-        <p>This is an expemple of a disabled panel</p>
-    </div>
-    <div class="tabpanel-body" role="tabpanel" id="tab-4">
-        <p>This is an expemple of the 4<sup>th</sup> panel</p>
-    </div>
+    {% block tab_panels %}
+        {% for tab in tabs -%}
+            <div class="tabpanel-body{{ ' ' ~ panelsClasses|default([])|join(' ') }}" role="tabpanel" id="{{ prefixId ~ loop.index }}">
+                {{ tab.body|raw }}
+            </div>
+        {%- endfor %}
+    {% endblock %}
 </div>

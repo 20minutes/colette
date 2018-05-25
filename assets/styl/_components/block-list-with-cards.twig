@@ -1,13 +1,13 @@
 {#
- # @extends block.twig
+ # @extends block-list.twig
  #
- # template for content small block
+ # template for content block with cards
  #}
 {% extends 'block-list.twig' %}
 
 {% block block_body_content %}
     {% for item in list %}
-        <li class="block-list-item" {{ loop.index > itemPerPage ? ' aria-hidden="true"' }}>
+        <li class="block-list-item" {{ loop.index > itemPerPage ? ' aria-hidden="true"'|raw }}>
             {% include 'card.twig' with {
                 'article': item,
                 'classes': cardsClasses|default([]),
