@@ -1,0 +1,747 @@
+{
+  "classes": ["box"],
+  "prefixId": "tabblock-",
+  "tabs": [
+    {
+      "title": "Tab 1",
+      "body": {
+        "classes": [],
+        "blockTitle": "Example of a block title",
+        "list": [
+          {
+            "id": 1271226,
+            "title": {
+              "default": "Elections régionales cantal 2015",
+              "short": "Elections short title"
+            },
+            "label": {
+              "default": ""
+            },
+            "summary": {
+              "default": "",
+              "striptags": ""
+            },
+            "date": {
+              "creation": "2015-10-13T16:56:22+02:00",
+              "update": "2015-11-20T14:37:50+01:00",
+              "publication": "2015-10-13T17:01:00+02:00"
+            },
+            "uri": {
+              "current": "#",
+              "social": "#"
+            },
+            "section": {
+              "id": 945,
+              "title": "élections",
+              "theme": "",
+              "slug": "elections"
+            },
+            "medias": {
+              "data": [
+                {
+                  "type": "https://img.20mn.fr/9IR7-SzgSIidHDx0YJA3Pw/%format_bouchons-autoroute-pres-vienne-2-aout-2014",
+                  "caption": "Des bouchons sur l’autoroute près de Vienne le 2 août 2014",
+                  "credit": "Philippe Desmazes AFP",
+                  "order": 1
+                }
+              ]
+            }
+          },
+          {
+            "id": 1271226,
+            "title": {
+              "default": "Elections régionales cantal 2015",
+              "short": "Elections short title"
+            },
+            "label": {
+              "default": ""
+            },
+            "summary": {
+              "default": "",
+              "striptags": ""
+            },
+            "date": {
+              "creation": "2015-10-13T16:56:22+02:00",
+              "update": "2015-11-20T14:37:50+01:00",
+              "publication": "2015-10-13T17:01:00+02:00"
+            },
+            "uri": {
+              "current": "#",
+              "social": "#"
+            },
+            "section": {
+              "id": 945,
+              "title": "élections",
+              "theme": "",
+              "slug": "elections"
+            },
+            "medias": {
+              "data": [
+                {
+                  "type": "photo",
+                  "src": "https://img.20mn.fr/9IR7-SzgSIidHDx0YJA3Pw/%format_bouchons-autoroute-pres-vienne-2-aout-2014",
+                  "caption": "Des bouchons sur l’autoroute près de Vienne le 2 août 2014",
+                  "credit": "Philippe Desmazes AFP",
+                  "order": 1
+                }
+              ]
+            }
+          },
+          {
+            "id": 1271226,
+            "title": {
+              "default": "Elections régionales cantal 2015",
+              "short": "Elections short title"
+            },
+            "label": {
+              "default": ""
+            },
+            "summary": {
+              "default": "",
+              "striptags": ""
+            },
+            "date": {
+              "creation": "2015-10-13T16:56:22+02:00",
+              "update": "2015-11-20T14:37:50+01:00",
+              "publication": "2015-10-13T17:01:00+02:00"
+            },
+            "uri": {
+              "current": "#",
+              "social": "#"
+            },
+            "section": {
+              "id": 945,
+              "title": "élections",
+              "theme": "",
+              "slug": "elections"
+            },
+            "medias": {
+              "data": [
+                {
+                  "type": "photo",
+                  "src": "https://img.20mn.fr/9IR7-SzgSIidHDx0YJA3Pw/%format_bouchons-autoroute-pres-vienne-2-aout-2014",
+                  "caption": "Des bouchons sur l’autoroute près de Vienne le 2 août 2014",
+                  "credit": "Philippe Desmazes AFP",
+                  "order": 1
+                }
+              ]
+            }
+          },
+          {
+            "id": 1271226,
+            "title": {
+              "default": "Elections régionales cantal 2015",
+              "short": "Elections short title"
+            },
+            "label": {
+              "default": ""
+            },
+            "summary": {
+              "default": "",
+              "striptags": ""
+            },
+            "date": {
+              "creation": "2015-10-13T16:56:22+02:00",
+              "update": "2015-11-20T14:37:50+01:00",
+              "publication": "2015-10-13T17:01:00+02:00"
+            },
+            "uri": {
+              "current": "#",
+              "social": "#"
+            },
+            "section": {
+              "id": 945,
+              "title": "élections",
+              "theme": "",
+              "slug": "elections"
+            },
+            "medias": {
+              "data": [
+                {
+                  "type": "https://img.20mn.fr/9IR7-SzgSIidHDx0YJA3Pw/%format_bouchons-autoroute-pres-vienne-2-aout-2014",
+                  "caption": "Des bouchons sur l’autoroute près de Vienne le 2 août 2014",
+                  "credit": "Philippe Desmazes AFP",
+                  "order": 1
+                }
+              ]
+            }
+          },
+          {
+            "id": 1271226,
+            "title": {
+              "default": "Elections régionales cantal 2015",
+              "short": "Elections short title"
+            },
+            "label": {
+              "default": ""
+            },
+            "summary": {
+              "default": "",
+              "striptags": ""
+            },
+            "date": {
+              "creation": "2015-10-13T16:56:22+02:00",
+              "update": "2015-11-20T14:37:50+01:00",
+              "publication": "2015-10-13T17:01:00+02:00"
+            },
+            "uri": {
+              "current": "#",
+              "social": "#"
+            },
+            "section": {
+              "id": 945,
+              "title": "élections",
+              "theme": "",
+              "slug": "elections"
+            },
+            "medias": {
+              "data": [
+                {
+                  "type": "photo",
+                  "src": "https://img.20mn.fr/9IR7-SzgSIidHDx0YJA3Pw/%format_bouchons-autoroute-pres-vienne-2-aout-2014",
+                  "caption": "Des bouchons sur l’autoroute près de Vienne le 2 août 2014",
+                  "credit": "Philippe Desmazes AFP",
+                  "order": 1
+                }
+              ]
+            }
+          },
+          {
+            "id": 1271226,
+            "title": {
+              "default": "Elections régionales cantal 2015",
+              "short": "Elections short title"
+            },
+            "label": {
+              "default": ""
+            },
+            "summary": {
+              "default": "",
+              "striptags": ""
+            },
+            "date": {
+              "creation": "2015-10-13T16:56:22+02:00",
+              "update": "2015-11-20T14:37:50+01:00",
+              "publication": "2015-10-13T17:01:00+02:00"
+            },
+            "uri": {
+              "current": "#",
+              "social": "#"
+            },
+            "section": {
+              "id": 945,
+              "title": "élections",
+              "theme": "",
+              "slug": "elections"
+            },
+            "medias": {
+              "data": [
+                {
+                  "type": "photo",
+                  "src": "https://img.20mn.fr/9IR7-SzgSIidHDx0YJA3Pw/%format_bouchons-autoroute-pres-vienne-2-aout-2014",
+                  "caption": "Des bouchons sur l’autoroute près de Vienne le 2 août 2014",
+                  "credit": "Philippe Desmazes AFP",
+                  "order": 1
+                }
+              ]
+            }
+          },
+          {
+            "id": 1271226,
+            "title": {
+              "default": "Elections régionales cantal 2015",
+              "short": "Elections short title"
+            },
+            "label": {
+              "default": ""
+            },
+            "summary": {
+              "default": "",
+              "striptags": ""
+            },
+            "date": {
+              "creation": "2015-10-13T16:56:22+02:00",
+              "update": "2015-11-20T14:37:50+01:00",
+              "publication": "2015-10-13T17:01:00+02:00"
+            },
+            "uri": {
+              "current": "#",
+              "social": "#"
+            },
+            "section": {
+              "id": 945,
+              "title": "élections",
+              "theme": "",
+              "slug": "elections"
+            },
+            "medias": {
+              "data": [
+                {
+                  "type": "https://img.20mn.fr/9IR7-SzgSIidHDx0YJA3Pw/%format_bouchons-autoroute-pres-vienne-2-aout-2014",
+                  "caption": "Des bouchons sur l’autoroute près de Vienne le 2 août 2014",
+                  "credit": "Philippe Desmazes AFP",
+                  "order": 1
+                }
+              ]
+            }
+          },
+          {
+            "id": 1271226,
+            "title": {
+              "default": "Elections régionales cantal 2015",
+              "short": "Elections short title"
+            },
+            "label": {
+              "default": ""
+            },
+            "summary": {
+              "default": "",
+              "striptags": ""
+            },
+            "date": {
+              "creation": "2015-10-13T16:56:22+02:00",
+              "update": "2015-11-20T14:37:50+01:00",
+              "publication": "2015-10-13T17:01:00+02:00"
+            },
+            "uri": {
+              "current": "#",
+              "social": "#"
+            },
+            "section": {
+              "id": 945,
+              "title": "élections",
+              "theme": "",
+              "slug": "elections"
+            },
+            "medias": {
+              "data": [
+                {
+                  "type": "photo",
+                  "src": "https://img.20mn.fr/9IR7-SzgSIidHDx0YJA3Pw/%format_bouchons-autoroute-pres-vienne-2-aout-2014",
+                  "caption": "Des bouchons sur l’autoroute près de Vienne le 2 août 2014",
+                  "credit": "Philippe Desmazes AFP",
+                  "order": 1
+                }
+              ]
+            }
+          },
+          {
+            "id": 1271226,
+            "title": {
+              "default": "Elections régionales cantal 2015",
+              "short": "Elections short title"
+            },
+            "label": {
+              "default": ""
+            },
+            "summary": {
+              "default": "",
+              "striptags": ""
+            },
+            "date": {
+              "creation": "2015-10-13T16:56:22+02:00",
+              "update": "2015-11-20T14:37:50+01:00",
+              "publication": "2015-10-13T17:01:00+02:00"
+            },
+            "uri": {
+              "current": "#",
+              "social": "#"
+            },
+            "section": {
+              "id": 945,
+              "title": "élections",
+              "theme": "",
+              "slug": "elections"
+            },
+            "medias": {
+              "data": [
+                {
+                  "type": "photo",
+                  "src": "https://img.20mn.fr/9IR7-SzgSIidHDx0YJA3Pw/%format_bouchons-autoroute-pres-vienne-2-aout-2014",
+                  "caption": "Des bouchons sur l’autoroute près de Vienne le 2 août 2014",
+                  "credit": "Philippe Desmazes AFP",
+                  "order": 1
+                }
+              ]
+            }
+          },
+          {
+            "id": 1271226,
+            "title": {
+              "default": "Elections régionales cantal 2015",
+              "short": "Elections short title"
+            },
+            "label": {
+              "default": ""
+            },
+            "summary": {
+              "default": "",
+              "striptags": ""
+            },
+            "date": {
+              "creation": "2015-10-13T16:56:22+02:00",
+              "update": "2015-11-20T14:37:50+01:00",
+              "publication": "2015-10-13T17:01:00+02:00"
+            },
+            "uri": {
+              "current": "#",
+              "social": "#"
+            },
+            "section": {
+              "id": 945,
+              "title": "élections",
+              "theme": "",
+              "slug": "elections"
+            },
+            "medias": {
+              "data": [
+                {
+                  "type": "https://img.20mn.fr/9IR7-SzgSIidHDx0YJA3Pw/%format_bouchons-autoroute-pres-vienne-2-aout-2014",
+                  "caption": "Des bouchons sur l’autoroute près de Vienne le 2 août 2014",
+                  "credit": "Philippe Desmazes AFP",
+                  "order": 1
+                }
+              ]
+            }
+          },
+          {
+            "id": 1271226,
+            "title": {
+              "default": "Elections régionales cantal 2015",
+              "short": "Elections short title"
+            },
+            "label": {
+              "default": ""
+            },
+            "summary": {
+              "default": "",
+              "striptags": ""
+            },
+            "date": {
+              "creation": "2015-10-13T16:56:22+02:00",
+              "update": "2015-11-20T14:37:50+01:00",
+              "publication": "2015-10-13T17:01:00+02:00"
+            },
+            "uri": {
+              "current": "#",
+              "social": "#"
+            },
+            "section": {
+              "id": 945,
+              "title": "élections",
+              "theme": "",
+              "slug": "elections"
+            },
+            "medias": {
+              "data": [
+                {
+                  "type": "photo",
+                  "src": "https://img.20mn.fr/9IR7-SzgSIidHDx0YJA3Pw/%format_bouchons-autoroute-pres-vienne-2-aout-2014",
+                  "caption": "Des bouchons sur l’autoroute près de Vienne le 2 août 2014",
+                  "credit": "Philippe Desmazes AFP",
+                  "order": 1
+                }
+              ]
+            }
+          },
+          {
+            "id": 1271226,
+            "title": {
+              "default": "Elections régionales cantal 2015",
+              "short": "Elections short title"
+            },
+            "label": {
+              "default": ""
+            },
+            "summary": {
+              "default": "",
+              "striptags": ""
+            },
+            "date": {
+              "creation": "2015-10-13T16:56:22+02:00",
+              "update": "2015-11-20T14:37:50+01:00",
+              "publication": "2015-10-13T17:01:00+02:00"
+            },
+            "uri": {
+              "current": "#",
+              "social": "#"
+            },
+            "section": {
+              "id": 945,
+              "title": "élections",
+              "theme": "",
+              "slug": "elections"
+            },
+            "medias": {
+              "data": [
+                {
+                  "type": "photo",
+                  "src": "https://img.20mn.fr/9IR7-SzgSIidHDx0YJA3Pw/%format_bouchons-autoroute-pres-vienne-2-aout-2014",
+                  "caption": "Des bouchons sur l’autoroute près de Vienne le 2 août 2014",
+                  "credit": "Philippe Desmazes AFP",
+                  "order": 1
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "title": "Tab 2",
+      "body": {
+        "classes": [],
+        "blockTitle": "Example of a block title",
+        "list": [
+          {
+            "id": 1271226,
+            "title": {
+              "default": "Elections régionales cantal 2015",
+              "short": "Elections short title"
+            },
+            "label": {
+              "default": ""
+            },
+            "summary": {
+              "default": "",
+              "striptags": ""
+            },
+            "date": {
+              "creation": "2015-10-13T16:56:22+02:00",
+              "update": "2015-11-20T14:37:50+01:00",
+              "publication": "2015-10-13T17:01:00+02:00"
+            },
+            "uri": {
+              "current": "#",
+              "social": "#"
+            },
+            "section": {
+              "id": 945,
+              "title": "élections",
+              "theme": "",
+              "slug": "elections"
+            },
+            "medias": {
+              "data": [
+                {
+                  "type": "https://img.20mn.fr/9IR7-SzgSIidHDx0YJA3Pw/%format_bouchons-autoroute-pres-vienne-2-aout-2014",
+                  "caption": "Des bouchons sur l’autoroute près de Vienne le 2 août 2014",
+                  "credit": "Philippe Desmazes AFP",
+                  "order": 1
+                }
+              ]
+            }
+          },
+          {
+            "id": 1271226,
+            "title": {
+              "default": "Elections régionales cantal 2015",
+              "short": "Elections short title"
+            },
+            "label": {
+              "default": ""
+            },
+            "summary": {
+              "default": "",
+              "striptags": ""
+            },
+            "date": {
+              "creation": "2015-10-13T16:56:22+02:00",
+              "update": "2015-11-20T14:37:50+01:00",
+              "publication": "2015-10-13T17:01:00+02:00"
+            },
+            "uri": {
+              "current": "#",
+              "social": "#"
+            },
+            "section": {
+              "id": 945,
+              "title": "élections",
+              "theme": "",
+              "slug": "elections"
+            },
+            "medias": {
+              "data": [
+                {
+                  "type": "photo",
+                  "src": "https://img.20mn.fr/9IR7-SzgSIidHDx0YJA3Pw/%format_bouchons-autoroute-pres-vienne-2-aout-2014",
+                  "caption": "Des bouchons sur l’autoroute près de Vienne le 2 août 2014",
+                  "credit": "Philippe Desmazes AFP",
+                  "order": 1
+                }
+              ]
+            }
+          },
+          {
+            "id": 1271226,
+            "title": {
+              "default": "Elections régionales cantal 2015",
+              "short": "Elections short title"
+            },
+            "label": {
+              "default": ""
+            },
+            "summary": {
+              "default": "",
+              "striptags": ""
+            },
+            "date": {
+              "creation": "2015-10-13T16:56:22+02:00",
+              "update": "2015-11-20T14:37:50+01:00",
+              "publication": "2015-10-13T17:01:00+02:00"
+            },
+            "uri": {
+              "current": "#",
+              "social": "#"
+            },
+            "section": {
+              "id": 945,
+              "title": "élections",
+              "theme": "",
+              "slug": "elections"
+            },
+            "medias": {
+              "data": [
+                {
+                  "type": "photo",
+                  "src": "https://img.20mn.fr/9IR7-SzgSIidHDx0YJA3Pw/%format_bouchons-autoroute-pres-vienne-2-aout-2014",
+                  "caption": "Des bouchons sur l’autoroute près de Vienne le 2 août 2014",
+                  "credit": "Philippe Desmazes AFP",
+                  "order": 1
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "title": "Tab 3",
+      "body": {
+        "classes": [],
+        "blockTitle": "Example of a block title",
+        "list": [
+          {
+            "id": 1271226,
+            "title": {
+              "default": "Elections régionales cantal 2015",
+              "short": "Elections short title"
+            },
+            "label": {
+              "default": ""
+            },
+            "summary": {
+              "default": "",
+              "striptags": ""
+            },
+            "date": {
+              "creation": "2015-10-13T16:56:22+02:00",
+              "update": "2015-11-20T14:37:50+01:00",
+              "publication": "2015-10-13T17:01:00+02:00"
+            },
+            "uri": {
+              "current": "#",
+              "social": "#"
+            },
+            "section": {
+              "id": 945,
+              "title": "élections",
+              "theme": "",
+              "slug": "elections"
+            },
+            "medias": {
+              "data": [
+                {
+                  "type": "https://img.20mn.fr/9IR7-SzgSIidHDx0YJA3Pw/%format_bouchons-autoroute-pres-vienne-2-aout-2014",
+                  "caption": "Des bouchons sur l’autoroute près de Vienne le 2 août 2014",
+                  "credit": "Philippe Desmazes AFP",
+                  "order": 1
+                }
+              ]
+            }
+          },
+          {
+            "id": 1271226,
+            "title": {
+              "default": "Elections régionales cantal 2015",
+              "short": "Elections short title"
+            },
+            "label": {
+              "default": ""
+            },
+            "summary": {
+              "default": "",
+              "striptags": ""
+            },
+            "date": {
+              "creation": "2015-10-13T16:56:22+02:00",
+              "update": "2015-11-20T14:37:50+01:00",
+              "publication": "2015-10-13T17:01:00+02:00"
+            },
+            "uri": {
+              "current": "#",
+              "social": "#"
+            },
+            "section": {
+              "id": 945,
+              "title": "élections",
+              "theme": "",
+              "slug": "elections"
+            },
+            "medias": {
+              "data": [
+                {
+                  "type": "photo",
+                  "src": "https://img.20mn.fr/9IR7-SzgSIidHDx0YJA3Pw/%format_bouchons-autoroute-pres-vienne-2-aout-2014",
+                  "caption": "Des bouchons sur l’autoroute près de Vienne le 2 août 2014",
+                  "credit": "Philippe Desmazes AFP",
+                  "order": 1
+                }
+              ]
+            }
+          },
+          {
+            "id": 1271226,
+            "title": {
+              "default": "Elections régionales cantal 2015",
+              "short": "Elections short title"
+            },
+            "label": {
+              "default": ""
+            },
+            "summary": {
+              "default": "",
+              "striptags": ""
+            },
+            "date": {
+              "creation": "2015-10-13T16:56:22+02:00",
+              "update": "2015-11-20T14:37:50+01:00",
+              "publication": "2015-10-13T17:01:00+02:00"
+            },
+            "uri": {
+              "current": "#",
+              "social": "#"
+            },
+            "section": {
+              "id": 945,
+              "title": "élections",
+              "theme": "",
+              "slug": "elections"
+            },
+            "medias": {
+              "data": [
+                {
+                  "type": "photo",
+                  "src": "https://img.20mn.fr/9IR7-SzgSIidHDx0YJA3Pw/%format_bouchons-autoroute-pres-vienne-2-aout-2014",
+                  "caption": "Des bouchons sur l’autoroute près de Vienne le 2 août 2014",
+                  "credit": "Philippe Desmazes AFP",
+                  "order": 1
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

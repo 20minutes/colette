@@ -1,0 +1,46 @@
+{%- set classes = classes|default([]) -%}
+{%- if modifier_class -%}{% set classes = classes|merge([modifier_class]) %}{% endif -%}
+{%- set firstPage = 1 -%}
+{%- set lastPage = (nbItems / nbItemsPerPage)|round(0, 'ceil') -%}
+<div class="{% block classes %}pager{{ ' ' ~ classes|join(' ') }}{% endblock %}" role="navigation" aria-label="Pagination">
+    {% block prev %}
+        {% if js %}
+            <button class="pager-prev" {{ (currentPage <= firstPage) ? ' disabled="disabled"'|raw }}>
+                <svg height="13" width="13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#symbol-arrow-left"></use></svg>
+                <span class="mask">Previous</span>
+            </button>
+        {% elseif (currentPage <= firstPage) %}
+            <span class="pager-prev" aria-hidden="true">
+                <svg height="13" width="13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#symbol-arrow-left"></use></svg>
+            </span>
+        {% else %}
+            <a href="#" class="pager-prev">
+                <svg height="13" width="13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#symbol-arrow-left"></use></svg>
+                <span class="mask">Previous page</span>
+            </a>
+        {% endif %}
+    {% endblock %}
+    {% block count %}
+        <span class="pager-count">
+            <span class="pager-current">{{ currentPage }}</span> on <span class="pager-max">{{ lastPage }}</span>
+        </span>
+    {% endblock %}
+    {% block next %}
+        {% if js %}
+            <button class="pager-next" {{ (currentPage >= lastPage) ? ' disabled="disabled"'|raw }}>
+                <svg height="13" width="13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#symbol-arrow-right"></use></svg>
+                <span class="mask">Next</span>
+            </button>
+        {% elseif (currentPage >= lastPage) %}
+            <span class="pager-next" aria-hidden="true">
+                <svg height="13" width="13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#symbol-arrow-right"></use></svg>
+            </span>
+        {% else %}
+            <a href="#" class="pager-next">
+                <svg height="13" width="13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#symbol-arrow-right"></use></svg>
+                <span class="mask">Next page</span>
+            </a>
+        {% endif %}
+    {% endblock %}
+    {% block list '' %}
+</div>

@@ -1,6 +1,6 @@
 {
   "name": "colette",
-  "version": "1.0.0-beta.4",
+  "version": "1.0.0-beta.5",
   "license": "MIT",
   "dependencies": {
     "accedeweb-tablist": "^1.0.2",
@@ -19,7 +19,7 @@
     "babel-loader": "^7.1.4",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-preset-env": "^1.6.1",
-    "colette-kss-builder": "^0.2.0",
+    "colette-kss-builder": "^0.4.1",
     "cssnano": "^3.10.0",
     "eslint": "^4.19.1",
     "eslint-config-20minutes": "^1.0.4",

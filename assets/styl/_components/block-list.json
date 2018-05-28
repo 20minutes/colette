@@ -1,10 +1,10 @@
 {
-    "classes": ["box"],
-    "blockTitle": "Example of a block title",
-    "list": [
-        "Paris (75000)",
-        "Marseille (13000)",
-        "Versailles (78000)",
-        "Caen (14000)"
-    ]
+  "classes": ["box"],
+  "blockTitle": "Example of a block title",
+  "list": [
+    "Paris (75000)",
+    "Marseille (13000)",
+    "Versailles (78000)",
+    "Caen (14000)"
+  ]
 }

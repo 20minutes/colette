@@ -11,7 +11,7 @@
 {%- set media = medias is defined ? medias.data|first : {} -%}
 {% set mediaFormats = mediaFormats is defined ? mediaFormats : [] %}
 
-<article class="{{ classes|default([])|join(' ') }}">
+<article class="preview{{ ' ' ~ classes|default([])|join(' ') }}">
     <a href="#">
         {% include '../_elements/media.twig' with {
             'media': media,

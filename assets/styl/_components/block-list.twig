@@ -5,14 +5,28 @@
  #}
 {% extends 'block.twig' %}
 
-{% block block_attribute '' %}
+{% set itemPerPage = itemPerPage|default(5) %}
 
 {% block block_body %}
-    <ul class="block-list">
+    <ul class="block-list" {% if list|length > itemPerPage %} data-item-per-page="{{ itemPerPage }}"{% endif %}>
         {% block block_body_content %}
             {% for item in list %}
-                <li class="block-list-item"><a class="pl1 pr1" href="#">{{ item }}</a></li>
+                <li class="block-list-item" {{ loop.index > itemPerPage ? ' aria-hidden="true"'|raw }}><a class="pl1 pr1" href="#">{{ item }}</a></li>
             {% endfor %}
         {% endblock %}
     </ul>
 {% endblock %}
+
+{%- block block_footer_content -%}
+    <span class="float-left">Exemple of footer</span>
+
+    {%- if list|length > itemPerPage -%}
+        {% include '../_elements/pager.twig' with {
+            "classes": ['float-right'],
+            "nbItems": list|length,
+            "nbItemsPerPage": itemPerPage,
+            "currentPage": 1,
+            "js": true
+        } only %}
+    {%- endif -%}
+{%- endblock -%}

@@ -1,16 +1,20 @@
-<div class="pager pager-withlist" role="navigation" aria-label="Pagination">
-    <span class="pager-prev" aria-hidden="true">
-        <svg height="13" width="13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#symbol-arrow-left"></use></svg>
-    </span>
-    <a href="#" class="pager-next">
-        <svg height="13" width="13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#symbol-arrow-right"></use></svg>
-        <span class="mask">Next page</span>
-    </a>
+{% extends 'pager.twig' %}
+
+{% block classes parent() ~ ' pager-withlist' %}
+
+{% block count '' %}
+
+{% block list %}
     <ul class="pager-list">
-        <li><strong><span class="mask">Current page : </span>1</strong></li>
-        <li><a href="#"><span class="mask">Page </span>2</a></li>
-        <li><a href="#"><span class="mask">Page </span>3</a></li>
-        <li><a href="#"><span class="mask">Page </span>4</a></li>
+        {%- for i in firstPage..lastPage -%}
+            <li>
+                {%- if i == currentPage -%}
+                    <strong><span class="mask">Current page: </span>{{ i }}</strong>
+                {%- else -%}
+                    <a href="#"><span class="mask">Page </span>{{ i }}</a>
+                {%- endif -%}
+            </li>
+        {%- endfor -%}
     </ul>
-</div>
+{% endblock %}
 
