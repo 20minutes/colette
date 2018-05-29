@@ -24,17 +24,21 @@
             display none
 
         &-tab
-            _p(1 0)
+            padding .5em
+            display flex
             flex 1
             position relative
             text-align center
+            justify-content center
+            align-items center
+            cursor pointer
+            font-size 1em
             background $color-base-lighten
             border 1px solid $color-borders
             border-right-color transparent
             color $color-base
             font-family $fontstack-secondary
             text-transform uppercase
-            cursor pointer
 
             &:last-child
                 border-right-color $color-borders

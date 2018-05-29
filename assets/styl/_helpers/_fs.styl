@@ -1,0 +1,27 @@
+// Font sizes
+//
+// Colette provides a set of font-sizes helpers classes.
+// It can be used on elements build with unit related to font-size.
+//
+// Markup: <p class="{{ modifier_class }}">Font-size exemple</p>
+//
+// .fs12    - Set `font-size` to `12px` converted to `rem`
+// .fs13    - Set `font-size` to `13px` converted to `rem`
+// .fs14    - Set `font-size` to `14px` converted to `rem`
+// .fs15    - Set `font-size` to `15px` converted to `rem`
+// .fs16    - Set `font-size` to `16px` converted to `rem`
+// .fsSmall - Set `font-size` to `.8em`
+// .fsBig   - Set `font-size` to `1.2em`
+//
+// Styleguide Helpers.Font-sizes
+
+.fs
+    for i in 12..16
+        &{i}
+            font-size _rem(unit(i, 'px'))
+
+    &Small
+        font-size .8em
+
+    &Big
+        font-size 1.2em
