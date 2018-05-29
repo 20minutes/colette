@@ -121,10 +121,9 @@ $block-header-minheight ?= _rem(36px)
     &-footer
         {fontSecondary}
         _p(.5 1)
-        line-height _rem(17px)
+        line-height _rem(18px)
         background-color $color-white
-        border-top 1px solid $block-custom-color
-        overflow hidden // clearfix, don't use `{clearfix}` here because `::after` invalid `:empty`
+        overflow hidden // clearfix, don’t use `{clearfix}` here because `::after` invalid `:empty`
 
         &:empty
             display none
