@@ -1,12 +1,14 @@
-<a href="#" class="btnIcon {{ modifier_class }} mr1">
+{%- set classes = classes|default([]) -%}
+{%- if modifier_class %}{% set classes = classes|merge([modifier_class]) %}{% endif -%}
+<a href="#" class="btnIcon {{ ' ' ~ classes|join(' ') }} mr1">
     <svg height="16" width="16"><use xlink:href="#symbol-mail"></use></svg>
     <span class="mask">Call to action</span>
 </a>
-<button class="btnIcon {{ modifier_class }} mr1" type="button">
+<button class="btnIcon {{ ' ' ~ classes|join(' ') }} mr1" type="button">
     <svg height="16" width="16"><use xlink:href="#symbol-mail"></use></svg>
     <span class="mask">Button</span>
 </button>
-<button class="btnIcon {{ modifier_class }}" disabled type="button">
+<button class="btnIcon {{ ' ' ~ classes|join(' ') }}" disabled type="button">
     <svg height="16" width="16"><use xlink:href="#symbol-mail"></use></svg>
     <span class="mask">Button (disabled)</span>
 </button>
