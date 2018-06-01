@@ -6,7 +6,7 @@
             "id": 1271226,
             "title": {
                 "default": "Elections régionales cantal 2015",
-                "short": "Elections short title"
+                "short": "Elections régionales cantal 2015"
             },
             "label": {
                 "default": ""
@@ -44,8 +44,8 @@
         {
             "id": 1271226,
             "title": {
-                "default": "Elections régionales cantal 2015",
-                "short": "Elections short title"
+                "default": "Nunc consectetur facilisis nisl, ac convallis orci suscipit eget. Mauris eget faucibus dui. Ut ullamcorper dignissim orci, sit amet scelerisque justo laoreet vitae. Nam volutpat leo sollicitudin enim volutpat, porta semper orci commodo. Nunc hendrerit at quam at aliquet. Vestibulum eget arcu eros. Fusce commodo faucibus leo, ac sodales ante dictum sit amet.",
+                "short": "Nunc consectetur facilisis nisl, ac convallis orci suscipit eget. Mauris eget faucibus dui. Ut ullamcorper dignissim orci, sit amet scelerisque justo laoreet vitae. Nam volutpat leo sollicitudin enim volutpat, porta semper orci commodo. Nunc hendrerit at quam at aliquet. Vestibulum eget arcu eros. Fusce commodo faucibus leo, ac sodales ante dictum sit amet.e"
             },
             "label": {
                 "default": ""

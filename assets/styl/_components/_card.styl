@@ -12,7 +12,7 @@
 // Styleguide Components.card
 .card
     _m(0)
-    {clearfix}
+    overflow hidden
     display block
     padding .5em .2em .5em .4em
     transition background-color .2s ease
@@ -33,14 +33,16 @@
 
     .teaser
         _p(0 .5)
-        height 4.85em // limit height to 4 lines and no more
+        height _rem(15px * 5 + 3px) // limit height to 5 lines for title and no more
         overflow hidden
 
         &-headline
+            margin-bottom _rem(3px)
             color currentColor
+            line-height _rem(15px)
 
         &-title
             color $color-base
             font-weight normal
             font-size _rem(13px)
-            line-height 1em
+            line-height _rem(15px)
