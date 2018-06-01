@@ -1,0 +1,35 @@
+{%- set classes = classes|default(['mr1']) -%}
+{%- if modifier_class -%}
+    {%- set classes = classes|merge([modifier_class]) -%}
+    {%- set symbol = symbol|default('social-' ~ modifier_class|replace({'btnSkin-': ''})) -%}
+{%- endif -%}
+{%- set symbol = symbol|default('mail') -%}
+
+<div class="mb1">
+    <a href="#" class="btnIcon {{ ' ' ~ classes|join(' ') }}">
+        <svg height="16" width="16"><use xlink:href="#symbol-{{ symbol }}"></use></svg>
+        <span class="mask">{{ symbol }}</span>
+    </a>
+    <button class="btnIcon {{ ' ' ~ classes|join(' ') }}">
+        <svg height="16" width="16"><use xlink:href="#symbol-{{ symbol }}"></use></svg>
+        <span class="mask">{{ symbol }}</span>
+    </button>
+    <button class="btnIcon {{ ' ' ~ classes|join(' ') }}" disabled>
+        <svg height="16" width="16"><use xlink:href="#symbol-{{ symbol }}"></use></svg>
+        <span class="mask">{{ symbol }}</span>
+    </button>
+</div>
+<div class="mb1">
+    <a href="#" class="btn {{ ' ' ~ classes|join(' ') }}">
+        <svg class="btn-picto btn-picto-left" height="16" width="16"><use xlink:href="#symbol-{{ symbol }}"></use></svg>
+        {{ symbol }}
+    </a>
+    <button class="btn {{ ' ' ~ classes|join(' ') }}">
+        <svg class="btn-picto btn-picto-left" height="16" width="16"><use xlink:href="#symbol-{{ symbol }}"></use></svg>
+        {{ symbol }}
+    </button>
+    <button class="btn {{ ' ' ~ classes|join(' ') }}" disabled>
+        <svg class="btn-picto btn-picto-left" height="16" width="16"><use xlink:href="#symbol-{{ symbol }}"></use></svg>
+        {{ symbol }}
+    </button>
+</div>

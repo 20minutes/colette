@@ -1,13 +1,8 @@
-<span class="icon {{ modifier_class }}">
+{%- set classes = classes|default([]) -%}
+{%- if modifier_class %}{% set classes = classes|merge([modifier_class]) %}{% endif -%}
+<span class="icon {{ ' ' ~ classes|join(' ') }}">
     <svg class="icon-picto"><use xlink:href="#symbol-newspaper"/></svg>
     <span class="icon-label">
         Newspaper
-    </span>
-</span>
-<span class="icon icon-inline {{ modifier_class }}">
-    <svg class="icon-picto"><use xlink:href="#symbol-newspaper"/></svg>
-    <span class="icon-label">
-        Newspaper<br />
-        Paris
     </span>
 </span>

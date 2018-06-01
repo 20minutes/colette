@@ -1,16 +1,10 @@
 // Icon
 //
-// .icon-default          - default color button
-// .icon-sport            - sport color button
-// .icon-entertainment    - entertainment color button
-// .icon-economy          - economy color button
-// .icon-community        - community color button
-// .icon-weird            - weird color button
-// .icon-partner          - partner color button
-// .icon-planet           - planet color button
-// .icon-media            - media color button
-// .icon-hightech         - hightech color button
-// .icon-native           - native color button
+// Button with icon and label.
+//
+// It can be styled by `btnSkin`
+//
+// .icon-inline - inline version
 //
 // Markup: icon.twig
 //
@@ -42,14 +36,6 @@
         padding 0 .2em
         text-transform uppercase
 
-    for key, value in $colors
-        &-{key}
-            background-color value
-            color _contrast_choose(value, $color-white $color-black)
-
-        &-{key}:hover
-            background-color darken(value, 20%)
-
     &-inline
         text-align left
 
@@ -57,3 +43,4 @@
         .icon-label
             display inline-block
             vertical-align middle
+

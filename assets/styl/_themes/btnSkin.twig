@@ -1,0 +1,13 @@
+{%- set classes = classes|default([]) -%}
+{%- if modifier_class %}{% set classes = classes|merge([modifier_class]) %}{% endif -%}
+
+<div class="mb2">
+    {% include '../_elements/btn.twig' with {'classes': [classes]} only %}
+</div>
+<div class="mb2">
+    {% include '../_elements/btnIcon.twig' with {'classes': [classes]} only %}
+</div>
+<div class="mb2">
+    {% include '../_elements/icon.twig' with {'classes': [classes, 'mr1']} only %}
+    {% include '../_elements/icon.twig' with {'classes': [classes, 'icon-inline']} only %}
+</div>

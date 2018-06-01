@@ -1,15 +1,17 @@
+{%- set classes = classes|default([]) -%}
+{%- if modifier_class %}{% set classes = classes|merge([modifier_class]) %}{% endif -%}
 <p>
-    <a href="#" class="btn {{ modifier_class }} mr1">Call to action</a>
-    <a href="#" class="btn {{ modifier_class }} mr1">
+    <a href="#" class="btn {{ ' ' ~ classes|join(' ') }} mr1">Call to action</a>
+    <a href="#" class="btn {{ ' ' ~ classes|join(' ') }} mr1">
         <svg class="btn-picto btn-picto-left" height="14" width="14"><use xlink:href="#symbol-more"></use></svg>
         With left icon
     </a>
-    <a href="#" class="btn {{ modifier_class }} mr1">
+    <a href="#" class="btn {{ ' ' ~ classes|join(' ') }} mr1">
         With right icon
         <svg class="btn-picto btn-picto-right" height="14" width="14"><use xlink:href="#symbol-arrow-right"></use></svg>
     </a>
 </p>
 <p class="mt2">
-    <button class="btn {{ modifier_class }} mr1" type="submit">Submit</button>
-    <button class="btn {{ modifier_class }} mr1" disabled type="submit">Submit (disabled)</button>
+    <button class="btn {{ ' ' ~ classes|join(' ') }} mr1" type="submit">Submit</button>
+    <button class="btn {{ ' ' ~ classes|join(' ') }} mr1" disabled type="submit">Submit (disabled)</button>
 </p>
