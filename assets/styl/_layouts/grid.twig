@@ -1,9 +1,10 @@
+{# `co_grid-demo` is only for the demo's style. It's not a part of colette #}
 <p><b>Example 1</b> - Columns simple use responsiveless:</p>
 <div class="co_grid-demo g {{ modifier_class }}">
     <div class="g-col-6"></div>
     <div class="g-col-6"></div>
 </div>
-<p><b>Example 2</b> - Columns convert to clearfixs under medium breakpoint:</p>
+<p><b>Example 2</b> - 6 columns above medium breakpoint:</p>
 <div class="co_grid-demo g {{ modifier_class }}">
     <div class="g-col-md-2"></div>
     <div class="g-col-md-2"></div>
@@ -12,13 +13,13 @@
     <div class="g-col-md-2"></div>
     <div class="g-col-md-2"></div>
 </div>
-<p><b>Example 3</b> - Columns convert to clearfixs under small breakpoint:</p>
+<p><b>Example 3</b> - 3 columns above small breakpoint:</p>
 <div class="co_grid-demo g {{ modifier_class }}">
     <div class="g-col-sm-4"></div>
     <div class="g-col-sm-4"></div>
     <div class="g-col-sm-4"></div>
 </div>
-<p><b>Example 4</b> - Col3 should convert to clearfix under medium breakpoint, and Col1, Col2 under small breakpoint:</p>
+<p><b>Example 4</b> - Col1 & Col2 are on 2 columns grid above small breakpoint, & they all pass on 3 columns above medium breakpoint: </p>
 <div class="co_grid-demo g {{ modifier_class }}">
     <div class="g-col-md-8 g {{ modifier_class }}">
         <div class="g-col-sm-6"></div>

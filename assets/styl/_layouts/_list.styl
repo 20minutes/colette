@@ -1,0 +1,77 @@
+// List
+//
+// Colette provides the possibility to create a list of items, with the adequate gutters.
+// You'll be able to set the number of columns you need, also, the responsive aspect can be managed
+//
+// `.list` should be in a `overflow: hidden` block to avoid overflow margin
+//
+// **Usage**
+// List should have the adequate class `list`
+//
+// <table class="co_table mb2">
+//   <thead>
+//     <tr>
+//       <th>Breakpoint</th>
+//       <td></td>
+//       <th>sm</th>
+//       <th>md</th>
+//       <th>lg</th>
+//     </tr>
+//   </thead>
+//   <tbody>
+//     <tr>
+//       <td>Media query</td>
+//       <td align="center">default</td>
+//       <td align="center">min-width: 420px</td>
+//       <td align="center">min-width: 768px</td>
+//       <td align="center">min-width: 960px</td>
+//     </tr>
+//     <tr>
+//       <td>Class name</td>
+//       <td align="center">.list-by[n]</td>
+//       <td align="center">.list-sm-by[n]</td>
+//       <td align="center">.list-md-by[n]</td>
+//       <td align="center">.list-lg-by[n]</td>
+//     </tr>
+//     <tr>
+//       <td>CSS declaration</td>
+//       <td colspan="4" align="center">{ width: ([n] / 12) * 100 }</td>
+//     </tr>
+//   </tbody>
+// </table>
+//
+// Markup: list.twig
+//
+// Styleguide Layout.List
+columnGap = _gutters(2) // horizontal margin between content previews / columns
+
+.list
+    _ml(-1)
+    _mr(-1)
+    display flex
+    flex-direction row
+    flex-wrap wrap
+    align-items stretch
+    justify-content flex-start
+
+    &-item // .list-item could be a .preview
+        _m(0 1 2 1)
+        width s('calc(100% - %s)', columnGap)
+
+        // override _teaser styles
+        .teaser-title
+            font-size 1.3125em
+
+    // Modifier number of items by row
+    for i in (1..$list-columns)
+        &-by{i} .list-item
+            width s('calc(100% / %s - %s)', i, columnGap)
+
+    // Modifier number of items by row and by MQ
+    for breakpoint, query in $breakpoints
+        @media query
+            for i in (1..$list-columns)
+                &-{breakpoint}-by{i} .list-item
+                    _ml(1)
+                    _mr(1)
+                    width s('calc(100% / %s - %s)', i, columnGap)

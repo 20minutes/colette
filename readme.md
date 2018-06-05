@@ -18,7 +18,7 @@ content teasers, media, and loading animation
 ---
 ## Installation
 
-### With npm (recomended)
+### With npm (recommended)
 ```bash
 npm install colette --save
 ```
