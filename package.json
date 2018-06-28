@@ -1,16 +1,16 @@
 {
   "name": "colette",
-  "version": "1.0.0-beta.12",
+  "version": "1.0.0-beta.13",
   "license": "MIT",
   "dependencies": {
     "accedeweb-tablist": "^1.0.2",
     "babel-polyfill": "^6.26.0",
     "blazy": "1.8.2",
-    "dom4": "2.0.1",
+    "dom4": "2.1.0",
     "focus-visible": "^4.0.1",
     "fontfaceobserver": "^2.0.13",
     "normalize.css": "8.0.0",
-    "stylus-svg": "^0.3.2"
+    "stylus-svg": "^1.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^8.5.0",
@@ -21,9 +21,9 @@
     "babel-preset-env": "^1.6.1",
     "colette-kss-builder": "^0.4.2",
     "cssnano": "^3.10.0",
-    "eslint": "^4.19.1",
+    "eslint": "^5.0.1",
     "eslint-config-20minutes": "^1.0.4",
-    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb": "^17.0.0",
     "eslint-plugin-babel": "^5.1.0",
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
@@ -41,10 +41,9 @@
     "postcss-focus-visible": "^3.0.0",
     "serve-static": "^1.13.2",
     "stylint": "^1.5.9",
-    "twig": "1.10.5",
     "unminified-webpack-plugin": "^2.0.0",
     "vinyl-named": "^1.1.0",
-    "webpack": "4.10.2",
+    "webpack": "4.12.2",
     "webpack-stream": "^4.0.0"
   },
   "author": "20 Minutes <web-tech@20minutes.fr>",
