@@ -10,7 +10,7 @@
   ],
   "title": "Colette Style Guide",
   "verbose": false,
-  "homepage": "../../readme.md",
+  "homepage": "../../README.md",
   "builder": "colette-kss-builder",
   "extend": [
     "assets/twig/filters"
