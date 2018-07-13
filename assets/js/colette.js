@@ -4,7 +4,7 @@ import 'dom4' // dom4 polyfill
 import 'focus-visible' // focus-visible polyfill
 // modules
 import Blazy from 'blazy'
-import Tablist from 'accedeweb-tablist'
+import Tablist from '@accede-web/tablist'
 import iframeResizer from './modules/iframeResizer'
 import FontFaceLoader from './modules/fontFaceLoader'
 import Pager from './modules/pager'

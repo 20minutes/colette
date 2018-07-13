@@ -79,6 +79,7 @@ function scriptsBuild() {
           use: {
             loader: 'babel-loader',
             options: {
+              babelrc: false,
               presets: [
                 ['env', {
                   useBuiltIns: true,
