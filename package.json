@@ -1,6 +1,6 @@
 {
   "name": "colette",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "license": "MIT",
   "dependencies": {
     "@accede-web/tablist": "^2.0.0",
@@ -74,7 +74,8 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp docs",
-    "test": "gulp lint"
+    "test": "gulp lint",
+    "prepack": "npm run build"
   },
   "repository": {
     "type": "git",

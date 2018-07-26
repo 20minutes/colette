@@ -60,7 +60,7 @@ function stylesBuild() {
       }),
     ]))
     .pipe(rename('colette.min.css'))
-    .pipe(gulp.dest(dest));
+    .pipe(gulp.dest(dest))
 }
 
 function scriptsBuild() {

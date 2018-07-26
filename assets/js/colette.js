@@ -25,7 +25,9 @@ Array.prototype.forEach.call(document.querySelectorAll('.block-list'), (item) =>
 colette.Tablist = Tablist
 colette.tablists = []
 Array.prototype.forEach.call(document.querySelectorAll('.tabpanel-list'), (item) => {
-  colette.tablists.push(new Tablist(item))
+  const tab = new Tablist(item)
+  tab.mount()
+  colette.tablists.push(tab)
 })
 
 // lazyload init (images)
