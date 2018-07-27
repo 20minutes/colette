@@ -22,7 +22,8 @@
     "autoprefixer": "^9.5.1",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.6",
-    "colette-kss-builder": "^2.3.1",
+    "backstopjs": "^4.0.6",
+    "colette-kss-builder": "^3.1.0",
     "core-js": "^3.1.2",
     "cssnano": "^4.1.10",
     "docdash": "^1.1.1",
@@ -34,6 +35,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.13.0",
     "finalhandler": "^1.1.2",
+    "glob": "^7.1.4",
     "gulp": "^4.0.2",
     "gulp-data": "^1.3.1",
     "gulp-eslint": "^5.0.0",
@@ -82,8 +84,10 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp docs",
-    "test": "gulp lint",
-    "prepack": "npm run build"
+    "lint": "gulp lint",
+    "visual": "gulp visual:test",
+    "test": " npm run lint && npm run visual:test",
+    "prepack": "gulp build"
   },
   "repository": {
     "type": "git",

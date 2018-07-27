@@ -1,10 +1,10 @@
 {
-    "media": {
-        "src": "./dist/img/648x415_article-preview.jpg",
-        "caption": "The media caption",
-        "credit": "by someone"
-    },
-    "defaultFormat": "648x415",
-    "mediaFormats": ["648x415"],
-    "displayCaption": true
+  "media": {
+    "src": "./dist/img/%format_article-preview.jpg",
+    "caption": "The media caption",
+    "credit": "by someone"
+  },
+  "defaultFormat": "648x415",
+  "mediaFormats": ["648x415"],
+  "displayCaption": true
 }

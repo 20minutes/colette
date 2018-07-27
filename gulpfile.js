@@ -5,6 +5,7 @@ const stylus = require('gulp-stylus')
 const stylint = require('gulp-stylint')
 const eslint = require('gulp-eslint')
 const webpack = require('webpack')
+const backstop = require('backstopjs')
 const gulpWebpack = require('webpack-stream')
 const svgstore = require('gulp-svgstore')
 const fs = require('fs')
@@ -18,9 +19,9 @@ const postcss = require('gulp-postcss')
 const cssnano = require('cssnano')
 const autoprefixer = require('autoprefixer')
 const postcssFocusVisible = require('postcss-focus-visible')
-
 const kssConfig = require('./kss.json')
 const jsDocConfig = require('./jsdoc.json')
+const backstopConfig = require('./backstop.config.js')
 
 const cfg = {
   fontsDir: 'assets/fonts/',
@@ -28,6 +29,7 @@ const cfg = {
   cssDir: 'assets/styl/',
   jsDir: 'assets/js/',
   svgDir: 'assets/svg/',
+  imgDir: 'assets/img/',
   kssBuilderDir: 'kss-builder/',
   docDir: 'docs/',
   distDir: 'dist/',
@@ -183,6 +185,18 @@ function jsDoc(cb) {
     .pipe(jsdoc(jsDocConfig, cb))
 }
 
+function visualTest(done) {
+  backstop('test', {
+    config: backstopConfig,
+  }).then(done).catch(done)
+}
+
+function visualReference(done) {
+  backstop('reference', {
+    config: backstopConfig,
+  }).then(done).catch(done)
+}
+
 function watch() {
   gulp.watch(cfg.cssDir + cfg.twigPattern, gulp.series('kss'))
   gulp.watch(cfg.cssDir + cfg.stylusPattern, gulp.series(gulp.parallel('lint:css', 'styles'), 'kss'))
@@ -237,6 +251,10 @@ gulp.task('build', gulp.parallel('svg', 'styles', 'scripts', 'assets'))
 
 // build docs
 gulp.task('docs', gulp.series('build', 'kss', 'jsDoc'))
+
+// visual regression testing
+gulp.task('visual:reference', visualReference)
+gulp.task('visual:test', visualTest)
 
 // default build docs and run watch
 gulp.task('default', gulp.series('connect', 'lint', 'docs', 'watch'))

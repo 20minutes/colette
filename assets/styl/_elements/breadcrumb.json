@@ -1,12 +1,12 @@
 {
-    "breadcrumb": [{
-        "uri": "#",
-        "title": "Accueil"
-    },{
-        "uri": "#",
-        "title": "Région"
-    },{
-        "uri": "#",
-        "title": "Aquitaine"
-    }]
+  "breadcrumb": [{
+    "uri": "#",
+    "title": "Accueil"
+  },{
+    "uri": "#",
+    "title": "Région"
+  },{
+    "uri": "#",
+    "title": "Aquitaine"
+  }]
 }

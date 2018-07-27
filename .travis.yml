@@ -1,37 +1,53 @@
 language: node_js
 
 node_js:
-  - "6.10"
   - "lts/*"
+  - "11"
 
-matrix:
-  include:
-    - node_js: "11"
-      env: DEPLOY=run
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-beta
 
 cache:
   directories:
     - "node_modules"
 
 script:
+  - npm run lint
   - npm run build
-  - npm test
 
-deploy:
-  - provider: pages
-    skip_cleanup: true
-    github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-    local_dir: docs
-    on:
-      branch: master
-      condition: "$DEPLOY = run"
-
-  - provider: npm
-    skip_cleanup: true
-    email: "web-tech+npm@20minutes.fr"
-    api_key:
-      # This is the NPM token finishing by e8f7
-      secure: "AuyoDlLWUnaOAeXJHeawfteCHyKj3imdNel+Lha+3gQQyq47veMC+J0dbzZ3I8kLGIr6kI8y1xrK4pVFXjHQXlq5Kh0+oIUUPL/DpmljVeIFslVjde9Xt9pgZTZgbUXv3zTIq2gLMW4KC4efYkWpnpmT6TruV6Ym/3AZCinWv7rtKkPhbvlTxhnQRNaWur+BrFWQ1F4YTrod5UMl7KtevXCLqTby5oJ3QmZLNxmGZBoKUnrEWL4Gcf7hK/JYvtPszjPkeUaHW8tPmakmHnpvjm4Pnm/2ackS8Z3Izue2a6Hre7VPjVO35HXSEzwApXoXGfivJ6fXK1Ifd4Uv3aiJ3iwD2u0ACtrQEaorzGJKvEjAWNxYGLsTyCoMvpR3g86EWNtEb8HbWHZl7adhp5iHwbRMJYYifx1j7p3aEg/eMtINVLHzS3+6SRQS1YHyM2jRF6nPl1LnjZSz5Ex+TLyEq9JHgl6kBBOJMg+EACeGMN2m5GRre4kbDa/b6SAslEmVLjAbMeFJGYOBU2QOEu5J7kzyIWilQp830yQrlM7EBM6j7B7ZjPH6ZVNpiZJesWJbvZ/dWTY+nUmUozupybuFjqoJTcQHYPFZRBHcvdhCR93J462aQt030rhoOLd9OQd5XI+gwfp0d8vJameYQ0rTyCXA6Uaf1z7igke6a5mTqt4="
-    on:
-      tags: true
-      condition: "$DEPLOY = run"
+jobs:
+  include:
+    - stage: visual test
+      before_install: export CHROME_PATH="/usr/bin/google-chrome-beta"
+      script:
+        - npm run build
+        - npm run visual
+      node_js: "11"
+    - stage: github page
+      if: (type != pull_request) AND (branch = master)
+      script: npm run build
+      node_js: "11"
+      deploy:
+        provider: pages
+        skip_cleanup: true
+        github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+        local_dir: docs
+        on:
+          branch: master
+    - stage: npm release
+      if: (tag =~ ^v) AND (branch = master)
+      script: npm run build
+      node_js: "11"
+      deploy:
+        provider: npm
+        skip_cleanup: true
+        email: "web-tech+npm@20minutes.fr"
+        api_key:
+          # This is the NPM token finishing by e8f7
+          secure: "AuyoDlLWUnaOAeXJHeawfteCHyKj3imdNel+Lha+3gQQyq47veMC+J0dbzZ3I8kLGIr6kI8y1xrK4pVFXjHQXlq5Kh0+oIUUPL/DpmljVeIFslVjde9Xt9pgZTZgbUXv3zTIq2gLMW4KC4efYkWpnpmT6TruV6Ym/3AZCinWv7rtKkPhbvlTxhnQRNaWur+BrFWQ1F4YTrod5UMl7KtevXCLqTby5oJ3QmZLNxmGZBoKUnrEWL4Gcf7hK/JYvtPszjPkeUaHW8tPmakmHnpvjm4Pnm/2ackS8Z3Izue2a6Hre7VPjVO35HXSEzwApXoXGfivJ6fXK1Ifd4Uv3aiJ3iwD2u0ACtrQEaorzGJKvEjAWNxYGLsTyCoMvpR3g86EWNtEb8HbWHZl7adhp5iHwbRMJYYifx1j7p3aEg/eMtINVLHzS3+6SRQS1YHyM2jRF6nPl1LnjZSz5Ex+TLyEq9JHgl6kBBOJMg+EACeGMN2m5GRre4kbDa/b6SAslEmVLjAbMeFJGYOBU2QOEu5J7kzyIWilQp830yQrlM7EBM6j7B7ZjPH6ZVNpiZJesWJbvZ/dWTY+nUmUozupybuFjqoJTcQHYPFZRBHcvdhCR93J462aQt030rhoOLd9OQd5XI+gwfp0d8vJameYQ0rTyCXA6Uaf1z7igke6a5mTqt4="
+        on:
+          tags: true
