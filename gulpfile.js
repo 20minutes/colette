@@ -60,7 +60,7 @@ function stylesBuild() {
       }),
     ]))
     .pipe(rename('colette.min.css'))
-    .pipe(gulp.dest(dest));
+    .pipe(gulp.dest(dest))
 }
 
 function scriptsBuild() {
@@ -165,7 +165,7 @@ function watch() {
   gulp.watch(cfg.cssDir + cfg.twigPattern, gulp.series('kss'))
   gulp.watch(cfg.cssDir + cfg.stylusPattern, gulp.series(gulp.parallel('lint:css', 'styles'), 'kss'))
   gulp.watch(cfg.svgDir + cfg.svgPattern, gulp.series('svg', 'kss'))
-  gulp.watch(cfg.jsDir + cfg.jsPattern, gulp.parallel('lint:js', 'scripts'))
+  gulp.watch(cfg.jsDir + cfg.jsPattern, gulp.series(gulp.parallel('lint:js', 'scripts'), 'kss'))
 }
 
 function startServer(done) {

@@ -8,6 +8,7 @@ import Tablist from '@accede-web/tablist'
 import iframeResizer from './modules/iframeResizer'
 import FontFaceLoader from './modules/fontFaceLoader'
 import Pager from './modules/pager'
+import Modal from './modules/modal'
 import fontsData from '../../fontfaces.json'
 
 // Init Colette object
@@ -20,6 +21,12 @@ colette.Pager = Pager
 colette.pagers = []
 Array.prototype.forEach.call(document.querySelectorAll('.block-list'), (item) => {
   colette.pagers.push(new Pager({ blockList: item }))
+})
+
+colette.Modal = Modal
+colette.Modal({
+  id: 'accessible-modal',
+  content: '<div class="modal-overlay" data-a11y-dialog-hide></div><div class="modal-content box pa3" role="dialog">This is an accessible modal</div>',
 })
 
 colette.Tablist = Tablist
