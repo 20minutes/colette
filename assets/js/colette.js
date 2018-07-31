@@ -24,10 +24,14 @@ Array.prototype.forEach.call(document.querySelectorAll('.block-list'), (item) =>
 })
 
 colette.Modal = Modal
-colette.Modal({
-  id: 'accessible-modal',
-  content: '<div class="modal-overlay" data-a11y-dialog-hide></div><div class="modal-content box pa3" role="dialog">This is an accessible modal</div>',
+const demoModal = new colette.Modal({
+  containerId: 'accessible-modal',
+  containerClasses: ['demoModal'],
+  contentClasses: ['box', 'pa3'],
+  content: 'This is an accessible modal',
 })
+demoModal.insert()
+demoModal.init()
 
 colette.Tablist = Tablist
 colette.tablists = []

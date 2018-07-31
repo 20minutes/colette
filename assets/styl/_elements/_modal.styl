@@ -1,16 +1,37 @@
 // Modal
 //
-// Provide styles for a modal
+// Colette uses the accessible modal a11y-dialog (https://www.npmjs.com/package/a11y-dialog)
 //
 // Markup: modal.twig
 //
 // Styleguide Elements.Modal
-[data-a11y-dialog-native] > :first-child
-    display none
+.modal
+    &[aria-hidden=true]
+        display none
 
-.dialog[open]
-    display block
+    &-overlay
+        position fixed
+        z-index: $zIndex.modal
+        top 0
+        left 0
+        width 100%
+        height 100%
+        background rgba(0, 0, 0, .6)
 
-.dialog-container[aria-hidden='true']
-    display none
+    &-content
+        position fixed
+        z-index: $zIndex.modal
+        left 50%
+        top 50%
+        transform translate(-50%, -50%)
 
+    &-closebtn
+        position absolute
+        top _rem(10px)
+        right _rem(10px)
+
+        svg
+            fill $color-white
+            width _rem(12px)
+            height _rem(12px)
+            transform rotate(45deg)
