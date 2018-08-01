@@ -34,21 +34,39 @@ function Modal(cfg) {
   // Merge default with current cfg
   this.config = Object.assign({}, defaultConfig, cfg)
   this.build()
+  this.isInserted = false
 }
 
 Modal.prototype.open = function open() {
-  return this.dialog.show()
+  if (!this.dialog) {
+    // Cannot open Modal, it does not exist
+    return
+  }
+  this.dialog.show()
 }
 
 Modal.prototype.close = function close() {
-  return this.dialog.hide()
+  if (!this.dialog) {
+    // Cannot close Modal, it does not exist
+    return
+  }
+  this.dialog.hide()
 }
 
 Modal.prototype.destroy = function destroy() {
-  return this.dialog.destroy()
+  if (this.dialog) {
+    this.dialog.destroy()
+  }
+  if (this.container) {
+    this.container.remove()
+  }
 }
 
 Modal.prototype.init = function init() {
+  if (this.dialog) {
+    // The modal is already init
+    return
+  }
   this.dialog = new A11yDialog(this.container, this.config.targetToggleHidden)
 }
 
@@ -82,7 +100,12 @@ Modal.prototype.build = function build() {
 }
 
 Modal.prototype.insert = function insert() {
-  return document.body.insertAdjacentElement('beforeend', this.container)
+  if (this.isInserted) {
+    // Modal already exists in DOM
+    return
+  }
+  document.body.appendChild(this.container)
+  this.isInserted = true
 }
 
 export default Modal
