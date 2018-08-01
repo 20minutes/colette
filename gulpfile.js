@@ -8,6 +8,7 @@ const webpack = require('webpack')
 const gulpWebpack = require('webpack-stream')
 const svgstore = require('gulp-svgstore')
 const fs = require('fs')
+const jsdoc = require('gulp-jsdoc3')
 const kss = require('kss')
 const finalhandler = require('finalhandler')
 const http = require('http')
@@ -17,7 +18,9 @@ const postcss = require('gulp-postcss')
 const cssnano = require('cssnano')
 const autoprefixer = require('autoprefixer')
 const postcssFocusVisible = require('postcss-focus-visible')
+
 const kssConfig = require('./kss.json')
+const jsDocConfig = require('./jsdoc.json')
 
 const cfg = {
   fontsDir: 'assets/fonts/',
@@ -141,24 +144,26 @@ function svgBuild() {
 function kssBuild(done) {
   // we need the dist/ folder to build docs/
   // so we check if it exists and throw an error if needed
-  return fs.access(cfg.distDir, (err) => {
-    if (err) {
-      console.log('Can’t access the dist/ folder.')
-      console.log('Try running `gulp build` to solve the problem.')
-      console.log(err)
+  if (!fs.existsSync(cfg.distDir)) {
+    console.log('Can’t access the dist/ folder.')
+    console.log('Try running `gulp build` to solve the problem.')
 
-      return
-    }
+    return
+  }
 
-    // generate doc
-    kss(kssConfig).then(() => {
-      // retrieve dist directory
-      gulp.src(`${cfg.distDir}*/**`)
-        .pipe(gulp.dest(`${cfg.docDir}dist/`))
+  // generate doc
+  kss(kssConfig).then(() => {
+    // retrieve dist directory
+    gulp.src(`${cfg.distDir}*/**`)
+      .pipe(gulp.dest(`${cfg.docDir}dist/`))
 
-      done()
-    })
+    done()
   })
+}
+
+function jsDoc(cb) {
+  gulp.src(['./assets/js/README.md', './assets/js/**/*.js'], { read: false })
+    .pipe(jsdoc(jsDocConfig, cb))
 }
 
 function watch() {
@@ -203,6 +208,9 @@ gulp.task('assets', assetsCopy)
 // kss
 gulp.task('kss', kssBuild)
 
+// jsDoc
+gulp.task('jsDoc', jsDoc)
+
 // svg
 gulp.task('svg', svgBuild)
 
@@ -213,7 +221,7 @@ gulp.task('watch', watch)
 gulp.task('build', gulp.parallel('svg', 'styles', 'scripts', 'assets'))
 
 // build docs
-gulp.task('docs', gulp.series('build', 'kss'))
+gulp.task('docs', gulp.series('build', 'kss', 'jsDoc'))
 
 // default build docs and run watch
 gulp.task('default', gulp.series('connect', 'lint', 'docs', 'watch'))

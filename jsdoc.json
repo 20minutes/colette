@@ -1,0 +1,30 @@
+{
+  "opts": {
+    "template": "node_modules/docdash",
+    "destination": "./docs/api"
+  },
+  "source": {
+    "includePattern": ".js$"
+  },
+  "sourceType": "module",
+  "plugins": [
+    "plugins/markdown"
+  ],
+  "templates": {
+    "systemName": "Colette JS API",
+    "footer": "",
+    "copyright": "",
+    "includeDate": false,
+    "navType": "vertical",
+    "theme": "paper",
+    "linenums": true,
+    "collapseSymbols": true,
+    "inverseNav": true,
+    "outputSourceFiles": true ,
+    "outputSourcePath": true,
+    "dateFormat": "MMMM Do YYYY, h:mm:ss a",
+    "syntaxTheme": "dark",
+    "sort": false,
+    "search": true
+  }
+}

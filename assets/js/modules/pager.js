@@ -1,8 +1,18 @@
+/** @module modules/pager */
+
+/** Default config. */
 const defaultConfig = {
   itemPerPage: 3,
   blockList: null,
 }
 
+/**
+ * Create a new Pager
+ * @class
+ * @param {Object} cfg config object
+ * @param {Number} [cfg.itemPerPage=3] number of item visible by page
+ * @param {HTMLElement} [cfg.blockList=null] list of elements to paginate
+ */
 function Pager(cfg) {
   // Merge default with current cfg
   this.config = Object.assign({}, defaultConfig, cfg)
@@ -39,7 +49,12 @@ function Pager(cfg) {
   this.btnPrev.addEventListener('click', this.paginateEventHandler.bind(this))
   this.btnNext.addEventListener('click', this.paginateEventHandler.bind(this))
 }
-
+/**
+ * Event handler on click on previous or next button.
+ * It toggles elements visibility via `aria-hidden` attribute to paginate the list relatively to
+ * `itemPerPage` parameter.
+ * @param {Event} e click event on previous or next button
+ */
 Pager.prototype.paginateEventHandler = function paginateEventHandler(e) {
   const btn = e.target.closest('button')
 
@@ -62,4 +77,5 @@ Pager.prototype.paginateEventHandler = function paginateEventHandler(e) {
   })
 }
 
+// Pager constructor.
 export default Pager

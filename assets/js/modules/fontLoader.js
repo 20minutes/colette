@@ -1,4 +1,14 @@
+/** @module modules/fontLoader */
+
 import FontFaceObserver from 'fontfaceobserver'
+
+/** Default config. */
+const defaultConfig = {
+  localStorageKey: 'colette-font',
+  data: [],
+  class: 'webfont',
+  optional: true,
+}
 
 /**
  * Check if FontFaceSet API is supported, along with some browser quirks
@@ -28,13 +38,15 @@ function isFontFaceSetCompatible() {
   return compatible
 }
 
-const defaultConfig = {
-  localStorageKey: 'colette-font',
-  data: [],
-  class: 'webfont',
-  optional: true,
-}
-
+/**
+ * Create a new FontLoader
+ * @class
+ * @param {object} cfg config object
+ * @param {string} [cfg.localStorageKey='colette-font']  name of local storage key
+ * @param {Array} [cfg.data=[]] name of local storage key
+ * @param {string} [cfg.class='webfont'] classe name add to `html` element when fonts are loaded
+ * @param {boolean} [cfg.optional=true] imitate `font-display: optional` behavior
+ */
 function FontLoader(cfg) {
   this.config = Object.assign({}, defaultConfig, cfg)
   this.isActive = false
@@ -42,19 +54,29 @@ function FontLoader(cfg) {
   this.init()
 }
 
+/**
+ * Check if fonts are loaded by checking le localstorage key
+ *
+ * @return {boolean}
+ */
 FontLoader.prototype.isFontLoaded = function isFontLoaded() {
-  // TODO: test if it's possible to be used only if font-display is not supported
+  // TODO: test if it’s possible to be used only if font-display is not supported
   // ('fontDisplay' in document.documentElement.style) ||
   return localStorage && localStorage.getItem(this.config.localStorageKey) === 'loaded'
 }
-
+/**
+ * Add class to `html` element to use web font
+ */
 FontLoader.prototype.activeFonts = function activeFonts() {
   document.documentElement.classList.add(this.config.class)
   this.isActive = true
 }
 
+/**
+ * Initialize font loader only if it is not loaded previously
+ */
 FontLoader.prototype.init = function init() {
-// Initialize font loader only if it is not loaded previously
+  // Initialize font loader only if it is not loaded previously
   if (this.config.optional && this.isFontLoaded()) {
     this.activeFonts()
 
@@ -72,6 +94,9 @@ FontLoader.prototype.init = function init() {
   })
 }
 
+/**
+ * Register in local storage fonts has been loaded
+ */
 FontLoader.prototype.updateLocalStorage = function updateLocalStorage() {
   try {
     localStorage.setItem(this.config.localStorageKey, 'loaded')
@@ -82,6 +107,10 @@ FontLoader.prototype.updateLocalStorage = function updateLocalStorage() {
   }
 }
 
+/**
+ * Load fonts
+ * @return {Promise}
+ */
 FontLoader.prototype.load = function load() {
   const fontPromises = []
 
@@ -120,4 +149,5 @@ FontLoader.prototype.load = function load() {
   return allFontsPromise
 }
 
+// FontLoader constructor.
 export default FontLoader
