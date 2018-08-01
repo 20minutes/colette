@@ -75,7 +75,8 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp docs",
-    "test": "gulp lint"
+    "test": "gulp lint",
+    "prepack": "npm run build"
   },
   "repository": {
     "type": "git",
