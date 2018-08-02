@@ -20,14 +20,15 @@
         display none
 
     &-overlay
-        position fixed
-        top 0
+        position absolute
+        top -30%
+        bottom -30% // These negative values avoid gap between address bar & overlay, on mobile, when address bar disappear
         left 0
         width 100%
-        height 100%
         background rgba(0, 0, 0, .6)
 
-    &-content
+    &-window
+        -webkit-overflow-scrolling touch // enable iOs momentum-based scrolling
         position relative
         max-width 90%
         max-height 90%

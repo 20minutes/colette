@@ -68,6 +68,20 @@ Modal.prototype.init = function init() {
     return
   }
   this.dialog = new A11yDialog(this.container, this.config.targetToggleHidden)
+
+  this.dialog.on('show', () => {
+    this.lastScroll = {
+      x: window.scrollX,
+      y: window.scrollY,
+    }
+    document.body.style.top = `-${this.lastScroll.y}px`
+    document.body.classList.add('noscroll')
+  })
+  this.dialog.on('hide', () => {
+    document.body.classList.remove('noscroll')
+    document.body.style.top = null
+    window.scroll(this.lastScroll.x, this.lastScroll.y)
+  })
 }
 
 Modal.prototype.build = function build() {
@@ -91,7 +105,7 @@ Modal.prototype.build = function build() {
 
   // Creates the modal & fill it w/ the @param: content
   const content = document.createElement('div')
-  content.classList.add('modal-content', ...this.config.contentClasses)
+  content.classList.add('modal-window', ...this.config.contentClasses)
   content.setAttribute('role', 'dialog')
   content.innerHTML = this.config.content
   content.appendChild(btnClose)
