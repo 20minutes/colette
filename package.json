@@ -1,9 +1,10 @@
 {
   "name": "colette",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "license": "MIT",
   "dependencies": {
     "@accede-web/tablist": "^2.0.0",
+    "a11y-dialog": "^5.1.2",
     "babel-polyfill": "^6.26.0",
     "blazy": "1.8.2",
     "dom4": "2.1.3",
