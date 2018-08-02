@@ -1,35 +1,27 @@
-/**
- * @name Modal
- * @description Create an accessible dialog
- *
- * @constructor       Creates the object with the parameters and generates the DOM
- * @function open     opens the modal
- * @function close    closes the modal
- * @function destroy  destroys the instance
- * @function init     initializes the dependency
- * @function build    builds the DOM of the modal
- * @function insert   inserts the modal at the end of the DOM, before the bod's closure
- *
- * @see https://www.npmjs.com/package/a11y-dialog
- */
+/** @module modules/modal */
+
 import A11yDialog from 'a11y-dialog'
 
-/**
- * Default cfg
- * @param {string}  containerId  (Required) Desired id of the container
- * @param {array} containerClasses  (optional) Desired classes of the container
- * @param {array} contentClasses  (optional)  Desired classes of the actual modal
- * @param {string}  content (Required) Content of the modal
- * @param {DOM node}  targetToggleHidden  (optional) Elements hidden when the modal is open
- */
+/** Default config. */
 const defaultConfig = {
-  containerId: '',
+  containerId: null,
   containerClasses: [],
   contentClasses: [],
   content: '',
   targetToggleHidden: document.querySelectorAll('body > *:not(.modal):not([aria-hidden="true"]):not(script)'),
 }
 
+/**
+ * Create a new Modal, accessible dialog
+ * @class
+ * @param {object} cfg config object
+ * @param {string} [cfg.containerId=null] container’s ID
+ * @param {Array} [cfg.containerClasses=[]] (optional) Desired classes of the container
+ * @param {Array} [cfg.contentClasses=[]] (optional) Desired classes of the actual modal
+ * @param {string} [cfg.content=''] Content of the modal
+ * @param {(NodeList | Element | string)} [cfg.targetToggleHidden] Elements to hide when
+ * open the modal
+ */
 function Modal(cfg) {
   // Merge default with current cfg
   this.config = Object.assign({}, defaultConfig, cfg)
@@ -37,26 +29,38 @@ function Modal(cfg) {
   this.isInserted = false
 }
 
+/**
+ * Opens the modal if init
+ */
 Modal.prototype.open = function open() {
   if (!this.dialog) {
     // Cannot open Modal, it does not exist
     return
   }
+
   this.dialog.show()
 }
 
+/**
+ * Close the modal if init
+ */
 Modal.prototype.close = function close() {
   if (!this.dialog) {
     // Cannot close Modal, it does not exist
     return
   }
+
   this.dialog.hide()
 }
 
+/**
+ * Destroy modal and remove container from DOM
+ */
 Modal.prototype.destroy = function destroy() {
   if (this.dialog) {
     this.dialog.destroy()
   }
+
   if (this.container) {
     this.container.remove()
   }
@@ -67,6 +71,7 @@ Modal.prototype.init = function init() {
     // The modal is already init
     return
   }
+
   this.dialog = new A11yDialog(this.container, this.config.targetToggleHidden)
 
   this.dialog.on('show', () => {
@@ -77,6 +82,7 @@ Modal.prototype.init = function init() {
     document.body.style.top = `-${this.lastScroll.y}px`
     document.body.classList.add('noscroll')
   })
+
   this.dialog.on('hide', () => {
     document.body.classList.remove('noscroll')
     document.body.style.top = null
@@ -84,10 +90,18 @@ Modal.prototype.init = function init() {
   })
 }
 
+/**
+ * Build modal DOM
+ * @return {Element} modal’s container
+ */
 Modal.prototype.build = function build() {
   // Creates the container
   this.container = document.createElement('div')
-  this.container.id = this.config.containerId
+
+  if (this.config.containerId) {
+    this.container.id = this.config.containerId
+  }
+
   this.container.classList.add('modal', ...this.config.containerClasses)
   this.container.setAttribute('aria-hidden', true)
 
@@ -113,11 +127,15 @@ Modal.prototype.build = function build() {
   return this.container.appendChild(content)
 }
 
+/**
+ * Insert modal container at end of the `body`
+ */
 Modal.prototype.insert = function insert() {
   if (this.isInserted) {
     // Modal already exists in DOM
     return
   }
+
   document.body.appendChild(this.container)
   this.isInserted = true
 }

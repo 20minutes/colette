@@ -1,9 +1,20 @@
+/** @module modules/iframeResizer */
+
+/** Default config. */
 const defaultConfig = {
   el: null,
   delay: 0,
   iframeId: 'iframeId',
 }
 
+/**
+ * Create a new IframeResizer
+ * @class
+ * @param {Object} cfg config object
+ * @param {HTMLIFrameElement} [cfg.el=null] iframe element
+ * @param {Int} [cfg.delay=0] delay between two check of size
+ * @param {String} [cfg.iframeId='iframeId'] id of iframe returned by postMessage
+ */
 function IframeResizer(cfg) {
   if (!cfg.el) {
     return
@@ -26,12 +37,16 @@ function IframeResizer(cfg) {
   window.addEventListener('resize', this.height.bind(this))
 }
 
+/**
+ */
 IframeResizer.prototype.iframeResizeComplete = function iframeResizeComplete() {
   setTimeout(() => {
     this.resizeInternal = false
   }, 500)
 }
 
+/**
+ */
 IframeResizer.prototype.height = function height() {
   if (!defaultConfig.resizeInternal) {
     setTimeout(() => {
@@ -40,6 +55,8 @@ IframeResizer.prototype.height = function height() {
   }
 }
 
+/**
+ */
 IframeResizer.prototype.sendHeight = function sendHeight() {
   window.top.postMessage({
     type: 'doResize',
@@ -48,7 +65,5 @@ IframeResizer.prototype.sendHeight = function sendHeight() {
   }, '*')
   this.resizeInternal = true
 }
-
-export default function (cfg) {
-  return new IframeResizer(cfg)
-}
+// IframeResizer Constructor.
+export default IframeResizer
