@@ -59,7 +59,8 @@ colette.Modal = Modal
 const demoModal = new colette.Modal({
   containerId: 'accessible-modal',
   containerClasses: ['demoModal'],
-  contentClasses: ['box', 'pa3'],
+  modalContentClasses: ['pa3'],
+  modalWindowClasses: ['box'],
   content: 'This is an accessible modal',
 })
 demoModal.insert()

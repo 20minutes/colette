@@ -6,7 +6,8 @@ import A11yDialog from 'a11y-dialog'
 const defaultConfig = {
   containerId: null,
   containerClasses: [],
-  contentClasses: [],
+  modalWindowClasses: [],
+  modalContentClasses: [],
   content: '',
   targetToggleHidden: document.querySelectorAll('body > *:not(.modal):not([aria-hidden="true"]):not(script)'),
 }
@@ -16,9 +17,10 @@ const defaultConfig = {
  * @class
  * @param {object} cfg config object
  * @param {string} [cfg.containerId=null] container’s ID
- * @param {Array} [cfg.containerClasses=[]] (optional) Desired classes of the container
- * @param {Array} [cfg.contentClasses=[]] (optional) Desired classes of the actual modal
- * @param {string} [cfg.content=''] Content of the modal
+ * @param {Array} [cfg.containerClasses=[]] (optional) Classes of the container
+ * @param {Array} [cfg.modalWindowClasses=[]] (optional) Classes of the actual modal
+ * @param {Array} [cfg.modalContentClasses=[]] (optional) Classes of the modal content div
+ * @param {string | Element | DocumentFragment} [cfg.content=''] Content of the modal
  * @param {(NodeList | Element | string)} [cfg.targetToggleHidden] Elements to hide when
  * open the modal
  */
@@ -106,25 +108,31 @@ Modal.prototype.build = function build() {
   this.container.setAttribute('aria-hidden', true)
 
   // Creates the overlay
-  const overlay = document.createElement('div')
-  overlay.classList.add('modal-overlay')
-  overlay.setAttribute('data-a11y-dialog-hide', true)
-  this.container.appendChild(overlay)
+  this.overlay = document.createElement('div')
+  this.overlay.classList.add('modal-overlay')
+  this.overlay.setAttribute('data-a11y-dialog-hide', true)
+  this.container.appendChild(this.overlay)
 
   // Creates the close button
-  const btnClose = document.createElement('button', { type: 'button' })
-  btnClose.classList.add('modal-closebtn', 'btnIcon')
-  btnClose.setAttribute('data-a11y-dialog-hide', true)
-  btnClose.innerHTML = '<svg height="12" width="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#symbol-cross"></use></svg>'
+  this.btnClose = document.createElement('button', { type: 'button' })
+  this.btnClose.classList.add('modal-closebtn', 'btnIcon')
+  this.btnClose.setAttribute('data-a11y-dialog-hide', true)
+  this.btnClose.innerHTML = '<svg height="12" width="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#symbol-cross"></use></svg>'
 
   // Creates the modal & fill it w/ the @param: content
-  const content = document.createElement('div')
-  content.classList.add('modal-window', ...this.config.contentClasses)
-  content.setAttribute('role', 'dialog')
-  content.innerHTML = this.config.content
-  content.appendChild(btnClose)
+  this.window = document.createElement('div')
+  this.window.classList.add('modal-window', ...this.config.modalWindowClasses)
+  this.window.setAttribute('role', 'dialog')
 
-  return this.container.appendChild(content)
+  this.content = document.createElement('div')
+  this.content.classList.add('modal-content', ...this.config.modalContentClasses)
+  this.fill(this.config.content)
+
+  this.window.appendChild(this.btnClose)
+  this.window.appendChild(this.content)
+  this.container.appendChild(this.window)
+
+  return this.container
 }
 
 /**
@@ -138,6 +146,21 @@ Modal.prototype.insert = function insert() {
 
   document.body.appendChild(this.container)
   this.isInserted = true
+}
+
+/**
+ * Replace content of modal
+ * @param {string | Element | DocumentFragment} newContent
+ */
+Modal.prototype.fill = function fill(newContent) {
+  if (typeof newContent === 'string') {
+    this.content.innerHTML = newContent
+
+    return
+  }
+
+  this.content.innerHTML = ''
+  this.content.appendChild(newContent)
 }
 
 export default Modal
