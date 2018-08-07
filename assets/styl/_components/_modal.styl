@@ -1,10 +1,17 @@
 // Modal
 //
-// Colette uses the accessible modal a11y-dialog (https://www.npmjs.com/package/a11y-dialog)
+// Colette uses the accessible modal a11y-dialog (https://www.npmjs.com/package/a11y-dialog).
 //
 // Markup: modal.twig
 //
-// Styleguide Elements.Modal
+// Styleguide Components.Modal
+
+// Demo modal trigger button
+//
+// Markup:
+// <button type="button" id="open-modal-btn" class="btn" data-a11y-dialog-show="accessible-modal">open modal</button>
+//
+// Styleguide Components.Modal.demo
 .modal
     position fixed
     width 100%
@@ -32,12 +39,12 @@
         position relative
         max-width 90%
         max-height 90%
-
-        &.box
-            overflow auto
+        display flex
+        flex-direction column
 
     &-closebtn
         position absolute
+        z-index 2
         top _rem(10px)
         right _rem(10px)
 
@@ -46,3 +53,10 @@
             width _rem(12px)
             height _rem(12px)
             transform rotate(45deg)
+
+    &-content
+        position relative
+        z-index 1
+        overflow auto
+        width 100%
+        height 100%
