@@ -10,10 +10,13 @@
 // Markup: card.twig
 //
 // Styleguide Components.card
+$card-media-width ?= 7.5em
+$card-media-height ?= 4.9em
+
 .card
     _m(0)
-    overflow hidden
-    display block
+    display flex
+    align-items center
     padding .5em .2em .5em .4em
     transition background-color .2s ease
     border 0 solid currentColor
@@ -23,16 +26,16 @@
 
     &:link:hover
         background-color $color-bg-light
-    // add properties to .media
 
+    // add properties to .media
     .media
-        float left
-        width 7.5em
-        height 4.9em
+        width $card-media-width
+        height $card-media-height
         overflow hidden
 
     .teaser
         _p(0 .5)
+        width s('calc(100% - %s)', $card-media-width)
         height _rem(15px * 5 + 3px) // limit height to 5 lines for title and no more
         overflow hidden
 

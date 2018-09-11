@@ -13,7 +13,11 @@
 // Markup: tabpanel-with-block-list.twig
 //
 // Styleguide Components.TabPanel.WithBlocksOfCards
+
 .tabpanel
+    display flex
+    flex-direction column
+
     &-list
         display flex
         margin 0
@@ -64,6 +68,8 @@
                 cursor initial
 
     &-body
+        flex-grow 1
+
         &[aria-hidden=true]
             display none
 

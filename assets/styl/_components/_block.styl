@@ -29,8 +29,6 @@
 //
 // Markup: block-list.twig
 //
-// .block-stretch - stretch content to keep 100% height of container
-//
 // Weight: 2
 //
 // Styleguide Components.Block.BlockList
@@ -46,23 +44,13 @@ $block-custom-color ?= $color-base-lighten
 $block-header-minheight ?= _rem(36px)
 
 .block
-    {clearfix}
+    display flex
+    flex-direction column
+    overflow hidden
     width 100%
     background-color $color-white
     position relative
     text-align left
-
-    &-stretch
-        height 100%
-        flex-grow 999
-        overflow hidden
-        padding-bottom _rem(30px) // 30px = .block-footer height
-
-        .block-footer
-            position absolute
-            bottom 0
-            left 0
-            right 0
 
     &-title
         _pt(.75)
@@ -91,14 +79,19 @@ $block-header-minheight ?= _rem(36px)
     &-list
         margin 0
         padding 0
+        display flex
+        flex-direction column
+        justify-content stretch
+        align-items stretch
+        flex-grow 1
         list-style none
-        display table
-        height s('calc(100% - %s)', $block-header-minheight) // .block-title height
         width 100%
         border-spacing 0 1px
 
         &-item
-            display table-row
+            flex 1 1 0
+            display flex
+            align-items stretch
 
             &:nth-child(even)
                 background-color $color-bg-base
@@ -107,12 +100,10 @@ $block-header-minheight ?= _rem(36px)
                 display none
 
             // change display of the child with stronger selector than simple class
-            > p
-            > div
-            > a
-                display table-cell
-                height auto
-                vertical-align middle
+            > :only-child
+                display flex
+                width 100%
+                align-items center
 
             > :link:hover
                 background-color $color-bg-light
