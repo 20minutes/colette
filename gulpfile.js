@@ -55,11 +55,12 @@ function stylesBuild() {
     .pipe(gulp.dest(dest))
     .pipe(postcss([
       cssnano({
-        zindex: false,
-        mergeRules: false, // mergeRules make :focus-visible buggy, keep it false
-        minifyFontValues: {
-          removeQuotes: false,
-        },
+        preset: ['default', {
+          mergeRules: false, // mergeRules make :focus-visible buggy, keep it false
+          minifyFontValues: {
+            removeQuotes: false,
+          },
+        }],
       }),
     ]))
     .pipe(rename('colette.min.css'))
@@ -84,12 +85,12 @@ function scriptsBuild() {
             options: {
               babelrc: false,
               presets: [
-                ['env', {
-                  useBuiltIns: true,
+                ['@babel/preset-env', {
+                  useBuiltIns: 'entry',
                 }],
               ],
               plugins: [
-                ['transform-strict-mode', {
+                ['@babel/plugin-transform-strict-mode', {
                   strict: true,
                 }],
               ],
