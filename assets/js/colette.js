@@ -1,5 +1,5 @@
 // Polyfills
-import 'babel-polyfill' // es polyfill
+import '@babel/polyfill' // es polyfill
 import 'dom4' // dom4 polyfill
 import 'focus-visible' // focus-visible polyfill
 // modules
