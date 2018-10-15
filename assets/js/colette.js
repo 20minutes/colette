@@ -81,6 +81,7 @@ colette.Tablist = Tablist
 colette.tablists = []
 Array.prototype.forEach.call(document.querySelectorAll('.tabpanel-list'), (item) => {
   const tab = new Tablist(item)
+  item.closest('.tabpanel').removeAttribute('data-loading')
   tab.mount()
   colette.tablists.push(tab)
 })

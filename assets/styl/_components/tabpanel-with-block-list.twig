@@ -4,7 +4,11 @@
     {% for tab in tabs -%}
         {% embed 'block-list-with-cards.twig' with tab.body|merge({ id: prefixId ~ loop.index }) only %}
             {% block block_classes 'tabpanel-body ' ~ parent() %}
-            {% block block_attribute ' id="' ~ id ~ '" ' ~ parent() %}
+            {% block block_attribute %}
+                id="{{ id }}"
+                {{ tab.open ? ' data-open="true"' }}
+                {{ parent() }}
+            {% endblock %}
             {% block block_header '' %}
         {% endembed %}
     {%- endfor %}
