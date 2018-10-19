@@ -2,15 +2,15 @@
 {%- set classes = classes|default([]) -%}
 {%- if modifier_class -%}{% set classes = classes|merge([modifier_class]) %}{% endif -%}
 
-<div class="tabpanel{{ ' ' ~ classes|join(' ') }}">
+<div class="tabpanel{{ ' ' ~ classes|join(' ') }}" data-loading>
     <ul class="tabpanel-list color-default" role="tablist">
         {% for tab in tabs -%}
-            <li class="tabpanel-list-tab" role="tab" aria-controls="{{ prefixId ~ loop.index }}"{{ (tab.open) ? ' data-tab-open'|raw }}{{ (tab.disabled) ? ' aria-disabled="true"'|raw }}>{{ tab.title }}</li>
+            <li class="tabpanel-list-tab" role="tab" aria-controls="{{ prefixId ~ loop.index }}"{{ (tab.open) ? ' data-open="true"'|raw }}{{ (tab.disabled) ? ' aria-disabled="true"'|raw }}>{{ tab.title }}</li>
         {%- endfor %}
     </ul>
     {% block tab_panels %}
         {% for tab in tabs -%}
-            <div class="tabpanel-body{{ ' ' ~ panelsClasses|default([])|join(' ') }}" role="tabpanel" id="{{ prefixId ~ loop.index }}">
+            <div class="tabpanel-body{{ ' ' ~ panelsClasses|default([])|join(' ') }}" role="tabpanel" id="{{ prefixId ~ loop.index }}"{{ (tab.open) ? ' data-open="true"'|raw }}>
                 {{ tab.body|raw }}
             </div>
         {%- endfor %}

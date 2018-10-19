@@ -5,7 +5,7 @@
   "tabs": [
     {
       "title": "Tab 1",
-      "body": "<p>This is an expemple of the 1<sup>st</sup> panel</p>"
+      "body": "<p>This is an example of the 1<sup>st</sup> panel</p>"
     },
     {
       "title": "Tab 2",
@@ -15,11 +15,11 @@
     {
       "title": "Tab 3",
       "disabled": true,
-      "body": "<p>This is an expemple of a disabled panel</p>"
+      "body": "<p>This is an example of a disabled panel</p>"
     },
     {
       "title": "Tab 4",
-      "body": "<p>This is an expemple of the 4<sup>th</sup> panel</p>"
+      "body": "<p>This is an example of the 4<sup>th</sup> panel</p>"
     }
   ]
 }

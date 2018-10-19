@@ -4,6 +4,7 @@
   "tabs": [
     {
       "title": "Tab 1",
+      "open": true,
       "body": {
         "classes": [],
         "blockTitle": "Example of a block title",

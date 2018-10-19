@@ -4,6 +4,8 @@
 //
 // Can use `.color-…` helpers on list
 //
+// Default open tab should be set by `data-open="true"` attribute.
+//
 // Markup: tabpanel.twig
 //
 // Styleguide Components.TabPanel
@@ -47,6 +49,7 @@
             &:last-child
                 border-right-color $color-borders
 
+            .tabpanel[data-loading] &[data-open]
             &[aria-selected=true]
                 color currentColor
                 background-color $color-white
@@ -70,6 +73,7 @@
     &-body
         flex-grow 1
 
+        .tabpanel[data-loading] &:not([data-open])
         &[aria-hidden=true]
             display none
 
