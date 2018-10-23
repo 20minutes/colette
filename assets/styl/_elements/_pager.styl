@@ -36,6 +36,7 @@
         color $color-base
         line-height 1em
         margin-bottom -.1em
+        position relative
 
         &:disabled
         &[aria-hidden] // disabled link is a span[aria-hidden]
@@ -44,6 +45,19 @@
         svg
             width 1em
             height @width
+
+        // this after pseudo element extend clickable area
+        // when the button is too much small
+        &:after
+            content ''
+            position absolute
+            top 50%
+            left 50%
+            transform translate(-50%, -50%)
+            width 32px
+            height @width
+            min-width 100%
+            min-height 100%
 
     &-prev
         margin-right .2em
