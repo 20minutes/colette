@@ -86,7 +86,7 @@ $block-header-minheight ?= _rem(36px)
         border-spacing 0 1px
 
         &-item
-            flex 1 1 0% // @stylint ignore 0 != 0% in flex-basis
+            flex 1 1 auto // IE10 / IE11 hack for flexbox
             display flex
             align-items stretch
 
@@ -98,6 +98,7 @@ $block-header-minheight ?= _rem(36px)
 
             // change display of the child with stronger selector than simple class
             > :only-child
+                display block // IE10 / IE11 hack for flexbox
                 display flex
                 width 100%
                 align-items center
