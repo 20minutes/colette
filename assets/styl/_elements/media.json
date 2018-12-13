@@ -1,6 +1,6 @@
 {
     "media": {
-        "src": "http://img.20mn.fr/gmiJ0COJRYqUQM6w1jeBlw/%format_20mn-11765.jpg",
+        "src": "./dist/img/648x415_article-preview.jpg",
         "caption": "The media caption",
         "credit": "by someone"
     },
