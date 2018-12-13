@@ -18,17 +18,25 @@
 // .btnSkin-planet           - planet color button
 // .btnSkin-media            - media color button
 // .btnSkin-hightech         - hightech color button
-// .btnSkin-native           - native color button
 //
 // Markup: ./btnSkin.twig
 //
 // Styleguide Theme.Buttons
 
+// Buttons transparent skin
+//
+// Useful in "Form single input"
+//
+// .btnSkin-transparent - transparent button
+//
+// Markup: ../_elements/.twig
+
 // Default Social Buttons skin
 //
 // All social colors are available to style the button according to its context.
 //
-// Social Buttons skin can be used with `.btn` and `.btnIcon`
+// Social Button skins can be used with `.btn` and `.btnIcon`
+// They are not compatible with `.btn-line`
 //
 // .btnSkin-dailymotion      - dailymotion color button
 // .btnSkin-facebook         - facebook color button
@@ -51,22 +59,53 @@
 // Weight: 1
 //
 // Styleguide Theme.Buttons.Socials
+
 .btnSkin
-    $tmpColors = {}
-    for key, value in merge($tmpColors, $colors, $colors-socials)
+    for key, value in $colors
         &-{key}
-            background-color value
-            color $color-white
+            // TODO: 2 as contrast ration is not enough but we should change some colors to fix it
+            color _contrast_choose(value, $color-white $color-base, 2)
             border-color value
+            background-color value
 
-            &:enabled:hover
-                background-color darken(value, 20%)
+            &:enabled
+            &[href]
+                &:hover
+                    background-color darken(value, 20%)
+                    border-color darken(value, 20%)
 
-    &-native
-    &-snapchat
-        color $color-base
+            &.btn-line
+                color value
+                border-color currentColor
+                background-color transparent
+
+                &:enabled
+                &[href]
+                    &:hover
+                        color darken(value, 20%)
+                        border-color currentColor
+                        background-color transparent
+
+    // social btn should not used with `.btn-line`
+    for key, value in $colors-socials
+        &-{key}
+            // TODO: 2 as contrast ration is not enough but we should change some colors to fix it
+            color _contrast_choose(value, $color-white $color-base, 2)
+
+            &:enabled
+            &[href]
+                &:hover
+                    background-color darken(value, 20%)
+                    border-color darken(value, 20%)
 
     &-transparent
+        color $color-tertiary
         background-color transparent
         border-color transparent
-        color $color-tertiary
+
+        &:enabled
+        &[href]
+            &:hover
+                color darken($color-tertiary, 20%)
+                background-color transparent
+                border-color transparent

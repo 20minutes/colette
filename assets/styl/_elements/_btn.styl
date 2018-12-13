@@ -2,6 +2,8 @@
 //
 // Colette comes with basic styles for call to action / buttons.
 //
+// .btn-line - btn lined
+//
 // Markup: btn.twig
 //
 // Styleguide Elements.Buttons
@@ -9,13 +11,14 @@
     _fontload($fontstack-secondary)
     display inline-block
     text-align center
-    padding .5em 1.5em
+    padding calc(.5em - 2px) calc(1.5em - 2px)
     border-radius 20em
     font-size .875em
     font-weight bold
     text-transform uppercase
     background-color $color-secondary
-    transition background-color .2s ease
+    border 2px solid $color-secondary
+    transition background-color .2s ease, border-color .2s ease, color .2s ease
     color $color-base
     line-height 1.5em
     vertical-align baseline
@@ -34,5 +37,20 @@
     &:disabled
         opacity .5
 
-    &:enabled:hover
-        background-color darken($color-secondary, 20%)
+    &:enabled
+    &[href]
+        &:hover
+            background-color darken($color-secondary, 20%)
+            border-color darken($color-secondary, 20%)
+
+    &-line
+        color $color-base
+        background-color transparent
+        border-color currentColor
+
+        &:enabled
+        &[href]
+            &:hover
+                color darken($color-base, 20%)
+                background-color transparent
+                border-color currentColor
