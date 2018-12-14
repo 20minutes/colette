@@ -4,10 +4,9 @@
  # @param string   media
  #                 -> html
  # @param array    classes        Additional classes
- # @param string   defaultFormat  [required] Images sizes format ( width x height )
  #}
 {% extends 'media.twig' %}
 
 {% block media_figure %}
-    <div class="media-wrap media-wrap-video">{{ media.html|raw }}</div>
+    <div class="media-wrap media-wrap-video {{ modifier_class }}">{{ media.html|raw }}</div>
 {% endblock %}
