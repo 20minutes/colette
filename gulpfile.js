@@ -24,6 +24,7 @@ const jsDocConfig = require('./jsdoc.json')
 
 const cfg = {
   fontsDir: 'assets/fonts/',
+  imgsDir: 'assets/img/',
   cssDir: 'assets/styl/',
   jsDir: 'assets/js/',
   svgDir: 'assets/svg/',
@@ -124,10 +125,16 @@ function scriptsLint() {
     .pipe(eslint.failAfterError())
 }
 
-function assetsCopy() {
+function fontsCopy() {
   // Retrieve fonts into dist/ directory
   return gulp.src(`${cfg.fontsDir}**/*`)
     .pipe(gulp.dest(`${cfg.distDir}fonts`))
+}
+
+function imgsCopy() {
+  // Retrieve images into dist/ directory
+  return gulp.src(`${cfg.imgsDir}**/*`)
+    .pipe(gulp.dest(`${cfg.distDir}img`))
 }
 
 function svgBuild() {
@@ -188,13 +195,9 @@ function startServer(done) {
 
 gulp.task('connect', startServer)
 
-// lint:css
-gulp.task('lint:css', stylesLint)
-
-// lint:js
-gulp.task('lint:js', scriptsLint)
-
 // lint
+gulp.task('lint:css', stylesLint)
+gulp.task('lint:js', scriptsLint)
 gulp.task('lint', gulp.series('lint:js', 'lint:css'))
 
 // build css
@@ -204,7 +207,9 @@ gulp.task('styles', stylesBuild)
 gulp.task('scripts', scriptsBuild)
 
 // assets
-gulp.task('assets', assetsCopy)
+gulp.task('assets:fonts', fontsCopy)
+gulp.task('assets:imgs', imgsCopy)
+gulp.task('assets', gulp.parallel('assets:fonts', 'assets:imgs'))
 
 // kss
 gulp.task('kss', kssBuild)
