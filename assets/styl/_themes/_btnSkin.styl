@@ -63,7 +63,7 @@
 .btnSkin
     for key, value in $colors
         &-{key}
-            // TODO: 2 as contrast ration is not enough but we should change some colors to fix it
+            // TODO: 2 as contrast ratio is not enough but we should change some colors to fix it
             color _contrast_choose(value, $color-white $color-base, 2)
             border-color value
             background-color value
@@ -89,7 +89,7 @@
     // social btn should not used with `.btn-line`
     for key, value in $colors-socials
         &-{key}
-            // TODO: 2 as contrast ration is not enough but we should change some colors to fix it
+            // TODO: 2 as contrast ratio is not enough but we should change some colors to fix it
             color _contrast_choose(value, $color-white $color-base, 2)
             background-color value
             border-color value
