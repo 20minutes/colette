@@ -7,14 +7,18 @@
 // Styleguide Components.socialbar
 
 .socialbar
-    {clearfix}
+    display flex
+    flex-wrap wrap
     padding 0
     margin 0
     list-style-type none
 
     li
-        float left
+        _m(.25 .5 .25)
         text-align center
 
-        &:not(:first-child)
-            _ml(1)
+        &:first-child
+            _ml(0)
+
+        &:last-child
+            _mr(0)

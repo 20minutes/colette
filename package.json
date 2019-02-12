@@ -49,7 +49,7 @@
     "stylint": "^1.5.9",
     "unminified-webpack-plugin": "^2.0.0",
     "vinyl-named": "^1.1.0",
-    "webpack": "4.29.0",
+    "webpack": "4.29.3",
     "webpack-stream": "^5.2.1"
   },
   "author": "20 Minutes <web-tech@20minutes.fr>",
