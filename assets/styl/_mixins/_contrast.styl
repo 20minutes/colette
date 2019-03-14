@@ -35,7 +35,7 @@ _contrast_findFirstMatch($color, $list, $min = $contrast, $index = 0)
     if (_contrast_check($color, $list[$index], $min))
         return $list[$index]
 
-    return _contrast_findFirstMatch($color, $list, $contrast, $index + 1)
+    return _contrast_findFirstMatch($color, $list, $min, $index + 1)
 
 // _contrast_choose($color, $list, $min = $contrast)
 //
