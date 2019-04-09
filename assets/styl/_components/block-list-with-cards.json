@@ -1,6 +1,7 @@
 {
     "classes": ["box"],
     "blockTitle": "Example of a block title",
+    "lazyloadImg": true,
     "list": [
         {
             "id": 1271226,

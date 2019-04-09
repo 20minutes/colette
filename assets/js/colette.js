@@ -32,6 +32,15 @@ colette.IframeResizer = IframeResizer
 colette.fonts = new FontLoader({ data: fontsData })
 
 /**
+ * Blazy instance
+ * @memberof colette
+ * @inner
+ */
+colette.lazy = new Blazy({
+  offset: 500,
+})
+
+/**
  * Pager Constructor
  * @memberof colette
  * @inner
@@ -44,8 +53,13 @@ colette.Pager = Pager
  * @inner
  */
 colette.pagers = []
-Array.prototype.forEach.call(document.querySelectorAll('.block-list'), (item) => {
-  colette.pagers.push(new Pager({ blockList: item }))
+Array.prototype.forEach.call(document.querySelectorAll('.block-list'), (blockList) => {
+  colette.pagers.push(new Pager({
+    blockList,
+    onPageChanged: () => {
+      colette.lazy.load(blockList.querySelectorAll('img.b-lazy:not(.b-loaded)'))
+    },
+  }))
 })
 
 /**
@@ -79,20 +93,15 @@ colette.Tablist = Tablist
  * @inner
  */
 colette.tablists = []
+const onTabShow = (tab, tabPanel) => {
+  colette.lazy.load(tabPanel.querySelectorAll('img.b-lazy:not(.b-loaded)'))
+}
 Array.prototype.forEach.call(document.querySelectorAll('.tabpanel-list'), (item) => {
   const tab = new Tablist(item)
   item.closest('.tabpanel').removeAttribute('data-loading')
+  tab.on('show', onTabShow)
   tab.mount()
   colette.tablists.push(tab)
-})
-
-/**
- * Blazy instance
- * @memberof colette
- * @inner
- */
-colette.lazy = new Blazy({
-  offset: 500,
 })
 
 // Colette global object

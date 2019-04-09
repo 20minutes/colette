@@ -10,6 +10,7 @@
  # @param array    sizes          (optional) Images sizes attritute
  # @param array    classes        (optional) Additional classes
  # @param bool     displayCaption (optional) default false
+ # @param bool     lazyloadImg    (optional) default false
  #
  # @block media                  (optional)
  # @block media_img              (optional)
@@ -40,7 +41,7 @@
                     defaultFormat,
                     mediaFormats,
                     alt,
-                    false,
+                    lazyloadImg|default(false),
                     [],
                     '',
                     sizes

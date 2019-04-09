@@ -4,6 +4,7 @@
 const defaultConfig = {
   itemPerPage: 3,
   blockList: null,
+  onPageChanged: () => {},
 }
 
 /**
@@ -75,6 +76,8 @@ Pager.prototype.paginateEventHandler = function paginateEventHandler(e) {
       item.removeAttribute('aria-hidden')
     }
   })
+
+  this.config.onPageChanged(this.items)
 }
 
 // Pager constructor.
