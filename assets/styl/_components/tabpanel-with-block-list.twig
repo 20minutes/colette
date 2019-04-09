@@ -2,7 +2,10 @@
 
 {% block tab_panels %}
     {% for tab in tabs -%}
-        {% embed 'block-list-with-cards.twig' with tab.body|merge({ id: prefixId ~ loop.index }) only %}
+        {% embed 'block-list-with-cards.twig' with tab.body|merge({
+            id: prefixId ~ loop.index,
+            lazyloadImg: true,
+        }) only %}
             {% block block_classes 'tabpanel-body ' ~ parent() %}
             {% block block_attribute %}
                 id="{{ id }}"
