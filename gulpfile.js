@@ -87,7 +87,8 @@ function scriptsBuild() {
               babelrc: false,
               presets: [
                 ['@babel/preset-env', {
-                  useBuiltIns: 'entry',
+                  useBuiltIns: 'usage',
+                  corejs: 3,
                 }],
               ],
               plugins: [
@@ -95,6 +96,7 @@ function scriptsBuild() {
                   strict: true,
                 }],
               ],
+              sourceType: 'unambiguous',
             },
           },
         }],
