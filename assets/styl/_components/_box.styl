@@ -4,6 +4,7 @@
 // It can be used on a simple `div` on a component block or preview (on homepage or listing pages) or on the content container (content view).
 //
 // .box-borderless - box without white border
+// .box-lined - box with left colored border (can use `border-color-…` helpers)
 //
 // Markup: box.twig
 //
@@ -17,3 +18,7 @@
 
     &-borderless
         border-width 0
+
+    &-lined
+        border-width 0
+        border-left 5px solid currentColor
