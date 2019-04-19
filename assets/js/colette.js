@@ -8,6 +8,7 @@ import IframeResizer from './modules/iframeResizer'
 import FontLoader from './modules/fontLoader'
 import Pager from './modules/pager'
 import Modal from './modules/modal'
+import DropDown from './modules/dropDown'
 import fontsData from '../../fontfaces.json'
 
 /**
@@ -102,6 +103,13 @@ Array.prototype.forEach.call(document.querySelectorAll('.tabpanel-list'), (item)
   tab.mount()
   colette.tablists.push(tab)
 })
+
+/**
+ * DropDown Instances Colection
+ * @memberof colette
+ * @inner
+ */
+colette.dropDowns = [new DropDown()]
 
 // Colette global object
 export { colette }

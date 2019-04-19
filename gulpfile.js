@@ -77,16 +77,22 @@ function scriptsBuild() {
         filename: '[name].min.js',
         libraryTarget: 'umd',
       },
-      mode: 'production',
+      // mode: 'production',
+      mode: 'development',
       module: {
         rules: [{
-          test: /(\.jsx|\.js|\.es6)$/,
+          test: /(\.jsx?|\.es6)$/,
           use: {
             loader: 'babel-loader',
             options: {
               babelrc: false,
+              exclude: [
+                /\bcore-js\b/,
+                /@babel\/runtime/,
+              ],
               presets: [
                 ['@babel/preset-env', {
+                  modules: false,
                   useBuiltIns: 'usage',
                   corejs: 3,
                 }],
@@ -95,6 +101,7 @@ function scriptsBuild() {
                 ['@babel/plugin-transform-strict-mode', {
                   strict: true,
                 }],
+                '@babel/plugin-transform-runtime',
               ],
               sourceType: 'unambiguous',
             },
