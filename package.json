@@ -90,5 +90,8 @@
   "bugs": {
     "url": "https://github.com/20minutes/colette/issues"
   },
-  "homepage": "https://20minutes.github.io/colette/"
+  "homepage": "https://20minutes.github.io/colette/",
+  "engines": {
+    "node": ">=6.10.0 <12"
+  }
 }
