@@ -1,6 +1,6 @@
 {
   "name": "colette",
-  "version": "1.19.0",
+  "version": "1.20.0",
   "license": "MIT",
   "dependencies": {
     "@accede-web/tablist": "^2.0.1",
@@ -90,5 +90,8 @@
   "bugs": {
     "url": "https://github.com/20minutes/colette/issues"
   },
-  "homepage": "https://20minutes.github.io/colette/"
+  "homepage": "https://20minutes.github.io/colette/",
+  "engines": {
+    "node": ">=6.10.0 <12"
+  }
 }
