@@ -1,0 +1,19 @@
+{%- set classes = classes|default([]) -%}
+{%- if modifier_class %}{% set classes = classes|merge([modifier_class]) %}{% endif -%}
+<ul id="{{ id }}" class="symbolList {{ classes|join(' ') }}">
+    <li class="symbolList-item">
+        <a href="#" class="symbolList-link">Dog</a>
+    </li>
+    <li class="symbolList-item">
+        <a href="#" class="symbolList-link">
+            <svg class="symbolList-symbol" height="13" width="11"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#symbol-tick"></use></svg>
+            Cat
+        </a>
+    </li>
+    <li class="symbolList-item">
+        <a href="#" class="symbolList-link">Lion</a>
+    </li>
+    <li class="symbolList-item">
+        <a href="#" class="symbolList-link">Rabbit</a>
+    </li>
+</ul>

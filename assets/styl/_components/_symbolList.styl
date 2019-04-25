@@ -1,0 +1,27 @@
+// SymbolList
+//
+// LinkList usualy use in dropdown
+//
+// Markup: ./symbolList.twig
+//
+// Styleguide Components.SymbolList
+.symbolList
+    _m(.25 0)
+    _p(0)
+    list-style none
+
+    &-item
+        _m(0 2em)
+        position relative
+
+    &-link
+        color $color-base
+        text-decoration none
+
+    &-symbol
+        position absolute
+        left 0
+        top .35em
+        height .8em
+        width .8em
+        transform translateX(calc(-100% - .25em))

@@ -1,0 +1,14 @@
+<div class="dropDown">
+    <button type="button" aria-expanded="false"  class="btn dropDown-btn" aria-controls="dropDown">
+        <span class="mask">Choose your pet</span>
+        Cat
+        <svg class="btn-picto btn-picto-right" height="14" width="14" aria-hidden="true" focusable="false">
+            <use class="up" xlink:href="#symbol-arrow-up"></use>
+            <use class="down" xlink:href="#symbol-arrow-down"></use>
+        </svg>
+    </button>
+    {% include 'symbolList.twig' with {
+        'id': 'dropDown',
+        'classes': ['dropDown-content'],
+    } only %}
+</div>
