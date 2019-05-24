@@ -56,13 +56,23 @@ IframeResizer.prototype.height = function height() {
 }
 
 /**
+ * Send new height information to parent iframe
  */
 IframeResizer.prototype.sendHeight = function sendHeight() {
-  window.top.postMessage({
+  window.parent.postMessage({
     type: 'doResize',
     height: this.el.offsetHeight,
     iframeId: this.iframeId,
   }, '*')
+
+  // This postMessage is dedicated to AMP
+  // https://amp.dev/documentation/components/amp-iframe#iframe-resizing
+  window.parent.postMessage({
+    sentinel: 'amp',
+    type: 'embed-size',
+    height: document.body.scrollHeight,
+  }, '*')
+
   this.resizeInternal = true
 }
 // IframeResizer Constructor.
