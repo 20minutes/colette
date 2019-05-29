@@ -21,7 +21,7 @@ cache:
     - "node_modules"
 
 before_script:
-  - if [ $TRAVIS_PULL_REQUEST = 'true' ] && [ $DEPLOY = 'run' ]; then echo "Percy Enabled " && export PERCY_ENABLE=1; fi
+  - if [ $TRAVIS_PULL_REQUEST != 'false' ] && [ $DEPLOY = 'run' ]; then echo "Percy Enabled" && export PERCY_ENABLE=1; else echo "Percy Disabled" && export PERCY_ENABLE=0; fi
   - echo $PERCY_ENABLE
 
 script:
