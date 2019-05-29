@@ -4,17 +4,30 @@ node_js:
   - "6.10"
   - "lts/*"
 
+env:
+  global:
+    - PERCY_ENABLE=0
+
 matrix:
   include:
     - node_js: "11"
       env: DEPLOY=run
 
+addons:
+  chrome: stable
+
 cache:
   directories:
     - "node_modules"
 
+before_script:
+  - if [ $TRAVIS_PULL_REQUEST = 'true' ] && [ $DEPLOY = 'run' ]; then echo "Percy Enabled " && export PERCY_ENABLE=1; fi
+  - echo $PERCY_ENABLE
+
 script:
   - npm run build
+  - npm run lint
+  - npm start
   - npm test
 
 deploy:

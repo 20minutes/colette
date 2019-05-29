@@ -5,11 +5,11 @@ import 'focus-visible' // focus-visible polyfill
 import Blazy from 'blazy'
 import Tablist from '@accede-web/tablist'
 import IframeResizer from './modules/iframeResizer'
-import FontLoader from './modules/fontLoader'
+// import FontLoader from './modules/fontLoader'
 import Pager from './modules/pager'
 import Modal from './modules/modal'
 import DropDown from './modules/dropDown'
-import fontsData from '../../fontfaces.json'
+// import fontsData from '../../fontfaces.json'
 
 /**
  * Colette
@@ -29,7 +29,7 @@ colette.IframeResizer = IframeResizer
  * @memberof colette
  * @inner
  */
-colette.fonts = new FontLoader({ data: fontsData })
+// colette.fonts = new FontLoader({ data: fontsData })
 
 /**
  * Blazy instance

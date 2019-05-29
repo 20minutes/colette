@@ -169,7 +169,23 @@ function kssBuild(done) {
   }
 
   // generate doc
-  kss(kssConfig).then(() => {
+  kss(kssConfig).then((styleguide) => {
+    const items = []
+    styleguide.data.sections.forEach((section) => {
+      if (section.meta.depth > 1 && section.data.markup !== '') {
+        items.push(section.data.referenceURI)
+      }
+    })
+
+    const json = JSON.stringify(items)
+
+    fs.writeFile(`${__dirname}/cypress/fixtures/items.json`, json, 'utf8', (err) => {
+      if (err) {
+        throw err
+      }
+      console.log('The file has been saved!')
+    })
+
     // retrieve dist directory
     gulp.src(`${cfg.distDir}*/**`)
       .pipe(gulp.dest(`${cfg.docDir}dist/`))
