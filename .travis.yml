@@ -27,7 +27,7 @@ before_script:
 script:
   - npm run build
   - npm run lint
-  - npm start
+  - npm start &
   - npm test
 
 deploy:
