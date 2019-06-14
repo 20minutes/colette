@@ -1,4 +1,4 @@
-{% set id = 'checkbox-switch-' ~ modifier_class|replace(' ', '_') %}
+{% set id = 'checkbox-switch-' ~ modifier_class|default('default')|replace({' ': '_'}) %}
 <p>Checkbox version:</p>
 <label for="{{ id }}">
     <input id="{{ id }}" type="checkbox" class="mask" />
