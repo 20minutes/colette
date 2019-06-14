@@ -1,0 +1,84 @@
+// Switch
+//
+// Switch to improve UI of a natural checkbox.
+//
+// It’s possible to use a button with `role="switch"` ([WAI-aria switch role](https://www.w3.org/TR/wai-aria-1.1/#switch)).
+//
+// In this case it need some javascript to change `aria-checked` attribute to true or false to switch it.
+//
+// It can be modified by `.color-*` helpers but constrast with white text must be correct.
+//
+// .color-default - theme default
+//
+// Markup: ./switch.twig
+//
+// Styleguide Elements.switch
+.switch
+    _fontload($fontstack-base)
+    font-weight bold
+    display inline-block
+    font-size 1em
+    line-height 1em
+    margin 0
+    padding _em(2px)
+    width _em(62px)
+    border-radius 20em
+    height _em(24px)
+    border 0
+    color $color-base
+    background $color-base-lighten
+    vertical-align middle
+    text-align center
+    overflow hidden
+    user-select none
+    text-transform uppercase
+    vertical-align middle
+    align-items center
+    transition background-color .1s linear
+
+    &-wrap
+        display flex
+        justify-content stretch
+        align-items center
+        pointer-events none
+        transition transform .3s
+        transform translateX(_em(-38px))
+
+    &-thumb
+        display block
+        background $color-white
+        height _em(20px)
+        min-width _em(20px)
+        border-radius 20em // excessive size to keep it round
+        flex 0
+        order 1
+        padding _em(3px)
+        fill transparent
+        transition fill .2s linear
+
+    &-on,
+    &-off
+        fs = 12px
+        font-size _em(fs)
+        padding 0 _em(3px, fs)
+        flex 1 0 _em(38px, fs)
+
+    &-on
+        order 0
+        color $color-white
+
+    &-off
+        order 2
+        color $color-base
+
+    &[aria-checked='true']
+    input:checked + &
+    &.is-checked
+        background-color currentColor
+        transition background-color .2s linear .1s
+
+        .switch-wrap
+            transform translateX(0)
+
+        .switch-thumb
+            fill currentColor
