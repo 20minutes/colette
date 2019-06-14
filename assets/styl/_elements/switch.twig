@@ -1,0 +1,23 @@
+{% set id = 'checkbox-switch-' ~ modifier_class|replace(' ', '_') %}
+<p>Checkbox version:</p>
+<label for="{{ id }}">
+    <input id="{{ id }}" type="checkbox" class="mask" />
+    <span class="switch {{ modifier_class }}" aria-hidden="true">
+        <span class="switch-wrap">
+            <span class="switch-on">Yes</span>
+            <svg class="switch-thumb" height="11" width="11"><use xlink:href="#symbol-tick"></use></svg>
+            <span class="switch-off">No</span>
+        </span>
+    </span>
+    checkbox label
+</label>
+
+<p>Button version:</p>
+<button role="switch" aria-checked="false" class="switch {{ modifier_class }}">
+    <span class="switch-wrap">
+        <span class="switch-on">Yes</span>
+        <svg class="switch-thumb" height="11" width="11"><use xlink:href="#symbol-tick"></use></svg>
+        <span class="switch-off">No</span>
+    </span>
+</button>
+
