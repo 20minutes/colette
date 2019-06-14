@@ -1,8 +1,9 @@
+{% set id = 'form-field-' ~ modifier_class|default('default')|replace({' ': '_'}) %}
 <form action="#">
     <div class="form-field">
         <p>
-            <label for="{{ modifier_class|replace({'.': ''}) }}">Label</label>
-            <input class="{{ modifier_class }}" type="text" id="{{ modifier_class|replace({'.': ''}) }}" />
+            <label for="{{ id }}">Label</label>
+            <input class="{{ modifier_class }}" type="text" id="{{ id }}" />
         </p>
     </div>
 </form>
