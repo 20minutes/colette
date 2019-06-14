@@ -45,6 +45,7 @@
     "gulp-stylus": "^2.7.0",
     "gulp-svgstore": "^7.0.1",
     "gulp-twig-pipe": "^0.1.0",
+    "jsdoc": "^3.6.2",
     "kss": "3.0.0-beta.25",
     "postcss-focus-visible": "^4.0.0",
     "serve-static": "^1.14.1",
@@ -94,6 +95,6 @@
   },
   "homepage": "https://20minutes.github.io/colette/",
   "engines": {
-    "node": ">=6.10.0 <12"
+    "node": ">=6.10.0"
   }
 }
