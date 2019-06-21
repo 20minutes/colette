@@ -27,7 +27,7 @@ jobs:
         on:
           branch: master
     - stage: npm release
-      if: (tag =~ ^v) AND (branch = master)
+      if: (tag =~ ^v)
       script: npm run build
       node_js: "12"
       deploy:
