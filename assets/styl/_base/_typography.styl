@@ -133,13 +133,13 @@ p
     word-wrap break-word
     hyphens none
 
-/* (1) On conserve les espaces / retours à la ligne autant que possible */
+// (1) we keep spaces and carriage return as far as possible
 code
 pre
 samp
     white-space pre-wrap // 1
 
-/* Un "début" de responsive : largeur maxi (donc hauteur auto) de certains élements */
+// a start for responsive: max width and auto height for some native elements
 img
 table
 td
@@ -150,10 +150,6 @@ textarea
 input
     height auto
     max-width 100%
-
-// iframe should be block by default
-iframe
-    display block
 
 code
 kbd
