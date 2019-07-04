@@ -1,6 +1,6 @@
 {
   "name": "colette",
-  "version": "1.26.0",
+  "version": "2.0.0",
   "license": "MIT",
   "dependencies": {
     "@accede-web/tablist": "^2.0.1",
