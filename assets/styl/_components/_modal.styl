@@ -1,6 +1,11 @@
 // Modal
 //
-// Colette uses the accessible modal a11y-dialog (https://www.npmjs.com/package/a11y-dialog).
+// Colette uses the accessible modal [a11y-dialog](https://www.npmjs.com/package/a11y-dialog).
+//
+// For react project we use [react-modal](https://www.npmjs.com/package/react-modal)
+// but CSS need some overwrite to match the overlay as a wrapper.
+//
+// .modal-window-closeOutside - to let close button outside modal body
 //
 // Markup: modal.twig
 //
@@ -42,7 +47,13 @@
         display flex
         flex-direction column
 
-    &-closebtn
+        &-closeOutside
+            padding-top: _rem(40px)
+
+            .modal-close
+                right 0
+
+    &-close
         position absolute
         z-index 2
         top _rem(10px)
