@@ -1,6 +1,6 @@
 <!-- For demo, we overide some css of `.modal` properties to not make it overlay all the viewport -->
 <div class="modal" style="height:50vh; max-height:25rem; position:relative; overflow:hidden;" >
-    <div class="modal-overlay" data-a11y-dialog-hide="true"></div>
+    <div class="modal-overlay" style="position:absolute;" data-a11y-dialog-hide="true"></div>
     <div class="modal-window {{modifier_class}}" role="dialog" open="">
         <button type="button" class="modal-close btnIcon" data-a11y-dialog-hide="true"><svg height="12" width="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#symbol-cross"></use></svg></button>
         <div class="modal-content box pa3">This is an accessible modal</div>
