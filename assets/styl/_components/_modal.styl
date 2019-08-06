@@ -2,10 +2,15 @@
 //
 // Colette uses the accessible modal [a11y-dialog](https://www.npmjs.com/package/a11y-dialog).
 //
+// By defaut modal is 90% of viewport width
+//
 // For react project we use [react-modal](https://www.npmjs.com/package/react-modal)
 // but CSS need some overwrite to match the overlay as a wrapper.
 //
-// .modal-window-closeOutside - to let close button outside modal body
+// .modal-window-auto - modal width related to content
+// .modal-window-small - modal width 440px
+// .modal-window-medium - modal width 600px
+// .modal-window-closeOutside - close button outside modal body
 //
 // Markup: modal.twig
 //
@@ -19,20 +24,20 @@
 // Styleguide Components.Modal.demo
 .modal
     position fixed
+    overflow auto
     width 100%
     height 100%
     z-index: $zIndex.modals
     top 0
     left 0
     display flex
-    align-items center
-    justify-content center
+    -webkit-overflow-scrolling touch // enable iOs momentum-based scrolling
 
     &[aria-hidden=true]
         display none
 
     &-overlay
-        position absolute
+        position fixed
         top -30%
         bottom -30% // These negative values avoid gap between address bar & overlay, on mobile, when address bar disappear
         left 0
@@ -40,23 +45,35 @@
         background rgba(0, 0, 0, .6)
 
     &-window
-        -webkit-overflow-scrolling touch // enable iOs momentum-based scrolling
+        _pt(1)
+        _pb(1)
         position relative
+        margin auto
+        width 90%
         max-width 90%
-        max-height 90%
         display flex
         flex-direction column
 
+        &-auto
+            width auto
+
+        &-small
+            width _rem(440)
+
+        &-medium
+            width _rem(600)
+
         &-closeOutside
-            padding-top: _rem(40px)
+            padding-top _rem(40px)
 
             .modal-close
+                top _rem(10px)
                 right 0
 
     &-close
         position absolute
         z-index 2
-        top _rem(10px)
+        top _rem(10px) + _gutters(1)
         right _rem(10px)
 
         svg
@@ -68,6 +85,5 @@
     &-content
         position relative
         z-index 1
-        overflow auto
         width 100%
-        height 100%
+        overflow hidden
