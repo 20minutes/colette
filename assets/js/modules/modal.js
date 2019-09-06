@@ -26,7 +26,7 @@ const defaultConfig = {
  */
 function Modal(cfg) {
   // Merge default with current cfg
-  this.config = Object.assign({}, defaultConfig, cfg)
+  this.config = { ...defaultConfig, ...cfg }
   this.build()
   this.isInserted = false
 }

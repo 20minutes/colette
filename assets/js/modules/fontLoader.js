@@ -48,7 +48,7 @@ function isFontFaceSetCompatible() {
  * @param {boolean} [cfg.optional=true] imitate `font-display: optional` behavior
  */
 function FontLoader(cfg) {
-  this.config = Object.assign({}, defaultConfig, cfg)
+  this.config = { ...defaultConfig, ...cfg }
   this.isActive = false
 
   this.init()
