@@ -16,7 +16,7 @@ const defaultConfig = {
  */
 function Pager(cfg) {
   // Merge default with current cfg
-  this.config = Object.assign({}, defaultConfig, cfg)
+  this.config = { ...defaultConfig, ...cfg }
 
   this.blockList = this.config.blockList
   this.block = this.blockList.closest('.block')

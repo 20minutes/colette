@@ -15,7 +15,7 @@ class DropDown {
    * @param {String} [cfg.contentSelector='.dropDown-content'] content css selector
    */
   constructor(cfg) {
-    this.config = Object.assign({}, defaultConfig, cfg)
+    this.config = { ...defaultConfig, ...cfg }
 
     this.bindEvents()
   }
