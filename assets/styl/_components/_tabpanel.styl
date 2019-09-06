@@ -10,6 +10,17 @@
 //
 // Styleguide Components.TabPanel
 
+// Fake tab Panel
+//
+// Same UI but it’s real navigation, with anchors and not javascript driven panels.
+//
+// Current Link should be set by `aria-current="page"` attribute.
+//
+// Markup: tabpanel-fake.twig
+//
+// Styleguide Components.TabPanel.Fake
+
+
 // Tab Panel with block of cards
 //
 // Markup: tabpanel-with-block-list.twig
@@ -26,7 +37,7 @@
         padding 0
         list-style none
 
-        .no-js &
+        .no-js &[role='tablist']
             display none
 
         &-tab
@@ -51,6 +62,7 @@
 
             .tabpanel[data-loading] &[data-open]
             &[aria-selected=true]
+            &[aria-current='page']
                 color currentColor
                 background-color $color-white
                 border-color transparent
@@ -67,6 +79,8 @@
                     width 3px
 
             &[aria-disabled=true]
+                cursor not-allowed
+                pointer-events none
                 background $color-secondary
                 cursor initial
 

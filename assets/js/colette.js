@@ -95,7 +95,7 @@ colette.tablists = []
 const onTabShow = (tab, tabPanel) => {
   colette.lazy.load(tabPanel.querySelectorAll('img.b-lazy:not(.b-loaded)'))
 }
-Array.prototype.forEach.call(document.querySelectorAll('.tabpanel-list'), (item) => {
+Array.prototype.forEach.call(document.querySelectorAll('.tabpanel-list[role="tablist"]'), (item) => {
   const tab = new Tablist(item)
   item.closest('.tabpanel').removeAttribute('data-loading')
   tab.on('show', onTabShow)

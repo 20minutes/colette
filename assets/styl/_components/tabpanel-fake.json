@@ -1,0 +1,29 @@
+{
+  "classes": ["box"],
+  "prefixId": "tab-",
+  "panelsClasses": ["pa1"],
+  "tabs": [
+    {
+      "title": "Tab 1",
+      "open": true,
+      "url": "#kssref-components-tabpanel-fake",
+      "body": "<p>Content of fake pannel</p>"
+    },
+    {
+      "title": "Tab 2",
+      "url": "#kssref-components-tabpanel-fake",
+      "body": "The 2<sup>nd</sup> panel content (never displayed)"
+    },
+    {
+      "title": "Tab 3",
+      "url": "#kssref-components-tabpanel-fake",
+      "disabled": true,
+      "body": "This is an example of a disabled panel (never displayed)"
+    },
+    {
+      "title": "Tab 4",
+      "url": "#kssref-components-tabpanel-fake",
+      "body": "The 4<sup>th</sup> panel content (never displayed)"
+    }
+  ]
+}
