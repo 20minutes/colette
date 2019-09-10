@@ -37,12 +37,12 @@
   ]
 },{
   "family": "Open Sans WebFont",
-  "weight": 900,
+  "weight": 600,
   "style": "normal",
   "src": [
-    "local('Open Sans ExtraBold')",
-    "local('Open-Sans-ExtraBold')",
-    "url('../fonts/OpenSans-ExtraBold.woff2') format('woff2')",
-    "url('../fonts/OpenSans-ExtraBold.woff') format('woff')"
+    "local('Open Sans SemiBold')",
+    "local('Open-Sans-SemiBold')",
+    "url('../fonts/OpenSans-SemiBold.woff2') format('woff2')",
+    "url('../fonts/OpenSans-SemiBold.woff') format('woff')"
   ]
 }]
