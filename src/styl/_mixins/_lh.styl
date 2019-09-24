@@ -1,0 +1,53 @@
+
+// Line height (vertical rythm)
+//
+// Colette provides some mixins to manage vertical rythm based on `$lh` settings.
+//
+// Styleguide Mixins.LineHeight
+
+// _calcLines($lines, $font-size, $line-height = $lh)
+//
+// Return new number of lines adding some line division if initial `$lines` parameter is not enough.
+//
+// $lines       - the number of lines (Integer)
+// $font-size   - `font-size`
+// $line-height - reference line-height
+//
+// Styleguide Mixins.LineHeight.calcLines
+_calcLines($lines, $font-size, $line-height = $lh)
+    if ($lines * $line-height - $font-size) >= $lh-gap
+        return $lines
+    return _calcLines($lines + $lh-division, $line-height, $font-size)
+
+// _lines($font-size, $line-height = $lh)
+//
+// Return number of lines necessary for $font-size.
+//
+// $font-size   - `font-size`
+// $line-height - reference line-height
+//
+// Styleguide Mixins.LineHeight.calcLines
+_lines($font-size, $line-height = $lh)
+    return _calcLines(ceil(($font-size / $lh-division)  / $line-height) * $lh-division, $font-size, $line-height)
+
+// _lh($lines, $line-height = $lh)
+//
+// Return size for a number on lines.
+//
+// $lines       - the number of lines (Integer)
+// $line-height - reference line-height
+//
+// Styleguide Mixins.LineHeight.calcLines
+_lh($lines, $line-height = $lh)
+    return $lines * $line-height
+
+// _lines($font-size, $line-height = $lh)
+//
+// Return `line-height` value necessary for $font-size.
+//
+// $font-size   - `font-size`
+// $line-height - reference line-height
+//
+// Styleguide Mixins.LineHeight.calcLines
+_getLh($font-size, $line-height = $lh)
+    return _lh(_lines($font-size, $line-height), $line-height)

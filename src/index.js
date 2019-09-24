@@ -4,12 +4,14 @@ import 'focus-visible' // focus-visible polyfill
 // modules
 import Blazy from 'blazy'
 import Tablist from '@accede-web/tablist'
-import IframeResizer from './modules/iframeResizer'
-import FontLoader from './modules/fontLoader'
-import Pager from './modules/pager'
-import Modal from './modules/modal'
-import DropDown from './modules/dropDown'
-import fontsData from '../../fontfaces.json'
+import IframeResizer from './js/iframeResizer'
+import FontLoader from './js/fontLoader'
+import Pager from './js/pager'
+import Modal from './js/modal'
+import DropDown from './js/dropDown'
+import fontsData from '../fontfaces.json'
+// CSS
+import './styl/index.styl'
 
 /**
  * Colette

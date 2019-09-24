@@ -1,9 +1,10 @@
 {
   "opts": {
     "template": "node_modules/docdash",
-    "destination": "./docs/api"
+    "destination": "./dist/api"
   },
   "source": {
+    "include": "./src/js",
     "includePattern": ".js$"
   },
   "sourceType": "module",

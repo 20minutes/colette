@@ -4,11 +4,11 @@ module.exports = function extend(Twig) {
    * Note that the default `truncate` filter fails when the limit falls
    * into the last word of `text`.
    *
-   * @param string    text
-   * @param int       maxLength
-   * @param string    breaker
+   * @param {string} text
+   * @param {int} maxLength
+   * @param {string} breaker
    *
-   * @return string
+   * @return {string}
    */
   function smartCut(text, maxLength = 30, breaker = '…') {
     if (!text || text.length <= maxLength) {

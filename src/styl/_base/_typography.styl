@@ -16,7 +16,7 @@ body
     _fontload($fontstack-base)
     color $color-base
     font-size 1rem
-    line-height 1.5
+    line-height _getLh(@font-size)
     -webkit-font-smoothing antialiased
     -moz-osx-font-smoothing grayscale // FF
 
@@ -32,16 +32,19 @@ h5
 h6
     _fontload($fontstack-headings)
     font-weight bold
-    line-height 1.2
+    line-height _lh(1)
 
 h1
     font-size _rem(21px)
+    line-height _getLh(@font-size)
 
 h2
-    font-size _rem(16px)
+    font-size _rem(17px)
+    line-height _getLh(@font-size)
 
 h3
     font-size _rem(14px)
+    line-height _getLh(@font-size)
 
 // list
 ul
@@ -60,7 +63,7 @@ li ul
 
 //
 hr
-    _m(2 0 4)
+    margin _lh(2) 0 _lh(4)
     clear both
     background-color $color-base
     border 0
@@ -104,7 +107,7 @@ table
 thead
     tr
         background-color $color-base
-        color white
+        color $color-white
 
 td
 th

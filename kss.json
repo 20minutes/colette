@@ -1,19 +1,18 @@
 {
-  "source": "assets/styl",
-  "destination": "docs",
+  "source": "src/styl",
+  "destination": "dist",
   "//": "The css and js paths are URLs relative to the style guide destination.",
   "css": [
-    "dist/css/colette.min.css"
+    "colette.min.css"
   ],
   "js": [
-    "dist/js/colette.min.js"
+    "colette.min.js"
   ],
   "title": "Colette Style Guide",
   "verbose": false,
   "homepage": "../../README.md",
   "builder": "colette-kss-builder",
   "extend": [
-    "assets/twig/filters"
-  ],
-  "svg": "dist/svg/svg.svg"
+    "src/twig/filters"
+  ]
 }

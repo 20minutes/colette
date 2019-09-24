@@ -1,6 +1,6 @@
 {
     "media": {
-        "src": "./dist/img/648x415_article-preview.jpg",
+        "src": "./img/%format_article-preview.jpg",
         "caption": "The media caption",
         "credit": "by someone"
     },
