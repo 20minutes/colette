@@ -71,7 +71,7 @@
   "main": "dist/js/colette.min.js",
   "files": [
     "dist",
-    "assets",
+    "src",
     "favicon.ico",
     "fontfaces.json"
   ],
