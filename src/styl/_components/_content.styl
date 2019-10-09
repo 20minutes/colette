@@ -1,0 +1,56 @@
+// Content
+//
+// A contribued content container able to tyle every standard element and widget inside.
+//
+// This class can be used on any block containing some contribued content.
+//
+// Markup: content.twig
+//
+// Styleguide Components.Content
+.content
+
+    // Link
+    a:not([class])
+        color $color-links
+        transition filter .2s linear
+
+        &:hover
+            filter brightness(60%)
+
+    // Paragraphes
+    > p
+        margin-bottom _lh(1)
+
+    // Image + legend
+    //
+    // should look like `.media`
+    figure
+        margin-bottom _lh(1)
+
+    // copy of media>figcaption and media-caption style
+    figcaption
+        padding-top _lh(.5)
+        font-size .85em
+        color $color-tertiary
+        line-height _lh(1)
+
+        // overide anchor text color (<a> without href)
+        > a
+            color $color-tertiary
+
+    // Separator
+    hr
+        margin-top 0
+        margin-bottom _lh(1)
+        background-color $color-borders
+
+    // Quote
+    blockquote
+        font-size _rem(16px)
+        margin-bottom _lh(1)
+
+    // Iframe
+    iframe
+        margin-bottom _lh(1)
+        width 100%
+        max-width 100%
