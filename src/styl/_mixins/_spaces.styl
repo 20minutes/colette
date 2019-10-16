@@ -8,7 +8,9 @@
 @require '_map'
 
 _gutters(i)
-    return i * _rem($grid-gutter)
+    if typeof(i) == 'unit' && unit(i) == ''
+        return i * _rem($grid-gutter)
+    return i
 
 // _p()
 //
