@@ -17,7 +17,7 @@
 _calcLines($lines, $font-size, $line-height = $lh)
     if ($lines * $line-height - $font-size) >= $lh-gap
         return $lines
-    return _calcLines($lines + $lh-division, $line-height, $font-size)
+    return _calcLines($lines + $lh-division, $font-size, $line-height)
 
 // _lines($font-size, $line-height = $lh)
 //
