@@ -1,0 +1,40 @@
+// _hslVars
+//
+// Mixin to help to generate variable of colors decomposed in hue, saturation and lightness
+//
+//
+// ```stylus
+// :root
+//     /** red */
+//     _hslVars(--red, red)
+//     /** green */
+//     _hslVars(--green, green)
+//     /** blue */
+//     _hslVars(--blue, blue)
+// ````
+//
+// ```css
+// :root {
+//     /** red */
+//     --red-h: 0deg;
+//     --red-s: 100%;
+//     --red-l: 50%;
+//     --red: hsl(var(--red-h), var(--red-s), var(--red-l));
+//     /** green */
+//     --green-h: 120deg;
+//     --green-s: 100%;
+//     --green-l: 25.098039215686274%;
+//     --green: hsl(var(--green-h), var(--green-s), var(--green-l));
+//     /** blue */
+//     --blue-h: 240deg;
+//     --blue-s: 100%;
+//     --blue-l: 50%;
+//     --blue: hsl(var(--blue-h), var(--blue-s), var(--blue-l));
+// ```
+//
+// Styleguide: Mixins.HLSvariables
+_hslVars($hslVars-name, $hslVars-color)
+    {$hslVars-name}-h unit(hue($hslVars-color), '')
+    {$hslVars-name}-s saturation($hslVars-color)
+    {$hslVars-name}-l lightness($hslVars-color)
+    {$hslVars-name} s('hsl(var(%s-h), var(%s-s), var(%s-l))', $hslVars-name, $hslVars-name, $hslVars-name)

@@ -12,15 +12,15 @@
     width 2.625em // 42px retative to 16px // TODO: use a convert (px to em) function
     height 2.625em // 42px retative to 16px // TODO: use a convert (px to em) function
     border-radius 80em // excessive value to keep it round
-    background $color-borders
-    border 3px solid $color-borders
+    background var(--color-borders)
+    border 3px solid var(--color-borders)
 
     > img
     > svg
         display block
         width 100%
         height @width
-        fill $color-base
+        fill var(--color-base)
 
     > svg
         margin-top .05em // fix position of svg symbol-user

@@ -1,0 +1,44 @@
+// Colors
+//
+// Every design’s colors are declined as CSS custom properties.
+//
+// Styleguide: CSSvariables.color
+:root
+    --color-secondary: $color-gray-8
+    --color-tertiary: $color-gray-7
+
+    --color-bg-base: $color-gray-11
+    --color-bg-secondary: $color-gray-max
+    --color-bg-tertiary: $color-gray-12
+
+    --color-fade: $color-gray-10
+    --color-borders: $color-gray-9
+
+    --color-links: $color-links
+    --color-footer: $color-footer
+    --color-native: $color-native
+
+    _hslVars(--color-base, $color-base)
+    --color-base-foreground $color-white
+
+    _hslVars(--color-highlight, $color-highlight)
+    --color-highlight-foreground $color-white
+
+    _hslVars(--color-info, $color-info)
+    _hslVars(--color-success, $color-success)
+    _hslVars(--color-warning, $color-warning)
+    _hslVars(--color-error, $color-error)
+
+    for key, value in $colors-themes
+        _hslVars(s('--color-%s', unquote(key)), value)
+        // TODO: 2 as contrast ratio is not enough but we should change some colors to fix it
+        --color-{key}-foreground _contrast_choose(value, $color-white $color-base, 2)
+
+    for key, value in $colors-socials
+        _hslVars(s('--color-%s', unquote(key)), value)
+        // TODO: 2 as contrast ratio is not enough but we should change some colors to fix it
+        --color-{key}-foreground _contrast_choose(value, $color-white $color-base, 2)
+
+// Ready to set a dark mode using an attribute
+// to overwrite those colors
+// [data-theme='dark']
