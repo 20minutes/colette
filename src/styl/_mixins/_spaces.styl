@@ -3,7 +3,7 @@
 // Spaces mixins return `margin` and `padding` properties based on a multiple of the `$grid-gutter` size.
 // <br /> Note that `$grid-gutter` value is defined in Colette’s settings, but it can be overridden in your project stylus file.
 //
-// Styleguide Mixins.Spaces
+// Styleguide: Mixins.Spaces
 
 @require '_map'
 
@@ -38,7 +38,7 @@ _gutters(i)
 //
 // args   - multiplier of `$grid-gutter`
 //
-// Styleguide Mixins.Spaces.pa
+// Styleguide: Mixins.Spaces.pa
 _p(values)
     if length(values) > 4
         warn('_p can only receive a list of 4 numbers max')
@@ -64,7 +64,7 @@ _p(values)
 //
 // $i   - multiplier of `$grid-gutter`
 //
-// Styleguide Mixins.Spaces.pt
+// Styleguide: Mixins.Spaces.pt
 _pt(i)
     padding-top _gutters(i)
 
@@ -88,7 +88,7 @@ _pt(i)
 //
 // $i   - multiplier of `$grid-gutter`
 //
-// Styleguide Mixins.Spaces.pr
+// Styleguide: Mixins.Spaces.pr
 _pr(i)
     padding-right _gutters(i)
 
@@ -112,7 +112,7 @@ _pr(i)
 //
 // $i   - multiplier of `$grid-gutter`
 //
-// Styleguide Mixins.Spaces.pb
+// Styleguide: Mixins.Spaces.pb
 _pb(i)
     padding-bottom _gutters(i)
 
@@ -136,7 +136,7 @@ _pb(i)
 //
 // $i   - multiplier of `$grid-gutter`
 //
-// Styleguide Mixins.Spaces.pl
+// Styleguide: Mixins.Spaces.pl
 _pl(i)
     padding-left _gutters(i)
 
@@ -167,7 +167,7 @@ _pl(i)
 //
 // args   - multiplier of `$grid-gutter`
 //
-// Styleguide Mixins.Spaces.ma
+// Styleguide: Mixins.Spaces.ma
 _m(values)
     if length(values) > 4
         warn('_m can only receive a list of 4 numbers max')
@@ -193,7 +193,7 @@ _m(values)
 //
 // $i   - multiplier of `$grid-gutter`
 //
-// Styleguide Mixins.Spaces.mt
+// Styleguide: Mixins.Spaces.mt
 _mt(i)
     margin-top _gutters(i)
 
@@ -217,7 +217,7 @@ _mt(i)
 //
 // $i   - multiplier of `$grid-gutter`
 //
-// Styleguide Mixins.Spaces.mr
+// Styleguide: Mixins.Spaces.mr
 _mr(i)
     margin-right _gutters(i)
 
@@ -241,7 +241,7 @@ _mr(i)
 //
 // $i   - multiplier of `$grid-gutter`
 //
-// Styleguide Mixins.Spaces.mb
+// Styleguide: Mixins.Spaces.mb
 _mb(i)
     margin-bottom _gutters(i)
 
@@ -265,6 +265,6 @@ _mb(i)
 //
 // $i   - multiplier of `$grid-gutter`
 //
-// Styleguide Mixins.Spaces.ml
+// Styleguide: Mixins.Spaces.ml
 _ml(i)
     margin-left _gutters(i)

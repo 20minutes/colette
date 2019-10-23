@@ -2,7 +2,7 @@
 //
 // Colette provides mixins to create custom responsive grid layouts.
 //
-// Styleguide Mixins.Grids
+// Styleguide: Mixins.Grids
 
 // _column(size)
 //
@@ -11,7 +11,7 @@
 // $size         - the number of columns (out of 12) it must span
 // $flt = left   - the float direction (if set to `none`, the property won't be output)
 //
-// Styleguide Mixins.Grids.column
+// Styleguide: Mixins.Grids.column
 _column(size, flt=left)
     float unquote(flt) if none != unquote(flt)
     width round(size * 100 / $grid-columns, 3) * 1%
@@ -23,7 +23,7 @@ _column(size, flt=left)
 //
 // $size    - the number of columns (out of 12) that defines the width of the margin
 //
-// Styleguide Mixins.Grids.offset
+// Styleguide: Mixins.Grids.offset
 _offset(size)
     margin-left round(size * 100 / $grid-columns, 3) * 1%
 
@@ -35,7 +35,7 @@ _offset(size)
 // $breakpoint   - the targeted breakpoint
 // $size         - the number of columns (out of 12) it must span
 //
-// Styleguide Mixins.Grids.gridColumn
+// Styleguide: Mixins.Grids.gridColumn
 _gridColumn(breakpoint, size)
     @media $breakpoints[breakpoint]
         _column(size)
