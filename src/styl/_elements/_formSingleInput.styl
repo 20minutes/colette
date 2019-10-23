@@ -39,13 +39,19 @@
         right 0
         bottom 0
         width _rem(42px)
-        border 1px solid $color-secondary
+        border 1px solid var(--color-secondary)
         border-radius 0 20em 20em 0 // excessive value to keep it round
-        background-color $color-secondary
-        color $color-base
+        background-color var(--color-secondary)
+        color var(--color-base)
 
         svg
             _mr(.5)
             font-size _rem(21px)
             height 1em
             width 1em
+
+        &:disabled
+            opacity .5
+
+        &:enabled:hover
+            filter brightness(90%) contrast(110%)

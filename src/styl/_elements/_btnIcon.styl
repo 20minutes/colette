@@ -8,12 +8,15 @@
 //
 // Styleguide Elements.IconButtons
 .btnIcon
+    --btn-color: var(--color-secondary)
+    --btn-text-color: var(--color-base)
+
     display inline-block
     vertical-align middle
     border-radius 60em // oversize radius to keep it round
-    background-color $color-secondary
-    transition background-color .2s ease
-    color $color-base
+    background-color var(--btn-color)
+    color var(--btn-text-color)
+    transition filter .2s ease
 
     svg
         width 1em
@@ -25,4 +28,4 @@
         opacity .5
 
     &:enabled:hover
-        background-color darken($color-secondary, 20%)
+        background-color brightness(90%) contrast(110%)

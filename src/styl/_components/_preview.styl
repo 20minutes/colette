@@ -43,7 +43,7 @@
                 font-size .9em
 
         &-catchline
-            background-color $color-native
+            background-color var(--color-native)
 
     &-cover
         .media
@@ -82,13 +82,14 @@
                 margin 0 .3em -.1em 0
 
             &:hover
-                color $color-links
+                color var(--color-links)
 
-        for key, value in $colors
-            &-{key}
+        for key, value in $colors-themes
+            $name = replace('theme-', '', key)
+            &-{$name}
                 .preview-related-link
                     svg
-                        color value
+                        color s('var(--color-%s)', unquote(key))
 
     &-footer
         position relative

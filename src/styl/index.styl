@@ -45,6 +45,17 @@ use('stylus-svg/index.js')
 // Styleguide: Animations
 @require '_animations/*'
 
+// CSS Variables
+//
+// Since v5 Colette implement some CSS custom properties.
+// Css custom properties are currently set only at root level in Colette to allow
+// [postcss-css-variable](https://github.com/MadLittleMods/postcss-css-variables) to generate fallback (for IE).
+//
+// Weight: 8
+//
+// Styleguide: CSSvariables
+@require '_variables/*'
+
 // normalize
 @require 'normalize.css/normalize.css'
 

@@ -43,13 +43,12 @@ clearfix = @block
 // is equivalent to
 // ```stylus
 // .foo
-//    outline dashed thin $color-base
-//    outline-offset .3em
+//    outline dashed thin var(--color-tertiary)
 // ```
 //
 // Styleguide @blocks.Block.outline
 outline = @block
-    outline dotted thin $color-tertiary
+    outline dotted thin var(--color-tertiary)
 
 // {fullWidth}
 //

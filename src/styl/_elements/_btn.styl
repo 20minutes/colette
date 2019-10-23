@@ -7,6 +7,10 @@
 // Markup: btn.twig
 //
 // Styleguide Elements.Buttons
+:root
+    --btn-color: var(--color-secondary)
+    --btn-text-color: var(--color-base)
+
 .btn
     _fontload($fontstack-secondary)
     display inline-block
@@ -16,10 +20,10 @@
     font-size .875em
     font-weight bold
     text-transform uppercase
-    background-color $color-secondary
-    border 2px solid $color-secondary
-    transition background-color .2s ease, border-color .2s ease, color .2s ease
-    color $color-base
+    background-color var(--btn-color)
+    border 2px solid var(--btn-color)
+    transition filter .2s ease
+    color var(--btn-text-color)
     line-height 1.5em
     vertical-align baseline
 
@@ -40,17 +44,11 @@
     &:enabled
     &[href]
         &:hover
-            background-color darken($color-secondary, 20%)
-            border-color darken($color-secondary, 20%)
+            filter brightness(90%) contrast(110%)
 
     &-line
-        color $color-base
-        background-color transparent
-        border-color currentColor
+        --btn-text-color: var(--color-base)
 
-        &:enabled
-        &[href]
-            &:hover
-                color darken($color-base, 20%)
-                background-color transparent
-                border-color currentColor
+        color var(--btn-text-color)
+        background-color transparent
+        border-color var(--btn-text-color)

@@ -38,7 +38,7 @@
         display block
         width 100%
         height auto
-        background-color lighten($color-default, 80%)
+        background-color lighten($color-theme-default, 80%)
         background-image svgImport($mediaPlaceholder, $mediaPlaceholder-style)
         background-size 65% 65%
         background-position 50%
@@ -48,7 +48,7 @@
     figcaption
         _pt(.5)
         font-size .85em
-        color $color-tertiary
+        color var(--color-tertiary)
         line-height 1
 
     &-wrap

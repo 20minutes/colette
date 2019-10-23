@@ -7,12 +7,21 @@
 // Markup: colors.twig
 //
 // Styleguide Helpers.Colors
-for key, value in $colors
-    .border-color-{key}
-        border-color value
+$helpers-colors ?= merge($colors-themes, {
+    base: $color-base,
+    native: $color-native,
+    highlight: $color-highlight,
+})
 
-    .bg-{key}
-        background-color value
+for key, value in $helpers-colors
+    $name = replace('theme-', '', key)
+    $var = s('var(--color-%s)', unquote(key))
 
-    .color-{key}
-        color _contrast_choose($color-white, value $color-base, 1.5)
+    .border-color-{$name}
+        border-color $var
+
+    .bg-{$name}
+        background-color $var
+
+    .color-{$name}
+        color $var
