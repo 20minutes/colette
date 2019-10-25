@@ -6,7 +6,7 @@
 //
 // Markup: pager.twig
 //
-// Styleguide Elements.Pager
+// Styleguide: Elements.Pager
 
 // Pager with a list
 //
@@ -14,9 +14,9 @@
 //
 // Markup: pager-withlist.twig
 //
-// Styleguide Elements.Pager.PagerWithlist
+// Styleguide: Elements.Pager.PagerWithlist
 .pager
-    color $color-secondary
+    color var(--color-secondary)
     font-family $fontstack-secondary
     display flex
     align-items center
@@ -28,19 +28,19 @@
 
     &-current
     &-max
-        color $color-base
+        color var(--color-base)
 
     &-next
     &-prev
         background transparent
-        color $color-base
+        color var(--color-base)
         line-height 1em
         margin-bottom -.1em
         position relative
 
         &:disabled
         &[aria-hidden] // disabled link is a span[aria-hidden]
-            color $color-secondary
+            color var(--color-secondary)
 
         svg
             width 1em
@@ -75,7 +75,7 @@
 
         a
         strong // current page is strong
-            color $color-base
+            color var(--color-base)
 
         > li
             display inline-block

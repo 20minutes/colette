@@ -22,7 +22,7 @@
 //
 // Markup: ./btnSkin.twig
 //
-// Styleguide Theme.Buttons
+// Styleguide: Themes.Buttons
 
 // Buttons transparent skin
 //
@@ -35,6 +35,8 @@
 // Default Social Buttons skin
 //
 // All social colors are available to style the button according to its context.
+//
+// Button skin are not supported for IE (css custom properties).
 //
 // Social Button skins can be used with `.btn` and `.btnIcon`
 // They are not compatible with `.btn-line`
@@ -60,56 +62,37 @@
 //
 // Weight: 1
 //
-// Styleguide Theme.Buttons.Socials
+// Styleguide: Themes.Buttons.Socials
+
+$btnSkin-colors = merge($colors-themes, $colors-socials, {
+    base: $color-base,
+    highlight: $color-highlight,
+})
 
 .btnSkin
-    for key, value in $colors
-        &-{key}
-            // TODO: 2 as contrast ratio is not enough but we should change some colors to fix it
-            color _contrast_choose(value, $color-white $color-base, 2)
-            border-color value
-            background-color value
-
-            &:enabled
-            &[href]
-                &:hover
-                    background-color darken(value, 20%)
-                    border-color darken(value, 20%)
+    for key, value in $btnSkin-colors
+        &-{replace('social-', '', replace('theme-', '', key))}
+            // TODO : replace when we drop support of IE
+            // --btn-color s('var(--color-%s)', unquote(key))
+            // --btn-text-color s('var(--color-%s-foreground)', unquote(key))
+            // IE support for colors : replace when we drop support of IE
+            background-color s('var(--color-%s)', unquote(key))
+            border-color s('var(--color-%s)', unquote(key))
+            color s('var(--color-%s-foreground)', unquote(key))
 
             &.btn-line
-                color value
-                border-color currentColor
+                // TODO : replace when we drop support of IE
+                // --btn-text-color s('var(--color-%s)', unquote(key))
+                // IE support for colors : replace when we drop support of IE
+                color s('var(--color-%s)', unquote(key))
                 background-color transparent
-
-                &:enabled
-                &[href]
-                    &:hover
-                        color darken(value, 20%)
-                        border-color currentColor
-                        background-color transparent
-
-    // social btn should not used with `.btn-line`
-    for key, value in $colors-socials
-        &-{key}
-            // TODO: 2 as contrast ratio is not enough but we should change some colors to fix it
-            color _contrast_choose(value, $color-white $color-base, 2)
-            background-color value
-            border-color value
-
-            &:enabled
-            &[href]
-                &:hover
-                    background-color darken(value, 20%)
-                    border-color darken(value, 20%)
+                border-color s('var(--color-%s)', unquote(key))
 
     &-transparent
-        color $color-tertiary
+        // TODO : replace when we drop support of IE
+        // --btn-color transparent
+        // --btn-text-color var(--color-tertiary)
+        // IE support for colors : replace when we drop support of IE
         background-color transparent
         border-color transparent
-
-        &:enabled
-        &[href]
-            &:hover
-                color darken($color-tertiary, 20%)
-                background-color transparent
-                border-color transparent
+        color var(--color-tertiary)

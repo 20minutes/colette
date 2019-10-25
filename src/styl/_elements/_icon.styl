@@ -8,8 +8,11 @@
 //
 // Markup: icon.twig
 //
-// Styleguide Elements.Icons
+// Styleguide: Elements.Icons
 .icon
+    --btn-color: transparent
+    --btn-text-color: inherit
+
     _fontload($fontstack-secondary)
     display inline-block
     vertical-align middle
@@ -18,10 +21,10 @@
     text-align center
     font-size .6875em
     font-weight bold
-    color inherit
+    color var(--btn-text-color)
     text-decoration none
-    background-color transparent
-    transition background-color .2s ease
+    background-color var(--btn-color)
+    transition filter .2s ease
 
     &-picto
         _m(0 auto)
@@ -36,6 +39,11 @@
         padding 0 .2em
         text-transform uppercase
 
+    &:enabled
+    &[href]
+        &:hover
+            filter brightness(90%) contrast(110%)
+
     &-inline
         text-align left
 
@@ -44,7 +52,7 @@
             display inline-block
             vertical-align middle
 
-
         .icon-picto
             margin 0 .2em
+
 

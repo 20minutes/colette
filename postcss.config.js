@@ -9,5 +9,8 @@ module.exports = ({ env }) => ({
       calc: false,
     },
     'postcss-focus-visible': {},
+    'postcss-css-variables': {
+      preserve: true,
+    },
   },
 })

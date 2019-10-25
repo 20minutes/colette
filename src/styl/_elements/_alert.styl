@@ -13,13 +13,16 @@
 _alert(color)
     background-color lighten(desaturate(color, 10%), 90%)
     color color
+:root
+    --alert-color: var(--color-fade)
+    --alert-text-color: var(--color-base)
 
 .alert
     margin 0
     padding 1em
     border-radius .3em
-    background-color $color-base-lighten
-    color $color-base
+    background-color var(--alert-color)
+    color var(--alert-text-color)
 
     a
         text-decoration underline
@@ -35,14 +38,34 @@ _alert(color)
             color currentColor
 
     &-info
-        _alert($color-default)
+        // TODO : replace when we drop support of IE
+        // --alert-color: s('hsl(var(--color-info-h), 60%, 90%)')
+        // --alert-text-color: var(--color-info)
+        // IE support for colors : replace when we drop support of IE
+        background-color s('hsl(var(--color-info-h), 60%, 90%)')
+        color var(--color-info)
 
     &-success
-        _alert($color-success)
+        // TODO : replace when we drop support of IE
+        // --alert-color: s('hsl(var(--color-success-h), 60%, 90%)')
+        // --alert-text-color: var(--color-success)
+        // IE support for colors : replace when we drop support of IE
+        background-color s('hsl(var(--color-success-h), 60%, 90%)')
+        color var(--color-success)
 
     &-warning
-        _alert($color-warning)
+        // TODO : replace when we drop support of IE
+        // --alert-color: s('hsl(var(--color-warning-h), 60%, 90%)')
+        // --alert-text-color: var(--color-warning)
+        // IE support for colors : replace when we drop support of IE
+        background-color s('hsl(var(--color-warning-h), 60%, 90%)')
+        color var(--color-warning)
 
     &-error
-        _alert($color-error)
+        // TODO : replace when we drop support of IE
+        // --alert-color: s('hsl(var(--color-error-h), 60%, 90%)')
+        // --alert-text-color: var(--color-error)
+        // IE support for colors : replace when we drop support of IE
+        background-color s('hsl(var(--color-error-h), 60%, 90%)')
+        color var(--color-error)
 

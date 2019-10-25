@@ -8,7 +8,7 @@
 //
 // Markup: tabpanel.twig
 //
-// Styleguide Components.TabPanel
+// Styleguide: Components.TabPanel
 
 // Fake tab Panel
 //
@@ -18,14 +18,14 @@
 //
 // Markup: tabpanel-fake.twig
 //
-// Styleguide Components.TabPanel.Fake
+// Styleguide: Components.TabPanel.Fake
 
 
 // Tab Panel with block of cards
 //
 // Markup: tabpanel-with-block-list.twig
 //
-// Styleguide Components.TabPanel.WithBlocksOfCards
+// Styleguide: Components.TabPanel.WithBlocksOfCards
 
 .tabpanel
     display flex
@@ -52,20 +52,20 @@
             text-transform inherit // `text-transform: none;` set on button by normalize
             font-size 1em
             line-height 1.5em
-            background $color-base-lighten
-            border 1px solid $color-borders
+            background var(--color-fade)
+            border 1px solid var(--color-borders)
             border-right-color transparent
-            color $color-base
+            color var(--color-base)
             font-family $fontstack-secondary
 
             &:last-child
-                border-right-color $color-borders
+                border-right-color var(--color-borders)
 
             .tabpanel[data-loading] &[data-open]
             &[aria-selected=true]
             &[aria-current='page']
                 color currentColor
-                background-color $color-white
+                background-color var(--color-bg-secondary)
                 border-color transparent
                 font-weight 700
 
@@ -82,7 +82,7 @@
             &[aria-disabled=true]
                 cursor not-allowed
                 pointer-events none
-                background $color-secondary
+                background var(--color-secondary)
                 cursor initial
 
     &-body

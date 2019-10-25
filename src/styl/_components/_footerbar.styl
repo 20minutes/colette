@@ -4,7 +4,11 @@
 //
 // Markup: footerbar.twig
 //
-// Styleguide Components.Footer
+// Styleguide: Components.Footer
+:root
+    --footer-color: $color-footer
+    --footer-color-foreground: lighten(desaturate($color-footer, 30%), 65%)
+
 .footerbar
     _p(.25 2)
     {clearfix}
@@ -12,12 +16,12 @@
     clear both
     width 100%
     min-height _rem(30px)
-    border-top 3px solid $color-footer
-    background-color $color-default
-    color $color-footer
+    border-top 3px solid var(--footer-color-foreground)
+    background-color var(--footer-color)
+    color var(--footer-color-foreground)
 
     a
-        color $color-base-lighten
+        color var(--color-fade)
 
         &:hover
             text-decoration underline

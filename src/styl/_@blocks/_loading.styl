@@ -1,6 +1,10 @@
 // {loading}
 //
-// Display an animated svg loader
+// Display an animated loader.
+//
+// It use [loading animation](section-animations.html#kssref-animations-loading).
+//
+// Live demo with [loading element](section-elements.html#kssref-elements-loading)
 //
 // Advice: use it in a pseudo element (`:before` or `:after`)
 //
@@ -29,7 +33,7 @@
 // }
 // ```
 //
-// Styleguide @blocks.Block.Loading
+// Styleguide: @blocks.Block.Loading
 loading = @block
     &:before
         content ''
@@ -44,20 +48,3 @@ loading = @block
         border-radius 10em
         box-shadow -2em 2em 0 0 currentColor, 0 2em 0 0 currentColor, 2em 2em 0 0 currentColor
         animation loadingAnimation 1.4s infinite linear
-
-@keyframes loadingAnimation
-    0%
-        box-shadow -2em 2em 0 -.6em currentColor, 0 2em 0 -.6em currentColor, 2em 2em 0 -.6em currentColor
-    15%
-        box-shadow -2em 2em 0 0 currentColor, 0 2em 0 -.6em currentColor, 2em 2em 0 -.6em currentColor
-    30%
-        box-shadow -2em 2em 0 -.2em currentColor, 0 2em 0 0 currentColor, 2em 2em 0 -.6em currentColor
-    45%
-        box-shadow -2em 2em 0 -.4em currentColor, 0 2em 0 -.2em currentColor, 2em 2em 0 0 currentColor
-    60%
-        box-shadow -2em 2em 0 -.6em currentColor, 0 2em 0 -.4em currentColor, 2em 2em 0 -.2em currentColor
-    75%
-        box-shadow -2em 2em 0 -.6em currentColor, 0 2em 0 -.6em currentColor, 2em 2em 0 -.4em currentColor
-    100%
-        box-shadow -2em 2em 0 -.6em currentColor, 0 2em 0 -.6em currentColor, 2em 2em 0 -.6em currentColor
-

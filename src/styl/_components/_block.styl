@@ -9,7 +9,7 @@
 //
 // block-default - default theme color
 //
-// Styleguide Components.Block
+// Styleguide: Components.Block
 
 // Block title and modifiers
 //
@@ -23,7 +23,7 @@
 //
 // Weight: 1
 //
-// Styleguide Components.Block.BlockTitle
+// Styleguide: Components.Block.BlockTitle
 
 // Block List with a pager
 //
@@ -31,7 +31,7 @@
 //
 // Weight: 2
 //
-// Styleguide Components.Block.BlockList
+// Styleguide: Components.Block.BlockList
 
 // Block List can be used with article cards
 //
@@ -39,16 +39,20 @@
 //
 // Weight: 3
 //
-// Styleguide Components.Block.BlockList-with-Cards
-$block-custom-color ?= $color-base-lighten
+// Styleguide: Components.Block.BlockList-with-Cards
+$block-custom-color ?= var(--color-bg-base)
 $block-header-minheight ?= _rem(36px)
+
+$block-colors ?= merge($colors-themes, {
+    highlight: $color-highlight,
+})
 
 .block
     display flex
     flex-direction column
     overflow hidden
     width 100%
-    background-color $color-white
+    background-color var(--color-bg-secondary)
     position relative
     text-align left
 
@@ -56,8 +60,8 @@ $block-header-minheight ?= _rem(36px)
         _p(.75 1 .5 1)
         min-height $block-header-minheight
         line-height _rem(19px)
-        color $color-white
-        background-color $color-base
+        color var(--color-base-foreground)
+        background-color var(--color-base)
         font-size _rem(14px)
         font-family $fontstack-headings
         font-weight bold
@@ -70,8 +74,8 @@ $block-header-minheight ?= _rem(36px)
 
         &-lined
             background-color transparent
-            border-bottom 3px solid $color-base
-            color $color-base
+            border-bottom 3px solid var(--color-base)
+            color var(--color-base)
 
     &-list
         margin 0
@@ -91,7 +95,7 @@ $block-header-minheight ?= _rem(36px)
             align-items stretch
 
             &:nth-child(even)
-                background-color $color-bg-base
+                background-color var(--color-bg-tertiary)
 
             &[aria-hidden=true]
                 display none
@@ -104,26 +108,29 @@ $block-header-minheight ?= _rem(36px)
                 align-items center
 
             > :link:hover
-                background-color $color-bg-light
+                background-color var(--color-bg-base)
 
     /* Block footer */
     &-footer
         {fontSecondary}
         _p(.5 1)
         line-height _rem(18px)
-        background-color $color-white
+        background-color var(--color-bg-secondary)
         overflow hidden // clearfix, don’t use `{clearfix}` here because `::after` invalid `:empty`
+        color var(--color-base)
 
         &:empty
             display none
 
         a
-            color $color-base
+            color inherit
 
     /* Category theme */
     /* Applies theme color on title background and footer icons */
-    for key, value in $colors
-        &-{key}
+    for key, value in $block-colors
+        $name = replace('theme-', '', key)
+
+        &-{$name}
             .block-title
                 background-color value
 

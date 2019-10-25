@@ -1,6 +1,6 @@
 // @blocks: Block elements
 //
-// Styleguide @blocks.Block
+// Styleguide: @blocks.Block
 
 // {clearfix}
 //
@@ -22,7 +22,7 @@
 //         visibility hidden
 // ```
 //
-// Styleguide @blocks.Block.clearfix
+// Styleguide: @blocks.Block.clearfix
 clearfix = @block
     &:after
         content ''
@@ -43,13 +43,12 @@ clearfix = @block
 // is equivalent to
 // ```stylus
 // .foo
-//    outline dashed thin $color-base
-//    outline-offset .3em
+//    outline dashed thin var(--color-tertiary)
 // ```
 //
-// Styleguide @blocks.Block.outline
+// Styleguide: @blocks.Block.outline
 outline = @block
-    outline dotted thin $color-tertiary
+    outline dotted thin var(--color-tertiary)
 
 // {fullWidth}
 //
@@ -68,7 +67,7 @@ outline = @block
 //    height auto
 // ```
 //
-// Styleguide @blocks.Block.fullWidth
+// Styleguide: @blocks.Block.fullWidth
 fullWidth = @block
     display block
     width 100%
@@ -93,7 +92,7 @@ fullWidth = @block
 //            display inline
 // ```
 //
-// Styleguide @blocks.Block.inlined
+// Styleguide: @blocks.Block.inlined
 inlined = @block
     display inline
 
