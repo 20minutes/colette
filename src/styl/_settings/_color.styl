@@ -8,31 +8,36 @@
 // --color-base:         #4c4d4e - text color
 // --color-links:        #0062D9 - links color
 // --color-highlight:    #cc190f - highlighted text color
-// --color-footer:       #73a0d6 - footer color
+// --color-brand:        #0b4892 - brand color
 // --color-native:       #fff7e2 - ads and external contents
 //
 // Styleguide: Design.Colors
 $color-base ?= #4c4d4e
 $color-links ?= #0062D9
 $color-highlight ?= #cc190f
-$color-footer ?= #0b4892
+$color-brand ?= #0b4892
 $color-native ?= #fff7e2
 
 // Gray shades
-// $color-gray-min ?= hsl(0, 0%, 0%)
-// $color-gray-1 ?= hsl(0, 0%, 3%)
-// $color-gray-2 ?= hsl(0, 0%, 5%)
-// $color-gray-3 ?= hsl(0, 0%, 9%)
-// $color-gray-4 ?= hsl(0, 0%, 22%)
-// $color-gray-5 ?= hsl(0, 0%, 28%)
-// $color-gray-6 ?= hsl(0, 0%, 47%)
-$color-gray-7 ?= #878787
-$color-gray-8 ?= #b7b7b7
-$color-gray-9 ?= #c7c7c7
-$color-gray-10 ?= #e7e7e7
-$color-gray-11 ?= #f1f1f1
-$color-gray-12 ?= #f8f8f8
-$color-gray-max ?= #fff
+$color-foreground-0 ?= #4c4d4e
+$color-foreground-1 ?= #878787
+$color-foreground-2 ?= #b7b7b7
+$color-foreground-3 ?= #c7c7c7
+
+$color-background-0 ?= #fff
+$color-background-2 ?= #f1f1f1
+$color-background-1 ?= #f8f8f8
+$color-background-3 ?= #e7e7e7
+
+$color-foreground-0-dark ?= darken($color-foreground-0, 79%)
+$color-foreground-1-dark ?= darken($color-foreground-1, 79%)
+$color-foreground-2-dark ?= darken($color-foreground-2, 79%)
+$color-foreground-3-dark ?= darken($color-foreground-3, 79%)
+
+$color-background-0-dark ?= darken($color-background-0, 79%)
+$color-background-1-dark ?= darken($color-background-1, 79%)
+$color-background-2-dark ?= darken($color-background-2, 79%)
+$color-background-3-dark ?= darken($color-background-3, 79%)
 
 // Alerts colors
 //
@@ -47,7 +52,7 @@ $color-gray-max ?= #fff
 // Weight: 2
 //
 // Styleguide: Design.Colors.Alerts
-$color-info ?= #0b4892
+$color-info ?= $color-brand
 $color-success ?= #3c7a09
 $color-warning ?= #b05105
 $color-error ?= #cc190f
@@ -90,7 +95,7 @@ $color-white ?= #fff
 // Weight: 4
 //
 // Styleguide: Design.Colors.Theme
-$color-theme-default ?= #0b4892
+$color-theme-default ?= $color-brand
 $color-theme-sport  ?= #00b9f3
 $color-theme-entertainment ?= #cc190f
 $color-theme-economy ?= #053042
@@ -116,6 +121,18 @@ $colors-themes ?= {
     theme-hightech: $color-theme-hightech
     theme-summer: $color-theme-summer
 }
+
+$color-theme-default-dark ?= #4DADFF
+$color-theme-sport-dark  ?= #4DADFF
+$color-theme-entertainment-dark ?= #4DADFF
+$color-theme-economy-dark ?= #4DADFF
+$color-theme-community-dark ?= #4DADFF
+$color-theme-weird-dark ?= #4DADFF
+$color-theme-partner-dark ?= #4DADFF
+$color-theme-planet-dark ?= #4DADFF
+$color-theme-media-dark ?= #4DADFF
+$color-theme-hightech-dark ?= #4DADFF
+$color-theme-summer-dark ?= #4DADFF
 
 // Social colors
 //

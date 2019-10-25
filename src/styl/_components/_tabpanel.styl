@@ -53,9 +53,9 @@
             font-size 1em
             line-height 1.5em
             background var(--color-fade)
+            color var(--color-base)
             border 1px solid var(--color-borders)
             border-right-color transparent
-            color var(--color-base)
             font-family $fontstack-secondary
 
             &:last-child
@@ -82,8 +82,8 @@
             &[aria-disabled=true]
                 cursor not-allowed
                 pointer-events none
-                background var(--color-secondary)
-                cursor initial
+                background var(--color-borders)
+                color s('hsla(var(--color-base-h), var(--color-base-s), var(--color-base-l), .5)')
 
     &-body
         flex-grow 1

@@ -125,6 +125,12 @@ $block-colors ?= merge($colors-themes, {
         a
             color inherit
 
+        .linkIcon
+        .pager-next:not(:disabled)
+        .pager-prev:not(:disabled)
+            svg
+                color var(--color-base)
+
     /* Category theme */
     /* Applies theme color on title background and footer icons */
     for key, value in $block-colors
@@ -137,6 +143,7 @@ $block-colors ?= merge($colors-themes, {
                 if !_contrast_check($color-white, value, 1.5)
                     color $color-base
                 else
+                    color $color-white
                     text-shadow 0 0 3px _contrast_choose($color-white, value darken(value, 20%) darken(value, 40%) darken(value, 60%) darken(value, 80%))
 
                 &-lined
