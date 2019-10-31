@@ -5,9 +5,21 @@
 // Markup: footerbar.twig
 //
 // Styleguide: Components.Footer
+
+$footer-color ?= $color-theme-default
+$footer-color-foreground ?= lighten(desaturate($color-theme-default, 30%), 65%)
+
+$footer-color-dark ?= $color-theme-default-dark
+$footer-color-foreground-dark ?= lighten(desaturate($footer-color-dark, 30%), 65%)
+
 :root
-    --footer-color: $color-footer
-    --footer-color-foreground: lighten(desaturate($color-footer, 30%), 65%)
+[data-theme=light]
+    --footer-color: $footer-color
+    --footer-color-foreground: $footer-color-foreground
+
+[data-theme=dark]
+    --footer-color: $footer-color-dark
+    --footer-color-foreground: $footer-color-foreground-dark
 
 .footerbar
     _p(.25 2)
