@@ -18,21 +18,21 @@
             filter brightness(60%)
 
     // Paragraphes
-    p:not([class])
-        margin-bottom _lh(1)
+    > p:not([class])
+        margin-bottom _lh(.5)
 
     // Image + legend
     //
     // should look like `.media`
     figure
-        margin-bottom _lh(1)
+        margin-bottom _lh(.5)
 
     // copy of media>figcaption and media-caption style
     figcaption
-        padding-top _lh(.5)
+        _pt(.5)
         font-size .85em
         color $color-tertiary
-        line-height _lh(1)
+        line-height 1.2
 
         // overide anchor text color (<a> without href)
         > a
@@ -41,16 +41,16 @@
     // Separator
     hr
         margin-top 0
-        margin-bottom _lh(1)
+        margin-bottom _lh(.5)
         background-color $color-borders
 
     // Quote
     blockquote
         font-size _rem(16px)
-        margin-bottom _lh(1)
+        margin-bottom _lh(.5)
 
     // Iframe
     iframe
-        margin-bottom _lh(1)
+        margin-bottom _lh(.5)
         width 100%
         max-width 100%
