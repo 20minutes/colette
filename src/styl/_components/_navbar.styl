@@ -6,6 +6,13 @@
 // Markup: navbar.twig
 //
 // Styleguide: Components.navbar
+:root
+[data-theme=light]
+    --color-navbar-brand: var(--color-theme-default)
+
+[data-theme=dark]
+    --color-navbar-brand: $color-white
+
 .navbar
     {clearfix}
     position fixed
@@ -14,7 +21,7 @@
     width 100%
     height _rem(48px)
     box-shadow 0 _rem(2px) _rem(4px) _rem(-2px) rgba($color-black, .5)
-    background-color var(--color-bg-secondary)
+    background-color var(--color-bg-primary)
 
     ul
         height inherit
@@ -38,7 +45,7 @@
                 margin auto
 
             &:hover
-                background-color var(--color-bg-tertiary)
+                background-color var(--color-bg-secondary)
 
     li
         float left
@@ -49,7 +56,7 @@
         _p(0 .5)
         float left
         height inherit
-        color var(--color-theme-default)
+        color var(--color-navbar-brand)
         display flex
         background-color transparent
         transition background-color .2s
@@ -60,4 +67,4 @@
             margin auto
 
         &:hover
-            background-color var(--color-bg-tertiary)
+            background-color var(--color-bg-base)

@@ -6,10 +6,17 @@
 // Markup: breakingnews.twig
 //
 // Styleguide: Components.BreakingNews
+:root
+[data-theme=light]
+    --color-breakingnews-title: var(--color-highlight)
+
+[data-theme=dark]
+    --color-breakingnews-title: var(--color-highlight-foreground)
+
 .breakingnews
     _fontload($fontstack-secondary)
     display flex
-    background var(--color-bg-secondary)
+    background var(--color-bg-primary)
     font-weight bold
     flex-wrap nowrap
     align-items stretch
@@ -38,7 +45,7 @@
         _fontload($fontstack-secondary)
         flex-grow 1
         min-height _rem(62px)
-        color var(--color-highlight)
+        color var(--color-breakingnews-title)
         font-size 1em
         font-weight bold
 

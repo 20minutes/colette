@@ -52,7 +52,7 @@ $block-colors ?= merge($colors-themes, {
     flex-direction column
     overflow hidden
     width 100%
-    background-color var(--color-bg-secondary)
+    background-color var(--color-bg-primary)
     position relative
     text-align left
 
@@ -95,7 +95,7 @@ $block-colors ?= merge($colors-themes, {
             align-items stretch
 
             &:nth-child(even)
-                background-color var(--color-bg-tertiary)
+                background-color var(--color-bg-base)
 
             &[aria-hidden=true]
                 display none
@@ -115,7 +115,7 @@ $block-colors ?= merge($colors-themes, {
         {fontSecondary}
         _p(.5 1)
         line-height _rem(18px)
-        background-color var(--color-bg-secondary)
+        background-color var(--color-bg-primary)
         overflow hidden // clearfix, don’t use `{clearfix}` here because `::after` invalid `:empty`
         color var(--color-base)
 
