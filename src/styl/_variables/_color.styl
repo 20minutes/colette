@@ -5,12 +5,13 @@
 // Styleguide: CSSvariables.color
 :root
 [data-theme=light]
-    --color-secondary: $color-foreground-1
-    --color-tertiary: $color-foreground-2
+    --color-primary: $color-foreground-1
+    --color-secondary: $color-foreground-2
 
-    --color-bg-base: $color-background-0
-    --color-bg-secondary: $color-background-1
-    --color-bg-tertiary: $color-background-2
+    --color-bg-base: $color-background-1
+    --color-bg-primary: $color-background-0
+    --color-bg-secondary: $color-background-2
+    --color-bg-tertiary: $color-background-4
 
     --color-fade: $color-background-3
     --color-borders: $color-foreground-3
@@ -20,10 +21,10 @@
     --color-native: $color-native
 
     _hslVars(--color-base, $color-base)
-    --color-base-foreground $color-white
+    --color-base-foreground: $color-white
 
     _hslVars(--color-highlight, $color-highlight)
-    --color-highlight-foreground $color-white
+    --color-highlight-foreground: $color-white
 
     _hslVars(--color-info, $color-info)
     _hslVars(--color-success, $color-success)
@@ -45,19 +46,20 @@
 // Ready to set a dark mode using an attribute
 // to overwrite those colors
 [data-theme=dark]
-    --color-secondary: $color-foreground-1-dark
-    --color-tertiary: $color-foreground-2-dark
+    --color-primary: $color-foreground-1-dark
+    --color-secondary: $color-foreground-2-dark
 
     --color-bg-base: $color-background-0-dark
-    --color-bg-secondary: $color-background-1-dark
-    --color-bg-tertiary: $color-background-2-dark
+    --color-bg-primary: $color-background-1-dark
+    --color-bg-secondary: $color-background-2-dark
+    --color-bg-tertiary: $color-background-4-dark
 
     --color-fade: $color-background-3-dark
     --color-borders: $color-foreground-3-dark
 
     --color-links: $color-links
 
-    _hslVars(--color-base, $color-white)
+    _hslVars(--color-base, $color-foreground-0-dark)
     --color-base-foreground $color-base
 
     // themes colors

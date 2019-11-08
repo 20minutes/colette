@@ -27,6 +27,13 @@
 // Markup: media-empty.twig
 //
 // Styleguide: Elements.Media.Empty
+:root
+[data-theme=light]
+    --color-bg-mediaImage: lighten($color-theme-default, 80%)
+
+[data-theme=dark]
+    --color-bg-mediaImage: $color-black
+
 .media
     position relative
 
@@ -38,7 +45,7 @@
         display block
         width 100%
         height auto
-        background-color lighten($color-theme-default, 80%)
+        background-color var(--color-bg-mediaImage)
         background-image svgImport($mediaPlaceholder, $mediaPlaceholder-style)
         background-size 65% 65%
         background-position 50%
@@ -48,7 +55,7 @@
     figcaption
         _pt(.5)
         font-size .85em
-        color var(--color-tertiary)
+        color var(--color-primary)
         line-height 1
 
     &-wrap
