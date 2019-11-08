@@ -25,19 +25,21 @@ $color-foreground-2 ?= #b7b7b7
 $color-foreground-3 ?= #c7c7c7
 
 $color-background-0 ?= #fff
-$color-background-2 ?= #f1f1f1
 $color-background-1 ?= #f8f8f8
+$color-background-2 ?= #f1f1f1
 $color-background-3 ?= #e7e7e7
+$color-background-4 ?= #b7b7b7
 
-$color-foreground-0-dark ?= darken($color-foreground-0, 79%)
-$color-foreground-1-dark ?= darken($color-foreground-1, 79%)
-$color-foreground-2-dark ?= darken($color-foreground-2, 79%)
-$color-foreground-3-dark ?= darken($color-foreground-3, 79%)
+$color-foreground-0-dark ?= lighten(invert($color-foreground-0), 41)
+$color-foreground-1-dark ?= lighten(invert($color-foreground-1), 41)
+$color-foreground-2-dark ?= lighten(invert($color-foreground-2), 41)
+$color-foreground-3-dark ?= lighten(invert($color-foreground-3), 41)
 
-$color-background-0-dark ?= darken($color-background-0, 79%)
-$color-background-1-dark ?= darken($color-background-1, 79%)
-$color-background-2-dark ?= darken($color-background-2, 79%)
-$color-background-3-dark ?= darken($color-background-3, 79%)
+$color-background-0-dark ?= darken($color-background-0, 79)
+$color-background-1-dark ?= darken($color-background-1, 79)
+$color-background-2-dark ?= darken($color-background-2, 79)
+$color-background-3-dark ?= darken($color-background-3, 79)
+$color-background-4-dark ?= darken($color-background-4, 79)
 
 // Alerts colors
 //
