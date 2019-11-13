@@ -7,7 +7,8 @@
 //
 // Markup: block.twig
 //
-// block-default - default theme color
+// .block-default - default theme color
+// .block-sport - default theme color
 //
 // Styleguide: Components.Block
 
@@ -135,22 +136,33 @@ $block-colors ?= merge($colors-themes, {
     /* Applies theme color on title background and footer icons */
     for key, value in $block-colors
         $name = replace('theme-', '', key)
+        $theme-color = value
+        $theme-color-dark = lookup('$color-' + key + '-dark') || value
+        $theme-shadow-color = _contrast_choose($color-white, $theme-color darken($theme-color, 20%) darken($theme-color, 40%) darken($theme-color, 60%) darken($theme-color, 80%))
+        $theme-shadow-color-dark = _contrast_choose($color-white, $theme-color-dark darken($theme-color-dark, 20%) darken($theme-color-dark, 40%) darken($theme-color-dark, 60%) darken($theme-color-dark, 80%))
 
         &-{$name}
             .block-title
-                background-color value
+                background-color s('var(--color-%s)', unquote(key))
+                color $color-white
 
-                if !_contrast_check($color-white, value, 1.5)
-                    color $color-base
-                else
-                    color $color-white
-                    text-shadow 0 0 3px _contrast_choose($color-white, value darken(value, 20%) darken(value, 40%) darken(value, 60%) darken(value, 80%))
+                &
+                [data-theme=light] &
+                    text-shadow 0 0 3px $theme-shadow-color
+
+                [data-theme=dark] &
+                    text-shadow 0 0 3px $theme-shadow-color-dark
 
                 &-lined
                     background-color transparent // overide theme for `.block-title`
                     border-bottom-color value
                     text-shadow none
                     color _contrast_choose($color-white, value darken(value, 10%) darken(value, 20%) darken(value, 30%) darken(value, 40%) $color-base)
+
+                    &
+                    [data-theme=light] &
+                    [data-theme=dark] &
+                        text-shadow none // stronger than previous selector
 
             .block-footer
                 .linkIcon
