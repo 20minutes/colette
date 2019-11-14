@@ -164,6 +164,9 @@ $block-colors ?= merge($colors-themes, {
                     [data-theme=dark] &
                         text-shadow none // stronger than previous selector
 
+                    [data-theme=dark] &
+                        color $theme-color-dark
+
             .block-footer
                 .linkIcon
                 .pager-next:not(:disabled)
