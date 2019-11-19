@@ -30,11 +30,11 @@
 /:root
 /[data-theme=light]
 /[data-theme] [data-theme=light]
-    --color-bg-mediaImage: lighten($color-theme-default, 80%)
+    --media-bg-color lighten($color-theme-default, 80%)
 
 /[data-theme=dark]
 /[data-theme] [data-theme=dark]
-    --color-bg-mediaImage: $color-black
+    --media-bg-color $color-black
 
 .media
     position relative
@@ -47,7 +47,7 @@
         display block
         width 100%
         height auto
-        background-color var(--color-bg-mediaImage)
+        background-color var(--media-bg-color)
         background-image svgImport($mediaPlaceholder, $mediaPlaceholder-style)
         background-size 65% 65%
         background-position 50%
