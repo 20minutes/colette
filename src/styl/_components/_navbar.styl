@@ -8,10 +8,12 @@
 // Styleguide: Components.navbar
 /:root
 /[data-theme=light]
-    --color-navbar-brand: var(--color-theme-default)
+/[data-theme] [data-theme=light]
+    --navbar-brand-color var(--color-theme-default)
 
 /[data-theme=dark]
-    --color-navbar-brand: $color-white
+/[data-theme] [data-theme=dark]
+    --navbar-brand-color $color-white
 
 .navbar
     {clearfix}
@@ -56,7 +58,7 @@
         _p(0 .5)
         float left
         height inherit
-        color var(--color-navbar-brand)
+        color var(--navbar-brand-color)
         display flex
         background-color transparent
         transition background-color .2s

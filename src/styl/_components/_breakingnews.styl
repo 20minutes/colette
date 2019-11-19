@@ -8,10 +8,12 @@
 // Styleguide: Components.BreakingNews
 /:root
 /[data-theme=light]
-    --color-breakingnews-title: var(--color-highlight)
+/[data-theme] [data-theme=light]
+    --breakingnews-title-color: var(--color-highlight)
 
 /[data-theme=dark]
-    --color-breakingnews-title: var(--color-highlight-foreground)
+/[data-theme] [data-theme=dark]
+    --breakingnews-title-color: var(--color-highlight-foreground)
 
 .breakingnews
     _fontload($fontstack-secondary)
@@ -45,7 +47,7 @@
         _fontload($fontstack-secondary)
         flex-grow 1
         min-height _rem(62px)
-        color var(--color-breakingnews-title)
+        color var(--breakingnews-title-color)
         font-size 1em
         font-weight bold
 
