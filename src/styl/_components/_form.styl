@@ -31,7 +31,7 @@
             right 0
             bottom 0
             top 0
-            background rgba($color-white, .8)
+            background-color s('hsla(0, 0%, var(--light-max), .8)')
 
     // Form field
     //
@@ -56,10 +56,10 @@
             font-weight bold
 
         &-error
-            border-color $color-error !important // @stylint ignore: must override default form elements border-color
+            border-color var(--color-error) !important // @stylint ignore: must override default form elements border-color
 
         &-success
-            border-color $color-success !important // @stylint ignore: must override default form elements border-color
+            border-color var(--color-success) !important // @stylint ignore: must override default form elements border-color
 
     // Form help
     //
@@ -77,16 +77,16 @@
     // Styleguide: Forms.Help
     &-help
         padding-top .3em
-        color $color-tertiary
+        color var(--color-secondary)
         font-size .88em
         font-style italic
         line-height 1.1
 
         &-error
-            color $color-error
+            color var(--color-error)
 
         &-success
-            color $color-success
+            color var(--color-success)
 
     // Form contextual link
     //
@@ -99,6 +99,6 @@
     // Styleguide: Forms.Link
     &-link
         padding-top .15em
-        color $color-links
+        color var(--color-links)
         font-size .85em
         background transparent

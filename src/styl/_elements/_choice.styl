@@ -23,8 +23,8 @@
             display inline-block
             position relative
             text-align center
-            border 1px solid $color-base-lighten
-            background-color $color-white
+            border 1px solid var(--color-fade)
+            background-color var(--color-bg-primary)
             border-radius .3em
             width 100%
             height _rem(38px)
@@ -39,5 +39,5 @@
                     display none
 
             &:checked + label
-                color $color-white
-                background $color-base
+                color var(--color-base-foreground)
+                background var(--color-base)

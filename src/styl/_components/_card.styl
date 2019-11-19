@@ -9,7 +9,7 @@
 //
 // Markup: card.twig
 //
-// Styleguide Components.card
+// Styleguide: Components.card
 $card-media-width ?= 7.5em
 $card-media-height ?= 4.9em
 
@@ -25,7 +25,7 @@ $card-media-height ?= 4.9em
         border-left-width 3px
 
     &:link:hover
-        background-color $color-bg-light
+        background-color var(--color-bg-secondary)
 
     // add properties to .media
     .media
@@ -45,7 +45,7 @@ $card-media-height ?= 4.9em
             line-height _rem(15px)
 
         &-title
-            color $color-base
+            color var(--color-base)
             font-weight normal
             font-size _rem(13px)
             line-height _rem(15px)

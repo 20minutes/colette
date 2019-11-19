@@ -6,12 +6,12 @@
 //
 // Markup: content.twig
 //
-// Styleguide Components.Content
+// Styleguide: Components.Content
 .content
 
     // Link
     a:not([class])
-        color $color-links
+        color var(--color-links)
         transition filter .2s linear
 
         &:hover
@@ -31,18 +31,18 @@
     figcaption
         _pt(.5)
         font-size .85em
-        color $color-tertiary
+        color var(--color-secondary)
         line-height 1.2
 
         // overide anchor text color (<a> without href)
         > a
-            color $color-tertiary
+            color currentColor
 
     // Separator
     hr
         margin-top 0
         margin-bottom _lh(.5)
-        background-color $color-borders
+        background-color var(--color-borders)
 
     // Quote
     blockquote

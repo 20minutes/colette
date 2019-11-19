@@ -5,11 +5,20 @@
 //
 // Markup: breakingnews.twig
 //
-// Styleguide Components.BreakingNews
+// Styleguide: Components.BreakingNews
+/:root
+/[data-theme=light]
+/[data-theme] [data-theme=light]
+    --breakingnews-title-color: var(--color-highlight)
+
+/[data-theme=dark]
+/[data-theme] [data-theme=dark]
+    --breakingnews-title-color: var(--color-highlight-foreground)
+
 .breakingnews
     _fontload($fontstack-secondary)
     display flex
-    background $color-white
+    background var(--color-bg-primary)
     font-weight bold
     flex-wrap nowrap
     align-items stretch
@@ -26,8 +35,8 @@
     &-label
         _p(1)
         text-transform uppercase
-        background $color-highlight
-        color $color-white
+        background var(--color-highlight)
+        color var(--color-highlight-foreground)
         font-size .75em
 
         @media $breakpoints.md
@@ -38,7 +47,7 @@
         _fontload($fontstack-secondary)
         flex-grow 1
         min-height _rem(62px)
-        color $color-highlight
+        color var(--breakingnews-title-color)
         font-size 1em
         font-weight bold
 
@@ -48,7 +57,7 @@
     &-cta
         _p(1)
         display none
-        color $color-base
+        color var(--color-base)
         font-weight bold
         font-size .875em
 

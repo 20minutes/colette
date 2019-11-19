@@ -6,7 +6,7 @@
 //
 // Markup: media.twig
 //
-// Styleguide Elements.Media
+// Styleguide: Elements.Media
 
 // Media Video
 //
@@ -18,7 +18,7 @@
 //
 // Markup: media-video.twig
 //
-// Styleguide Elements.Media.Video
+// Styleguide: Elements.Media.Video
 
 // Media Empty
 //
@@ -26,7 +26,16 @@
 //
 // Markup: media-empty.twig
 //
-// Styleguide Elements.Media.Empty
+// Styleguide: Elements.Media.Empty
+/:root
+/[data-theme=light]
+/[data-theme] [data-theme=light]
+    --media-bg-color lighten($color-theme-default, 80%)
+
+/[data-theme=dark]
+/[data-theme] [data-theme=dark]
+    --media-bg-color $color-black
+
 .media
     position relative
 
@@ -38,7 +47,7 @@
         display block
         width 100%
         height auto
-        background-color lighten($color-default, 80%)
+        background-color var(--media-bg-color)
         background-image svgImport($mediaPlaceholder, $mediaPlaceholder-style)
         background-size 65% 65%
         background-position 50%
@@ -48,7 +57,7 @@
     figcaption
         _pt(.5)
         font-size .85em
-        color $color-tertiary
+        color var(--color-primary)
         line-height 1.2
 
     &-wrap

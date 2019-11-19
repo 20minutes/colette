@@ -5,45 +5,58 @@
 // Layout and UI generic colors
 //
 // Colors:
-// $color-base:         #4c4d4e - text color
-// $color-base-lighten: #e7e7e7 - lighten version
-// $color-secondary:    #b7b7b7 - secondary text color
-// $color-tertiary:     #878787 - tertiary text color
-// $color-links:        #0062D9 - links color
-// $color-highlight:    #cc190f - highlighted text color
-// $color-borders:      #c7c7c7 - borders color
-// $color-footer:       #73a0d6 - footer color
-// $color-bg-base:      #f8f8f8 - background color
-// $color-bg-light:     #f1f1f1 - background color light
-// $color-bg-content:   #fff    - background color for content
+// --color-base:         #4c4d4e - text color
+// --color-links:        #0062D9 - links color
+// --color-highlight:    #cc190f - highlighted text color
+// --color-brand:        #0b4892 - brand color
+// --color-native:       #fff7e2 - ads and external contents
 //
 // Styleguide: Design.Colors
 $color-base ?= #4c4d4e
-$color-base-lighten ?= #e7e7e7
-$color-secondary ?= #b7b7b7
-$color-tertiary ?= #878787
 $color-links ?= #0062D9
 $color-highlight ?= #cc190f
-$color-borders ?= #c7c7c7
-$color-footer ?= #73a0d6
-$color-bg-base ?= #f8f8f8
-$color-bg-light ?= #f1f1f1
-$color-bg-content ?= #fff
+$color-brand ?= #0b4892
+$color-native ?= #fff7e2
+
+$color-links-dark ?= $color-theme-default-dark
+
+// Gray shades
+$color-foreground-0 ?= #4c4d4e
+$color-foreground-1 ?= #878787
+$color-foreground-2 ?= #b7b7b7
+$color-foreground-3 ?= #c7c7c7
+
+$color-background-0 ?= #fff
+$color-background-1 ?= #f8f8f8
+$color-background-2 ?= #f1f1f1
+$color-background-3 ?= #e7e7e7
+$color-background-4 ?= #b7b7b7
+
+$color-foreground-0-dark ?= lighten(invert($color-foreground-0), 41)
+$color-foreground-1-dark ?= lighten(invert($color-foreground-1), 41)
+$color-foreground-2-dark ?= lighten(invert($color-foreground-2), 41)
+$color-foreground-3-dark ?= lighten(invert($color-foreground-3), 41)
+
+$color-background-0-dark ?= darken($color-background-0, 79)
+$color-background-1-dark ?= darken($color-background-1, 79)
+$color-background-2-dark ?= darken($color-background-2, 79)
+$color-background-3-dark ?= darken($color-background-3, 79)
+$color-background-4-dark ?= darken($color-background-4, 79)
 
 // Alerts colors
 //
 // Colors for alerts messages.
 //
 // Colors:
-// $color-info:    #0b4892 - Info
-// $color-success: #3c7a09 - Success
-// $color-warning: #b05105 - Warning
-// $color-error:   #cc190f - Error
+// --color-info:    #0b4892 - Info
+// --color-success: #3c7a09 - Success
+// --color-warning: #b05105 - Warning
+// --color-error:   #cc190f - Error
 //
 // Weight: 2
 //
 // Styleguide: Design.Colors.Alerts
-$color-info ?= #0b4892
+$color-info ?= $color-brand
 $color-success ?= #3c7a09
 $color-warning ?= #b05105
 $color-error ?= #cc190f
@@ -71,107 +84,115 @@ $color-white ?= #fff
 // - if ratio is insufficient some modules add a text-shadow or swith to a darker color
 //
 // Colors:
-// $color-default:       #0b4892
-// $color-sport:         #00b9f3
-// $color-entertainment: #cc190f
-// $color-economy:       #053042
-// $color-community:     #930b48
-// $color-weird:         #ef2a82
-// $color-partner:       #ff5400
-// $color-planet:        #48930b
-// $color-media:         #000000
-// $color-hightech:      #686868
-// $color-native:        #fff7e2
-// $color-summer:        #cc4c3c
+// --color-theme-default:       #0b4892 - theme default
+// --color-theme-sport:         #00b9f3 - theme sport
+// --color-theme-entertainment: #cc190f - theme entertainment
+// --color-theme-economy:       #053042 - theme economy
+// --color-theme-community:     #930b48 - theme community
+// --color-theme-weird:         #ef2a82 - theme weird
+// --color-theme-partner:       #ff5400 - theme partner
+// --color-theme-planet:        #48930b - theme planet
+// --color-theme-media:         #000000 - theme media
+// --color-theme-hightech:      #686868 - theme hightech
+// --color-theme-summer:        #cc4c3c - theme summer
 //
 // Weight: 4
 //
 // Styleguide: Design.Colors.Theme
-$color-default ?= #0b4892
-$color-sport  ?= #00b9f3
-$color-entertainment ?= #cc190f
-$color-economy ?= #053042
-$color-community ?= #930b48
-$color-weird ?= #ef2a82
-$color-partner ?= #ff5400
-$color-planet ?= #48930b
-$color-media ?= #000
-$color-hightech ?= #686868
-$color-native ?= #fff7e2
-$color-summer ?= #cc4c3c
+$color-theme-default ?= $color-brand
+$color-theme-sport  ?= #00b9f3
+$color-theme-entertainment ?= #cc190f
+$color-theme-economy ?= #053042
+$color-theme-community ?= #930b48
+$color-theme-weird ?= #ef2a82
+$color-theme-partner ?= #ff5400
+$color-theme-planet ?= #48930b
+$color-theme-media ?= #000
+$color-theme-hightech ?= #686868
+$color-theme-summer ?= #cc4c3c
 
 /* Sections */
-$colors ?= {
-    base: $color-base
-    default: $color-default
-    sport: $color-sport
-    entertainment: $color-entertainment
-    economy: $color-economy
-    community: $color-community
-    weird: $color-weird
-    partner: $color-partner
-    planet: $color-planet
-    media: $color-media
-    hightech: $color-hightech
-    native: $color-native
-    summer: $color-summer
+$colors-themes ?= {
+    theme-default: $color-theme-default
+    theme-sport: $color-theme-sport
+    theme-entertainment: $color-theme-entertainment
+    theme-economy: $color-theme-economy
+    theme-community: $color-theme-community
+    theme-weird: $color-theme-weird
+    theme-partner: $color-theme-partner
+    theme-planet: $color-theme-planet
+    theme-media: $color-theme-media
+    theme-hightech: $color-theme-hightech
+    theme-summer: $color-theme-summer
 }
+
+$color-theme-default-dark ?= #4DADFF
+$color-theme-sport-dark  ?= #4DADFF
+$color-theme-entertainment-dark ?= #4DADFF
+$color-theme-economy-dark ?= #4DADFF
+$color-theme-community-dark ?= #4DADFF
+$color-theme-weird-dark ?= #4DADFF
+$color-theme-partner-dark ?= #4DADFF
+$color-theme-planet-dark ?= #4DADFF
+$color-theme-media-dark ?= #4DADFF
+$color-theme-hightech-dark ?= #4DADFF
+$color-theme-summer-dark ?= #4DADFF
 
 // Social colors
 //
 // The social color palette is used for share and socials buttons.
 //
 // Colors:
-// $color-dailymotion: #2068D4
-// $color-facebook:    #4c64a0
-// $color-flipboard:   #f52828
-// $color-github:      #791e8f
-// $color-googleplus:  #d14836
-// $color-hootsuite:   #000000
-// $color-instagram:   #ff0040
-// $color-linkedin:    #0177b5
-// $color-messenger:   #3d6bfb
-// $color-pinterest:   #bd081c
-// $color-pocket:      #ed4054
-// $color-sms:         #48930b
-// $color-snapchat:    #fdfe00
-// $color-twitter:     #00a7e7
-// $color-whatsapp:    #01a85a
-// $color-youtube:     #EB3223
+// --color-social-dailymotion: #2068D4 - dailymotion
+// --color-social-facebook:    #4c64a0 - facebook
+// --color-social-flipboard:   #f52828 - flipboard
+// --color-social-github:      #791e8f - github
+// --color-social-googleplus:  #d14836 - googleplus
+// --color-social-hootsuite:   #000000 - hootsuite
+// --color-social-instagram:   #ff0040 - instagram
+// --color-social-linkedin:    #0177b5 - linkedin
+// --color-social-messenger:   #3d6bfb - messenger
+// --color-social-pinterest:   #bd081c - pinterest
+// --color-social-pocket:      #ed4054 - pocket
+// --color-social-sms:         #48930b - sms
+// --color-social-snapchat:    #fdfe00 - snapchat
+// --color-social-twitter:     #00a7e7 - twitter
+// --color-social-whatsapp:    #01a85a - whatsapp
+// --color-social-youtube:     #eb3223 - youtube
 //
 // Styleguide: Design.Colors.Social
-$color-dailymotion ?= #2068D4
-$color-facebook ?= #4c64a0
-$color-flipboard ?= #f52828
-$color-github ?= #791e8f
-$color-googleplus ?= #d14836
-$color-hootsuite ?= #000000
-$color-instagram ?= #ff0040
-$color-linkedin ?= #0177b5
-$color-messenger ?= #3d6bfb
-$color-pinterest ?= #bd081c
-$color-pocket ?= #ed4054
-$color-sms ?= #48930b
-$color-snapchat ?= #fdfe00
-$color-twitter ?= #00a7e7
-$color-whatsapp ?= #01a85a
-$color-youtube ?= #EB3223
+$color-social-dailymotion ?= #2068D4
+$color-social-facebook ?= #4c64a0
+$color-social-flipboard ?= #f52828
+$color-social-github ?= #791e8f
+$color-social-googleplus ?= #d14836
+$color-social-hootsuite ?= #000000
+$color-social-instagram ?= #ff0040
+$color-social-linkedin ?= #0177b5
+$color-social-messenger ?= #3d6bfb
+$color-social-pinterest ?= #bd081c
+$color-social-pocket ?= #ed4054
+$color-social-sms ?= #48930b
+$color-social-snapchat ?= #fdfe00
+$color-social-twitter ?= #00a7e7
+$color-social-whatsapp ?= #01a85a
+$color-social-youtube ?= #eb3223
 
 $colors-socials ?= {
-    dailymotion: $color-dailymotion
-    facebook: $color-facebook
-    flipboard: $color-flipboard
-    github: $color-github
-    googleplus: $color-googleplus
-    hootsuite: $color-hootsuite
-    instagram: $color-instagram
-    linkedin: $color-linkedin
-    messenger: $color-messenger
-    pinterest: $color-pinterest
-    pocket: $color-pocket
-    sms: $color-sms
-    snapchat: $color-snapchat
-    twitter: $color-twitter
-    whatsapp: $color-whatsapp
-    youtube: $color-youtube
+    social-dailymotion: $color-social-dailymotion
+    social-facebook: $color-social-facebook
+    social-flipboard: $color-social-flipboard
+    social-github: $color-social-github
+    social-googleplus: $color-social-googleplus
+    social-hootsuite: $color-social-hootsuite
+    social-instagram: $color-social-instagram
+    social-linkedin: $color-social-linkedin
+    social-messenger: $color-social-messenger
+    social-pinterest: $color-social-pinterest
+    social-pocket: $color-social-pocket
+    social-sms: $color-social-sms
+    social-snapchat: $color-social-snapchat
+    social-twitter: $color-social-twitter
+    social-whatsapp: $color-social-whatsapp
+    social-youtube: $color-social-youtube
 }

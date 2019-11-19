@@ -1,0 +1,71 @@
+// Colors
+//
+// Every design’s colors are declined as CSS custom properties.
+//
+// Styleguide: CSSvariables.color
+/:root
+/[data-theme=light]
+/[data-theme] [data-theme=light]
+    --color-primary $color-foreground-1
+    --color-secondary $color-foreground-2
+
+    --color-bg-base $color-background-1
+    --color-bg-primary $color-background-0
+    --color-bg-secondary $color-background-2
+    --color-bg-tertiary $color-background-4
+
+    --color-fade $color-background-3
+    --color-borders $color-foreground-3
+
+    --color-links $color-links
+    --color-native $color-native
+
+    _hslVars(--color-base, $color-base)
+    --color-base-foreground $color-white
+
+    _hslVars(--color-highlight, $color-highlight)
+    --color-highlight-foreground $color-white
+
+    _hslVars(--color-info, $color-info)
+    _hslVars(--color-success, $color-success)
+    _hslVars(--color-warning, $color-warning)
+    _hslVars(--color-error, $color-error)
+
+    // themes colors
+    for key, value in $colors-themes
+        _hslVars(s('--color-%s', unquote(key)), value)
+        // TODO: 2 as contrast ratio is not enough but we should change some colors to fix it
+        --color-{key}-foreground _contrast_choose(value, $color-white $color-base, 2)
+
+    // social colors
+    for key, value in $colors-socials
+        _hslVars(s('--color-%s', unquote(key)), value)
+        // TODO: 2 as contrast ratio is not enough but we should change some colors to fix it
+        --color-{key}-foreground _contrast_choose(value, $color-white $color-base, 2)
+
+// Ready to set a dark mode using an attribute
+// to overwrite those colors
+/[data-theme=dark]
+/[data-theme] [data-theme=dark]
+    --color-primary $color-foreground-1-dark
+    --color-secondary $color-foreground-2-dark
+
+    --color-bg-base $color-background-1-dark
+    --color-bg-primary $color-background-0-dark
+    --color-bg-secondary $color-background-2-dark
+    --color-bg-tertiary $color-background-4-dark
+
+    --color-fade $color-background-3-dark
+    --color-borders $color-foreground-3-dark
+
+    --color-links $color-links-dark
+
+    _hslVars(--color-base, $color-foreground-0-dark)
+    --color-base-foreground $color-base
+
+    // themes colors
+    for key, value in $colors-themes
+        $colorValue = lookup('$color-' + key + '-dark')
+        _hslVars(s('--color-%s', unquote(key)), $colorValue)
+        // TODO: 2 as contrast ratio is not enough but we should change some colors to fix it
+        --color-{key}-foreground _contrast_choose($colorValue, $color-white $color-base, 2)

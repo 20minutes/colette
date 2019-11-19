@@ -24,7 +24,7 @@
 //
 // Markup: skin.twig
 //
-// Styleguide Theme.skins
+// Styleguide: Themes.skins
 
 /* Text skins */
 .skin
@@ -56,51 +56,51 @@
     &-blog
         .media-wrap:before
             content 'blog'
-            background-color $color-community
+            background-color var(--color-theme-community)
 
         .teaser
             &-headline
             &-title
             &-summary
-                color $color-community
+                color var(--color-theme-community)
 
     &-bytheweb
         .media-wrap:before
             content 'by the web'
-            background-color $color-hightech
+            background-color var(--color-theme-hightech)
 
     &-summer
         .media-wrap:before
             content 'Série d’été'
-            background-color $color-summer
+            background-color var(--color-theme-summer)
 
     &-chat
         .media-wrap:before
             content 'chat'
-            background-color $color-community
+            background-color var(--color-theme-community)
 
     &-exclusive
         .media-wrap:before
             content 'exclusif'
-            background-color $color-highlight
+            background-color var(--color-highlight)
 
         .teaser
             &-headline
             &-title
             &-summary
-                color $color-highlight
+                color var(--color-highlight)
 
     &-fakeoff
         .media-wrap:before
             content 'fake off'
-            background-color $color-default
+            background-color var(--color-theme-default)
 
     &-lastminute
-        background-color $color-highlight
+        background-color var(--color-highlight)
 
         .media-wrap:before
             content 'dernière minute'
-            background-color $color-highlight
+            background-color var(--color-highlight)
 
         .teaser
             &-headline
@@ -117,37 +117,37 @@
     &-live
         .media-wrap:before
             content 'live'
-            background-color $color-highlight
+            background-color var(--color-highlight)
 
         .teaser-headline
-            color $color-highlight
+            color var(--color-highlight)
 
     &-partner
         .media-wrap:before
             content 'Partenaire'
-            background-color $color-native
+            background-color var(--color-native)
             color $color-base
 
     &-people
         .media-wrap:before
             content 'People'
-            background-color $color-entertainment
+            background-color var(--color-theme-entertainment)
 
     &-quiz
         .media-wrap:before
             content 'quiz'
-            background-color $color-community
+            background-color var(--color-theme-community)
 
         .teaser
             &-headline
             &-title
             &-summary
-                color $color-community
+                color var(--color-theme-community)
 
     &-weird
         .media-wrap:before
             content 'T’as vu'
-            background-color $color-weird
+            background-color var(--color-theme-weird)
 
     /* Icon skins */
     &-gallery

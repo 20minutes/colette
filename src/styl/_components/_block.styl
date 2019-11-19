@@ -7,9 +7,10 @@
 //
 // Markup: block.twig
 //
-// block-default - default theme color
+// .block-default - default theme color
+// .block-sport - default theme color
 //
-// Styleguide Components.Block
+// Styleguide: Components.Block
 
 // Block title and modifiers
 //
@@ -23,7 +24,7 @@
 //
 // Weight: 1
 //
-// Styleguide Components.Block.BlockTitle
+// Styleguide: Components.Block.BlockTitle
 
 // Block List with a pager
 //
@@ -31,7 +32,7 @@
 //
 // Weight: 2
 //
-// Styleguide Components.Block.BlockList
+// Styleguide: Components.Block.BlockList
 
 // Block List can be used with article cards
 //
@@ -39,16 +40,20 @@
 //
 // Weight: 3
 //
-// Styleguide Components.Block.BlockList-with-Cards
-$block-custom-color ?= $color-base-lighten
+// Styleguide: Components.Block.BlockList-with-Cards
+$block-custom-color ?= var(--color-bg-base)
 $block-header-minheight ?= _rem(36px)
+
+$block-colors ?= merge($colors-themes, {
+    highlight: $color-highlight,
+})
 
 .block
     display flex
     flex-direction column
     overflow hidden
     width 100%
-    background-color $color-white
+    background-color var(--color-bg-primary)
     position relative
     text-align left
 
@@ -56,8 +61,8 @@ $block-header-minheight ?= _rem(36px)
         _p(.75 1 .5 1)
         min-height $block-header-minheight
         line-height _rem(19px)
-        color $color-white
-        background-color $color-base
+        color var(--color-base-foreground)
+        background-color var(--color-base)
         font-size _rem(14px)
         font-family $fontstack-headings
         font-weight bold
@@ -70,8 +75,8 @@ $block-header-minheight ?= _rem(36px)
 
         &-lined
             background-color transparent
-            border-bottom 3px solid $color-base
-            color $color-base
+            border-bottom 3px solid var(--color-base)
+            color var(--color-base)
 
     &-list
         margin 0
@@ -91,7 +96,7 @@ $block-header-minheight ?= _rem(36px)
             align-items stretch
 
             &:nth-child(even)
-                background-color $color-bg-base
+                background-color var(--color-bg-base)
 
             &[aria-hidden=true]
                 display none
@@ -104,39 +109,63 @@ $block-header-minheight ?= _rem(36px)
                 align-items center
 
             > :link:hover
-                background-color $color-bg-light
+                background-color var(--color-bg-base)
 
     /* Block footer */
     &-footer
         {fontSecondary}
         _p(.5 1)
         line-height _rem(18px)
-        background-color $color-white
+        background-color var(--color-bg-primary)
         overflow hidden // clearfix, don’t use `{clearfix}` here because `::after` invalid `:empty`
+        color var(--color-base)
 
         &:empty
             display none
 
         a
-            color $color-base
+            color inherit
+
+        .linkIcon
+        .pager-next:not(:disabled)
+        .pager-prev:not(:disabled)
+            svg
+                color var(--color-base)
 
     /* Category theme */
     /* Applies theme color on title background and footer icons */
-    for key, value in $colors
-        &-{key}
-            .block-title
-                background-color value
+    for key, value in $block-colors
+        $name = replace('theme-', '', key)
+        $theme-color = value
+        $theme-color-dark = lookup('$color-' + key + '-dark') || value
+        $theme-shadow-color = _contrast_choose($color-white, $theme-color darken($theme-color, 20%) darken($theme-color, 40%) darken($theme-color, 60%) darken($theme-color, 80%))
+        $theme-shadow-color-dark = _contrast_choose($color-white, $theme-color-dark darken($theme-color-dark, 20%) darken($theme-color-dark, 40%) darken($theme-color-dark, 60%) darken($theme-color-dark, 80%))
 
-                if !_contrast_check($color-white, value, 1.5)
-                    color $color-base
-                else
-                    text-shadow 0 0 3px _contrast_choose($color-white, value darken(value, 20%) darken(value, 40%) darken(value, 60%) darken(value, 80%))
+        &-{$name}
+            .block-title
+                background-color s('var(--color-%s)', unquote(key))
+                color $color-white
+
+                &
+                [data-theme=light] &
+                    text-shadow 0 0 3px $theme-shadow-color
+
+                [data-theme=dark] &
+                    text-shadow 0 0 3px $theme-shadow-color-dark
 
                 &-lined
                     background-color transparent // overide theme for `.block-title`
                     border-bottom-color value
                     text-shadow none
                     color _contrast_choose($color-white, value darken(value, 10%) darken(value, 20%) darken(value, 30%) darken(value, 40%) $color-base)
+
+                    &
+                    [data-theme=light] &
+                    [data-theme=dark] &
+                        text-shadow none // stronger than previous selector
+
+                    [data-theme=dark] &
+                        color $theme-color-dark
 
             .block-footer
                 .linkIcon

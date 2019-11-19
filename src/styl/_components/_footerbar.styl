@@ -4,7 +4,25 @@
 //
 // Markup: footerbar.twig
 //
-// Styleguide Components.Footer
+// Styleguide: Components.Footer
+
+$footer-color ?= $color-theme-default
+$footer-color-foreground ?= lighten(desaturate($color-theme-default, 30%), 65%)
+
+$footer-color-dark ?= $color-theme-default-dark
+$footer-color-foreground-dark ?= lighten(desaturate($footer-color-dark, 30%), 65%)
+
+/:root
+/[data-theme=light]
+/[data-theme] [data-theme=light]
+    --footer-color $footer-color
+    --footer-color-foreground $footer-color-foreground
+
+/[data-theme=dark]
+/[data-theme] [data-theme=dark]
+    --footer-color $footer-color-dark
+    --footer-color-foreground $footer-color-foreground-dark
+
 .footerbar
     _p(.25 2)
     {clearfix}
@@ -12,12 +30,12 @@
     clear both
     width 100%
     min-height _rem(30px)
-    border-top 3px solid $color-footer
-    background-color $color-default
-    color $color-footer
+    border-top 3px solid var(--footer-color-foreground)
+    background-color var(--footer-color)
+    color var(--footer-color-foreground)
 
     a
-        color $color-base-lighten
+        color var(--color-fade)
 
         &:hover
             text-decoration underline
