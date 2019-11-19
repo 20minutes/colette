@@ -29,9 +29,11 @@
 // Styleguide: Elements.Media.Empty
 /:root
 /[data-theme=light]
+/[data-theme] [data-theme=light]
     --color-bg-mediaImage: lighten($color-theme-default, 80%)
 
 /[data-theme=dark]
+/[data-theme] [data-theme=dark]
     --color-bg-mediaImage: $color-black
 
 .media

@@ -8,9 +8,11 @@
 // Styleguide: Components.navbar
 /:root
 /[data-theme=light]
+/[data-theme] [data-theme=light]
     --color-navbar-brand: var(--color-theme-default)
 
 /[data-theme=dark]
+/[data-theme] [data-theme=dark]
     --color-navbar-brand: $color-white
 
 .navbar

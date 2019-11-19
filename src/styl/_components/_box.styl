@@ -11,10 +11,12 @@
 // Styleguide: Components.Box
 /:root
 /[data-theme=light]
+/[data-theme] [data-theme=light]
     --box-bg-color var(--color-bg-primary)
     --box-edge-color alpha($color-black, .02)
 
-[data-theme="dark"]
+/[data-theme="dark"],
+/[data-theme] [data-theme="dark"]
     --box-bg-color var(--color-bg-primary)
     --box-edge-color alpha($color-white, .15)
 
