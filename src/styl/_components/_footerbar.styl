@@ -15,13 +15,13 @@ $footer-color-foreground-dark ?= lighten(desaturate($footer-color-dark, 30%), 65
 /:root
 /[data-theme=light]
 /[data-theme] [data-theme=light]
-    --footer-color: $footer-color
-    --footer-color-foreground: $footer-color-foreground
+    --footer-color $footer-color
+    --footer-color-foreground $footer-color-foreground
 
 /[data-theme=dark]
 /[data-theme] [data-theme=dark]
-    --footer-color: $footer-color-dark
-    --footer-color-foreground: $footer-color-foreground-dark
+    --footer-color $footer-color-dark
+    --footer-color-foreground $footer-color-foreground-dark
 
 .footerbar
     _p(.25 2)
