@@ -155,7 +155,7 @@ $block-colors ?= merge($colors-themes, {
 
                 &-lined
                     background-color transparent // overide theme for `.block-title`
-                    border-bottom-color value
+                    border-bottom-color s('var(--color-%s)', unquote(key))
                     text-shadow none
                     color _contrast_choose($color-white, value darken(value, 10%) darken(value, 20%) darken(value, 30%) darken(value, 40%) $color-base)
 
