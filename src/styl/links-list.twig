@@ -1,0 +1,31 @@
+
+{%- set classes = classes|default([]) -%}
+{%- if modifier_class -%}{% set classes = classes|merge([modifier_class]) %}{% endif -%}
+<div class="{{ ['linksListBlock']|merge(classes)|join(' ') }}">
+    <p class="linksListBlockTitle">Titre du bloc</p>
+    
+    <div class="linksListContainer">
+        {% for linksList in linksLists %}
+            {% set loop1 = loop.index %}
+            <ul class="linksList">
+                <li class="linksListTitle">
+                    {{ loop.first ? 'Titre 1' : 'Title X' }}
+                </li>
+
+                {% for link in linksList %}
+                    <li>
+                        <svg width="12" height="12"><use xlink:href="#symbol-arrow-list-arrow-right"></use></svg>
+                        <a class="linksListItem" href="{{ link.url }}">{{ link.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </div>
+
+    <p class="linksListFooter">
+        <a href="#">
+            <svg width="8" height="8"><use xlink:href="#symbol-cross"></use></svg>
+            <span class="seemoreText">Voir plus</span>
+        </a>
+    </p>
+</div>

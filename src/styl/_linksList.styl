@@ -1,0 +1,82 @@
+// LinksList
+//
+// Basic HTML list for links
+//
+// .color-sport - theme sport
+// .color-planet - theme planet
+// .with-columns - with columns
+//    
+// Markup: ./links-list.twig
+//
+// Styleguide Components.LinksList
+
+.linksListBlock
+    display inline-block
+    padding _rem(20px) _rem(25px)
+    @extend .box
+
+    .linksListBlockTitle
+        font-size _rem(18px)
+        font-weight bold
+        margin-bottom _rem(5px)
+
+    &.color-sport, &.color-planet
+        .linksListContainer, .linksListFooter .seemoreText
+            color $color-base
+    
+    &.with-columns
+        .linksListContainer
+            display inline-flex
+
+            .linksList
+                flex-direction column
+                margin 0
+                padding-left _rem(20px)
+                border-left 1px solid $color-foreground-3
+
+                &:first-child
+                    padding 0 _rem(20px) 0 0
+                    border none
+
+    .linksList
+        padding 0
+        margin _rem(20px) 0 0
+        list-style none
+
+        &:first-child
+            margin 0
+        
+        .linksListTitle
+            text-transform uppercase
+            font-size _rem(12px)
+            font-weight bold
+            margin-bottom _rem(5px)
+
+        li
+            list-style none
+            padding 0
+            margin _rem(8px) 0 0 0
+            line-height normal
+
+            a, svg
+                display inline-block
+                vertical-align middle
+
+            svg
+                width _rem(13px)
+
+
+            &:first-child
+                margin 0
+
+            .linksListItem
+                font-size _rem(13px)
+    
+    .linksListFooter
+        text-align right
+        font-weight bold
+        margin _rem(25px) 0 0 0
+        
+        .seemoreText
+            font-size _rem(11px)
+            text-transform uppercase

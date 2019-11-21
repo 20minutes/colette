@@ -1,0 +1,42 @@
+{
+  "classes": ["mb2"],
+  "prefixId": "linksList-",
+  "linksLists": {
+    "column1": [
+      {
+        "url": "#",
+        "title": "Titre de lien 1"
+      },
+      {
+        "url": "#",
+        "title": "Titre de lien 2"
+      },
+      {
+        "url": "#",
+        "title": "Titre de lien 3"
+      },
+      {
+        "url": "#",
+        "title": "Titre de lien 4"
+      }
+    ],
+    "column2": [
+      {
+        "url": "#",
+        "title": "Titre de lien 1"
+      },
+      {
+        "url": "#",
+        "title": "Titre de lien 2"
+      },
+      {
+        "url": "#",
+        "title": "Titre de lien 3"
+      },
+      {
+        "url": "#",
+        "title": "Titre de lien 4"
+      }
+    ]
+  }
+}
