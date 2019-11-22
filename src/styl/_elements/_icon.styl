@@ -11,7 +11,7 @@
 // Styleguide: Elements.Icons
 .icon
     --btn-color transparent
-    --btn-text-color inherit
+    --btn-text-color var(--color-base)
 
     _fontload($fontstack-secondary)
     display inline-block
@@ -23,6 +23,9 @@
     font-weight bold
     color var(--btn-text-color)
     text-decoration none
+    // fallback for IE because --btn-color is set loccaly here
+    background-color transparent
+    /* postcss-custom-properties: ignore next */
     background-color var(--btn-color)
     transition filter .2s ease
 
