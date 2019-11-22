@@ -1,5 +1,9 @@
 module.exports = ({ env }) => ({
   plugins: {
+    'postcss-custom-properties': {
+      preserve: true,
+    },
+    'postcss-focus-visible': {},
     cssnano: {
       autoprefixer: env === 'production',
       mergeRules: false, // mergeRules make :focus-visible buggy, keep it false
@@ -7,10 +11,6 @@ module.exports = ({ env }) => ({
         removeQuotes: false,
       },
       calc: false,
-    },
-    'postcss-focus-visible': {},
-    'postcss-css-variables': {
-      preserve: true,
     },
   },
 })
