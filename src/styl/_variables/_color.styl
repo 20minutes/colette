@@ -4,6 +4,25 @@
 //
 // Styleguide: CSSvariables.color
 /:root
+    _hslVars(--color-highlight, $color-highlight)
+    --color-highlight-foreground $color-highlight-foreground
+
+    --color-native $color-native
+    --color-native-foreground $color-native-foreground
+
+    _hslVars(--color-info, $color-info)
+    _hslVars(--color-success, $color-success)
+    _hslVars(--color-warning, $color-warning)
+    _hslVars(--color-error, $color-error)
+
+    // social colors
+    for key, value in $colors-socials
+        _hslVars(s('--color-%s', unquote(key)), value)
+        // TODO: 2 as contrast ratio is not enough but we should change some colors to fix it
+        --color-{key}-foreground _contrast_choose(value, $color-white $color-base, 2)
+
+
+/:root
 /[data-theme=light]
 /[data-theme] [data-theme=light]
     --color-primary $color-foreground-1
@@ -18,27 +37,12 @@
     --color-borders $color-foreground-3
 
     --color-links $color-links
-    --color-native $color-native
 
     _hslVars(--color-base, $color-base)
-    --color-base-foreground $color-white
-
-    _hslVars(--color-highlight, $color-highlight)
-    --color-highlight-foreground $color-white
-
-    _hslVars(--color-info, $color-info)
-    _hslVars(--color-success, $color-success)
-    _hslVars(--color-warning, $color-warning)
-    _hslVars(--color-error, $color-error)
+    --color-base-foreground $color-base-foreground
 
     // themes colors
     for key, value in $colors-themes
-        _hslVars(s('--color-%s', unquote(key)), value)
-        // TODO: 2 as contrast ratio is not enough but we should change some colors to fix it
-        --color-{key}-foreground _contrast_choose(value, $color-white $color-base, 2)
-
-    // social colors
-    for key, value in $colors-socials
         _hslVars(s('--color-%s', unquote(key)), value)
         // TODO: 2 as contrast ratio is not enough but we should change some colors to fix it
         --color-{key}-foreground _contrast_choose(value, $color-white $color-base, 2)
@@ -60,8 +64,8 @@
 
     --color-links $color-links-dark
 
-    _hslVars(--color-base, $color-foreground-0-dark)
-    --color-base-foreground $color-base
+    _hslVars(--color-base, $color-base-dark)
+    --color-base-foreground $color-base-foreground-dark
 
     // themes colors
     for key, value in $colors-themes

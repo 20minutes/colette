@@ -5,38 +5,48 @@
 // Layout and UI generic colors
 //
 // Colors:
-// --color-base:         #4c4d4e - text color
-// --color-links:        #0062D9 - links color
-// --color-highlight:    #cc190f - highlighted text color
-// --color-brand:        #0b4892 - brand color
-// --color-native:       #fff7e2 - ads and external contents
+// --color-base:                 #4c4d4e - text color
+// --color-base-foreground:      #fff    - if text writen on --color-base
+// --color-links:                #0062D9 - links color
+// --color-highlight:            #cc190f - highlighted color
+// --color-highlight-foreground: #fff    - if text writen on --color-highlight
+// --color-native:               #fff7e2 - ads and external contents
+// --color-native-foreground:    #4c4d4e - if text writen on --color-native
 //
 // Styleguide: Design.Colors
 $color-base ?= #4c4d4e
-$color-links ?= #0062D9
+$color-base-foreground ?= #fff
 $color-highlight ?= #cc190f
-$color-brand ?= #0b4892
+$color-highlight-foreground ?= #fff
+$color-links ?= #0062D9
 $color-native ?= #fff7e2
+$color-native-foreground ?= #4c4d4e
 
+// Dark equivalent if needed
+$color-base-dark ?= #fff
+$color-base-foreground-dark ?= #4c4d4e
 $color-links-dark ?= $color-theme-default-dark
 
-// Gray shades
+// Foreground
 $color-foreground-0 ?= #4c4d4e
 $color-foreground-1 ?= #878787
 $color-foreground-2 ?= #b7b7b7
 $color-foreground-3 ?= #c7c7c7
 
+// Foreground Dark
+$color-foreground-0-dark ?= lighten(invert($color-foreground-0), 41)
+$color-foreground-1-dark ?= lighten(invert($color-foreground-1), 41)
+$color-foreground-2-dark ?= lighten(invert($color-foreground-2), 41)
+$color-foreground-3-dark ?= lighten(invert($color-foreground-3), 41)
+
+// Background
 $color-background-0 ?= #fff
 $color-background-1 ?= #f8f8f8
 $color-background-2 ?= #f1f1f1
 $color-background-3 ?= #e7e7e7
 $color-background-4 ?= #b7b7b7
 
-$color-foreground-0-dark ?= lighten(invert($color-foreground-0), 41)
-$color-foreground-1-dark ?= lighten(invert($color-foreground-1), 41)
-$color-foreground-2-dark ?= lighten(invert($color-foreground-2), 41)
-$color-foreground-3-dark ?= lighten(invert($color-foreground-3), 41)
-
+// Background Dark
 $color-background-0-dark ?= darken($color-background-0, 79)
 $color-background-1-dark ?= darken($color-background-1, 79)
 $color-background-2-dark ?= darken($color-background-2, 79)
@@ -56,7 +66,7 @@ $color-background-4-dark ?= darken($color-background-4, 79)
 // Weight: 2
 //
 // Styleguide: Design.Colors.Alerts
-$color-info ?= $color-brand
+$color-info ?= #0b4892
 $color-success ?= #3c7a09
 $color-warning ?= #b05105
 $color-error ?= #cc190f
@@ -99,7 +109,7 @@ $color-white ?= #fff
 // Weight: 4
 //
 // Styleguide: Design.Colors.Theme
-$color-theme-default ?= $color-brand
+$color-theme-default ?= #0b4892
 $color-theme-sport  ?= #00b9f3
 $color-theme-entertainment ?= #cc190f
 $color-theme-economy ?= #053042
