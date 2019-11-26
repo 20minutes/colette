@@ -9,22 +9,24 @@
 // Markup: box.twig
 //
 // Styleguide: Components.Box
+
+$box-edge-color ?= alpha($color-black, .02)
+$box-edge-color-dark ?= alpha($color-white, .15)
+
 /:root
 /[data-theme=light]
 /[data-theme] [data-theme=light]
-    --box-bg-color var(--color-bg-primary)
-    --box-edge-color alpha($color-black, .02)
+    --box-edge-color $box-edge-color
 
 /[data-theme=dark],
 /[data-theme] [data-theme=dark]
-    --box-bg-color var(--color-bg-primary)
-    --box-edge-color alpha($color-white, .15)
+    --box-edge-color $box-edge-color-dark
 
 .box
     overflow hidden
     border-radius $radius
-    border 1px solid var(--box-bg-color)
-    background-color var(--box-bg-color)
+    border 1px solid var(--color-bg-primary)
+    background-color var(--color-bg-primary)
     box-shadow 0 0 0 _rem(1px) var(--box-edge-color), 0 _rem(1px) _rem(4px) _rem(1px) rgba($color-black, .06)
 
     &-borderless
