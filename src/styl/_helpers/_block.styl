@@ -64,6 +64,139 @@
 .inline-block
     display inline-block
 
+// Flexbox blocks
+//
+// - **.d-flex**:     display flex of a block or a list
+// - **.d-iFlex**:    display inline-flex of a block or a list
+// -
+// - **.fd-row**:     apply flex direction in row to the flex-items
+// - **.fd-rowRev**:  apply flex direction in row-reverse to the flex-items
+// - **.fd-col**:     apply flex direction in column to the flex-items
+// - **.fd-colRev**:  apply flex direction in column-reverse to the flex-items
+// -
+// - **.ff-row**:     apply flex flow in row to the flex-items
+// - **.ff-rowRev**:  apply flex flow in row-reverse to the flex-items
+// - **.ff-col**:     apply flex flow in column to the flex-items
+// - **.ff-colRev**:  apply flex flow in column-reverse to the flex-items
+// - **.ff-wrap**:    apply flex flow in wrap to the flex-items
+// - **.ff-wrapRev**: apply flex flow in wrap-reverse to the flex-items
+// - **.ff-nowrap**:  apply flex flow in nowrap to the flex-items
+// -
+// - **.fw-wrap**:    apply flex wrap in wrap to the flex-items
+// - **.fw-wrapRev**: apply flex wrap in wrap-reverse to the flex-items
+// - **.fw-nowrap**:  apply flex wrap in nowrap to the flex-items
+// -
+// - **.jc-fStart**:  apply justify content in flex-start to the flex-items
+// - **.jc-fEnd**:    apply justify content in flex-end to the flex-items
+// - **.jc-cntr**:    apply justify content in center to the flex-items
+// - **.jc-sAround**: apply justify content in space-around to the flex-items
+// - **.jc-sBetw**:   apply justify content in space-between to the flex-items
+// - **.jc-str**:     apply justify content in stretch to the flex-items
+// -
+// - **.ai-fStart**:  apply align items in flex-start to the flex-items
+// - **.ai-fEnd**:    apply align items in flex-end to the flex-items
+// - **.ai-cntr**:    apply align items in center to the flex-items
+// - **.ai-sAround**: apply align items in space-around to the flex-items
+// - **.ai-sBetw**:   apply align items in space-between to the flex-items
+// - **.ai-str**:     apply align items in stretch to the flex-item
+//
+// **Usage example**
+// ```html
+// <!-- With the class d-iFlex, a list is display inline-flex -->
+// <ul class="d-iFlex fd-col fw-wrap">
+//   <!-- All children are flex-item with a display inline-flex -->
+//   <!-- With the class fd-col on container, all the flex-items are in column position -->
+//   <!-- With the class fw-wrap on container, all the flex-items have a wrap spacing -->
+//   <li>…</li>
+//   <li>…</li>
+// </ul>
+// ```
+//
+// Styleguide Helpers.BlockElements.Flexbox
+.d-flex
+    display flex
+
+.d-iFlex
+    display inline-flex
+
+.fd-row
+    flex-direction row
+
+.fd-rowRev
+    flex-direction row-reverse
+
+.fd-col
+    flex-direction column
+
+.fd-colRev
+    flex-direction column-reverse
+
+.ff-row
+    flex-flow row
+
+.ff-rowRev
+    flex-flow row-reverse
+
+.ff-col
+    flex-flow column
+
+.ff-colRev
+    flex-flow column-reverse
+
+.ff-wrap
+    flex-flow wrap
+
+.ff-wrapRev
+    flex-flow wrap-reverse
+
+.ff-nowrap
+    flex-flow nowrap
+
+.fw-wrap
+    flex-wrap wrap
+
+.fw-nowrap
+    flex-wrap nowrap
+
+.fw-wrapRev
+    flex-wrap wrap-reverse
+
+.jc-fStart
+    justify-content flex-start
+
+.jc-fEnd
+    justify-content flex-end
+
+.jc-cntr
+    justify-content center
+
+.jc-sAround
+    justify-content space-arouund
+
+.jc-sBetw
+    justify-content space-between
+
+.jc-str
+    justify-content stretch
+
+.ai-fStart
+    align-items flex-start
+
+.ai-fEnd
+    align-items flex-end
+
+.ai-cntr
+    align-items center
+
+.ai-sAround
+    align-items space-arouund
+
+.ai-sBetw
+    align-items space-between
+
+.ai-str
+    align-items stretch
+
 // Hidden blocks
 //
 // - **.hidden**:       display none
