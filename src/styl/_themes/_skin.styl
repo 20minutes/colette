@@ -11,7 +11,7 @@
 // .skin-chat        - Text skin: "chat"
 // .skin-exclusive   - Text skin: "exclusif", text color: highlight
 // .skin-fakeoff     - Text skin: "fake off", text color: default
-// .skin-lastminute  - Text skin: "dernière minute", text color: white, background-color: highlight
+// .skin-alertInfo   - Text skin: "alerte info", text color: white, background-color: highlight
 // .skin-live        - Text skin: "live", headline color: highlight
 // .skin-partner     - Text skin: "partenaire"
 // .skin-people      - Text skin: "people"
@@ -33,7 +33,7 @@
     &-chat
     &-exclusive
     &-fakeoff
-    &-lastminute
+    &-alertInfo
     &-live
     &-partner
     &-people
@@ -95,11 +95,11 @@
             content 'fake off'
             background-color var(--color-theme-default)
 
-    &-lastminute
+    &-alertInfo
         background-color var(--color-highlight)
 
         .media-wrap:before
-            content 'dernière minute'
+            content 'alerte info'
             background-color var(--color-highlight)
 
         .teaser
