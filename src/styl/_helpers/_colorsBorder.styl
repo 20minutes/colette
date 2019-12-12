@@ -1,0 +1,20 @@
+// Border colors
+//
+// Generic styles for border colors.
+//
+// Markup: colors-border.twig
+//
+// Styleguide: Helpers.Colors.border
+$helpers-colors ?= merge($colors-themes, {
+    base: $color-base,
+    native: $color-native,
+    native-foreground: $color-native-foreground,
+    highlight: $color-highlight,
+})
+
+for key, value in $helpers-colors
+    $name = replace('theme-', '', key)
+    $var = s('var(--color-%s)', unquote(key))
+
+    .border-color-{$name}
+        border-color $var
