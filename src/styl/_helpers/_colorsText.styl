@@ -1,10 +1,10 @@
-// Colors
+// Text colors
 //
-// Generic styles for text, borders, backgrounds colors.
+// Generic styles for text colors.
 //
-// Markup: colors.twig
+// Markup: colors-text.twig
 //
-// Styleguide: Helpers.Colors
+// Styleguide: Helpers.Colors.text
 $helpers-colors ?= merge($colors-themes, {
     base: $color-base,
     native: $color-native,
@@ -15,12 +15,6 @@ $helpers-colors ?= merge($colors-themes, {
 for key, value in $helpers-colors
     $name = replace('theme-', '', key)
     $var = s('var(--color-%s)', unquote(key))
-
-    .border-color-{$name}
-        border-color $var
-
-    .bg-{$name}
-        background-color $var
 
     .color-{$name}
         color $var

@@ -1,6 +1,6 @@
 {
   "colors" : {
-    "base": "couleur par défaut",
+    "base": "Couleur par défaut",
     "default": "Actualité générales",
     "sport": "Sport",
     "entertainment": "Entertainment",
@@ -11,6 +11,7 @@
     "planet": "Planète",
     "media": "Video et images",
     "hightech": "High-tech",
-    "native": "Native"
+    "native": "Native",
+    "native-foreground": "Native premier-plan"
   }
 }

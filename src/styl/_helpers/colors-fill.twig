@@ -1,0 +1,13 @@
+<ul style="display: flex; flex-wrap: wrap; align-items: stretch; justify-content: flex-start; padding: 0; margin: 0; list-style: none;">
+    {% for key, name in colors %}
+        <li style="width: 14rem; overflow: hidden; font-size: 14px; padding: .3rem; margin: .5rem; text-align: center; border-radius: 0.5rem; box-shadow: 0 0 0 0.0625rem var(--co-box-edge-color), 0 0.0625rem 0.25rem 0.0625rem rgba(0,0,0,0.06)">
+            <svg class="fill-{{ key }}" height="35" width="35" aria-hidden="true" focusable="false">
+                <use class="view" xlink:href="#symbol-view"></use>
+            </svg>
+            <p style="flex: 1; display: block; padding: 0.2em; border-radius: 0.25em; text-align: center; color: var(--co-color-min); background-color: var(--co-color-bg-base);">
+                <strong style="display: block;">{{ name }}</strong>
+                <code>.fill-{{ key }}</code>
+            </p>
+        </li>
+    {% endfor %}
+</ul>
