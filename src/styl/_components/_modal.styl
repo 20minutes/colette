@@ -11,6 +11,7 @@
 // .modal-window-small - modal width 440px
 // .modal-window-medium - modal width 600px
 // .modal-window-closeOutside - close button outside modal body
+// .modal-window-fixedHeight - modal with a fixed height at 70vh and an inner scroll
 //
 // Markup: modal.twig
 //
@@ -69,6 +70,11 @@
             .modal-close
                 top _rem(10px)
                 right 0
+
+        &-fixedHeight
+            .modal-content
+                height 70vh
+                overflow-y auto
 
     &-close
         position absolute
