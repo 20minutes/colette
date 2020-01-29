@@ -68,7 +68,12 @@
 //
 // - **.d-flex**:     display flex of a block or a list
 // - **.d-iFlex**:    display inline-flex of a block or a list
-// -
+//
+// - **.flx0**:      apply flex: 0
+// - **.flx1**:      apply flex: 1
+// - **.flx2**:      apply flex: 2
+// - **.flx3**:      apply flex: 3
+//
 // - **.fd-row**:     apply flex direction in row to the flex-items
 // - **.fd-rowRev**:  apply flex direction in row-reverse to the flex-items
 // - **.fd-col**:     apply flex direction in column to the flex-items
@@ -118,6 +123,10 @@
 
 .d-iFlex
     display inline-flex
+
+for i in (0..3)
+    .flx{i}
+        flex i
 
 .fd-row
     flex-direction row
