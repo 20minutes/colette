@@ -26,7 +26,7 @@ _calcLines($lines, $font-size, $line-height = $lh)
 // $font-size   - `font-size`
 // $line-height - reference line-height
 //
-// Styleguide: Mixins.LineHeight.calcLines
+// Styleguide: Mixins.LineHeight.lines
 _lines($font-size, $line-height = $lh)
     return _calcLines(ceil(($font-size / $lh-division)  / $line-height) * $lh-division, $font-size, $line-height)
 
@@ -37,17 +37,17 @@ _lines($font-size, $line-height = $lh)
 // $lines       - the number of lines (Integer)
 // $line-height - reference line-height
 //
-// Styleguide: Mixins.LineHeight.calcLines
+// Styleguide: Mixins.LineHeight.lh
 _lh($lines, $line-height = $lh)
     return $lines * $line-height
 
-// _lines($font-size, $line-height = $lh)
+// getLh($font-size, $line-height = $lh)
 //
 // Return `line-height` value necessary for $font-size.
 //
 // $font-size   - `font-size`
 // $line-height - reference line-height
 //
-// Styleguide: Mixins.LineHeight.calcLines
+// Styleguide: Mixins.LineHeight.getLh
 _getLh($font-size, $line-height = $lh)
     return _lh(_lines($font-size, $line-height), $line-height)
