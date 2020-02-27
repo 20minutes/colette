@@ -58,6 +58,34 @@ gulp.task('css', function () {
 
 `PATH_TO_STYLUS_IMPORT` could be `node_modules` for example if you use npm.
 
+### Use webpack
+
+To compile your stylus, use [`stylus-loader`](https://github.com/shama/stylus-loader)
+
+```javascript
+/* webpack.config.js */
+{
+  test: /\.styl$/i,
+  use: [
+    'style-loader',
+    'css-loader',
+    'postcss-loader',
+    {
+      loader: 'stylus-loader',
+      options: {
+        paths: [
+          'node_modules',
+        ],
+        'include css': true,
+        'resolve url': true,
+        stylus: {
+          preferPathResolver: 'webpack',
+        },
+      },
+    },
+  ],
+}
+```
 
 ### Partial import
 
