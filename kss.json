@@ -1,5 +1,6 @@
 {
-  "source": "src/styl",
+  "base": "./",
+  "source": "src/styl/**/*",
   "destination": "dist",
   "//": "The css and js paths are URLs relative to the style guide destination.",
   "css": [
@@ -10,8 +11,8 @@
   ],
   "title": "Colette Style Guide",
   "verbose": false,
-  "homepage": "../../README.md",
-  "builder": "colette-kss-builder",
+  "homepage": "README.md",
+  "builder": "node_modules/colette-kss-builder",
   "extend": [
     "src/twig/filters"
   ]
