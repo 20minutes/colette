@@ -3,6 +3,87 @@
 // Every design’s colors are declined as CSS custom properties.
 //
 // Styleguide: CSSvariables.color
+
+// Colors
+//
+// Every colors in this Colettes are variables.
+// If an overwrite of the color is needed, checkout [the stylus variables on the settings](./section-settings.html#kssref-settings-colors).
+//
+// Layout and UI generic colors
+//
+// Colors:
+// --color-base:                 #4c4d4e - text color
+// --color-base-foreground:      #fff    - if text writen on --color-base
+// --color-links:                #0062D9 - links color
+// --color-highlight:            #cc190f - highlighted color
+// --color-highlight-foreground: #fff    - if text writen on --color-highlight
+// --color-native:               #fff7e2 - ads and external contents
+// --color-native-foreground:    #4c4d4e - if text writen on --color-native
+//
+// Styleguide: Design.Colors
+
+// Alerts colors
+//
+// Colors for alerts messages.
+//
+// Colors:
+// --color-info:    #0b4892 - Info
+// --color-success: #3c7a09 - Success
+// --color-warning: #b05105 - Warning
+// --color-error:   #cc190f - Error
+//
+// Weight: 2
+//
+// Styleguide: Design.Colors.Alerts
+
+// Theme colors
+//
+// The color palette is based upon 20 Minutes editorial color chart:
+// - each editorial section has a related color
+// - we use section names as aliases to define color variables and classes names
+// - this colors should respect at least a 4.5 (`$contrast`) ratio relatively to white
+// - if ratio is insufficient some modules add a text-shadow or swith to a darker color
+//
+// Colors:
+// --color-theme-default:       #0b4892 - theme default
+// --color-theme-sport:         #00b9f3 - theme sport
+// --color-theme-entertainment: #cc190f - theme entertainment
+// --color-theme-economy:       #053042 - theme economy
+// --color-theme-community:     #930b48 - theme community
+// --color-theme-weird:         #ef2a82 - theme weird
+// --color-theme-partner:       #ff5400 - theme partner
+// --color-theme-planet:        #48930b - theme planet
+// --color-theme-media:         #000000 - theme media
+// --color-theme-hightech:      #686868 - theme hightech
+// --color-theme-summer:        #cc4c3c - theme summer
+//
+// Weight: 3
+//
+// Styleguide: Design.Colors.Theme
+
+// Social colors
+//
+// The social color palette is used for share and socials buttons.
+//
+// Colors:
+// --color-social-dailymotion: #2068D4 - dailymotion
+// --color-social-facebook:    #4c64a0 - facebook
+// --color-social-flipboard:   #f52828 - flipboard
+// --color-social-github:      #791e8f - github
+// --color-social-googleplus:  #d14836 - googleplus
+// --color-social-hootsuite:   #000000 - hootsuite
+// --color-social-instagram:   #ff0040 - instagram
+// --color-social-linkedin:    #0177b5 - linkedin
+// --color-social-messenger:   #3d6bfb - messenger
+// --color-social-pinterest:   #bd081c - pinterest
+// --color-social-pocket:      #ed4054 - pocket
+// --color-social-sms:         #48930b - sms
+// --color-social-snapchat:    #fdfe00 - snapchat
+// --color-social-twitter:     #00a7e7 - twitter
+// --color-social-whatsapp:    #01a85a - whatsapp
+// --color-social-youtube:     #eb3223 - youtube
+//
+// Styleguide: Design.Colors.Social
 /:root
     _hslVars(--color-highlight, $color-highlight)
     --color-highlight-foreground $color-highlight-foreground

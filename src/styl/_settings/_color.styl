@@ -1,19 +1,60 @@
 // Colors
 //
 // Every colors in this Colettes are variables.
+// Each of these stylus variables are then associated with a [css variable](./section-design.html#kssref-design-colors).
+// Prefer using a css variable and overwrite the stylus variable if necessary.
 //
+// Styleguide: Settings.Colors
+
 // Layout and UI generic colors
 //
 // Colors:
-// --color-base:                 #4c4d4e - text color
-// --color-base-foreground:      #fff    - if text writen on --color-base
-// --color-links:                #0062D9 - links color
-// --color-highlight:            #cc190f - highlighted color
-// --color-highlight-foreground: #fff    - if text writen on --color-highlight
-// --color-native:               #fff7e2 - ads and external contents
-// --color-native-foreground:    #4c4d4e - if text writen on --color-native
+// $color-base:                 #4c4d4e - text color
+// $color-base-foreground:      #fff    - if text writen on $color-base
+// $color-links:                #0062D9 - links color
+// $color-highlight:            #cc190f - highlighted color
+// $color-highlight-foreground: #fff    - if text writen on $color-highlight
+// $color-native:               #fff7e2 - ads and external contents
+// $color-native-foreground:    #4c4d4e - if text writen on $color-native
+// $color-foreground-0:         #4c4d4e - 1st shade of foreground
+// $color-foreground-1:         #878787 - 2nd shade of foreground
+// $color-foreground-2:         #b7b7b7 - 3rd shade of foreground
+// $color-foreground-3:         #c7c7c7 - 4th shade of foreground
+// $color-background-0:         #4c4d4e - 1st shade of background
+// $color-background-1:         #878787 - 2nd shade of background
+// $color-background-2:         #b7b7b7 - 3rd shade of background
+// $color-background-3:         #c7c7c7 - 4th shade of background
+// $color-background-4:         #b7b7b7 - 5th shade of background
 //
-// Styleguide: Design.Colors
+// Styleguide: Settings.Colors.Generic
+
+// Dark equivalent
+//
+// The values `$color-foreground-*-dark` are in fact generated. The original value is inverted and lightened at 41%:
+// ```stylus
+// $color-foreground-*-dark ?= lighten(invert($color-foreground-*), 41)
+// ```
+//
+// The values `$color-background-*-dark` are also generated. The original value is darkened at 79%:
+// ```stylus
+// $color-background-*-dark ?= darken($color-background-*, 79)
+// ```
+//
+// Colors:
+// $color-base-dark:            #fff
+// $color-base-foreground-dark: #4c4d4e
+// $color-links-dark:           #4DADFF - $color-theme-default-dark
+// $color-foreground-0-dark:    #FFFFFF
+// $color-foreground-1-dark:    #e1e1e1
+// $color-foreground-2-dark:    #b1b1b1
+// $color-foreground-3-dark:    #a1a1a1
+// $color-background-0-dark:    #363636
+// $color-background-1-dark:    #2f2f2f
+// $color-background-2-dark:    #282828
+// $color-background-3-dark:    #1e1e1e
+// $color-background-4-dark:    #000000
+//
+// Styleguide: Settings.Colors.Generic.Dark
 $color-base ?= #4c4d4e
 $color-base-foreground ?= #fff
 $color-highlight ?= #cc190f
@@ -58,14 +99,14 @@ $color-background-4-dark ?= darken($color-background-4, 79)
 // Colors for alerts messages.
 //
 // Colors:
-// --color-info:    #0b4892 - Info
-// --color-success: #3c7a09 - Success
-// --color-warning: #b05105 - Warning
-// --color-error:   #cc190f - Error
+// $color-info:    #0b4892 - Info
+// $color-success: #3c7a09 - Success
+// $color-warning: #b05105 - Warning
+// $color-error:   #cc190f - Error
 //
 // Weight: 2
 //
-// Styleguide: Design.Colors.Alerts
+// Styleguide: Settings.Colors.Alerts
 $color-info ?= #0b4892
 $color-success ?= #3c7a09
 $color-warning ?= #b05105
@@ -81,7 +122,7 @@ $color-error ?= #cc190f
 //
 // Weight: 3
 //
-// Styleguide: Design.Colors.BnW
+// Styleguide: Settings.Colors.BnW
 $color-black ?= #000
 $color-white ?= #fff
 
@@ -94,21 +135,32 @@ $color-white ?= #fff
 // - if ratio is insufficient some modules add a text-shadow or swith to a darker color
 //
 // Colors:
-// --color-theme-default:       #0b4892 - theme default
-// --color-theme-sport:         #00b9f3 - theme sport
-// --color-theme-entertainment: #cc190f - theme entertainment
-// --color-theme-economy:       #053042 - theme economy
-// --color-theme-community:     #930b48 - theme community
-// --color-theme-weird:         #ef2a82 - theme weird
-// --color-theme-partner:       #ff5400 - theme partner
-// --color-theme-planet:        #48930b - theme planet
-// --color-theme-media:         #000000 - theme media
-// --color-theme-hightech:      #686868 - theme hightech
-// --color-theme-summer:        #cc4c3c - theme summer
+// $color-theme-default:       #0b4892 - theme default
+// $color-theme-sport:         #00b9f3 - theme sport
+// $color-theme-entertainment: #cc190f - theme entertainment
+// $color-theme-economy:       #053042 - theme economy
+// $color-theme-community:     #930b48 - theme community
+// $color-theme-weird:         #ef2a82 - theme weird
+// $color-theme-partner:       #ff5400 - theme partner
+// $color-theme-planet:        #48930b - theme planet
+// $color-theme-media:         #000000 - theme media
+// $color-theme-hightech:      #686868 - theme hightech
+// $color-theme-summer:        #cc4c3c - theme summer
 //
 // Weight: 4
 //
-// Styleguide: Design.Colors.Theme
+// Styleguide: Settings.Colors.Theme
+
+// Dark equivalent
+//
+// All these colors are set with the same color as `$color-theme-default-dark`. It's however possible to set a color fo each theme by adding the suffix `-dark` on it.
+//
+// For exemple, `$color-theme-sport` will have it's equivalent value `$color-theme-sport-dark`
+//
+// Colors:
+// $color-theme-default-dark:  #4DADFF - theme default dark
+//
+// Styleguide: Settings.Colors.Theme.Dark
 $color-theme-default ?= #0b4892
 $color-theme-sport  ?= #00b9f3
 $color-theme-entertainment ?= #cc190f
@@ -153,24 +205,24 @@ $color-theme-summer-dark ?= #4DADFF
 // The social color palette is used for share and socials buttons.
 //
 // Colors:
-// --color-social-dailymotion: #2068D4 - dailymotion
-// --color-social-facebook:    #4c64a0 - facebook
-// --color-social-flipboard:   #f52828 - flipboard
-// --color-social-github:      #791e8f - github
-// --color-social-googleplus:  #d14836 - googleplus
-// --color-social-hootsuite:   #000000 - hootsuite
-// --color-social-instagram:   #ff0040 - instagram
-// --color-social-linkedin:    #0177b5 - linkedin
-// --color-social-messenger:   #3d6bfb - messenger
-// --color-social-pinterest:   #bd081c - pinterest
-// --color-social-pocket:      #ed4054 - pocket
-// --color-social-sms:         #48930b - sms
-// --color-social-snapchat:    #fdfe00 - snapchat
-// --color-social-twitter:     #00a7e7 - twitter
-// --color-social-whatsapp:    #01a85a - whatsapp
-// --color-social-youtube:     #eb3223 - youtube
+// $color-social-dailymotion: #2068D4 - dailymotion
+// $color-social-facebook:    #4c64a0 - facebook
+// $color-social-flipboard:   #f52828 - flipboard
+// $color-social-github:      #791e8f - github
+// $color-social-googleplus:  #d14836 - googleplus
+// $color-social-hootsuite:   #000000 - hootsuite
+// $color-social-instagram:   #ff0040 - instagram
+// $color-social-linkedin:    #0177b5 - linkedin
+// $color-social-messenger:   #3d6bfb - messenger
+// $color-social-pinterest:   #bd081c - pinterest
+// $color-social-pocket:      #ed4054 - pocket
+// $color-social-sms:         #48930b - sms
+// $color-social-snapchat:    #fdfe00 - snapchat
+// $color-social-twitter:     #00a7e7 - twitter
+// $color-social-whatsapp:    #01a85a - whatsapp
+// $color-social-youtube:     #eb3223 - youtube
 //
-// Styleguide: Design.Colors.Social
+// Styleguide: Settings.Colors.Social
 $color-social-dailymotion ?= #2068D4
 $color-social-facebook ?= #4c64a0
 $color-social-flipboard ?= #f52828
