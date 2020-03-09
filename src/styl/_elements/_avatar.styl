@@ -2,6 +2,9 @@
 //
 // Use a square image.
 //
+// Avatar element use `em` so we can and should modify its font-size
+// to manage the size of the element.
+//
 // Markup: avatar.twig
 //
 // Styleguide: Elements.avatar
@@ -9,11 +12,11 @@
     display inline-block
     vertical-align middle
     overflow hidden
-    width 2.625em // 42px retative to 16px // TODO: use a convert (px to em) function
-    height 2.625em // 42px retative to 16px // TODO: use a convert (px to em) function
+    width _em(42px)
+    height @width
     border-radius 80em // excessive value to keep it round
     background var(--color-borders)
-    border 3px solid var(--color-borders)
+    border 1px solid var(--color-borders)
 
     > img
     > svg
