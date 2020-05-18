@@ -101,7 +101,12 @@ module.exports = async (env) => {
     config.plugins.push(new KssWebpackPlugin(kssConfig))
 
     // assets for kss demo
-    config.plugins.push(new CopyPlugin([{ from: 'demo-img/', to: 'dist/img' }]))
+    config.plugins.push(new CopyPlugin({
+      patterns: [{
+        from: 'demo-img/',
+        to: 'dist/img',
+      }],
+    }))
   }
 
   return config
