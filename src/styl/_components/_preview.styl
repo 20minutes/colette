@@ -5,7 +5,11 @@
 // Can contain optional related links.
 //
 // .preview-cover    -    The image's height is set to 36rem and the title is bigger.
-// .preview-stretch    -    In a flexbox, stretch or height 100%
+// .preview-stretch  -    In a flexbox, stretch or height 100%.
+// .preview-forward  -    The image occupies all the space, and the texts pass over it and are white with shadow.
+//                        <br/>If picto is visible (skin-video...), it is centered horizontally and vertically.
+// .preview-reduced  -    A minimalist layout, without bg color, which contains only the label and title (which is limited in height).
+// .preview-inline   -    The image is in square format, and aligned with the text. The description is hidden.
 //
 // Markup: preview.twig
 //
@@ -47,7 +51,7 @@
             background-color var(--color-native)
             color var(--color-native-foreground)
 
-    &-cover
+    &-cover // when preview is cover
         .media
             img
                 height _rem(360px)
@@ -106,3 +110,157 @@
             left 0
             right 0
             bottom 0
+
+    &-forward // when preview is forward
+        position relative
+
+        .teaser
+            position absolute
+            left 0
+            bottom _rem(30px)
+
+            &-title
+            &-headline
+                color $color-white
+                text-shadow 0 2px 2px $color-base
+
+            &-title
+                position relative
+                z-index 1
+                font-size 1.6em
+                color $color-white
+
+                @media $breakpoints.md
+                    font-size 2.7em
+
+            &-summary
+                display none
+
+        .media
+            &-wrap
+                // This style is for center the article picto (skin-video, skin-gallery...)
+                &:before
+                    width 4.5em
+                    height 3.5em
+                    left 50%
+                    transform translateX(-50%)
+                    top 0
+                    margin auto
+                    background-size 60% auto
+
+                    @media $breakpoints.md
+                        width 6em
+                        height 4.5em
+
+                &:after
+                    content ''
+                    position absolute
+                    left 0
+                    bottom 0
+                    width 100%
+                    height 50%
+                    background linear-gradient(0deg, rgba(0,0,0,.6) 0%, transparent 100%)
+
+        .preview
+            &-footer
+                position absolute
+                left 0
+                right 0
+                bottom 0
+
+                .counterbar
+                    background transparent
+
+                    ../
+                    &-item
+                    a
+                        color $color-white
+                        fill $color-white
+
+            &-related
+                display none
+
+    &-reduced // when media and teaser is reduced
+        border none
+        box-shadow inherit
+        padding-bottom 0
+        background transparent
+
+        .teaser
+            &-headline
+                _mb(.5)
+
+            &-title
+                font-size .9em
+                font-weight 600
+                height _rem(65px)
+                overflow hidden
+
+            &-summary
+                display none
+
+        .media
+            margin 0
+            border-radius _rem(10px )
+            display block
+            overflow hidden
+
+        .preview
+            &-footer
+            &-related
+                display none
+
+    &-inline // when media and teaser is inline
+        _pb(0)
+        _mb(1)
+        position relative
+
+        > a
+            display flex
+
+        .teaser
+            flex-basis 70%
+
+            &-title
+                font-size .9em
+                font-weight 600
+                height _rem(35px)
+                overflow hidden
+
+            &-summary
+                display none
+
+        .media
+            flex-basis 30%
+
+            img
+                height 100%
+                width auto
+
+        .preview
+            &-footer
+                _p(.5 1)
+                position absolute
+                right 0
+                left auto
+                bottom 0
+                width 70%
+                background transparent
+                text-align right
+                font-size .9em
+                color var(--color-primary)
+
+                .counterbar
+                    width 100%
+
+                    &-item
+                        display inline-block
+
+                        &:not(:first-child)
+                            _pl(1)
+
+                        abbr
+                            border none
+
+            &-related
+                display none
