@@ -114,52 +114,53 @@
     &-forward // when preview is forward
         position relative
 
-        .teaser
-            position absolute
-            left 0
-            bottom _rem(30px)
+        > a
+            .teaser
+                position absolute
+                left 0
+                bottom _rem(30px)
 
-            &-title
-            &-headline
-                color $color-white
-                text-shadow 0 2px 2px $color-base
+                &-title
+                &-headline
+                    color $color-white
+                    text-shadow 0 _rem(2px) _rem(2px) $color-base
 
-            &-title
-                position relative
-                z-index 1
-                font-size 1.6em
-                color $color-white
-
-                @media $breakpoints.md
-                    font-size 2.7em
-
-            &-summary
-                display none
-
-        .media
-            &-wrap
-                // This style is for center the article picto (skin-video, skin-gallery...)
-                &:before
-                    width 4.5em
-                    height 3.5em
-                    left 50%
-                    transform translateX(-50%)
-                    top 0
-                    margin auto
-                    background-size 60% auto
+                &-title
+                    position relative
+                    z-index 1
+                    font-size 1.6em
+                    color $color-white
 
                     @media $breakpoints.md
-                        width 6em
-                        height 4.5em
+                        font-size 2.7em
 
-                &:after
-                    content ''
-                    position absolute
-                    left 0
-                    bottom 0
-                    width 100%
-                    height 50%
-                    background linear-gradient(0deg, rgba(0,0,0,.6) 0%, transparent 100%)
+                &-summary
+                    display none
+
+            .media
+                &-wrap
+                    // This style is for center the article picto (skin-video, skin-gallery...)
+                    &:before
+                        width 4.5em
+                        height 3.5em
+                        left 50%
+                        transform translateX(-50%)
+                        top 0
+                        margin auto
+                        background-size 60% auto
+
+                        @media $breakpoints.md
+                            width 6em
+                            height 4.5em
+
+                    &:after
+                        content ''
+                        position absolute
+                        left 0
+                        bottom 0
+                        width 100%
+                        height 50%
+                        background linear-gradient(0deg, rgba(0,0,0,.6) 0%, transparent 100%)
 
         .preview
             &-footer
