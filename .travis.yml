@@ -5,7 +5,8 @@ language: node_js
 # avoid double Travis build when the PR is created on upstream
 if: |
     type = pull_request OR \
-    branch = master
+    branch = master OR \
+    tag =~ ^v
 
 script:
   - npm run build
