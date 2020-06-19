@@ -23,7 +23,7 @@ jobs:
       deploy:
         strategy: git
         provider: pages
-        cleanup: true
+        cleanup: false
         token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
         local_dir: dist
         on:
@@ -34,7 +34,7 @@ jobs:
       node_js: "12"
       deploy:
         provider: npm
-        cleanup: true
+        cleanup: false
         email: "web-tech+npm@20minutes.fr"
         api_token:
           # This is the NPM token finishing by e8f7
