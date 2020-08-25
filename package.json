@@ -40,7 +40,7 @@
     "jsdoc": "^3.6.2",
     "kss": "3.0.0",
     "kss-webpack-plugin": "^1.5.0",
-    "mini-css-extract-plugin": "^0.9.0",
+    "mini-css-extract-plugin": "^0.10.0",
     "postcss-custom-properties": "github:ryuran/postcss-custom-properties#build",
     "postcss-focus-visible": "^5.0.0",
     "postcss-loader": "^3.0.0",
