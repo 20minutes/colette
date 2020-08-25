@@ -5,6 +5,7 @@
 //
 // Markup: <p class="{{ modifier_class }}">Font-size exemple</p>
 //
+// .fs11    - Set `font-size` to `11px` converted to `rem`
 // .fs12    - Set `font-size` to `12px` converted to `rem`
 // .fs13    - Set `font-size` to `13px` converted to `rem`
 // .fs14    - Set `font-size` to `14px` converted to `rem`
@@ -16,7 +17,7 @@
 // Styleguide: Helpers.Font-sizes
 
 .fs
-    for i in 12..16
+    for i in 11..16
         &{i}
             font-size _rem(unit(i, 'px'))
 
