@@ -32,10 +32,10 @@ $footer-color-foreground-dark ?= lighten(desaturate($footer-color-dark, 30%), 65
     min-height _rem(30px)
     border-top 3px solid var(--footer-color-foreground)
     background-color var(--footer-color)
-    color var(--footer-color-foreground)
+    color var(--color-highlight-foreground)
 
-    a
-        color var(--color-fade)
+    &-copyright
+        color var(--footer-color-foreground)
 
-        &:hover
-            text-decoration underline
+    a:hover
+        text-decoration underline
