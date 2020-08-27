@@ -1,0 +1,38 @@
+// Inline Menu
+//
+// Set all elements of list in display flex, justify and align items center.
+//
+// This class can be used to make a inline menu.
+//
+// Markup: inlinemenu.twig
+//
+// Styleguide: Components.inlinemenu
+
+.inlinemenu
+    _pl(0)
+    display flex
+    list-style-type none
+    flex-wrap wrap
+    width 100%
+
+    @media $breakpoints.md
+        white-space nowrap
+        
+    &-item
+        _pr(1)
+        font-size _rem(12px)
+        color var(--color-base)
+        position relative
+        
+        a
+            color inherit
+            font-weight 400
+
+        &+&
+            _pl(1)
+
+            &:before 
+                content "|"
+                position absolute
+                left _rem(-2px)
+                top 0
