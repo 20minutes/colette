@@ -45,7 +45,7 @@
     "postcss-focus-visible": "^5.0.0",
     "postcss-loader": "^4.0.0",
     "stylint": "^2.0.0",
-    "stylus-loader": "^3.0.2",
+    "stylus-loader": "^4.2.0",
     "svg-sprite-html-webpack": "^2.3.0",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11",
