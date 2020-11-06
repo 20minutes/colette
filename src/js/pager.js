@@ -45,6 +45,7 @@ function Pager(cfg) {
 
   this.btnPrev = this.pager.querySelector('.pager-prev')
   this.btnNext = this.pager.querySelector('.pager-next')
+  this.btnPrev.disabled = true
 
   // event handlers
   this.btnPrev.addEventListener('click', this.paginateEventHandler.bind(this))
