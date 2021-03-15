@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>dropDown.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="DropDown.html">DropDown</a><ul class='methods'><li data-type='method'><a href="DropDown.html#bindEvents">bindEvents</a></li><li data-type='method'><a href="DropDown.html#closeAll">closeAll</a></li></ul></li><li><a href="module-modules_fontLoader-FontLoader.html">FontLoader</a><ul class='methods'><li data-type='method'><a href="module-modules_fontLoader-FontLoader.html#activeFonts">activeFonts</a></li><li data-type='method'><a href="module-modules_fontLoader-FontLoader.html#init">init</a></li><li data-type='method'><a href="module-modules_fontLoader-FontLoader.html#isFontLoaded">isFontLoaded</a></li><li data-type='method'><a href="module-modules_fontLoader-FontLoader.html#load">load</a></li><li data-type='method'><a href="module-modules_fontLoader-FontLoader.html#updateLocalStorage">updateLocalStorage</a></li></ul></li><li><a href="module-modules_iframeResizer-IframeResizer.html">IframeResizer</a><ul class='methods'><li data-type='method'><a href="module-modules_iframeResizer-IframeResizer.html#height">height</a></li><li data-type='method'><a href="module-modules_iframeResizer-IframeResizer.html#iframeResizeComplete">iframeResizeComplete</a></li><li data-type='method'><a href="module-modules_iframeResizer-IframeResizer.html#sendHeight">sendHeight</a></li></ul></li><li><a href="module-modules_modal-Modal.html">Modal</a><ul class='methods'><li data-type='method'><a href="module-modules_modal-Modal.html#build">build</a></li><li data-type='method'><a href="module-modules_modal-Modal.html#close">close</a></li><li data-type='method'><a href="module-modules_modal-Modal.html#destroy">destroy</a></li><li data-type='method'><a href="module-modules_modal-Modal.html#fill">fill</a></li><li data-type='method'><a href="module-modules_modal-Modal.html#insert">insert</a></li><li data-type='method'><a href="module-modules_modal-Modal.html#open">open</a></li></ul></li><li><a href="module-modules_pager-Pager.html">Pager</a><ul class='methods'><li data-type='method'><a href="module-modules_pager-Pager.html#paginateEventHandler">paginateEventHandler</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-modules_fontLoader.html">modules/fontLoader</a><ul class='methods'><li data-type='method'><a href="module-modules_fontLoader.html#~isFontFaceSetCompatible">isFontFaceSetCompatible</a></li></ul></li><li><a href="module-modules_iframeResizer.html">modules/iframeResizer</a></li><li><a href="module-modules_modal.html">modules/modal</a></li><li><a href="module-modules_pager.html">modules/pager</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">dropDown.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>const defaultConfig = {
+  wrapperSelector: '.dropDown',
+  btnSelector: '.dropDown-btn',
+  contentSelector: '.dropDown-content',
+}
+
+/** Class representing some dropDown components */
+class DropDown {
+  /**
+   * Create a new DropDown
+   * @class
+   * @param {Object} cfg config object
+   * @param {String} [cfg.wrapperSelector='.dropDown'] wrapper css selector
+   * @param {String} [cfg.btnSelector='.dropDown-btn'] btn css selector
+   * @param {String} [cfg.contentSelector='.dropDown-content'] content css selector
+   */
+  constructor(cfg) {
+    this.config = { ...defaultConfig, ...cfg }
+
+    this.bindEvents()
+  }
+
+  /** Bind events */
+  bindEvents() {
+    document.addEventListener('click', (e) => {
+      const wrapper = e.target.closest(this.config.wrapperSelector)
+      if (!wrapper) {
+        this.closeAll()
+      }
+
+      const btn = e.target.closest(this.config.btnSelector)
+
+      if (!btn) {
+        return
+      }
+
+      btn.setAttribute('aria-expanded', btn.getAttribute('aria-expanded') === 'false')
+    })
+
+    document.addEventListener('focus', (e) => {
+      const wrapper = e.target === document || e.target.closest(this.config.wrapperSelector)
+
+      if (!wrapper) {
+        this.closeAll()
+      }
+    })
+  }
+
+  /** Close every open dropDown */
+  closeAll() {
+    Array.from(document.querySelectorAll(this.config.btnSelector)).forEach((el) => {
+      if (el.getAttribute('aria-expanded') === 'true') {
+        el.setAttribute('aria-expanded', false)
+      }
+    })
+  }
+}
+
+export default DropDown
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on Mon Mar 15 2021 13:12:18 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

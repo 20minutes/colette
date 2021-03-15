@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>modal.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="DropDown.html">DropDown</a><ul class='methods'><li data-type='method'><a href="DropDown.html#bindEvents">bindEvents</a></li><li data-type='method'><a href="DropDown.html#closeAll">closeAll</a></li></ul></li><li><a href="module-modules_fontLoader-FontLoader.html">FontLoader</a><ul class='methods'><li data-type='method'><a href="module-modules_fontLoader-FontLoader.html#activeFonts">activeFonts</a></li><li data-type='method'><a href="module-modules_fontLoader-FontLoader.html#init">init</a></li><li data-type='method'><a href="module-modules_fontLoader-FontLoader.html#isFontLoaded">isFontLoaded</a></li><li data-type='method'><a href="module-modules_fontLoader-FontLoader.html#load">load</a></li><li data-type='method'><a href="module-modules_fontLoader-FontLoader.html#updateLocalStorage">updateLocalStorage</a></li></ul></li><li><a href="module-modules_iframeResizer-IframeResizer.html">IframeResizer</a><ul class='methods'><li data-type='method'><a href="module-modules_iframeResizer-IframeResizer.html#height">height</a></li><li data-type='method'><a href="module-modules_iframeResizer-IframeResizer.html#iframeResizeComplete">iframeResizeComplete</a></li><li data-type='method'><a href="module-modules_iframeResizer-IframeResizer.html#sendHeight">sendHeight</a></li></ul></li><li><a href="module-modules_modal-Modal.html">Modal</a><ul class='methods'><li data-type='method'><a href="module-modules_modal-Modal.html#build">build</a></li><li data-type='method'><a href="module-modules_modal-Modal.html#close">close</a></li><li data-type='method'><a href="module-modules_modal-Modal.html#destroy">destroy</a></li><li data-type='method'><a href="module-modules_modal-Modal.html#fill">fill</a></li><li data-type='method'><a href="module-modules_modal-Modal.html#insert">insert</a></li><li data-type='method'><a href="module-modules_modal-Modal.html#open">open</a></li></ul></li><li><a href="module-modules_pager-Pager.html">Pager</a><ul class='methods'><li data-type='method'><a href="module-modules_pager-Pager.html#paginateEventHandler">paginateEventHandler</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-modules_fontLoader.html">modules/fontLoader</a><ul class='methods'><li data-type='method'><a href="module-modules_fontLoader.html#~isFontFaceSetCompatible">isFontFaceSetCompatible</a></li></ul></li><li><a href="module-modules_iframeResizer.html">modules/iframeResizer</a></li><li><a href="module-modules_modal.html">modules/modal</a></li><li><a href="module-modules_pager.html">modules/pager</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">modal.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/** @module modules/modal */
+
+import A11yDialog from 'a11y-dialog'
+
+/** Default config. */
+const defaultConfig = {
+  containerId: null,
+  containerClasses: [],
+  modalWindowClasses: [],
+  modalContentClasses: [],
+  content: '',
+  targetToggleHidden: document.querySelectorAll('body > *:not(.modal):not([aria-hidden="true"]):not(script)'),
+}
+
+/**
+ * Create a new Modal, accessible dialog
+ * @class
+ * @param {object} cfg config object
+ * @param {string} [cfg.containerId=null] container’s ID
+ * @param {Array} [cfg.containerClasses=[]] (optional) Classes of the container
+ * @param {Array} [cfg.modalWindowClasses=[]] (optional) Classes of the actual modal
+ * @param {Array} [cfg.modalContentClasses=[]] (optional) Classes of the modal content div
+ * @param {string | Element | DocumentFragment} [cfg.content=''] Content of the modal
+ * @param {(NodeList | Element | string)} [cfg.targetToggleHidden] Elements to hide when
+ * open the modal
+ */
+function Modal(cfg) {
+  // Merge default with current cfg
+  this.config = { ...defaultConfig, ...cfg }
+  this.build()
+  this.isInserted = false
+}
+
+/**
+ * Opens the modal if init
+ */
+Modal.prototype.open = function open() {
+  if (!this.dialog) {
+    // Cannot open Modal, it does not exist
+    return
+  }
+
+  this.dialog.show()
+}
+
+/**
+ * Close the modal if init
+ */
+Modal.prototype.close = function close() {
+  if (!this.dialog) {
+    // Cannot close Modal, it does not exist
+    return
+  }
+
+  this.dialog.hide()
+}
+
+/**
+ * Destroy modal and remove container from DOM
+ */
+Modal.prototype.destroy = function destroy() {
+  if (this.dialog) {
+    this.dialog.destroy()
+  }
+
+  if (this.container) {
+    this.container.remove()
+  }
+}
+
+Modal.prototype.init = function init() {
+  if (this.dialog) {
+    // The modal is already init
+    return
+  }
+
+  this.dialog = new A11yDialog(this.container, this.config.targetToggleHidden)
+
+  this.dialog.on('show', () => {
+    this.lastScroll = {
+      x: window.scrollX,
+      y: window.scrollY,
+    }
+    document.body.style.top = `-${this.lastScroll.y}px`
+    document.body.classList.add('noscroll')
+  })
+
+  this.dialog.on('hide', () => {
+    document.body.classList.remove('noscroll')
+    document.body.style.top = null
+    window.scroll(this.lastScroll.x, this.lastScroll.y)
+  })
+}
+
+/**
+ * Build modal DOM
+ * @return {Element} modal’s container
+ */
+Modal.prototype.build = function build() {
+  // Creates the container
+  this.container = document.createElement('div')
+
+  if (this.config.containerId) {
+    this.container.id = this.config.containerId
+  }
+
+  this.container.classList.add('modal', ...this.config.containerClasses)
+  this.container.setAttribute('aria-hidden', true)
+
+  // Creates the overlay
+  this.overlay = document.createElement('div')
+  this.overlay.classList.add('modal-overlay')
+  this.overlay.setAttribute('data-a11y-dialog-hide', true)
+  this.container.appendChild(this.overlay)
+
+  // Creates the close button
+  this.btnClose = document.createElement('button', { type: 'button' })
+  this.btnClose.classList.add('modal-close', 'btnIcon')
+  this.btnClose.setAttribute('data-a11y-dialog-hide', true)
+  this.btnClose.innerHTML = '&lt;svg height="12" width="12">&lt;use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#symbol-cross">&lt;/use>&lt;/svg>'
+
+  // Creates the modal &amp; fill it w/ the @param: content
+  this.window = document.createElement('div')
+  this.window.classList.add('modal-window', ...this.config.modalWindowClasses)
+  this.window.setAttribute('role', 'dialog')
+
+  this.content = document.createElement('div')
+  this.content.classList.add('modal-content', ...this.config.modalContentClasses)
+  this.fill(this.config.content)
+
+  this.window.appendChild(this.btnClose)
+  this.window.appendChild(this.content)
+  this.container.appendChild(this.window)
+
+  return this.container
+}
+
+/**
+ * Insert modal container at end of the `body`
+ */
+Modal.prototype.insert = function insert() {
+  if (this.isInserted) {
+    // Modal already exists in DOM
+    return
+  }
+
+  document.body.appendChild(this.container)
+  this.isInserted = true
+}
+
+/**
+ * Replace content of modal
+ * @param {string | Element | DocumentFragment} newContent
+ */
+Modal.prototype.fill = function fill(newContent) {
+  if (typeof newContent === 'string') {
+    this.content.innerHTML = newContent
+
+    return
+  }
+
+  this.content.innerHTML = ''
+  this.content.appendChild(newContent)
+}
+
+export default Modal
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on Mon Mar 15 2021 13:12:18 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

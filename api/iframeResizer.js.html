@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>iframeResizer.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="DropDown.html">DropDown</a><ul class='methods'><li data-type='method'><a href="DropDown.html#bindEvents">bindEvents</a></li><li data-type='method'><a href="DropDown.html#closeAll">closeAll</a></li></ul></li><li><a href="module-modules_fontLoader-FontLoader.html">FontLoader</a><ul class='methods'><li data-type='method'><a href="module-modules_fontLoader-FontLoader.html#activeFonts">activeFonts</a></li><li data-type='method'><a href="module-modules_fontLoader-FontLoader.html#init">init</a></li><li data-type='method'><a href="module-modules_fontLoader-FontLoader.html#isFontLoaded">isFontLoaded</a></li><li data-type='method'><a href="module-modules_fontLoader-FontLoader.html#load">load</a></li><li data-type='method'><a href="module-modules_fontLoader-FontLoader.html#updateLocalStorage">updateLocalStorage</a></li></ul></li><li><a href="module-modules_iframeResizer-IframeResizer.html">IframeResizer</a><ul class='methods'><li data-type='method'><a href="module-modules_iframeResizer-IframeResizer.html#height">height</a></li><li data-type='method'><a href="module-modules_iframeResizer-IframeResizer.html#iframeResizeComplete">iframeResizeComplete</a></li><li data-type='method'><a href="module-modules_iframeResizer-IframeResizer.html#sendHeight">sendHeight</a></li></ul></li><li><a href="module-modules_modal-Modal.html">Modal</a><ul class='methods'><li data-type='method'><a href="module-modules_modal-Modal.html#build">build</a></li><li data-type='method'><a href="module-modules_modal-Modal.html#close">close</a></li><li data-type='method'><a href="module-modules_modal-Modal.html#destroy">destroy</a></li><li data-type='method'><a href="module-modules_modal-Modal.html#fill">fill</a></li><li data-type='method'><a href="module-modules_modal-Modal.html#insert">insert</a></li><li data-type='method'><a href="module-modules_modal-Modal.html#open">open</a></li></ul></li><li><a href="module-modules_pager-Pager.html">Pager</a><ul class='methods'><li data-type='method'><a href="module-modules_pager-Pager.html#paginateEventHandler">paginateEventHandler</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-modules_fontLoader.html">modules/fontLoader</a><ul class='methods'><li data-type='method'><a href="module-modules_fontLoader.html#~isFontFaceSetCompatible">isFontFaceSetCompatible</a></li></ul></li><li><a href="module-modules_iframeResizer.html">modules/iframeResizer</a></li><li><a href="module-modules_modal.html">modules/modal</a></li><li><a href="module-modules_pager.html">modules/pager</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">iframeResizer.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/** @module modules/iframeResizer */
+
+/** Default config. */
+const defaultConfig = {
+  el: null,
+  delay: 0,
+  iframeId: 'iframeId',
+}
+
+/**
+ * Create a new IframeResizer
+ * @class
+ * @param {Object} cfg config object
+ * @param {HTMLIFrameElement} [cfg.el=null] iframe element
+ * @param {Int} [cfg.delay=0] delay between two check of size
+ * @param {String} [cfg.iframeId='iframeId'] id of iframe returned by postMessage
+ */
+function IframeResizer(cfg) {
+  if (!cfg.el) {
+    return
+  }
+
+  this.delay = cfg.delay || defaultConfig.delay
+  this.iframeId = cfg.iframeId || defaultConfig.iframeId
+  this.el = cfg.el
+
+  this.resizeInternal = false
+
+  window.addEventListener('message', (e) => {
+    // resizeComplete
+    if (e.data === 'resizeComplete') {
+      this.iframeResizeComplete()
+    }
+  })
+
+  window.addEventListener('load', this.height.bind(this))
+  window.addEventListener('resize', this.height.bind(this))
+}
+
+/**
+ */
+IframeResizer.prototype.iframeResizeComplete = function iframeResizeComplete() {
+  setTimeout(() => {
+    this.resizeInternal = false
+  }, 500)
+}
+
+/**
+ */
+IframeResizer.prototype.height = function height() {
+  if (!defaultConfig.resizeInternal) {
+    setTimeout(() => {
+      this.sendHeight()
+    }, this.delay)
+  }
+}
+
+/**
+ * Send new height information to parent iframe
+ */
+IframeResizer.prototype.sendHeight = function sendHeight() {
+  window.parent.postMessage({
+    type: 'doResize',
+    height: this.el.offsetHeight,
+    iframeId: this.iframeId,
+  }, '*')
+
+  // This postMessage is dedicated to AMP
+  // https://amp.dev/documentation/components/amp-iframe#iframe-resizing
+  window.parent.postMessage({
+    sentinel: 'amp',
+    type: 'embed-size',
+    height: document.body.scrollHeight,
+  }, '*')
+
+  this.resizeInternal = true
+}
+// IframeResizer Constructor.
+export default IframeResizer
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on Mon Mar 15 2021 13:12:18 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

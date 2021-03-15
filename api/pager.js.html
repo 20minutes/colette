@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>pager.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="DropDown.html">DropDown</a><ul class='methods'><li data-type='method'><a href="DropDown.html#bindEvents">bindEvents</a></li><li data-type='method'><a href="DropDown.html#closeAll">closeAll</a></li></ul></li><li><a href="module-modules_fontLoader-FontLoader.html">FontLoader</a><ul class='methods'><li data-type='method'><a href="module-modules_fontLoader-FontLoader.html#activeFonts">activeFonts</a></li><li data-type='method'><a href="module-modules_fontLoader-FontLoader.html#init">init</a></li><li data-type='method'><a href="module-modules_fontLoader-FontLoader.html#isFontLoaded">isFontLoaded</a></li><li data-type='method'><a href="module-modules_fontLoader-FontLoader.html#load">load</a></li><li data-type='method'><a href="module-modules_fontLoader-FontLoader.html#updateLocalStorage">updateLocalStorage</a></li></ul></li><li><a href="module-modules_iframeResizer-IframeResizer.html">IframeResizer</a><ul class='methods'><li data-type='method'><a href="module-modules_iframeResizer-IframeResizer.html#height">height</a></li><li data-type='method'><a href="module-modules_iframeResizer-IframeResizer.html#iframeResizeComplete">iframeResizeComplete</a></li><li data-type='method'><a href="module-modules_iframeResizer-IframeResizer.html#sendHeight">sendHeight</a></li></ul></li><li><a href="module-modules_modal-Modal.html">Modal</a><ul class='methods'><li data-type='method'><a href="module-modules_modal-Modal.html#build">build</a></li><li data-type='method'><a href="module-modules_modal-Modal.html#close">close</a></li><li data-type='method'><a href="module-modules_modal-Modal.html#destroy">destroy</a></li><li data-type='method'><a href="module-modules_modal-Modal.html#fill">fill</a></li><li data-type='method'><a href="module-modules_modal-Modal.html#insert">insert</a></li><li data-type='method'><a href="module-modules_modal-Modal.html#open">open</a></li></ul></li><li><a href="module-modules_pager-Pager.html">Pager</a><ul class='methods'><li data-type='method'><a href="module-modules_pager-Pager.html#paginateEventHandler">paginateEventHandler</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-modules_fontLoader.html">modules/fontLoader</a><ul class='methods'><li data-type='method'><a href="module-modules_fontLoader.html#~isFontFaceSetCompatible">isFontFaceSetCompatible</a></li></ul></li><li><a href="module-modules_iframeResizer.html">modules/iframeResizer</a></li><li><a href="module-modules_modal.html">modules/modal</a></li><li><a href="module-modules_pager.html">modules/pager</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">pager.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/** @module modules/pager */
+
+/** Default config. */
+const defaultConfig = {
+  itemPerPage: 3,
+  blockList: null,
+  onPageChanged: () => {},
+}
+
+/**
+ * Create a new Pager
+ * @class
+ * @param {Object} cfg config object
+ * @param {Number} [cfg.itemPerPage=3] number of item visible by page
+ * @param {HTMLElement} [cfg.blockList=null] list of elements to paginate
+ */
+function Pager(cfg) {
+  // Merge default with current cfg
+  this.config = { ...defaultConfig, ...cfg }
+
+  this.blockList = this.config.blockList
+  this.block = this.blockList.closest('.block')
+  if (!this.block) {
+    return
+  }
+  this.pager = this.block.querySelector('.pager')
+  if (!this.pager) {
+    return
+  }
+  this.items = this.blockList.querySelectorAll('li')
+  if (!this.items) {
+    return
+  }
+
+  // get config from attribute
+  const attributConfigItemPerPage = this.blockList.getAttribute('data-item-per-page')
+
+  // Variables used for pager
+  this.itemPerPage = this.config.itemPerPage
+  if (attributConfigItemPerPage) {
+    this.itemPerPage = parseInt(attributConfigItemPerPage, 10)
+  }
+  this.totalPage = Math.ceil(this.items.length / this.itemPerPage)
+  this.currentPage = 1
+
+  this.btnPrev = this.pager.querySelector('.pager-prev')
+  this.btnNext = this.pager.querySelector('.pager-next')
+  this.btnPrev.disabled = true
+
+  // event handlers
+  this.btnPrev.addEventListener('click', this.paginateEventHandler.bind(this))
+  this.btnNext.addEventListener('click', this.paginateEventHandler.bind(this))
+}
+/**
+ * Event handler on click on previous or next button.
+ * It toggles elements visibility via `aria-hidden` attribute to paginate the list relatively to
+ * `itemPerPage` parameter.
+ * @param {Event} e click event on previous or next button
+ */
+Pager.prototype.paginateEventHandler = function paginateEventHandler(e) {
+  const btn = e.target.closest('button')
+
+  this.currentPage = btn.classList.contains('pager-next') ? this.currentPage + 1 : this.currentPage - 1
+  this.block.querySelector('.pager-current').innerHTML = this.currentPage
+
+  // disable navigation buttons on min and max page
+  this.btnPrev.disabled = this.currentPage === 1
+  this.btnNext.disabled = this.totalPage === this.currentPage
+
+  const prev = (this.currentPage - 1) * this.itemPerPage
+  const next = (this.currentPage * this.itemPerPage) + 1
+
+  Array.prototype.forEach.call(this.items, (item) => {
+    if (item.matches(`:nth-child(-n+${prev}), :nth-child(n+${next})`)) {
+      item.setAttribute('aria-hidden', 'true')
+    } else {
+      item.removeAttribute('aria-hidden')
+    }
+  })
+
+  this.config.onPageChanged(this.items)
+}
+
+// Pager constructor.
+export default Pager
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on Mon Mar 15 2021 13:12:18 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

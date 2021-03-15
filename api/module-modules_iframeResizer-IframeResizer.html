@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>IframeResizer - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="DropDown.html">DropDown</a><ul class='methods'><li data-type='method'><a href="DropDown.html#bindEvents">bindEvents</a></li><li data-type='method'><a href="DropDown.html#closeAll">closeAll</a></li></ul></li><li><a href="module-modules_fontLoader-FontLoader.html">FontLoader</a><ul class='methods'><li data-type='method'><a href="module-modules_fontLoader-FontLoader.html#activeFonts">activeFonts</a></li><li data-type='method'><a href="module-modules_fontLoader-FontLoader.html#init">init</a></li><li data-type='method'><a href="module-modules_fontLoader-FontLoader.html#isFontLoaded">isFontLoaded</a></li><li data-type='method'><a href="module-modules_fontLoader-FontLoader.html#load">load</a></li><li data-type='method'><a href="module-modules_fontLoader-FontLoader.html#updateLocalStorage">updateLocalStorage</a></li></ul></li><li><a href="module-modules_iframeResizer-IframeResizer.html">IframeResizer</a><ul class='methods'><li data-type='method'><a href="module-modules_iframeResizer-IframeResizer.html#height">height</a></li><li data-type='method'><a href="module-modules_iframeResizer-IframeResizer.html#iframeResizeComplete">iframeResizeComplete</a></li><li data-type='method'><a href="module-modules_iframeResizer-IframeResizer.html#sendHeight">sendHeight</a></li></ul></li><li><a href="module-modules_modal-Modal.html">Modal</a><ul class='methods'><li data-type='method'><a href="module-modules_modal-Modal.html#build">build</a></li><li data-type='method'><a href="module-modules_modal-Modal.html#close">close</a></li><li data-type='method'><a href="module-modules_modal-Modal.html#destroy">destroy</a></li><li data-type='method'><a href="module-modules_modal-Modal.html#fill">fill</a></li><li data-type='method'><a href="module-modules_modal-Modal.html#insert">insert</a></li><li data-type='method'><a href="module-modules_modal-Modal.html#open">open</a></li></ul></li><li><a href="module-modules_pager-Pager.html">Pager</a><ul class='methods'><li data-type='method'><a href="module-modules_pager-Pager.html#paginateEventHandler">paginateEventHandler</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-modules_fontLoader.html">modules/fontLoader</a><ul class='methods'><li data-type='method'><a href="module-modules_fontLoader.html#~isFontFaceSetCompatible">isFontFaceSetCompatible</a></li></ul></li><li><a href="module-modules_iframeResizer.html">modules/iframeResizer</a></li><li><a href="module-modules_modal.html">modules/modal</a></li><li><a href="module-modules_pager.html">modules/pager</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">IframeResizer</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+            <span class="ancestors"><a href="module-modules_iframeResizer.html">modules/iframeResizer</a>~</span>
+        
+        IframeResizer
+        </h2>
+        
+    
+</header>
+
+<article>
+    
+        <div class="container-overview">
+        
+            
+
+    
+
+    <h4 class="name" id="IframeResizer"><span class="type-signature"></span>new IframeResizer<span class="signature">(cfg)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="iframeResizer.js.html">iframeResizer.js</a>, <a href="iframeResizer.js.html#line18">line 18</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Create a new IframeResizer</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>cfg</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>config object</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>el</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">HTMLIFrameElement</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    <code>null</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>iframe element</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>delay</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Int</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    <code>0</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>delay between two check of size</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>iframeId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    <code>'iframeId'</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>id of iframe returned by postMessage</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        </div>
+    
+
+    
+
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="height"><span class="type-signature"></span>height<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="iframeResizer.js.html">iframeResizer.js</a>, <a href="iframeResizer.js.html#line50">line 50</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="iframeResizeComplete"><span class="type-signature"></span>iframeResizeComplete<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="iframeResizer.js.html">iframeResizer.js</a>, <a href="iframeResizer.js.html#line42">line 42</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="sendHeight"><span class="type-signature"></span>sendHeight<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="iframeResizer.js.html">iframeResizer.js</a>, <a href="iframeResizer.js.html#line61">line 61</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description usertext">
+    <p>Send new height information to parent iframe</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on Mon Mar 15 2021 13:12:18 GMT+0000 (Coordinated Universal Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>
