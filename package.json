@@ -4,7 +4,7 @@
   "license": "MIT",
   "dependencies": {
     "@accede-web/tablist": "^2.0.1",
-    "a11y-dialog": "^6.0.0",
+    "a11y-dialog": "^7.0.3",
     "blazy": "1.8.2",
     "dom4": "2.1.6",
     "focus-visible": "^5.0.1",
