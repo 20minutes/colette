@@ -18,6 +18,7 @@
 // .skin-quiz        - Text skin: "quiz", title and description color: community
 // .skin-weird       - Text skin: "t'as vu"
 // .skin-summer      - Text skin: 'L’info en série'
+// .skin-community   - Icon skin: 'community', text color: community
 // .skin-gallery     - Icon skin: 'images'
 // .skin-podcast     - Icon skin: 'podcast'
 // .skin-video       - Icon skin: 'play'
@@ -150,6 +151,7 @@
             background-color var(--color-theme-weird)
 
     /* Icon skins */
+    &-community
     &-gallery
     &-podcast
     &-video
@@ -168,6 +170,25 @@
             background-repeat no-repeat
             background-size 1.9em
             background-position center center
+
+    &-community
+        .media-wrap:before
+            top _rem(10px)
+            left _rem(10px)
+            width _rem(92px)
+            height _rem(44px)
+            background-size 4.74em
+            background-color var(--color-theme-community)
+            background-image svgImport('../../svg/community.svg', '
+                path
+                    fill ' + $color-white + '
+            ') // @stylint ignore
+
+        .teaser
+            &-headline
+            &-title
+            &-summary
+                color var(--color-theme-community)
 
     &-video
         .media-wrap:before
