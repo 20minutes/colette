@@ -1,0 +1,43 @@
+fieldset
+    border 0
+    padding 0
+
+label
+button
+input
+    vertical-align middle
+
+input
+select
+textarea
+    color inherit
+
+button
+input
+select
+textarea
+    font-family inherit
+    font-size 1em
+
+label
+button
+input[type='submit']
+input[type='button']
+input[type='reset']
+    cursor pointer // cursor: pointer to every clickable elements
+
+    &[disabled]
+        cursor default
+
+button
+input[type='button']
+input[type='submit']
+    border-style none
+
+/* Avoid deformation on radios, checkboxes and images inputs and different display on some IE */
+input[type='radio']
+input[type='checkbox']
+input[type='image']
+    background-color transparent
+    border 0
+    width auto

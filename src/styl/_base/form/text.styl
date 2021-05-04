@@ -1,0 +1,64 @@
+// Text inputs
+//
+// Default styles for text fields.
+//
+// Markup: form-textinput.twig
+//
+// Weight: 1
+//
+// Styleguide: Forms.TextInputs
+
+// HTML5 inputs
+//
+// Colette styles also apply to the following HTML5 input types.
+// <br/>Fields display and interaction may vary according to browsers supports.
+//
+// Markup: form-html5input.twig
+//
+// Weight: 2
+//
+// Styleguide: Forms.HTML5Inputs
+input[type='text']
+input[type='password']
+input[type='email']
+input[type='url']
+input[type='time']
+input[type='date']
+input[type='datetime']
+input[type='datetime-local']
+input[type='tel']
+input[type='number']
+input[type='search']
+select
+textarea
+    padding .5em
+    border-radius .3em
+    border 1px solid var(--form-input-border-color)
+    background-color var(--form-input-bg-color)
+    line-height 1.3
+    color var(--form-input-text-color)
+    box-shadow none // to prevent the red box-shadow Firefox is adding
+    transition border-color .2s
+
+    &.is-invalid
+        border-color var(--color-error)
+
+    &:focus
+        border-color var(--form-input-focus-border-color)
+        outline 0
+
+    &[disabled]
+        background-color var(--form-input-disabled-bg-color)
+        color var(--form-input-disabled-text-color)
+
+input[type='search']
+    -moz-appearance textfield // fix display on FF
+    -webkit-appearance textfield // fix display on Safari and iOs
+
+input[type='time']
+input[type='date']
+    &::-webkit-datetime-edit
+        line-height 1.15em
+
+    &::-webkit-inner-spin-button
+        height 1em
