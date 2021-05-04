@@ -1,0 +1,20 @@
+// Select
+//
+// Default styles for `<select>` field.
+//
+// Markup: form-select.twig
+//
+// Weight: 3
+//
+// Styleguide: Forms.Select
+select
+    padding-right 2em
+    background-image svgImport('../../../svg/arrow/down.svg' '
+        path
+            fill ' + $color-base + '
+    ') // @stylint ignore
+    background-repeat no-repeat
+    background-position calc(100% - .6em) .75em
+    background-size .8em .8em
+    -moz-appearance none
+    -webkit-appearance none

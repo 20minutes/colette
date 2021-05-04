@@ -1,0 +1,84 @@
+// Range
+//
+// Default styles for `<input type="range" />` field.
+// the thumb take color of `currentColor`, so it `.color-xxx` classes can be used to style it.
+//
+// .color-default - color helper
+//
+// Markup: form-range.twig
+//
+// Weight: 7
+//
+// Styleguide: Forms.Range
+_form-input-range-thumb =
+    -webkit-appearance none
+    position relative
+    width _em(16px)
+    height @width
+    border-radius 50% // square to circle
+    border 0
+    color inherit
+    background currentColor
+    cursor pointer
+
+_form-input-range-focus-thumb =
+    box-shadow _em(1px) _em(1px) _em(1px) 0 rgba($color-black, .5)
+    top _em(-1px)
+
+_form-input-range-track =
+    width 100%
+    height _em(6px)
+    overflow visible
+    background var(--form-input-rang-track-color)
+    border 0
+    border-radius 5em // excessive size to keep it round
+    box-shadow inset _em(1px) _em(1px) _em(3px) 0 rgba($color-black, .3)
+
+input[type='range']
+    -webkit-appearance none // Hides the slider so that custom slider can be made
+    width 100% // Specific width is required for Firefox.
+    background transparent // Otherwise white in Chrome
+    padding 0
+    margin 0
+    height _em(32px)
+    border-width 1px 0
+    border-color transparent
+
+    &::-ms-thumb
+        {_form-input-range-thumb}
+
+    &::-moz-range-thumb
+        {_form-input-range-thumb}
+
+    &::-webkit-slider-thumb
+        {_form-input-range-thumb}
+        margin-top _em(-5px) // margin for Webkit/Blink, not need in Firefox or IE
+
+    &::-ms-track
+        {_form-input-range-track}
+        color transparent // hide graduations
+
+    &::-moz-range-track
+        {_form-input-range-track}
+
+    &::-webkit-slider-runnable-track
+        {_form-input-range-track}
+
+    &::-ms-fill-lower
+    &::-ms-fill-upper
+        background transparent
+
+    &::-ms-tooltip
+        display none
+
+    &:focus
+        outline 0 // Removes the blue border on webkit
+
+        &::-ms-thumb
+            {_form-input-range-focus-thumb}
+
+        &::-moz-range-thumb
+            {_form-input-range-focus-thumb}
+
+        &::-webkit-slider-thumb
+            {_form-input-range-focus-thumb}
