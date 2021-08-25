@@ -39,7 +39,7 @@ module.exports = async (env) => {
     devServer: {
       contentBase: path.resolve(__dirname, './dist'),
       historyApiFallback: true,
-      disableHostCheck: true,
+      allowedHosts: ['all'],
       port: 8000,
     },
     devtool: 'source-map',
