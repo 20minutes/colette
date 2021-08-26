@@ -37,7 +37,7 @@ module.exports = async (env) => {
     // mode: 'production',
     mode: 'development',
     devServer: {
-      contentBase: path.resolve(__dirname, './dist'),
+      static: path.resolve(__dirname, './dist'),
       historyApiFallback: true,
       allowedHosts: ['all'],
       port: 8000,
