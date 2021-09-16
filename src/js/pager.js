@@ -60,7 +60,9 @@ function Pager(cfg) {
 Pager.prototype.paginateEventHandler = function paginateEventHandler(e) {
   const btn = e.target.closest('button')
 
-  this.currentPage = btn.classList.contains('pager-next') ? this.currentPage + 1 : this.currentPage - 1
+  this.currentPage = btn.classList.contains('pager-next')
+    ? this.currentPage + 1
+    : this.currentPage - 1
   this.block.querySelector('.pager-current').innerHTML = this.currentPage
 
   // disable navigation buttons on min and max page
@@ -68,7 +70,7 @@ Pager.prototype.paginateEventHandler = function paginateEventHandler(e) {
   this.btnNext.disabled = this.totalPage === this.currentPage
 
   const prev = (this.currentPage - 1) * this.itemPerPage
-  const next = (this.currentPage * this.itemPerPage) + 1
+  const next = this.currentPage * this.itemPerPage + 1
 
   Array.prototype.forEach.call(this.items, (item) => {
     if (item.matches(`:nth-child(-n+${prev}), :nth-child(n+${next})`)) {
