@@ -9,9 +9,7 @@ const kssConfig = require('./kss.json')
 
 async function getSvgSprite() {
   const spriteGenerator = new SvgSpriteHtmlWebpackPlugin({
-    includeFiles: [
-      './src/svg/**/*.svg',
-    ],
+    includeFiles: ['./src/svg/**/*.svg'],
     generateSymbolId: (svgFilePath) => {
       const svgDir = path.resolve('./src/svg')
       const pathToSubDir = path.relative(svgDir, path.dirname(svgFilePath))
@@ -44,47 +42,43 @@ module.exports = async (env) => {
     },
     devtool: 'source-map',
     module: {
-      rules: [{
-        test: /(\.jsx?|\.es6)$/,
-        use: 'babel-loader',
-      },
-      {
-        test: /\.styl$/i,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader',
-            options: {
-              url: false,
-            },
-          },
-          'postcss-loader',
-          {
-            loader: 'stylus-loader',
-            options: {
-              paths: [
-                'node_modules',
-              ],
-              'include css': true,
-              'resolve url': true,
-              stylus: {
-                preferPathResolver: 'webpack',
+      rules: [
+        {
+          test: /(\.jsx?|\.es6)$/,
+          use: 'babel-loader',
+        },
+        {
+          test: /\.styl$/i,
+          use: [
+            MiniCssExtractPlugin.loader,
+            {
+              loader: 'css-loader',
+              options: {
+                url: false,
               },
             },
-          },
-        ],
-      },
-      {
-        test: /\.(eot|ttf|woff2?)$/,
-        use: [
-          'file-loader',
-        ],
-      }],
+            'postcss-loader',
+            {
+              loader: 'stylus-loader',
+              options: {
+                paths: ['node_modules'],
+                'include css': true,
+                'resolve url': true,
+                stylus: {
+                  preferPathResolver: 'webpack',
+                },
+              },
+            },
+          ],
+        },
+        {
+          test: /\.(eot|ttf|woff2?)$/,
+          use: ['file-loader'],
+        },
+      ],
     },
     resolve: {
-      modules: [
-        'node_modules',
-      ],
+      modules: ['node_modules'],
       extensions: ['.js', '.es6'],
     },
     plugins: [
@@ -101,12 +95,16 @@ module.exports = async (env) => {
     config.plugins.push(new KssWebpackPlugin(kssConfig))
 
     // assets for kss demo
-    config.plugins.push(new CopyPlugin({
-      patterns: [{
-        from: 'demo-img/',
-        to: 'dist/img',
-      }],
-    }))
+    config.plugins.push(
+      new CopyPlugin({
+        patterns: [
+          {
+            from: 'demo-img/',
+            to: 'dist/img',
+          },
+        ],
+      })
+    )
   }
 
   return config

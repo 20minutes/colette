@@ -9,7 +9,9 @@ const defaultConfig = {
   modalWindowClasses: [],
   modalContentClasses: [],
   content: '',
-  targetToggleHidden: document.querySelectorAll('body > *:not(.modal):not([aria-hidden="true"]):not(script)'),
+  targetToggleHidden: document.querySelectorAll(
+    'body > *:not(.modal):not([aria-hidden="true"]):not(script)'
+  ),
 }
 
 /**
@@ -117,7 +119,8 @@ Modal.prototype.build = function build() {
   this.btnClose = document.createElement('button', { type: 'button' })
   this.btnClose.classList.add('modal-close', 'btnIcon')
   this.btnClose.setAttribute('data-a11y-dialog-hide', true)
-  this.btnClose.innerHTML = '<svg height="12" width="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#symbol-cross"></use></svg>'
+  this.btnClose.innerHTML =
+    '<svg height="12" width="12"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#symbol-cross"></use></svg>'
 
   // Creates the modal & fill it w/ the @param: content
   this.window = document.createElement('div')

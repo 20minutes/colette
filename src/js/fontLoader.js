@@ -31,7 +31,9 @@ const defaultConfig = {
 function isFontFaceSetCompatible() {
   let compatible = document.fonts && document.fonts.load
   if (compatible && /Apple/.test(window.navigator.vendor)) {
-    const match = /AppleWebKit\/([0-9]+)(?:\.([0-9]+))(?:\.([0-9]+))/.exec(window.navigator.userAgent)
+    const match = /AppleWebKit\/([0-9]+)(?:\.([0-9]+))(?:\.([0-9]+))/.exec(
+      window.navigator.userAgent
+    )
     compatible = !(match && parseInt(match[1], 10) < 603)
   }
 
@@ -115,7 +117,7 @@ FontLoader.prototype.load = function load() {
   const fontPromises = []
 
   this.config.data.forEach((font) => {
-    const fontFamily = font.family.replace('\'', '')
+    const fontFamily = font.family.replace("'", '')
     const fontWeight = font.weight ? font.weight : 'normal'
     const fontStyle = font.style ? font.style : 'normal'
     let promise
@@ -138,13 +140,15 @@ FontLoader.prototype.load = function load() {
 
   const allFontsPromise = Promise.all(fontPromises)
 
-  allFontsPromise.then(() => {
-    if (this.config.optional) {
-      this.updateLocalStorage()
-    } else {
-      this.activeFonts()
-    }
-  }).catch(() => {})
+  allFontsPromise
+    .then(() => {
+      if (this.config.optional) {
+        this.updateLocalStorage()
+      } else {
+        this.activeFonts()
+      }
+    })
+    .catch(() => {})
 
   return allFontsPromise
 }
