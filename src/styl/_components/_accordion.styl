@@ -1,0 +1,51 @@
+// Accordion
+//
+// Box with a toggle content
+//
+// Markup: ./accordion.twig
+//
+// Styleguide: Components.Accordion
+.accordion
+    [aria-hidden="true"]
+        display none
+
+    &-subhead
+        display flex
+
+        &-button
+            _p(2)
+            _mb(1)
+            _fontload($fontstack-secondary)
+            background-color var(--color-bg-secondary)
+            background-image svgImport('../../svg/arrow/down.svg' '
+                path
+                    fill ' + $color-base + '
+            ') // @stylint ignore
+            background-repeat no-repeat
+            background-position center right _gutters(2)
+            background-size _rem(24px) auto
+            border-radius $radius
+            width 100%
+            text-align left
+            font-size _rem(17px)
+            font-weight bold
+            color var(--color-base)
+
+            &[aria-expanded="true"]
+                _mb(0)
+                background-color var(--color-fade)
+                background-image svgImport('../../svg/arrow/up.svg' '
+                    path
+                        fill ' + $color-base + '
+                ') // @stylint ignore
+                border-bottom-left-radius 0px
+                border-bottom-right-radius 0px
+
+    &-body
+        _mb(1)
+        _p(0 2 2)
+        color var(--color-base)
+        background var(--color-fade)
+        border-bottom-left-radius $radius
+        border-bottom-right-radius $radius
+        font-size _rem(16px)
