@@ -71,10 +71,6 @@ module.exports = async (env) => {
             },
           ],
         },
-        {
-          test: /\.(eot|ttf|woff2?)$/,
-          use: ['file-loader'],
-        },
       ],
     },
     resolve: {
@@ -100,7 +96,15 @@ module.exports = async (env) => {
         patterns: [
           {
             from: 'demo-img/',
-            to: 'dist/img',
+            to: './img',
+          },
+          {
+            from: 'src/fonts/',
+            to: './fonts',
+          },
+          {
+            from: 'favicon.ico',
+            to: './',
           },
         ],
       })
