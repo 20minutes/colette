@@ -82,16 +82,6 @@ module.exports = async (env) => {
       new MiniCssExtractPlugin({
         filename: '[name].min.css',
       }),
-    ],
-  }
-
-  if (!env || env.NODE_ENV !== 'dist') {
-    // kss
-    kssConfig.svgSprite = await getSvgSprite()
-    config.plugins.push(new KssWebpackPlugin(kssConfig))
-
-    // assets for kss demo
-    config.plugins.push(
       new CopyPlugin({
         patterns: [
           {
@@ -107,8 +97,14 @@ module.exports = async (env) => {
             to: './',
           },
         ],
-      })
-    )
+      }),
+    ],
+  }
+
+  if (!env || env.NODE_ENV !== 'dist') {
+    // kss
+    kssConfig.svgSprite = await getSvgSprite()
+    config.plugins.push(new KssWebpackPlugin(kssConfig))
   }
 
   return config
