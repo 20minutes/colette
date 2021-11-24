@@ -4,12 +4,13 @@ import 'focus-visible' // focus-visible polyfill
 // modules
 import Blazy from 'blazy'
 import Tablist from '@accede-web/tablist'
+import Accordion from '@accede-web/accordion'
+import fontsData from '../fontfaces.json'
 import IframeResizer from './js/iframeResizer'
 import FontLoader from './js/fontLoader'
 import Pager from './js/pager'
 import Modal from './js/modal'
 import DropDown from './js/dropDown'
-import fontsData from '../fontfaces.json'
 // CSS
 import './styl/index.styl'
 
@@ -116,6 +117,21 @@ Array.prototype.forEach.call(
  * @inner
  */
 colette.dropDowns = [new DropDown()]
+
+/**
+ * Accordion Instances Colection
+ * @memberof colette
+ * @inner
+ */
+colette.Accordion = Accordion
+
+// Init accordion
+colette.accordionList = []
+Array.prototype.forEach.call(document.querySelectorAll('.accordion'), (item) => {
+  const accordion = new colette.Accordion(item)
+  accordion.mount()
+  colette.accordionList.push(accordion)
+})
 
 // Colette global object
 export { colette }

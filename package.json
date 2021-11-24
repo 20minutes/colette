@@ -1,8 +1,9 @@
 {
   "name": "colette",
-  "version": "5.5.4",
+  "version": "5.6.0",
   "license": "MIT",
   "dependencies": {
+    "@accede-web/accordion": "^1.1.0",
     "@accede-web/tablist": "^2.0.1",
     "a11y-dialog": "^7.0.3",
     "blazy": "1.8.2",
