@@ -98,6 +98,6 @@
   },
   "homepage": "https://developers.20minutes.fr/colette/",
   "engines": {
-    "node": ">=10.13.0"
+    "node": ">=12"
   }
 }
