@@ -8,49 +8,51 @@
 // Styleguide: Components.BreakingNews
 
 .breakingnews
-    _p(1 0)
-    _fontload($fontstack-secondary)
-    background var(--color-highlight)
-    color var(--color-highlight-foreground)
-    font-weight bold
-    border 0 // no border even it’s box
-    display flex
-    justify-content space-between
-    align-items center
 
-    &-link
+    &-content
+        _p(1 0)
+        _fontload($fontstack-secondary)
+        background var(--color-highlight)
+        color var(--color-highlight-foreground)
+        font-weight bold
+        border 0 // no border even it’s box
         display flex
+        justify-content space-between
         align-items center
 
-        &-label
-        &-title
+        &-link
             display flex
             align-items center
-            line-height 1.3em
-            padding 0 0.75rem
 
-        &-label
-            position relative
-            text-transform uppercase
-            font-size .75em
+            &-label
+            &-title
+                display flex
+                align-items center
+                line-height 1.3em
+                padding 0 0.75rem
 
-            &:after
-                content ""
-                width 1px
-                height 100%
-                background-color var(--color-highlight-foreground)
-                position absolute
-                right 0
+            &-label
+                position relative
+                text-transform uppercase
+                font-size .75em
 
-            @media $breakpoints.md
-                font-size 1em
+                &:after
+                    content ""
+                    width 1px
+                    height 100%
+                    background-color var(--color-highlight-foreground)
+                    position absolute
+                    right 0
 
-        &-title
-            font-size _rem(16px)
-            font-weight bold
+                @media $breakpoints.md
+                    font-size 1em
 
-    &-close
-        _p(0 2)
-        transform rotate(45deg)
-        background transparent
-        color $color-white
+            &-title
+                font-size _rem(16px)
+                font-weight bold
+
+        &-close
+            _p(0 2)
+            transform rotate(45deg)
+            background transparent
+            color $color-white
