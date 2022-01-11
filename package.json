@@ -1,6 +1,6 @@
 {
   "name": "colette",
-  "version": "5.6.3",
+  "version": "5.6.4",
   "license": "MIT",
   "dependencies": {
     "@accede-web/accordion": "^1.1.0",
