@@ -1200,15 +1200,11 @@ Is usualy a link to this article.</p>
                                                                             Example
                                                                     </p>
                                 <div class="co_subsection-demo co_col-md-9 co_clearfix co_mb1">
-                                    <section class="breakingnews" >
-    <a class="breakingnews-link" href="#">
-        <span class="breakingnews-link-label">
-            <svg width="30" height="30"><use xlink:href="#symbol-flash"></use></svg>Breaking News
-        </span>
-        <strong class="breakingnews-link-title">Important title of a new important article</strong>
-    </a>
-    <button class="breakingnews-close"><svg width="10" height="10"><use xlink:href="#symbol-cross"></use></svg></button>
-</section>
+                                    <a href="#" class="breakingnews box">
+    <span class="breakingnews-label">Breaking News</span>
+    <strong class="breakingnews-title">Important title of a new important article</strong>
+    <span class="breakingnews-cta">Read this article</span>
+</a>
 
                                 </div>
                             </div>
@@ -1224,30 +1220,18 @@ Is usualy a link to this article.</p>
                                             <li class="co_tabpanel-list-tab" role="tab" aria-controls="kssmarkup-components-breakingnews-template">Template</li>
                                         </ul>
                                         <div class="co_tabpanel-body" role="tabpanel" id="kssmarkup-components-breakingnews-markup">
-                                            <pre class="lang-html"><code><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breakingnews"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breakingnews-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breakingnews-link-label"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"30"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"30"</span>&gt;</span>
-                <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#symbol-flash"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
-            <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>Breaking News
-        <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">strong</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breakingnews-link-title"</span>&gt;</span>Important title of a new important article<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breakingnews-close"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"10"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"10"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#symbol-cross"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span></code></pre>
+                                            <pre class="lang-html"><code><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breakingnews box"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breakingnews-label"</span>&gt;</span>Breaking News<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">strong</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breakingnews-title"</span>&gt;</span>Important title of a new important article<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breakingnews-cta"</span>&gt;</span>Read this article<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre>
                                         </div>
                                         <div class="co_tabpanel-body" role="tabpanel" id="kssmarkup-components-breakingnews-template">
-                                            <pre class="lang-twig"><code><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breakingnews"</span> &gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breakingnews-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breakingnews-link-label"</span>&gt;</span>
-            <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"30"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"30"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#symbol-flash"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span>Breaking News
-        <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">strong</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breakingnews-link-title"</span>&gt;</span>Important title of a new important article<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breakingnews-close"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"10"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"10"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"#symbol-cross"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+                                            <pre class="lang-twig"><code><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breakingnews box"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breakingnews-label"</span>&gt;</span>Breaking News<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">strong</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breakingnews-title"</span>&gt;</span>Important title of a new important article<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"breakingnews-cta"</span>&gt;</span>Read this article<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
 </span></code></pre>
                                         </div>
                                     </div>
