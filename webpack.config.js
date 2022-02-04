@@ -61,10 +61,10 @@ module.exports = async (env) => {
             {
               loader: 'stylus-loader',
               options: {
-                paths: ['node_modules'],
-                'include css': true,
-                'resolve url': true,
-                stylus: {
+                stylusOptions: {
+                  paths: ['node_modules'],
+                  includeCSS: true,
+                  resolveURL: true,
                   preferPathResolver: 'webpack',
                 },
               },
