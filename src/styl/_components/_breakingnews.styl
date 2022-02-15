@@ -48,6 +48,12 @@
         &-title
             font-size _rem(16px)
             font-weight bold
+            text-overflow ellipsis
+            overflow hidden
+            display -webkit-box !important
+            -webkit-line-clamp 3
+            -webkit-box-orient vertical
+            white-space normal
 
     &-close
         _p(0 2)
