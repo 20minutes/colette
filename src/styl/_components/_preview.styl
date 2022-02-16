@@ -190,8 +190,12 @@
             &-title
                 font-size .9em
                 font-weight 600
-                height _rem(65px)
                 overflow hidden
+                text-overflow ellipsis
+                display -webkit-box
+                -webkit-line-clamp 4
+                -webkit-box-orient vertical
+                white-space normal
 
             &-summary
                 display none
