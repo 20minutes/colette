@@ -476,7 +476,7 @@ Colette takes avantage of this feature to define common and reusable pieces of C
 <p>is equivalent to</p>
 <pre class="hljs"><code class="language-stylus"><span class="hljs-selector-class">.foo</span>
     &amp;:after
-        <span class="hljs-attribute">content</span> <span class="hljs-string">''</span>
+        <span class="hljs-attribute">content</span> <span class="hljs-string">&#x27;&#x27;</span>
         <span class="hljs-attribute">display</span> block
         <span class="hljs-attribute">height</span> <span class="hljs-number">0</span>
         <span class="hljs-attribute">clear</span> both
@@ -611,7 +611,7 @@ If applied to a <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code> tag, all its 
 <p>will compile to</p>
 <pre class="hljs"><code class="language-css"><span class="hljs-comment">/* my_file.css */</span>
 <span class="hljs-selector-class">.foo</span><span class="hljs-selector-pseudo">::before</span> {
-    <span class="hljs-attribute">content</span>: <span class="hljs-string">''</span>;
+    <span class="hljs-attribute">content</span>: <span class="hljs-string">&#x27;&#x27;</span>;
     <span class="hljs-attribute">display</span>: block;
     <span class="hljs-attribute">position</span>: absolute;
     <span class="hljs-attribute">top</span>: <span class="hljs-number">50%</span>;
