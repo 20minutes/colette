@@ -45,7 +45,7 @@
     "kss-webpack-plugin": "^1.5.0",
     "mini-css-extract-plugin": "^2.2.0",
     "postcss-custom-properties": "github:ryuran/postcss-custom-properties#build",
-    "postcss-focus-visible": "^6.0.1",
+    "postcss-focus-visible": "^8.0.0",
     "postcss-loader": "^7.0.0",
     "prettier": "^2.4.1",
     "stylint": "^2.0.0",
