@@ -452,16 +452,16 @@ projects, check <a href="https://github.com/20minutes/colette/assets/"><code>src
 <h3>Use gulp</h3>
 <p>To compile your stylus, use <a href="https://github.com/gulpjs/gulp"><code>gulp</code></a> and <a href="https://github.com/stevelacy/gulp-stylus"><code>gulp-stylus</code></a></p>
 <pre class="hljs"><code class="language-javascript"><span class="hljs-comment">/* gulpfile.js */</span>
-gulp.task(<span class="hljs-string">&#x27;css&#x27;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
-   <span class="hljs-keyword">return</span> gulp.src(cfg.cssDir + <span class="hljs-string">&#x27;*.styl&#x27;</span>)
+gulp.task(<span class="hljs-string">'css'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+   <span class="hljs-keyword">return</span> gulp.src(cfg.cssDir + <span class="hljs-string">'*.styl'</span>)
    .pipe(stylus({
         <span class="hljs-attr">include</span>: [
             PATH_TO_STYLUS_IMPORT,
             AN_OTHER_PATH_TO_FIND_STYLUS_MODULES
         ],
-        <span class="hljs-string">&#x27;include css&#x27;</span>: <span class="hljs-literal">true</span>
+        <span class="hljs-string">'include css'</span>: <span class="hljs-literal">true</span>
     }))
-   .pipe(gulp.dest(<span class="hljs-string">&#x27;css/&#x27;</span>))
+   .pipe(gulp.dest(<span class="hljs-string">'css/'</span>))
 })
 </code></pre>
 <p><code>PATH_TO_STYLUS_IMPORT</code> could be <code>node_modules</code> for example if you use npm.</p>
@@ -470,20 +470,20 @@ gulp.task(<span class="hljs-string">&#x27;css&#x27;</span>, <span class="hljs-fu
 <pre class="hljs"><code class="language-javascript"><span class="hljs-comment">/* webpack.config.js */</span>
 {
   <span class="hljs-attr">test</span>: <span class="hljs-regexp">/\.styl$/i</span>,
-  use: [
-    <span class="hljs-string">&#x27;style-loader&#x27;</span>,
-    <span class="hljs-string">&#x27;css-loader&#x27;</span>,
-    <span class="hljs-string">&#x27;postcss-loader&#x27;</span>,
+  <span class="hljs-attr">use</span>: [
+    <span class="hljs-string">'style-loader'</span>,
+    <span class="hljs-string">'css-loader'</span>,
+    <span class="hljs-string">'postcss-loader'</span>,
     {
-      <span class="hljs-attr">loader</span>: <span class="hljs-string">&#x27;stylus-loader&#x27;</span>,
+      <span class="hljs-attr">loader</span>: <span class="hljs-string">'stylus-loader'</span>,
       <span class="hljs-attr">options</span>: {
         <span class="hljs-attr">paths</span>: [
-          <span class="hljs-string">&#x27;node_modules&#x27;</span>,
+          <span class="hljs-string">'node_modules'</span>,
         ],
-        <span class="hljs-string">&#x27;include css&#x27;</span>: <span class="hljs-literal">true</span>,
-        <span class="hljs-string">&#x27;resolve url&#x27;</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-string">'include css'</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-string">'resolve url'</span>: <span class="hljs-literal">true</span>,
         <span class="hljs-attr">stylus</span>: {
-          <span class="hljs-attr">preferPathResolver</span>: <span class="hljs-string">&#x27;webpack&#x27;</span>,
+          <span class="hljs-attr">preferPathResolver</span>: <span class="hljs-string">'webpack'</span>,
         },
       },
     },
@@ -499,7 +499,7 @@ You can select features needed by copying <code>colette.styl</code> content and 
 <span class="hljs-comment">// Your own settings</span>
 
 <span class="hljs-comment">// Import colette</span>
-@require <span class="hljs-string">&#x27;colette/assets/styl/colette&#x27;</span>
+@require <span class="hljs-string">'colette/assets/styl/colette'</span>
 
 <span class="hljs-comment">/* =&gt; will compile to my_css_file.css */</span>
 </code></pre>

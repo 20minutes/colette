@@ -720,7 +720,7 @@
                                 <p class="co_subsection-title co_col-md-3">Description</p>
                                 <div class="co_subsection-content co_col-md-9">
                                     <p>Mixin to help to generate variable of colors decomposed in hue, saturation and lightness</p>
-<pre class="hljs"><code class="language-stylus"><span class="hljs-selector-pseudo">:root</span>
+<pre class="hljs"><code class="language-stylus">:root
     <span class="hljs-comment">/** red */</span>
     _hslVars(--red, red)
     <span class="hljs-comment">/** green */</span>
@@ -730,20 +730,20 @@
 </code></pre>
 <pre class="hljs"><code class="language-css"><span class="hljs-selector-pseudo">:root</span> {
     <span class="hljs-comment">/** red */</span>
-    --red-h: <span class="hljs-number">0deg</span>;
-    --red-s: <span class="hljs-number">100%</span>;
-    --red-l: <span class="hljs-number">50%</span>;
-    --red: <span class="hljs-built_in">hsl</span>(<span class="hljs-built_in">var</span>(--red-h), <span class="hljs-built_in">var</span>(--red-s), <span class="hljs-built_in">var</span>(--red-l));
+    <span class="hljs-attribute">--red-h</span>: <span class="hljs-number">0deg</span>;
+    <span class="hljs-attribute">--red-s</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">--red-l</span>: <span class="hljs-number">50%</span>;
+    <span class="hljs-attribute">--red</span>: <span class="hljs-built_in">hsl</span>(var(--red-h), <span class="hljs-built_in">var</span>(--red-s), <span class="hljs-built_in">var</span>(--red-l));
     <span class="hljs-comment">/** green */</span>
-    --green-h: <span class="hljs-number">120deg</span>;
-    --green-s: <span class="hljs-number">100%</span>;
-    --green-l: <span class="hljs-number">25.098039215686274%</span>;
-    --green: <span class="hljs-built_in">hsl</span>(<span class="hljs-built_in">var</span>(--green-h), <span class="hljs-built_in">var</span>(--green-s), <span class="hljs-built_in">var</span>(--green-l));
+    <span class="hljs-attribute">--green-h</span>: <span class="hljs-number">120deg</span>;
+    <span class="hljs-attribute">--green-s</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">--green-l</span>: <span class="hljs-number">25.098039215686274%</span>;
+    <span class="hljs-attribute">--green</span>: <span class="hljs-built_in">hsl</span>(var(--green-h), <span class="hljs-built_in">var</span>(--green-s), <span class="hljs-built_in">var</span>(--green-l));
     <span class="hljs-comment">/** blue */</span>
-    --blue-h: <span class="hljs-number">240deg</span>;
-    --blue-s: <span class="hljs-number">100%</span>;
-    --blue-l: <span class="hljs-number">50%</span>;
-    --blue: <span class="hljs-built_in">hsl</span>(<span class="hljs-built_in">var</span>(--blue-h), <span class="hljs-built_in">var</span>(--blue-s), <span class="hljs-built_in">var</span>(--blue-l));
+    <span class="hljs-attribute">--blue-h</span>: <span class="hljs-number">240deg</span>;
+    <span class="hljs-attribute">--blue-s</span>: <span class="hljs-number">100%</span>;
+    <span class="hljs-attribute">--blue-l</span>: <span class="hljs-number">50%</span>;
+    <span class="hljs-attribute">--blue</span>: <span class="hljs-built_in">hsl</span>(var(--blue-h), <span class="hljs-built_in">var</span>(--blue-s), <span class="hljs-built_in">var</span>(--blue-l));
 </code></pre>
 
                                 </div>
@@ -779,11 +779,11 @@
                                     <p>Returns encoded inline svg</p>
 <p>$svg - svg code</p>
 <pre class="hljs"><code class="language-stylus"><span class="hljs-selector-class">.foo</span>
-    <span class="hljs-attribute">background-image</span> _inlineSvg(<span class="hljs-string">&#x27;&lt;svg viewBox=&quot;0 0 90 30&quot; width=&quot;30&quot; height=&quot;30&quot;&gt;&lt;circle cx=&quot;15&quot; cy=&quot;15&quot; r=&quot;10&quot; class=&quot;bounce1&quot;/&gt;&lt;/svg&gt;&#x27;</span>)
+    <span class="hljs-attribute">background-image</span> _inlineSvg(<span class="hljs-string">'&lt;svg viewBox="0 0 90 30" width="30" height="30"&gt;&lt;circle cx="15" cy="15" r="10" class="bounce1"/&gt;&lt;/svg&gt;'</span>)
 </code></pre>
 <p>will return</p>
 <pre class="hljs"><code class="language-css"><span class="hljs-selector-class">.foo</span> {
-    <span class="hljs-attribute">background-image</span> url(&quot;data:image/svg+xml,%<span class="hljs-number">3</span>Csvg xmlns=<span class="hljs-string">&#x27;http://www.w3.org/2000/svg&#x27;</span> viewBox=<span class="hljs-string">&#x27;0 0 90 30&#x27;</span> width=<span class="hljs-string">&#x27;30&#x27;</span> height=<span class="hljs-string">&#x27;30&#x27;</span>%<span class="hljs-number">3</span>E%<span class="hljs-number">3</span>Ccircle cx=<span class="hljs-string">&#x27;15&#x27;</span> cy=<span class="hljs-string">&#x27;15&#x27;</span> r=<span class="hljs-string">&#x27;10&#x27;</span> class=<span class="hljs-string">&#x27;bounce1&#x27;</span>/%<span class="hljs-number">3</span>E%<span class="hljs-number">3</span>C/svg%<span class="hljs-number">3</span>E<span class="hljs-string">&quot;);
+    background-image url("<span class="hljs-attribute">data</span>:image/svg+xml,%<span class="hljs-number">3</span>Csvg xmlns=<span class="hljs-string">'http://www.w3.org/2000/svg'</span> viewBox=<span class="hljs-string">'0 0 90 30'</span> width=<span class="hljs-string">'30'</span> height=<span class="hljs-string">'30'</span>%<span class="hljs-number">3</span>E%<span class="hljs-number">3</span>Ccircle cx=<span class="hljs-string">'15'</span> cy=<span class="hljs-string">'15'</span> r=<span class="hljs-string">'10'</span> class=<span class="hljs-string">'bounce1'</span>/%<span class="hljs-number">3</span>E%<span class="hljs-number">3</span>C/svg%<span class="hljs-number">3</span>E<span class="hljs-string">");
 }
 </span></code></pre>
 <p>Deprecated</p>
@@ -1016,7 +1016,7 @@ myList = (<span class="hljs-number">1</span> <span class="hljs-number">2</span> 
 </code></pre>
 <p>will compile to</p>
 <pre class="hljs"><code class="language-css"><span class="hljs-comment">/* my_file.css */</span>
-<span class="hljs-number">2</span> <span class="hljs-number">4</span> <span class="hljs-number">6</span> <span class="hljs-number">8</span>
+2 4 6 8
 </code></pre>
 
                                 </div>
