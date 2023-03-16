@@ -30,7 +30,7 @@
     "core-js": "^3.8.1",
     "css-loader": "^6.2.0",
     "cssnano": "^5.0.1",
-    "docdash": "^1.1.1",
+    "docdash": "^2.0.1",
     "eslint": "^8.4.1",
     "eslint-config-airbnb": "^19.0.1",
     "eslint-config-prettier": "^8.3.0",
