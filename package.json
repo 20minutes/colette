@@ -23,7 +23,7 @@
     "@babel/preset-env": "^7.12.11",
     "@babel/runtime": "^7.12.1",
     "autoprefixer": "^10.3.2",
-    "babel-loader": "^8.2.2",
+    "babel-loader": "^9.2.1",
     "clean-webpack-plugin": "^4.0.0",
     "colette-kss-builder": "^5.4.1",
     "copy-webpack-plugin": "^11.0.0",
